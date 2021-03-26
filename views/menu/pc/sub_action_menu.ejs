@@ -1,0 +1,100 @@
+<div class="site-header__misc" js-site-header="actions">
+        <!-- 계정관리 -->
+        <div class="site-header__col site-header__col--desktop">
+            <button class="accountButton site-header__icon site-header__icon--account" data-right-header-button-type="accountNav">
+                <svg class="icon icon--medium icon__account" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M11 4.5a3 3 0 11-6 0 3 3 0 016 0zm1 0a4 4 0 11-8 0 4 4 0 018 0zm-10 7a1 1 0 011-1h10a1 1 0 011 1v3H2v-3zm-1 0a2 2 0 012-2h10a2 2 0 012 2v4H1v-4z"></path>
+                </svg>
+                <span class="visually-hidden">
+                Account
+                </span>
+            </button>
+            <div id="accountNav" class="account-drawer drawer critical-hide">
+                <div class="account-drawer__content drawer__content">
+                <div class="account-drawer__header">
+                    <div class="account-drawer__title h3">
+                        <span class="account-drawer__title-text">Account</span>
+                        <button class="account-drawer__close button">
+                            <span class="visually-hidden">Close</span>
+                            <svg class="icon icon--large icon__close">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="account-drawer__body">
+                    <ul class="site-header__account-navlist navlist navlist--large critical-hide">
+                        <li class="navlist__item">
+                            <a class="navlist__link text-link" href="/account/login">
+                            Sign in
+                            </a>
+                        </li>
+                        <li class="navlist__item">
+                            <a class="navlist__link text-link" href="/account/register">
+                            Create account
+                            </a>
+                        </li>
+                        <li class="navlist__item navlist__item--margin ">
+                            <a class="navlist__link text-link" href="/account/login#reactivate">
+                            Reactivate account
+                            </a>
+                        </li>
+                        <li class="navlist__item">
+                            <a class="navlist__link text-link" href="/account/login#recover">
+                            Forgot password
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            <button class="site-header__icon site-header__icon--search" data-right-header-button-type="searchBarHeader">
+                <span class="icon-fallback-text">
+                Search
+                </span>
+                <svg class="icon icon--medium icon__search" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0)">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.598 10.131c1.655-1.9 1.553-4.811-.289-6.652-1.92-1.922-5.007-1.95-6.894-.064-1.886 1.887-1.858 4.973.064 6.895 1.757 1.757 4.49 1.93 6.387.503l3.34 3.34.706-.708-3.314-3.314zm-.921-.454c-1.509 1.509-3.978 1.486-5.515-.05-1.537-1.538-1.56-4.007-.05-5.516 1.508-1.509 3.977-1.486 5.514.05 1.537 1.538 1.56 4.007.051 5.516z"></path>
+                </g>
+                <defs>
+                    <clipPath id="clip0">
+                        <path fill="#fff" d="M0 0h16v16H0z"></path>
+                    </clipPath>
+                </defs>
+                </svg>
+            </button>
+        </div>
+        <div class="site-header__col">
+            <div class="site-header__icon site-header__icon--wishlist">
+                <!-- start: include 'wishlist-link' -->
+                <a href="/account/login?wk-redirect=%7B%22path%22%3A%22%2Fpages%2Fwishlist%22%7D" class="wk-link wk-empty" title="View Wishlist">
+                <span class="wishlist-close">
+                    <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+                    </svg>
+                </span>
+                <div class="wk-icon">
+                    <svg version="1.1" xmlns="https://www.w3.org/2000/svg" width="64" height="60.9" viewBox="0 0 64 64">
+                        <path d="M63.92,23.25a1.5,1.5,0,0,0-1.39-1H40.3L33.39,1.08A1.5,1.5,0,0,0,32,0h0a1.49,1.49,0,0,0-1.39,1L23.7,22.22H1.47a1.49,1.49,0,0,0-1.39,1A1.39,1.39,0,0,0,.6,24.85l18,13L11.65,59a1.39,1.39,0,0,0,.51,1.61,1.47,1.47,0,0,0,.88.3,1.29,1.29,0,0,0,.88-0.3l18-13.08L50,60.68a1.55,1.55,0,0,0,1.76,0,1.39,1.39,0,0,0,.51-1.61l-6.9-21.14,18-13A1.45,1.45,0,0,0,63.92,23.25ZM42.75,36.18a1.39,1.39,0,0,0-.51,1.61l5.81,18L32.85,44.69a1.41,1.41,0,0,0-1.67,0L15.92,55.74l5.81-18a1.39,1.39,0,0,0-.51-1.61L6,25.12H24.7a1.49,1.49,0,0,0,1.39-1L32,6.17l5.81,18a1.5,1.5,0,0,0,1.39,1H58Z"></path>
+                    </svg>
+                </div>
+                <span class="wk-count badge">0</span>
+                </a>
+                <!-- end: include 'wishlist-link' -->
+            </div>
+            <button class="site-header__icon site-header__icon--cart" data-right-header-button-type="cartDrawer">
+                <div class="site-header__icon-wrapper">
+                <svg class="icon icon--medium icon__bag" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.111 3.75a2.917 2.917 0 015.775 0H5.11zM4 4.75v1.5h1v-1.5h5.997l.003.027V6.25h1v-1.5h2v10H2v-10h2zm.104-1l.001-.012a3.917 3.917 0 017.788.003v.009H15v12H1v-12h3.104z"></path>
+                </svg>
+                <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+                </svg>
+                <span class="visually-hidden">Cart</span>
+                <span class="badge" js-ajax-cart="cartCounter">
+                1
+                </span>
+                </div>
+            </button>
+        </div>
+    </div>

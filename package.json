@@ -1,0 +1,17 @@
+{
+  "name": "toteme-korea",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script_after.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "connect-livereload": "^0.6.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "livereload": "^0.9.3"
+  }
+}

@@ -1,0 +1,148 @@
+<section id="wishlistListDrawer" class="wishlist-drawer wishlist-list-drawer drawer critical-hide" role="navigation" data-cy="wishlistDrawer" data-section-id="" data-section-type="wishlist-drawer" js-wishlist-list-drawer="container">
+    <div class="drawer__content" js-wishlist-list-drawer="body">
+       <div class="wishlist-drawer__header">
+          <div class="wishlist-drawer__title h3">
+             <span class="wishlist-drawer__title-text">Your wishlist</span>
+             <button class="wishlist-drawer__close button" value="Close" data-cy="wishlistDrawerClose" data-target="wishlistListDrawer" js-toggle="wishlistListDrawer" tabindex="-1">
+                <span class="visually-hidden">Close</span>
+                <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                   <path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+                </svg>
+             </button>
+          </div>
+       </div>
+       <div class="wishlist-drawer__list" js-wishlist-list-drawer="list">
+          <!-- start: include 'wishlist-collection' -->
+          <div class="wishlist-collection">
+             <div class="wk-row">
+                <div class="wk-span12">
+                   <h3 class="wk-wishlist-empty-note">There's nothing in your wishlist.</h3>
+                </div>
+             </div>
+          </div>
+          <!-- end: include 'wishlist-collection' -->
+       </div>
+    </div>
+ </section>
+ <section id="wishlistLoginDrawer" class="wishlist-drawer wishlist-login-drawer drawer critical-hide" role="navigation" data-cy="wishlistDrawer" data-section-id="" data-section-type="wishlist-drawer" js-wishlist-login-drawer="container">
+    <div class="drawer__content" js-wishlist-login-drawer="body">
+       <div class="wishlist-drawer__header">
+          <div class="wishlist-drawer__title h3">
+             <span class="wishlist-drawer__title-text">You need to be logged in to create or edit your wishlist</span>
+             <button class="wishlist-drawer__close button" value="Close" data-cy="wishlistDrawerClose" data-target="wishlistLoginDrawer" js-toggle="wishlistLoginDrawer" tabindex="-1">
+                <span class="visually-hidden">Close</span>
+                <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                   <path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+                </svg>
+             </button>
+          </div>
+       </div>
+       <div class="wishlist-drawer__content" js-wishlist-login-drawer="list">
+          <ul class="navlist navlist--large">
+             <li class="navlist__item">
+                <a class="navlist__link text-link" href="/account/login" tabindex="-1">Log in</a>
+             </li>
+             <li class="navlist__item">
+                <a class="navlist__link text-link" href="/account/register" tabindex="-1">Create account</a>
+             </li>
+             <li class="navlist__item navlist__item--margin"></li>
+             <li class="navlist__item ">
+                <a class="navlist__link text-link" href="/pages/wishlist" tabindex="-1">
+                Wishlist
+                </a>
+             </li>
+             <li class="navlist__item navlist__item--margin">
+                <a class="navlist__link text-link" href="/account?view=waitlist" tabindex="-1">
+                Waiting list
+                </a>
+             </li>
+             <li class="navlist__item">
+                <a class="navlist__link text-link" href="/account?view=details" tabindex="-1">
+                Personal details
+                </a>
+             </li>
+             <li class="navlist__item">
+                <a class="navlist__link text-link" href="/account/addresses" tabindex="-1">
+                Addresses
+                </a>
+             </li>
+             <li class="navlist__item">
+                <a class="navlist__link text-link" href="/account?view=orders" tabindex="-1">
+                Orders
+                </a>
+             </li>
+             <li class="navlist__item navlist__item--margin">
+                <a class="navlist__link text-link" href="/account?view=returns" tabindex="-1">
+                Returns
+                </a>
+             </li>
+             <li class="navlist__item">
+                <a class="navlist__link text-link" href="/account?view=book" tabindex="-1">
+                Book appointment
+                </a>
+             </li>
+          </ul>
+       </div>
+    </div>
+ </section>
+ <section id="wishlistAddedDrawer" class="wishlist-drawer wishlist-added-drawer drawer critical-hide" role="navigation" data-cy="wishlistDrawer" data-section-id="" data-section-type="wishlist-drawer" js-wishlist-added-drawer="container">
+    <div class="drawer__content" js-wishlist-added-drawer="body">
+       <div class="wishlist-drawer__header">
+          <div class="wishlist-drawer__title h3">
+             <span class="wishlist-drawer__title-text">Item added to wishlist <span class="divider">&gt;</span> <a href="/pages/wishlist" tabindex="-1">View list</a></span>
+             <button class="wishlist-drawer__close button" value="Close" data-cy="wishlistDrawerClose" data-target="wishlistAddedDrawer" js-toggle="wishlistAddedDrawer" tabindex="-1">
+                <span class="visually-hidden">Close</span>
+                <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                   <path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+                </svg>
+             </button>
+          </div>
+       </div>
+       <div class="wishlist-drawer__content" js-wishlist-added-drawer="list">
+          <ul class="navlist navlist--large">
+             <li class="navlist__item">
+                <a class="navlist__link text-link" href="/account/login" tabindex="-1">Log in</a>
+             </li>
+             <li class="navlist__item">
+                <a class="navlist__link text-link" href="/account/register" tabindex="-1">Create account</a>
+             </li>
+             <li class="navlist__item navlist__item--margin"></li>
+             <li class="navlist__item">
+                <a class="navlist__link text-link" href="/pages/wishlist" tabindex="-1">
+                Wishlist
+                </a>
+             </li>
+             <li class="navlist__item navlist__item--margin">
+                <a class="navlist__link text-link" href="/account?view=waitlist" tabindex="-1">
+                Waiting list
+                </a>
+             </li>
+             <li class="navlist__item">
+                <a class="navlist__link text-link" href="/account?view=details" tabindex="-1">
+                Personal details
+                </a>
+             </li>
+             <li class="navlist__item">
+                <a class="navlist__link text-link" href="/account/addresses" tabindex="-1">
+                Addresses
+                </a>
+             </li>
+             <li class="navlist__item">
+                <a class="navlist__link text-link" href="/account?view=orders" tabindex="-1">
+                Orders
+                </a>
+             </li>
+             <li class="navlist__item navlist__item--margin">
+                <a class="navlist__link text-link" href="/account?view=returns" tabindex="-1">
+                Returns
+                </a>
+             </li>
+             <li class="navlist__item">
+                <a class="navlist__link text-link" href="/account?view=book" tabindex="-1">
+                Book appointment
+                </a>
+             </li>
+          </ul>
+       </div>
+    </div>
+ </section>
