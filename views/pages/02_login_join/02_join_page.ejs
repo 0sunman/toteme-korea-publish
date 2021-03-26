@@ -1,0 +1,69 @@
+<link rel="stylesheet" href="/css/progress_wizard.css">
+<div class="container">
+    <div class="template-account__header">
+       상세정보를 입력하세요
+    </div>
+    <div class="template-account__wrapper">
+       <div class="template-account__left"></div>
+       <%- include ("./menu/index.ejs") %>
+       <div class="template-account__content">
+          <div class="template-login__content"> 
+ 
+             <div class="template-account__text_hdtype_1 alert">
+                <div class="rte">
+                   안내문구 출력 영역
+                </div>
+             </div>
+             <div class="template-login__form-wrapper" js-password-form="customerLoginForm">
+                <div class="template-login__form">
+                  <div class="template-account__text_hdtype_1">
+                     <p class='caption'>
+                        회원가입
+                     </div>
+                  </div>
+                  
+                  <div class="template-account__text_hdtype_1">
+                     <p class='caption'>
+                        인증 방식 선택
+                     </div>
+                  </div>
+                  <div class="template-account__text_hdtype_1">
+                     <p class='caption'>
+                        Toteme 온라인스토어에는 더현대닷컴이 운영 제공하는 사이트로 기존 회원은 더현대닷컴 아이디와 비밀번호로 바로 이용 가능합니다.
+                     </div>
+                  </div>
+
+                   <form method="post" action="/account/login" id="customer_login" accept-charset="UTF-8">
+                      <input type="hidden" name="form_type" value="customer_login"><input type="hidden" name="utf8" value="✓">
+                      <div class="form-group">
+                         <div class="form-group__field">
+                            <label class="form-group__label subtitle-2 is-hidden" for="CustomerEmail">
+                            ID 또는 이메일
+                            </label>
+                            <input id="CustomerEmail" autocapitalize="off" autocomplete="off" autofocus="" name="customer" placeholder="ID 또는 이메일" required="" spellcheck="false" type="email">
+                         </div>
+                         <div class="form-group__field">
+                            <label class="form-group__label subtitle-2 is-hidden" for="CustomerPassword">
+                            비밀번호
+                            </label>
+                            <input id="CustomerPassword" name="customer[password]" placeholder="비밀번호" required="" type="password">
+                         </div>
+                         <div class="form-group__field">
+                            <input class="button button--primary button--block button--large" disabled="true" type="submit" value="Log in">
+                          </div>
+                         <div class='sns-buttons form-group__field margin-50'>
+ 
+                            <input class="button" disabled="true" type="button" value="네이버">
+                            <input class="button" disabled="true" type="button" value="카카오톡">
+                            <input class="button" disabled="true" type="button" value="페이스북">
+                            <input class="button" disabled="true" type="button" value="구글플러스">
+                         </div>
+                      </div>
+                   </form>
+                </div>
+             </div>
+           
+          </div>
+       </div>
+    </div>
+ </div>
