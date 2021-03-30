@@ -2,10 +2,12 @@ const livereload = require('livereload');
 const livereloadMiddleware = require('connect-livereload');
 const path = require('path');
 const fs = require('fs');
+const axios = require('axios');
+
 
 // 라이브 서버 설정
 const liveServer = livereload.createServer({
-    exts: ['html', 'css', 'ejs'],
+    exts: ['html', 'css', 'ejs','js'],
     debug: true
 });
 
@@ -17,7 +19,7 @@ const ejs = require('ejs');
 
 const app = express();
 const server = http.createServer(app);
-
+ 
 const hostname = '127.0.0.1';
 const port = 3000;
 
@@ -51,9 +53,25 @@ pageData.forEach((data)=>{
     
   })
   console.log(path.join(__dirname, pageurl));
+
+
 })
 
 
 server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
+
+setTimeout(function(){
+
+
+  pageData.forEach((data)=>{ 
+      const {url, pageurl, isMain} = data;
+      console.log("axious : "+"http://127.0.0.1:3000"+url);
+      axios.get("http://127.0.0.1:3000"+url).then((res)=>{
+        console.log("axious : "+url);
+      })
+  })
+
+
+},1000);

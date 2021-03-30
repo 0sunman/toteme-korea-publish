@@ -9,10 +9,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.1",
     "connect-livereload": "^0.6.1",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "livereload": "^0.9.3",
-    "logger": "^0.0.1"
+    "logger": "^0.0.1",
+    "nodemon": "^2.0.7"
   }
 }
