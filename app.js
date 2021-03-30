@@ -29,20 +29,24 @@ app.use(livereloadMiddleware());
 
 
 const pageData = [
-  {"type":"index","title":"퍼블리스트","url" : "/publist", "pageurl" : "list.ejs"},
+  {"type":"index","title":"퍼블리스트","url" : "/publist", "pageurl" : "list.ejs", "isMain":true},
   {"type":"main","title":"메인","url" : "/00_main/1", "pageurl" : "00_main/index.ejs"},
   {"type":"join","title":"1. 로그인페이지","url" : "/02_login_join/1", "pageurl" : "02_login_join/01_login_page.ejs"},
   {"type":"join","title":"2. 회원가입페이지","url" : "/02_login_join/2", "pageurl" : "02_login_join/02_join_page.ejs"}
 ]
 
 pageData.forEach((data)=>{
-  const {url, pageurl} = data;
+  const {url, pageurl, isMain} = data;
   console.log(url, pageurl);
   app.get(url, (req, res) => {
     res.render('./index',{targetPath : pageurl, pageList : pageData},(err,html) => {
-      console.log(html);
+      if(isMain){
+        console.log("isMain",__dirname + "/index.html");
+        fs.writeFileSync(__dirname + "/index.html",html)
+      }else{
+        fs.writeFileSync(__dirname + "/dist/"+ pageurl+".html",html)
+      }
       res.send(html);
-      fs.writeFileSync(__dirname + "/dist/"+ pageurl+".html",html)
     });
     
   })
