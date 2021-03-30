@@ -1,0 +1,56 @@
+<style>
+.publishlist{padding:50px}
+</style>
+       
+    <div class='publishlist'>   
+       <h2>메인</h2>
+        <ul id='main'>
+            <% pageList.forEach(function(data){ 
+                if(data.type == "main"){ %>
+            <li>
+                <a href='https://ghcdn.rawgit.org/0sunman/toteme-korea-publish/main/dist/<%= data.pageurl %>.html'><%= data.title %></a>
+            </li>
+            <%}}) %> 
+        </ul>
+
+        <h2>마이페이지</h2>
+        <ul id='mypage'>
+            <% pageList.forEach(function(data){ 
+                if(data.type == "mypage"){ %>
+            <li>
+                <a href='https://ghcdn.rawgit.org/0sunman/toteme-korea-publish/main/dist/<%= data.pageurl %>.html'><%= data.title %></a>
+            </li>
+            <%}}) %> 
+        </ul>
+
+        <h2>회원가입</h2>
+        <ul id='join'>
+            <% pageList.forEach(function(data){ 
+                if(data.type == "join"){ %>
+            <li>
+                <a href='https://ghcdn.rawgit.org/0sunman/toteme-korea-publish/main/dist/<%= data.pageurl %>.html'><%= data.title %></a>
+            </li>
+            <%}}) %> 
+        </ul>
+
+        <h2>상품</h2>
+        <ul id='product'>
+            <% pageList.forEach(function(data){ 
+                if(data.type == "product"){ %>
+            <li>
+                <a href='https://ghcdn.rawgit.org/0sunman/toteme-korea-publish/main/dist/<%= data.pageurl %>.html'><%= data.title %></a>
+            </li>
+            <%}}) %> 
+        </ul>
+
+
+        <h2>주문</h2>
+        <ul id='order'>
+            <% pageList.forEach(function(data){ 
+                if(data.type == "order"){ %>
+            <li>
+                <a href='https://ghcdn.rawgit.org/0sunman/toteme-korea-publish/main/dist/<%= data.title %>.html'><%= data.title %></a>
+            </li>
+            <%}}) %> 
+        </ul>
+    </div>
