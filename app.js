@@ -1,5 +1,7 @@
 const livereload = require('livereload');
 const livereloadMiddleware = require('connect-livereload');
+const path = require('path');
+const fs = require('fs');
 
 // 라이브 서버 설정
 const liveServer = livereload.createServer({
@@ -35,8 +37,14 @@ pageData.forEach((data)=>{
   const {url, pageurl} = data;
   console.log(url, pageurl);
   app.get(url, (req, res) => {
-    res.render('./index',{targetPath : pageurl});
+    res.render('./index',{targetPath : pageurl},(err,html) => {
+      console.log(html);
+      res.send(html);
+      fs.writeFileSync(__dirname + "/dist/"+ pageurl+".html",html)
+    });
+    
   })
+  console.log(path.join(__dirname, pageurl));
 })
 
 
