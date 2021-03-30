@@ -19,11 +19,11 @@
                     비회원 주문조회
                 </option>
              </select>
-             <span class="custom-select__label text-small">로그인</span>
+             <span class="main-title custom-select__label text-small">로그인</span>
           </div>
        </div>
        <ul class="navlist" js-account-nav="navlist">
-          <li class="navlist__item is-active">
+          <li class="navlist__item ">
              <a class="navlist__link text-link" href="/account/login">로그인</a>
           </li>
           <li class="navlist__item navlist__item--margin">
@@ -41,3 +41,19 @@
        </ul>
     </div>
  </div>
+
+ <% if(state == 1){%>
+   <script>
+      setTimeout(function(){
+         $(".main-title.custom-select__label").text("로그인");
+         $("a[href='/account/login']").addClass("is-active");
+      },100)
+      </script>
+   <%}else if(state == 2){%>
+   <script>
+      setTimeout(function(){
+         $(".main-title.custom-select__label").text("회원가입");
+         $("a[href='/account/register']").addClass("is-active");
+      },100)
+      </script>
+   <%}%>

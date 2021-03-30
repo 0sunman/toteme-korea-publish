@@ -1,69 +1,180 @@
-<link rel="stylesheet" href="/css/progress_wizard.css">
-<div class="container">
-    <div class="template-account__header">
-       상세정보를 입력하세요
-    </div>
-    <div class="template-account__wrapper">
-       <div class="template-account__left"></div>
-       <%- include ("./menu/index.ejs") %>
-       <div class="template-account__content">
-          <div class="template-login__content"> 
- 
-             <div class="template-account__text_hdtype_1 alert">
-                <div class="rte">
-                   안내문구 출력 영역
-                </div>
-             </div>
-             <div class="template-login__form-wrapper" js-password-form="customerLoginForm">
-                <div class="template-login__form">
-                  <div class="template-account__text_hdtype_1">
-                     <p class='caption'>
-                        회원가입
-                     </div>
-                  </div>
-                  
-                  <div class="template-account__text_hdtype_1">
-                     <p class='caption'>
-                        인증 방식 선택
-                     </div>
-                  </div>
-                  <div class="template-account__text_hdtype_1">
-                     <p class='caption'>
-                        Toteme 온라인스토어에는 더현대닷컴이 운영 제공하는 사이트로 기존 회원은 더현대닷컴 아이디와 비밀번호로 바로 이용 가능합니다.
-                     </div>
-                  </div>
+<style>
+   @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 100;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format('opentype');} @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 300;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf) format('opentype');} @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 400;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format('opentype');} @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 500;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf) format('opentype');} @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 700;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format('opentype');} @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 900;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format('opentype');}
+   *{font-family: 'Noto Sans KR', sans-serif;}
+   .input-table{display: table; width: 100%;}
+   .input-table > div{display: table-cell;vertical-align: top; }
+   .input-table > div input.duplicatebtn{height: 33px; margin-right: 0px; width: calc(100% - 8px); float: right}
+   .input-table > div.w70{width:70%;}
+   .input-table > div.w30{width:70%;text-align: right;clear:right}
+   .input-table > div.w30::after{content:""}
+   .text-block{display: block; margin:10px 0px; text-align: left;}
+   .text-block.m15{margin:15px 0px;}
+   .text-block.m15-left{margin-left:15px;}
+   .text-block.description{font-size: 12px; color:#171616; font-family: 'Noto Sans KR', sans-serif;}
+   .text-block .checkbox{width:10px; height:10px; margin-right:9px; border: 1px solid #171616}
+   .text-block .checkbox:checked{background-color: #171616;}
+   .text-block h2{font-size: 14px;margin-bottom:10px}
+   .input-block{display: block; margin:10px 0px; text-align: center;}
 
-                   <form method="post" action="/account/login" id="customer_login" accept-charset="UTF-8">
-                      <input type="hidden" name="form_type" value="customer_login"><input type="hidden" name="utf8" value="✓">
-                      <div class="form-group">
-                         <div class="form-group__field">
-                            <label class="form-group__label subtitle-2 is-hidden" for="CustomerEmail">
-                            ID 또는 이메일
-                            </label>
-                            <input id="CustomerEmail" autocapitalize="off" autocomplete="off" autofocus="" name="customer" placeholder="ID 또는 이메일" required="" spellcheck="false" type="email">
-                         </div>
-                         <div class="form-group__field">
-                            <label class="form-group__label subtitle-2 is-hidden" for="CustomerPassword">
-                            비밀번호
-                            </label>
-                            <input id="CustomerPassword" name="customer[password]" placeholder="비밀번호" required="" type="password">
-                         </div>
-                         <div class="form-group__field">
-                            <input class="button button--primary button--block button--large" disabled="true" type="submit" value="Log in">
-                          </div>
-                         <div class='sns-buttons form-group__field margin-50'>
- 
-                            <input class="button" disabled="true" type="button" value="네이버">
-                            <input class="button" disabled="true" type="button" value="카카오톡">
-                            <input class="button" disabled="true" type="button" value="페이스북">
-                            <input class="button" disabled="true" type="button" value="구글플러스">
-                         </div>
-                      </div>
-                   </form>
-                </div>
-             </div>
-           
-          </div>
-       </div>
-    </div>
- </div>
+   .line-block{display: block; height:1px; background-color: #171616;}
+   .top-m15{margin-top:15px}
+   .top-m30{margin-top:30px}
+   .left-m15{margin-left:15px}
+   .left-m30{margin-left:30px}
+   .bottom-m15{margin-bottom:15px}
+   .bottom-m30{margin-bottom:30px}
+   .align-center{text-align: center;}
+   .align-left{text-align: left;}
+   .align-right{text-align: right;}
+
+
+
+   .progressbar{width:100%;padding: 15px 90px;;margin: 0 auto;font-size: 0px;letter-spacing: -1px;}
+   .progressbar .line{background: black;height:1px;width: 99%;top:8px;position: relative;z-index: -1; margin: 0 auto;}
+   .progressbar .circle{display: inline-block; width:15px;height:15px;border-radius: 50%;background: white;border:1px solid #171616;}
+   .progressbar ul{list-style-type: none;}
+   .progressbar ul li.active .circle{background: #171616;}
+   .progressbar ul{display:table;width: 100%; list-style-type: none;padding:0;margin:0}
+   .progressbar ul li{display: table-cell; width: 33.33%;line-height: 15px; text-align: center; float:left}
+   .progressbar ul li p{text-align: center; display: inline-block;}
+   .progressbar ul li:first-child{text-align: left;}
+   .progressbar ul li:first-child p{text-align: left;}
+   .progressbar ul li:first-child p span.text{text-align: left;transform:translateX(-36%);}
+   .progressbar ul li:last-child{text-align: right;}
+   .progressbar ul li:last-child p{text-align: right;}
+   .progressbar ul li:last-child p span.text{text-align: left;transform:translateX(36%);}
+   .progressbar ul li span.text{display: inline-block;font-size: 14px;}
+
+   .join.template-login__form .input-wrap{padding-top:0px;margin-top:0px}
+
+
+   input[type=email], input[type=password], input[type=search], input[type=tel], input[type=text], select, textarea{padding:0px 11px}
+</style>
+<div class="container">
+   <div class="template-account__header">
+      상세정보를 입력하세요
+   </div>
+   <div class="template-account__wrapper">
+
+
+
+
+      <div class="template-account__left"></div>
+      <%- include ("./menu/index.ejs",{state:2}) %>
+      <div class="template-account__content">
+         <div class="template-login__content">
+
+            <div class="template-account__text_hdtype_1 alert">
+               <div class="rte">
+                  안내문구 출력 영역
+               </div>
+            </div>
+            <div class=" template-login__form-wrapper" js-password-form="customerLoginForm">
+               <div class='text-block align-center'>
+                  <h2>회원가입</h2>
+               </div>
+
+               </div>
+               <div class="progress template-login__form">
+                  <div class='progressbar'>
+                     <div class='line'></div>
+                     <ul>
+                        <li>
+                           <p>
+                              <span class='circle'></span><br>
+                              <span class='text'>간편인증</span>   
+                           </p>
+                        </li>
+                        <li class='active'>
+                           <p>
+                              <span class='circle'></span><br>
+                              <span class='text'>가입정보 입력</span>   
+                           </p> 
+                        </li>
+                        <li>
+                           <p>
+                              <span class='circle'></span><br>
+                              <span class='text'>개인정보 동의</span>   
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class='line-block top-m15'>
+               </div>
+
+               <div class='text-block left-m15 top-m15 bottom-m30'>
+                  <h2>가입정보 입력</h2>
+                  <p>[Google] 계정으로 인증이 완료되었습니다.</p>
+               </div>
+                              <div class="join template-login__form">
+                  <form method="post" action="/account/login" id="customer_login" accept-charset="UTF-8">
+                     <input type="hidden" name="form_type" value="customer_login"><input type="hidden" name="utf8" value="✓">
+                     <div class="input-wrap form-group">
+                        <div class="input-block form-group__field">
+                           <input id="CustomerId" autocapitalize="off" autocomplete="off" autofocus="" placeholder="아이디 또는 이메일" required="" spellcheck="false" type="email">
+                        </div>
+
+                        <div class="text-block description form-group__field">
+                           <p>
+                              <input class='checkbox' value="1" type="checkbox"></input>위 이메일 주소를 아이디로 사용
+                           </p>
+                        </div>
+
+                        <div class="input-table form-group__field">
+                           <div style='width:70%;'>
+                              <input id="CustomerPassword" name="customer[password]" placeholder="아이디 또는 이메일" required="" type="password">
+                           </div>
+                           <div style='width:30%;'>
+                              <input type='button' class='button duplicatebtn' value='중복확인' ></button>
+                           </div>
+                        </div>
+
+                        <div class="input-block form-group__field">
+                           <input id="CustomerPassword" autocapitalize="off" autocomplete="off" autofocus="" placeholder="비밀번호" required="" spellcheck="false" type="email">
+                        </div>
+
+                        <div class="input-block form-group__field">
+                           <input id="CustomerPasswordComfirm" autocapitalize="off" autocomplete="off" autofocus="" placeholder="비밀번호 확인" required="" spellcheck="false" type="email">
+                        </div>
+
+                        <div class="input-block form-group__field">
+                           <input id="CustomerPasswordComfirm" autocapitalize="off" autocomplete="off" autofocus="" placeholder="이름" required="" spellcheck="false" type="email">
+                        </div>
+
+                        <div class="input-block form-group__field">
+                           <input id="CustomerBirthday" autocapitalize="off" autocomplete="off" autofocus="" placeholder="생년월일" required="" spellcheck="false" type="email">
+                        </div>
+
+                        <div class="text-block description form-group__field">
+                           <p>생년월일 8자리를 입력해주세요 (예. 20150115)</p>
+                        </div>
+
+                        <div class="input-block form-group__field">
+                           <input id="CustomerPhonenumber" autocapitalize="off" autocomplete="off" autofocus="" placeholder="휴대폰번호" required="" spellcheck="false" type="email">
+                        </div>
+
+                        <div class="text-block description form-group__field">
+                           <p>'-'를 빼고 휴대폰 번호를 입력해주세요.</p>
+                        </div>
+
+
+                        <!--div class="input-block form-group__field">
+                           <input class="button button--primary button--block button--large" disabled="true" type="submit" value="Log in">
+                         </div-->
+
+
+                     </div>
+                  </form>
+               </div>
+            </div>
+
+         </div>
+      </div>
+
+
+
+
+
+   </div>
+</div>
