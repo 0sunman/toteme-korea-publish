@@ -877,17 +877,32 @@
          <!-- BEGIN content_for_index -->
          <!--  include ("./pages/00_main/index.ejs") BEGIN content_for_index -->
          <style>
-.radiobutton input[type='radio']{display:none;}
-.radiobutton input[type='radio']:checked + span{ background:#171616; color:#fff}
-.radiobutton input + span{
-   -ms-flex-align: center;  align-items: center; -webkit-appearance: none; -moz-appearance: none;
-   appearance: none; background-color: #fff; border: 1px solid #171616; border-radius: 22px;
-   box-shadow: none; color: #171616; display: -ms-inline-flexbox; display: inline-flex;
-   font-size: 12px; -ms-flex-pack: center; justify-content: center; letter-spacing: .04px; line-height: 15px;
-   margin: 0 5px; min-height: 22px; padding: 0 1.5rem .125rem; text-align: center; text-decoration: none; -webkit-user-select: none;
-   -moz-user-select: none; -ms-user-select: none; user-select: none; vertical-align: middle; white-space: nowrap; width: auto;
-   cursor : pointer;
-}
+   .right-m15{margin-right:15px;}
+   .right-m30{margin-right:30px;}
+   .defaultblock{display: block;}
+   .sns-buttons::after{display:table;content:"";clear:both}
+   .newline{display: block;}
+   .radiobutton input[type='radio']{display:none;}
+   .radiobutton input[type='radio']:checked + span{ background:#171616; color:#fff}
+   .radiobutton input + span{
+      
+      -ms-flex-align: center;  align-items: center; -webkit-appearance: none; -moz-appearance: none;
+      appearance: none; background-color: #fff; border: 1px solid #171616; border-radius: 33px;
+      box-shadow: none; color: #171616; display: -ms-inline-flexbox; display: inline-flex;
+      font-size: 14px; -ms-flex-pack: center; justify-content: center; letter-spacing: .04px; line-height: 15px;
+      margin:5px 8px;min-height: 33px; padding: 0 18px; text-align: center; text-decoration: none; -webkit-user-select: none;
+      -moz-user-select: none; -ms-user-select: none; user-select: none; vertical-align: middle; white-space: nowrap; width: auto;
+      cursor : pointer; letter-spacing:0px;
+   }
+   .input-table input,.input-table select{font-size: 14px;}
+   input.toteme-button-style{ font-size: 14px; margin:5px 8px; min-height: 33px; padding: 0 18px; line-height: 15px;}
+   input.toteme-button-style.big{width:67%;}
+   select.select--center{background-image: url(//cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/icon-small-arrow-down.svg?v=9521334029086756349);}
+   select.toteme-select-style{ 
+    background-image: url(//cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/icon-small-arrow-down.svg?v=9521334029086756349);
+
+    }
+    .select-wrap{ display: inline-block;}
 </style>
 <div class="container">
    <div class="template-account__header">
@@ -954,32 +969,34 @@
       <div class="template-account__content">
          <div class="template-login__content">
 
-            <div class="template-account__text_hdtype_1 alert">
+            <div class="template-account__text_hdtype_1 alert" style='display:none;'>
                <div class="rte">
                   안내문구 출력 영역
                </div>
             </div>
             <div class=" template-login__form-wrapper" js-password-form="customerLoginForm">
-               <div class='text-block align-center top-m15 bottom-m15'>
-                  <h2>회원가입</h2>
-               </div>
 
-               </div>
-               
-               <div class='line-block top-m15 bottom-m15'>
-               </div>
-               <div class='sns-buttons form-group__field top-m15 bottom-m15'>
+               <div class='defaultblock sns-buttons top-m15 bottom-m15'>
                   <label class='radiobutton'>
                      <input type="radio" name="test_radio" value="옵션1" checked/>
-                     <span>카카오톡1</span>
+                     <span>카카오톡</span>
+                  </label>
+                  <label class='radiobutton' style='clear:both'>
+                     <input type="radio" name="test_radio" value="옵션1"/>
+                     <span>이메일</span>
+                  </label>
+                  <div class='newline'></div>
+                  <label class='radiobutton'>
+                     <input type="radio" name="test_radio" value="옵션1"/>
+                     <span>구글</span>
                   </label>
                   <label class='radiobutton'>
                      <input type="radio" name="test_radio" value="옵션1"/>
-                     <span>카카오톡2</span>
+                     <span>페이스북</span>
                   </label>
                   <label class='radiobutton'>
                      <input type="radio" name="test_radio" value="옵션1"/>
-                     <span>카카오톡3</span>
+                     <span>휴대폰 인증</span>
                   </label>
 
                </div>
@@ -987,76 +1004,43 @@
                <div class='line-block top-m15 bottom-m15'>
                </div>
 
-               <div class='text-block left-m15 top-m15 bottom-m30'>
-                  <h2>가입정보 입력</h2>
-                  <p>[Google] 계정으로 인증이 완료되었습니다.</p>
-               </div>
-                              <div class="join template-login__form">
-                  <form method="post" action="/account/login" id="customer_login" accept-charset="UTF-8">
-                     <input type="hidden" name="form_type" value="customer_login"><input type="hidden" name="utf8" value="✓">
-                     <div class="input-wrap form-group">
-                        <div class="input-block form-group__field">
-                           <input id="CustomerId" autocapitalize="off" autocomplete="off" autofocus="" placeholder="아이디 또는 이메일" required="" spellcheck="false" type="email">
-                        </div>
+               <div class='defaultblock left-m15 right-m15 top-m15 bottom-m15 align-center'>
 
-                        <div class="text-block description form-group__field">
-                           <p>
-                              <input class='checkbox' value="1" type="checkbox"></input>위 이메일 주소를 아이디로 사용
-                           </p>
-                        </div>
-
-                        <div class="input-table form-group__field">
-                           <div style='width:70%;'>
-                              <input id="CustomerPassword" name="customer[password]" placeholder="아이디 또는 이메일" required="" type="password">
-                           </div>
-                           <div style='width:30%;'>
-                              <input type='button' class='button duplicatebtn' value='중복확인' ></button>
-                           </div>
-                        </div>
-
-                        <div class="input-block form-group__field">
-                           <input id="CustomerPassword" autocapitalize="off" autocomplete="off" autofocus="" placeholder="비밀번호" required="" spellcheck="false" type="email">
-                        </div>
-
-                        <div class="input-block form-group__field">
-                           <input id="CustomerPasswordComfirm" autocapitalize="off" autocomplete="off" autofocus="" placeholder="비밀번호 확인" required="" spellcheck="false" type="email">
-                        </div>
-
-                        <div class="input-block form-group__field">
-                           <input id="CustomerPasswordComfirm" autocapitalize="off" autocomplete="off" autofocus="" placeholder="이름" required="" spellcheck="false" type="email">
-                        </div>
-
-                        <div class="input-block form-group__field">
-                           <input id="CustomerBirthday" autocapitalize="off" autocomplete="off" autofocus="" placeholder="생년월일" required="" spellcheck="false" type="email">
-                        </div>
-
-                        <div class="text-block description form-group__field">
-                           <p>생년월일 8자리를 입력해주세요 (예. 20150115)</p>
-                        </div>
-
-                        <div class="input-block form-group__field">
-                           <input id="CustomerPhonenumber" autocapitalize="off" autocomplete="off" autofocus="" placeholder="휴대폰번호" required="" spellcheck="false" type="email">
-                        </div>
-
-                        <div class="text-block description form-group__field">
-                           <p>'-'를 빼고 휴대폰 번호를 입력해주세요.</p>
-                        </div>
-
-
-                        <!--div class="input-block form-group__field">
-                           <input class="button button--primary button--block button--large" disabled="true" type="submit" value="Log in">
-                         </div-->
-
-
+                  <div class="input-table form-group__field" style='width:67%;margin:0 auto;'>
+                     <div style='width:60%;'>
+                        <input style='display: inline-block;' autocapitalize="off" autocomplete="off" autofocus="" placeholder="이메일" required="" spellcheck="false" type="email">
                      </div>
-                  </form>
+                     <div style='width:40%;'>
+                        <div class='select-wrap' style='width:100%;margin-left:7px'>
+   
+                           <select  class="toteme-select-style toteme-button-style" >
+                              <option value="AF">naver.com</option>
+                              <option value="AX">gmail.com</option>
+                              <option value="AX">직접입력</option>
+                           </select>
+                           </div>
+      
+                        </div>
+                     </div>
+                  </div>
+
+
+
+               
+               <div class='text-block left-m15 right-m15 top-m15 bottom-m30'>
+                  <p>
+                     이메일을 인증을 위한 이메일 주소 수집/이용에 동의하십니까? 동의에 거부할 권리나 의사가 있으나,
+                     거부시 회원가입이 진행되지 않습니다. 수집한 개인정보는 인증 완료 시까지 보관합니다.
+                  </p>
                </div>
+               <div class='defaultblock left-m15 right-m15 top-m15 bottom-m30 align-center'>
+                  <input class="toteme-button-style button big" type="button" value="동의하고 인증하기"/>
+               </div>
+                         
             </div>
 
          </div>
       </div>
-
-
 
 
 
