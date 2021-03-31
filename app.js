@@ -34,7 +34,8 @@ const pageData = [
   {"type":"index","title":"퍼블리스트","url" : "/publist", "pageurl" : "list.ejs", "isMain":true},
   {"type":"main","title":"메인","url" : "/00_main/1", "pageurl" : "00_main/index.ejs"},
   {"type":"join","title":"1. 로그인페이지","url" : "/02_login_join/1", "pageurl" : "02_login_join/01_login_page.ejs"},
-  {"type":"join","title":"2. 회원가입페이지","url" : "/02_login_join/2", "pageurl" : "02_login_join/02_join_page.ejs"}
+  {"type":"join","title":"2. 회원가입페이지","url" : "/02_login_join/2", "pageurl" : "02_login_join/02_join_page.ejs"},
+  {"type":"join","title":"3. 이메일페이지 (공사중)","url" : "/02_login_join/3", "pageurl" : "02_login_join/03_select_email.ejs"}
 ]
 
 pageData.forEach((data)=>{

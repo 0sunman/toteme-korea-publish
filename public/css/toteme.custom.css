@@ -32,6 +32,7 @@ html,body,div,p,h1,h2,h3,span,*{font-family: 'Noto Sans KR',MonumentGrotesk,-app
 .input-table > div.w70{width:70%;}
 .input-table > div.w30{width:70%;text-align: right;clear:right}
 .input-table > div.w30::after{content:""}
+.blockType{display:block;}
 .text-block{display: block; margin:10px 0px; text-align: left;}
 .text-block.m15{margin:15px 0px;}
 .text-block.m15-left{margin-left:15px;}
