@@ -16,6 +16,7 @@ liveServer.watch(__dirname);
 const http = require('http');
 const express = require('express');
 const ejs = require('ejs');
+const { Console } = require('console');
 
 const app = express();
 const server = http.createServer(app);
@@ -35,7 +36,8 @@ const pageData = [
   {"type":"main","title":"메인","url" : "/00_main/1", "pageurl" : "00_main/index.ejs"},
   {"type":"join","title":"1. 로그인페이지","url" : "/02_login_join/1", "pageurl" : "02_login_join/01_login_page.ejs"},
   {"type":"join","title":"2. 회원가입페이지","url" : "/02_login_join/2", "pageurl" : "02_login_join/02_join_page.ejs"},
-  {"type":"join","title":"3. 이메일페이지 (공사중)","url" : "/02_login_join/3", "pageurl" : "02_login_join/03_select_email.ejs"}
+  {"type":"join","title":"3. 이메일페이지 (공사중)","url" : "/02_login_join/3", "pageurl" : "02_login_join/03_select_email.ejs"},
+  {"type":"product","title":"1. 상품상세","url" : "/03_product/1", "pageurl" : "03_product/01_product_detail.ejs"}
 ]
 
 pageData.forEach((data)=>{
@@ -43,6 +45,7 @@ pageData.forEach((data)=>{
   console.log(url, pageurl);
   app.get(url, (req, res) => {
     res.render('./index',{targetPath : pageurl, pageList : pageData},(err,html) => {
+      console.log(pageurl);
       if(isMain){
         console.log("isMain",__dirname + "/index.html");
         fs.writeFileSync(__dirname + "/index.html",html)
