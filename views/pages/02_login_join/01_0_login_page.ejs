@@ -1,0 +1,98 @@
+<div class="container">
+    <div class="template-account__header">
+       상세정보를 입력하세요
+    </div>
+    <div class="template-account__wrapper">
+       <div class="template-account__left"></div>
+       <%- include ("./menu/index.ejs",{state:1}) %>
+       <div class="template-account__content">
+          <div class="template-login__content">
+ 
+             <div class="template-account__text_hdtype_1 alert" style='display:none'>
+                <div class="rte">
+                   안내문구 출력 영역
+                </div>
+             </div>
+             <div class="template-login__form-wrapper" js-password-form="customerLoginForm">
+                <div class="template-login__form">
+                   <form method="post" action="/account/login" id="customer_login" accept-charset="UTF-8">
+                      <input type="hidden" name="form_type" value="customer_login"><input type="hidden" name="utf8" value="✓">
+                      <div class="form-group">
+                         <div class="form-group__field bottom-m10">
+                            <label class="form-group__label subtitle-2 is-hidden" for="CustomerEmail">
+                            ID 또는 이메일
+                            </label>
+                            <input id="CustomerEmail" class='font-14' autocapitalize="off" autocomplete="off" autofocus="" name="customer[email]" placeholder="ID 또는 이메일" required="" spellcheck="false" type="email">
+                         </div>
+                         <div class="form-group__field">
+                            <label class="form-group__label subtitle-2 is-hidden" for="CustomerPassword">
+                            비밀번호
+                            </label>
+                            <input id="CustomerPassword" class='font-14' name="customer[password]" placeholder="비밀번호" required="" type="password">
+                         </div>
+                         <div class="form-group__field">
+                            <input class="button button--primary button--block button--large font-14" disabled="true" type="submit" value="로그인">
+                          </div>
+
+                         <div class='defaultblock sns-buttons top-m15 bottom-m15'>
+                           <label class='radiobutton'>
+                              <input type="radio" name="test_radio" value="옵션1" checked/>
+                              <span>네이버</span>
+                           </label>
+                           <label class='radiobutton' style='clear:both'>
+                              <input type="radio" name="test_radio" value="옵션1"/>
+                              <span>카카오톡</span>
+                           </label>
+                           <div class='newline'></div>
+                           <label class='radiobutton'>
+                              <input type="radio" name="test_radio" value="옵션1"/>
+                              <span>페이스북</span>
+                           </label>
+                           <label class='radiobutton'>
+                              <input type="radio" name="test_radio" value="옵션1"/>
+                              <span>구글</span>
+                           </label>
+         
+                        </div>
+                      </div>
+                   </form>
+                </div>
+
+               <div class='line-block top-m15 bottom-m15'>
+               </div>
+
+                <div class="template-account__text_hdtype_1 no-margin no-padding font-14">
+                   <div class="rte">
+                      Toteme 온라인스토어에는 더현대닷컴이 운영 제공하는 사이트로 기존 회원은 더현대닷컴 아이디와 비밀번호로 바로 이용 가능합니다.
+                   </div>
+                </div>
+             </div>
+             <div class="template-login__form-wrapper is-hidden" js-password-form="recoverPasswordForm">
+                <div class="template-login__form">
+                   <form method="post" action="/account/recover" accept-charset="UTF-8">
+                      <input type="hidden" name="form_type" value="recover_customer_password"><input type="hidden" name="utf8" value="✓">
+                      <div class="form-errors">
+                      </div>
+                      <div class="form-group">
+                         <div class="form-group__field">
+                            <label for="RecoverEmail" class="form-group__label subtitle-2 is-hidden">
+                               ID 또는 이메일
+                            </label>
+                            <input id="RecoverEmail" autocapitalize="off" autocomplete="off" name="email" placeholder="Email" required="" spellcheck="false" tabindex="-1" type="email">
+                         </div>
+                         <div class="form-group__footer">
+                            <input class="button button--primary button--block button--large" disabled="true" tabindex="-1" type="submit" value="Reset password">
+                         </div>
+                      </div>
+                      <div class="template-account__footer">
+                         <div class="rte">
+                            Forgot your password? Enter your username or email address and you’ll receive an email to change it.
+                         </div>
+                      </div>
+                   </form>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
