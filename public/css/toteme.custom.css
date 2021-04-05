@@ -43,15 +43,24 @@ html,body,div,p,h1,h2,h3,span,*{font-family: 'Noto Sans KR',MonumentGrotesk,-app
 .input-block{display: block; margin:10px 0px; text-align: center;}
 
 .line-block{display: block; height:1px; background-color: #171616;}
+.top-m10{margin-top:10px}
 .top-m15{margin-top:15px}
 .top-m30{margin-top:30px}
+.left-m10{margin-left:10px}
 .left-m15{margin-left:15px}
 .left-m30{margin-left:30px}
+.bottom-m10{margin-bottom:10px}
 .bottom-m15{margin-bottom:15px}
 .bottom-m30{margin-bottom:30px}
+.right-m10{margin-right:10px;}
+.right-m15{margin-right:15px;}
+.right-m30{margin-right:30px;}
 .align-center{text-align: center;}
 .align-left{text-align: left;}
 .align-right{text-align: right;}
+
+.font-12{font-size:12px !important;}
+.font-14{font-size:14px !important;}
 
 
 
@@ -76,3 +85,36 @@ html,body,div,p,h1,h2,h3,span,*{font-family: 'Noto Sans KR',MonumentGrotesk,-app
 
 input[type=email], input[type=password], input[type=search], input[type=tel], input[type=text], select, textarea{padding:0px 11px}
 /* // 2-2 회원가입 페이지*/
+
+
+.container .template-account__navlist {padding-top:15px; padding-bottom:15px;}
+.container .template-login__form .form-group{padding-top:15px; padding-bottom:15px;}
+
+.defaultblock{display: block;}
+.sns-buttons::after{display:table;content:"";clear:both}
+.newline{display: block;}
+/* 라디오 버튼 */
+.radiobutton input[type='radio']{display:none;}
+.radiobutton input[type='radio']:checked + span{ background:#171616; color:#fff}
+.radiobutton input + span{
+   
+   -ms-flex-align: center;  align-items: center; -webkit-appearance: none; -moz-appearance: none;
+   appearance: none; background-color: #fff; border: 1px solid #171616; border-radius: 33px;
+   box-shadow: none; color: #171616; display: -ms-inline-flexbox; display: inline-flex;
+   font-size: 14px; -ms-flex-pack: center; justify-content: center; letter-spacing: .04px; line-height: 15px;
+   margin:5px 8px;min-height: 33px; padding: 0 18px; text-align: center; text-decoration: none; -webkit-user-select: none;
+   -moz-user-select: none; -ms-user-select: none; user-select: none; vertical-align: middle; white-space: nowrap; width: auto;
+   cursor : pointer; letter-spacing:0px;
+}
+/* // 라디오 버튼 */
+/* 셀렉트 버튼 */
+.input-table input,.input-table select{font-size: 14px;}
+input.toteme-button-style{ font-size: 14px; margin:5px 8px; min-height: 33px; padding: 0 18px; line-height: 15px;}
+input.toteme-button-style.big{width:67%;}
+select.select--center{background-image: url(//cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/icon-small-arrow-down.svg?v=9521334029086756349);}
+select.toteme-select-style{ 
+ background-image: url(//cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/icon-small-arrow-down.svg?v=9521334029086756349);
+
+ }
+ .select-wrap{ display: inline-block;}
+ /* // 라디오 버튼 */

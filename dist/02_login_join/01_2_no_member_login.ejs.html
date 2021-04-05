@@ -876,43 +876,7 @@
       <main id="MainContent" class="main-content critical-clear">
          <!-- BEGIN content_for_index -->
          <!--  include ("./pages/00_main/index.ejs") BEGIN content_for_index -->
-         <style>
-   .container .template-account__navlist {padding-top:15px; padding-bottom:15px;}
-   .container .template-login__form .form-group{padding-top:15px; padding-bottom:15px;}
-
-.top-m10{margin-top:10px}
-.left-m10{margin-left:10px}
-.bottom-m10{margin-bottom:10px}
-.font-14{font-size:14px !important;}
-
-.right-m15{margin-right:15px;}
-   .right-m30{margin-right:30px;}
-   .defaultblock{display: block;}
-   .sns-buttons::after{display:table;content:"";clear:both}
-   .newline{display: block;}
-   .radiobutton input[type='radio']{display:none;}
-   .radiobutton input[type='radio']:checked + span{ background:#171616; color:#fff}
-   .radiobutton input + span{
-      
-      -ms-flex-align: center;  align-items: center; -webkit-appearance: none; -moz-appearance: none;
-      appearance: none; background-color: #fff; border: 1px solid #171616; border-radius: 33px;
-      box-shadow: none; color: #171616; display: -ms-inline-flexbox; display: inline-flex;
-      font-size: 14px; -ms-flex-pack: center; justify-content: center; letter-spacing: .04px; line-height: 15px;
-      margin:5px 8px;min-height: 33px; padding: 0 18px; text-align: center; text-decoration: none; -webkit-user-select: none;
-      -moz-user-select: none; -ms-user-select: none; user-select: none; vertical-align: middle; white-space: nowrap; width: auto;
-      cursor : pointer; letter-spacing:0px;
-   }
-   .input-table input,.input-table select{font-size: 14px;}
-   input.toteme-button-style{ font-size: 14px; margin:5px 8px; min-height: 33px; padding: 0 18px; line-height: 15px;}
-   input.toteme-button-style.big{width:67%;}
-   select.select--center{background-image: url(//cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/icon-small-arrow-down.svg?v=9521334029086756349);}
-   select.toteme-select-style{ 
-    background-image: url(//cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/icon-small-arrow-down.svg?v=9521334029086756349);
-
-    }
-    .select-wrap{ display: inline-block;}
-</style>
-<div class="container">
+         <div class="container">
     <div class="template-account__header">
        상세정보를 입력하세요
     </div>
@@ -965,8 +929,8 @@
  
    <script>
       setTimeout(function(){
-         $(".main-title.custom-select__label").text("로그인");
-         $("a[href='/account/login']").addClass("is-active");
+         $(".main-title.custom-select__label").text("비회원 주문조회");
+         $("a[href='/account/login#reactivate']").addClass("is-active");
       },100)
       </script>
    
@@ -979,59 +943,35 @@
                 </div>
              </div>
              <div class="template-login__form-wrapper" js-password-form="customerLoginForm">
-                <div class="template-login__form">
-                   <form method="post" action="/account/login" id="customer_login" accept-charset="UTF-8">
-                      <input type="hidden" name="form_type" value="customer_login"><input type="hidden" name="utf8" value="✓">
-                      <div class="form-group">
-                         <div class="form-group__field bottom-m10">
-                            <label class="form-group__label subtitle-2 is-hidden" for="CustomerEmail">
-                            ID 또는 이메일
-                            </label>
-                            <input id="CustomerEmail" class='font-14' autocapitalize="off" autocomplete="off" autofocus="" name="customer[email]" placeholder="ID 또는 이메일" required="" spellcheck="false" type="email">
-                         </div>
-                         <div class="form-group__field">
-                            <label class="form-group__label subtitle-2 is-hidden" for="CustomerPassword">
-                            비밀번호
-                            </label>
-                            <input id="CustomerPassword" class='font-14' name="customer[password]" placeholder="비밀번호" required="" type="password">
-                         </div>
-                         <div class="form-group__field">
-                            <input class="button button--primary button--block button--large font-14" disabled="true" type="submit" value="로그인">
-                          </div>
-
-                         <div class='defaultblock sns-buttons top-m15 bottom-m15'>
-                           <label class='radiobutton'>
-                              <input type="radio" name="test_radio" value="옵션1" checked/>
-                              <span>네이버</span>
+               <div class="template-login__form">
+                  <form method="post" action="/account/login" id="customer_login" accept-charset="UTF-8">
+                     <input type="hidden" name="form_type" value="customer_login"><input type="hidden" name="utf8" value="✓">
+                     <div class="form-group">
+                        <div class="form-group__field bottom-m10">
+                           <label class="form-group__label subtitle-2 is-hidden" for="CustomerEmail">
                            </label>
-                           <label class='radiobutton' style='clear:both'>
-                              <input type="radio" name="test_radio" value="옵션1"/>
-                              <span>카카오톡</span>
-                           </label>
-                           <div class='newline'></div>
-                           <label class='radiobutton'>
-                              <input type="radio" name="test_radio" value="옵션1"/>
-                              <span>페이스북</span>
-                           </label>
-                           <label class='radiobutton'>
-                              <input type="radio" name="test_radio" value="옵션1"/>
-                              <span>구글</span>
-                           </label>
-         
+                           <input id="CustomerEmail" class='font-14' autocapitalize="off" autocomplete="off" autofocus="" name="customer[email]" placeholder="주문번호" required="" spellcheck="false" type="email">
                         </div>
-                      </div>
-                   </form>
-                </div>
+                        <div class="form-group__field">
+                           <label class="form-group__label subtitle-2 is-hidden" for="CustomerPassword">
+                           </label>
+                           <input id="CustomerEmail" class='font-14' autocapitalize="off" autocomplete="off" autofocus="" name="customer[email]" placeholder="비밀번호" required="" spellcheck="false" type="email">
+                        </div>
+                        <div class="form-group__field">
+                           <input class="button button--primary button--block button--large font-14" disabled="true" type="submit" value="주문배송조회">
+                         </div>
+
+                     </div>
+                  </form>
+               </div>
 
                <div class='line-block top-m15 bottom-m15'>
                </div>
 
-                <div class="template-account__text_hdtype_1 no-margin no-padding font-14">
-                   <div class="rte">
-                      Toteme 온라인스토어에는 더현대닷컴이 운영 제공하는 사이트로 기존 회원은 더현대닷컴 아이디와 비밀번호로 바로 이용 가능합니다.
-                   </div>
-                </div>
-             </div>
+                <div class="text-block description form-group__field ">
+                  <p class='font-14 left-m15'>주문번호가 기억나지 않으시면, 고객센터(0000-0000)로 문의주세요.</p>
+               </div>
+            </div>
              <div class="template-login__form-wrapper is-hidden" js-password-form="recoverPasswordForm">
                 <div class="template-login__form">
                    <form method="post" action="/account/recover" accept-charset="UTF-8">

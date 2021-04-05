@@ -49,6 +49,20 @@
          $("a[href='/account/login']").addClass("is-active");
       },100)
       </script>
+   <%}else if(state == 11){%>
+   <script>
+      setTimeout(function(){
+         $(".main-title.custom-select__label").text("아이디 찾기");
+         $("a[href='/account/login#reactivate']").addClass("is-active");
+      },100)
+      </script>
+   <%}else if(state == 12){%>
+   <script>
+      setTimeout(function(){
+         $(".main-title.custom-select__label").text("비회원 주문조회");
+         $("a[href='/account/login#reactivate']").addClass("is-active");
+      },100)
+      </script>
    <%}else if(state == 2){%>
    <script>
       setTimeout(function(){

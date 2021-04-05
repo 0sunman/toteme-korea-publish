@@ -4,11 +4,11 @@
     </div>
     <div class="template-account__wrapper">
        <div class="template-account__left"></div>
-       <%- include ("./menu/index.ejs",{state:1}) %>
+       <%- include ("./menu/index.ejs",{state:11}) %>
        <div class="template-account__content">
           <div class="template-login__content">
  
-             <div class="template-account__text_hdtype_1 alert">
+             <div class="template-account__text_hdtype_1 alert" style='display:none'>
                 <div class="rte">
                    안내문구 출력 영역
                 </div>
@@ -18,36 +18,27 @@
                    <form method="post" action="/account/login" id="customer_login" accept-charset="UTF-8">
                       <input type="hidden" name="form_type" value="customer_login"><input type="hidden" name="utf8" value="✓">
                       <div class="form-group">
-                         <div class="form-group__field">
+                         <div class="form-group__field bottom-m10">
                             <label class="form-group__label subtitle-2 is-hidden" for="CustomerEmail">
-                            ID 또는 이메일
                             </label>
-                            <input id="CustomerEmail" autocapitalize="off" autocomplete="off" autofocus="" name="customer[email]" placeholder="ID 또는 이메일" required="" spellcheck="false" type="email">
+                            <input id="CustomerEmail" class='font-14' autocapitalize="off" autocomplete="off" autofocus="" name="customer[email]" placeholder="이름" required="" spellcheck="false" type="email">
                          </div>
                          <div class="form-group__field">
                             <label class="form-group__label subtitle-2 is-hidden" for="CustomerPassword">
-                            비밀번호
                             </label>
-                            <input id="CustomerPassword" name="customer[password]" placeholder="비밀번호" required="" type="password">
+                            <input id="CustomerEmail" class='font-14' autocapitalize="off" autocomplete="off" autofocus="" name="customer[email]" placeholder="생년월일" required="" spellcheck="false" type="email">
                          </div>
+                         <div class="text-block description form-group__field ">
+                           <p class='font-12'>생년월일 8자리를 입력해주세요 (예. 20150115)</p>
+                        </div>
                          <div class="form-group__field">
-                            <input class="button button--primary button--block button--large" disabled="true" type="submit" value="Log in">
+                            <input class="button button--primary button--block button--large font-14" disabled="true" type="submit" value="아이디 찾기">
                           </div>
-                         <div class='sns-buttons form-group__field margin-50'>
- 
-                            <input class="button" disabled="true" type="button" value="네이버">
-                            <input class="button" disabled="true" type="button" value="카카오톡">
-                            <input class="button" disabled="true" type="button" value="페이스북">
-                            <input class="button" disabled="true" type="button" value="구글플러스">
-                         </div>
+
                       </div>
                    </form>
                 </div>
-                <div class="template-account__text_hdtype_1 no-margin no-padding">
-                   <div class="rte">
-                      Toteme 온라인스토어에는 더현대닷컴이 운영 제공하는 사이트로 기존 회원은 더현대닷컴 아이디와 비밀번호로 바로 이용 가능합니다.
-                   </div>
-                </div>
+
              </div>
              <div class="template-login__form-wrapper is-hidden" js-password-form="recoverPasswordForm">
                 <div class="template-login__form">
