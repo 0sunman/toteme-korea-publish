@@ -36,7 +36,7 @@
              <a class="navlist__link text-link" href="/account/login#recover" js-password-form="forgotPasswordLink">비밀번호 찾기</a>
           </li>
           <li class="navlist__item">
-             <a class="navlist__link text-link" href="/account/login#reactivate" js-password-form="reactivateLink">비회원 주문조회</a>
+             <a class="navlist__link text-link" href="/account/login#nomember" js-password-form="reactivateLink">비회원 주문조회</a>
           </li>
        </ul>
     </div>
@@ -60,7 +60,7 @@
    <script>
       setTimeout(function(){
          $(".main-title.custom-select__label").text("비회원 주문조회");
-         $("a[href='/account/login#reactivate']").addClass("is-active");
+         $("a[href='/account/login#nomember']").addClass("is-active");
       },100)
       </script>
    <%}else if(state == 2){%>
