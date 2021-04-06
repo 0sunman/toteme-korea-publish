@@ -876,9 +876,973 @@
       <main id="MainContent" class="main-content critical-clear">
          <!-- BEGIN content_for_index -->
          <!--  include ("./pages/00_main/index.ejs") BEGIN content_for_index -->
-         <div class="container">
-상품페이지테스트123123123123
+         <style>
+	.modal__body.preorder-modal__body {padding: 100px 1rem 3rem;}
+	.preorder-modal__button-wrapper {margin: auto; max-width: 240px;}
+	.preorder-modal__button:first-child {margin-bottom: 1rem;}
+	.preorder-modal__footer {padding: 20px 2rem; text-align: center;}
+	@media (max-width: 61.99em) {
+		.preorder-modal .modal__card {width:calc(100% - 75px);}
+	}
+@media (min-width: 62em) {
+	.preorder-modal__body {padding-bottom:70px; padding-top: 110px;}
+	.preorder-modal__button-wrapper {max-width: none; width: 280px;}
+	.preorder-modal__footer {padding: 20px 80px;}
+}
+.product-form__add-to-cart>button.button.is-active:hover .label-atc{display: block;}
+</style> 
+<div class="container">
+	<div class="template-product__container">
+		<div class="template-product__grid">
+			<div class="product-gallery__thumbnail-carousel-container">
+				<div id="ProductGalleryThumbnails-1" class="product-gallery__thumbnail-carousel">
+					<ul class="product-gallery__thumbnail-carousel-list product-gallery__thumbnail-carousel-list--hover">
+						<li class="product-gallery__thumbnail is-active">
+							<a class="product-gallery__thumbnail-link" href="#">
+								<div class="responsive-image__wrapper product-gallery__thumbnail-image"> 
+									<span style="display: block; padding-top:140.0%;" aria-hidden="true"></span> 
+									<img class="responsive-image__image" alt="Loose fit denim washed blue" src="//cdn.shopify.com/s/files/1/0480/1141/1607/products/28_TOTEME_MODEL_SS20_Denim_Ease_Blue_wash_200123_004_2048x2048.jpg?v=1611048185">
+								</div> 
+							</a>
+						</li>
+						<li class="product-gallery__thumbnail">
+							<a class="product-gallery__thumbnail-link" href="#">
+								<div class="responsive-image__wrapper product-gallery__thumbnail-image"> 
+									<span style="display: block; padding-top:140.0%;" aria-hidden="true"></span> 
+									<img class="responsive-image__image" alt="Loose fit denim washed blue" src="//cdn.shopify.com/s/files/1/0480/1141/1607/products/28_TOTEME_MODEL_SS20_Denim_Ease_Blue_wash_200123_011_2048x2048.jpg?v=1611048185">
+								</div> 
+							</a>
+						</li>
+						<li class="product-gallery__thumbnail">
+							<a class="product-gallery__thumbnail-link" href="#">
+								<div class="responsive-image__wrapper product-gallery__thumbnail-image"> 
+									<span style="display: block; padding-top:140.0%;" aria-hidden="true"></span> 
+									<img class="responsive-image__image" alt="Loose fit denim washed blue" src="//cdn.shopify.com/s/files/1/0480/1141/1607/products/28_TOTEME_MODEL_SS20_Denim_Ease_Blue_wash_200123_017_2048x2048.jpg?v=1611048185">
+								</div>
+							</a>
+						</li>
+						<li class="product-gallery__thumbnail">
+							<a class="product-gallery__thumbnail-link" href="#">
+								<div class="responsive-image__wrapper product-gallery__thumbnail-image"> 
+									<span style="display: block; padding-top:140.0%;" aria-hidden="true"></span> 
+									<img class="responsive-image__image" alt="" src="//cdn.shopify.com/s/files/1/0480/1141/1607/products/0140_Toteme_SS20_Ease_Denim_Jeans_Grey-copy-1_2048x2048.jpg?v=1616001284">
+								</div> 
+							</a>
+						</li>
+					</ul>
+				</div> <button class="product-gallery__thumbnail-button">
+					<span class="visually-hidden">View more images</span> 
+					<svg class="icon icon--medium icon__arrow--double-down" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M13.357 2.685l-.707-.707-4.643 4.639-4.65-4.647-.707.707L8.007 8.03l5.35-5.345zm0 6l-.707-.707-4.643 4.639-4.65-4.647-.707.707 5.357 5.353 5.35-5.345z" />
+					</svg> </button>
+			</div>
+			<div class="template-product__gallery product-gallery">
+				<div id="ProductGalleryMain-1" class="product-gallery__featured-carousel swiper-container">
+					<div class="product-gallery__zoom-pane"></div>
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide">
+							<div class="swiper-zoom-container" data-swiper-zoom="2">
+								<div class="zoom-trigger swiper-zoom-target">
+									<div class="responsive-image__wrapper product-gallery__featured-image">
+										<span style="display: block; padding-top:140.0%;" aria-hidden="true"></span> 
+										<img class="responsive-image__image" alt="Loose fit denim washed blue" src="//cdn.shopify.com/s/files/1/0480/1141/1607/products/28_TOTEME_MODEL_SS20_Denim_Ease_Blue_wash_200123_004_2100x.jpg?v=1611048185">
+									</div>
+									<div class="responsive-image__wrapper product-gallery__featured-image--zoom"> 
+										<span style="display: block; padding-top:140.0%;" aria-hidden="true"></span> 
+										<img class="responsive-image__image" alt="Loose fit denim washed blue" src="//cdn.shopify.com/s/files/1/0480/1141/1607/products/28_TOTEME_MODEL_SS20_Denim_Ease_Blue_wash_200123_004_2048x2048.jpg?v=1611048185">
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="swiper-slide">
+							<div class="swiper-zoom-container" data-swiper-zoom="2">
+								<div class="zoom-trigger swiper-zoom-target">
+									<div class="responsive-image__wrapper product-gallery__featured-image">
+										<span style="display: block; padding-top:140.0%;" aria-hidden="true"></span>
+										<img class="responsive-image__image" alt="Loose fit denim washed blue" src="//cdn.shopify.com/s/files/1/0480/1141/1607/products/28_TOTEME_MODEL_SS20_Denim_Ease_Blue_wash_200123_011_2100x.jpg?v=1611048185">
+									</div> 
+									<div class="responsive-image__wrapper product-gallery__featured-image--zoom"> 
+										<span style="display: block; padding-top:140.0%;" aria-hidden="true"></span> 
+										<img class="responsive-image__image" alt="Loose fit denim washed blue" src="//cdn.shopify.com/s/files/1/0480/1141/1607/products/28_TOTEME_MODEL_SS20_Denim_Ease_Blue_wash_200123_011_2048x2048.jpg?v=1611048185">
+									</div> 
+								</div>
+							</div>
+						</li>
+						<li class="swiper-slide">
+							<div class="swiper-zoom-container" data-swiper-zoom="2">
+								<div class="zoom-trigger swiper-zoom-target">
+									<div class="responsive-image__wrapper product-gallery__featured-image">
+										<span style="display: block; padding-top:140.0%;" aria-hidden="true"></span> 
+										<img class="responsive-image__image" alt="Loose fit denim washed blue" src="//cdn.shopify.com/s/files/1/0480/1141/1607/products/28_TOTEME_MODEL_SS20_Denim_Ease_Blue_wash_200123_017_2100x.jpg?v=1611048185">
+									</div> 
+									<div class="responsive-image__wrapper product-gallery__featured-image--zoom"> 
+										<span style="display: block; padding-top:140.0%;" aria-hidden="true"></span> 
+										<img class="responsive-image__image" alt="Loose fit denim washed blue" src="//cdn.shopify.com/s/files/1/0480/1141/1607/products/28_TOTEME_MODEL_SS20_Denim_Ease_Blue_wash_200123_017_2048x2048.jpg?v=1611048185">
+									</div> 
+								</div>
+							</div>
+						</li>
+						<li class="swiper-slide">
+							<div class="swiper-zoom-container" data-swiper-zoom="2">
+								<div class="zoom-trigger swiper-zoom-target">
+									<div class="responsive-image__wrapper product-gallery__featured-image">
+										<span style="display: block; padding-top:140.0%;" aria-hidden="true">
+										</span> <img class="responsive-image__image" src="//cdn.shopify.com/s/files/1/0480/1141/1607/products/0140_Toteme_SS20_Ease_Denim_Jeans_Grey-copy-1_2100x.jpg?v=1616001284">
+									</div>
+									<div class="responsive-image__wrapper product-gallery__featured-image--zoom"> 
+										<span style="display: block; padding-top:140.0%;" aria-hidden="true">
+										</span> <img class="responsive-image__image"
+											src="//cdn.shopify.com/s/files/1/0480/1141/1607/products/0140_Toteme_SS20_Ease_Denim_Jeans_Grey-copy-1_2048x2048.jpg?v=1616001284">
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="template-product__aside" style="--top-offset: 140.0">
+				<div class="product-gallery__featured-carousel-dots swiper-pagination"></div>
+				<div class="template-product__wishlist">
+					<button type="button" class="wk-button-product wk-add-product" title="Add to Wishlist"
+						data-wk-add-product="6067208454295">
+						<div class="wk-icon">
+							<span class="icon__star">
+								<svg version="1.1" xmlns="https://www.w3.org/2000/svg" width="64" height="60.9" viewBox="0 0 64 64">
+									<path
+										d="M63.92,23.25a1.5,1.5,0,0,0-1.39-1H40.3L33.39,1.08A1.5,1.5,0,0,0,32,0h0a1.49,1.49,0,0,0-1.39,1L23.7,22.22H1.47a1.49,1.49,0,0,0-1.39,1A1.39,1.39,0,0,0,.6,24.85l18,13L11.65,59a1.39,1.39,0,0,0,.51,1.61,1.47,1.47,0,0,0,.88.3,1.29,1.29,0,0,0,.88-0.3l18-13.08L50,60.68a1.55,1.55,0,0,0,1.76,0,1.39,1.39,0,0,0,.51-1.61l-6.9-21.14,18-13A1.45,1.45,0,0,0,63.92,23.25ZM42.75,36.18a1.39,1.39,0,0,0-.51,1.61l5.81,18L32.85,44.69a1.41,1.41,0,0,0-1.67,0L15.92,55.74l5.81-18a1.39,1.39,0,0,0-.51-1.61L6,25.12H24.7a1.49,1.49,0,0,0,1.39-1L32,6.17l5.81,18a1.5,1.5,0,0,0,1.39,1H58Z">
+									</path>
+								</svg>
+							</span>
+							<span class="icon__star--filled">
+								<svg version="1.1" xmlns="https://www.w3.org/2000/svg" width="64" height="60.9" viewBox="0 0 64 64">
+									<path
+										d="M63.92,23.25a1.5,1.5,0,0,0-1.39-1H40.3L33.39,1.08A1.5,1.5,0,0,0,32,0h0a1.49,1.49,0,0,0-1.39,1L23.7,22.22H1.47a1.49,1.49,0,0,0-1.39,1A1.39,1.39,0,0,0,.6,24.85l18,13L11.65,59a1.39,1.39,0,0,0,.51,1.61,1.47,1.47,0,0,0,.88.3,1.29,1.29,0,0,0,.88-0.3l18-13.08L50,60.68a1.55,1.55,0,0,0,1.76,0,1.39,1.39,0,0,0,.51-1.61l-6.9-21.14,18-13A1.45,1.45,0,0,0,63.92,23.25Z">
+									</path>
+								</svg>
+							</span>
+						</div>
+						<span class="wk-label">Add to Wishlist</span>
+					</button>
+				</div>
+				<form class="product-form is-sticky" action="#" method="post">
+					<div class="product-form__wrapper">
+						<div class="product-form__header">
+							<p class="product-form__title text-small">Loose fit denim washed blue</p>
+							<div class="product-form__price">
+								<div class="product-price"> <span>
+										<span class="money">230 EUR</span>
+									</span> </div>
+							</div>
+							<div class="product-form__description">
+								Totême’s loose fit denim made in Italy from a rigid cotton fabric that is faded for a vintage wash. They
+								are cut to a straight loose silhouette that falls from the waist to a full length. This pair has a
+								button fastening. Let the leg ends drape over open shoes like mules.
+							</div>
+						</div>
+						<div class="product-form__body">
+							<div class="product-form__option product-form__option--half">
+								<label class="product-form__label visually-hidden" for="OptionSelector-main">
+									Select option
+								</label>
+								<div class="custom-select__wrapper"><select id="OptionSelector-main" class="product-form__select custom-select__select post-init" style="background-image: url(//cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/icon-small-arrow-down.svg?v=9521334029086756349);">
+										<option selected="selected" value="" disabled="">
+											Select Size
+										</option>
+										<option value="">
+											23/30 - Out of stock - Notify me
+										</option>
+										<option value="">
+											24/30
+										</option>
+										<option value="">
+											25/30
+										</option>
+										<option value="">
+											26/30
+										</option>
+										<option value="">
+											27/30
+										</option>
+									</select><span class="custom-select__label text-small">Select Size</span></div>
+							</div>
+							<div class="product-form__swatch product-form__option product-form__option--half">
+								<button class="product-form__swatch-button" style="background-image: url(//cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/icon-small-arrow-down.svg?v=9521334029086756349);">
+									<img class="product-form__swatch-image" src="//cdn.shopify.com/s/files/1/0480/1141/1607/products/28_TOTEME_MODEL_SS20_Denim_Ease_Blue_wash_200123_004_48x.jpg?v=1611048185">
+									<span>Washed blue</span>
+								</button>
+
+								<ul class="product-form__swatch-list">
+									<li class="color-swatch__item">
+										<a class="product-form__swatch-link" href="/products/loose-fit-denim-black-rinse">
+											<img class="product-form__swatch-image" src="//cdn.shopify.com/s/files/1/0480/1141/1607/products/41_Toteme_FW20_Ease_Black_Rinse_204-236-744_020_48x.jpg?v=1606941548">
+											<span>Black rinse</span>
+										</a>
+									</li>
+									<li class="color-swatch__item">
+										<a class="product-form__swatch-link" href="/products/loose-fit-denim-distressed-light-blue">
+											<img class="product-form__swatch-image" src="//cdn.shopify.com/s/files/1/0480/1141/1607/products/Toteme_PF21_DENIM_212-236-741_LOOSEFIT_DENIM_DISTRESSED_LIGHT_BLUE_48x.jpg?v=1617059084">
+											<span>Light blue ripped</span>
+										</a>
+									</li>
+									<li class="color-swatch__item">
+										<a class="product-form__swatch-link" href="/products/loose-fit-denim-off-white">
+											<img class="product-form__swatch-image" src="//cdn.shopify.com/s/files/1/0480/1141/1607/products/37_Toteme_SS21_212-236-74834COTTON_LOOSEFITDENIMOFF-WHITE110_122_48x.jpg?v=1614761693">
+											<span>Off-White</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="product-form__actions">
+						<div class="product-form__add-to-cart">
+							<button class="button button--large button--block no-hover need-size post-init" disabled="true" type="submit">
+								<span class="label-select-size">Please select size</span>
+								<span class="label-atc">
+									Add to bag
+								</span>
+								<div class="product-form__button-price">
+									<span>
+										<span class="money notranslate">₩321,000 KRW</span>
+									</span>
+								</div>
+							</button>
+							<div class="coming-soon">
+								<div class="form-group form-group--inline-animated is-hidden">
+									<p class="form-group__message is-hidden">Added to the list</p>
+									<label class="visually-hidden" for="backInStock">
+										Email
+									</label>
+									<input type="email" id="backInStock" placeholder="Enter email" value="" class="post-init">
+									<input type="submit" class="button post-init" value="OK">
+									<span class="form-group__fade-background"></span>
+									<span class="form-group__fade-text form-group__fade-text--first">
+										Notify me
+									</span>
+									<span class="form-group__fade-text form-group__fade-text--last">
+										Enter email
+									</span>
+								</div>
+								<div class="product-form__button-price is-hidden">
+									<div class="product-price">
+										<span>
+											<span class="money notranslate">₩321,000 KRW</span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+				<div class="product-form__footer-wrapper">
+					<div class="template-product__meta ">
+						<p></p> <button class="template-product__size-guide-trigger text-xsmall">
+							Size guide
+						</button>
+					</div>
+					<div class="product-form__footer">
+						<h1 class="product-form__title text-small">Loose fit denim washed blue</h1>
+						<div class="product-form__description">
+							Totême’s loose fit denim made in Italy from a rigid cotton fabric that is faded for a vintage wash. They
+							are cut to a straight loose silhouette that falls from the waist to a full length. This pair has a button
+							fastening. Let the leg ends drape over open shoes like mules.
+						</div>
+					</div>
+				</div>
+				<div class="template-product__details"> <button class="template-product__size-guide-trigger">Size guide</button>
+					<div id="productAccordion" class="template-product__accordion accordion">
+						<div class="accordion__item">
+							<h2 class="accordion__title">
+								<button id="Accordion1" class="accordion__control text-small">
+									Details and fit
+								</button>
+							</h2>
+							<div id="content-1" class="accordion__content">
+								<ul>
+									<li>The model is 179cm/5’10” tall and wears a size 27/34</li>
+									<li>Washed blue</li>
+									<li>100% Cotton, rigid</li>
+									<li>30°C Machine wash</li>
+									<li>Fits big, take one size down</li>
+									<li>Made in Italy</li>
+								</ul>
+							</div>
+						</div>
+						<div class="accordion__item">
+							<h2 class="accordion__title">
+								<button id="Accordion2" class="accordion__control text-small">
+									Shipping
+								</button>
+							</h2>
+							<div id="content-2" class="accordion__content">
+								<p>
+									<h3>Shipping to Europe</h3>
+									<ul class="list-dots">
+										<li><span>DPD Standard Home delivery: 2-4 business days, 10 EUR</span></li>
+										<li><span>UPS Standard: 2-4 business days, 15 EUR</span></li>
+										<li><span>UPS Express: 1-2 business days, 20 EUR</span></li>
+									</ul>
+									<p><span>VAT is included in in the product price.</span></p>
+									<h3>Shipping outside Europe</h3>
+									<ul>
+										<li>UPS Express Export: 2-4 business days, 20 EUR</li>
+										<li>DHL Express Export: 2-4 business days, 30 EUR</li>
+									</ul>
+									<p><span>Taxes and duties are included in the product price.</span></p>
+									<h3>Cancellations</h3>
+									<p>Please note, orders need to be canceled within 1 hour. </p>
+									<p><em>Shipping information: </em><em><i><span>due to a change of warehouses there may be slight delays in shipping at the moment.</span></i></em></p>
+								</p>
+							</div>
+						</div>
+						<div class="accordion__item">
+							<h2 class="accordion__title">
+								<button id="Accordion3" class="accordion__control text-small">
+									Returns
+								</button>
+							</h2>
+							<div id="content-3" class="accordion__content">
+								<p>
+									<meta charset="utf-8">
+									<p><span>We have a 14 day returns policy, from the day you receive your order. This applies to full priced and sale items. <br><br></span><span>Register you return </span><a target="_blank" href="#" title="Totême Returns">here.</a></p>
+									<p>Exchanges</p>
+									<p>If you want to exchange an item for a different size or color, please return it and place a new order.</p>
+								</p>
+							</div>
+						</div>
+						<div class="accordion__item">
+							<h2 class="accordion__title">
+								<button id="Accordion4" class="accordion__control text-small">
+									Questions?
+								</button>
+							</h2>
+							<div id="content-4" class="accordion__content">
+								<p>
+									<p>Monday to Friday: 9am – 5pm CET</p>
+									<p><a class="text-link text-link--static" onclick="GorgiasChat.open()">Chat<br></a>
+										 <a class="text-link text-link--static" href="mailto:shop@toteme-studio.com">shop@toteme-studio.com<br></a>
+										 <a class="text-link text-link--static" href="tel:+46-8-203820">+46 8 20 38 20<br></a>
+										 <a class="text-link text-link--static" href="https://wa.me/46733922282">WhatsApp</a></p>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="template-product__recommended-products">
+		<div class="recommended-products is-added">
+			<h2 class="recommended-products__title h3">
+				You may also like
+			</h2>
+			<div class="recommended-products__card-grid">
+				<div class="recommended-products__item"> <a class="product-card product-card--small product-card--has-hover-text" href="/products/curved-rib-tank-black">
+						<div class="product-card__thumbnail-container">
+							<div class="responsive-card-image__wrapper product-card__thumbnail product-card__thumbnail--primary">
+								<img class="responsive-card-image__image" alt="Curved rib tank black" src="//cdn.shopify.com/s/files/1/0480/1141/1607/products/77_Toteme_SS21_211-437-772ORGANICCOTTONCURVEDRIBTANKBLACK200_014_v3_900x900.jpg?v=1612336998">
+							</div>
+						</div>
+						<div class="product-card__footer">
+							<span class="product-card__title">
+								Curved rib tank black
+							</span>
+							<div class="product-card__details">
+								<div class="product-price"> 
+									<span>
+										<span class="money">90 EUR</span>
+									</span> </div>
+								<div class="product-card__sizes"> Available sizes: XXS, XS, S, M, L, XL </div>
+							</div>
+						</div>
+						<div class="product-card__wishlist">
+							<button type="button" class="wk-button-collection wk-add-product" title="Add to Wishlist">
+								<div class="wk-icon">
+									<span class="icon__star">
+										<svg version="1.1" xmlns="https://www.w3.org/2000/svg" width="64" height="60.9" viewBox="0 0 64 64">
+											<path
+												d="M63.92,23.25a1.5,1.5,0,0,0-1.39-1H40.3L33.39,1.08A1.5,1.5,0,0,0,32,0h0a1.49,1.49,0,0,0-1.39,1L23.7,22.22H1.47a1.49,1.49,0,0,0-1.39,1A1.39,1.39,0,0,0,.6,24.85l18,13L11.65,59a1.39,1.39,0,0,0,.51,1.61,1.47,1.47,0,0,0,.88.3,1.29,1.29,0,0,0,.88-0.3l18-13.08L50,60.68a1.55,1.55,0,0,0,1.76,0,1.39,1.39,0,0,0,.51-1.61l-6.9-21.14,18-13A1.45,1.45,0,0,0,63.92,23.25ZM42.75,36.18a1.39,1.39,0,0,0-.51,1.61l5.81,18L32.85,44.69a1.41,1.41,0,0,0-1.67,0L15.92,55.74l5.81-18a1.39,1.39,0,0,0-.51-1.61L6,25.12H24.7a1.49,1.49,0,0,0,1.39-1L32,6.17l5.81,18a1.5,1.5,0,0,0,1.39,1H58Z">
+											</path>
+										</svg>
+									</span>
+									<span class="icon__star--filled">
+										<svg version="1.1" xmlns="https://www.w3.org/2000/svg" width="64" height="60.9" viewBox="0 0 64 64">
+											<path
+												d="M63.92,23.25a1.5,1.5,0,0,0-1.39-1H40.3L33.39,1.08A1.5,1.5,0,0,0,32,0h0a1.49,1.49,0,0,0-1.39,1L23.7,22.22H1.47a1.49,1.49,0,0,0-1.39,1A1.39,1.39,0,0,0,.6,24.85l18,13L11.65,59a1.39,1.39,0,0,0,.51,1.61,1.47,1.47,0,0,0,.88.3,1.29,1.29,0,0,0,.88-0.3l18-13.08L50,60.68a1.55,1.55,0,0,0,1.76,0,1.39,1.39,0,0,0,.51-1.61l-6.9-21.14,18-13A1.45,1.45,0,0,0,63.92,23.25Z">
+											</path>
+										</svg>
+									</span>
+								</div>
+								<span class="wk-label">Add to Wishlist</span>
+							</button>
+						</div>
+					</a> </div>
+				<div class="recommended-products__item"> <a class="product-card product-card--small product-card--has-hover-text" href="/products/double-cashmere-zipper-jacket-off-white">
+						<div class="product-card__thumbnail-container">
+							<div class="responsive-card-image__wrapper product-card__thumbnail product-card__thumbnail--primary">
+								<img class="responsive-card-image__image" alt="Double cashmere zipper jacket off-white" src="//cdn.shopify.com/s/files/1/0480/1141/1607/products/90_Toteme_SS21_212-564-751CASHMERE_DOUBLEKNITCASHMEREZIPPERJACKETOFF-WHITE110_015_v3_900x900.jpg?v=1612962811">
+							</div>
+						</div>
+						<div class="product-card__footer">
+							<span class="product-card__title">
+								Double cashmere zipper jacket off-white
+							</span>
+							<div class="product-card__details">
+								<div class="product-price"> <span>
+										<span class="money">970 EUR</span>
+									</span> </div>
+								<div class="product-card__sizes"> Available sizes: XXS, XS, S, M, L </div>
+							</div>
+						</div>
+						<div class="product-card__wishlist">
+							<button type="button" class="wk-button-collection wk-add-product" title="Add to Wishlist">
+								<div class="wk-icon">
+									<span class="icon__star">
+										<svg version="1.1" xmlns="https://www.w3.org/2000/svg" width="64" height="60.9" viewBox="0 0 64 64">
+											<path
+												d="M63.92,23.25a1.5,1.5,0,0,0-1.39-1H40.3L33.39,1.08A1.5,1.5,0,0,0,32,0h0a1.49,1.49,0,0,0-1.39,1L23.7,22.22H1.47a1.49,1.49,0,0,0-1.39,1A1.39,1.39,0,0,0,.6,24.85l18,13L11.65,59a1.39,1.39,0,0,0,.51,1.61,1.47,1.47,0,0,0,.88.3,1.29,1.29,0,0,0,.88-0.3l18-13.08L50,60.68a1.55,1.55,0,0,0,1.76,0,1.39,1.39,0,0,0,.51-1.61l-6.9-21.14,18-13A1.45,1.45,0,0,0,63.92,23.25ZM42.75,36.18a1.39,1.39,0,0,0-.51,1.61l5.81,18L32.85,44.69a1.41,1.41,0,0,0-1.67,0L15.92,55.74l5.81-18a1.39,1.39,0,0,0-.51-1.61L6,25.12H24.7a1.49,1.49,0,0,0,1.39-1L32,6.17l5.81,18a1.5,1.5,0,0,0,1.39,1H58Z">
+											</path>
+										</svg>
+									</span>
+									<span class="icon__star--filled">
+										<svg version="1.1" xmlns="https://www.w3.org/2000/svg" width="64" height="60.9" viewBox="0 0 64 64">
+											<path
+												d="M63.92,23.25a1.5,1.5,0,0,0-1.39-1H40.3L33.39,1.08A1.5,1.5,0,0,0,32,0h0a1.49,1.49,0,0,0-1.39,1L23.7,22.22H1.47a1.49,1.49,0,0,0-1.39,1A1.39,1.39,0,0,0,.6,24.85l18,13L11.65,59a1.39,1.39,0,0,0,.51,1.61,1.47,1.47,0,0,0,.88.3,1.29,1.29,0,0,0,.88-0.3l18-13.08L50,60.68a1.55,1.55,0,0,0,1.76,0,1.39,1.39,0,0,0,.51-1.61l-6.9-21.14,18-13A1.45,1.45,0,0,0,63.92,23.25Z">
+											</path>
+										</svg>
+									</span>
+								</div>
+								<span class="wk-label">Add to Wishlist</span>
+							</button>
+						</div>
+					</a> </div>
+				<div class="recommended-products__item"> <a class="product-card product-card--small product-card--has-hover-text" href="/products/the-mule-black">
+						<div class="product-card__badge-listing">
+							<div class="product-card__badge badge badge--secondary">
+								<span>Exclusive</span>
+							</div>
+						</div>
+						<div class="product-card__thumbnail-container">
+							<div class="responsive-card-image__wrapper product-card__thumbnail product-card__thumbnail--primary">
+								<img class="responsive-card-image__image lazyload fade-in " alt="The Mule black" src="//cdn.shopify.com/s/files/1/0480/1141/1607/products/the_mule_profile_900x900.jpg?v=1616327577">
+							</div>
+						</div>
+						<div class="product-card__footer">
+							<span class="product-card__title">
+								The Mule black
+							</span>
+							<div class="product-card__details">
+								<div class="product-price"> <span>
+										<span class="money">440 EUR</span>
+									</span> </div>
+								<div class="product-card__sizes"> Available sizes: 37, 38, 39, 40, 41 </div>
+							</div>
+						</div>
+						<div class="product-card__wishlist">
+							<button type="button" class="wk-button-collection wk-add-product" title="Add to Wishlist">
+								<div class="wk-icon">
+									<span class="icon__star">
+										<svg version="1.1" xmlns="https://www.w3.org/2000/svg" width="64" height="60.9" viewBox="0 0 64 64">
+											<path
+												d="M63.92,23.25a1.5,1.5,0,0,0-1.39-1H40.3L33.39,1.08A1.5,1.5,0,0,0,32,0h0a1.49,1.49,0,0,0-1.39,1L23.7,22.22H1.47a1.49,1.49,0,0,0-1.39,1A1.39,1.39,0,0,0,.6,24.85l18,13L11.65,59a1.39,1.39,0,0,0,.51,1.61,1.47,1.47,0,0,0,.88.3,1.29,1.29,0,0,0,.88-0.3l18-13.08L50,60.68a1.55,1.55,0,0,0,1.76,0,1.39,1.39,0,0,0,.51-1.61l-6.9-21.14,18-13A1.45,1.45,0,0,0,63.92,23.25ZM42.75,36.18a1.39,1.39,0,0,0-.51,1.61l5.81,18L32.85,44.69a1.41,1.41,0,0,0-1.67,0L15.92,55.74l5.81-18a1.39,1.39,0,0,0-.51-1.61L6,25.12H24.7a1.49,1.49,0,0,0,1.39-1L32,6.17l5.81,18a1.5,1.5,0,0,0,1.39,1H58Z">
+											</path>
+										</svg>
+									</span>
+									<span class="icon__star--filled">
+										<svg version="1.1" xmlns="https://www.w3.org/2000/svg" width="64" height="60.9" viewBox="0 0 64 64">
+											<path
+												d="M63.92,23.25a1.5,1.5,0,0,0-1.39-1H40.3L33.39,1.08A1.5,1.5,0,0,0,32,0h0a1.49,1.49,0,0,0-1.39,1L23.7,22.22H1.47a1.49,1.49,0,0,0-1.39,1A1.39,1.39,0,0,0,.6,24.85l18,13L11.65,59a1.39,1.39,0,0,0,.51,1.61,1.47,1.47,0,0,0,.88.3,1.29,1.29,0,0,0,.88-0.3l18-13.08L50,60.68a1.55,1.55,0,0,0,1.76,0,1.39,1.39,0,0,0,.51-1.61l-6.9-21.14,18-13A1.45,1.45,0,0,0,63.92,23.25Z">
+											</path>
+										</svg>
+									</span>
+								</div>
+								<span class="wk-label">Add to Wishlist</span>
+							</button>
+						</div>
+					</a> </div>
+				<div class="recommended-products__item"> <a class="product-card product-card--small product-card--has-hover-text" href="/products/the-regular-sunglasses-havanna">
+						<div class="product-card__thumbnail-container">
+							<div class="responsive-card-image__wrapper product-card__thumbnail product-card__thumbnail--primary">
+								<img class="responsive-card-image__image lazyload fade-in " alt="The Regulars sunglasses havanna" src="//cdn.shopify.com/s/files/1/0480/1141/1607/products/Toteme_SS21_212-802-900_SUNGLASSES_AcetateHavanna0202_900x900.jpg?v=1611779365">
+							</div>
+						</div>
+						<div class="product-card__footer">
+							<span class="product-card__title">
+								The Regulars sunglasses havanna
+							</span>
+							<div class="product-card__details">
+								<div class="product-price"> <span>
+										<span class="money">280 EUR</span>
+									</span> </div>
+								<div class="product-card__sizes"> Coming soon </div>
+							</div>
+						</div>
+						<div class="product-card__wishlist">
+							<button type="button" class="wk-button-collection wk-add-product" title="Add to Wishlist">
+								<div class="wk-icon">
+									<span class="icon__star">
+										<svg version="1.1" xmlns="https://www.w3.org/2000/svg" width="64" height="60.9" viewBox="0 0 64 64">
+											<path
+												d="M63.92,23.25a1.5,1.5,0,0,0-1.39-1H40.3L33.39,1.08A1.5,1.5,0,0,0,32,0h0a1.49,1.49,0,0,0-1.39,1L23.7,22.22H1.47a1.49,1.49,0,0,0-1.39,1A1.39,1.39,0,0,0,.6,24.85l18,13L11.65,59a1.39,1.39,0,0,0,.51,1.61,1.47,1.47,0,0,0,.88.3,1.29,1.29,0,0,0,.88-0.3l18-13.08L50,60.68a1.55,1.55,0,0,0,1.76,0,1.39,1.39,0,0,0,.51-1.61l-6.9-21.14,18-13A1.45,1.45,0,0,0,63.92,23.25ZM42.75,36.18a1.39,1.39,0,0,0-.51,1.61l5.81,18L32.85,44.69a1.41,1.41,0,0,0-1.67,0L15.92,55.74l5.81-18a1.39,1.39,0,0,0-.51-1.61L6,25.12H24.7a1.49,1.49,0,0,0,1.39-1L32,6.17l5.81,18a1.5,1.5,0,0,0,1.39,1H58Z">
+											</path>
+										</svg>
+									</span>
+									<span class="icon__star--filled">
+										<svg version="1.1" xmlns="https://www.w3.org/2000/svg" width="64" height="60.9" viewBox="0 0 64 64">
+											<path
+												d="M63.92,23.25a1.5,1.5,0,0,0-1.39-1H40.3L33.39,1.08A1.5,1.5,0,0,0,32,0h0a1.49,1.49,0,0,0-1.39,1L23.7,22.22H1.47a1.49,1.49,0,0,0-1.39,1A1.39,1.39,0,0,0,.6,24.85l18,13L11.65,59a1.39,1.39,0,0,0,.51,1.61,1.47,1.47,0,0,0,.88.3,1.29,1.29,0,0,0,.88-0.3l18-13.08L50,60.68a1.55,1.55,0,0,0,1.76,0,1.39,1.39,0,0,0,.51-1.61l-6.9-21.14,18-13A1.45,1.45,0,0,0,63.92,23.25Z">
+											</path>
+										</svg>
+									</span>
+								</div>
+								<span class="wk-label">Add to Wishlist</span>
+							</button>
+						</div>
+					</a> </div>
+			</div>
+		</div>
+	</div>
+	<div id="size-guide" class="modal modal--light size-guide-modal" role="dialog" tabindex="-1">
+		<div class="modal__overlay" tabindex="-1">
+			<div class="size-guide">
+				<div class="modal__card">
+					<div class="modal__header">
+						<h5 class="modal__title size-guide__title">Loose fit denim size guide</h5>
+						<div class="size-guide__unit-toggle-container">
+							<button class="size-guide__unit-toggle text-xsmall" data-unit="in">
+								inches
+							</button> <span class="size-guide__unit-separator text-xsmall">/</span> <button class="size-guide__unit-toggle text-xsmall is-active" data-unit="cm">
+								cm
+							</button>
+						</div> <button class="modal__close">
+							<span class="visually-hidden">
+								Close
+							</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z" />
+							</svg> </button>
+					</div>
+					<div class="size-guide__body modal__body">
+						<div class="size-guide__table-container text-xsmall" data-show-unit="cm">
+							<div class="table-wrapper">
+								<table>
+									<tbody>
+										<tr>
+											<td width="80">Size</td>
+											<td width="69">24</td>
+											<td width="69">25</td>
+											<td width="69">26</td>
+											<td width="69">27</td>
+											<td width="69">28</td>
+											<td width="69">29</td>
+											<td width="69">30</td>
+											<td width="69">31</td>
+										</tr>
+										<tr>
+											<td>Waist</td>
+											<td>
+												<span class="in">28,0</span>
+												<span class="cm">71</span>
+											</td>
+											<td>
+												<span class="in">28,9</span>
+												<span class="cm">73,5</span>
+											</td>
+											<td>
+												<span class="in">29,9</span>
+												<span class="cm">76</span>
+											</td>
+											<td>
+												<span class="in">30,9</span>
+												<span class="cm">78,5</span>
+											</td>
+											<td>
+												<span class="in">31,9</span>
+												<span class="cm">81</span>
+											</td>
+											<td>
+												<span class="in">32,9</span>
+												<span class="cm">83,5</span>
+											</td>
+											<td>
+												<span class="in">33,9</span>
+												<span class="cm">86</span>
+											</td>
+											<td>
+												<span class="in">34,8</span>
+												<span class="cm">88,5</span>
+											</td>
+										</tr>
+										<tr>
+											<td>Seat</td>
+											<td>
+												<span class="in">35,6</span>
+												<span class="cm">90,5</span>
+											</td>
+											<td>
+												<span class="in">36,6</span>
+												<span class="cm">93</span>
+											</td>
+											<td>
+												<span class="in">37,6</span>
+												<span class="cm">95,5</span>
+											</td>
+											<td>
+												<span class="in">38,6</span>
+												<span class="cm">98</span>
+											</td>
+											<td>
+												<span class="in">39,6</span>
+												<span class="cm">100,5</span>
+											</td>
+											<td>
+												<span class="in">40,6</span>
+												<span class="cm">103</span>
+											</td>
+											<td>
+												<span class="in">41,5</span>
+												<span class="cm">105,5</span>
+											</td>
+											<td>
+												<span class="in">42,5</span>
+												<span class="cm">108</span>
+											</td>
+										</tr>
+										<tr>
+											<td>Thigh</td>
+											<td>
+												<span class="in">21,5</span>
+												<span class="cm">54,5</span>
+											</td>
+											<td>
+												<span class="in">22,0</span>
+												<span class="cm">56</span>
+											</td>
+											<td>
+												<span class="in">22,6</span>
+												<span class="cm">57,5</span>
+											</td>
+											<td>
+												<span class="in">23,2</span>
+												<span class="cm">59</span>
+											</td>
+											<td>
+												<span class="in">23,8</span>
+												<span class="cm">60,5</span>
+											</td>
+											<td>
+												<span class="in">24,4</span>
+												<span class="cm">62</span>
+											</td>
+											<td>
+												<span class="in">25,0</span>
+												<span class="cm">63,5</span>
+											</td>
+											<td>
+												<span class="in">25,6</span>
+												<span class="cm">65</span>
+											</td>
+										</tr>
+										<tr>
+											<td>Inseam 30"</td>
+											<td>
+												<span class="in">29,1</span>
+												<span class="cm">74</span>
+											</td>
+											<td>
+												<span class="in">29,1</span>
+												<span class="cm">74</span>
+											</td>
+											<td>
+												<span class="in">29,1</span>
+												<span class="cm">74</span>
+											</td>
+											<td>
+												<span class="in">29,1</span>
+												<span class="cm">74</span>
+											</td>
+											<td>
+												<span class="in">29,1</span>
+												<span class="cm">74</span>
+											</td>
+											<td>
+												<span class="in">29,1</span>
+												<span class="cm">74</span>
+											</td>
+											<td>
+												<span class="in">29,1</span>
+												<span class="cm">74</span>
+											</td>
+											<td>
+												<span class="in">29,1</span>
+												<span class="cm">74</span>
+											</td>
+										</tr>
+										<tr>
+											<td>Inseam 32"</td>
+											<td>
+												<span class="in">31,1</span>
+												<span class="cm">79</span>
+											</td>
+											<td>
+												<span class="in">31,1</span>
+												<span class="cm">79</span>
+											</td>
+											<td>
+												<span class="in">31,1</span>
+												<span class="cm">79</span>
+											</td>
+											<td>
+												<span class="in">31,1</span>
+												<span class="cm">79</span>
+											</td>
+											<td>
+												<span class="in">31,1</span>
+												<span class="cm">79</span>
+											</td>
+											<td>
+												<span class="in">31,1</span>
+												<span class="cm">79</span>
+											</td>
+											<td>
+												<span class="in">31,1</span>
+												<span class="cm">79</span>
+											</td>
+											<td>
+												<span class="in">31,1</span>
+												<span class="cm">79</span>
+											</td>
+										</tr>
+										<tr>
+											<td>Inseam 34"</td>
+											<td>
+												<span class="in">32,7</span>
+												<span class="cm">83</span>
+											</td>
+											<td>
+												<span class="in">32,7</span>
+												<span class="cm">83</span>
+											</td>
+											<td>
+												<span class="in">32,7</span>
+												<span class="cm">83</span>
+											</td>
+											<td>
+												<span class="in">32,7</span>
+												<span class="cm">83</span>
+											</td>
+											<td>
+												<span class="in">32,7</span>
+												<span class="cm">83</span>
+											</td>
+											<td>
+												<span class="in">32,7</span>
+												<span class="cm">83</span>
+											</td>
+											<td>
+												<span class="in">32,7</span>
+												<span class="cm">83</span>
+											</td>
+											<td>
+												<span class="in">32,7</span>
+												<span class="cm">83</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="size-guide__footer text-xsmall">
+							<div class="size-guide__footer-column size-guide__details">
+								<ul>
+									<li>The model is 179cm/5’10” tall and wears a size 27/34</li>
+									<li>Washed blue</li>
+									<li>100% Cotton, rigid</li>
+									<li>30°C Machine wash</li>
+									<li>Fits big, take one size down</li>
+									<li>Made in Italy</li>
+								</ul>
+							</div>
+							<div class="size-guide__footer-column size-guide__contact">
+								<p class="size-guide__contact-title text-xsmall">
+									Questions: Monday to Friday: 9am – 5pm CET
+								</p>
+								<ul class="size-guide__contact-list">
+									<li class="size-guide__contact-item">
+										<a class="size-guide__contact-link text-link text-link--static" onclick="GorgiasChat.open();">
+											Chat
+										</a>
+									</li>
+									<li class="size-guide__contact-item">
+										<a class="size-guide__contact-link text-link text-link--static" href="mailto:shop@toteme-studio.com">
+											shop@toteme-studio.com
+										</a>
+									</li>
+									<li class="size-guide__contact-item">
+										<a class="size-guide__contact-link text-link text-link--static" href="tel:+46 8 20 38 20">
+											+46 8 20 38 20
+										</a>
+									</li>
+									<li class="size-guide__contact-item">
+										<a class="size-guide__contact-link text-link text-link--static" href="https://wa.me/46733922282">
+											WhatsApp
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="preorder-modal" class="modal modal--light preorder-modal" tabindex="-1">
+		<div class="modal__overlay" tabindex="-1">
+			<div>
+				<div class="modal__card">
+					<div class="modal__header">
+						<h5 class="modal__title preorder-modal__title">
+							Note
+						</h5> <button class="modal__close">
+							<span class="visually-hidden">
+								Close
+							</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z" />
+							</svg> </button>
+					</div>
+					<div class="preorder-modal__body modal__body">
+						<div class="preorder-modal__button-wrapper">
+							<button class="preorder-modal__button button button--block button--large modal__button">
+								Proceed
+							</button> <button class="preorder-modal__button button button--block button--large modal__button">
+								Cancel
+							</button>
+						</div>
+					</div>
+					<div class="preorder-modal__footer modal__footer">
+						<p>A preorder item and an in-stock item cannot be bought together. Would you like to replace your current
+							cart with this item?</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
+<script src="https://image.thehyundai.com/pc/js/jquery-1.11.3.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://0sunman.github.io/toteme-korea-publish/public/js/image-zoom.min.js"></script>
+<link rel="stylesheet" href="https://0sunman.github.io/toteme-korea-publish/public/css/image-zoom.css">
+<style>
+	figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
+	.containerZoom.active{cursor: zoom-out;}
+</style>
+<script>
+	//상품이미지 슬라이드
+	window.addEventListener('load', () => {
+		const galleryTop = new Swiper('.product-gallery__featured-carousel', {
+			loop: true,
+			autoHeight: true,
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+				clickable: true,
+			},
+		});
+		$(".product-gallery__thumbnail").on('click', function(){
+			galleryTop.slideTo($(this).index()+1, 300);
+			return false;
+		});
+	}, false);
+	$(window).resize(function(){ galleryTop.update(); });
+
+	//상품이미지 슬라이드_썸네일
+	$(".product-gallery__thumbnail-carousel").scroll(function(){
+		var thumb_box = $(this),
+				btn_arr_down = thumb_box.siblings(".product-gallery__thumbnail-button");
+		thumb_box.scrollTop() === thumb_box.prop('scrollHeight') - thumb_box.outerHeight() ? btn_arr_down.addClass("is-hidden") : btn_arr_down.removeClass("is-hidden");
+	});
+	$(".product-gallery__thumbnail-button").click(function(){
+		var current_scroll = $(this).siblings(".product-gallery__thumbnail-carousel").scrollTop(),
+				item_height = $(".product-gallery__thumbnail-image").height();
+		$(this).siblings(".product-gallery__thumbnail-carousel").stop().animate({scrollTop:current_scroll+item_height},300);
+	});
+	//상품이미지 줌
+	var zoomImages = $('.product-gallery__featured-image').find("img"); 
+	zoomImages.each(function() { $(this).imageZoom({zoom:200}); });
+	
+
+	//상품 사이즈 Select 옵션 별 button 변경
+	arr1 = new Array();
+	$("#OptionSelector-main option").each(function(index){
+		arr1.push($(this).text().trim());
+		$(this).attr('data-select',arr1[index]);
+	});
+	
+	$("#OptionSelector-main").on("change", function(){
+		var selectData = $(this).find('option:selected').attr('data-select'),
+				orgSelectTxt = $(this).find('option:selected').text();
+
+		if( selectData.indexOf('Out of stock') != -1 ){
+			$('.coming-soon>.form-group--inline-animated').removeClass("is-hidden");
+			$('.product-form__add-to-cart>button.button').addClass("is-hidden");
+			var selectTxt;
+			selectTxt = orgSelectTxt.replace(" - Notify me","");
+			$(this).siblings('.custom-select__label').text(selectTxt);
+		}else{
+			$(this).siblings('.custom-select__label').text(orgSelectTxt);
+			$('.product-form__add-to-cart>button.button').removeClass("is-hidden").addClass("is-active").attr("disabled",false);
+			$('.product-form__actions .label-select-size, .coming-soon>.form-group--inline-animated').addClass("is-hidden");
+		}
+	});
+	$('.coming-soon input[type="submit"].button').click(function(){
+		$(this).siblings('.form-group__message').removeClass('is-hidden');
+		$(this).siblings('.form-group__fade-text').addClass('is-hidden');
+	});
+
+	//상품 컬러 button - list toggle
+	$('.product-form__swatch-button').click(function(){
+		$(this).parent('.product-form__swatch').toggleClass('is-active');
+		$('.product-form__swatch-list')[0].getBoundingClientRect().bottom > (window.innerHeight || document.documentElement.clientHeight) && $('.product-form__swatch-list')[0].scrollIntoView(!1);
+		return false;
+	}).focusout(function(){
+		$(this).parent('.product-form__swatch').removeClass('is-active');
+	});
+
+	//상품 사이즈 modal toggle
+	$('.template-product__size-guide-trigger').click(function(){
+		$('#size-guide').addClass("is-active");
+		$('body').css('overflow','hidden');
+	});
+	// modal close
+	$('.modal__close').click(function(){
+		$(this).parents('.modal').removeClass("is-active");
+		$('body').css('overflow','');
+	});
+	$(document).mouseup(function (e){
+		var modal = $(".modal__card");
+		if(modal.has(e.target).length === 0){
+			modal.parents('.modal').removeClass("is-active");
+			$('body').css('overflow','');
+		}
+	});
+
+	//상품 아코디언
+	$('.accordion__control').click(function(){
+		$(this).parents('.accordion__item').toggleClass('is-active').siblings().removeClass('is-active');
+	});
+
+	//cm inch 탭
+	$('.size-guide__unit-toggle').click(function(){
+		$(this).addClass('is-active').siblings().removeClass('is-active');
+		var unit = $(this).attr('data-unit');
+		$('.size-guide__table-container').attr('data-show-unit',unit);
+	});
+
+</script>
+
          <!-- END content_for_index -->
       </main>
       <!-- Footer -->
