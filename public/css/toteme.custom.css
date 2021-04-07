@@ -57,13 +57,27 @@ html,body,div,p,h1,h2,h3,span,*{font-family: MonumentGrotesk,'Noto Sans KR',-app
     .right-m10{margin-right:10px;}
     .right-m15{margin-right:15px;}
     .right-m30{margin-right:30px;}
-    .align-center{text-align: center;}
-    .align-left{text-align: left;}
-    .align-right{text-align: right;}
-    
-    .font-12{font-size:12px !important;}
-    .font-14{font-size:14px !important;}
 }
+@media(min-width:768px){
+    .top-d10{margin-top:10px}
+    .top-d15{margin-top:15px}
+    .top-d30{margin-top:30px}
+    .left-d10{margin-left:10px}
+    .left-d15{margin-left:15px}
+    .left-d30{margin-left:30px}
+    .bottom-d10{margin-bottom:10px}
+    .bottom-d15{margin-bottom:15px}
+    .bottom-d30{margin-bottom:30px}
+    .right-d10{margin-right:10px;}
+    .right-d15{margin-right:15px;}
+    .right-d30{margin-right:30px;}
+ }
+ .align-center{text-align: center;}
+ .align-left{text-align: left;}
+ .align-right{text-align: right;}
+ 
+ .font-12{font-size:12px !important;}
+ .font-14{font-size:14px !important;}
 
 
 
