@@ -15,18 +15,20 @@
          header.site-header-wrapper .site-nav__link{border:0px; background-color: transparent;}
       </style>
    </head>
-   <body id="toteme-official-online-store" class="template-index has-announcement-bar" data-cy="body" style="--header-height:51px;">
+
+   <!--  has-announcement-bar --header-height:51px; / -->
+   <body id="toteme-official-online-store" class="template-index" data-cy="body">
       <a class="in-page-link visually-hidden skip-link" href="#MainContent">
       Skip to content
       </a>
       <!-- PC 헤더 -->
-      
-<header class="site-header-wrapper is-sticky" js-site-header="wrapper">
+      <!--  is-sticky -->
+<header class="site-header-wrapper" js-site-header="wrapper">
     <div id="shopify-section-site-header" class="shopify-section">
     <section class="site-header" data-section-id="site-header" data-section-type="site-header" js-site-header="container" data-theme="light" data-transparent="false">
 
-        <!-- 상단 디재스터 배너 -->
-        <div class="site-header__announcement announcement-bar is-active" role="dialog" js-site-header="announcementBar">
+        <!-- 상단 디재스터 배너  is-active-->
+        <div class="site-header__announcement announcement-bar" role="dialog" js-site-header="announcementBar">
             <a class="announcement-bar__text announcement-bar__link subtitle-2 is-active" href="/collections/new-in" js-site-header="announcementMessage">
             New in
             </a>
@@ -876,35 +878,7 @@
       <main id="MainContent" class="main-content critical-clear">
          <!-- BEGIN content_for_index -->
          <!--  include ("./pages/00_main/index.ejs") BEGIN content_for_index -->
-         <style>
-   .right-m15{margin-right:15px;}
-   .right-m30{margin-right:30px;}
-   .defaultblock{display: block;}
-   .sns-buttons::after{display:table;content:"";clear:both}
-   .newline{display: block;}
-   .radiobutton input[type='radio']{display:none;}
-   .radiobutton input[type='radio']:checked + span{ background:#171616; color:#fff}
-   .radiobutton input + span{
-      
-      -ms-flex-align: center;  align-items: center; -webkit-appearance: none; -moz-appearance: none;
-      appearance: none; background-color: #fff; border: 1px solid #171616; border-radius: 33px;
-      box-shadow: none; color: #171616; display: -ms-inline-flexbox; display: inline-flex;
-      font-size: 14px; -ms-flex-pack: center; justify-content: center; letter-spacing: .04px; line-height: 15px;
-      margin:5px 8px;min-height: 33px; padding: 0 18px; text-align: center; text-decoration: none; -webkit-user-select: none;
-      -moz-user-select: none; -ms-user-select: none; user-select: none; vertical-align: middle; white-space: nowrap; width: auto;
-      cursor : pointer; letter-spacing:0px;
-   }
-   .input-table input,.input-table select{font-size: 14px;}
-   input.toteme-button-style{ font-size: 14px; margin:5px 8px; min-height: 33px; padding: 0 18px; line-height: 15px;}
-   input.toteme-button-style.big{width:67%;}
-   select.select--center{background-image: url(//cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/icon-small-arrow-down.svg?v=9521334029086756349);}
-   select.toteme-select-style{ 
-    background-image: url(//cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/icon-small-arrow-down.svg?v=9521334029086756349);
-
-    }
-    .select-wrap{ display: inline-block;}
-</style>
-<div class="container">
+         <div class="container">
    <div class="template-account__header">
       상세정보를 입력하세요
    </div>
@@ -918,7 +892,8 @@
     <div class="template-account__navlist--content">
        <div class="navlist__dropdown-wrapper">
           <div class="custom-select__wrapper">
-             <select class="navlist__dropdown custom-select__select font-14" style="background-image: url(//cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/icon-small-arrow-down.svg?v=9521334029086756349);">
+
+             <select class="navlist__dropdown custom-select__select m-font-14" style="background-image: url(//cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/icon-small-arrow-down.svg?v=9521334029086756349);">
                 <option value="/account/login"> <!-- selected=""-->
                     로그인
                 </option>
@@ -976,7 +951,7 @@
             </div>
             <div class=" template-login__form-wrapper" js-password-form="customerLoginForm">
 
-               <div class='defaultblock sns-buttons top-m15 bottom-m15'>
+               <div class='defaultblock sns-buttons top-m15 bottom-m15 top-d15 bottom-d15'>
                   <label class='radiobutton'>
                      <input type="radio" name="test_radio" value="옵션1" checked/>
                      <span>카카오톡</span>
@@ -1001,10 +976,10 @@
 
                </div>
 
-               <div class='line-block top-m15 bottom-m15'>
+               <div class='line-block top-m15 bottom-m15 top-d15 bottom-d15'>
                </div>
 
-               <div class='defaultblock left-m15 right-m15 top-m15 bottom-m15 align-center'>
+               <div class='defaultblock left-m15 right-m15 top-m15 bottom-m15 left-d15 right-d15 top-d15 bottom-d15 align-center'>
 
                   <div class="input-table form-group__field" style='width:67%;margin:0 auto;'>
                      <div style='width:60%;'>
@@ -1027,13 +1002,13 @@
 
 
                
-               <div class='text-block left-m15 right-m15 top-m15 bottom-m30'>
+               <div class='text-block left-m15 right-m15 top-m15 bottom-m30 left-d15 right-d15 top-d15 bottom-d30'>
                   <p>
                      이메일을 인증을 위한 이메일 주소 수집/이용에 동의하십니까? 동의에 거부할 권리나 의사가 있으나,
                      거부시 회원가입이 진행되지 않습니다. 수집한 개인정보는 인증 완료 시까지 보관합니다.
                   </p>
                </div>
-               <div class='defaultblock left-m15 right-m15 top-m15 bottom-m30 align-center'>
+               <div class='defaultblock left-m15 right-m15 top-m15 bottom-m30 left-d15 right-d15 top-d15 bottom-d30 align-center'>
                   <input class="toteme-button-style button big" type="button" value="동의하고 인증하기"/>
                </div>
                          
