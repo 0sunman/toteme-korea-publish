@@ -1,4 +1,21 @@
-@font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 100;src: url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format('opentype');} @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 300;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf) format('opentype');} @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 400;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format('opentype');} @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 500;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf) format('opentype');} @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 700;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format('opentype');} @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 900;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format('opentype');}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 100;
+    font-size : 34px;
+    src: url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) format('woff'),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format('opentype');
+} 
+
+
+@font-face {
+    font-family: 'Noto Sans KR3';
+    font-style: normal;
+    src: url(/css/NotoSansCJKKRRegular_reduce.ttf) format('truetype')
+} 
+
+
+@font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 300;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf) format('opentype');} @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 400;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format('opentype');} @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 500;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf) format('opentype');} @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 700;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format('opentype');} @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 900;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format('opentype');}
 
 
 body#toteme-official-online-store.has-announcement-bar{padding-top:51px;}
@@ -7,7 +24,7 @@ body#toteme-official-online-store.has-announcement-bar{padding-top:51px;}
 /* 2-1 회원가입 로그인 초기*/
 .sns-buttons{ margin:0 auto; text-align: center;}
 .sns-buttons input[type='button']{ font-size:15px; line-height: 20px;}
-.template-account__text_hdtype_1 { padding: 1rem 20px;}
+.template-account__text_hdtype_1 { padding: 15px 20px;}
 .template-account__text_hdtype_1.alert { border-bottom:1px solid #000;}
 
 .no-margin-top{margin-top:0px}
@@ -22,7 +39,7 @@ body#toteme-official-online-store.has-announcement-bar{padding-top:51px;}
 .no-padding{ padding-top:0px !important; padding-bottom:0px !important; }
 /* // 2-1 회원가입 로그인 초기 */
 
-html,body,div,p,h1,h2,h3,span,*{font-family: MonumentGrotesk,'Noto Sans KR',-apple-system,blinkmacsystemfont,San Francisco,Helvetica,sans-serif !important}
+html,body,div,p,h1,h2,h3,span,*{font-family: MonumentGrotesk,'Noto Sans KR3',-apple-system,blinkmacsystemfont,San Francisco,Helvetica,sans-serif !important;}
 
 
 /* 2-2 회원가입 페이지 */
@@ -44,40 +61,58 @@ html,body,div,p,h1,h2,h3,span,*{font-family: MonumentGrotesk,'Noto Sans KR',-app
 
 .line-block{display: block; height:1px; background-color: #171616;}
 
+.m-font-12{font-size:12px !important;}
+.font-14{font-size:14px !important;}
+.m-font-15{font-size:15px !important;}
 @media(max-width:767px){
     .top-m10{margin-top:10px}
     .top-m15{margin-top:15px}
+    .top-m20{margin-top:20px}
     .top-m30{margin-top:30px}
     .left-m10{margin-left:10px}
     .left-m15{margin-left:15px}
+    .left-m20{margin-left:20px}
     .left-m30{margin-left:30px}
     .bottom-m10{margin-bottom:10px}
     .bottom-m15{margin-bottom:15px}
+    .bottom-m20{margin-bottom:20px}
     .bottom-m30{margin-bottom:30px}
     .right-m10{margin-right:10px;}
     .right-m15{margin-right:15px;}
+    .right-m20{margin-right:20px;}
     .right-m30{margin-right:30px;}
+    
+    .m-font-12{font-size:12px !important;}
+    .m-font-14{font-size:14px !important;}
+    .m-font-15{font-size:15px !important;}
 }
 @media(min-width:768px){
     .top-d10{margin-top:10px}
     .top-d15{margin-top:15px}
+    .top-d20{margin-top:30px}
     .top-d30{margin-top:30px}
     .left-d10{margin-left:10px}
     .left-d15{margin-left:15px}
+    .left-d20{margin-left:20px}
     .left-d30{margin-left:30px}
     .bottom-d10{margin-bottom:10px}
     .bottom-d15{margin-bottom:15px}
+    .bottom-d20{margin-bottom:20px}
     .bottom-d30{margin-bottom:30px}
     .right-d10{margin-right:10px;}
     .right-d15{margin-right:15px;}
+    .right-d20{margin-right:20px;}
     .right-d30{margin-right:30px;}
+
+    
+    .d-font-12{font-size:12px !important;}
+    .d-font-14{font-size:14px !important;}
+    .d-font-15{font-size:15px !important;}
  }
  .align-center{text-align: center;}
  .align-left{text-align: left;}
  .align-right{text-align: right;}
  
- .font-12{font-size:12px !important;}
- .font-14{font-size:14px !important;}
 
 
 
@@ -137,3 +172,21 @@ select.toteme-select-style{
  }
  .select-wrap{ display: inline-block;}
  /* // 라디오 버튼 */
+
+
+ /* 토템 요구사항 */
+/* 1. 로그인 부분 상단 60px = 45px + 50px (데스크탑)*/
+@media (min-width:768px){
+    #MainContent .template-account__navlist { padding:0px; }
+    #MainContent .template-account__navlist ul.navlist { padding:0px; margin:60px 0px; }  /* 상단 60px로 요청 */
+    #MainContent .navlist__item.navlist__item--margin { margin-bottom: 30px; } /* 공백은 30px */
+    #MainContent .template-login__form .form-group { padding:0px; margin: 30px 15px; }
+    #MainContent .text-block.description{font-size:11px;}
+}
+
+ /* //토템 요구사항 */
+
+
+ #MainContent .navlist__link {
+    font-size:initial
+ }

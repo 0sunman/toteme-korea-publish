@@ -15,18 +15,20 @@
          header.site-header-wrapper .site-nav__link{border:0px; background-color: transparent;}
       </style>
    </head>
-   <body id="toteme-official-online-store" class="template-index has-announcement-bar" data-cy="body" style="--header-height:51px;">
+
+   <!--  has-announcement-bar --header-height:51px; / -->
+   <body id="toteme-official-online-store" class="template-index" data-cy="body">
       <a class="in-page-link visually-hidden skip-link" href="#MainContent">
       Skip to content
       </a>
       <!-- PC 헤더 -->
-      
-<header class="site-header-wrapper is-sticky" js-site-header="wrapper">
+      <!--  is-sticky -->
+<header class="site-header-wrapper" js-site-header="wrapper">
     <div id="shopify-section-site-header" class="shopify-section">
     <section class="site-header" data-section-id="site-header" data-section-type="site-header" js-site-header="container" data-theme="light" data-transparent="false">
 
-        <!-- 상단 디재스터 배너 -->
-        <div class="site-header__announcement announcement-bar is-active" role="dialog" js-site-header="announcementBar">
+        <!-- 상단 디재스터 배너  is-active-->
+        <div class="site-header__announcement announcement-bar" role="dialog" js-site-header="announcementBar">
             <a class="announcement-bar__text announcement-bar__link subtitle-2 is-active" href="/collections/new-in" js-site-header="announcementMessage">
             New in
             </a>
@@ -876,7 +878,8 @@
       <main id="MainContent" class="main-content critical-clear">
          <!-- BEGIN content_for_index -->
          <!--  include ("./pages/00_main/index.ejs") BEGIN content_for_index -->
-         <div class="container">
+         <link href="/css/toteme.custom.css" rel="stylesheet">
+<div class="container">
     <div class="template-account__header">
        상세정보를 입력하세요
     </div>
@@ -886,7 +889,7 @@
     <div class="template-account__navlist--content">
        <div class="navlist__dropdown-wrapper">
           <div class="custom-select__wrapper">
-             <select class="navlist__dropdown custom-select__select font-14" style="background-image: url(//cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/icon-small-arrow-down.svg?v=9521334029086756349);">
+             <select class="navlist__dropdown custom-select__select m-font-14" style="background-image: url(//cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/icon-small-arrow-down.svg?v=9521334029086756349);">
                 <option value="/account/login"> <!-- selected=""-->
                     로그인
                 </option>
@@ -950,26 +953,26 @@
                         <div class="form-group__field bottom-m10 bottom-d10">
                            <label class="form-group__label subtitle-2 is-hidden" for="CustomerEmail">
                            </label>
-                           <input id="CustomerEmail" class='font-14' autocapitalize="off" autocomplete="off" autofocus="" name="customer[email]" placeholder="주문번호" required="" spellcheck="false" type="email">
+                           <input id="CustomerEmail" class='m-font-14' autocapitalize="off" autocomplete="off" autofocus="" name="customer[email]" placeholder="주문번호" required="" spellcheck="false" type="email">
                         </div>
                         <div class="form-group__field">
                            <label class="form-group__label subtitle-2 is-hidden" for="CustomerPassword">
                            </label>
-                           <input id="CustomerEmail" class='font-14' autocapitalize="off" autocomplete="off" autofocus="" name="customer[email]" placeholder="비밀번호" required="" spellcheck="false" type="email">
+                           <input id="CustomerEmail" class='m-font-14' autocapitalize="off" autocomplete="off" autofocus="" name="customer[email]" placeholder="비밀번호" required="" spellcheck="false" type="email">
                         </div>
                         <div class="form-group__field">
-                           <input class="button button--primary button--block button--large font-14" disabled="true" type="submit" value="주문배송조회">
+                           <input class="button button--primary button--block button--large m-font-14" disabled="true" type="submit" value="주문배송조회">
                          </div>
 
                      </div>
                   </form>
                </div>
 
-               <div class='line-block top-m15 bottom-m15 top-d15 bottom-d15'>
+               <div class='line-block top-m15 bottom-m15 top-d30 bottom-d20'>
                </div>
 
                 <div class="text-block description form-group__field ">
-                  <p class='font-14 left-m15 left-d15'>주문번호가 기억나지 않으시면, 고객센터(0000-0000)로 문의주세요.</p>
+                  <p class='m-font-14 left-m15 left-d15'>주문번호가 기억나지 않으시면, 고객센터(0000-0000)로 문의주세요.</p>
                </div>
             </div>
              <div class="template-login__form-wrapper is-hidden" js-password-form="recoverPasswordForm">
@@ -981,7 +984,7 @@
                       <div class="form-group">
                          <div class="form-group__field">
                             <label for="RecoverEmail" class="form-group__label subtitle-2 is-hidden">
-                               ID 또는 이메일
+                               ID<span class='kor'> 또는 이메일</span>
                             </label>
                             <input id="RecoverEmail" autocapitalize="off" autocomplete="off" name="email" placeholder="Email" required="" spellcheck="false" tabindex="-1" type="email">
                          </div>
