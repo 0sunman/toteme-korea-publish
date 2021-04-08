@@ -39,7 +39,9 @@ const pageData = [
   {"type":"join","title":"1-2. 비회원주문페이지","url" : "/02_login_join/12", "pageurl" : "02_login_join/01_2_no_member_login.ejs"},
   {"type":"join","title":"2. 회원가입페이지","url" : "/02_login_join/2", "pageurl" : "02_login_join/02_join_page.ejs"},
   {"type":"join","title":"3. 이메일페이지 (공사중)","url" : "/02_login_join/3", "pageurl" : "02_login_join/03_select_email.ejs"},
-  {"type":"product","title":"1. 상품상세","url" : "/03_product/1", "pageurl" : "03_product/01_product_detail.ejs"}
+  {"type":"product","title":"1. 상품상세","url" : "/03_product/1", "pageurl" : "03_product/01_product_detail.ejs"},
+  {"type":"product","title":"1-1. 프리오더","url" : "/03_product/11", "pageurl" : "03_product/01_1_product_detail_preorder.ejs"},
+  {"type":"product","title":"2. 상품리스트","url" : "/03_product/2", "pageurl" : "03_product/02_product_list.ejs"}
 ]
 
 pageData.forEach((data)=>{
