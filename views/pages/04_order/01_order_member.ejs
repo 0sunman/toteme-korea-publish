@@ -1,10 +1,6 @@
 <link rel="stylesheet" href="//cdn.shopify.com/app/services/48011411607/assets/113712234647/checkout_stylesheet/v2-ltr-2021-01-25-36b7b11b994ea40729291f1251a42871-20058" media="all">
 <link type="text/css" href="//cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/layout.checkout.css?v=981295653317797159" rel="stylesheet">
 
-<style>
-	.checkbox__custom+.checkbox__label:before, .checkbox__custom+.checkbox__label:after{display: none;}
-	.checkbox__custom.checkbox__input{clip: inherit; -webkit-clip-path: inherit; clip-path: inherit; height: auto; width: auto; margin: 0; white-space: normal;}
-</style>
 
 
 
@@ -76,20 +72,14 @@
 										<use xlink:href="#chevron-right"></use>
 									</svg>
 								</li>
-								<li class="breadcrumb__item breadcrumb__item--current" aria-current="step">
-									<span class="breadcrumb__text">Information</span>
+								<li class="breadcrumb__item breadcrumb__item--current">
+									<span class="breadcrumb__text">주문정보</span>
 									<svg class="icon-svg icon-svg--color-adaptive-light icon-svg--size-10 breadcrumb__chevron-icon">
 										<use xlink:href="#chevron-right"></use>
 									</svg>
 								</li>
 								<li class="breadcrumb__item breadcrumb__item--blank">
-									<span class="breadcrumb__text">Shipping</span>
-									<svg class="icon-svg icon-svg--color-adaptive-light icon-svg--size-10 breadcrumb__chevron-icon">
-										<use xlink:href="#chevron-right"></use>
-									</svg>
-								</li>
-								<li class="breadcrumb__item breadcrumb__item--blank">
-									<span class="breadcrumb__text">Payment</span>
+									<span class="breadcrumb__text">결제</span>
 								</li>
 							</ol>
 						</nav>
@@ -103,37 +93,32 @@
 									<div class="section__header">
 										<div class="layout-flex layout-flex--tight-vertical layout-flex--loose-horizontal layout-flex--wrap">
 											<h2 class="section__title layout-flex__item layout-flex__item--stretch" id="main-header">
-												Contact information
+												주문 고객
 											</h2>
-											<p class="layout-flex__item">
+											<!-- <p class="layout-flex__item">
 												<span>Already have an account?</span>
 												<a href="#">
 													<span class="visually-hidden">Already have an account?</span>
 													Log in
-												</a> </p>
+												</a> </p> -->
 										</div>
 									</div>
 									<div class="section__content">
 										<div class="fieldset">
 											<div class="field field--required">
 												<div class="field__input-wrapper">
-													<label class="field__label field__label--visible" for="checkout_email">Email</label>
-													<input placeholder="Email" autocapitalize="off" spellcheck="false" autocomplete="shipping email" class="field__input" size="30" type="email" name="checkout[email]" id="checkout_email">
+													<label class="field__label field__label--visible" for="checkout_name">이름</label>
+													<input placeholder="이름" class="field__input" size="30" type="text" name="checkout[name]" id="checkout_name">
 												</div>
 											</div>
 										</div>
 										<div class="fieldset-description">
 											<div class="section__content">
 												<div class="checkbox-wrapper">
-													<div class="checkbox__input checkbox__custom">
-														<input name="checkout[buyer_accepts_marketing]" type="hidden" value="0">
-														<input
-															class="input-checkbox" data-backup="buyer_accepts_marketing" type="checkbox" value="1"
-															name="checkout[buyer_accepts_marketing]" id="checkout_buyer_accepts_marketing">
-													</div>
-													<label class="checkbox__label" for="checkout_buyer_accepts_marketing">
-														Keep me up to date on news and exclusive offers
-													</label>
+													<div class="checkbox_custom_box">
+														<input id="checkEmail" class="checkbox" value="1" type="checkbox">
+														<label for="checkEmail">Keep me up to date on news and exclusive offers</label>
+												 </div>
 												</div>
 											</div>
 										</div>
