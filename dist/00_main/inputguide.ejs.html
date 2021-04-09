@@ -878,7 +878,8 @@
       <main id="MainContent" class="main-content critical-clear">
          <!-- BEGIN content_for_index -->
          <!--  include ("./pages/00_main/index.ejs") BEGIN content_for_index -->
-         
+         <<<<<<< HEAD
+
 <style>
 .container .form-group .form-group__field{margin-bottom:10px;}
 .container .form-group .form-group__footer{padding-top:0px;}
@@ -892,6 +893,8 @@
 <style>
    .form-group .error.comment {font-size:12px;margin-top:5px;color:#ff0000;text-align: left;}
 </style>
+=======
+>>>>>>> guide/20210408/new
 <div class="container">
   <div class='wrapper'>
 
@@ -1002,12 +1005,57 @@
      <!-- -->
 
      <div  class="example-description">
+      <div class="rte" style='text-align: center;'>
+         하단 체크 박스
+      </div>
+   </div>
+   <div class='example'>
+      <div class="form-group" style='margin-bottom:50px;'>
+         <div class="input-block form-group__field">
+            <input id="CustomerId" autocapitalize="off" autocomplete="off" autofocus="" placeholder="아이디 또는 이메일" required="" spellcheck="false" type="email">
+         </div>
+         <div class="text-block description form-group__field">
+            <p>
+               <input id="checkEmail" class='checkbox' value="1" type="checkbox"></input>
+               <label for="checkEmail">위 이메일 주소를 아이디로 사용</label>
+            </p>
+         </div>
+      </div>
+   </div>
+   <!-- -->
+
+
+        <!-- -->
+
+        <div  class="example-description">
+          <div class="rte" style='text-align: center;'>
+            드랍다운 박스
+          </div>
+       </div>
+       <div class='example'>
+          <div class="form-group" style='margin-bottom:50px;'>
+             <div class="input-block form-group__field">
+              <select  class="toteme-select-style toteme-button-style no-animation" >
+                <option value="AF">naver.com</option>
+                <option value="AX">gmail.com</option>
+                <option value="AX">직접입력</option>
+             </select>
+             </div>
+          </div>
+       </div>
+       <!-- -->
+
+
+        <!-- -->
+
+        <div  class="example-description">
         <div class="rte" style='text-align: center;'>
-           하단 체크 박스
+          드랍다운 박스 (애니메이션)
         </div>
-     </div>
-     <div class='example'>
+      </div>
+      <div class='example'>
         <div class="form-group" style='margin-bottom:50px;'>
+<<<<<<< HEAD
            <div class="input-block form-group__field">
               <input id="CustomerId" autocapitalize="off" autocomplete="off" autofocus="" placeholder="아이디 또는 이메일" required="" spellcheck="false" type="email">
            </div>
@@ -1017,9 +1065,18 @@
                  <label for="checkEmail">위 이메일 주소를 아이디로 사용</label>
               </div>
            </div>
+=======
+            <div class="input-block form-group__field">
+            <select  class="toteme-select-style toteme-button-style" >
+              <option value="AF">naver.com</option>
+              <option value="AX">gmail.com</option>
+              <option value="AX">직접입력</option>
+            </select>
+            </div>
+>>>>>>> guide/20210408/new
         </div>
-     </div>
-     <!-- -->
+      </div>
+      <!-- -->
 
   </div>
 </div>

@@ -191,6 +191,7 @@ select.toteme-select-style{
     font-size:initial
  }
 
+<<<<<<< HEAD
  /* 인풋 가이드 */
  .form-group .error.comment {font-size:12px;margin-top:5px;color:#ff0000;text-align: left;}
  .checkbox_custom_box{font-size: 12px;}
@@ -199,3 +200,18 @@ select.toteme-select-style{
  .checkbox_custom_box .checkbox:checked{background: #fff;}
  .checkbox_custom_box .checkbox:checked:after{opacity: 1; transform: scale(1);}
  .checkbox_custom_box label{vertical-align: middle;}
+=======
+
+ 
+.container .form-group .form-group__field{margin-bottom:10px;}
+.container .form-group .form-group__footer{padding-top:0px;}
+.form-group p.error.comment {font-size:12px;margin-top:5px;color:#ff0000}
+@media(min-width:767px){
+  .container .wrapper{width:30%; margin:0 auto}
+}
+.example{display: block;padding:15px;margin:0 auto;border: 1px solid;margin-top: 10px;margin-bottom: 50px;}
+.example-description{background-color: #e2e2e2; margin-top:10px; padding:20px; border-radius: 10px;}
+
+input.button--block:hover,input.template-login input.AAI_submit:hover, select:focus, select:hover { margin-left: 0; width: 100% }
+.no-animation:hover, .no-animation:focus{margin-left: 0; width: 100% }
+>>>>>>> guide/20210408/new
