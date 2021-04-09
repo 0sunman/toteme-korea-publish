@@ -2,12 +2,15 @@
 <style>
 .container .form-group .form-group__field{margin-bottom:10px;}
 .container .form-group .form-group__footer{padding-top:0px;}
-.form-group p.error.comment {font-size:12px;margin-top:5px;color:#ff0000}
 @media(min-width:767px){
   .container .wrapper{width:30%; margin:0 auto}
 }
 .example{display: block;padding:15px;margin:0 auto;border: 1px solid;margin-top: 10px;margin-bottom: 50px;}
 .example-description{background-color: #e2e2e2; margin-top:10px; padding:20px; border-radius: 10px;}
+</style>
+
+<style>
+   .form-group .error.comment {font-size:12px;margin-top:5px;color:#ff0000;text-align: left;}
 </style>
 <div class="container">
   <div class='wrapper'>
@@ -108,7 +111,7 @@
               Email
               </label>
               <input id="CustomerEmail" autocapitalize="off" autocomplete="off" autofocus="" name="customer[email]" placeholder="Email" required="" spellcheck="false" type="email" class="input-error">
-              <p class='error comment'>계좌번호 입력시(-)를 제외하고 입력해주세요.</p>
+              <p class="error comment">계좌번호 입력시(-)를 제외하고 입력해주세요.</p>
            </div>
            <div class="input-block form-group__footer">
               <input class="button button--primary button--block button--large is-valid is-active" type="submit" value="Confirm">
@@ -129,10 +132,10 @@
               <input id="CustomerId" autocapitalize="off" autocomplete="off" autofocus="" placeholder="아이디 또는 이메일" required="" spellcheck="false" type="email">
            </div>
            <div class="text-block description form-group__field">
-              <p>
+              <div class="checkbox_custom_box">
                  <input id="checkEmail" class='checkbox' value="1" type="checkbox"></input>
                  <label for="checkEmail">위 이메일 주소를 아이디로 사용</label>
-              </p>
+              </div>
            </div>
         </div>
      </div>
