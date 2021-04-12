@@ -878,148 +878,388 @@
       <main id="MainContent" class="main-content critical-clear">
          <!-- BEGIN content_for_index -->
          <!--  include ("./pages/00_main/index.ejs") BEGIN content_for_index -->
-         <div class="container">
-   <div class="template-account__header">
-      상세정보를 입력하세요
-   </div>
-   <div class="template-account__wrapper">
+         <!-- 1 column _ Main -->
+<section class="custom-module custom-module--1-bkgd-1-section custom-module--has-background">
+	<div class="custom-module__background custom-module__background--is-full">
+		<div class="responsive-image__wrapper custom-module__background-image-wrapper">
+			<span style="display: block; padding-top:56.25%;" aria-hidden="true"></span>
+			<img class="responsive-image__image custom-module__background-image" alt="" src="//cdn.shopify.com/s/files/1/0480/1141/1607/files/Crinkle_landscape_2048x2048.jpg?v=1617032188">
+		</div>
+	</div>
+	<div class="custom-module__container">
+		<div class="custom-module__content custom-module__content--section-1 custom-module__content--col-24">
+			<div class="custom-module__content-wrapper">
+			</div>
+		</div>
+	</div>
+</section>
+<!-- //1 column _ Main -->
 
 
+<!-- 2 column image _ Uniforms -->
+<section class="custom-module custom-module--image-full custom-module--no-crop">
+	<div class="custom-module__container">
+		<div class="custom-module__content custom-module__content--section-1">
+			<div class="custom-module__content-wrapper">
+				<div class="responsive-image__wrapper custom-module__content-image-wrapper">
+					<span style="display: block; padding-top:140.0%;" aria-hidden="true"></span>
+					<img class="responsive-image__image custom-module__content-image" alt="" src="//cdn.shopify.com/s/files/1/0480/1141/1607/files/36_Toteme_PF21_213-105-717_CAPE_CASHMERE_BLEND_CAMEL_831__1313_c4ff50f6-3c78-4ce0-959b-242924a3e903_2048x2048.jpg?v=1617285676">
+				</div>
+				<div class="custom-module__content-title is-bottom is-left">
+					<span class="custom-module__text-link">
+						<svg class="icon icon--small icon__arrow--right" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M2.008 1.238L2.705.5 6 3.996 2.697 7.5 2 6.762l2.608-2.766-2.6-2.758z"></path>
+						</svg>
+						Look 01
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="custom-module__content custom-module__content--section-2">
+			<div class="custom-module__content-wrapper">
+				<div class="responsive-image__wrapper custom-module__content-image-wrapper">
+					<span style="display: block; padding-top:140.0%;" aria-hidden="true"></span>
+					<img class="responsive-image__image custom-module__content-image" alt="" src="//cdn.shopify.com/s/files/1/0480/1141/1607/files/36_Toteme_PF21_213-105-717_CAPE_CASHMERE_BLEND_CAMEL_831__1321_d7faff7b-6ef7-4c6c-a330-e884cfd7a67e_2048x2048.jpg?v=1617285676">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- //2 column image _ Uniforms -->
 
 
-      <div class="template-account__left"></div>
-      <div class="template-account__navlist ">
-    <div class="template-account__navlist--content">
-       <div class="navlist__dropdown-wrapper">
-          <div class="custom-select__wrapper">
-             <select class="navlist__dropdown custom-select__select m-font-14" style="background-image: url(//cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/icon-small-arrow-down.svg?v=9521334029086756349);">
-                <option value="/account/login"> <!-- selected=""-->
-                    로그인
-                </option>
-                <option value="/account/register">
-                    회원가입
-                </option>
-                <option value="/account/login#reactivate">
-                    아이디 찾기
-                </option>
-                <option value="/account/login#recover">
-                    비밀번호 찾기
-                </option>
-                <option value="/account/login#recover">
-                    비회원 주문조회
-                </option>
-             </select>
-             <span class="main-title custom-select__label text-small">로그인</span>
-          </div>
-       </div>
-       <ul class="navlist" js-account-nav="navlist">
-          <li class="navlist__item ">
-             <a class="navlist__link text-link" href="/account/login">로그인</a>
-          </li>
-          <li class="navlist__item navlist__item--margin">
-             <a class="navlist__link text-link" href="/account/register">회원가입</a>
-          </li>
-          <li class="navlist__item">
-             <a class="navlist__link text-link" href="/account/login#reactivate" js-password-form="reactivateLink">아이디 찾기</a>
-          </li>
-          <li class="navlist__item navlist__item--margin">
-             <a class="navlist__link text-link" href="/account/login#recover" js-password-form="forgotPasswordLink">비밀번호 찾기</a>
-          </li>
-          <li class="navlist__item">
-             <a class="navlist__link text-link" href="/account/login#nomember" js-password-form="reactivateLink">비회원 주문조회</a>
-          </li>
-       </ul>
-    </div>
- </div>
-
- 
-   <script>
-      setTimeout(function(){
-         $(".main-title.custom-select__label").text("회원가입");
-         $("a[href='/account/register']").addClass("is-active");
-      },100)
-      </script>
-   
-      <div class="template-account__content">
-         <div class="template-login__content">
-
-            <div class="template-account__text_hdtype_1 alert" style='display:none;'>
-               <div class="rte">
-                  안내문구 출력 영역
-               </div>
-            </div>
-            <div class=" template-login__form-wrapper" js-password-form="customerLoginForm">
-
-               <div class='defaultblock sns-buttons top-m15 bottom-m15 top-d15 bottom-d15'>
-                  <label class='radiobutton'>
-                     <input type="radio" name="test_radio" value="옵션1" checked/>
-                     <span>카카오톡</span>
-                  </label>
-                  <label class='radiobutton' style='clear:both'>
-                     <input type="radio" name="test_radio" value="옵션1"/>
-                     <span>이메일</span>
-                  </label>
-                  <div class='newline'></div>
-                  <label class='radiobutton'>
-                     <input type="radio" name="test_radio" value="옵션1"/>
-                     <span>구글</span>
-                  </label>
-                  <label class='radiobutton'>
-                     <input type="radio" name="test_radio" value="옵션1"/>
-                     <span>페이스북</span>
-                  </label>
-                  <label class='radiobutton'>
-                     <input type="radio" name="test_radio" value="옵션1"/>
-                     <span>휴대폰 인증</span>
-                  </label>
-
-               </div>
-
-               <div class='line-block top-m15 bottom-m15 top-d15 bottom-d15'>
-               </div>
-
-               <div class='defaultblock left-m15 right-m15 top-m15 bottom-m15 left-d15 right-d15 top-d15 bottom-d15 align-center'>
-
-                  <div class="input-table form-group__field" style='width:67%;margin:0 auto;'>
-                     <div style='width:60%;'>
-                        <input style='display: inline-block;' autocapitalize="off" autocomplete="off" autofocus="" placeholder="이메일" required="" spellcheck="false" type="email">
-                     </div>
-                     <div style='width:40%;'>
-                        <div class='select-wrap' style='width:100%;margin-left:7px'>
-   
-                           <select  class="toteme-select-style toteme-button-style" >
-                              <option value="AF">naver.com</option>
-                              <option value="AX">gmail.com</option>
-                              <option value="AX">직접입력</option>
-                           </select>
-                           </div>
-      
-                        </div>
-                     </div>
-                  </div>
+<!-- 2 column video _ Uniforms -->
+<section class="custom-module custom-module--has-2-backgrounds custom-module--no-crop">
+	<div class="custom-module__container">
+		<div class="custom-module__content custom-module__content--section-1">
+			<div class="custom-module__background custom-module__background--">
+				<div class="responsive-image__wrapper custom-module__background-image-wrapper">
+					<span style="display: block; padding-top:125.0%;" aria-hidden="true"></span>
+					<img class="responsive-image__image custom-module__background-image" alt="" src="//cdn.shopify.com/s/files/1/0480/1141/1607/files/TOTEME_UNIFORMS_03_TOTEME_UNIFORMS_133_0427970a-a401-431c-92e6-6ec60017c251_2048x2048.jpg?v=1613089576">
+				</div>
+			</div>
+			<div class="custom-module__content-wrapper"></div>
+		</div>
+		<div class="custom-module__content custom-module__content--section-2">
+			<div class="custom-module__background custom-module__background--">
+				<div class="custom-module__video-wrapper">
+					<video class="custom-module__video" autoplay="1" loop="1" muted="1" playsinline="1" preload="1">
+						<source src="https://player.vimeo.com/external/511492851.hd.mp4?s=72afa5323691e573ad1348fa8987d3eb7017f98d&profile_id=174" type="video/mp4">
+					</video>
+				</div>
+			</div>
+			<div class="custom-module__content-wrapper"></div>
+		</div>
+	</div>
+</section>
+<!-- //2 column video _ Uniforms -->
 
 
+<!-- 2 column small image _ Uniforms -->
+<section class="custom-module custom-module--has-2-backgrounds">
+	<div class="custom-module__container">
+		<div class="custom-module__content custom-module__content--section-1">
+			<a class="custom-module__content-link" href="/pages/spring-uniforms">
+				<div class="custom-module__content-wrapper">
+					<div class="responsive-image__wrapper custom-module__content-image-wrapper is-center">
+						<span style="display: block; padding-top:140.0%;" aria-hidden="true"></span>
+						<img class="responsive-image__image custom-module__content-image" alt="" src="//cdn.shopify.com/s/files/1/0480/1141/1607/files/TOTEME_UNIFORMS_03_TOTEME_UNIFORMS_133_5024618a-aa1b-4040-b7f1-de45c947ba87_2048x2048.jpg?v=1613057699">
+					</div>
+					<div class="custom-module__content-title is-bottom is-left">
+						<span class="custom-module__text-link">
+							<svg class="icon icon--small icon__arrow--right" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M2.008 1.238L2.705.5 6 3.996 2.697 7.5 2 6.762l2.608-2.766-2.6-2.758z"></path>
+							</svg>
+							Spring uniforms
+						</span>
+					</div>
+				</div>
+			</a>
+		</div>
+		<div class="custom-module__content custom-module__content--section-2">
+			<a class="custom-module__content-link" href="/pages/summer-uniforms">
+				<div class="custom-module__content-wrapper">
+					<div class="responsive-image__wrapper custom-module__content-image-wrapper is-center">
+						<span style="display: block; padding-top:140.0%;" aria-hidden="true"></span>
+						<img class="responsive-image__image custom-module__content-image" alt=""
+							src="//cdn.shopify.com/s/files/1/0480/1141/1607/files/TOTEME_UNIFORMS_11_TOTEME_UNIFORMS_034_2048x2048.jpg?v=1612960173">
+					</div>
+					<div class="custom-module__content-title is-bottom is-left">
+						<span class="custom-module__text-link">
+							<svg class="icon icon--small icon__arrow--right" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M2.008 1.238L2.705.5 6 3.996 2.697 7.5 2 6.762l2.608-2.766-2.6-2.758z"></path>
+							</svg>
+							Summer uniforms
+						</span>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+</section>
+<!-- //2 column small image _ Uniforms -->
 
-               
-               <div class='text-block left-m15 right-m15 top-m15 bottom-m30 left-d15 right-d15 top-d15 bottom-d30'>
-                  <p>
-                     이메일을 인증을 위한 이메일 주소 수집/이용에 동의하십니까? 동의에 거부할 권리나 의사가 있으나,
-                     거부시 회원가입이 진행되지 않습니다. 수집한 개인정보는 인증 완료 시까지 보관합니다.
-                  </p>
-               </div>
-               <div class='defaultblock left-m15 right-m15 top-m15 bottom-m30 left-d15 right-d15 top-d15 bottom-d30 align-center'>
-                  <input class="toteme-button-style button big" type="button" value="동의하고 인증하기"/>
-               </div>
-                         
-            </div>
 
-         </div>
-      </div>
+<!-- 3 column _ Uniforms -->
+<section class="custom-module custom-module--image-full custom-module--3-sections custom-module--no-crop">
+	<div class="custom-module__container">
+		<div class="custom-module__content custom-module__content--col-8 custom-module__content--section-1">
+			<a class="custom-module__content-link" href="/pages/uniform-4">
+				<div class="custom-module__content-wrapper">
+					<div class="responsive-image__wrapper custom-module__content-image-wrapper">
+						<span style="display: block; padding-top:140.0%;" aria-hidden="true"></span>
+						<img class="responsive-image__image custom-module__content-image" alt="" src="//cdn.shopify.com/s/files/1/0480/1141/1607/files/TOTEME_UNIFORMS_02_TOTEME_UNIFORMS_139_M_2048x2048.jpg?v=1613077418">
+					</div>
+					<div class="custom-module__content-title is-bottom is-left">
+						<span class="custom-module__text-link">
+							<svg class="icon icon--small icon__arrow--right" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M2.008 1.238L2.705.5 6 3.996 2.697 7.5 2 6.762l2.608-2.766-2.6-2.758z"></path>
+							</svg>
+							School run
+						</span>
+					</div>
+				</div>
+			</a>
+		</div>
+		<div class="custom-module__content custom-module__content--col-8 custom-module__content--section-2">
+			<a class="custom-module__content-link" href="/pages/uniform-7">
+				<div class="custom-module__content-wrapper">
+					<div class="responsive-image__wrapper custom-module__content-image-wrapper">
+						<span style="display: block; padding-top:140.0%;" aria-hidden="true"></span>
+						<img class="responsive-image__image custom-module__content-image" alt="" src="//cdn.shopify.com/s/files/1/0480/1141/1607/files/TOTEME_UNIFORMS_03_TOTEME_UNIFORMS_133_M_2048x2048.jpg?v=1613077468">
+					</div>
+					<div class="custom-module__content-title is-bottom is-left">
+						<span class="custom-module__text-link">
+							<svg class="icon icon--small icon__arrow--right" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M2.008 1.238L2.705.5 6 3.996 2.697 7.5 2 6.762l2.608-2.766-2.6-2.758z"></path>
+							</svg>
+							Lunch
+						</span>
+					</div>
+				</div>
+			</a>
+		</div>
+		<div class="custom-module__content custom-module__content--col-8 custom-module__content--section-3">
+			<a class="custom-module__content-link" href="/pages/uniform-1">
+				<div class="custom-module__content-wrapper">
+					<div class="responsive-image__wrapper custom-module__content-image-wrapper">
+						<span style="display: block; padding-top:140.0%;" aria-hidden="true"></span>
+						<img class="responsive-image__image custom-module__content-image" alt="" src="//cdn.shopify.com/s/files/1/0480/1141/1607/files/TOTEME_UNIFORMS_01_132_M_2048x2048.jpg?v=1613077531">
+					</div>
+					<div class="custom-module__content-title is-bottom is-left">
+						<span class="custom-module__text-link">
+							<svg class="icon icon--small icon__arrow--right" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M2.008 1.238L2.705.5 6 3.996 2.697 7.5 2 6.762l2.608-2.766-2.6-2.758z"></path>
+							</svg>
+							Video call
+						</span>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+</section>
+<!-- //3 column _ Uniforms -->
 
 
-
-   </div>
-</div>
+<!-- 4 column _ Product -->
+<section class="custom-module custom-module--product-list-section custom-module--no-crop">
+	<div class="custom-module__container">
+		<div class="custom-module__content custom-module__content--section-1 custom-module__content--sm-col-12 custom-module__content--col-6">
+			<a class="product-card product-card--small product-card--has-hover-text" href="/products/signature-wool-cashmere-cape-camel">
+				<div class="product-card__thumbnail-container">
+					<div class="responsive-card-image__wrapper product-card__thumbnail product-card__thumbnail--primary">
+						<img class="responsive-card-image__image" alt="Signature wool cashmere cape camel" src="//cdn.shopify.com/s/files/1/0480/1141/1607/products/Toteme_PF21_213-105-717_CAPE_CASHMERE-BLEND-CAMEL-8310119_900x900.jpg?v=1617281735">
+					</div>
+				</div>
+				<div class="product-card__footer">
+					<span class="product-card__title">
+						Signature wool cashmere cape camel
+					</span>
+					<div class="product-card__details">
+						<div class="product-price">
+							<span>
+								<span class="money">₩1,600,000 KRW</span>
+							</span>
+						</div>
+						<div class="product-card__sizes">
+							Coming soon
+						</div>
+					</div>
+				</div>
+				<div class="product-card__wishlist">
+					<button type="button" class="wk-button-collection wk-add-product" title="Add to Wishlist">
+						<div class="wk-icon">
+							<span class="icon__star">
+								<svg version="1.1" xmlns="https://www.w3.org/2000/svg" width="64" height="60.9" viewBox="0 0 64 64">
+									<path
+										d="M63.92,23.25a1.5,1.5,0,0,0-1.39-1H40.3L33.39,1.08A1.5,1.5,0,0,0,32,0h0a1.49,1.49,0,0,0-1.39,1L23.7,22.22H1.47a1.49,1.49,0,0,0-1.39,1A1.39,1.39,0,0,0,.6,24.85l18,13L11.65,59a1.39,1.39,0,0,0,.51,1.61,1.47,1.47,0,0,0,.88.3,1.29,1.29,0,0,0,.88-0.3l18-13.08L50,60.68a1.55,1.55,0,0,0,1.76,0,1.39,1.39,0,0,0,.51-1.61l-6.9-21.14,18-13A1.45,1.45,0,0,0,63.92,23.25ZM42.75,36.18a1.39,1.39,0,0,0-.51,1.61l5.81,18L32.85,44.69a1.41,1.41,0,0,0-1.67,0L15.92,55.74l5.81-18a1.39,1.39,0,0,0-.51-1.61L6,25.12H24.7a1.49,1.49,0,0,0,1.39-1L32,6.17l5.81,18a1.5,1.5,0,0,0,1.39,1H58Z">
+									</path>
+								</svg>
+							</span>
+							<span class="icon__star--filled">
+								<svg version="1.1" xmlns="https://www.w3.org/2000/svg" width="64" height="60.9" viewBox="0 0 64 64">
+									<path
+										d="M63.92,23.25a1.5,1.5,0,0,0-1.39-1H40.3L33.39,1.08A1.5,1.5,0,0,0,32,0h0a1.49,1.49,0,0,0-1.39,1L23.7,22.22H1.47a1.49,1.49,0,0,0-1.39,1A1.39,1.39,0,0,0,.6,24.85l18,13L11.65,59a1.39,1.39,0,0,0,.51,1.61,1.47,1.47,0,0,0,.88.3,1.29,1.29,0,0,0,.88-0.3l18-13.08L50,60.68a1.55,1.55,0,0,0,1.76,0,1.39,1.39,0,0,0,.51-1.61l-6.9-21.14,18-13A1.45,1.45,0,0,0,63.92,23.25Z">
+									</path>
+								</svg>
+							</span>
+						</div>
+						<span class="wk-label">Add to Wishlist</span>
+					</button>
+				</div>
+			</a>
+		</div>
+		<div class="custom-module__content custom-module__content--section-1 custom-module__content--sm-col-12 custom-module__content--col-6">
+			<a class="product-card product-card--small product-card--has-hover-text" href="/products/merino-camel-slit-knit-camel">
+				<div class="product-card__thumbnail-container">
+					<div class="responsive-card-image__wrapper product-card__thumbnail product-card__thumbnail--primary">
+						<img class="responsive-card-image__image" alt="Merino camel slit knit camel"
+							src="//cdn.shopify.com/s/files/1/0480/1141/1607/products/Toteme_PF21_213-564-756_LONG-KNIT_-WOOL-BLEND-CAMEL-8310122_900x900.jpg?v=1617284103">
+					</div>
+				</div>
+				<div class="product-card__footer">
+					<span class="product-card__title">
+						Merino camel slit knit camel
+					</span>
+					<div class="product-card__details">
+						<div class="product-price">
+							<span>
+								<span class="money">₩905,000 KRW</span>
+							</span>
+						</div>
+						<div class="product-card__sizes">
+							Coming soon
+						</div>
+					</div>
+				</div>
+				<div class="product-card__wishlist">
+					<button type="button" class="wk-button-collection wk-add-product" title="Add to Wishlist">
+						<div class="wk-icon">
+							<span class="icon__star">
+								<svg version="1.1" xmlns="https://www.w3.org/2000/svg" width="64" height="60.9" viewBox="0 0 64 64">
+									<path
+										d="M63.92,23.25a1.5,1.5,0,0,0-1.39-1H40.3L33.39,1.08A1.5,1.5,0,0,0,32,0h0a1.49,1.49,0,0,0-1.39,1L23.7,22.22H1.47a1.49,1.49,0,0,0-1.39,1A1.39,1.39,0,0,0,.6,24.85l18,13L11.65,59a1.39,1.39,0,0,0,.51,1.61,1.47,1.47,0,0,0,.88.3,1.29,1.29,0,0,0,.88-0.3l18-13.08L50,60.68a1.55,1.55,0,0,0,1.76,0,1.39,1.39,0,0,0,.51-1.61l-6.9-21.14,18-13A1.45,1.45,0,0,0,63.92,23.25ZM42.75,36.18a1.39,1.39,0,0,0-.51,1.61l5.81,18L32.85,44.69a1.41,1.41,0,0,0-1.67,0L15.92,55.74l5.81-18a1.39,1.39,0,0,0-.51-1.61L6,25.12H24.7a1.49,1.49,0,0,0,1.39-1L32,6.17l5.81,18a1.5,1.5,0,0,0,1.39,1H58Z">
+									</path>
+								</svg>
+							</span>
+							<span class="icon__star--filled">
+								<svg version="1.1" xmlns="https://www.w3.org/2000/svg" width="64" height="60.9" viewBox="0 0 64 64">
+									<path
+										d="M63.92,23.25a1.5,1.5,0,0,0-1.39-1H40.3L33.39,1.08A1.5,1.5,0,0,0,32,0h0a1.49,1.49,0,0,0-1.39,1L23.7,22.22H1.47a1.49,1.49,0,0,0-1.39,1A1.39,1.39,0,0,0,.6,24.85l18,13L11.65,59a1.39,1.39,0,0,0,.51,1.61,1.47,1.47,0,0,0,.88.3,1.29,1.29,0,0,0,.88-0.3l18-13.08L50,60.68a1.55,1.55,0,0,0,1.76,0,1.39,1.39,0,0,0,.51-1.61l-6.9-21.14,18-13A1.45,1.45,0,0,0,63.92,23.25Z">
+									</path>
+								</svg>
+							</span>
+						</div>
+						<span class="wk-label">Add to Wishlist</span>
+					</button>
+				</div>
+			</a>
+		</div>
+		<div class="custom-module__content custom-module__content--section-1 custom-module__content--sm-col-12 custom-module__content--col-6">
+			<a class="product-card product-card--small product-card--has-hover-text" href="/products/curved-seam-tee-off-white">
+				<div class="product-card__thumbnail-container">
+					<div class="responsive-card-image__wrapper product-card__thumbnail product-card__thumbnail--primary">
+						<img class="responsive-card-image__image fade-in lazyautosizes ls-is-cached lazyloaded" alt="" src="//cdn.shopify.com/s/files/1/0480/1141/1607/products/TOTEME_ESPERA_OFF_WHITE_900x900.jpg?v=1617209732">
+					</div>
+				</div>
+				<div class="product-card__footer">
+					<span class="product-card__title">
+						Curved seam tee off-white
+					</span>
+					<div class="product-card__details">
+						<div class="product-price">
+							<span>
+								<span class="money">₩140,000 KRW</span>
+							</span>
+						</div>
+						<div class="product-card__sizes">
+							Available sizes:
+							XXS,
+							XS,
+							S,
+							M,
+							L,
+							XL
+						</div>
+					</div>
+				</div>
+				<div class="product-card__wishlist">
+					<button type="button" class="wk-button-collection wk-add-product" title="Add to Wishlist">
+						<div class="wk-icon">
+							<span class="icon__star">
+								<svg version="1.1" xmlns="https://www.w3.org/2000/svg" width="64" height="60.9" viewBox="0 0 64 64">
+									<path
+										d="M63.92,23.25a1.5,1.5,0,0,0-1.39-1H40.3L33.39,1.08A1.5,1.5,0,0,0,32,0h0a1.49,1.49,0,0,0-1.39,1L23.7,22.22H1.47a1.49,1.49,0,0,0-1.39,1A1.39,1.39,0,0,0,.6,24.85l18,13L11.65,59a1.39,1.39,0,0,0,.51,1.61,1.47,1.47,0,0,0,.88.3,1.29,1.29,0,0,0,.88-0.3l18-13.08L50,60.68a1.55,1.55,0,0,0,1.76,0,1.39,1.39,0,0,0,.51-1.61l-6.9-21.14,18-13A1.45,1.45,0,0,0,63.92,23.25ZM42.75,36.18a1.39,1.39,0,0,0-.51,1.61l5.81,18L32.85,44.69a1.41,1.41,0,0,0-1.67,0L15.92,55.74l5.81-18a1.39,1.39,0,0,0-.51-1.61L6,25.12H24.7a1.49,1.49,0,0,0,1.39-1L32,6.17l5.81,18a1.5,1.5,0,0,0,1.39,1H58Z">
+									</path>
+								</svg>
+							</span>
+							<span class="icon__star--filled">
+								<svg version="1.1" xmlns="https://www.w3.org/2000/svg" width="64" height="60.9" viewBox="0 0 64 64">
+									<path
+										d="M63.92,23.25a1.5,1.5,0,0,0-1.39-1H40.3L33.39,1.08A1.5,1.5,0,0,0,32,0h0a1.49,1.49,0,0,0-1.39,1L23.7,22.22H1.47a1.49,1.49,0,0,0-1.39,1A1.39,1.39,0,0,0,.6,24.85l18,13L11.65,59a1.39,1.39,0,0,0,.51,1.61,1.47,1.47,0,0,0,.88.3,1.29,1.29,0,0,0,.88-0.3l18-13.08L50,60.68a1.55,1.55,0,0,0,1.76,0,1.39,1.39,0,0,0,.51-1.61l-6.9-21.14,18-13A1.45,1.45,0,0,0,63.92,23.25Z">
+									</path>
+								</svg>
+							</span>
+						</div>
+						<span class="wk-label">Add to Wishlist</span>
+					</button>
+				</div>
+			</a>
+		</div>
+		<div class="custom-module__content custom-module__content--section-1 custom-module__content--sm-col-12 custom-module__content--col-6">
+			<a class="product-card product-card--small" href="/products/loose-fit-denim-distressed-light-blue">
+				<div class="product-card__badge-listing">
+					<div class="product-card__badge badge badge--secondary">
+						<span> Preorder</span>
+					</div>
+				</div>
+				<div class="product-card__thumbnail-container">
+					<div class="responsive-card-image__wrapper product-card__thumbnail product-card__thumbnail--primary">
+						<img class="responsive-card-image__image" alt="Loose fit denim distressed light blue" src="//cdn.shopify.com/s/files/1/0480/1141/1607/products/Toteme_PF21_DENIM_212-236-741_LOOSEFIT_DENIM_DISTRESSED_LIGHT_BLUE_900x900.jpg?v=1617284559">
+					</div>
+				</div>
+				<div class="product-card__footer">
+					<span class="product-card__title">
+						Loose fit denim distressed light blue
+					</span>
+					<div class="product-card__details">
+						<div class="product-price">
+							<span>
+								<span class="money">₩418,000 KRW</span>
+							</span>
+						</div>
+						<div class="product-card__sizes">
+							Available sizes:
+						</div>
+					</div>
+				</div>
+				<div class="product-card__wishlist">
+					<button type="button" class="wk-button-collection wk-add-product" title="Add to Wishlist">
+						<div class="wk-icon">
+							<span class="icon__star">
+								<svg version="1.1" xmlns="https://www.w3.org/2000/svg" width="64" height="60.9" viewBox="0 0 64 64">
+									<path
+										d="M63.92,23.25a1.5,1.5,0,0,0-1.39-1H40.3L33.39,1.08A1.5,1.5,0,0,0,32,0h0a1.49,1.49,0,0,0-1.39,1L23.7,22.22H1.47a1.49,1.49,0,0,0-1.39,1A1.39,1.39,0,0,0,.6,24.85l18,13L11.65,59a1.39,1.39,0,0,0,.51,1.61,1.47,1.47,0,0,0,.88.3,1.29,1.29,0,0,0,.88-0.3l18-13.08L50,60.68a1.55,1.55,0,0,0,1.76,0,1.39,1.39,0,0,0,.51-1.61l-6.9-21.14,18-13A1.45,1.45,0,0,0,63.92,23.25ZM42.75,36.18a1.39,1.39,0,0,0-.51,1.61l5.81,18L32.85,44.69a1.41,1.41,0,0,0-1.67,0L15.92,55.74l5.81-18a1.39,1.39,0,0,0-.51-1.61L6,25.12H24.7a1.49,1.49,0,0,0,1.39-1L32,6.17l5.81,18a1.5,1.5,0,0,0,1.39,1H58Z">
+									</path>
+								</svg>
+							</span>
+							<span class="icon__star--filled">
+								<svg version="1.1" xmlns="https://www.w3.org/2000/svg" width="64" height="60.9" viewBox="0 0 64 64">
+									<path
+										d="M63.92,23.25a1.5,1.5,0,0,0-1.39-1H40.3L33.39,1.08A1.5,1.5,0,0,0,32,0h0a1.49,1.49,0,0,0-1.39,1L23.7,22.22H1.47a1.49,1.49,0,0,0-1.39,1A1.39,1.39,0,0,0,.6,24.85l18,13L11.65,59a1.39,1.39,0,0,0,.51,1.61,1.47,1.47,0,0,0,.88.3,1.29,1.29,0,0,0,.88-0.3l18-13.08L50,60.68a1.55,1.55,0,0,0,1.76,0,1.39,1.39,0,0,0,.51-1.61l-6.9-21.14,18-13A1.45,1.45,0,0,0,63.92,23.25Z">
+									</path>
+								</svg>
+							</span>
+						</div>
+						<span class="wk-label">Add to Wishlist</span>
+					</button>
+				</div>
+			</a>
+		</div>
+	</div>
+</section>
+<!-- //4 column _ Product -->
          <!-- END content_for_index -->
       </main>
       <!-- Footer -->
@@ -1060,7 +1300,7 @@
                         <label class="newsletter-form__label caption visually-hidden" for="NewsletterForm-Email">
                         뉴스레터 구독
                         </label>
-                        <input id="NewsletterForm-Email" class="newsletter-form__input" autocapitalize="off" autocorrect="off" name="ue" placeholder="뉴스레터 구독" required="" type="email" value="" js-newsletter-form="input">
+                        <input id="NewsletterForm-Email" class="newsletter-form__input" autocapitalize="off" autocorrect="off" name="ue" placeholder="Join the list" required="" type="email" value="" js-newsletter-form="input">
                         <button id="Subscribe" class="newsletter-form__button" name="submit" type="submit">
                         <span>OK</span>
                         </button>
@@ -1210,7 +1450,7 @@
                                  <option value="KZ">Kazakhstan</option>
                                  <option value="KE">Kenya</option>
                                  <option value="KI">Kiribati</option>
-                                 <option value="KR">KR / KST</option>
+                                 <option value="KR">Korea, Republic of (South Korea)</option>
                                  <option value="XK">Kosovo</option>
                                  <option value="KW">Kuwait</option>
                                  <option value="KG">Kyrgyzstan</option>
@@ -1338,7 +1578,7 @@
                                  <option value="ZM">Zambia</option>
                                  <option value="ZW">Zimbabwe</option>
                               </select>
-                              <span class="custom-select__label text-small">KR / KST</span>
+                              <span class="custom-select__label text-small">Korea, Republic of (South Korea)</span>
                            </div>
                            <span class="select__current-title"></span>
                         </div>
