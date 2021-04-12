@@ -1,5 +1,18 @@
 <link rel="stylesheet" href="//cdn.shopify.com/app/services/48011411607/assets/113712234647/checkout_stylesheet/v2-ltr-2021-01-25-36b7b11b994ea40729291f1251a42871-20058" media="all">
 <link type="text/css" href="//cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/layout.checkout.css?v=981295653317797159" rel="stylesheet">
+<style>
+	.input-block, .input-block .button, .input-block .btn{font-size: 14px;}
+	.email_form>div:first-child{width: 60%;}
+	.email_form>div:last-child{width: 40%;}
+	.email_form .select-wrap{display: block; margin-left: 7px;}
+	.phone_form{display: table; width: 100%;}
+	.phone_form>div:last-child{width: 41px;}
+	.phone_form .btn_plus{display: block; font-size: 0; width: 34px; height: 34px; margin-left: 7px; border: 1px solid #222; border-radius: 50%;}
+	.phone_form .btn_plus svg{transform: rotate(45deg);}
+	.input_phone_plus{display: none; margin-top: 10px;}
+	.input_phone_plus.active{display: block;}
+	.phone_addr .button{margin-left: 7px; width: calc(100% - 7px);}
+</style>
 
 
 
@@ -8,9 +21,7 @@
 
 
 
-
-
-<div class="checkout js display-table">
+<div class="checkout js display-table container">
 	<a href="#main-header" class="skip-to-content">
 		Skip to content
 	</a>
@@ -103,493 +114,93 @@
 												</a> </p> -->
 										</div>
 									</div>
-									<div class="section__content">
-										<div class="fieldset">
-											<div class="field field--required">
-												<div class="field__input-wrapper">
-													<label class="field__label field__label--visible" for="checkout_name">이름</label>
-													<input placeholder="이름" class="field__input" size="30" type="text" name="checkout[name]" id="checkout_name">
+									<div class="section__content form-group">
+										<div class="input-block form-group__field">
+											<label class="field__label field__label--visible" for="checkout_name">이름</label>
+											<input placeholder="이름" class="field__input" size="30" type="text" name="checkout[name]" id="checkout_name">
+										</div>
+										<div class="input-block form-group__field">
+											<div class="input-table form-group__field email_form">
+												<div>
+													<input autocapitalize="off" autocomplete="off" autofocus="" placeholder="이메일" required="" spellcheck="false" type="email">
+												</div>
+												<div>
+													<div class="select-wrap">
+														<select class="toteme-select-style toteme-button-style no-animation">
+															<option value="">naver.com</option>
+															<option value="">gmail.com</option>
+															<option value="">직접입력</option>
+														</select>
+													</div>
 												</div>
 											</div>
 										</div>
-										<div class="fieldset-description">
-											<div class="section__content">
-												<div class="checkbox-wrapper">
-													<div class="checkbox_custom_box">
-														<input id="checkEmail" class="checkbox" value="1" type="checkbox">
-														<label for="checkEmail">Keep me up to date on news and exclusive offers</label>
-												 </div>
-												</div>
-											</div>
-										</div>
+										<div class="input-block form-group__footer">
+											<input class="step__footer__continue-btn btn" type="submit" value="본인인증">
+									 </div>
 									</div>
 								</div>
 								<div class="section section--shipping-address" data-shipping-address="">
 									<div class="section__header">
 										<h2 class="section__title" id="section-delivery-title">
-											Shipping address
+											배송지 정보
 										</h2>
-										<p class="section__info">
-											Please use characters A-Z.
-										</p>
 									</div>
-									<div class="section__content">
-										<div class="fieldset">
-											<div class="address-fields" data-address-fields="">
-												<input class="visually-hidden" autocomplete="shipping given-name" tabindex="-1"
-													aria-hidden="true" aria-label="no-label" data-autocomplete-field="first_name"
-													data-honeypot="true" aria-required="true" size="30" type="text"
-													name="checkout[shipping_address][first_name]">
-												<input class="visually-hidden" autocomplete="shipping family-name" tabindex="-1"
-													aria-hidden="true" aria-label="no-label" data-autocomplete-field="last_name"
-													data-honeypot="true" aria-required="true" size="30" type="text"
-													name="checkout[shipping_address][last_name]">
-												<input class="visually-hidden" autocomplete="shipping address-line1" tabindex="-1"
-													aria-hidden="true" aria-label="no-label" data-autocomplete-field="address1"
-													data-honeypot="true" aria-required="true" size="30" type="text"
-													name="checkout[shipping_address][address1]">
-												<input class="visually-hidden" autocomplete="shipping address-line2" tabindex="-1"
-													aria-hidden="true" aria-label="no-label" data-autocomplete-field="address2"
-													data-honeypot="true" size="30" type="text" name="checkout[shipping_address][address2]">
-												<input class="visually-hidden" autocomplete="shipping address-level2" tabindex="-1"
-													aria-hidden="true" aria-label="no-label" data-autocomplete-field="city" data-honeypot="true"
-													aria-required="true" size="30" type="text" name="checkout[shipping_address][city]">
-												<input class="visually-hidden" autocomplete="shipping country" tabindex="-1" aria-hidden="true"
-													aria-label="no-label" data-autocomplete-field="country" data-honeypot="true"
-													aria-required="true" size="30" type="text" name="checkout[shipping_address][country]">
-												<input class="visually-hidden" autocomplete="shipping address-level1" tabindex="-1"
-													aria-hidden="true" aria-label="no-label" data-autocomplete-field="province"
-													data-honeypot="true" aria-required="true" size="30" type="text"
-													name="checkout[shipping_address][province]">
-												<input class="visually-hidden" autocomplete="shipping postal-code" tabindex="-1"
-													aria-hidden="true" aria-label="no-label" data-autocomplete-field="zip" data-honeypot="true"
-													aria-required="true" size="30" type="text" name="checkout[shipping_address][zip]">
-												<input class="visually-hidden" autocomplete="shipping tel" tabindex="-1" aria-hidden="true"
-													aria-label="no-label" data-autocomplete-field="phone" data-honeypot="true"
-													aria-required="true" size="30" type="text" name="checkout[shipping_address][phone]">
-												<div class="field field--required field--half" data-address-field="last_name">
-													<div class="field__input-wrapper"><label class="field__label field__label--visible"
-															for="checkout_shipping_address_last_name">Last name</label>
-														<input placeholder="Last name" autocomplete="shipping family-name" autocorrect="off"
-															data-backup="last_name" class="field__input" aria-required="true" size="30" type="text"
-															name="checkout[shipping_address][last_name]" id="checkout_shipping_address_last_name">
-													</div>
+									<div class="section__content form-group">
+										<div class="input-block form-group__field">
+											<label class="field__label field__label--visible" for="checkout_name1">받는 사람</label>
+											<input placeholder="받는 사람" class="field__input" size="30" type="text" name="checkout[name1]" id="checkout_name1">
+										</div>
+										<div class="input-block form-group__field">
+											<div class="input-table phone_form">
+												<div>
+													<label class="field__label field__label--visible" for="checkout_phone">휴대폰번호(필수)</label>
+													<input placeholder="휴대폰번호(필수)" class="field__input" size="30" type="text" name="checkout[phone]" id="checkout_phone">
 												</div>
-												<div class="field field--required field--half" data-address-field="first_name">
-													<div class="field__input-wrapper"><label class="field__label field__label--visible"
-															for="checkout_shipping_address_first_name">First name</label>
-														<input placeholder="First name" autocomplete="shipping given-name" autocorrect="off"
-															data-backup="first_name" class="field__input" aria-required="true" size="30" type="text"
-															name="checkout[shipping_address][first_name]" id="checkout_shipping_address_first_name">
-													</div>
-												</div>
-												<div class="field field--required" data-address-field="zip"
-													data-autocomplete-field-container="true">
-													<div class="field__input-wrapper"><label class="field__label field__label--visible"
-															for="checkout_shipping_address_zip">Postal code</label>
-														<input placeholder="Postal code" autocomplete="shipping postal-code" autocorrect="off"
-															data-backup="zip" data-autocomplete-trigger="true" data-autocomplete-title="Suggestions"
-															data-autocomplete-single-item="1 item available"
-															data-autocomplete-multi-item="{{number}} items available"
-															data-autocomplete-item-selection="{{number}} of {{total}}"
-															data-autocomplete-close="Close suggestions" class="field__input field__input--zip"
-															aria-required="true" size="30" type="text" name="checkout[shipping_address][zip]"
-															id="checkout_shipping_address_zip" role="combobox" aria-autocomplete="list"
-															aria-haspopup="false">
-													</div>
-												</div>
-												<div class="field field--required field--show-floating-label" data-address-field="country"
-													data-autocomplete-field-container="true">
-													<div class="field__input-wrapper field__input-wrapper--select"><label
-															class="field__label field__label--visible"
-															for="checkout_shipping_address_country">Country/Region</label>
-														<select size="1" autocomplete="shipping country" data-backup="country"
-															class="field__input field__input--select" aria-required="true"
-															name="checkout[shipping_address][country]" id="checkout_shipping_address_country"
-															placeholder="Country/Region">
-															<option data-code="KR" value="South Korea">South Korea</option>
-															<option data-code="DE" value="Germany">Germany</option>
-															<option data-code="GB" value="United Kingdom">United Kingdom</option>
-															<option data-code="DK" value="Denmark">Denmark</option>
-															<option disabled="disabled" value="---">---</option>
-															<option data-code="AF" value="Afghanistan">Afghanistan</option>
-															<option data-code="AX" value="Aland Islands">Åland Islands</option>
-															<option data-code="AL" value="Albania">Albania</option>
-															<option data-code="DZ" value="Algeria">Algeria</option>
-															<option data-code="AD" value="Andorra">Andorra</option>
-															<option data-code="AO" value="Angola">Angola</option>
-															<option data-code="AI" value="Anguilla">Anguilla</option>
-															<option data-code="AG" value="Antigua And Barbuda">Antigua &amp; Barbuda</option>
-															<option data-code="AR" value="Argentina">Argentina</option>
-															<option data-code="AM" value="Armenia">Armenia</option>
-															<option data-code="AW" value="Aruba">Aruba</option>
-															<option data-code="AC" value="Ascension Island">Ascension Island</option>
-															<option data-code="AU" value="Australia">Australia</option>
-															<option data-code="AT" value="Austria">Austria</option>
-															<option data-code="AZ" value="Azerbaijan">Azerbaijan</option>
-															<option data-code="BS" value="Bahamas">Bahamas</option>
-															<option data-code="BH" value="Bahrain">Bahrain</option>
-															<option data-code="BD" value="Bangladesh">Bangladesh</option>
-															<option data-code="BB" value="Barbados">Barbados</option>
-															<option data-code="BY" value="Belarus">Belarus</option>
-															<option data-code="BE" value="Belgium">Belgium</option>
-															<option data-code="BZ" value="Belize">Belize</option>
-															<option data-code="BJ" value="Benin">Benin</option>
-															<option data-code="BM" value="Bermuda">Bermuda</option>
-															<option data-code="BT" value="Bhutan">Bhutan</option>
-															<option data-code="BO" value="Bolivia">Bolivia</option>
-															<option data-code="BA" value="Bosnia And Herzegovina">Bosnia &amp; Herzegovina</option>
-															<option data-code="BW" value="Botswana">Botswana</option>
-															<option data-code="BV" value="Bouvet Island">Bouvet Island</option>
-															<option data-code="BR" value="Brazil">Brazil</option>
-															<option data-code="IO" value="British Indian Ocean Territory">British Indian Ocean
-																Territory</option>
-															<option data-code="VG" value="Virgin Islands, British">British Virgin Islands</option>
-															<option data-code="BN" value="Brunei">Brunei</option>
-															<option data-code="BG" value="Bulgaria">Bulgaria</option>
-															<option data-code="BF" value="Burkina Faso">Burkina Faso</option>
-															<option data-code="BI" value="Burundi">Burundi</option>
-															<option data-code="KH" value="Cambodia">Cambodia</option>
-															<option data-code="CM" value="Republic of Cameroon">Cameroon</option>
-															<option data-code="CA" value="Canada">Canada</option>
-															<option data-code="CV" value="Cape Verde">Cape Verde</option>
-															<option data-code="BQ" value="Caribbean Netherlands">Caribbean Netherlands</option>
-															<option data-code="KY" value="Cayman Islands">Cayman Islands</option>
-															<option data-code="CF" value="Central African Republic">Central African Republic</option>
-															<option data-code="TD" value="Chad">Chad</option>
-															<option data-code="CL" value="Chile">Chile</option>
-															<option data-code="CN" value="China">China</option>
-															<option data-code="CX" value="Christmas Island">Christmas Island</option>
-															<option data-code="CC" value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
-															<option data-code="CO" value="Colombia">Colombia</option>
-															<option data-code="KM" value="Comoros">Comoros</option>
-															<option data-code="CG" value="Congo">Congo - Brazzaville</option>
-															<option data-code="CD" value="Congo, The Democratic Republic Of The">Congo - Kinshasa
-															</option>
-															<option data-code="CK" value="Cook Islands">Cook Islands</option>
-															<option data-code="CR" value="Costa Rica">Costa Rica</option>
-															<option data-code="HR" value="Croatia">Croatia</option>
-															<option data-code="CW" value="Curaçao">Curaçao</option>
-															<option data-code="CY" value="Cyprus">Cyprus</option>
-															<option data-code="CZ" value="Czech Republic">Czechia</option>
-															<option data-code="CI" value="Côte d'Ivoire">Côte d’Ivoire</option>
-															<option data-code="DK" value="Denmark">Denmark</option>
-															<option data-code="DJ" value="Djibouti">Djibouti</option>
-															<option data-code="DM" value="Dominica">Dominica</option>
-															<option data-code="DO" value="Dominican Republic">Dominican Republic</option>
-															<option data-code="EC" value="Ecuador">Ecuador</option>
-															<option data-code="EG" value="Egypt">Egypt</option>
-															<option data-code="SV" value="El Salvador">El Salvador</option>
-															<option data-code="GQ" value="Equatorial Guinea">Equatorial Guinea</option>
-															<option data-code="ER" value="Eritrea">Eritrea</option>
-															<option data-code="EE" value="Estonia">Estonia</option>
-															<option data-code="SZ" value="Eswatini">Eswatini</option>
-															<option data-code="ET" value="Ethiopia">Ethiopia</option>
-															<option data-code="FK" value="Falkland Islands (Malvinas)">Falkland Islands</option>
-															<option data-code="FO" value="Faroe Islands">Faroe Islands</option>
-															<option data-code="FJ" value="Fiji">Fiji</option>
-															<option data-code="FI" value="Finland">Finland</option>
-															<option data-code="FR" value="France">France</option>
-															<option data-code="GF" value="French Guiana">French Guiana</option>
-															<option data-code="PF" value="French Polynesia">French Polynesia</option>
-															<option data-code="TF" value="French Southern Territories">French Southern Territories
-															</option>
-															<option data-code="GA" value="Gabon">Gabon</option>
-															<option data-code="GM" value="Gambia">Gambia</option>
-															<option data-code="GE" value="Georgia">Georgia</option>
-															<option data-code="DE" value="Germany">Germany</option>
-															<option data-code="GH" value="Ghana">Ghana</option>
-															<option data-code="GI" value="Gibraltar">Gibraltar</option>
-															<option data-code="GR" value="Greece">Greece</option>
-															<option data-code="GL" value="Greenland">Greenland</option>
-															<option data-code="GD" value="Grenada">Grenada</option>
-															<option data-code="GP" value="Guadeloupe">Guadeloupe</option>
-															<option data-code="GT" value="Guatemala">Guatemala</option>
-															<option data-code="GG" value="Guernsey">Guernsey</option>
-															<option data-code="GN" value="Guinea">Guinea</option>
-															<option data-code="GW" value="Guinea Bissau">Guinea-Bissau</option>
-															<option data-code="GY" value="Guyana">Guyana</option>
-															<option data-code="HT" value="Haiti">Haiti</option>
-															<option data-code="HM" value="Heard Island And Mcdonald Islands">Heard &amp; McDonald
-																Islands</option>
-															<option data-code="HN" value="Honduras">Honduras</option>
-															<option data-code="HK" value="Hong Kong">Hong Kong SAR</option>
-															<option data-code="HU" value="Hungary">Hungary</option>
-															<option data-code="IS" value="Iceland">Iceland</option>
-															<option data-code="IN" value="India">India</option>
-															<option data-code="ID" value="Indonesia">Indonesia</option>
-															<option data-code="IQ" value="Iraq">Iraq</option>
-															<option data-code="IE" value="Ireland">Ireland</option>
-															<option data-code="IM" value="Isle Of Man">Isle of Man</option>
-															<option data-code="IL" value="Israel">Israel</option>
-															<option data-code="IT" value="Italy">Italy</option>
-															<option data-code="JM" value="Jamaica">Jamaica</option>
-															<option data-code="JP" value="Japan">Japan</option>
-															<option data-code="JE" value="Jersey">Jersey</option>
-															<option data-code="JO" value="Jordan">Jordan</option>
-															<option data-code="KZ" value="Kazakhstan">Kazakhstan</option>
-															<option data-code="KE" value="Kenya">Kenya</option>
-															<option data-code="KI" value="Kiribati">Kiribati</option>
-															<option data-code="XK" value="Kosovo">Kosovo</option>
-															<option data-code="KW" value="Kuwait">Kuwait</option>
-															<option data-code="KG" value="Kyrgyzstan">Kyrgyzstan</option>
-															<option data-code="LA" value="Lao People's Democratic Republic">Laos</option>
-															<option data-code="LV" value="Latvia">Latvia</option>
-															<option data-code="LB" value="Lebanon">Lebanon</option>
-															<option data-code="LS" value="Lesotho">Lesotho</option>
-															<option data-code="LR" value="Liberia">Liberia</option>
-															<option data-code="LY" value="Libyan Arab Jamahiriya">Libya</option>
-															<option data-code="LI" value="Liechtenstein">Liechtenstein</option>
-															<option data-code="LT" value="Lithuania">Lithuania</option>
-															<option data-code="LU" value="Luxembourg">Luxembourg</option>
-															<option data-code="MO" value="Macao">Macao SAR</option>
-															<option data-code="MG" value="Madagascar">Madagascar</option>
-															<option data-code="MW" value="Malawi">Malawi</option>
-															<option data-code="MY" value="Malaysia">Malaysia</option>
-															<option data-code="MV" value="Maldives">Maldives</option>
-															<option data-code="ML" value="Mali">Mali</option>
-															<option data-code="MT" value="Malta">Malta</option>
-															<option data-code="MQ" value="Martinique">Martinique</option>
-															<option data-code="MR" value="Mauritania">Mauritania</option>
-															<option data-code="MU" value="Mauritius">Mauritius</option>
-															<option data-code="YT" value="Mayotte">Mayotte</option>
-															<option data-code="MX" value="Mexico">Mexico</option>
-															<option data-code="MD" value="Moldova, Republic of">Moldova</option>
-															<option data-code="MC" value="Monaco">Monaco</option>
-															<option data-code="MN" value="Mongolia">Mongolia</option>
-															<option data-code="ME" value="Montenegro">Montenegro</option>
-															<option data-code="MS" value="Montserrat">Montserrat</option>
-															<option data-code="MA" value="Morocco">Morocco</option>
-															<option data-code="MZ" value="Mozambique">Mozambique</option>
-															<option data-code="MM" value="Myanmar">Myanmar (Burma)</option>
-															<option data-code="NA" value="Namibia">Namibia</option>
-															<option data-code="NR" value="Nauru">Nauru</option>
-															<option data-code="NP" value="Nepal">Nepal</option>
-															<option data-code="NL" value="Netherlands">Netherlands</option>
-															<option data-code="NC" value="New Caledonia">New Caledonia</option>
-															<option data-code="NZ" value="New Zealand">New Zealand</option>
-															<option data-code="NI" value="Nicaragua">Nicaragua</option>
-															<option data-code="NE" value="Niger">Niger</option>
-															<option data-code="NG" value="Nigeria">Nigeria</option>
-															<option data-code="NU" value="Niue">Niue</option>
-															<option data-code="NF" value="Norfolk Island">Norfolk Island</option>
-															<option data-code="MK" value="North Macedonia">North Macedonia</option>
-															<option data-code="NO" value="Norway">Norway</option>
-															<option data-code="OM" value="Oman">Oman</option>
-															<option data-code="PK" value="Pakistan">Pakistan</option>
-															<option data-code="PS" value="Palestinian Territory, Occupied">Palestinian Territories
-															</option>
-															<option data-code="PA" value="Panama">Panama</option>
-															<option data-code="PG" value="Papua New Guinea">Papua New Guinea</option>
-															<option data-code="PY" value="Paraguay">Paraguay</option>
-															<option data-code="PE" value="Peru">Peru</option>
-															<option data-code="PH" value="Philippines">Philippines</option>
-															<option data-code="PN" value="Pitcairn">Pitcairn Islands</option>
-															<option data-code="PL" value="Poland">Poland</option>
-															<option data-code="PT" value="Portugal">Portugal</option>
-															<option data-code="QA" value="Qatar">Qatar</option>
-															<option data-code="RE" value="Reunion">Réunion</option>
-															<option data-code="RO" value="Romania">Romania</option>
-															<option data-code="RU" value="Russia">Russia</option>
-															<option data-code="RW" value="Rwanda">Rwanda</option>
-															<option data-code="WS" value="Samoa">Samoa</option>
-															<option data-code="SM" value="San Marino">San Marino</option>
-															<option data-code="ST" value="Sao Tome And Principe">São Tomé &amp; Príncipe</option>
-															<option data-code="SA" value="Saudi Arabia">Saudi Arabia</option>
-															<option data-code="SN" value="Senegal">Senegal</option>
-															<option data-code="RS" value="Serbia">Serbia</option>
-															<option data-code="SC" value="Seychelles">Seychelles</option>
-															<option data-code="SL" value="Sierra Leone">Sierra Leone</option>
-															<option data-code="SG" value="Singapore">Singapore</option>
-															<option data-code="SX" value="Sint Maarten">Sint Maarten</option>
-															<option data-code="SK" value="Slovakia">Slovakia</option>
-															<option data-code="SI" value="Slovenia">Slovenia</option>
-															<option data-code="SB" value="Solomon Islands">Solomon Islands</option>
-															<option data-code="SO" value="Somalia">Somalia</option>
-															<option data-code="ZA" value="South Africa">South Africa</option>
-															<option data-code="GS" value="South Georgia And The South Sandwich Islands">South Georgia
-																&amp; South Sandwich Islands</option>
-															<option data-code="KR" value="South Korea">South Korea</option>
-															<option data-code="SS" value="South Sudan">South Sudan</option>
-															<option data-code="ES" value="Spain">Spain</option>
-															<option data-code="LK" value="Sri Lanka">Sri Lanka</option>
-															<option data-code="BL" value="Saint Barthélemy">St. Barthélemy</option>
-															<option data-code="SH" value="Saint Helena">St. Helena</option>
-															<option data-code="KN" value="Saint Kitts And Nevis">St. Kitts &amp; Nevis</option>
-															<option data-code="LC" value="Saint Lucia">St. Lucia</option>
-															<option data-code="MF" value="Saint Martin">St. Martin</option>
-															<option data-code="PM" value="Saint Pierre And Miquelon">St. Pierre &amp; Miquelon
-															</option>
-															<option data-code="VC" value="St. Vincent">St. Vincent &amp; Grenadines</option>
-															<option data-code="SD" value="Sudan">Sudan</option>
-															<option data-code="SR" value="Suriname">Suriname</option>
-															<option data-code="SJ" value="Svalbard And Jan Mayen">Svalbard &amp; Jan Mayen</option>
-															<option data-code="SE" value="Sweden">Sweden</option>
-															<option data-code="CH" value="Switzerland">Switzerland</option>
-															<option data-code="TW" value="Taiwan">Taiwan</option>
-															<option data-code="TJ" value="Tajikistan">Tajikistan</option>
-															<option data-code="TZ" value="Tanzania, United Republic Of">Tanzania</option>
-															<option data-code="TH" value="Thailand">Thailand</option>
-															<option data-code="TL" value="Timor Leste">Timor-Leste</option>
-															<option data-code="TG" value="Togo">Togo</option>
-															<option data-code="TK" value="Tokelau">Tokelau</option>
-															<option data-code="TO" value="Tonga">Tonga</option>
-															<option data-code="TT" value="Trinidad and Tobago">Trinidad &amp; Tobago</option>
-															<option data-code="TA" value="Tristan da Cunha">Tristan da Cunha</option>
-															<option data-code="TN" value="Tunisia">Tunisia</option>
-															<option data-code="TR" value="Turkey">Turkey</option>
-															<option data-code="TM" value="Turkmenistan">Turkmenistan</option>
-															<option data-code="TC" value="Turks and Caicos Islands">Turks &amp; Caicos Islands
-															</option>
-															<option data-code="TV" value="Tuvalu">Tuvalu</option>
-															<option data-code="UM" value="United States Minor Outlying Islands">U.S. Outlying Islands
-															</option>
-															<option data-code="UG" value="Uganda">Uganda</option>
-															<option data-code="UA" value="Ukraine">Ukraine</option>
-															<option data-code="AE" value="United Arab Emirates">United Arab Emirates</option>
-															<option data-code="GB" value="United Kingdom">United Kingdom</option>
-															<option data-code="US" value="United States">United States</option>
-															<option data-code="UY" value="Uruguay">Uruguay</option>
-															<option data-code="UZ" value="Uzbekistan">Uzbekistan</option>
-															<option data-code="VU" value="Vanuatu">Vanuatu</option>
-															<option data-code="VA" value="Holy See (Vatican City State)">Vatican City</option>
-															<option data-code="VE" value="Venezuela">Venezuela</option>
-															<option data-code="VN" value="Vietnam">Vietnam</option>
-															<option data-code="WF" value="Wallis And Futuna">Wallis &amp; Futuna</option>
-															<option data-code="EH" value="Western Sahara">Western Sahara</option>
-															<option data-code="YE" value="Yemen">Yemen</option>
-															<option data-code="ZM" value="Zambia">Zambia</option>
-															<option data-code="ZW" value="Zimbabwe">Zimbabwe</option>
-														</select>
-														<div class="field__caret">
-															<svg class="icon-svg icon-svg--color-adaptive-lighter icon-svg--size-10 field__caret-svg"
-																role="presentation" aria-hidden="true" focusable="false">
-																<use xlink:href="#caret-down"></use>
-															</svg>
-														</div>
-													</div>
-												</div>
-												<div class="field field--required field--show-floating-label field--half"
-													data-address-field="province" data-autocomplete-field-container="true">
-													<div class="field__input-wrapper field__input-wrapper--select"><label
-															class="field__label field__label--visible"
-															for="checkout_shipping_address_province">Province</label>
-														<select placeholder="Province" autocomplete="shipping address-level1" autocorrect="off"
-															data-backup="province" class="field__input field__input--select" aria-required="true"
-															name="checkout[shipping_address][province]" id="checkout_shipping_address_province">
-															<option disabled="">Province</option>
-															<option data-alternate-values="[&quot;Busan&quot;]" value="KR-26">Busan</option>
-															<option data-alternate-values="[&quot;Daegu&quot;]" value="KR-27">Daegu</option>
-															<option data-alternate-values="[&quot;Daejeon&quot;]" value="KR-30">Daejeon</option>
-															<option data-alternate-values="[&quot;Gangwon&quot;]" value="KR-42">Gangwon</option>
-															<option data-alternate-values="[&quot;Gwangju&quot;]" value="KR-29">Gwangju City</option>
-															<option data-alternate-values="[&quot;Gyeonggi&quot;]" value="KR-41">Gyeonggi</option>
-															<option data-alternate-values="[&quot;Incheon&quot;]" value="KR-28">Incheon</option>
-															<option data-alternate-values="[&quot;Jeju&quot;]" value="KR-49">Jeju</option>
-															<option data-alternate-values="[&quot;Chungbuk&quot;]" value="KR-43">North Chungcheong
-															</option>
-															<option data-alternate-values="[&quot;Gyeongbuk&quot;]" value="KR-47">North Gyeongsang
-															</option>
-															<option data-alternate-values="[&quot;Jeonbuk&quot;]" value="KR-45">North Jeolla</option>
-															<option data-alternate-values="[&quot;Sejong&quot;]" value="KR-50">Sejong</option>
-															<option data-alternate-values="[&quot;Seoul&quot;]" value="KR-11">Seoul</option>
-															<option data-alternate-values="[&quot;Chungnam&quot;]" value="KR-44">South Chungcheong
-															</option>
-															<option data-alternate-values="[&quot;Gyeongnam&quot;]" value="KR-48">South Gyeongsang
-															</option>
-															<option data-alternate-values="[&quot;Jeonnam&quot;]" value="KR-46">South Jeolla</option>
-															<option data-alternate-values="[&quot;Ulsan&quot;]" value="KR-31">Ulsan</option>
-														</select>
-														<div class="field__caret shown-if-js">
-															<svg class="icon-svg icon-svg--color-adaptive-lighter icon-svg--size-10 field__caret-svg"
-																role="presentation" aria-hidden="true" focusable="false">
-																<use xlink:href="#caret-down"></use>
-															</svg>
-														</div>
-													</div>
-												</div>
-												<div data-address-field="city" data-autocomplete-field-container="true"
-													class="field field--required field--half">
-													<div class="field__input-wrapper"><label class="field__label field__label--visible"
-															for="checkout_shipping_address_city">City</label>
-														<input placeholder="City" autocomplete="shipping address-level2" autocorrect="off"
-															data-backup="city" class="field__input" aria-required="true" size="30" type="text"
-															name="checkout[shipping_address][city]" id="checkout_shipping_address_city">
-													</div>
-												</div>
-												<div class="field field--optional cc_address_search">
-													<div class="field__input-wrapper"><label class="field__label" id="cc_label_shipping"
-															for="shipping_cc_search_input">Address Search</label><input
-															name="checkout[shipping_address][ccGlobalSearch]" id="shipping_cc_search_input"
-															class="field__input cc_search_input" size="30" type="text"
-															placeholder="Start with post/zip code or street" cc_applied="true"
-															autocomplete="new-crafty-global-search"></div>
-												</div>
-												<div data-address-field="address1" data-autocomplete-field-container="true"
-													class="field field--required">
-													<div class="field__input-wrapper"><label class="field__label field__label--visible"
-															for="checkout_shipping_address_address1">Address</label>
-														<input placeholder="Address" autocomplete="shipping address-line1" autocorrect="off"
-															aria-expanded="false" aria-required="true" data-backup="address1"
-															data-autocomplete-trigger="true" data-autocomplete-title="Suggestions"
-															data-autocomplete-single-item="1 item available"
-															data-autocomplete-multi-item="{{number}} items available"
-															data-autocomplete-item-selection="{{number}} of {{total}}"
-															data-autocomplete-close="Close suggestions" class="field__input" size="30" type="text"
-															name="checkout[shipping_address][address1]" id="checkout_shipping_address_address1">
-														<p class="field__additional-info visually-hidden" data-address-civic-number-warning="">
-															<svg class="icon-svg icon-svg--size-16 field__message__icon" aria-hidden="true"
-																focusable="false">
-																<use xlink:href="#info"></use>
-															</svg>
-															Add a house number if you have one
-														</p>
-													</div>
-												</div>
-												<div data-address-field="address2" data-autocomplete-field-container="true"
-													class="field field--optional">
-													<div class="field__input-wrapper"><label class="field__label field__label--visible"
-															for="checkout_shipping_address_address2">Apartment, suite, etc. (optional)</label>
-														<input placeholder="Apartment, suite, etc. (optional)" autocomplete="shipping address-line2"
-															autocorrect="off" data-backup="address2" class="field__input" size="30" type="text"
-															name="checkout[shipping_address][address2]" id="checkout_shipping_address_address2">
-													</div>
-												</div>
-												<div data-address-field="phone" class="field field--required">
-													<div class="field__input-wrapper field__input-wrapper--icon-right"><label
-															class="field__label field__label--visible"
-															for="checkout_shipping_address_phone">Phone</label>
-														<input placeholder="Phone" autocomplete="shipping tel" autocorrect="off" data-backup="phone"
-															data-phone-formatter="true"
-															data-phone-formatter-country-select="[name='checkout[shipping_address][country]']"
-															class="field__input field__input--numeric" aria-required="true" size="30" type="tel"
-															name="checkout[shipping_address][phone]" id="checkout_shipping_address_phone">
-														<div class="field__icon">
-															<div data-tooltip="true" id="phone_tooltip" class="tooltip-container"><button
-																	type="button" class="tooltip-control" data-tooltip-control="true"
-																	aria-label="More information" aria-describedby="tooltip-for-phone"
-																	aria-controls="tooltip-for-phone" aria-pressed="false" placeholder="Phone"><svg
-																		class="icon-svg icon-svg--color-adaptive-lighter icon-svg--size-16 icon-svg--block icon-svg--center"
-																		role="presentation" aria-hidden="true" focusable="false">
-																		<use xlink:href="#question"></use>
-																	</svg></button><span class="tooltip" role="tooltip" id="tooltip-for-phone">In case we
-																	need to contact you about your order</span></div>
-														</div>
-													</div>
+												<div>
+													<button type="button" class="btn_plus">추가
+														<svg class="icon icon--large" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(45deg);">
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+														</svg>
+													</button>
 												</div>
 											</div>
-											<div class="field field--show-floating-label">
-												<div class="checkbox-wrapper">
-													<div class="checkbox__input">
-														<input size="30" type="hidden" name="checkout[remember_me]">
-														<input name="checkout[remember_me]" type="hidden" value="0"><input class="input-checkbox"
-															data-backup="remember_me" type="checkbox" value="1" name="checkout[remember_me]"
-															id="checkout_remember_me">
-													</div>
-													<label class="checkbox__label" for="checkout_remember_me">
-														Save this information for next time
-													</label>
+											<div class="input_phone_plus">
+												<input placeholder="추가연락처" class="field__input" size="30" type="text" name="checkout[phone2]">
+											</div>
+										</div>
+										<div class="input-block form-group__field">
+											<div class="input-table phone_addr">
+												<div>
+													<label class="field__label field__label--visible" for="checkout_addr">배송지주소</label>
+													<input placeholder="배송지주소" class="field__input" size="30" type="text" name="checkout[addr]" id="checkout_addr">
 												</div>
+												<div>
+													<button type="button" class="button button--large no-animation">찾기</button>
+												</div>
+											</div>
+										</div>
+										<div class="input-block form-group__field">
+											<label class="field__label field__label--visible" for="checkout_addr2">주소</label>
+											<input placeholder="주소" class="field__input" size="30" type="text" name="checkout[addr2]" id="checkout_addr2" readonly>
+										</div>
+										<div class="input-block form-group__field">
+											<label class="field__label field__label--visible" for="checkout_addr3">상세주소</label>
+											<input placeholder="상세주소" class="field__input" size="30" type="text" name="checkout[addr3]" id="checkout_addr3">
+										</div>
+										<div class="input-block form-group__field">
+											<label class="field__label field__label--visible" for="checkout_memo">배송시 요청사항 선택</label>
+											<select id="checkout_memo" class="toteme-select-style toteme-button-style no-animation">
+												<option value="" disabled selected>배송시 요청사항 선택</option>
+												<option value="">배송 전 연락바랍니다.</option>
+												<option value="">택배함에 넣어주세요.</option>
+												<option value="">빠른 배송 부탁 드립니다.</option>
+												<option value="">부재 시 경비실에 맡겨주세요.</option>
+												<option value="">핸드폰으로 연락 부탁 드립니다.</option>
+												<option value="">직접입력</option>
+											</select>
+											<div class="input-block">
+												<input type="text" placeholder="배송 시 요청사항을 입력하세요" class="field__input direct_input" size="30">
 											</div>
 										</div>
 									</div>
@@ -597,16 +208,10 @@
 							</div>
 							<div class="step__footer" data-step-footer="">
 								<button name="button" type="submit" id="continue_button" class="step__footer__continue-btn btn"
-									aria-busy="false"><span class="btn__content" data-continue-button-content="true">Continue to
-										shipping</span><svg class="icon-svg icon-svg--size-18 btn__spinner icon-svg--spinner-button"
+									aria-busy="false"><span class="btn__content" data-continue-button-content="true">결제수단 선택</span><svg class="icon-svg icon-svg--size-18 btn__spinner icon-svg--spinner-button"
 										aria-hidden="true" focusable="false">
 										<use xlink:href="#spinner-button"></use>
 									</svg></button>
-								<a class="step__footer__previous-link" href="https://int.toteme-studio.com/"><svg focusable="false"
-										aria-hidden="true" class="icon-svg icon-svg--color-accent icon-svg--size-10 previous-link__icon"
-										role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10">
-										<path d="M8 1L7 0 3 4 2 5l1 1 4 4 1-1-4-4"></path>
-									</svg><span class="step__footer__previous-link-content">Return to shop</span></a>
 							</div>
 							<input type="hidden" name="checkout[client_details][browser_width]" value="1865"><input type="hidden"
 								name="checkout[client_details][browser_height]" value="1054"><input type="hidden"
@@ -1082,409 +687,6 @@
 			</aside>
 		</div>
 	</div>
-	<link href="https://monorail-edge.shopifysvc.com" rel="dns-prefetch">
-	<script>
-		window.ShopifyAnalytics = window.ShopifyAnalytics || {};
-		window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
-		window.ShopifyAnalytics.meta.currency = 'EUR';
-		var meta = {
-			"page": {
-				"path": "\/checkout\/contact_information",
-				"search": "?SoldByREACHonbehalfofTotemeStudio=",
-				"url": "https:\/\/int.toteme-studio.com\/48011411607\/checkouts\/61ac5bb23282dd4ef794bbb199d8a14a?SoldByREACHonbehalfofTotemeStudio"
-			},
-			"page_view_event_id": "ef1ae72111583c72652fd1c66aec3d2fc77c22bb5b427c90cb3a792f4fcf03d9",
-			"cart_event_id": "268603e8c5584548f9e056660dd8c77d3dc01d86a1ecc5d9543e58889b54d8b1"
-		};
-		for (var attr in meta) {
-			window.ShopifyAnalytics.meta[attr] = meta[attr];
-		}
-	</script>
-	<script>
-		window.ShopifyAnalytics.merchantGoogleAnalytics = function () {
-		};
-	</script>
-	<script class="analytics">
-		(function () {
-			var customDocumentWrite = function (content) {
-				var jquery = null;
-				if (window.jQuery) {
-					jquery = window.jQuery;
-				} else if (window.Checkout && window.Checkout.$) {
-					jquery = window.Checkout.$;
-				}
-				if (jquery) {
-					jquery('body').append(content);
-				}
-			};
-			var hasLoggedConversion = function (token) {
-				if (token) {
-					return document.cookie.indexOf('loggedConversion=' + token) !== -1;
-				}
-				return false;
-			}
-			var setCookieIfConversion = function (token) {
-				if (token) {
-					var twoMonthsFromNow = new Date(Date.now());
-					twoMonthsFromNow.setMonth(twoMonthsFromNow.getMonth() + 2);
-					document.cookie = 'loggedConversion=' + token + '; expires=' + twoMonthsFromNow;
-				}
-			}
-			var trekkie = window.ShopifyAnalytics.lib = window.trekkie = window.trekkie || [];
-			if (trekkie.integrations) {
-				return;
-			}
-			trekkie.methods = [
-				'identify',
-				'page',
-				'ready',
-				'track',
-				'trackForm',
-				'trackLink'
-			];
-			trekkie.factory = function (method) {
-				return function () {
-					var args = Array.prototype.slice.call(arguments);
-					args.unshift(method);
-					trekkie.push(args);
-					return trekkie;
-				};
-			};
-			for (var i = 0; i < trekkie.methods.length; i++) {
-				var key = trekkie.methods[i];
-				trekkie[key] = trekkie.factory(key);
-			}
-			trekkie.load = function (config) {
-				trekkie.config = config;
-				var first = document.getElementsByTagName('script')[0];
-				var script = document.createElement('script');
-				script.type = 'text/javascript';
-				script.onerror = function (e) {
-					var scriptFallback = document.createElement('script');
-					scriptFallback.type = 'text/javascript';
-					scriptFallback.onerror = function (error) {
-						var Monorail = {
-							produce: function produce(monorailDomain, schemaId, payload) {
-								var currentMs = new Date().getTime();
-								var event = {
-									schema_id: schemaId,
-									payload: payload,
-									metadata: {
-										event_created_at_ms: currentMs,
-										event_sent_at_ms: currentMs
-									}
-								};
-								return Monorail.sendRequest("https://" + monorailDomain + "/v1/produce", JSON.stringify(
-									event));
-							},
-							sendRequest: function sendRequest(endpointUrl, payload) {
-								// Try the sendBeacon API
-								if (window && window.navigator && typeof window.navigator.sendBeacon === 'function' &&
-									typeof window.Blob === 'function' && !Monorail.isIos12()) {
-									var blobData = new window.Blob([payload], {
-										type: 'text/plain'
-									});
-									if (window.navigator.sendBeacon(endpointUrl, blobData)) {
-										return true;
-									} // sendBeacon was not successful
-								} // XHR beacon   
-								var xhr = new XMLHttpRequest();
-								try {
-									xhr.open('POST', endpointUrl);
-									xhr.setRequestHeader('Content-Type', 'text/plain');
-									xhr.send(payload);
-								} catch (e) {
-									console.log(e);
-								}
-								return false;
-							},
-							isIos12: function isIos12() {
-								return window.navigator.userAgent.lastIndexOf('iPhone; CPU iPhone OS 12_') !== -1 || window
-									.navigator.userAgent.lastIndexOf('iPad; CPU OS 12_') !== -1;
-							}
-						};
-						Monorail.produce('monorail-edge.shopifysvc.com',
-							'trekkie_checkout_load_errors/1.1', {
-								shop_id: 48011411607,
-								theme_id: 113712234647,
-								app_name: "checkout",
-								context_url: window.location.href,
-								source_url: "https://cdn.shopify.com/s/trekkie.storefront.097377938d780a4e59522c70f1aa2ce870668052.min.js"
-							});
-					};
-					scriptFallback.async = true;
-					scriptFallback.src =
-						'https://cdn.shopify.com/s/trekkie.storefront.097377938d780a4e59522c70f1aa2ce870668052.min.js';
-					first.parentNode.insertBefore(scriptFallback, first);
-				};
-				script.async = true;
-				script.src = 'https://cdn.shopify.com/s/trekkie.storefront.097377938d780a4e59522c70f1aa2ce870668052.min.js';
-				first.parentNode.insertBefore(script, first);
-			};
-			trekkie.load({
-				"Trekkie": {
-					"appName": "checkout",
-					"development": false,
-					"defaultAttributes": {
-						"shopId": 48011411607,
-						"isMerchantRequest": null,
-						"themeId": 113712234647,
-						"themeCityHash": "1253576830718370079",
-						"contentLanguage": "en",
-						"currency": "EUR",
-						"checkoutToken": "61ac5bb23282dd4ef794bbb199d8a14a"
-					},
-					"isServerSideCookieWritingEnabled": true,
-					"isPixelGateEnabled": true
-				},
-				"Performance": {
-					"navigationTimingApiMeasurementsEnabled": true,
-					"navigationTimingApiMeasurementsSampleRate": 1
-				},
-				"Session Attribution": {}
-			});
-			var loaded = false;
-			trekkie.ready(function () {
-				if (loaded) return;
-				loaded = true;
-				window.ShopifyAnalytics.lib = window.trekkie;
-				var originalDocumentWrite = document.write;
-				document.write = customDocumentWrite;
-				try {
-					window.ShopifyAnalytics.merchantGoogleAnalytics.call(this);
-				} catch (error) {};
-				document.write = originalDocumentWrite;
-				(function () {
-					if (window.BOOMR && (window.BOOMR.version || window.BOOMR.snippetExecuted)) {
-						return;
-					}
-					window.BOOMR = window.BOOMR || {};
-					window.BOOMR.snippetStart = new Date().getTime();
-					window.BOOMR.snippetExecuted = true;
-					window.BOOMR.snippetVersion = 12;
-					window.BOOMR.application = "core";
-					window.BOOMR.shopId = 48011411607;
-					window.BOOMR.themeId = 113712234647;
-					window.BOOMR.themeName = "Frame";
-					window.BOOMR.themeVersion = "3.0.0";
-					window.BOOMR.url =
-						"https://cdn.shopify.com/shopifycloud/boomerang/shopify-boomerang-1.0.0.min.js";
-					var where = document.currentScript || document.getElementsByTagName("script")[0];
-					var parentNode = where.parentNode;
-					var promoted = false;
-					var LOADER_TIMEOUT = 3000;
-					function promote() {
-						if (promoted) {
-							return;
-						}
-						var script = document.createElement("script");
-						script.id = "boomr-scr-as";
-						script.src = window.BOOMR.url;
-						script.async = true;
-						parentNode.appendChild(script);
-						promoted = true;
-					}
-					function iframeLoader(wasFallback) {
-						promoted = true;
-						var dom, bootstrap, iframe, iframeStyle;
-						var doc = document;
-						var win = window;
-						window.BOOMR.snippetMethod = wasFallback ? "if" : "i";
-						bootstrap = function (parent, scriptId) {
-							var script = doc.createElement("script");
-							script.id = scriptId || "boomr-if-as";
-							script.src = window.BOOMR.url;
-							BOOMR_lstart = new Date().getTime();
-							parent = parent || doc.body;
-							parent.appendChild(script);
-						};
-						if (!window.addEventListener && window.attachEvent && navigator.userAgent.match(/MSIE [67]./)) {
-							window.BOOMR.snippetMethod = "s";
-							bootstrap(parentNode, "boomr-async");
-							return;
-						}
-						iframe = document.createElement("IFRAME");
-						iframe.src = "about:blank";
-						iframe.title = "";
-						iframe.role = "presentation";
-						iframe.loading = "eager";
-						iframeStyle = (iframe.frameElement || iframe).style;
-						iframeStyle.width = 0;
-						iframeStyle.height = 0;
-						iframeStyle.border = 0;
-						iframeStyle.display = "none";
-						parentNode.appendChild(iframe);
-						try {
-							win = iframe.contentWindow;
-							doc = win.document.open();
-						} catch (e) {
-							dom = document.domain;
-							iframe.src = "javascript:var d=document.open();d.domain='" + dom + "';void(0);";
-							win = iframe.contentWindow;
-							doc = win.document.open();
-						}
-						if (dom) {
-							doc._boomrl = function () {
-								this.domain = dom;
-								bootstrap();
-							};
-							doc.write("<body onload='document._boomrl();'>");
-						} else {
-							win._boomrl = function () {
-								bootstrap();
-							};
-							if (win.addEventListener) {
-								win.addEventListener("load", win._boomrl, false);
-							} else if (win.attachEvent) {
-								win.attachEvent("onload", win._boomrl);
-							}
-						}
-						doc.close();
-					}
-					var link = document.createElement("link");
-					if (link.relList &&
-						typeof link.relList.supports === "function" &&
-						link.relList.supports("preload") &&
-						("as" in link)) {
-						window.BOOMR.snippetMethod = "p";
-						link.href = window.BOOMR.url;
-						link.rel = "preload";
-						link.as = "script";
-						link.addEventListener("load", promote);
-						link.addEventListener("error", function () {
-							iframeLoader(true);
-						});
-						setTimeout(function () {
-							if (!promoted) {
-								iframeLoader(true);
-							}
-						}, LOADER_TIMEOUT);
-						BOOMR_lstart = new Date().getTime();
-						parentNode.appendChild(link);
-					} else {
-						iframeLoader(false);
-					}
-					function boomerangSaveLoadTime(e) {
-						window.BOOMR_onload = (e && e.timeStamp) || new Date().getTime();
-					}
-					if (window.addEventListener) {
-						window.addEventListener("load", boomerangSaveLoadTime, false);
-					} else if (window.attachEvent) {
-						window.attachEvent("onload", boomerangSaveLoadTime);
-					}
-					if (document.addEventListener) {
-						document.addEventListener("onBoomerangLoaded", function (e) {
-							e.detail.BOOMR.init({
-								producer_url: "https://monorail-edge.shopifysvc.com/v1/produce",
-								ResourceTiming: {
-									enabled: true,
-									trackedResourceTypes: ["script", "img", "css"]
-								},
-							});
-							e.detail.BOOMR.t_end = new Date().getTime();
-						});
-					} else if (document.attachEvent) {
-						document.attachEvent("onpropertychange", function (e) {
-							if (!e) e = event;
-							if (e.propertyName === "onBoomerangLoaded") {
-								e.detail.BOOMR.init({
-									producer_url: "https://monorail-edge.shopifysvc.com/v1/produce",
-									ResourceTiming: {
-										enabled: true,
-										trackedResourceTypes: ["script", "img", "css"]
-									},
-								});
-								e.detail.BOOMR.t_end = new Date().getTime();
-							}
-						});
-					}
-				})();
-				window.ShopifyAnalytics.lib.page(
-					"Checkout - Contact information", {
-						"path": "\/checkout\/contact_information",
-						"search": "?SoldByREACHonbehalfofTotemeStudio=",
-						"url": "https:\/\/int.toteme-studio.com\/48011411607\/checkouts\/61ac5bb23282dd4ef794bbb199d8a14a?SoldByREACHonbehalfofTotemeStudio"
-					},
-					"ef1ae72111583c72652fd1c66aec3d2fc77c22bb5b427c90cb3a792f4fcf03d9"
-				);
-				var match = window.location.pathname.match(/checkouts\/(.+)\/(thank_you|post_purchase)/)
-				var token = match ? match[1] : undefined;
-				if (!hasLoggedConversion(token)) {
-					setCookieIfConversion(token);
-				}
-			});
-			var eventsListenerScript = document.createElement('script');
-			eventsListenerScript.async = true;
-			eventsListenerScript.src =
-				"//cdn.shopify.com/shopifycloud/shopify/assets/shop_events_listener-619dded2976e732c6d885de654a8af094bc28e3148dfe9ab8b320781402596b6.js";
-			document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);
-		})();
-	</script>
-	<script>
-		if (typeof ometria == 'undefined') window.ometria = {};
-		ometria.raw_data = {
-			template: null,
-			cart_total: null,
-			cart_count: null,
-			cart: [],
-			product_id: null,
-			search_count: null,
-			search_terms: null,
-			collection_id: null,
-			collection_count: null,
-			current_page: null,
-			shop_currency: "EUR",
-			customer_email: null,
-			namespace: "ROW:"
-		};
-		(function () {
-			var url = window.location.protocol + "//cdn.ometria.com/tags/b064aa430551cf03.js";
-			setTimeout(function () {
-				var sc = document.createElement('script');
-				sc.src = url;
-				sc.setAttribute('async', 'true');
-				document.getElementsByTagName("head")[0].appendChild(sc);
-			}, 15);
-		})();
-	</script>
-	<script type="text/javascript">
-		//CONFIGURATION
-		var c2a_config = {
-			active: true,
-			showLogo: false,
-			access_token: '74d58-05458-3b902-06393',
-			position: 0, // 0 - new input field for search, 1 - uses address line 1 for search
-			hideFields: 0, // 0 - do not hide address fields, 1 - hide address fields
-			countrySelector: true,
-			enabledCountries: [],
-			design: {
-				mode: 1,
-				ambient: 'light',
-				accent: 'grey'
-			},
-			texts: {
-				country_button: 'Select Country',
-				country_placeholder: 'Type here to search for a country',
-				default_placeholder: 'Start with post/zip code or street',
-				generic_error: 'An error occured. Please enter your address manually',
-				no_results: 'No results found',
-				search_label: 'Address Search'
-			},
-			_enable_phone_validation: false // Set to true if you want to use our phone validation service
-		};
-	</script>
-	<script src="https://cc-cdn.com/generic/scripts/v1/cc_c2a.min.js" type="text/javascript"></script>
-	<script src="https://cc-cdn.com/shopify/scripts/v1/cc_c2a_shopify.js" type="text/javascript"></script>
-	<script type="text/javascript" id="">
-		! function (b, e, f, g, a, c, d) {
-			b.fbq || (a = b.fbq = function () {
-					a.callMethod ? a.callMethod.apply(a, arguments) : a.queue.push(arguments)
-				}, b._fbq || (b._fbq = a), a.push = a, a.loaded = !0, a.version = "2.0", a.queue = [], c = e.createElement(f), c
-				.async = !0, c.src = g, d = e.getElementsByTagName(f)[0], d.parentNode.insertBefore(c, d))
-		}(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
-		fbq("init", "2091797967808820");
-		fbq("track", "PageView");
-	</script>
 	<noscript><img height="1" width="1" style="display:none"
 			src="https://www.facebook.com/tr?id=2091797967808820&amp;ev=PageView&amp;noscript=1"></noscript>
 	<meta name="p:domain_verify" content="fba6ae1f78d38ce0d47926144d58519b">
@@ -1505,64 +707,12 @@
 			<div class="infoBar"></div>
 		</div>
 	</div>
-	<script>
-		GIP.getLocalizeData().then(function (data) {
-			if (data && data.Currency && data.Currency !== "EUR") {
-				document.getElementsByClassName('dynamic-checkout')[0].style.display = 'none';
-				document.getElementsByClassName('alternative-payment-separator')[0].style.display = 'none';
-			}
-		});
-	</script>
-	<iframe src="/48011411607/digital_wallets/dialog" scrolling="no" tabindex="-1" aria-hidden="true"
-		style="position: fixed; top: 0px; left: 0px; z-index: 99999; height: 0px; width: 0px; border: 0px;"></iframe><iframe
-		class="visually-hidden" tabindex="-1" id="autocomplete-service-iframe"
-		src="https://checkout.shopify.com/48011411607/sandbox/autocomplete_service?locale=en" aria-hidden="true"></iframe>
-	<script type="text/javascript" id="">
-		fbq("track", "AddToCart", {
-			content_ids: "6067387007127",
-			content_name: "Centered monogram silk scarf creme",
-			content_type: "product_group",
-			value: "200.0",
-			content_category: "",
-			currency: "EUR"
-		}, {
-			eventID: "2ebe3dfa-27d9-4184-acc0-38ffd8a7004f"
-		});
-	</script>
-	<script type="text/javascript" id="">
-		fbq("track", "InitiateCheckout", {
-			contents: google_tag_manager["GTM-MZ5SKHP"].macro(10),
-			content_type: "product_group",
-			currency: "EUR",
-			value: "480.0"
-		}, {
-			eventID: "e10af5d8-2493-4380-837a-6ac108ce38e6"
-		});
-	</script>
-	<script type="text/javascript" id="" src="//wcs.naver.net/wcslog.js"></script>
-	<script type="text/javascript" id="">
-		(function (a, c, e, f, d, b) {
-			a.hj = a.hj || function () {
-				(a.hj.q = a.hj.q || []).push(arguments)
-			};
-			a._hjSettings = {
-				hjid: 755761,
-				hjsv: 6
-			};
-			d = c.getElementsByTagName("head")[0];
-			b = c.createElement("script");
-			b.async = 1;
-			b.src = e + a._hjSettings.hjid + f + a._hjSettings.hjsv;
-			d.appendChild(b)
-		})(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv\x3d");
-	</script>
-	<script type="text/javascript" id="">
-		if (!wcs_add) var wcs_add = {};
-		wcs_add.wa = "s_682d968bebd";
-		if (!_nasa) var _nasa = {};
-		wcs.inflow();
-		wcs_do(_nasa);
-	</script><iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame"
-		src="https://vars.hotjar.com/box-5e3cec51ed8e99df6977c199d27812d7.html"
-		style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe>
 </div>
+
+
+<script src="https://image.thehyundai.com/pc/js/jquery-1.11.3.min.js"></script>
+<script>
+	$('.phone_form .btn_plus').click(function(){
+		$(this).parents('.phone_form').siblings('.input_phone_plus').toggleClass("active");
+	});
+</script>
