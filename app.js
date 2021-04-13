@@ -43,6 +43,7 @@ const pageData = [
   {"type":"product","title":"1-1. 프리오더","url" : "/03_product/11", "pageurl" : "03_product/01_1_product_detail_preorder.ejs"},
   {"type":"product","title":"2. 상품리스트","url" : "/03_product/2", "pageurl" : "03_product/02_product_list.ejs"},
   {"type":"product","title":"2-1. 상품리스트 컴포넌트","url" : "/03_product/21", "pageurl" : "03_product/02_1_product_list_component.ejs"},
+  {"type":"page","title":"4. 일반페이지","url" : "/04_page/41", "pageurl" : "04_page_question/01_page1.ejs"},
   {"type":"contents","title":"1. About","url" : "/05_contents/1", "pageurl" : "05_contents/01_0_about.ejs"},
   {"type":"contents","title":"1-1. Store","url" : "/05_contents/11", "pageurl" : "05_contents/01_1_store.ejs"},
   {"type":"contents","title":"1-2. Sustainability","url" : "/05_contents/12", "pageurl" : "05_contents/01_2_sustainability.ejs"},
