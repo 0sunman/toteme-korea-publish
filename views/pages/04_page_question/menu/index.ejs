@@ -1,0 +1,73 @@
+<div class="template-account__navlist ">
+    <div class="template-account__navlist--content">
+       <div class="navlist__dropdown-wrapper">
+          <div class="custom-select__wrapper">
+             <select class="navlist__dropdown custom-select__select m-font-14" style="background-image: url(//cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/icon-small-arrow-down.svg?v=9521334029086756349);">
+                <option value="/account/login"> <!-- selected=""-->
+                    로그인
+                </option>
+                <option value="/account/register">
+                    회원가입
+                </option>
+                <option value="/account/login#reactivate">
+                    아이디 찾기
+                </option>
+                <option value="/account/login#recover">
+                    비밀번호 찾기
+                </option>
+                <option value="/account/login#recover">
+                    비회원 주문조회
+                </option>
+             </select>
+             <span class="main-title custom-select__label text-small">로그인</span>
+          </div>
+       </div>
+       <ul class="navlist" js-account-nav="navlist">
+          <li class="navlist__item ">
+             <a class="navlist__link text-link" href="/account/login">로그인</a>
+          </li>
+          <li class="navlist__item navlist__item--margin">
+             <a class="navlist__link text-link" href="/account/register">회원가입</a>
+          </li>
+          <li class="navlist__item">
+             <a class="navlist__link text-link" href="/account/login#reactivate" js-password-form="reactivateLink">아이디 찾기</a>
+          </li>
+          <li class="navlist__item navlist__item--margin">
+             <a class="navlist__link text-link" href="/account/login#recover" js-password-form="forgotPasswordLink">비밀번호 찾기</a>
+          </li>
+          <li class="navlist__item">
+             <a class="navlist__link text-link" href="/account/login#nomember" js-password-form="reactivateLink">비회원 주문조회</a>
+          </li>
+       </ul>
+    </div>
+ </div>
+
+ <% if(state == 1){%>
+   <script>
+      setTimeout(function(){
+         $(".main-title.custom-select__label").text("로그인");
+         $("a[href='/account/login']").addClass("is-active");
+      },100)
+      </script>
+   <%}else if(state == 11){%>
+   <script>
+      setTimeout(function(){
+         $(".main-title.custom-select__label").text("아이디 찾기");
+         $("a[href='/account/login#reactivate']").addClass("is-active");
+      },100)
+      </script>
+   <%}else if(state == 12){%>
+   <script>
+      setTimeout(function(){
+         $(".main-title.custom-select__label").text("비회원 주문조회");
+         $("a[href='/account/login#nomember']").addClass("is-active");
+      },100)
+      </script>
+   <%}else if(state == 2){%>
+   <script>
+      setTimeout(function(){
+         $(".main-title.custom-select__label").text("회원가입");
+         $("a[href='/account/register']").addClass("is-active");
+      },100)
+      </script>
+   <%}%>
