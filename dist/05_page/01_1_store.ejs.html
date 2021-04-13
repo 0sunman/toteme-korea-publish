@@ -949,107 +949,101 @@
       <main id="MainContent" class="main-content critical-clear">
          <!-- BEGIN content_for_index -->
          <!--  include ("./pages/00_main/index.ejs") BEGIN content_for_index -->
-         <style>
-.publishlist{padding:50px}
-</style>
-       
-    <div class='publishlist'>   
-       <h2>메인</h2>
-        <ul id='main'>
-            
-            <li>
-                <a href='https://0sunman.github.io/toteme-korea-publish/dist/00_main/index.ejs.html'>메인</a>
-            </li>
-            
-            <li>
-                <a href='https://0sunman.github.io/toteme-korea-publish/dist/00_main/inputguide.ejs.html'>인풋 가이드</a>
-            </li>
-             
-        </ul>
-
-        <h2>마이페이지</h2>
-        <ul id='mypage'>
-             
-        </ul>
-
-        <h2>회원가입</h2>
-        <ul id='join'>
-            
-            <li>
-                <a href='https://0sunman.github.io/toteme-korea-publish/dist/02_login_join/01_0_login_page.ejs.html'>1. 로그인페이지</a>
-            </li>
-            
-            <li>
-                <a href='https://0sunman.github.io/toteme-korea-publish/dist/02_login_join/01_1_id_check.ejs.html'>1-1. 아이디찾기</a>
-            </li>
-            
-            <li>
-                <a href='https://0sunman.github.io/toteme-korea-publish/dist/02_login_join/01_2_no_member_login.ejs.html'>1-2. 비회원주문페이지</a>
-            </li>
-            
-            <li>
-                <a href='https://0sunman.github.io/toteme-korea-publish/dist/02_login_join/02_join_page.ejs.html'>2. 회원가입페이지</a>
-            </li>
-            
-            <li>
-                <a href='https://0sunman.github.io/toteme-korea-publish/dist/02_login_join/03_select_email.ejs.html'>3. 이메일페이지 (공사중)</a>
-            </li>
-             
-        </ul>
-
-        <h2>상품</h2>
-        <ul id='product'>
-            
-            <li>
-                <a href='https://0sunman.github.io/toteme-korea-publish/dist/03_product/01_product_detail.ejs.html'>1. 상품상세</a>
-            </li>
-            
-            <li>
-                <a href='https://0sunman.github.io/toteme-korea-publish/dist/03_product/01_1_product_detail_preorder.ejs.html'>1-1. 프리오더</a>
-            </li>
-            
-            <li>
-                <a href='https://0sunman.github.io/toteme-korea-publish/dist/03_product/02_product_list.ejs.html'>2. 상품리스트</a>
-            </li>
-            
-            <li>
-                <a href='https://0sunman.github.io/toteme-korea-publish/dist/03_product/02_1_product_list_component.ejs.html'>2-1. 상품리스트 컴포넌트</a>
-            </li>
-             
-        </ul>
-
-
-        <h2>주문</h2>
-        <ul id='order'>
-             
-        </ul>
-
-        <h2>일반</h2>
-        <ul id='page'>
-            
-            <li>
-                <a href='https://0sunman.github.io/toteme-korea-publish/dist/04_page_question/01_page1.ejs.html'>4. 일반페이지</a>
-            </li>
-            
-            <li>
-                <a href='https://0sunman.github.io/toteme-korea-publish/dist/05_page/01_0_about.ejs.html'>1. About</a>
-            </li>
-            
-            <li>
-                <a href='https://0sunman.github.io/toteme-korea-publish/dist/05_page/01_1_store.ejs.html'>1-1. Store</a>
-            </li>
-            
-            <li>
-                <a href='https://0sunman.github.io/toteme-korea-publish/dist/05_page/01_2_sustainability.ejs.html'>1-2. Sustainability</a>
-            </li>
-            
-            <li>
-                <a href='https://0sunman.github.io/toteme-korea-publish/dist/05_page/01_3_careers.ejs.html'>1-3. Careers</a>
-            </li>
-             
-        </ul>
-    </div>
-
+         <main id="MainContent" class="main-content critical-clear">
+	<section class="custom-module custom-module--page-header custom-module--border-inner-dark custom-module--border-outer-dark">
+		<div class="custom-module__header">
+			<h1 class="custom-module__title text-small">
+				Stores
+			</h1>
+		</div>
+	</section>
+	<section class="custom-module custom-module--text-and-navigation custom-module--border-inner-dark custom-module--border-outer-dark custom-module--no-crop">
+		<div class="custom-module__container">
+			<div class="custom-module__text-column custom-module__text-column--nav">
+				<ul class="custom-module__navlist navlist">
+					<li class="navlist__item">
+						<a class="navlist__link text-link" href="/pages/our-story">
+							About
+						</a>
+					</li>
+					<li class="navlist__item">
+						<a class="navlist__link text-link text-link--static" href="/pages/stores">
+							Stores
+						</a>
+					</li>
+					<li class="navlist__item">
+						<a class="navlist__link text-link" href="/pages/sustainability">
+							Sustainability
+						</a>
+					</li>
+					<li class="navlist__item">
+						<a class="navlist__link text-link" href="/pages/careers">
+							Careers
+						</a>
+					</li>
+				</ul>
+				<div class="custom-module__nav-dropdown select__container">
+					<div class="custom-select__wrapper">
+						<select class="custom-module__nav-select select--center custom-select__select"
+							style="background-image: url(//cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/icon-small-arrow-down.svg?v=9521334029086756349);">
+							<option value="/pages/our-story">
+								About
+							</option>
+							<option value="/pages/stores" selected="selected">
+								Stores
+							</option>
+							<option value="/pages/sustainability">
+								Sustainability
+							</option>
+							<option value="/pages/careers">
+								Careers
+							</option>
+						</select><span class="custom-select__label text-small">
+							Stores
+						</span></div>
+					<span class="select__current-title"></span>
+				</div>
+			</div>
+			<div class="custom-module__text-column custom-module__text-column--content rte">
+				<p>스톡홀름 중심부에 위치한 Bibliotecsgatan 5번은  Totême 여성의 세계를 실현한 곳이니다. 어퍼 이스트 타운하우스에서 영감을 얻은 이 공간은 6년 전  Totême이 태어난 뉴욕을 기리는 공간입니다. 1층에서는 로비나 리셉션을 만나보실 수 있으며, 1층 홈은 도서관, 거실, 침실, 워크인 옷장 등 네 부분으로 나뉩니다.</p>
+				<div style="text-align: center;">
+					<img src="https://cdn.shopify.com/s/files/1/0480/1141/1607/files/BG5_room_240x240.jpg?v=1611134746"
+						alt="Totême Biblioteksgatan no.5 store"><br>
+					<meta charset="utf-8">
+					<span>인테리어 by Halleroed</span><br><br>
+				</div>
+				<p>Bibliotecsgatan 5번은 유명한 건축가 Halleroed와 긴밀하게 협력하여 개발되었습니다.</p>
+				<hr class="wp-block-separator">
+				<h3>운영 시간</h3>
+				<p>Monday – Friday: 11am – 6pm<br>Saturday: 11am – 5pm<br>Sunday: 12pm – 4pm<br><br>Bibliotecksgatan 5가는 "안전한 쇼핑"을 위해 12월부터는 월요일부터 토요일 오전 10시부터 11시까지문을 열 예정입니다. 이 시간 동안 매장 내 고객 수를 5명으로 제한하고, 전원 안면 마스크를 착용하고 손세정제를 바른 뒤 온도계로 도어에서 체온 점검을 받도록 할 예정입니다.
+					<!-- <br><br><a href="https://int.toteme-studio.com/account?view=book" title="Book a store appointment | Totême">Book a
+						store appointment</a> -->
+					</p>
+				<!-- <div class="wp-block-button"></div>
+				<hr class="wp-block-separator">
+				<h3>Address</h3>
+				<p>Biblioteksgatan 5<br>111 44 Stockholm<br>Sweden</p>
+				<div class="wp-block-button"><a class="wp-block-button__link" href="https://www.google.se/maps/place/Tot%C3%AAme/@59.3346233,18.0704652,17z/data=!3m1!4b1!4m5!3m4!1s0x465f9df0701b0e3f:0xd2d79ed18c314579!8m2!3d59.3346233!4d18.0726539">Find us</a></div> -->
+			</div>
+		</div>
+	</section>
+	<section class="custom-module custom-module--1-bkgd-1-section custom-module--has-background custom-module--text-color-dark custom-module--border-inner-dark custom-module--border-outer-dark">
+		<div class="custom-module__background custom-module__background--is-full">
+			<div class="responsive-image__wrapper custom-module__background-image-wrapper" data-image-id="466981978263">
+				<span style="display: block; padding-top:75.0%;" aria-hidden="true"></span>
+				<img
+					class="responsive-image__image custom-module__background-image" alt=""
+					src="//cdn.shopify.com/s/files/1/0480/1141/1607/files/Toteme_Stockholm_Biblioteksgatan_02_2048x2048.jpg?v=1611701574">
+			</div>
+		</div>
+		<div class="custom-module__container">
+			<div class="custom-module__content custom-module__content--section-1 custom-module__content--col-24">
+				<div class="custom-module__content-wrapper">
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
          <!-- END content_for_index -->
       </main>
       <!-- Footer -->
