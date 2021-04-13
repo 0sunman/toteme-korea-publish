@@ -53,4 +53,15 @@
             </li>
             <%}}) %> 
         </ul>
+
+        
+        <h2>페이지</h2>
+        <ul id='product'>
+            <% pageList.forEach(function(data){ 
+                if(data.type == "page"){ %>
+            <li>
+                <a href='https://0sunman.github.io/toteme-korea-publish/dist/<%= data.pageurl %>.html'><%= data.title %></a>
+            </li>
+            <%}}) %> 
+        </ul>
     </div>
