@@ -44,13 +44,23 @@ const pageData = [
   {"type":"product","title":"2. 상품리스트","url" : "/03_product/2", "pageurl" : "03_product/02_product_list.ejs"},
   {"type":"product","title":"2-1. 상품리스트 컴포넌트","url" : "/03_product/21", "pageurl" : "03_product/02_1_product_list_component.ejs"},
   
-
-  {"type":"page","title":"2. Question","url" : "/04_page_question/1", "pageurl" : "04_page_question/01_page1.ejs"},
-
   {"type":"page","title":"1. About","url" : "/05_page_about/1",   "pageurl" : "05_page_about/01_0_about.ejs"},
   {"type":"page","title":"1-1. Store","url" : "/05_page_about/11", "pageurl" : "05_page_about/01_1_store.ejs"},
   {"type":"page","title":"1-2. Sustainability","url" : "/05_page_about/12", "pageurl" : "05_page_about/01_2_sustainability.ejs"},
   {"type":"page","title":"1-3. Careers","url" : "/05_page_about/13", "pageurl" : "05_page_about/01_3_careers.ejs"},
+
+  
+  {"type":"page","title":"2-1. Question - 1","url" : "/04_page_question/21", "pageurl" : "04_page_question/01_page_covid.ejs"},
+  {"type":"page","title":"2-2. Question","url" : "/04_page_question/22", "pageurl" : "04_page_question/02_page_payment.ejs"},
+  {"type":"page","title":"2-3. Question","url" : "/04_page_question/23", "pageurl" : "04_page_question/03_page_shipping.ejs"},
+  {"type":"page","title":"2-4. Question","url" : "/04_page_question/24", "pageurl" : "04_page_question/04_page_returns.ejs"},
+  {"type":"page","title":"2-5. Question","url" : "/04_page_question/25", "pageurl" : "04_page_question/05_page_order_tracking.ejs"},
+  {"type":"page","title":"2-6. Question","url" : "/04_page_question/26", "pageurl" : "04_page_question/06_page_storepickup.ejs"},
+  {"type":"page","title":"2-7. Question","url" : "/04_page_question/27", "pageurl" : "04_page_question/07_page_comingsoon.ejs"},
+  {"type":"page","title":"2-8. Question","url" : "/04_page_question/28", "pageurl" : "04_page_question/08_privacypolicy.ejs"},
+  {"type":"page","title":"2-9. Question","url" : "/04_page_question/29", "pageurl" : "04_page_question/09_cookiepolicy.ejs"},
+  {"type":"page","title":"2-10. Question","url" : "/04_page_question/210", "pageurl" : "04_page_question/10_termconditions.ejs"},
+  {"type":"page","title":"2-11. Question","url" : "/04_page_question/211", "pageurl" : "04_page_question/11_contact.ejs"},
 
   /* 유니폼도 페이지 타입임. */
 
