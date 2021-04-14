@@ -44,10 +44,10 @@ const pageData = [
   {"type":"product","title":"2. 상품리스트","url" : "/03_product/2", "pageurl" : "03_product/02_product_list.ejs"},
   {"type":"product","title":"2-1. 상품리스트 컴포넌트","url" : "/03_product/21", "pageurl" : "03_product/02_1_product_list_component.ejs"},
   
-  {"type":"page","title":"1. About","url" : "/05_page_about/1",   "pageurl" : "05_page_about/01_0_about.ejs"},
-  {"type":"page","title":"1-1. Store","url" : "/05_page_about/11", "pageurl" : "05_page_about/01_1_store.ejs"},
-  {"type":"page","title":"1-2. Sustainability","url" : "/05_page_about/12", "pageurl" : "05_page_about/01_2_sustainability.ejs"},
-  {"type":"page","title":"1-3. Careers","url" : "/05_page_about/13", "pageurl" : "05_page_about/01_3_careers.ejs"},
+  {"type":"page","title":"1-1. About - Totême","url" : "/05_page_about/11",   "pageurl" : "05_page_about/01_about_toteme.ejs"},
+  {"type":"page","title":"1-2. About - Store","url" : "/05_page_about/12", "pageurl" : "05_page_about/02_about_store.ejs"},
+  {"type":"page","title":"1-3. About - Sustainability","url" : "/05_page_about/13", "pageurl" : "05_page_about/03_about_sustainability.ejs"},
+  {"type":"page","title":"1-4. About - Careers","url" : "/05_page_about/14", "pageurl" : "05_page_about/04_about_careers.ejs"},
 
   
   {"type":"page","title":"2-1. Question - COVID-19 FAQ","url" : "/04_page_question/21", "pageurl" : "04_page_question/01_page_covid.ejs"},
@@ -62,7 +62,8 @@ const pageData = [
   {"type":"page","title":"2-10. Question - Terms & Conditions","url" : "/04_page_question/210", "pageurl" : "04_page_question/10_termconditions.ejs"},
   {"type":"page","title":"2-11. Question - Contact","url" : "/04_page_question/211", "pageurl" : "04_page_question/11_contact.ejs"},
 
-  /* 유니폼도 페이지 타입임. */
+  {"type":"page","title":"3-1. Uniforms - 1depth(3col)","url" : "/06_page_uniforms/11",   "pageurl" : "06_page_uniforms/01_uniforms_1depth.ejs"},
+  {"type":"page","title":"3-2. Uniforms - 2depth(2col)","url" : "/06_page_uniforms/12",   "pageurl" : "06_page_uniforms/02_uniforms_2depth.ejs"},
 
 ]
 
