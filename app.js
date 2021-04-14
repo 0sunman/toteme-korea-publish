@@ -34,6 +34,9 @@ const pageData = [
   {"type":"index","title":"퍼블리스트","url" : "/publist", "pageurl" : "list.ejs", "isMain":true},
   {"type":"main","title":"메인","url" : "/00_main/1", "pageurl" : "00_main/index.ejs"},
   {"type":"main","title":"인풋 가이드","url" : "/00_main/2", "pageurl" : "00_main/inputguide.ejs"},
+  {"type":"main","title":"shop1_scarves (2,4col)","url" : "/00_main/3", "pageurl" : "00_main/shop_scarves.ejs"},
+  {"type":"main","title":"shop2_silk (1,2,4col)","url" : "/00_main/4", "pageurl" : "00_main/shop_silk.ejs"},
+
   {"type":"join","title":"1. 로그인페이지","url" : "/02_login_join/10", "pageurl" : "02_login_join/01_0_login_page.ejs"},
   {"type":"join","title":"1-1. 아이디찾기","url" : "/02_login_join/11", "pageurl" : "02_login_join/01_1_id_check.ejs"},
   {"type":"join","title":"1-2. 비회원주문페이지","url" : "/02_login_join/12", "pageurl" : "02_login_join/01_2_no_member_login.ejs"},
