@@ -955,55 +955,152 @@
    </div>
    <div class="template-account__wrapper">
       <div class="template-account__left"></div>
-      <div class="template-account__navlist ">
+      <!---
+
+COVID-19 FAQ
+Payments
+Shipping
+Returns
+Order tracking
+Store pick-up
+Coming soon
+
+Privacy policy
+Cookie policy
+Newsletter Club Terms & Conditions
+Terms & Conditions
+
+Contact
+
+-->
+<div class="template-account__navlist ">
     <div class="template-account__navlist--content">
        <div class="navlist__dropdown-wrapper">
           <div class="custom-select__wrapper">
              <select class="navlist__dropdown custom-select__select m-font-14" style="background-image: url(//cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/icon-small-arrow-down.svg?v=9521334029086756349);">
-                <option value="/account/login"> <!-- selected=""-->
-                    로그인
+                <option value="/pages/covid-19-faq"> <!-- selected=""-->
+                     COVID-19 FAQ
                 </option>
-                <option value="/account/register">
-                    회원가입
+                <option value="/pages/payments">
+                  Payments
                 </option>
-                <option value="/account/login#reactivate">
-                    아이디 찾기
+                <option value="/pages/shipping">
+                  Shipping
                 </option>
-                <option value="/account/login#recover">
-                    비밀번호 찾기
+                <option value="/pages/return">
+                  Returns
                 </option>
-                <option value="/account/login#recover">
-                    비회원 주문조회
+                <option value="/pages/order-tracking">
+                  Order tracking
+                </option>
+                <option value="/pages/store-pick-up">
+                  Store pick-up
+                </option>
+                <option value="/pages/coming-soon">
+                  Coming soon
+                </option>
+                <option value="/pages/privacy-policy">
+                  Privacy policy
+                </option>
+                <option value="/pages/cookie-policy">
+                  Cookie policy
+                </option>
+                <option value="/pages/newsletter-club-terms-conditions">
+                  Newsletter Club Terms & Conditions
+                </option>
+                <option value="/pages/terms-conditions">
+                  Terms & Conditions
+                </option>
+                <option value="/pages/contact">
+                  Contact
                 </option>
              </select>
-             <span class="main-title custom-select__label text-small">로그인</span>
+             <span class="main-title custom-select__label text-small"></span>
           </div>
        </div>
        <ul class="navlist" js-account-nav="navlist">
-          <li class="navlist__item ">
-             <a class="navlist__link text-link" href="/account/login">로그인</a>
-          </li>
+         <li class="navlist__item ">
+            <a class="navlist__link text-link" href="/pages/covid-19-faq">COVID-19 FAQ</a>
+         </li>
+         <li class="navlist__item ">
+            <a class="navlist__link text-link" href="/pages/payments">Payments</a>
+         </li>
+         <li class="navlist__item ">
+            <a class="navlist__link text-link" href="/pages/shipping">Shipping</a>
+         </li>
+         <li class="navlist__item ">
+            <a class="navlist__link text-link" href="/pages/return">Returns</a>
+         </li>
+         <li class="navlist__item ">
+            <a class="navlist__link text-link" href="/pages/order-tracking">Order tracking</a>
+         </li>
+         <li class="navlist__item ">
+            <a class="navlist__link text-link" href="/pages/store-pick-up">Store pick-up</a>
+         </li>
           <li class="navlist__item navlist__item--margin">
-             <a class="navlist__link text-link" href="/account/register">회원가입</a>
+             <a class="navlist__link text-link" href="/pages/coming-soon">Coming soon</a>
           </li>
           <li class="navlist__item">
-             <a class="navlist__link text-link" href="/account/login#reactivate" js-password-form="reactivateLink">아이디 찾기</a>
-          </li>
-          <li class="navlist__item navlist__item--margin">
-             <a class="navlist__link text-link" href="/account/login#recover" js-password-form="forgotPasswordLink">비밀번호 찾기</a>
+             <a class="navlist__link text-link" href="/pages/privacy-policy" js-password-form="reactivateLink">Privacy policy</a>
           </li>
           <li class="navlist__item">
-             <a class="navlist__link text-link" href="/account/login#nomember" js-password-form="reactivateLink">비회원 주문조회</a>
+             <a class="navlist__link text-link" href="/pages/cookie-policy" js-password-form="reactivateLink">Cookie policy</a>
+          </li>
+          <li class="navlist__item">
+             <a class="navlist__link text-link" href="/pages/newsletter-club-terms-conditions" js-password-form="reactivateLink">Newsletter Club Terms & Conditions</a>
+          </li>
+          <li class="navlist__item navlist__item--margin">
+             <a class="navlist__link text-link" href="/pages/terms-conditions" js-password-form="forgotPasswordLink">Terms & Conditions</a>
+          </li>
+          <li class="navlist__item">
+             <a class="navlist__link text-link" href="/pages/contact" js-password-form="reactivateLink">Contact</a>
           </li>
        </ul>
     </div>
  </div>
-
+<!---
+<option value="/pages/covid-19-faq">
+   COVID-19 FAQ
+</option>
+<option value="/pages/payments">
+  Payments
+</option>
+<option value="/pages/shipping">
+  Shipping
+</option>
+<option value="/pages/return">
+  Returns
+</option>
+<option value="/pages/order-tracking">
+  Order tracking
+</option>
+<option value="/pages/store-pick-up">
+  Store pick-up
+</option>
+<option value="/pages/coming-soon">
+  Coming soon
+</option>
+<option value="/pages/privacy-policy">
+  Privacy policy
+</option>
+<option value="/pages/cookie-policy">
+  Cookie policy
+</option>
+<option value="/pages/newsletter-club-terms-conditions">
+  Newsletter Club Terms & Conditions
+</option>
+<option value="/pages/terms-conditions">
+  Terms & Conditions
+</option>
+<option value="/pages/contact">
+  Contact
+</option>
+-->
  
    <script>
       setTimeout(function(){
-         $(".main-title.custom-select__label").text("로그인");
-         $("a[href='/account/login']").addClass("is-active");
+         $(".main-title.custom-select__label").text("Contact");
+         $("a[href='/pages/contact']").addClass("is-active");
       },100)
       </script>
    
