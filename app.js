@@ -50,22 +50,40 @@ const pageData = [
   {"type":"page","title":"1-3. Careers","url" : "/05_page_about/13", "pageurl" : "05_page_about/01_3_careers.ejs"},
 
   
-  {"type":"page","title":"2-1. Question - 1","url" : "/04_page_question/21", "pageurl" : "04_page_question/01_page_covid.ejs"},
-  {"type":"page","title":"2-2. Question","url" : "/04_page_question/22", "pageurl" : "04_page_question/02_page_payment.ejs"},
-  {"type":"page","title":"2-3. Question","url" : "/04_page_question/23", "pageurl" : "04_page_question/03_page_shipping.ejs"},
-  {"type":"page","title":"2-4. Question","url" : "/04_page_question/24", "pageurl" : "04_page_question/04_page_returns.ejs"},
-  {"type":"page","title":"2-5. Question","url" : "/04_page_question/25", "pageurl" : "04_page_question/05_page_order_tracking.ejs"},
-  {"type":"page","title":"2-6. Question","url" : "/04_page_question/26", "pageurl" : "04_page_question/06_page_storepickup.ejs"},
-  {"type":"page","title":"2-7. Question","url" : "/04_page_question/27", "pageurl" : "04_page_question/07_page_comingsoon.ejs"},
-  {"type":"page","title":"2-8. Question","url" : "/04_page_question/28", "pageurl" : "04_page_question/08_privacypolicy.ejs"},
-  {"type":"page","title":"2-9. Question","url" : "/04_page_question/29", "pageurl" : "04_page_question/09_cookiepolicy.ejs"},
-  {"type":"page","title":"2-10. Question","url" : "/04_page_question/210", "pageurl" : "04_page_question/10_termconditions.ejs"},
-  {"type":"page","title":"2-11. Question","url" : "/04_page_question/211", "pageurl" : "04_page_question/11_contact.ejs"},
+  {"type":"page","title":"2-1. Question - COVID-19 FAQ","url" : "/04_page_question/21", "pageurl" : "04_page_question/01_page_covid.ejs"},
+  {"type":"page","title":"2-2. Question - Payments","url" : "/04_page_question/22", "pageurl" : "04_page_question/02_page_payment.ejs"},
+  {"type":"page","title":"2-3. Question - Shipping","url" : "/04_page_question/23", "pageurl" : "04_page_question/03_page_shipping.ejs"},
+  {"type":"page","title":"2-4. Question - Returns","url" : "/04_page_question/24", "pageurl" : "04_page_question/04_page_returns.ejs"},
+  {"type":"page","title":"2-5. Question - Order tracking","url" : "/04_page_question/25", "pageurl" : "04_page_question/05_page_order_tracking.ejs"},
+  {"type":"page","title":"2-6. Question - Store pick-up","url" : "/04_page_question/26", "pageurl" : "04_page_question/06_page_storepickup.ejs"},
+  {"type":"page","title":"2-7. Question - Coming soon","url" : "/04_page_question/27", "pageurl" : "04_page_question/07_page_comingsoon.ejs"},
+  {"type":"page","title":"2-8. Question - Privacy policy","url" : "/04_page_question/28", "pageurl" : "04_page_question/08_privacypolicy.ejs"},
+  {"type":"page","title":"2-9. Question - Cookie policy","url" : "/04_page_question/29", "pageurl" : "04_page_question/09_cookiepolicy.ejs"},
+  {"type":"page","title":"2-10. Question - Terms & Conditions","url" : "/04_page_question/210", "pageurl" : "04_page_question/10_termconditions.ejs"},
+  {"type":"page","title":"2-11. Question - Contact","url" : "/04_page_question/211", "pageurl" : "04_page_question/11_contact.ejs"},
 
   /* 유니폼도 페이지 타입임. */
 
 ]
 
+
+/*
+
+COVID-19 FAQ
+Payments
+Shipping
+Returns
+Order tracking
+Store pick-up
+Coming soon
+
+Privacy policy
+Cookie policy
+Newsletter Club Terms & Conditions
+Terms & Conditions
+
+Contact
+*/
 pageData.forEach((data)=>{
   const {url, pageurl, isMain} = data;
   console.log(url, pageurl);
