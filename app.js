@@ -48,7 +48,7 @@ const pageData = [
   {"type":"product","title":"2. 상품리스트","url" : "/03_product/2", "pageurl" : "03_product/02_product_list.ejs"},
   {"type":"product","title":"2-1. 상품리스트 컴포넌트","url" : "/03_product/21", "pageurl" : "03_product/02_1_product_list_component.ejs"},
 
-  {"type":"order","title":"1. 주문(회원)","url" : "/04_order/1", "pageurl" : "04_order/01_order_member.ejs"},
+  {"type":"order","title":"1. 주문(비회원)","url" : "/04_order/1", "pageurl" : "04_order/01_order_member.ejs"},
   
   {"type":"page","title":"1-1. About - Totême","url" : "/05_page_about/11",   "pageurl" : "05_page_about/01_about_toteme.ejs"},
   {"type":"page","title":"1-2. About - Store","url" : "/05_page_about/12", "pageurl" : "05_page_about/02_about_store.ejs"},
