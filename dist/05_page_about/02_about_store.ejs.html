@@ -2035,6 +2035,8 @@
       var hrefText = $(ele).attr("href");
         if(hrefText.indexOf("/product2") > -1){
             $(ele).attr("href","https://0sunman.github.io/toteme-korea-publish/dist/00_main/shop_scarves.ejs.html")
+        }else if(hrefText.indexOf("/product/") > -1){
+            $(ele).attr("href","https://0sunman.github.io/toteme-korea-publish/dist/03_product/01_product_detail.ejs.html")
         }else if(hrefText.indexOf("/product") > -1 || hrefText.indexOf("/new-in") > -1  ){
             $(ele).attr("href","https://0sunman.github.io/toteme-korea-publish/dist/03_product/02_product_list.ejs.html")
         }else if(hrefText.indexOf("/uniforms") > -1 || hrefText.indexOf("/spring-uniforms") > -1 || hrefText.indexOf("/summer-uniforms") > -1 ){
