@@ -1,5 +1,5 @@
 <!--  is-sticky -->
-<header class="site-header-wrapper" js-site-header="wrapper">
+<header class="site-header-wrapper is-sticky" js-site-header="wrapper">
     <div id="shopify-section-site-header" class="shopify-section">
     <section class="site-header" data-section-id="site-header" data-section-type="site-header" js-site-header="container" data-theme="light" data-transparent="false">
 
@@ -31,7 +31,7 @@
             <header class="container">
                 <div class="site-header__inner">
                 <div class="site-header__hamburger">
-                    <button class="site-header__icon site-header__icon--menu">
+                    <button id="mobileMenu" class="site-header__icon site-header__icon--menu">
                         <span class="visually-hidden">
                         Menu
                         </span>
@@ -42,7 +42,7 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
                         </svg>
                     </button>
-                    <button class="site-header__icon site-header__icon--search" tabindex="0" type="submit" data-target="searchBarHeader" js-toggle="searchBarHeader">
+                    <button id="mobileClose" class="site-header__icon site-header__icon--search" tabindex="0" type="submit" data-target="searchBarHeader" js-toggle="searchBarHeader">
                         <span class="icon-fallback-text">
                         Search
                         </span>
@@ -109,106 +109,101 @@
                                     </a>
                                     <ul class="navlist navlist--block">
                                         <li class="navlist__item">
-                                        <a class="navlist__link text-link" href="/collections/soft-accessories"> 
+                                        <a class="navlist__link text-link" href="/collections/product"> 
                                             Soft accessories
                                         </a>
                                         </li>
                                         <li class="navlist__item">
-                                        <a class="navlist__link text-link" href="/collections/knits"> 
+                                        <a class="navlist__link text-link" href="/collections/product"> 
                                             니트 &amp; 스웨터
                                         </a>
                                         </li>
                                         
                                         <li class="navlist__item">
-                                        <a class="navlist__link text-link" href="/collections/knits"> 
+                                        <a class="navlist__link text-link" href="/collections/product"> 
                                             아웃웨어
                                         </a>
                                         </li>
                                         
                                         <li class="navlist__item">
-                                        <a class="navlist__link text-link" href="/collections/knits"> 
+                                        <a class="navlist__link text-link" href="/collections/product"> 
                                             블레이저
                                         </a>
                                         </li>
                                         
                                         <li class="navlist__item">
-                                        <a class="navlist__link text-link" href="/collections/knits"> 
+                                        <a class="navlist__link text-link" href="/collections/product"> 
                                             상의
                                         </a>
                                         </li>
                                         
                                         <li class="navlist__item">
-                                        <a class="navlist__link text-link" href="/collections/knits"> 
+                                        <a class="navlist__link text-link" href="/collections/product"> 
                                             셔츠 &amp; 블라우스
                                         </a>
                                         </li>
 
                                         
                                         <li class="navlist__item">
-                                            <a class="navlist__link text-link" href="/collections/knits"> 
+                                            <a class="navlist__link text-link" href="/collections/product"> 
                                                 데님
                                             </a>
                                         </li>
 
                                         
                                         <li class="navlist__item">
-                                            <a class="navlist__link text-link" href="/collections/knits"> 
+                                            <a class="navlist__link text-link" href="/collections/product"> 
                                                 트라우저
                                             </a>
                                         </li>
 
                                         
                                         <li class="navlist__item">
-                                            <a class="navlist__link text-link" href="/collections/knits"> 
+                                            <a class="navlist__link text-link" href="/collections/product"> 
                                                 드레스 &amp; 셔츠
                                             </a>
                                         </li>
 
                                         
                                         <li class="navlist__item">
-                                            <a class="navlist__link text-link" href="/collections/knits"> 
+                                            <a class="navlist__link text-link" href="/collections/product"> 
                                                 신발
                                             </a>
                                         </li>
 
                                         
                                         <li class="navlist__item">
-                                            <a class="navlist__link text-link" href="/collections/knits"> 
+                                            <a class="navlist__link text-link" href="/collections/product"> 
                                                 액세서리
                                             </a>
                                         </li>
 
                                         
                                         <li class="navlist__item">
-                                            <a class="navlist__link text-link" href="/collections/knits"> 
+                                            <a class="navlist__link text-link" href="/collections/product"> 
                                                 T-clutch
                                             </a>
                                         </li>
 
                                           
                                         <li class="navlist__item">
-                                            <a class="navlist__link text-link" href="/collections/knits"> 
+                                            <a class="navlist__link text-link" href="/collections/product"> 
                                                 스카프
                                             </a>
                                         </li>
 
                                         
-                                        <li class="navlist__item">
-                                            <a class="navlist__link text-link" href="/collections/knits"> 
-                                                선글라스
-                                            </a>
-                                        </li>
 
                                         
                                         <li class="navlist__item">
-                                            <a class="navlist__link text-link" href="/collections/knits"> 
+                                            <a class="navlist__link text-link" href="/collections/product"> 
                                                 스윔웨어
                                             </a>
                                         </li>
 
                                         
                                         <li class="navlist__item">
-                                            <a class="navlist__link text-link" href="/collections/knits"> 
+                                            <a class="navlist__link text-link" href="/collections/product"> 
                                                 선글라스
                                             </a>
                                         </li>
