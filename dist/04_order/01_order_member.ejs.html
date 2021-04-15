@@ -952,17 +952,30 @@
          <link rel="stylesheet" href="//cdn.shopify.com/app/services/48011411607/assets/113712234647/checkout_stylesheet/v2-ltr-2021-01-25-36b7b11b994ea40729291f1251a42871-20058" media="all">
 <link type="text/css" href="//cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/layout.checkout.css?v=981295653317797159" rel="stylesheet">
 <style>
+	/* header, footer hide */
+	.site-header-wrapper, #shopify-section-site-footer{display: none;}
+	/* //header, footer hide */
+
 	.email_form>div:first-child{width: 60%;}
 	.email_form>div:last-child{width: 40%;}
 	.email_form .select-wrap{display: block; margin-left: 7px;}
+	@media (max-width: 47.99em){.checkout input{font-size: 15px}}
 	.phone_form{display: table; width: 100%;}
 	.phone_form>div:last-child{width: 41px;}
 	.phone_form .btn_plus{display: block; font-size: 0; width: 34px; height: 34px; margin-left: 7px; border: 1px solid #222; border-radius: 50%;}
 	.phone_form .btn_plus svg{transform: rotate(45deg);}
 	.input_phone_plus{display: none; margin-top: 10px;}
 	.input_phone_plus.active{display: block;}
-	.phone_addr .button{margin-left: 7px; width: calc(100% - 7px);}
+	.phone_addr .button{width: calc(100% - 7px); min-height: 35px; margin-left: 7px;}
 	.product-table:not(.stock-problem-table) .product__quantity .visually-hidden, .checkout .order-summary__section--discount .field__input-btn .visually-hidden-on-mobile{overflow: visible;}
+	.deposit_attr_box{display: table; width: 100%; font-size: 15px;}
+	.deposit_attr_box>div{display: table-cell;}
+	.deposit_attr_box>div:last-child{text-align: right;}
+	.deposit_attr_box .field__message--error{display: inline-block;}
+	.deposit_attr_box .btn_deposit{position: relative; font-size: 12px;}
+	.deposit_attr_box .btn_deposit:after{content: ''; height: 1px; position: absolute; bottom: 0; left: 0; right: 0; background: #444;}
+	.direct_input{display: none;}
+	.direct_input.active{display: block;}
 </style>
 
 
@@ -1069,11 +1082,11 @@
 										<div class="input-block form-group__field">
 											<div class="input-table form-group__field email_form">
 												<div>
-													<input autocapitalize="off" autocomplete="off" autofocus="" placeholder="이메일" required="" spellcheck="false" type="email">
+													<input class="field__input" autocapitalize="off" autocomplete="off" autofocus="" placeholder="이메일" required="" spellcheck="false" type="email">
 												</div>
 												<div>
 													<div class="select-wrap">
-														<select class="toteme-select-style toteme-button-style no-animation">
+														<select class="field__input field__input--select toteme-select-style toteme-button-style no-animation">
 															<option value="">naver.com</option>
 															<option value="">gmail.com</option>
 															<option value="">직접입력</option>
@@ -1137,16 +1150,16 @@
 										</div>
 										<div class="input-block form-group__field">
 											<label class="field__label field__label--visible" for="checkout_memo">배송시 요청사항 선택</label>
-											<select id="checkout_memo" class="toteme-select-style toteme-button-style no-animation">
+											<select id="checkout_memo" class="field__input field__input--select toteme-select-style toteme-button-style no-animation">
 												<option value="" disabled selected>배송시 요청사항 선택</option>
 												<option value="">배송 전 연락바랍니다.</option>
 												<option value="">택배함에 넣어주세요.</option>
 												<option value="">빠른 배송 부탁 드립니다.</option>
 												<option value="">부재 시 경비실에 맡겨주세요.</option>
 												<option value="">핸드폰으로 연락 부탁 드립니다.</option>
-												<option value="">직접입력</option>
+												<option value="direct">직접입력</option>
 											</select>
-											<div class="input-block">
+											<div class="input-block direct_input">
 												<input type="text" placeholder="배송 시 요청사항을 입력하세요" class="field__input direct_input" size="30">
 											</div>
 										</div>
@@ -1297,7 +1310,7 @@
 								<h3 class="visually-hidden">프로모션 코드 적용</h3>
 								<form class="edit_checkout animate-floating-labels" action="#" method="post">
 									<div class="fieldset">
-										<div class="field">
+										<div class="field"><!-- error시 .field--error 추가 -->
 											<div class="field__input-btn-wrapper">
 												<div class="field__input-wrapper">
 													<label class="field__label field__label--visible" for="checkout_reduction_code">프로모션 코드</label>
@@ -1317,12 +1330,59 @@
 														<use xlink:href="#spinner-button"></use>
 													</svg>
 												</button>
+												<div class="deposit_attr_box">
+													<div>
+														<p class="field__message" id="">SALE20 (-10,000원)</p>
+													</div>
+													<div>
+														<button type="button" class="btn_deposit">삭제</button>
+													</div>
+												</div>
 											</div>
 											<p class="field__message field__message--error" id="error-for-reduction_code">프로모션 코드가 정확하지 않습니다.</p>
 										</div>
 									</div>
 								</form>
 								<div class="discount-trigger"><button class="button button--large button--block">프로모션 코드 적용</button></div>
+							</div>
+							<div class="order-summary__section order-summary__section--discount">
+								<h3 class="visually-hidden">예치금 사용</h3>
+								<form class="edit_checkout animate-floating-labels" action="#" method="post">
+									<div class="fieldset">
+										<div class="field">
+											<div class="field__input-btn-wrapper">
+												<div class="field__input-wrapper">
+													<label class="field__label field__label--visible" for="checkout_reduction_code">예치금 사용</label>
+													<input placeholder="사용할 금액을 입력하세요" class="field__input" id="checkout_reduction_code" autocomplete="off" aria-required="true" size="30" type="text" name="checkout[reduction_code]">
+												</div>
+												<div class="deposit_attr_box">
+													<div>
+														<p class="field__message field__message--error" id="">예치금 : 50,000</p>
+													</div>
+													<div>
+														<button type="button" class="btn_deposit">모두사용</button>
+													</div>
+												</div>
+												<button name="button" type="submit" class="field__input-btn btn btn--disabled" disabled="disabled">
+													<span class="btn__content visually-hidden-on-mobile" aria-hidden="true">
+														적용
+													</span>
+													<span class="visually-hidden">
+														예치금 사용
+													</span>
+													<svg class="icon-svg icon-svg--size-16 btn__icon shown-on-mobile" aria-hidden="true" focusable="false">
+														<use xlink:href="#arrow"></use>
+													</svg>
+													<svg class="icon-svg icon-svg--size-18 btn__spinner icon-svg--spinner-button" aria-hidden="true" focusable="false">
+														<use xlink:href="#spinner-button"></use>
+													</svg>
+												</button>
+											</div>
+											<p class="field__message field__message--error" id="error-for-reduction_code">예치금은 10원 단위로 사용할 수 있습니다.</p>
+										</div>
+									</div>
+								</form>
+								<div class="discount-trigger"><button class="button button--large button--block">예치금 사용</button></div>
 							</div>
 							<div class="order-summary__section order-summary__section--total-lines">
 								<table class="total-line-table">
@@ -1439,6 +1499,13 @@
 	$('.phone_form .btn_plus').click(function(){
 		$(this).parents('.phone_form').siblings('.input_phone_plus').toggleClass("active");
 	});
+	$('.field__input--select').change(function() {
+		if($(this).val() == "direct"){
+			$(this).next('.input-block.direct_input').addClass('active');
+		}else{
+			$(this).next('.input-block.direct_input').removeClass('active');
+		}
+	});
 	//아코디언
 	$('.accordion__control').click(function(){
 		$(this).parents('.accordion__item').toggleClass('is-active').siblings().removeClass('is-active');
@@ -1447,7 +1514,6 @@
 	$('.order-summary').on('webkitTransitionEnd oTransitionEnd otransitionend transitionend msTransitionEnd', function () {
 		$(this).removeClass("order-summary--transition").removeAttr("style");
 	});
-
 	$('.order-summary-toggle').click(function(){
 		var thisH, conH, aniH;
 		 $('.order-summary').wrapInner("<div />"),
@@ -1462,10 +1528,10 @@
 	});
 	//할인코드 toggle
 	$('.discount-trigger .button').click(function(){
-		$('.order-summary__section--discount').addClass('enable-form')
+		$(this).parents('.order-summary__section--discount').addClass('enable-form')
 	});
 	$('.order-summary__section--discount .field__input').on("propertychange change keyup paste input", function() {
-		var btn = $('.order-summary__section--discount .field__input-btn'),
+		var btn = $(this).parents('.field__input-btn-wrapper').children('.order-summary__section--discount .field__input-btn'),
 				className = 'btn--disabled';
 		$(this).val() ? btn.removeClass(className) : btn.addClass(className);
 	});
