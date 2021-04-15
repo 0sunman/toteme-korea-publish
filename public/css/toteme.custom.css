@@ -162,7 +162,7 @@ input[type=email], input[type=password], input[type=search], input[type=tel], in
 }
 /* // 라디오 버튼 */
 /* 셀렉트 버튼 */
-.input-table input,.input-table select{font-size: 14px;}
+/* .input-table input,.input-table select{font-size: 14px;} */
 input.toteme-button-style{ font-size: 14px; margin:5px 8px; min-height: 33px; padding: 0 18px; line-height: 15px;}
 input.toteme-button-style.big{width:67%;}
 select.select--center{background-image: url(//cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/icon-small-arrow-down.svg?v=9521334029086756349);}

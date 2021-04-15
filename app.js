@@ -42,17 +42,19 @@ const pageData = [
   {"type":"join","title":"1-2. 비회원주문페이지","url" : "/02_login_join/12", "pageurl" : "02_login_join/01_2_no_member_login.ejs"},
   {"type":"join","title":"2. 회원가입페이지","url" : "/02_login_join/2", "pageurl" : "02_login_join/02_join_page.ejs"},
   {"type":"join","title":"3. 이메일페이지 (공사중)","url" : "/02_login_join/3", "pageurl" : "02_login_join/03_select_email.ejs"},
+
   {"type":"product","title":"1. 상품상세","url" : "/03_product/1", "pageurl" : "03_product/01_product_detail.ejs"},
   {"type":"product","title":"1-1. 프리오더","url" : "/03_product/11", "pageurl" : "03_product/01_1_product_detail_preorder.ejs"},
   {"type":"product","title":"2. 상품리스트","url" : "/03_product/2", "pageurl" : "03_product/02_product_list.ejs"},
   {"type":"product","title":"2-1. 상품리스트 컴포넌트","url" : "/03_product/21", "pageurl" : "03_product/02_1_product_list_component.ejs"},
+
+  {"type":"order","title":"1. 주문(회원)","url" : "/04_order/1", "pageurl" : "04_order/01_order_member.ejs"},
   
   {"type":"page","title":"1-1. About - Totême","url" : "/05_page_about/11",   "pageurl" : "05_page_about/01_about_toteme.ejs"},
   {"type":"page","title":"1-2. About - Store","url" : "/05_page_about/12", "pageurl" : "05_page_about/02_about_store.ejs"},
   {"type":"page","title":"1-3. About - Sustainability","url" : "/05_page_about/13", "pageurl" : "05_page_about/03_about_sustainability.ejs"},
   {"type":"page","title":"1-4. About - Careers","url" : "/05_page_about/14", "pageurl" : "05_page_about/04_about_careers.ejs"},
 
-  
   {"type":"page","title":"2-1. Question - COVID-19 FAQ","url" : "/04_page_question/21", "pageurl" : "04_page_question/01_page_covid.ejs"},
   {"type":"page","title":"2-2. Question - Payments","url" : "/04_page_question/22", "pageurl" : "04_page_question/02_page_payment.ejs"},
   {"type":"page","title":"2-3. Question - Shipping","url" : "/04_page_question/23", "pageurl" : "04_page_question/03_page_shipping.ejs"},
