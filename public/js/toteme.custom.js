@@ -121,6 +121,7 @@ var changeURLList = [
     { old : "/products/"                , new : "https://0sunman.github.io/toteme-korea-publish/dist/03_product/01_product_detail.ejs.html"},
     { old : "/new-in"                   , new : "https://0sunman.github.io/toteme-korea-publish/dist/03_product/02_product_list.ejs.html"},
     { old : "/uniforms"                 , new : "https://0sunman.github.io/toteme-korea-publish/dist/06_page_uniforms/01_uniforms_1depth.ejs.html"},
+    { old : "/pages/uniform-"           , new : "https://0sunman.github.io/toteme-korea-publish/dist/06_page_uniforms/02_uniforms_2depth.ejs.html"},
     { old : "/spring-uniforms"          , new : "https://0sunman.github.io/toteme-korea-publish/dist/06_page_uniforms/01_uniforms_1depth.ejs.html"},
     { old : "/summer-uniforms"          , new : "https://0sunman.github.io/toteme-korea-publish/dist/06_page_uniforms/01_uniforms_1depth.ejs.html"},
     { old : "/coming-soon"              , new : "https://0sunman.github.io/toteme-korea-publish/dist/00_main/shop_silk.ejs.html"},
@@ -144,7 +145,7 @@ var changeURLList = [
     { old : "/pages/cookie-policy"      , new : "https://0sunman.github.io/toteme-korea-publish/dist/04_page_question/09_cookiepolicy.ejs"},
     { old : "/pages/terms-conditions"   , new : "https://0sunman.github.io/toteme-korea-publish/dist/04_page_question/10_termconditions.ejs"},
     { old : "/pages/contact"            , new : "https://0sunman.github.io/toteme-korea-publish/dist/04_page_question/11_contact.ejs"},
-    { old : "/collections/product"                  , new : "https://0sunman.github.io/toteme-korea-publish/dist/03_product/02_product_list.ejs.html"},
+    { old : "/collections/product"      , new : "https://0sunman.github.io/toteme-korea-publish/dist/03_product/02_product_list.ejs.html"},
 ]
 
 
