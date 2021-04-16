@@ -32,23 +32,23 @@ app.use(livereloadMiddleware());
 
 const pageData = [
   {"type":"index","title":"퍼블리스트","url" : "/publist", "pageurl" : "list.ejs", "isMain":true},
-  {"type":"main","title":"메인","url" : "/00_main/1", "pageurl" : "00_main/index.ejs"},
-  {"type":"main","title":"인풋 가이드","url" : "/00_main/2", "pageurl" : "00_main/inputguide.ejs"},
-  {"type":"main","title":"shop1_scarves (2,4col)","url" : "/00_main/3", "pageurl" : "00_main/shop_scarves.ejs"},
-  {"type":"main","title":"shop2_silk (1,2,4col)","url" : "/00_main/4", "pageurl" : "00_main/shop_silk.ejs"},
+  {"type":"main","title":"Main","url" : "/00_main/1", "pageurl" : "00_main/index.ejs"},
+  {"type":"main","title":"Guidelines for Input (error,commit..etc)","url" : "/00_main/2", "pageurl" : "00_main/inputguide.ejs"},
+  {"type":"main","title":"Display Page Type 01 (2–4 columns) ","url" : "/00_main/3", "pageurl" : "00_main/shop_scarves.ejs"},
+  {"type":"main","title":"Display Page Type 02 (1-2–4 columns)","url" : "/00_main/4", "pageurl" : "00_main/shop_silk.ejs"},
 
-  {"type":"join","title":"1. 로그인페이지","url" : "/02_login_join/10", "pageurl" : "02_login_join/01_0_login_page.ejs"},
-  {"type":"join","title":"1-1. 아이디찾기","url" : "/02_login_join/11", "pageurl" : "02_login_join/01_1_id_check.ejs"},
-  {"type":"join","title":"1-2. 비회원주문페이지","url" : "/02_login_join/12", "pageurl" : "02_login_join/01_2_no_member_login.ejs"},
-  {"type":"join","title":"2. 회원가입페이지","url" : "/02_login_join/2", "pageurl" : "02_login_join/02_join_page.ejs"},
-  {"type":"join","title":"3. 이메일페이지 (공사중)","url" : "/02_login_join/3", "pageurl" : "02_login_join/03_select_email.ejs"},
+  {"type":"join","title":"1. Sign in","url" : "/02_login_join/10", "pageurl" : "02_login_join/01_0_login_page.ejs"},
+  {"type":"join","title":"1-1. Forgot ID","url" : "/02_login_join/11", "pageurl" : "02_login_join/01_1_id_check.ejs"},
+  {"type":"join","title":"1-2. Order for non-member (order check)","url" : "/02_login_join/12", "pageurl" : "02_login_join/01_2_no_member_login.ejs"},
+  {"type":"join","title":"2. Create account","url" : "/02_login_join/2", "pageurl" : "02_login_join/02_join_page.ejs"},
+  {"type":"join","title":"3. Create account _ E-mail Authentication","url" : "/02_login_join/3", "pageurl" : "02_login_join/03_select_email.ejs"},
 
-  {"type":"product","title":"1. 상품상세","url" : "/03_product/1", "pageurl" : "03_product/01_product_detail.ejs"},
-  {"type":"product","title":"1-1. 프리오더","url" : "/03_product/11", "pageurl" : "03_product/01_1_product_detail_preorder.ejs"},
-  {"type":"product","title":"2. 상품리스트","url" : "/03_product/2", "pageurl" : "03_product/02_product_list.ejs"},
-  {"type":"product","title":"2-1. 상품리스트 컴포넌트","url" : "/03_product/21", "pageurl" : "03_product/02_1_product_list_component.ejs"},
+  {"type":"product","title":"1. PDP","url" : "/03_product/1", "pageurl" : "03_product/01_product_detail.ejs"},
+/*  {"type":"product","title":"1-1. Pre-order","url" : "/03_product/11", "pageurl" : "03_product/01_1_product_detail_preorder.ejs"},*/
+  {"type":"product","title":"2. Product Display","url" : "/03_product/2", "pageurl" : "03_product/02_product_list.ejs"},
+/*  {"type":"product","title":"2-1. 상품리스트 컴포넌트","url" : "/03_product/21", "pageurl" : "03_product/02_1_product_list_component.ejs"},*/
 
-  {"type":"order","title":"1. 주문(비회원)","url" : "/04_order/1", "pageurl" : "04_order/01_order_member.ejs"},
+  {"type":"order","title":"1. Order Page","url" : "/04_order/1", "pageurl" : "04_order/01_order_member.ejs"},
   
   {"type":"page","title":"1-1. About - Totême","url" : "/05_page_about/11",   "pageurl" : "05_page_about/01_about_toteme.ejs"},
   {"type":"page","title":"1-2. About - Store","url" : "/05_page_about/12", "pageurl" : "05_page_about/02_about_store.ejs"},
