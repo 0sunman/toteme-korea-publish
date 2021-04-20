@@ -17,13 +17,13 @@
    </head>
 
    <!--  has-announcement-bar --header-height:51px; / -->
-   <body id="toteme-official-online-store" class="template-index" data-cy="body">
+   <body id="toteme-official-online-store" class="template-index" data-cy="body" style='padding-top:51px;'>
       <a class="in-page-link visually-hidden skip-link" href="#MainContent">
       Skip to content
       </a>
       <!-- PC 헤더 -->
       <!--  is-sticky -->
-<header class="site-header-wrapper" js-site-header="wrapper">
+<header class="site-header-wrapper is-sticky" js-site-header="wrapper">
     <div id="shopify-section-site-header" class="shopify-section">
     <section class="site-header" data-section-id="site-header" data-section-type="site-header" js-site-header="container" data-theme="light" data-transparent="false">
 
@@ -55,7 +55,7 @@
             <header class="container">
                 <div class="site-header__inner">
                 <div class="site-header__hamburger">
-                    <button class="site-header__icon site-header__icon--menu">
+                    <button id="mobileMenu" class="site-header__icon site-header__icon--menu">
                         <span class="visually-hidden">
                         Menu
                         </span>
@@ -66,7 +66,7 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
                         </svg>
                     </button>
-                    <button class="site-header__icon site-header__icon--search" tabindex="0" type="submit" data-target="searchBarHeader" js-toggle="searchBarHeader">
+                    <button id="mobileClose" class="site-header__icon site-header__icon--search" tabindex="0" type="submit" data-target="searchBarHeader" js-toggle="searchBarHeader">
                         <span class="icon-fallback-text">
                         Search
                         </span>
@@ -133,106 +133,101 @@
                                     </a>
                                     <ul class="navlist navlist--block">
                                         <li class="navlist__item">
-                                        <a class="navlist__link text-link" href="/collections/soft-accessories"> 
+                                        <a class="navlist__link text-link" href="/collections/product"> 
                                             Soft accessories
                                         </a>
                                         </li>
                                         <li class="navlist__item">
-                                        <a class="navlist__link text-link" href="/collections/knits"> 
+                                        <a class="navlist__link text-link" href="/collections/product"> 
                                             니트 &amp; 스웨터
                                         </a>
                                         </li>
                                         
                                         <li class="navlist__item">
-                                        <a class="navlist__link text-link" href="/collections/knits"> 
+                                        <a class="navlist__link text-link" href="/collections/product"> 
                                             아웃웨어
                                         </a>
                                         </li>
                                         
                                         <li class="navlist__item">
-                                        <a class="navlist__link text-link" href="/collections/knits"> 
+                                        <a class="navlist__link text-link" href="/collections/product"> 
                                             블레이저
                                         </a>
                                         </li>
                                         
                                         <li class="navlist__item">
-                                        <a class="navlist__link text-link" href="/collections/knits"> 
+                                        <a class="navlist__link text-link" href="/collections/product"> 
                                             상의
                                         </a>
                                         </li>
                                         
                                         <li class="navlist__item">
-                                        <a class="navlist__link text-link" href="/collections/knits"> 
+                                        <a class="navlist__link text-link" href="/collections/product"> 
                                             셔츠 &amp; 블라우스
                                         </a>
                                         </li>
 
                                         
                                         <li class="navlist__item">
-                                            <a class="navlist__link text-link" href="/collections/knits"> 
+                                            <a class="navlist__link text-link" href="/collections/product"> 
                                                 데님
                                             </a>
                                         </li>
 
                                         
                                         <li class="navlist__item">
-                                            <a class="navlist__link text-link" href="/collections/knits"> 
+                                            <a class="navlist__link text-link" href="/collections/product"> 
                                                 트라우저
                                             </a>
                                         </li>
 
                                         
                                         <li class="navlist__item">
-                                            <a class="navlist__link text-link" href="/collections/knits"> 
+                                            <a class="navlist__link text-link" href="/collections/product"> 
                                                 드레스 &amp; 셔츠
                                             </a>
                                         </li>
 
                                         
                                         <li class="navlist__item">
-                                            <a class="navlist__link text-link" href="/collections/knits"> 
+                                            <a class="navlist__link text-link" href="/collections/product"> 
                                                 신발
                                             </a>
                                         </li>
 
                                         
                                         <li class="navlist__item">
-                                            <a class="navlist__link text-link" href="/collections/knits"> 
+                                            <a class="navlist__link text-link" href="/collections/product"> 
                                                 액세서리
                                             </a>
                                         </li>
 
                                         
                                         <li class="navlist__item">
-                                            <a class="navlist__link text-link" href="/collections/knits"> 
+                                            <a class="navlist__link text-link" href="/collections/product"> 
                                                 T-clutch
                                             </a>
                                         </li>
 
                                           
                                         <li class="navlist__item">
-                                            <a class="navlist__link text-link" href="/collections/knits"> 
+                                            <a class="navlist__link text-link" href="/collections/product"> 
                                                 스카프
                                             </a>
                                         </li>
 
                                         
-                                        <li class="navlist__item">
-                                            <a class="navlist__link text-link" href="/collections/knits"> 
-                                                선글라스
-                                            </a>
-                                        </li>
 
                                         
                                         <li class="navlist__item">
-                                            <a class="navlist__link text-link" href="/collections/knits"> 
+                                            <a class="navlist__link text-link" href="/collections/product"> 
                                                 스윔웨어
                                             </a>
                                         </li>
 
                                         
                                         <li class="navlist__item">
-                                            <a class="navlist__link text-link" href="/collections/knits"> 
+                                            <a class="navlist__link text-link" href="/collections/product"> 
                                                 선글라스
                                             </a>
                                         </li>
@@ -598,78 +593,73 @@
                                   </a>
                                </li>
                                <li class="menu-drawer__item">
-                                  <a href="/collections/knits" class="menu-drawer__link">
-                                  Knits &amp; Sweaters
+                                  <a href="/collections/product" class="menu-drawer__link">
+                                    니트 &amp; 스웨터
                                   </a>
                                </li>
                                <li class="menu-drawer__item">
-                                  <a href="/collections/outerwear" class="menu-drawer__link">
-                                  Outerwear
+                                  <a href="/collections/product" class="menu-drawer__link">
+                                    아웃웨어
                                   </a>
                                </li>
                                <li class="menu-drawer__item">
-                                  <a href="/collections/blazers" class="menu-drawer__link">
-                                  Blazers
+                                  <a href="/collections/product" class="menu-drawer__link">
+                                    블레이저
                                   </a>
                                </li>
                                <li class="menu-drawer__item">
-                                  <a href="/collections/tops" class="menu-drawer__link">
-                                  Tops
+                                  <a href="/collections/product" class="menu-drawer__link">
+                                    상의
                                   </a>
                                </li>
                                <li class="menu-drawer__item">
-                                  <a href="/collections/shirts-and-blouses" class="menu-drawer__link">
-                                  Shirts &amp; Blouses
+                                  <a href="/collections/product" class="menu-drawer__link">
+                                    셔츠 &amp; 블라우스
                                   </a>
                                </li>
                                <li class="menu-drawer__item">
-                                  <a href="https://toteme-studio-int.myshopify.com/collections/denim" class="menu-drawer__link">
-                                  Denim
+                                  <a href="/collections/product" class="menu-drawer__link">
+                                    데님
                                   </a>
                                </li>
                                <li class="menu-drawer__item">
-                                  <a href="/collections/trousers" class="menu-drawer__link">
-                                  Trousers
+                                  <a href="/collections/product" class="menu-drawer__link">
+                                    트라우저
                                   </a>
                                </li>
                                <li class="menu-drawer__item">
-                                  <a href="/collections/dresses-and-skirts" class="menu-drawer__link">
-                                  Dresses &amp; Skirts
+                                  <a href="/collections/product" class="menu-drawer__link">
+                                    드레스 &amp; 셔츠
                                   </a>
                                </li>
                                <li class="menu-drawer__item">
-                                  <a href="/collections/shoes" class="menu-drawer__link">
-                                  Shoes
+                                  <a href="/collections/product" class="menu-drawer__link">
+                                    신발
                                   </a>
                                </li>
                                <li class="menu-drawer__item">
-                                  <a href="/collections/accessories" class="menu-drawer__link">
-                                  Accessories
+                                  <a href="/collections/product" class="menu-drawer__link">
+                                    액세서리
                                   </a>
                                </li>
                                <li class="menu-drawer__item">
-                                  <a href="/collections/t-clutch" class="menu-drawer__link">
+                                  <a href="/collections/product" class="menu-drawer__link">
                                   T-Clutch
                                   </a>
                                </li>
                                <li class="menu-drawer__item">
-                                  <a href="/collections/scarves" class="menu-drawer__link">
-                                  Silk scarves
+                                  <a href="/collections/product2" class="menu-drawer__link">
+                                    스카프
                                   </a>
                                </li>
                                <li class="menu-drawer__item">
-                                  <a href="/collections/sunglasses" class="menu-drawer__link">
-                                  Sunglasses
+                                  <a href="/collections/product" class="menu-drawer__link">
+                                    스윔웨어
                                   </a>
                                </li>
                                <li class="menu-drawer__item">
-                                  <a href="/collections/swim" class="menu-drawer__link">
-                                  Swim
-                                  </a>
-                               </li>
-                               <li class="menu-drawer__item">
-                                  <a href="/collections/shop-all" class="menu-drawer__link">
-                                  Shop all
+                                  <a href="/collections/product" class="menu-drawer__link">
+                                    선글라스
                                   </a>
                                </li>
                             </ul>
@@ -748,7 +738,7 @@
                             <ul js-menu-drawer="tier3Menu">
                                <li class="menu-drawer__item">
                                   <a href="/pages/uniforms" class="menu-drawer__link">
-                                  View all uniforms
+                                  전체보기
                                   </a>
                                </li>
                                <li class="menu-drawer__item">
@@ -977,12 +967,12 @@
 				</div>
 				<div class="product-card__footer">
 					<span class="product-card__title">
-						Crinkled silk slip dress champagne
+						크링클드 실크 슬립 드레스 샴페인
 					</span>
 					<div class="product-card__details">
 						<div class="product-price">
 							<span>
-								<span class="money">₩786,000 KRW</span>
+								<span class="money">786,000원</span>
 							</span>
 						</div>
 						<div class="product-card__sizes">
@@ -991,7 +981,7 @@
 					</div>
 				</div>
 				<div class="product-card__wishlist">
-					<button type="button" class="wk-button-collection wk-add-product" title="Add to Wishlist">
+					<button type="button" class="wk-button-collection wk-add-product" title="위시리스트에 추가">
 						<div class="wk-icon">
 							<span class="icon__star">
 								<svg version="1.1" xmlns="https://www.w3.org/2000/svg" width="64" height="60.9" viewBox="0 0 64 64">
@@ -1008,7 +998,7 @@
 								</svg>
 							</span>
 						</div>
-						<span class="wk-label">Add to Wishlist</span>
+						<span class="wk-label">위시리스트에 추가</span>
 					</button>
 				</div>
 			</a>
@@ -1025,21 +1015,21 @@
 				</div>
 				<div class="product-card__footer">
 					<span class="product-card__title">
-						Crinkled silk blouse black
+						크링클드 실크 블라우스 블랙
 					</span>
 					<div class="product-card__details">
 						<div class="product-price">
 							<span>
-								<span class="money">₩687,000 KRW</span>
+								<span class="money">687,000원</span>
 							</span>
 						</div>
 						<div class="product-card__sizes">
-							Available sizes: 32, 34, 36, 38, 40
+							사이즈: 32, 34, 36, 38, 40
 						</div>
 					</div>
 				</div>
 				<div class="product-card__wishlist">
-					<button type="button" class="wk-button-collection wk-add-product" title="Add to Wishlist">
+					<button type="button" class="wk-button-collection wk-add-product" title="위시리스트에 추가">
 						<div class="wk-icon">
 							<span class="icon__star">
 								<svg version="1.1" xmlns="https://www.w3.org/2000/svg" width="64" height="60.9" viewBox="0 0 64 64">
@@ -1056,7 +1046,7 @@
 								</svg>
 							</span>
 						</div>
-						<span class="wk-label">Add to Wishlist</span>
+						<span class="wk-label">위시리스트에 추가</span>
 					</button>
 				</div>
 			</a>
@@ -1072,12 +1062,12 @@
 				</div>
 				<div class="product-card__footer">
 					<span class="product-card__title">
-						Crinkled silk slip dress champagne
+						크링클드 실크 슬립 드레스 샴페인
 					</span>
 					<div class="product-card__details">
 						<div class="product-price">
 							<span>
-								<span class="money">₩786,000 KRW</span>
+								<span class="money">786,000원</span>
 							</span>
 						</div>
 						<div class="product-card__sizes">
@@ -1086,7 +1076,7 @@
 					</div>
 				</div>
 				<div class="product-card__wishlist">
-					<button type="button" class="wk-button-collection wk-add-product" title="Add to Wishlist">
+					<button type="button" class="wk-button-collection wk-add-product" title="위시리스트에 추가">
 						<div class="wk-icon">
 							<span class="icon__star">
 								<svg version="1.1" xmlns="https://www.w3.org/2000/svg" width="64" height="60.9" viewBox="0 0 64 64">
@@ -1103,7 +1093,7 @@
 								</svg>
 							</span>
 						</div>
-						<span class="wk-label">Add to Wishlist</span>
+						<span class="wk-label">위시리스트에 추가</span>
 					</button>
 				</div>
 			</a>
@@ -1120,21 +1110,21 @@
 				</div>
 				<div class="product-card__footer">
 					<span class="product-card__title">
-						Crinkled silk blouse black
+						크링클드 실크 블라우스 블랙
 					</span>
 					<div class="product-card__details">
 						<div class="product-price">
 							<span>
-								<span class="money">₩687,000 KRW</span>
+								<span class="money">687,000원</span>
 							</span>
 						</div>
 						<div class="product-card__sizes">
-							Available sizes: 32, 34, 36, 38, 40
+							사이즈: 32, 34, 36, 38, 40
 						</div>
 					</div>
 				</div>
 				<div class="product-card__wishlist">
-					<button type="button" class="wk-button-collection wk-add-product" title="Add to Wishlist">
+					<button type="button" class="wk-button-collection wk-add-product" title="위시리스트에 추가">
 						<div class="wk-icon">
 							<span class="icon__star">
 								<svg version="1.1" xmlns="https://www.w3.org/2000/svg" width="64" height="60.9" viewBox="0 0 64 64">
@@ -1151,7 +1141,7 @@
 								</svg>
 							</span>
 						</div>
-						<span class="wk-label">Add to Wishlist</span>
+						<span class="wk-label">위시리스트에 추가</span>
 					</button>
 				</div>
 			</a>
@@ -1171,12 +1161,12 @@
 				</div>
 				<div class="product-card__footer">
 					<span class="product-card__title">
-						Crinkled silk slip dress champagne
+						크링클드 실크 슬립 드레스 샴페인
 					</span>
 					<div class="product-card__details">
 						<div class="product-price">
 							<span>
-								<span class="money">₩786,000 KRW</span>
+								<span class="money">786,000원</span>
 							</span>
 						</div>
 						<div class="product-card__sizes">
@@ -1185,7 +1175,7 @@
 					</div>
 				</div>
 				<div class="product-card__wishlist">
-					<button type="button" class="wk-button-collection wk-add-product" title="Add to Wishlist">
+					<button type="button" class="wk-button-collection wk-add-product" title="위시리스트에 추가">
 						<div class="wk-icon">
 							<span class="icon__star">
 								<svg version="1.1" xmlns="https://www.w3.org/2000/svg" width="64" height="60.9" viewBox="0 0 64 64">
@@ -1202,7 +1192,7 @@
 								</svg>
 							</span>
 						</div>
-						<span class="wk-label">Add to Wishlist</span>
+						<span class="wk-label">위시리스트에 추가</span>
 					</button>
 				</div>
 			</a>
@@ -1219,21 +1209,21 @@
 				</div>
 				<div class="product-card__footer">
 					<span class="product-card__title">
-						Crinkled silk blouse black
+						크링클드 실크 블라우스 블랙
 					</span>
 					<div class="product-card__details">
 						<div class="product-price">
 							<span>
-								<span class="money">₩687,000 KRW</span>
+								<span class="money">687,000원</span>
 							</span>
 						</div>
 						<div class="product-card__sizes">
-							Available sizes: 32, 34, 36, 38, 40
+							사이즈: 32, 34, 36, 38, 40
 						</div>
 					</div>
 				</div>
 				<div class="product-card__wishlist">
-					<button type="button" class="wk-button-collection wk-add-product" title="Add to Wishlist">
+					<button type="button" class="wk-button-collection wk-add-product" title="위시리스트에 추가">
 						<div class="wk-icon">
 							<span class="icon__star">
 								<svg version="1.1" xmlns="https://www.w3.org/2000/svg" width="64" height="60.9" viewBox="0 0 64 64">
@@ -1250,7 +1240,7 @@
 								</svg>
 							</span>
 						</div>
-						<span class="wk-label">Add to Wishlist</span>
+						<span class="wk-label">위시리스트에 추가</span>
 					</button>
 				</div>
 			</a>
@@ -1266,12 +1256,12 @@
 				</div>
 				<div class="product-card__footer">
 					<span class="product-card__title">
-						Crinkled silk slip dress champagne
+						크링클드 실크 슬립 드레스 샴페인
 					</span>
 					<div class="product-card__details">
 						<div class="product-price">
 							<span>
-								<span class="money">₩786,000 KRW</span>
+								<span class="money">786,000원</span>
 							</span>
 						</div>
 						<div class="product-card__sizes">
@@ -1280,7 +1270,7 @@
 					</div>
 				</div>
 				<div class="product-card__wishlist">
-					<button type="button" class="wk-button-collection wk-add-product" title="Add to Wishlist">
+					<button type="button" class="wk-button-collection wk-add-product" title="위시리스트에 추가">
 						<div class="wk-icon">
 							<span class="icon__star">
 								<svg version="1.1" xmlns="https://www.w3.org/2000/svg" width="64" height="60.9" viewBox="0 0 64 64">
@@ -1297,7 +1287,7 @@
 								</svg>
 							</span>
 						</div>
-						<span class="wk-label">Add to Wishlist</span>
+						<span class="wk-label">위시리스트에 추가</span>
 					</button>
 				</div>
 			</a>
@@ -1337,12 +1327,12 @@
 				</div>
 				<div class="product-card__footer">
 					<span class="product-card__title">
-						Crinkled silk slip dress champagne
+						크링클드 실크 슬립 드레스 샴페인
 					</span>
 					<div class="product-card__details">
 						<div class="product-price">
 							<span>
-								<span class="money">₩786,000 KRW</span>
+								<span class="money">786,000원</span>
 							</span>
 						</div>
 						<div class="product-card__sizes">
@@ -1351,7 +1341,7 @@
 					</div>
 				</div>
 				<div class="product-card__wishlist">
-					<button type="button" class="wk-button-collection wk-add-product" title="Add to Wishlist">
+					<button type="button" class="wk-button-collection wk-add-product" title="위시리스트에 추가">
 						<div class="wk-icon">
 							<span class="icon__star">
 								<svg version="1.1" xmlns="https://www.w3.org/2000/svg" width="64" height="60.9" viewBox="0 0 64 64">
@@ -1368,7 +1358,7 @@
 								</svg>
 							</span>
 						</div>
-						<span class="wk-label">Add to Wishlist</span>
+						<span class="wk-label">위시리스트에 추가</span>
 					</button>
 				</div>
 			</a>
@@ -1385,21 +1375,21 @@
 				</div>
 				<div class="product-card__footer">
 					<span class="product-card__title">
-						Crinkled silk blouse black
+						크링클드 실크 블라우스 블랙
 					</span>
 					<div class="product-card__details">
 						<div class="product-price">
 							<span>
-								<span class="money">₩687,000 KRW</span>
+								<span class="money">687,000원</span>
 							</span>
 						</div>
 						<div class="product-card__sizes">
-							Available sizes: 32, 34, 36, 38, 40
+							사이즈: 32, 34, 36, 38, 40
 						</div>
 					</div>
 				</div>
 				<div class="product-card__wishlist">
-					<button type="button" class="wk-button-collection wk-add-product" title="Add to Wishlist">
+					<button type="button" class="wk-button-collection wk-add-product" title="위시리스트에 추가">
 						<div class="wk-icon">
 							<span class="icon__star">
 								<svg version="1.1" xmlns="https://www.w3.org/2000/svg" width="64" height="60.9" viewBox="0 0 64 64">
@@ -1416,7 +1406,7 @@
 								</svg>
 							</span>
 						</div>
-						<span class="wk-label">Add to Wishlist</span>
+						<span class="wk-label">위시리스트에 추가</span>
 					</button>
 				</div>
 			</a>
@@ -1432,12 +1422,12 @@
 				</div>
 				<div class="product-card__footer">
 					<span class="product-card__title">
-						Crinkled silk slip dress champagne
+						크링클드 실크 슬립 드레스 샴페인
 					</span>
 					<div class="product-card__details">
 						<div class="product-price">
 							<span>
-								<span class="money">₩786,000 KRW</span>
+								<span class="money">786,000원</span>
 							</span>
 						</div>
 						<div class="product-card__sizes">
@@ -1446,7 +1436,7 @@
 					</div>
 				</div>
 				<div class="product-card__wishlist">
-					<button type="button" class="wk-button-collection wk-add-product" title="Add to Wishlist">
+					<button type="button" class="wk-button-collection wk-add-product" title="위시리스트에 추가">
 						<div class="wk-icon">
 							<span class="icon__star">
 								<svg version="1.1" xmlns="https://www.w3.org/2000/svg" width="64" height="60.9" viewBox="0 0 64 64">
@@ -1463,7 +1453,7 @@
 								</svg>
 							</span>
 						</div>
-						<span class="wk-label">Add to Wishlist</span>
+						<span class="wk-label">위시리스트에 추가</span>
 					</button>
 				</div>
 			</a>
@@ -1480,21 +1470,21 @@
 				</div>
 				<div class="product-card__footer">
 					<span class="product-card__title">
-						Crinkled silk blouse black
+						크링클드 실크 블라우스 블랙
 					</span>
 					<div class="product-card__details">
 						<div class="product-price">
 							<span>
-								<span class="money">₩687,000 KRW</span>
+								<span class="money">687,000원</span>
 							</span>
 						</div>
 						<div class="product-card__sizes">
-							Available sizes: 32, 34, 36, 38, 40
+							사이즈: 32, 34, 36, 38, 40
 						</div>
 					</div>
 				</div>
 				<div class="product-card__wishlist">
-					<button type="button" class="wk-button-collection wk-add-product" title="Add to Wishlist">
+					<button type="button" class="wk-button-collection wk-add-product" title="위시리스트에 추가">
 						<div class="wk-icon">
 							<span class="icon__star">
 								<svg version="1.1" xmlns="https://www.w3.org/2000/svg" width="64" height="60.9" viewBox="0 0 64 64">
@@ -1511,7 +1501,7 @@
 								</svg>
 							</span>
 						</div>
-						<span class="wk-label">Add to Wishlist</span>
+						<span class="wk-label">위시리스트에 추가</span>
 					</button>
 				</div>
 			</a>
@@ -1531,12 +1521,12 @@
 				</div>
 				<div class="product-card__footer">
 					<span class="product-card__title">
-						Crinkled silk slip dress champagne
+						크링클드 실크 슬립 드레스 샴페인
 					</span>
 					<div class="product-card__details">
 						<div class="product-price">
 							<span>
-								<span class="money">₩786,000 KRW</span>
+								<span class="money">786,000원</span>
 							</span>
 						</div>
 						<div class="product-card__sizes">
@@ -1545,7 +1535,7 @@
 					</div>
 				</div>
 				<div class="product-card__wishlist">
-					<button type="button" class="wk-button-collection wk-add-product" title="Add to Wishlist">
+					<button type="button" class="wk-button-collection wk-add-product" title="위시리스트에 추가">
 						<div class="wk-icon">
 							<span class="icon__star">
 								<svg version="1.1" xmlns="https://www.w3.org/2000/svg" width="64" height="60.9" viewBox="0 0 64 64">
@@ -1562,7 +1552,7 @@
 								</svg>
 							</span>
 						</div>
-						<span class="wk-label">Add to Wishlist</span>
+						<span class="wk-label">위시리스트에 추가</span>
 					</button>
 				</div>
 			</a>
@@ -1579,21 +1569,21 @@
 				</div>
 				<div class="product-card__footer">
 					<span class="product-card__title">
-						Crinkled silk blouse black
+						크링클드 실크 블라우스 블랙
 					</span>
 					<div class="product-card__details">
 						<div class="product-price">
 							<span>
-								<span class="money">₩687,000 KRW</span>
+								<span class="money">687,000원</span>
 							</span>
 						</div>
 						<div class="product-card__sizes">
-							Available sizes: 32, 34, 36, 38, 40
+							사이즈: 32, 34, 36, 38, 40
 						</div>
 					</div>
 				</div>
 				<div class="product-card__wishlist">
-					<button type="button" class="wk-button-collection wk-add-product" title="Add to Wishlist">
+					<button type="button" class="wk-button-collection wk-add-product" title="위시리스트에 추가">
 						<div class="wk-icon">
 							<span class="icon__star">
 								<svg version="1.1" xmlns="https://www.w3.org/2000/svg" width="64" height="60.9" viewBox="0 0 64 64">
@@ -1610,7 +1600,7 @@
 								</svg>
 							</span>
 						</div>
-						<span class="wk-label">Add to Wishlist</span>
+						<span class="wk-label">위시리스트에 추가</span>
 					</button>
 				</div>
 			</a>
@@ -1626,12 +1616,12 @@
 				</div>
 				<div class="product-card__footer">
 					<span class="product-card__title">
-						Crinkled silk slip dress champagne
+						크링클드 실크 슬립 드레스 샴페인
 					</span>
 					<div class="product-card__details">
 						<div class="product-price">
 							<span>
-								<span class="money">₩786,000 KRW</span>
+								<span class="money">786,000원</span>
 							</span>
 						</div>
 						<div class="product-card__sizes">
@@ -1640,7 +1630,7 @@
 					</div>
 				</div>
 				<div class="product-card__wishlist">
-					<button type="button" class="wk-button-collection wk-add-product" title="Add to Wishlist">
+					<button type="button" class="wk-button-collection wk-add-product" title="위시리스트에 추가">
 						<div class="wk-icon">
 							<span class="icon__star">
 								<svg version="1.1" xmlns="https://www.w3.org/2000/svg" width="64" height="60.9" viewBox="0 0 64 64">
@@ -1657,7 +1647,7 @@
 								</svg>
 							</span>
 						</div>
-						<span class="wk-label">Add to Wishlist</span>
+						<span class="wk-label">위시리스트에 추가</span>
 					</button>
 				</div>
 			</a>
@@ -1674,21 +1664,21 @@
 				</div>
 				<div class="product-card__footer">
 					<span class="product-card__title">
-						Crinkled silk blouse black
+						크링클드 실크 블라우스 블랙
 					</span>
 					<div class="product-card__details">
 						<div class="product-price">
 							<span>
-								<span class="money">₩687,000 KRW</span>
+								<span class="money">687,000원</span>
 							</span>
 						</div>
 						<div class="product-card__sizes">
-							Available sizes: 32, 34, 36, 38, 40
+							사이즈: 32, 34, 36, 38, 40
 						</div>
 					</div>
 				</div>
 				<div class="product-card__wishlist">
-					<button type="button" class="wk-button-collection wk-add-product" title="Add to Wishlist">
+					<button type="button" class="wk-button-collection wk-add-product" title="위시리스트에 추가">
 						<div class="wk-icon">
 							<span class="icon__star">
 								<svg version="1.1" xmlns="https://www.w3.org/2000/svg" width="64" height="60.9" viewBox="0 0 64 64">
@@ -1705,7 +1695,7 @@
 								</svg>
 							</span>
 						</div>
-						<span class="wk-label">Add to Wishlist</span>
+						<span class="wk-label">위시리스트에 추가</span>
 					</button>
 				</div>
 			</a>
@@ -2706,7 +2696,6 @@
 
 
       <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/css/flag-icon.min.css" rel="stylesheet" type="text/css" media="all">
-
 
    </body>
 </html>

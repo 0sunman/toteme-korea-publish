@@ -1,9 +1,11 @@
 <style>
-.publishlist{padding:50px}
+p.gnbcheck{text-align: center; margin-top: 30px;}
+.publishlist{padding:50px;padding-top:0px;}
 </style>
-       
+<link href="/css/toteme.custom.css" rel="stylesheet">
+    <p class='gnbcheck'>*You can check GNB Above*</p>
     <div class='publishlist'>   
-       <h2>메인</h2>
+       <h2>Main</h2>
         <ul id='main'>
             <% pageList.forEach(function(data){ 
                 if(data.type == "main"){ %>
@@ -13,7 +15,7 @@
             <%}}) %> 
         </ul>
 
-        <h2>마이페이지</h2>
+        <h2>My Page</h2>
         <ul id='mypage'>
             <% pageList.forEach(function(data){ 
                 if(data.type == "mypage"){ %>
@@ -23,7 +25,7 @@
             <%}}) %> 
         </ul>
 
-        <h2>회원가입</h2>
+        <h2>Accounts</h2>
         <ul id='join'>
             <% pageList.forEach(function(data){ 
                 if(data.type == "join"){ %>
@@ -33,7 +35,7 @@
             <%}}) %> 
         </ul>
 
-        <h2>상품</h2>
+        <h2>PDP</h2>
         <ul id='product'>
             <% pageList.forEach(function(data){ 
                 if(data.type == "product"){ %>
@@ -44,17 +46,17 @@
         </ul>
 
 
-        <h2>주문</h2>
+        <h2>Orders</h2>
         <ul id='order'>
             <% pageList.forEach(function(data){ 
                 if(data.type == "order"){ %>
             <li>
-                <a href='https://ghcdn.rawgit.org/0sunman/toteme-korea-publish/main/dist/<%= data.title %>.html'><%= data.title %></a>
+                <a href='https://0sunman.github.io/toteme-korea-publish/dist/<%= data.pageurl %>.html'><%= data.title %></a>
             </li>
             <%}}) %> 
         </ul>
         
-        <h2>일반</h2>
+        <h2>About/Question/Uniforms</h2>
         <ul id='page'>
             <% pageList.forEach(function(data){ 
                 if(data.type == "page"){ %>
@@ -64,3 +66,6 @@
             <%}}) %> 
         </ul>
     </div>
+    <a href='https://github.com/0sunman/toteme-korea-publish'>
+        <img src="https://0sunman.github.io/toteme-korea-publish/public/css/github.png" style='width:50px; height: 50px; position: fixed; bottom:10px;right:10px;z-index:999999'>
+    </a>
