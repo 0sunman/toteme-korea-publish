@@ -146,8 +146,8 @@ input[type=email], input[type=password], input[type=search], input[type=tel], in
 /* // 2-2 회원가입 페이지*/
 
 @media (max-width:767px){
-    .container .template-account__navlist {padding-top:15px; padding-bottom:15px;}
-    .container .template-login__form .form-group{padding-top:15px; padding-bottom:15px;}    
+    .container .template-account__navlist {padding-top:20px; padding-bottom:20px;}
+    .container .template-login__form .form-group{padding-top:20px; padding-bottom:20px;}    
 }
 
 .defaultblock{display: block;}
@@ -230,3 +230,11 @@ input.button--block:hover,input.template-login input.AAI_submit:hover, select:fo
 
 body.drawer--open--blur .site-header-wrapper{z-index:25;}
 body.overflow-hidden {overflow: hidden;}
+
+
+@media (max-width: 767px){
+    .site-footer__action { width: 80%; }
+    .custom-module__nav-dropdown{ width:80%; }
+    .custom-select__wrapper{ width:80%; }
+    .custom-module__text-column.custom-module__text-column--content{border-top:0}
+}

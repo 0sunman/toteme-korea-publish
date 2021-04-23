@@ -35,7 +35,6 @@ Util.prototype.registerEvent = function(option){
         break;
 
 
-
         case "showLeftMenu":
             /*
             제목 : 좌측 메뉴 이벤트
@@ -71,6 +70,7 @@ Util.prototype.registerEvent = function(option){
             }).bind(this))
 
             $("#menuDrawer ul.menu-drawer__menu > li.menu-drawer__item > button.menu-drawer__button").on("click",function(){
+                $(this).toggleClass("is-active")
                 $(this).siblings().eq(0).toggleClass("is-active")
             })
         break;
