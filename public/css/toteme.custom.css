@@ -341,9 +341,9 @@ body.overflow-hidden {overflow: hidden;}
 @media screen and (max-width: 999px){
     .checkout .section.section--payment>.section__content{padding: 0 0 .75rem;}
 }
-.section--payment>.section__content{padding: .75rem 1.5rem 0;}
+.checkout .section--payment>.section__content{padding: .75rem 1.5rem 0;}
 @media (min-width: 62.5em){
-    .section--payment>.section__content{padding: 1rem 1rem 0;}
+    .checkout .section--payment>.section__content{padding: 1rem 1rem 0;}
 }
 
 .section--payment .comment{font-size: 12px; line-height: 15px;}
