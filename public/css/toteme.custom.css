@@ -278,8 +278,6 @@ body.overflow-hidden {overflow: hidden;}
     .preorder-modal__footer {padding: 20px 80px;}
 }
 .product-form__add-to-cart>button.button.is-active:hover .label-atc{display: block;}
-figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
-.containerZoom.active{cursor: zoom-out;}
 /* //상품 */
 
 /* 주문 */
