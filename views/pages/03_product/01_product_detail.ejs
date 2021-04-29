@@ -825,8 +825,6 @@
 
 <script>
 	//PDP 상품이미지 줌
-	if ( $('.product-gallery__featured-image').length > 0 ){
-		var zoomImages = $('.product-gallery__featured-image').find("img"); 
-		zoomImages.each(function() { $(this).imageZoom({zoom:200}); });
-	}
+	var zoomImages = $('.product-gallery__featured-image').find("img"); 
+	zoomImages.each(function() { $(this).imageZoom({zoom:200}); });
 </script>
