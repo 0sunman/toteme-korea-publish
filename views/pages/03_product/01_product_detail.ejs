@@ -822,3 +822,11 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="https://0sunman.github.io/toteme-korea-publish/public/js/image-zoom.min.js"></script>
 <script src="https://0sunman.github.io/toteme-korea-publish/public/js/toteme.custom.order.js"></script>
+
+<script>
+	//PDP 상품이미지 줌
+	if ( $('.product-gallery__featured-image').length > 0 ){
+		var zoomImages = $('.product-gallery__featured-image').find("img"); 
+		zoomImages.each(function() { $(this).imageZoom({zoom:200}); });
+	}
+</script>

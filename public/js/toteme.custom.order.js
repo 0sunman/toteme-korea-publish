@@ -17,7 +17,7 @@ $(function(){
 				$('body').css('overflow','');
 		}
 	});
-	
+
 	//전화번호 추가
 	$('.phone_form .btn_plus').on('click', function(){
 		$(this).parents('.phone_form').siblings('.input_phone_plus').toggleClass("active");
@@ -157,11 +157,6 @@ $(function(){
 						item_height = $(".product-gallery__thumbnail-image").height();
 		$(this).siblings(".product-gallery__thumbnail-carousel").stop().animate({scrollTop:current_scroll+item_height},300);
 	});
-	//PDP 상품이미지 줌
-	if ( $('.product-gallery__featured-image').length > 0 ){
-		var zoomImages = $('.product-gallery__featured-image').find("img"); 
-		zoomImages.each(function() { $(this).imageZoom({zoom:200}); });
-	}
 	//PDP 상품 사이즈 Select 옵션 별 button 변경
 	arr1 = new Array();
 	$("#OptionSelector-main option").each(function(index){
