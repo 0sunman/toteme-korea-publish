@@ -100,7 +100,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="section section--shipping-address section--payment" data-shipping-address="">
+								<div class="section section--payment">
 									<div class="section__header">
 										<h2 class="section__title" id="section-delivery-title">
 											결제
@@ -331,7 +331,7 @@
 											<p class="payment_guaranty">채무지급 보증안내 - 고객님의 안전거래를 위해 현금결제시 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다. <a href="#" class="a_link modal_trigger" data-modal="ly_guarantee-modal">서비스 가입사실 확인</a></p>
 											<div class="checkbox_custom_box">
 												<input id="payment_agree1" class="checkbox" value="1" type="checkbox">
-												<label for="payment_agree1">비회원 개인정보 수집 이용에 대한 내용을 확인하였으며, 이에 동의합니다. <a href="#" class="a_link">내용보기</a></label>
+												<label for="payment_agree1">비회원 개인정보 수집 이용에 대한 내용을 확인하였으며, 이에 동의합니다. <a href="#" class="a_link modal_trigger" data-modal="nm_privacy-modal">내용보기</a></label>
 												
 											</div>
 											<div class="checkbox_custom_box">
@@ -739,6 +739,26 @@
 					<div class="ly_guarantee_container">
 						<img src="https://image.thehyundai.com/cos_cdn/images/cos/01/Payment/img_guarantee_01.jpg" alt="">
 						<img src="https://image.thehyundai.com/cos_cdn/images/cos/01/Payment/img_guarantee_02.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="nm_privacy-modal" class="modal modal--light nm_privacy-modal" role="dialog" tabindex="-1">
+		<div class="modal__overlay" tabindex="-1">
+			<div class="modal__card">
+				<div class="modal__header">
+					<h5 class="modal__title preorder-modal__title">비회원 주문 정보수집 동의</h5>
+					<button class="modal__close">
+						<span class="visually-hidden">
+							Close
+						</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+						</svg> </button>
+				</div>
+				<div class="modal__body">
+					<div class="nm_privacy_conainter">
+						약관 내용 표시
 					</div>
 				</div>
 			</div>
