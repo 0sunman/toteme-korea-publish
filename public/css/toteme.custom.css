@@ -341,6 +341,11 @@ body.overflow-hidden {overflow: hidden;}
 @media screen and (max-width: 999px){
     .checkout .section.section--payment>.section__content{padding: 0 0 .75rem;}
 }
+.section--payment>.section__content{padding: .75rem 1.5rem 0;}
+@media (min-width: 62.5em){
+    .section--payment>.section__content{padding: 1rem 1rem 0;}
+}
+
 .section--payment .comment{font-size: 12px; line-height: 15px;}
 .payment_guaranty{font-size: 15px;}
 .a_link{display: inline-block; position: relative;}
@@ -362,7 +367,7 @@ body.overflow-hidden {overflow: hidden;}
 .payment_radio_wrap:before, .payment_radio_wrap:after{display: none;}
 .payment_radio_wrap>*{font-size: 15px; letter-spacing: 0;}
 .payment_radio_wrap .radio_custom_box{display: inline-block; width: 33.33%; font-size: 15px;}
-@media screen and (max-width: 999px){
+@media screen and (max-width: 1300px){
     .payment_radio_wrap .radio_custom_box{width: 50%;}
 }
 @media screen and (max-width: 510px){
