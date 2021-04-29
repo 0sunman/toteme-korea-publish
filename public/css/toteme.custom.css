@@ -246,3 +246,10 @@ body.overflow-hidden {overflow: hidden;}
     .custom-select__wrapper{ width:80%; }
     .custom-module__text-column.custom-module__text-column--content{border-top:0}
 }
+
+
+/* 테이블 */
+.table_type1{border-spacing: 0; min-width: 100%; table-layout: fixed; border-top: 1px solid #171616; border-left: 1px solid #171616;}
+.table_type1 th, .table_type1 td{min-width: 3rem; padding: .25rem; border-bottom: 1px solid #171616; border-right: 1px solid #171616; font-weight: 400;}
+.table_type1 th{text-align: center;}
+.table_type1 td{text-align: left;}
