@@ -193,10 +193,6 @@ $(function(){
 	}).focusout(function(){
 		$(this).parent('.product-form__swatch').removeClass('is-active');
 	});
-	//PDP 상품 아코디언
-	$('.accordion__control').on('click', function(){
-		$(this).parents('.accordion__item').toggleClass('is-active').siblings().removeClass('is-active');
-	});
 	//PDP cm inch 탭
 	$('.size-guide__unit-toggle').on('click', function(){
 		$(this).addClass('is-active').siblings().removeClass('is-active');
