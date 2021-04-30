@@ -74,6 +74,19 @@ Util.prototype.registerEvent = function(option){
                 $(this).siblings().eq(0).toggleClass("is-active")
             })
         break;
+
+        case "arrowEvent":
+            /* 한국 애로우 변경 */
+            var pointStack = -1;
+            $("#MainContent ul.navlist li").each(function(idx,ele){
+                if($(ele).find(".is-active").length){
+                    pointStack = idx;
+                }
+            });
+            $("#MainContent ul.navlist").mouseover(function(){ $("#MainContent ul.navlist li a.is-active").removeClass("is-active") })
+            $("#MainContent ul.navlist").mouseout(function(){ $("#MainContent ul.navlist li:nth-child("+(pointStack+1)+") a").addClass("is-active") })
+            /* // 한국 애로우 변경 */
+        break;
     }
 }
 
@@ -99,6 +112,9 @@ var utilInstance = new Util();
 var SiteController = function(){
     this.initRightMenu();
     this.initMobileMenu();
+    
+    /* 20210430 애로우 수정 요청 */
+    this.initListPointerArrow();
 }
 
 SiteController.prototype.initMobileMenu = function(){
@@ -111,6 +127,11 @@ SiteController.prototype.initRightMenu = function(){
         utilInstance.registerEvent({cmd:"showRightMenu", target:targetId, element:ele});        
         // data-header-button-type에 버튼 ID를 입력하면, 우측 메뉴 이벤트가 작동됩니다.             
     })
+}
+
+
+SiteController.prototype.initListPointerArrow = function(){
+    utilInstance.registerEvent({cmd:"arrowEvent", target:targetId, element:ele});    
 }
 new SiteController();
 
@@ -163,3 +184,4 @@ setTimeout(function(){
  },100)
 
 /* // 퍼블리싱 사이트용 커스텀 영역 */
+

@@ -253,3 +253,37 @@ body.overflow-hidden {overflow: hidden;}
 .table_type1 th, .table_type1 td{min-width: 3rem; padding: .25rem; border-bottom: 1px solid #171616; border-right: 1px solid #171616; font-weight: 400;}
 .table_type1 th{text-align: center;}
 .table_type1 td{text-align: left;}
+
+
+
+
+
+
+/* 한국 사이트 메뉴 변경 */
+/* height 50px */
+#menuDrawer .menu-drawer__body > .container .menu-drawer__item .menu-drawer__menu button.menu-drawer__button,
+#menuDrawer .menu-drawer__body > .container .menu-drawer__item .menu-drawer__menu a.menu-drawer__link{height:50px;}
+#menuDrawer > div > div.menu-drawer__body > div > ul > li > button,
+#menuDrawer > div > div.menu-drawer__body > div > ul > li > a {height:50px; padding:20px 15px 20px 15px; line-height: 10px;}
+/*// height 50px */
+
+
+/* 활성화 시, 상단생략 및 우측 30px */
+#menuDrawer > div > div.menu-drawer__body ul > li:nth-child(1) > a{padding-top:0px}
+#menuDrawer > div > div.menu-drawer__body ul.is-active > li a{padding-left:30px;}
+
+/* 줄 크기 */
+#menuDrawer .menu-drawer__bordered-menu>li:not(:last-child):after{margin: 20px 1.75rem 20px;}
+#menuDrawer .responsive-image__wrapper.menu-drawer__image-wrapper{margin:20px 15px 10px 30px;}
+
+/* 화살표 크기 */
+#menuDrawer .icon.icon__chevron.icon__chevron--right{transform: rotate(270deg);}
+
+/* 버튼 활성화시 상하 20px*/
+#menuDrawer button.menu-drawer__button.is-active{padding-top:20px; padding-bottom:20px;}
+
+/* // 한국 사이트 메뉴 변경 */
+
+/* 한국 애로우 변경 */
+li > a.navlist__link.text-link{padding-left:15px}
+/* // 한국 애로우 변경 */
