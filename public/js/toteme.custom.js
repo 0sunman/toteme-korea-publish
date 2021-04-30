@@ -78,11 +78,11 @@ Util.prototype.registerEvent = function(option){
         case "arrowEvent":
             /* 한국 애로우 변경 */
             var pointStack = -1;
-            $("#MainContent ul.navlist li").each(function(idx,ele){
+            $("#MainContent ul.navlist li").each((function(idx,ele){
                 if($(ele).find(".is-active").length){
                     pointStack = idx;
                 }
-            });
+            }).bind(this));
             $("#MainContent ul.navlist").parent().mouseover(function(e){ 
                 $("#MainContent ul.navlist li").each(function(idx,ele){
                     $(ele).find("a").attr("class",$(ele).attr("class").replace(" is-active",""));
