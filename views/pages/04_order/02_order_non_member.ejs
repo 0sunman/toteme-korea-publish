@@ -117,11 +117,11 @@
 											</div>
 										</div>
 										<div class="input-block form-group__footer">
-											<input class="step__footer__continue-btn btn" type="submit" value="본인인증">
+											<input class="step__footer__continue-btn btn modal_trigger" type="submit" value="본인인증" data-modal="verify-modal">
 									 </div>
 									</div>
 								</div>
-								<div class="section section--shipping-address" data-shipping-address="">
+								<div class="section section--shipping-address">
 									<div class="section__header">
 										<h2 class="section__title" id="section-delivery-title">
 											배송지 정보
@@ -513,116 +513,151 @@
 
 	<div id="address-modal" class="modal modal--light address-modal" role="dialog" tabindex="-1">
 		<div class="modal__overlay" tabindex="-1">
-			<div class="modal__card">
-				<div class="modal__header">
-					<h5 class="modal__title  preorder-modal__title">주소검색</h5>
-					<button class="modal__close">
-						<span class="visually-hidden">
-							Close
-						</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
-						</svg> </button>
-				</div>
-				<div class="modal__body">
-					<div class="address_modal_container">
-						<div class="section__content form-group">
-							<div class="input-block form-group__field">
-								<label class="field__label field__label--visible" for="checkout_addr_find">주소 찾기</label>
-								<input placeholder="찾고자 하는 주소를 입력하세요" class="field__input" size="30" type="text" name="checkout[addr_find]" id="checkout_addr_find">
+			<div class="address-modal">
+				<div class="modal__card">
+					<div class="modal__header">
+						<h5 class="modal__title  preorder-modal__title">주소검색</h5>
+						<button class="modal__close">
+							<span class="visually-hidden">
+								Close
+							</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+							</svg> </button>
+					</div>
+					<div class="modal__body">
+						<div class="address_modal_container">
+							<div class="section__content form-group">
+								<div class="input-block form-group__field">
+									<label class="field__label field__label--visible" for="checkout_addr_find">주소 찾기</label>
+									<input placeholder="찾고자 하는 주소를 입력하세요" class="field__input" size="30" type="text" name="checkout[addr_find]" id="checkout_addr_find">
+								</div>
+								<div class="input-block">
+									<input class="step__footer__continue-btn btn" type="submit" value="검색">
+									<p class="comment">예: 동(읍/면)명 또는 도로명주소(건물번호/건물명)<br>일부 군사지역은 배송이 불가능할 수 있습니다.</p>
+							 </div>
 							</div>
-							<div class="input-block">
-								<input class="step__footer__continue-btn btn" type="submit" value="검색">
-								<p class="comment">예: 동(읍/면)명 또는 도로명주소(건물번호/건물명)<br>일부 군사지역은 배송이 불가능할 수 있습니다.</p>
+							<div class="address_find_content">
+								<div class="input-table form-group__field">
+									<div>
+										<div class="select-wrap">
+											<select class="field__input field__input--select toteme-select-style toteme-button-style no-animation">
+												<option value="">시/도</option>
+												<option value="">시/도</option>
+												<option value="">시/도</option>
+											</select>
+										</div>
+									</div>
+									<div>
+										<div class="select-wrap">
+											<select class="field__input field__input--select toteme-select-style toteme-button-style no-animation">
+												<option value="">군/구</option>
+												<option value="">군/구</option>
+												<option value="">군/구</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<ul class="addr_list">
+									<li><a href="#">
+										<span class="addr-line rrr">
+											<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
+										</span>
+										<span class="addr-line jjj">
+											<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
+										</span>
+										<span class="zipcode">06088</span>
+									</a></li>
+									<li><a href="#">
+										<span class="addr-line rrr">
+											<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
+										</span>
+										<span class="addr-line jjj">
+											<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
+										</span>
+										<span class="zipcode">06088</span>
+									</a></li>
+									<li><a href="#">
+										<span class="addr-line rrr">
+											<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
+										</span>
+										<span class="addr-line jjj">
+											<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
+										</span>
+										<span class="zipcode">06088</span>
+									</a></li>
+									<li><a href="#">
+										<span class="addr-line rrr">
+											<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
+										</span>
+										<span class="addr-line jjj">
+											<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
+										</span>
+										<span class="zipcode">06088</span>
+									</a></li>
+									<li><a href="#">
+										<span class="addr-line rrr">
+											<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
+										</span>
+										<span class="addr-line jjj">
+											<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
+										</span>
+										<span class="zipcode">06088</span>
+									</a></li>
+								</ul>
+								<!-- 상세주소 입력 -->
+								<ul class="addr_list">
+									<li>
+										<div class="radio_custom_box">
+											<input id="addr_type1" class="radio_input" value="1" type="radio" name="addr_type" checked>
+											<label for="addr_type1"><span class="addr-mark-name">도로명</span> 서울특별시 강남구 학동로 402</label>
+									 </div>
+									 <div class="radio_custom_box">
+											<input id="addr_type2" class="radio_input" value="2" type="radio" name="addr_type">
+											<label for="addr_type2"><span class="addr-mark-num">지번</span> 서울특별시 강남구 삼성동 1</label>
+									 </div>
+									</li>
+								</ul>
+								<div class="input-block form-group__field">
+									<label class="field__label field__label--visible" for="addr_detail">상세주소 입력</label>
+									<input placeholder="상세주소 입력" class="field__input" size="30" type="text" name="checkout[addr_detail]" id="addr_detail">
+								</div>
+								<div class="input-block pcs2">
+									<input class="step__footer__continue-btn btn" type="submit" value="확인">
+									<input class="step__footer__continue-btn btn white" type="submit" value="취소">
+							 </div>
 							</div>
 						</div>
-						<div class="address_find_content">
-							<div class="input-table form-group__field">
-								<div>
-									<div class="select-wrap">
-										<select class="field__input field__input--select toteme-select-style toteme-button-style no-animation">
-											<option value="">시/도</option>
-											<option value="">시/도</option>
-											<option value="">시/도</option>
-										</select>
-									</div>
-								</div>
-								<div>
-									<div class="select-wrap">
-										<select class="field__input field__input--select toteme-select-style toteme-button-style no-animation">
-											<option value="">군/구</option>
-											<option value="">군/구</option>
-											<option value="">군/구</option>
-										</select>
-									</div>
-								</div>
-							</div>
-							<ul class="addr_list">
-								<li><a href="#">
-									<span class="addr-line rrr">
-										<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
-									</span>
-									<span class="addr-line jjj">
-										<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
-									</span>
-									<span class="zipcode">06088</span>
-								</a></li>
-								<li><a href="#">
-									<span class="addr-line rrr">
-										<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
-									</span>
-									<span class="addr-line jjj">
-										<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
-									</span>
-									<span class="zipcode">06088</span>
-								</a></li>
-								<li><a href="#">
-									<span class="addr-line rrr">
-										<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
-									</span>
-									<span class="addr-line jjj">
-										<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
-									</span>
-									<span class="zipcode">06088</span>
-								</a></li>
-								<li><a href="#">
-									<span class="addr-line rrr">
-										<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
-									</span>
-									<span class="addr-line jjj">
-										<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
-									</span>
-									<span class="zipcode">06088</span>
-								</a></li>
-								<li><a href="#">
-									<span class="addr-line rrr">
-										<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
-									</span>
-									<span class="addr-line jjj">
-										<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
-									</span>
-									<span class="zipcode">06088</span>
-								</a></li>
-							</ul>
-							<!-- 상세주소 입력 -->
-							<ul class="addr_list">
-								<li>
-									<div class="radio_custom_box">
-										<input id="addr_type1" class="radio_input" value="1" type="radio" name="addr_type" checked>
-										<label for="addr_type1"><span class="addr-mark-name">도로명</span> 서울특별시 강남구 학동로 402</label>
-									</div>
-									<div class="radio_custom_box">
-										<input id="addr_type2" class="radio_input" value="2" type="radio" name="addr_type">
-										<label for="addr_type2"><span class="addr-mark-num">지번</span> 서울특별시 강남구 삼성동 1</label>
-									</div>
-								</li>
-							</ul>
-							<div class="input-block form-group__field">
-								<label class="field__label field__label--visible" for="addr_detail">상세주소 입력</label>
-								<input placeholder="상세주소 입력" class="field__input" size="30" type="text" name="checkout[addr_detail]" id="addr_detail">
-							</div>
-							<div class="input-block pcs2">
-								<input class="step__footer__continue-btn btn" type="submit" value="확인">
-								<input class="step__footer__continue-btn btn white" type="submit" value="취소">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="verify-modal" class="modal modal--light verify-modal" role="dialog" tabindex="-1">
+		<div class="modal__overlay" tabindex="-1">
+			<div class="verify-modal">
+				<div class="modal__card">
+					<div class="modal__header">
+						<h5 class="modal__title  preorder-modal__title">본인인증방법 선택</h5>
+						<button class="modal__close">
+							<span class="visually-hidden">
+								Close
+							</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+							</svg> </button>
+					</div>
+					<div class="modal__body">
+						<div class="verify_container">
+							<div class="input-block form-group__footer">
+								<input class="button button--primary button--block button--large is-valid" type="button" value="휴대폰 인증">
+								<input class="button button--primary button--block button--large is-valid" type="button" value="I-PIN 인증">
+						  </div>
+						  <div class="verify_txt_box">
+								<h6 class="payment_tit1">본인인증 시 유의사항</h6>
+								<p>본인인증 서비스는 신용정보 취급정식 인가 업체인 (주)드림시큐리티 / (주)서울신용평가 정보에서 제공합니다.</p>
+								<h6 class="payment_tit1">본인인증에 문제가 있는 경우</h6>
+								<p>(주)드림시큐리티 02-1899-4134 / (주)서울신용평가정보 1577-1006 으로 문의하여 주시기 바랍니다.</p>
+								<p>위 인증방법이 모두 실패하셨을 경우, 더현대 고객센터 [0000-0000]로 문의하여 주시기 바랍니다.</p>
 							</div>
 						</div>
 					</div>

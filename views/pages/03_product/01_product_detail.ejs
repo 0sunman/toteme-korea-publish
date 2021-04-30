@@ -1,19 +1,5 @@
+<link rel="stylesheet" href="https://0sunman.github.io/toteme-korea-publish/public/css/image-zoom.css">
 
-<style>
-	.modal__body.preorder-modal__body {padding: 100px 1rem 3rem;}
-	.preorder-modal__button-wrapper {margin: auto; max-width: 240px;}
-	.preorder-modal__button:first-child {margin-bottom: 1rem;}
-	.preorder-modal__footer {padding: 20px 2rem; text-align: center;}
-	@media (max-width: 61.99em) {
-		.preorder-modal .modal__card {width:calc(100% - 75px);}
-	}
-@media (min-width: 62em) {
-	.preorder-modal__body {padding-bottom:70px; padding-top: 110px;}
-	.preorder-modal__button-wrapper {max-width: none; width: 280px;}
-	.preorder-modal__footer {padding: 20px 80px;}
-}
-.product-form__add-to-cart>button.button.is-active:hover .label-atc{display: block;}
-</style>
 <div class="container">
 	<div class="template-product__container">
 		<div class="template-product__grid">
@@ -256,7 +242,7 @@
 				</form>
 				<div class="product-form__footer-wrapper">
 					<div class="template-product__meta ">
-						<p></p> <button class="template-product__size-guide-trigger text-xsmall">
+						<p></p> <button class="template-product__size-guide-trigger modal_trigger text-xsmall" data-modal="size-guide-modal">
 							사이즈 가이드
 						</button>
 					</div>
@@ -267,7 +253,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="template-product__details"> <button class="template-product__size-guide-trigger">사이즈 가이드</button>
+				<div class="template-product__details"> <button class="template-product__size-guide-trigger modal_trigger" data-modal="size-guide-modal">사이즈 가이드</button>
 					<div id="productAccordion" class="template-product__accordion accordion">
 						<div class="accordion__item">
 							<h2 class="accordion__title">
@@ -831,114 +817,17 @@
 		</div>
 	</div>
 </div>
+
 <script src="https://image.thehyundai.com/pc/js/jquery-1.11.3.min.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="https://0sunman.github.io/toteme-korea-publish/public/js/image-zoom.min.js"></script>
-<link rel="stylesheet" href="https://0sunman.github.io/toteme-korea-publish/public/css/image-zoom.css">
+<script src="https://0sunman.github.io/toteme-korea-publish/public/js/toteme.custom.order.js"></script>
 <style>
 	figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 	.containerZoom.active{cursor: zoom-out;}
 </style>
 <script>
-	//상품이미지 슬라이드
-	window.addEventListener('load', () => {
-		const galleryTop = new Swiper('.product-gallery__featured-carousel', {
-			loop: true,
-			autoHeight: true,
-			pagination: {
-				el: '.swiper-pagination',
-				type: 'bullets',
-				clickable: true,
-			},
-		});
-		$(".product-gallery__thumbnail").on('click', function(){
-			galleryTop.slideTo($(this).index()+1, 300);
-			return false;
-		});
-	}, false);
-	$(window).resize(function(){ galleryTop.update(); });
-
-	//상품이미지 슬라이드_썸네일
-	$(".product-gallery__thumbnail-carousel").scroll(function(){
-		var thumb_box = $(this),
-				btn_arr_down = thumb_box.siblings(".product-gallery__thumbnail-button");
-		thumb_box.scrollTop() === thumb_box.prop('scrollHeight') - thumb_box.outerHeight() ? btn_arr_down.addClass("is-hidden") : btn_arr_down.removeClass("is-hidden");
-	});
-	$(".product-gallery__thumbnail-button").click(function(){
-		var current_scroll = $(this).siblings(".product-gallery__thumbnail-carousel").scrollTop(),
-				item_height = $(".product-gallery__thumbnail-image").height();
-		$(this).siblings(".product-gallery__thumbnail-carousel").stop().animate({scrollTop:current_scroll+item_height},300);
-	});
-	//상품이미지 줌
+	//PDP 상품이미지 줌
 	var zoomImages = $('.product-gallery__featured-image').find("img"); 
 	zoomImages.each(function() { $(this).imageZoom({zoom:200}); });
-	
-
-	//상품 사이즈 Select 옵션 별 button 변경
-	arr1 = new Array();
-	$("#OptionSelector-main option").each(function(index){
-		arr1.push($(this).text().trim());
-		$(this).attr('data-select',arr1[index]);
-	});
-	
-	$("#OptionSelector-main").on("change", function(){
-		var selectData = $(this).find('option:selected').attr('data-select'),
-				orgSelectTxt = $(this).find('option:selected').text();
-
-		if( selectData.indexOf('품절') != -1 ){
-			$('.coming-soon>.form-group--inline-animated').removeClass("is-hidden");
-			$('.product-form__add-to-cart>button.button').addClass("is-hidden");
-			var selectTxt;
-			selectTxt = orgSelectTxt.replace(" - 알림 설정","");
-			$(this).siblings('.custom-select__label').text(selectTxt);
-		}else{
-			$(this).siblings('.custom-select__label').text(orgSelectTxt);
-			$('.product-form__add-to-cart>button.button').removeClass("is-hidden").addClass("is-active").attr("disabled",false);
-			$('.product-form__actions .label-select-size, .coming-soon>.form-group--inline-animated').addClass("is-hidden");
-		}
-	});
-	$('.coming-soon input[type="submit"].button').click(function(){
-		$(this).siblings('.form-group__message').removeClass('is-hidden');
-		$(this).siblings('.form-group__fade-text').addClass('is-hidden');
-	});
-
-	//상품 컬러 button - list toggle
-	$('.product-form__swatch-button').click(function(){
-		$(this).parent('.product-form__swatch').toggleClass('is-active');
-		$('.product-form__swatch-list')[0].getBoundingClientRect().bottom > (window.innerHeight || document.documentElement.clientHeight) && $('.product-form__swatch-list')[0].scrollIntoView(!1);
-		return false;
-	}).focusout(function(){
-		$(this).parent('.product-form__swatch').removeClass('is-active');
-	});
-
-	//상품 사이즈 modal toggle
-	$('.template-product__size-guide-trigger').click(function(){
-		$('#size-guide').addClass("is-active");
-		$('body').css('overflow','hidden');
-	});
-	// modal close
-	$('.modal__close').click(function(){
-		$(this).parents('.modal').removeClass("is-active");
-		$('body').css('overflow','');
-	});
-	$(document).mouseup(function (e){
-		var modal = $(".modal__card");
-		if(modal.has(e.target).length === 0){
-			modal.parents('.modal').removeClass("is-active");
-			$('body').css('overflow','');
-		}
-	});
-
-	//상품 아코디언
-	$('.accordion__control').click(function(){
-		$(this).parents('.accordion__item').toggleClass('is-active').siblings().removeClass('is-active');
-	});
-
-	//cm inch 탭
-	$('.size-guide__unit-toggle').click(function(){
-		$(this).addClass('is-active').siblings().removeClass('is-active');
-		var unit = $(this).attr('data-unit');
-		$('.size-guide__table-container').attr('data-show-unit',unit);
-	});
-
 </script>

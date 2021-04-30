@@ -957,34 +957,7 @@
 	/* header, footer hide */
 	.site-header-wrapper, #shopify-section-site-footer{display: none;}
 	/* //header, footer hide */
-	.checkout__content.content{height: 100%;}
-	.email_form>div:first-child{width: 60%;}
-	.email_form>div:last-child{width: 40%;}
-	.email_form .select-wrap{display: block; margin-left: 7px;}
-	@media (max-width: 47.99em){.checkout input{font-size: 15px}}
-	.phone_form{display: table; width: 100%;}
-	.phone_form>div:last-child{width: 41px;}
-	.phone_form .btn_plus{display: block; font-size: 0; width: 34px; height: 34px; margin-left: 7px; border: 1px solid #222; border-radius: 50%;}
-	.phone_form .btn_plus svg{transform: rotate(45deg);}
-	.input_phone_plus{display: none; margin-top: 10px;}
-	.input_phone_plus.active{display: block;}
-	.phone_addr .button{width: calc(100% - 7px); min-height: 35px; margin-left: 7px;}
-	.product-table:not(.stock-problem-table) .product__quantity .visually-hidden, .checkout .order-summary__section--discount .field__input-btn .visually-hidden-on-mobile{overflow: visible;}
-	.deposit_attr_box{display: table; width: 100%; font-size: 15px;}
-	.deposit_attr_box>div{display: table-cell;}
-	.deposit_attr_box>div:last-child{text-align: right;}
-	.deposit_attr_box .field__message--error{display: inline-block;}
-	.deposit_attr_box .btn_deposit{position: relative; font-size: 12px;}
-	.deposit_attr_box .btn_deposit:after{content: ''; height: 1px; position: absolute; bottom: 0; left: 0; right: 0; background: #444;}
-	.direct_input{display: none;}
-	.direct_input.active{display: block;}
 </style>
-
-
-
-
-
-
 
 <div class="checkout js display-table container anyflexbox">
 	<a href="#main-header" class="skip-to-content">
@@ -1137,7 +1110,7 @@
 													<input placeholder="배송지주소" class="field__input" size="30" type="text" name="checkout[addr]" id="checkout_addr">
 												</div>
 												<div>
-													<button type="button" class="button button--large no-animation">찾기</button>
+													<button type="button" class="button button--large no-animation modal_trigger" data-modal="address-modal">찾기</button>
 												</div>
 											</div>
 										</div>
@@ -1490,55 +1463,130 @@
 			</aside>
 		</div>
 	</div>
+
+	<div id="address-modal" class="modal modal--light address-modal" role="dialog" tabindex="-1">
+		<div class="modal__overlay" tabindex="-1">
+			<div class="modal__card">
+				<div class="modal__header">
+					<h5 class="modal__title  preorder-modal__title">주소검색</h5>
+					<button class="modal__close">
+						<span class="visually-hidden">
+							Close
+						</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+						</svg> </button>
+				</div>
+				<div class="modal__body">
+					<div class="address_modal_container">
+						<div class="section__content form-group">
+							<div class="input-block form-group__field">
+								<label class="field__label field__label--visible" for="checkout_addr_find">주소 찾기</label>
+								<input placeholder="찾고자 하는 주소를 입력하세요" class="field__input" size="30" type="text" name="checkout[addr_find]" id="checkout_addr_find">
+							</div>
+							<div class="input-block">
+								<input class="step__footer__continue-btn btn" type="submit" value="검색">
+								<p class="comment">예: 동(읍/면)명 또는 도로명주소(건물번호/건물명)<br>일부 군사지역은 배송이 불가능할 수 있습니다.</p>
+							</div>
+						</div>
+						<div class="address_find_content">
+							<div class="input-table form-group__field">
+								<div>
+									<div class="select-wrap">
+										<select class="field__input field__input--select toteme-select-style toteme-button-style no-animation">
+											<option value="">시/도</option>
+											<option value="">시/도</option>
+											<option value="">시/도</option>
+										</select>
+									</div>
+								</div>
+								<div>
+									<div class="select-wrap">
+										<select class="field__input field__input--select toteme-select-style toteme-button-style no-animation">
+											<option value="">군/구</option>
+											<option value="">군/구</option>
+											<option value="">군/구</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<ul class="addr_list">
+								<li><a href="#">
+									<span class="addr-line rrr">
+										<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
+									</span>
+									<span class="addr-line jjj">
+										<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
+									</span>
+									<span class="zipcode">06088</span>
+								</a></li>
+								<li><a href="#">
+									<span class="addr-line rrr">
+										<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
+									</span>
+									<span class="addr-line jjj">
+										<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
+									</span>
+									<span class="zipcode">06088</span>
+								</a></li>
+								<li><a href="#">
+									<span class="addr-line rrr">
+										<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
+									</span>
+									<span class="addr-line jjj">
+										<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
+									</span>
+									<span class="zipcode">06088</span>
+								</a></li>
+								<li><a href="#">
+									<span class="addr-line rrr">
+										<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
+									</span>
+									<span class="addr-line jjj">
+										<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
+									</span>
+									<span class="zipcode">06088</span>
+								</a></li>
+								<li><a href="#">
+									<span class="addr-line rrr">
+										<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
+									</span>
+									<span class="addr-line jjj">
+										<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
+									</span>
+									<span class="zipcode">06088</span>
+								</a></li>
+							</ul>
+							<!-- 상세주소 입력 -->
+							<ul class="addr_list">
+								<li>
+									<div class="radio_custom_box">
+										<input id="addr_type1" class="radio_input" value="1" type="radio" name="addr_type" checked>
+										<label for="addr_type1"><span class="addr-mark-name">도로명</span> 서울특별시 강남구 학동로 402</label>
+									</div>
+									<div class="radio_custom_box">
+										<input id="addr_type2" class="radio_input" value="2" type="radio" name="addr_type">
+										<label for="addr_type2"><span class="addr-mark-num">지번</span> 서울특별시 강남구 삼성동 1</label>
+									</div>
+								</li>
+							</ul>
+							<div class="input-block form-group__field">
+								<label class="field__label field__label--visible" for="addr_detail">상세주소 입력</label>
+								<input placeholder="상세주소 입력" class="field__input" size="30" type="text" name="checkout[addr_detail]" id="addr_detail">
+							</div>
+							<div class="input-block pcs2">
+								<input class="step__footer__continue-btn btn" type="submit" value="확인">
+								<input class="step__footer__continue-btn btn white" type="submit" value="취소">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
-
 <script src="https://image.thehyundai.com/pc/js/jquery-1.11.3.min.js"></script>
-<script>
-	//전화번호 추가
-	$('.phone_form .btn_plus').click(function(){
-		$(this).parents('.phone_form').siblings('.input_phone_plus').toggleClass("active");
-	});
-	$('.field__input--select').change(function() {
-		if($(this).val() == "direct"){
-			$(this).next('.input-block.direct_input').addClass('active');
-		}else{
-			$(this).next('.input-block.direct_input').removeClass('active');
-		}
-	});
-	//아코디언
-	$('.accordion__control').click(function(){
-		$(this).parents('.accordion__item').toggleClass('is-active').siblings().removeClass('is-active');
-	});
-	//mobile 주문 상세보기 toggle
-	$('.order-summary').on('webkitTransitionEnd oTransitionEnd otransitionend transitionend msTransitionEnd', function () {
-		$(this).removeClass("order-summary--transition").removeAttr("style");
-	});
-	$('.order-summary-toggle').click(function(){
-		var thisH, conH, aniH;
-		 $('.order-summary').wrapInner("<div />"),
-				thisH = $('.order-summary').height(),
-				conH = $('.order-summary').find('>div').height(),
-				aniH = 0 === thisH ? conH : 0,
-				$('.order-summary').find("> div").contents().unwrap();
-		
-			$(this).toggleClass("order-summary-toggle--show order-summary-toggle--hide");
-			$('.order-summary').addClass("order-summary--transition").toggleClass("order-summary--is-expanded order-summary--is-collapsed").css("height", aniH);
-
-	});
-	//할인코드 toggle
-	$('.discount-trigger .button').click(function(){
-		$(this).parents('.order-summary__section--discount').addClass('enable-form')
-	});
-	$('.order-summary__section--discount .field__input').on("propertychange change keyup paste input", function() {
-		var btn = $(this).parents('.field__input-btn-wrapper').children('.order-summary__section--discount .field__input-btn'),
-				className = 'btn--disabled';
-		$(this).val() ? btn.removeClass(className) : btn.addClass(className);
-	});
-
-</script>
-
-
+<script src="https://0sunman.github.io/toteme-korea-publish/public/js/toteme.custom.order.js"></script>
 <script>
 	/* 꼼수 */
 setTimeout(function(){
