@@ -42,6 +42,7 @@ const pageData = [
   {"type":"join","title":"1-2. Order for non-member (order check)","url" : "/02_login_join/12", "pageurl" : "02_login_join/01_2_no_member_login.ejs"},
   {"type":"join","title":"2. Create account","url" : "/02_login_join/2", "pageurl" : "02_login_join/02_join_page.ejs"},
   {"type":"join","title":"3. Create account _ E-mail Authentication","url" : "/02_login_join/3", "pageurl" : "02_login_join/03_select_email.ejs"},
+  {"type":"join","title":"4. privacy table","url" : "/02_login_join/4", "pageurl" : "02_login_join/04_privacy_table.ejs"},
 
   {"type":"product","title":"1. PDP","url" : "/03_product/1", "pageurl" : "03_product/01_product_detail.ejs"},
 /*  {"type":"product","title":"1-1. Pre-order","url" : "/03_product/11", "pageurl" : "03_product/01_1_product_detail_preorder.ejs"},*/
