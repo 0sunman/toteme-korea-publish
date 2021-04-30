@@ -131,19 +131,21 @@ $(function(){
 	});
 	//PDP 상품이미지 슬라이드
 	window.addEventListener('load', () => {
-		const galleryTop = new Swiper('.product-gallery__featured-carousel', {
-				loop: true,
-				autoHeight: true,
-				pagination: {
-						el: '.swiper-pagination',
-						type: 'bullets',
-						clickable: true,
-				},
-		});
-		$(".product-gallery__thumbnail").on('click', function(){
-				galleryTop.slideTo($(this).index()+1, 300);
-				return false;
-		});
+		if ( $('.product-gallery__featured-carousel').length > 0 ){
+				const galleryTop = new Swiper('.product-gallery__featured-carousel', {
+					loop: true,
+					autoHeight: true,
+					pagination: {
+							el: '.swiper-pagination',
+							type: 'bullets',
+							clickable: true,
+					},
+			});
+			$(".product-gallery__thumbnail").on('click', function(){
+					galleryTop.slideTo($(this).index()+1, 300);
+					return false;
+			});
+		}
 	}, false);
 	$(window).resize(function(){ galleryTop.update(); });
 	//PDP 상품이미지 슬라이드_썸네일

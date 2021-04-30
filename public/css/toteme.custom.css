@@ -334,15 +334,15 @@ body.overflow-hidden {overflow: hidden;}
 .addr_list .zipcode{display: table-cell; width: 60px; text-align: center; vertical-align: middle;}
 .addr_list .radio_custom_box{text-align: left;}
 
+.input-block.pcs2:after{content: ''; display: block; clear: both;}
 .input-block.pcs2 .btn{width: calc(50% - 4px); float: left;}
-.input-block.pcs2 .btn:hover{margin-left: 0; margin-right: 0;}
-.input-block.pcs2 .btn:last-child{margin-left: 7px; background: #fff; color: #171616;}
+.input-block.pcs2 .btn:hover{margin-left: 0; margin-right: 0; width: calc(50% - 4px);}
+.input-block.pcs2 .btn.white{background: #fff; color: #171616;}
+.input-block.pcs2 .btn:last-child{margin-left: 7px;}
 .input-block.pcs2 .btn:last-child:hover{margin-left: 7px;}
-@media screen and (max-width: 999px){
-    .checkout .section.section--payment>.section__content{padding: 0 0 .75rem;}
-}
 
-.section--payment .comment{font-size: 12px; line-height: 15px;}
+.breadcrumb__item--completed .breadcrumb__link{color: #171616;}
+.checkout .comment{font-size: 12px; line-height: 15px;}
 .payment_guaranty{font-size: 15px;}
 .a_link{display: inline-block; position: relative;}
 .a_link:after{content: ''; width: 100%; height: 1px; background: #171616; position: absolute; bottom: 0; left: 0;}
