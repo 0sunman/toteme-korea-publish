@@ -131,7 +131,7 @@ SiteController.prototype.initRightMenu = function(){
 
 
 SiteController.prototype.initListPointerArrow = function(){
-    utilInstance.registerEvent({cmd:"arrowEvent", target:targetId, element:ele});    
+    utilInstance.registerEvent({cmd:"arrowEvent"});    
 }
 new SiteController();
 
