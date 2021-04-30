@@ -83,7 +83,7 @@ Util.prototype.registerEvent = function(option){
             $("#MainContent ul.navlist").parent().mouseover((function(e){ 
                 if(this.isFirstPointStack){
                     $("#MainContent ul.navlist li").each((function(idx,ele){
-                        if($(ele).find(".is-active").length){
+                        if($(ele).find(".is-active").length > 0 || $(ele).find(".text-link--static").length > 0){
                             this.pointStack = idx;
                         }
                     }).bind(this));    
@@ -93,6 +93,7 @@ Util.prototype.registerEvent = function(option){
                 
                 
                 $("#MainContent ul.navlist li a.is-active").removeClass("is-active");
+                $("#MainContent ul.navlist li a.text-link--static").removeClass("text-link--static");
             }.bind(this)));
                 
                 $("#MainContent ul.navlist").parent().mouseleave((function(e){  
