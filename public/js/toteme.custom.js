@@ -2,6 +2,8 @@ var Util = function(){}
 
 Util.prototype.registerEvent = function(option){
 
+    this.isFirstPointStack = true;
+    this.pointStack = -1;
     
     function resetLeftMenu(){ // 모든 메뉴를 리셋시킵니다.
         $("button[data-left-header-button-type]").each(function(idx,ele){
@@ -10,7 +12,7 @@ Util.prototype.registerEvent = function(option){
             $("#"+targetId).removeClass("is-active");
         })
     }
-    
+
 
     switch(option.cmd){                              
         case "showRightMenu" :
@@ -77,23 +79,31 @@ Util.prototype.registerEvent = function(option){
 
         case "arrowEvent":
             /* 한국 애로우 변경 */
-            var pointStack = -1;
-            $("#MainContent ul.navlist li").each((function(idx,ele){
-                if($(ele).find(".is-active").length){
-                    pointStack = idx;
-                }
-            }).bind(this));
-            $("#MainContent ul.navlist").parent().mouseover(function(e){ 
-                $("#MainContent ul.navlist li").each(function(idx,ele){
-                    $(ele).find("a").attr("class",$(ele).attr("class").replace(" is-active",""));
-                })  
-            })
-            $("#MainContent ul.navlist").parent().mouseleave((function(e){  
-                $("#MainContent ul.navlist li:nth-child("+(pointStack+1)+") a").addClass("is-active"); 
-            }).bind(this))
+            
+            $("#MainContent ul.navlist").parent().mouseover((function(e){ 
+                if(this.isFirstPointStack){
+                    $("#MainContent ul.navlist li").each((function(idx,ele){
+                        if($(ele).find(".is-active").length){
+                            this.pointStack = idx;
+                        }
+                    }).bind(this));    
+                    console.log("isFirst : "+this.pointStack);   
+                    this.isFirstPointStack=false; 
+                }                
+                
+                
+                $("#MainContent ul.navlist li a.is-active").removeClass("is-active");
+            }.bind(this)));
+                
+                $("#MainContent ul.navlist").parent().mouseleave((function(e){  
+                    $("#MainContent ul.navlist li:nth-child("+(this.pointStack+1)+") a").addClass("is-active"); 
+                }).bind(this))
             /* // 한국 애로우 변경 */
         break;
     }
+
+    
+    
 }
 
 Util.prototype.resetSubFunction = function(){
@@ -137,6 +147,7 @@ SiteController.prototype.initRightMenu = function(){
 
 
 SiteController.prototype.initListPointerArrow = function(){
+    
     utilInstance.registerEvent({cmd:"arrowEvent"});    
 }
 new SiteController();
