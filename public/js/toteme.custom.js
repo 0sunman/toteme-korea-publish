@@ -88,9 +88,9 @@ Util.prototype.registerEvent = function(option){
                     $(ele).find("a").attr("class",$(ele).attr("class").replace(" is-active",""));
                 })  
             })
-            $("#MainContent ul.navlist").parent().mouseleave(function(e){  
+            $("#MainContent ul.navlist").parent().mouseleave((function(e){  
                 $("#MainContent ul.navlist li:nth-child("+(pointStack+1)+") a").addClass("is-active"); 
-            })
+            }).bind(this))
             /* // 한국 애로우 변경 */
         break;
     }
