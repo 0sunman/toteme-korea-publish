@@ -83,8 +83,8 @@ Util.prototype.registerEvent = function(option){
                     pointStack = idx;
                 }
             });
-            $("#MainContent ul.navlist").mouseover(function(){ $("#MainContent ul.navlist li a.is-active").removeClass("is-active") })
-            $("#MainContent ul.navlist").mouseout(function(){ $("#MainContent ul.navlist li:nth-child("+(pointStack+1)+") a").addClass("is-active") })
+            $("#MainContent ul.navlist").parent().mouseover(function(){ $("#MainContent ul.navlist li a.is-active").removeClass("is-active") })
+            $("#MainContent ul.navlist").parent().mouseout(function(){ $("#MainContent ul.navlist li:nth-child("+(pointStack+1)+") a").addClass("is-active") })
             /* // 한국 애로우 변경 */
         break;
     }
