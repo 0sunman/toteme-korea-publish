@@ -145,8 +145,8 @@ $(function(){
 					galleryTop.slideTo($(this).index()+1, 300);
 					return false;
 			});
+			$(window).resize(function(){ galleryTop.update(); });
 		}
-		$(window).resize(function(){ galleryTop.update(); });
 	}, false);
 	
 	//PDP 상품이미지 슬라이드_썸네일
