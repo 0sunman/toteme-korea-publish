@@ -957,6 +957,19 @@
 	/* header, footer hide */
 	.site-header-wrapper, #shopify-section-site-footer{display: none;}
 	/* //header, footer hide */
+
+	.member_infomation{border-bottom: 1px solid #171616;}
+	.checkout .review-block__label{flex: 0 1 15em; -webkit-flex: 0 1 15em;}
+	.member_info_change_box{padding: 1.75rem 2.5rem;}
+	.address_btn_box{margin-top: 4px;}
+	.a_link + .a_link{margin-left: 7px;}
+	.address_wrap>div{display: none;}
+	.address_wrap>div.active{display: block;}
+	.address_wrap .address_info_box .input-block{padding: 0 2.5rem;}
+	.address_add_box, .address_select_box{padding: 0 2.5rem;}
+	.address_info_change_box{padding: .5rem 2.5rem};
+	.address_add_box .input-block{text-align: left;}
+	.address_add_box .checkbox_custom_box+.comment{margin-top: .5rem;}
 </style>
 
 <div class="checkout js display-table container anyflexbox">
@@ -1034,11 +1047,11 @@
 					<div class="step" data-step="contact_information">
 						<form class="edit_checkout animate-floating-labels" action="#" method="post">
 							<div class="step__sections">
-								<div class="section section--contact-information">
+								<div class="section section--contact-information member_infomation">
 									<div class="section__header">
 										<div class="layout-flex layout-flex--tight-vertical layout-flex--loose-horizontal layout-flex--wrap">
 											<h2 class="section__title layout-flex__item layout-flex__item--stretch" id="main-header">
-												주문 고객
+												주문정보
 											</h2>
 											<!-- <p class="layout-flex__item">
 												<span>Already have an account?</span>
@@ -1048,93 +1061,239 @@
 												</a> </p> -->
 										</div>
 									</div>
-									<div class="section__content form-group">
-										<div class="input-block form-group__field">
-											<label class="field__label field__label--visible" for="checkout_name">이름</label>
-											<input placeholder="이름" class="field__input" size="30" type="text" name="checkout[name]" id="checkout_name">
-										</div>
-										<div class="input-block form-group__field">
-											<div class="input-table form-group__field email_form">
-												<div>
-													<input class="field__input" autocapitalize="off" autocomplete="off" autofocus="" placeholder="이메일" required="" spellcheck="false" type="email">
+									<div class="content-box__row">
+										<h6 class="payment_tit1">주문고객</h6>
+										<div class="address_wrap">
+											<div class="address_info_box active">
+												<div class="review-block">
+													<div class="review-block__inner">
+														<div class="review-block__label">
+															이현대
+														</div>
+														<div class="review-block__content">
+															<address class="address address--tight">
+																010-1234-5678<br>
+																서울특별시 강남구 강남대로1길 1층
+															</address>
+														</div>
+													</div>
+													<div role="cell" class="review-block__link">
+														<button type="button" class="link--small" data-address="address_info_change">수정</button>
+													</div>
 												</div>
-												<div>
-													<div class="select-wrap">
-														<select class="field__input field__input--select toteme-select-style toteme-button-style no-animation">
-															<option value="">naver.com</option>
-															<option value="">gmail.com</option>
-															<option value="">직접입력</option>
-														</select>
+											</div>
+											<div class="address_info_change_box">
+												<div class="form-group">
+													<div class="input-block form-group__field">
+														<label class="field__label field__label--visible" for="checkout_name">이름</label>
+														<input placeholder="이름" value="이현대" class="field__input" required="" size="30" type="text" name="checkout[name]" id="checkout_name">
+													</div>
+													<div class="input-block form-group__field">
+														<div class="input-table form-group__field email_form">
+															<div>
+																<input class="field__input" placeholder="이메일" required="" value="thehyundai" type="text" readonly>
+															</div>
+															<div>
+																<div class="select-wrap">
+																	<select class="field__input field__input--select toteme-select-style toteme-button-style no-animation" readonly>
+																		<option value="">naver.com</option>
+																		<option value="">gmail.com</option>
+																		<option value="">직접입력</option>
+																	</select>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="input-block form-group__field">
+														<label class="field__label field__label--visible" for="checkout_name">휴대폰번호</label>
+														<input placeholder="휴대폰번호" value="010-1234-5678" class="field__input" size="30" type="text" name="checkout[name]" id="checkout_name" readonly>
+													</div>
+													<p class="comment">이메일, 휴대폰번호는 회원정보에서 변경 가능합니다.</p>
+													<div class="input-block form-group__footer pcs2">
+														<input class="step__footer__continue-btn btn white" type="button" value="취소" data-address="address_info">
+														<input class="step__footer__continue-btn btn" type="button" value="저장" data-address="address_info">
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="input-block form-group__footer">
-											<input class="step__footer__continue-btn btn" type="submit" value="본인인증">
-									 </div>
 									</div>
 								</div>
-								<div class="section section--shipping-address" data-shipping-address="">
+								<div class="section" data-shipping-address="">
 									<div class="section__header">
 										<h2 class="section__title" id="section-delivery-title">
 											배송지 정보
 										</h2>
 									</div>
-									<div class="section__content form-group">
-										<div class="input-block form-group__field">
-											<label class="field__label field__label--visible" for="checkout_name1">받는 사람</label>
-											<input placeholder="받는 사람" class="field__input" size="30" type="text" name="checkout[name1]" id="checkout_name1">
-										</div>
-										<div class="input-block form-group__field">
-											<div class="input-table phone_form">
-												<div>
-													<label class="field__label field__label--visible" for="checkout_phone">휴대폰번호(필수)</label>
-													<input placeholder="휴대폰번호(필수)" class="field__input" size="30" type="text" name="checkout[phone]" id="checkout_phone">
-												</div>
-												<div>
-													<button type="button" class="btn_plus">추가
-														<svg class="icon icon--large" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(45deg);">
-															<path fill-rule="evenodd" clip-rule="evenodd" d="M2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
-														</svg>
-													</button>
-												</div>
-											</div>
-											<div class="input_phone_plus">
-												<input placeholder="추가연락처" class="field__input" size="30" type="text" name="checkout[phone2]">
-											</div>
-										</div>
-										<div class="input-block form-group__field">
-											<div class="input-table phone_addr">
-												<div>
-													<label class="field__label field__label--visible" for="checkout_addr">배송지주소</label>
-													<input placeholder="배송지주소" class="field__input" size="30" type="text" name="checkout[addr]" id="checkout_addr">
-												</div>
-												<div>
-													<button type="button" class="button button--large no-animation modal_trigger" data-modal="address-modal">찾기</button>
+									<div class="section__content address_wrap">
+										<div class="address_info_box active">
+											<div class="content-box__row">
+												<div class="review-block">
+													<div class="review-block__inner">
+														<div class="review-block__label">
+															이현대 [기본배송지]
+														</div>
+														<div class="review-block__content">
+															<address class="address address--tight">
+																010-1234-5678<br>
+																서울특별시 강남구 강남대로1길 1층
+															</address>
+														</div>
+													</div>
+													<div role="cell" class="review-block__link">
+														<button type="button" class="link--small" data-address="address_select">변경</button>
+													</div>
 												</div>
 											</div>
+											<div class="input-block form-group__field">
+												<label class="field__label field__label--visible" for="checkout_memo">배송시 요청사항 선택</label>
+												<select id="checkout_memo" class="field__input field__input--select toteme-select-style toteme-button-style no-animation">
+													<option value="" disabled="" selected="">배송시 요청사항 선택</option>
+													<option value="">배송 전 연락바랍니다.</option>
+													<option value="">택배함에 넣어주세요.</option>
+													<option value="">빠른 배송 부탁 드립니다.</option>
+													<option value="">부재 시 경비실에 맡겨주세요.</option>
+													<option value="">핸드폰으로 연락 부탁 드립니다.</option>
+													<option value="direct">직접입력</option>
+												</select>
+												<div class="input-block direct_input">
+													<input type="text" placeholder="배송 시 요청사항을 입력하세요" class="field__input" size="30">
+												</div>
+											</div>
 										</div>
-										<div class="input-block form-group__field">
-											<label class="field__label field__label--visible" for="checkout_addr2">주소</label>
-											<input placeholder="주소" class="field__input" size="30" type="text" name="checkout[addr2]" id="checkout_addr2" readonly>
+										<div class="address_select_box">
+											<div class="input-block form-group__footer">
+												<input class="button button--primary button--block button--large is-valid" type="button" value="신규 배송지 추가" data-address="address_add">
+											</div>
+											<div class="content-box__row">
+												<div class="review-block">
+													<div class="review-block__inner">
+														<div class="review-block__label">
+															이현대 [기본배송지]
+														</div>
+														<div class="review-block__content">
+															<address class="address address--tight">
+																010-1234-5678<br>
+																서울특별시 강남구 강남대로1길 1층
+															</address>
+															<div class="address_btn_box">
+																<button type="button" class="a_link" data-address="address_add">수정</button>
+															</div>
+														</div>
+													</div>
+													<div role="cell" class="review-block__link">
+														<button type="button" class="link--small" data-address="address_info">선택</button>
+													</div>
+												</div>
+											</div>
+											<div class="content-box__row">
+												<div class="review-block">
+													<div class="review-block__inner">
+														<div class="review-block__label">
+															이현대
+														</div>
+														<div class="review-block__content">
+															<address class="address address--tight">
+																010-1234-5678<br>
+																서울특별시 강남구 강남대로1길 1층
+															</address>
+															<div class="address_btn_box">
+																<button type="button" class="a_link" data-address="address_add">수정</button><button type="button" class="a_link">삭제</button>
+															</div>
+														</div>
+													</div>
+													<div role="cell" class="review-block__link">
+														<button type="button" class="link--small" data-address="address_info">선택</button>
+													</div>
+												</div>
+											</div>
+											<div class="content-box__row">
+												<div class="review-block">
+													<div class="review-block__inner">
+														<div class="review-block__label">
+															이현대
+														</div>
+														<div class="review-block__content">
+															<address class="address address--tight">
+																010-1234-5678<br>
+																서울특별시 강남구 강남대로1길 1층
+															</address>
+															<div class="address_btn_box">
+																<button type="button" class="a_link" data-address="address_add">수정</button><button type="button" class="a_link">삭제</button>
+															</div>
+														</div>
+													</div>
+													<div role="cell" class="review-block__link">
+														<button type="button" class="link--small" data-address="address_info">선택</button>
+													</div>
+												</div>
+											</div>
 										</div>
-										<div class="input-block form-group__field">
-											<label class="field__label field__label--visible" for="checkout_addr3">상세주소</label>
-											<input placeholder="상세주소" class="field__input" size="30" type="text" name="checkout[addr3]" id="checkout_addr3">
-										</div>
-										<div class="input-block form-group__field">
-											<label class="field__label field__label--visible" for="checkout_memo">배송시 요청사항 선택</label>
-											<select id="checkout_memo" class="field__input field__input--select toteme-select-style toteme-button-style no-animation">
-												<option value="" disabled selected>배송시 요청사항 선택</option>
-												<option value="">배송 전 연락바랍니다.</option>
-												<option value="">택배함에 넣어주세요.</option>
-												<option value="">빠른 배송 부탁 드립니다.</option>
-												<option value="">부재 시 경비실에 맡겨주세요.</option>
-												<option value="">핸드폰으로 연락 부탁 드립니다.</option>
-												<option value="direct">직접입력</option>
-											</select>
-											<div class="input-block direct_input">
-												<input type="text" placeholder="배송 시 요청사항을 입력하세요" class="field__input direct_input" size="30">
+										<div class="address_add_box">
+											<div class="input-block form-group__footer">
+												<input class="button button--primary button--block button--large is-valid" type="button" value="배송 주소록에서 선택" data-address="address_select">
+											</div>
+											<div class="form-group">
+												<div class="input-block form-group__field">
+													<label class="field__label field__label--visible" for="checkout_name1">받는 사람</label>
+													<input placeholder="받는 사람" class="field__input" size="30" type="text" name="checkout[name1]" id="checkout_name1">
+												</div>
+												<div class="input-block form-group__field">
+													<div class="input-table phone_form">
+														<div>
+															<label class="field__label field__label--visible" for="checkout_phone">휴대폰번호(필수)</label>
+															<input placeholder="휴대폰번호(필수)" class="field__input" size="30" type="text" name="checkout[phone]" id="checkout_phone">
+														</div>
+														<div>
+															<button type="button" class="btn_plus">추가
+																<svg class="icon icon--large" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(45deg);">
+																	<path fill-rule="evenodd" clip-rule="evenodd" d="M2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+																</svg>
+															</button>
+														</div>
+													</div>
+													<div class="input_phone_plus">
+														<input placeholder="추가연락처" class="field__input" size="30" type="text" name="checkout[phone2]">
+													</div>
+												</div>
+												<div class="input-block form-group__field">
+													<div class="input-table phone_addr">
+														<div>
+															<label class="field__label field__label--visible" for="checkout_addr">배송지주소</label>
+															<input placeholder="배송지주소" class="field__input" size="30" type="text" name="checkout[addr]" id="checkout_addr">
+														</div>
+														<div>
+															<button type="button" class="button button--large no-animation modal_trigger" data-modal="address-modal">찾기</button>
+														</div>
+													</div>
+												</div>
+												<div class="input-block form-group__field">
+													<label class="field__label field__label--visible" for="checkout_addr2">주소</label>
+													<input placeholder="주소" class="field__input" size="30" type="text" name="checkout[addr2]" id="checkout_addr2" readonly="">
+												</div>
+												<div class="input-block form-group__field">
+													<label class="field__label field__label--visible" for="checkout_addr3">상세주소</label>
+													<input placeholder="상세주소" class="field__input" size="30" type="text" name="checkout[addr3]" id="checkout_addr3">
+												</div>
+												<div class="input-block form-group__field">
+													<label class="field__label field__label--visible" for="checkout_memo">배송시 요청사항 선택</label>
+													<select id="checkout_memo" class="field__input field__input--select toteme-select-style toteme-button-style no-animation">
+														<option value="" disabled="" selected="">배송시 요청사항 선택</option>
+														<option value="">배송 전 연락바랍니다.</option>
+														<option value="">택배함에 넣어주세요.</option>
+														<option value="">빠른 배송 부탁 드립니다.</option>
+														<option value="">부재 시 경비실에 맡겨주세요.</option>
+														<option value="">핸드폰으로 연락 부탁 드립니다.</option>
+														<option value="direct">직접입력</option>
+													</select>
+													<div class="input-block direct_input">
+														<input type="text" placeholder="배송 시 요청사항을 입력하세요" class="field__input" size="30">
+													</div>
+												</div>
+												<div class="checkbox_custom_box">
+													<input id="address_default" class="checkbox" value="1" type="checkbox">
+													<label for="address_default">기본배송지 설정</label>
+												</div>
+												<p class="comment">주문 시 입력한 신규 배송지는 자동으로 배송주소록에 추가됩니다.</p>
 											</div>
 										</div>
 									</div>
@@ -1159,13 +1318,11 @@
 							js-accordion="container">
 							<div class="accordion__item" js-accordion="item">
 								<h2 class="accordion__title">
-									<button id="Accordion1" class="accordion__control text-small" aria-controls="content-1"
-										aria-expanded="false" js-accordion="control">
+									<button id="Accordion1" class="accordion__control text-small" aria-controls="content-1" aria-expanded="false" js-accordion="control">
 										배송
 									</button>
 								</h2>
-								<div id="content-1" class="accordion__content" role="region" aria-labelledby="Accordion1"
-									js-accordion="content">
+								<div id="content-1" class="accordion__content" role="region" aria-labelledby="Accordion1" js-accordion="content">
 									<p>한국 내 무료 배송 서비스가 제공됩니다.<br><br>
 										주문하신 상품은 네덜란드 물류 창고에서 출고되며, 모든 제품 가격에는 세금 및 관세가 포함되어 있습니다.</p>
 								</div>
@@ -1233,8 +1390,7 @@
 												<td class="product__image">
 													<div class="product-thumbnail">
 														<div class="product-thumbnail__wrapper">
-															<img alt="Centered monogram silk scarf creme - One size" class="product-thumbnail__image"
-																src="//cdn.shopify.com/s/files/1/0480/1141/1607/products/TOTEME_Flats_Core_Scarfs_4_GB_100x.jpg?v=1613490734">
+															<img alt="Centered monogram silk scarf creme - One size" class="product-thumbnail__image" src="//cdn.shopify.com/s/files/1/0480/1141/1607/products/TOTEME_Flats_Core_Scarfs_4_GB_100x.jpg?v=1613490734">
 														</div>
 														<span class="product-thumbnail__quantity" aria-hidden="true">1</span>
 													</div>
@@ -1256,8 +1412,7 @@
 												<td class="product__image">
 													<div class="product-thumbnail ">
 														<div class="product-thumbnail__wrapper">
-															<img alt="The Regulars sunglasses black - One size" class="product-thumbnail__image"
-																src="//cdn.shopify.com/s/files/1/0480/1141/1607/products/Toteme_SS21_212-802-900_SUNGLASSES_AcetateBlack0199_1_100x.jpg?v=1616001300">
+															<img alt="The Regulars sunglasses black - One size" class="product-thumbnail__image" src="//cdn.shopify.com/s/files/1/0480/1141/1607/products/Toteme_SS21_212-802-900_SUNGLASSES_AcetateBlack0199_1_100x.jpg?v=1616001300">
 														</div>
 														<span class="product-thumbnail__quantity" aria-hidden="true">1</span>
 													</div>
@@ -1405,8 +1560,7 @@
 							<p class="additional-content__title">
 								고객안내사항
 							</p>
-							<div id="additionalContentAccordion-sidebar" class="additional-content__accordion accordion"
-								js-accordion="container">
+							<div id="additionalContentAccordion-sidebar" class="additional-content__accordion accordion" js-accordion="container">
 								<div class="accordion__item" js-accordion="item">
 									<h2 class="accordion__title">
 										<button id="Accordion1" class="accordion__control text-small">
@@ -1593,6 +1747,11 @@ setTimeout(function(){
 	$("body").css("paddingTop","0px")
 },100);
 	/* // 꼼수 */
+
+$('[data-address]').on('click', function(){
+	var data_address=$(this).attr('data-address');
+	$('.address_wrap .'+data_address+'_box').addClass('active').siblings().removeClass('active');
+});
 </script>
          <!-- END content_for_index -->
       </main>
