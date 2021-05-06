@@ -50,6 +50,7 @@ const pageData = [
 
   {"type":"order","title":"1. Order Page","url" : "/04_order/1", "pageurl" : "04_order/01_order_member.ejs"},
   {"type":"order","title":"1-1. Order Page(non-member)","url" : "/04_order/2", "pageurl" : "04_order/02_order_non_member.ejs"},
+    {"type":"order","title":"2. Payment Page","url" : "/04_order/21", "pageurl" : "04_order/02_1_payment_non_member.ejs"},
   
   {"type":"page","title":"1-1. About - Totême","url" : "/05_page_about/11",   "pageurl" : "05_page_about/01_about_toteme.ejs"},
   {"type":"page","title":"1-2. About - Store","url" : "/05_page_about/12", "pageurl" : "05_page_about/02_about_store.ejs"},
