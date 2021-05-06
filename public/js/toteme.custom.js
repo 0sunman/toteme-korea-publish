@@ -2,6 +2,8 @@ var Util = function(){}
 
 Util.prototype.registerEvent = function(option){
 
+    this.isFirstPointStack = true;
+    this.pointStack = -1;
     
     function resetLeftMenu(){ // 모든 메뉴를 리셋시킵니다.
         $("button[data-left-header-button-type]").each(function(idx,ele){
@@ -10,7 +12,7 @@ Util.prototype.registerEvent = function(option){
             $("#"+targetId).removeClass("is-active");
         })
     }
-    
+
 
     switch(option.cmd){                              
         case "showRightMenu" :
@@ -74,7 +76,35 @@ Util.prototype.registerEvent = function(option){
                 $(this).siblings().eq(0).toggleClass("is-active")
             })
         break;
+
+        case "arrowEvent":
+            /* 한국 애로우 변경 */
+            
+            $("#MainContent ul.navlist").parent().mouseover((function(e){ 
+                if(this.isFirstPointStack){
+                    $("#MainContent ul.navlist li").each((function(idx,ele){
+                        if($(ele).find(".is-active").length > 0 || $(ele).find(".text-link--static").length > 0){
+                            this.pointStack = idx;
+                        }
+                    }).bind(this));    
+                    console.log("isFirst : "+this.pointStack);   
+                    this.isFirstPointStack=false; 
+                }                
+                
+                
+                $("#MainContent ul.navlist li a.is-active").removeClass("is-active");
+                $("#MainContent ul.navlist li a.text-link--static").removeClass("text-link--static");
+            }.bind(this)));
+                
+                $("#MainContent ul.navlist").parent().mouseleave((function(e){  
+                    $("#MainContent ul.navlist li:nth-child("+(this.pointStack+1)+") a").addClass("is-active"); 
+                }).bind(this))
+            /* // 한국 애로우 변경 */
+        break;
     }
+
+    
+    
 }
 
 Util.prototype.resetSubFunction = function(){
@@ -99,6 +129,9 @@ var utilInstance = new Util();
 var SiteController = function(){
     this.initRightMenu();
     this.initMobileMenu();
+    
+    /* 20210430 애로우 수정 요청 */
+    this.initListPointerArrow();
 }
 
 SiteController.prototype.initMobileMenu = function(){
@@ -111,6 +144,12 @@ SiteController.prototype.initRightMenu = function(){
         utilInstance.registerEvent({cmd:"showRightMenu", target:targetId, element:ele});        
         // data-header-button-type에 버튼 ID를 입력하면, 우측 메뉴 이벤트가 작동됩니다.             
     })
+}
+
+
+SiteController.prototype.initListPointerArrow = function(){
+    
+    utilInstance.registerEvent({cmd:"arrowEvent"});    
 }
 new SiteController();
 
@@ -163,3 +202,4 @@ setTimeout(function(){
  },100)
 
 /* // 퍼블리싱 사이트용 커스텀 영역 */
+
