@@ -85,7 +85,7 @@
 									<div class="section__header">
 										<div class="layout-flex layout-flex--tight-vertical layout-flex--loose-horizontal layout-flex--wrap">
 											<h2 class="section__title layout-flex__item layout-flex__item--stretch" id="main-header">
-												주문 고객
+												주문정보
 											</h2>
 											<!-- <p class="layout-flex__item">
 												<span>Already have an account?</span>
@@ -98,12 +98,12 @@
 									<div class="section__content form-group">
 										<div class="input-block form-group__field">
 											<label class="field__label field__label--visible" for="checkout_name">이름</label>
-											<input placeholder="이름" class="field__input" size="30" type="text" name="checkout[name]" id="checkout_name">
+											<input placeholder="이름" class="field__input" required="" size="30" type="text" name="checkout[name]" id="checkout_name">
 										</div>
 										<div class="input-block form-group__field">
 											<div class="input-table form-group__field email_form">
 												<div>
-													<input class="field__input" autocapitalize="off" autocomplete="off" autofocus="" placeholder="이메일" required="" spellcheck="false" type="email">
+													<input class="field__input" placeholder="이메일" required="" type="text">
 												</div>
 												<div>
 													<div class="select-wrap">
@@ -181,7 +181,7 @@
 												<option value="direct">직접입력</option>
 											</select>
 											<div class="input-block direct_input">
-												<input type="text" placeholder="배송 시 요청사항을 입력하세요" class="field__input direct_input" size="30">
+												<input type="text" placeholder="배송 시 요청사항을 입력하세요" class="field__input" size="30">
 											</div>
 										</div>
 									</div>

@@ -4,6 +4,8 @@
 	/* header, footer hide */
 	.site-header-wrapper, #shopify-section-site-footer{display: none;}
 	/* //header, footer hide */
+	.table_type1 td:first-child, .table_type1 th:first-child{padding-left: .25rem; text-align: inherit;}
+	.table_type1 td:last-child, .table_type1 th:last-child{text-align: left;}
 </style>
 
 <div class="checkout js display-table container anyflexbox">
@@ -66,11 +68,11 @@
 									<a class="breadcrumb__link" href="https://int.toteme-studio.com/">장바구니</a>
 									<svg class="icon-svg icon-svg--color-adaptive-light icon-svg--size-10 breadcrumb__chevron-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><path d="M2 1l1-1 4 4 1 1-1 1-4 4-1-1 4-4"></path></svg>
 								</li>
-								<li class="breadcrumb__item breadcrumb__item--current">
-									<span class="breadcrumb__text">주문정보</span>
+								<li class="breadcrumb__item breadcrumb__item--completed">
+									<a class="breadcrumb__link" href="#">주문정보</a>
 									<svg class="icon-svg icon-svg--color-adaptive-light icon-svg--size-10 breadcrumb__chevron-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><path d="M2 1l1-1 4 4 1 1-1 1-4 4-1-1 4-4"></path></svg>
 								</li>
-								<li class="breadcrumb__item breadcrumb__item--blank">
+								<li class="breadcrumb__item breadcrumb__item--current">
 									<span class="breadcrumb__text">결제</span>
 								</li>
 							</ol>
@@ -78,29 +80,32 @@
 					</div>
 				</header>
 				<main class="main__content">
-					<div class="step" data-step="contact_information">
+					<div class="step" data-step="shipping_method">
 						<form class="edit_checkout animate-floating-labels" action="#" method="post">
 							<div class="step__sections">
 								<div class="section section--contact-information">
-									<div class="section__header">
-										<div class="layout-flex layout-flex--tight-vertical layout-flex--loose-horizontal layout-flex--wrap">
-											<h2 class="section__title layout-flex__item layout-flex__item--stretch" id="main-header">
-												주문 고객
-											</h2>
-										</div>
-									</div>
-									<div class="section__content non_member_info">
-										<div class="info_box">
-											<p>이현대</p>
-											<p>010-1234-5678</p>
-											<p>서울특별시 강남구 강남대로1길 1층</p>
-										</div>
-										<div class="btn_box">
-											<a href="#" class="a_link">수정</a>
+									<div class="content-box__row non_member_info">
+										<div class="review-block">
+											<div class="review-block__inner">
+												<div class="review-block__label">
+													이현대
+												</div>
+												<div class="review-block__content">
+													<address class="address address--tight">
+														010-1234-5678<br>
+														서울특별시 강남구 강남대로1길 1층
+													</address>
+												</div>
+											</div>
+											<div role="cell" class="review-block__link">
+												<a class="link--small" href="#">
+													<span aria-hidden="true">수정</span>
+												</a>
+											</div>
 										</div>
 									</div>
 								</div>
-								<div class="section section--shipping-address section--payment">
+								<div class="section section--shipping-method section--payment section--payment-method">
 									<div class="section__header">
 										<h2 class="section__title" id="section-delivery-title">
 											결제
@@ -182,8 +187,7 @@
 												<div class="card_type_box">
 													<div class="add_plan">
 														<div class="input-block form-group__field">
-															<label class="field__label field__label--visible" for="payment_plan">할부 선택</label>
-															<select id="payment_plan" class="field__input field__input--select toteme-select-style toteme-button-style no-animation">
+															<select id="payment_plan" class="field__input field__input--select toteme-select-style toteme-button-style no-animation" title="할부 선택">
 																<option value="" selected="">일시불</option>
 																<option value="">2개월</option>
 															</select>
@@ -247,8 +251,7 @@
 												
 												<div class="bank_type_box form-group">
 													<div class="input-block form-group__field">
-														<label class="field__label field__label--visible" for="payment_name">입금자명</label>
-														<input placeholder="입금자명" value="이현대" class="field__input" size="30" type="text" name="payment[name]" id="payment_name">
+														<input placeholder="입금자명" value="이현대" class="field__input" size="30" type="text" name="payment[name]" id="payment_name" title="입금자명">
 													</div>
 													<ul class="comment tlist">
 														<li>무통장입금 정보는 결제 시 보여집니다.</li>
@@ -275,8 +278,7 @@
 														<div class="receipt_type1">
 															<div class="bank_type_box form-group">
 																<div class="input-block form-group__field">
-																	<label class="field__label field__label--visible" for="receipt_phone">휴대폰번호</label>
-																	<input placeholder="휴대폰번호(필수)" class="field__input" size="30" type="text" name="receipt[phone]" id="receipt_phone">
+																	<input placeholder="휴대폰번호(필수)" class="field__input" size="30" type="text" name="receipt[phone]" id="receipt_phone" title="휴대폰번호 필수입력">
 																</div>
 																<p class="comment">'-' 없이 숫자만 입력하세요.</p>
 															</div>
@@ -284,8 +286,7 @@
 														<div class="receipt_type2">
 															<div class="bank_type_box form-group">
 																<div class="input-block form-group__field">
-																	<label class="field__label field__label--visible" for="receipt_num">사업자등록번호</label>
-																	<input placeholder="사업자등록번호(필수)" class="field__input" size="30" type="text" name="receipt[num]" id="receipt_num">
+																	<input placeholder="사업자등록번호(필수)" class="field__input" size="30" type="text" name="receipt[num]" id="receipt_num" title="사업자등록번호 필수입력">
 																</div>
 															</div>
 														</div>
@@ -317,22 +318,23 @@
 											</div>
 									 </div>
 								 </div>
-								 
-									<div class="section__content form-group">
-										<div class="input-block form-group__field">
-											<label class="field__label field__label--visible" for="payment_pw">비회원 주문조회 비밀번호</label>
-											<input placeholder="비회원 주문조회 비밀번호" class="field__input" size="30" type="text" name="payment[pw]" id="payment_pw">
+								</div>
+								<div class="section section--payment section--billing-address">
+									<div class="section__content">
+										<div class="form-group">
+											<div class="input-block form-group__field">
+												<input placeholder="비회원 주문조회 비밀번호" class="field__input" size="30" type="text" name="payment[pw]" id="payment_pw" title="비회원 주문조회 비밀번호 입력">
+											</div>
+											<ul class="comment tlist">
+												<li>결제완료 후 주문내역 확인을 위해 사용하는 비밀번호입니다.</li>
+												<li>8~10자리 영문, 숫자, 특수문자 중 2가지 이상 조합으로 입력해주세요.</li>
+											</ul>
 										</div>
-										<ul class="comment tlist">
-											<li>결제완료 후 주문내역 확인을 위해 사용하는 비밀번호입니다.</li>
-											<li>8~10자리 영문, 숫자, 특수문자 중 2가지 이상 조합으로 입력해주세요.</li>
-										</ul>
 										<div class="nm_payment_attr field">
 											<p class="payment_guaranty">채무지급 보증안내 - 고객님의 안전거래를 위해 현금결제시 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다. <a href="#" class="a_link modal_trigger" data-modal="ly_guarantee-modal">서비스 가입사실 확인</a></p>
 											<div class="checkbox_custom_box">
 												<input id="payment_agree1" class="checkbox" value="1" type="checkbox">
 												<label for="payment_agree1">비회원 개인정보 수집 이용에 대한 내용을 확인하였으며, 이에 동의합니다. <a href="#" class="a_link modal_trigger" data-modal="nm_privacy-modal">내용보기</a></label>
-												
 											</div>
 											<div class="checkbox_custom_box">
 													<input id="payment_agree2" class="checkbox" value="2" type="checkbox">
@@ -341,14 +343,14 @@
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="step__footer">
-								<button type="button" id="continue_button" class="step__footer__continue-btn btn payment_btn">
-									<span class="btn__content">결제하기</span>
-									<svg class="icon-svg icon-svg--size-18 btn__spinner icon-svg--spinner-button" aria-hidden="true" focusable="false">
-										<use xlink:href="#spinner-button"></use>
-									</svg></button>
-									<a class="step__footer__previous-link" href="#"><svg focusable="false" aria-hidden="true" class="icon-svg icon-svg--color-accent icon-svg--size-10 previous-link__icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><path d="M8 1L7 0 3 4 2 5l1 1 4 4 1-1-4-4"></path></svg><span class="step__footer__previous-link-content">이전 단계로 돌아가기</span></a>
+								<div class="step__footer">
+									<button type="button" id="continue_button" class="step__footer__continue-btn btn payment_btn">
+										<span class="btn__content">결제하기</span>
+										<svg class="icon-svg icon-svg--size-18 btn__spinner icon-svg--spinner-button" aria-hidden="true" focusable="false">
+											<use xlink:href="#spinner-button"></use>
+										</svg></button>
+										<a class="step__footer__previous-link" href="#"><svg focusable="false" aria-hidden="true" class="icon-svg icon-svg--color-accent icon-svg--size-10 previous-link__icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><path d="M8 1L7 0 3 4 2 5l1 1 4 4 1-1-4-4"></path></svg><span class="step__footer__previous-link-content">이전 단계로 돌아가기</span></a>
+								</div>
 							</div>
 						</form>
 					</div>
