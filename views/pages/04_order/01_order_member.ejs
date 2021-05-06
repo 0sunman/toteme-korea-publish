@@ -4,19 +4,6 @@
 	/* header, footer hide */
 	.site-header-wrapper, #shopify-section-site-footer{display: none;}
 	/* //header, footer hide */
-
-	.member_infomation{border-bottom: 1px solid #171616;}
-	.checkout .review-block__label{flex: 0 1 15em; -webkit-flex: 0 1 15em;}
-	.member_info_change_box{padding: 1.75rem 2.5rem;}
-	.address_btn_box{margin-top: 4px;}
-	.a_link + .a_link{margin-left: 7px;}
-	.address_wrap>div{display: none;}
-	.address_wrap>div.active{display: block;}
-	.address_wrap .address_info_box .input-block{padding: 0 2.5rem;}
-	.address_add_box, .address_select_box{padding: 0 2.5rem;}
-	.address_info_change_box{padding: .5rem 2.5rem};
-	.address_add_box .input-block{text-align: left;}
-	.address_add_box .checkbox_custom_box+.comment{margin-top: .5rem;}
 </style>
 
 <div class="checkout js display-table container anyflexbox">
@@ -685,94 +672,97 @@
 								<input placeholder="찾고자 하는 주소를 입력하세요" class="field__input" size="30" type="text" name="checkout[addr_find]" id="checkout_addr_find">
 							</div>
 							<div class="input-block">
-								<input class="step__footer__continue-btn btn" type="submit" value="검색">
+								<input class="step__footer__continue-btn btn" type="submit" value="검색" data-address="address_search_list">
 								<p class="comment">예: 동(읍/면)명 또는 도로명주소(건물번호/건물명)<br>일부 군사지역은 배송이 불가능할 수 있습니다.</p>
 							</div>
 						</div>
-						<div class="address_find_content">
-							<div class="input-table form-group__field">
-								<div>
-									<div class="select-wrap">
-										<select class="field__input field__input--select toteme-select-style toteme-button-style no-animation">
-											<option value="">시/도</option>
-											<option value="">시/도</option>
-											<option value="">시/도</option>
-										</select>
+						<div class="address_find_content address_wrap">
+							<div class="address_search_list_box">
+								<div class="input-table form-group__field">
+									<div>
+										<div class="select-wrap">
+											<select class="field__input field__input--select toteme-select-style toteme-button-style no-animation">
+												<option value="">시/도</option>
+												<option value="">시/도</option>
+												<option value="">시/도</option>
+											</select>
+										</div>
+									</div>
+									<div>
+										<div class="select-wrap">
+											<select class="field__input field__input--select toteme-select-style toteme-button-style no-animation">
+												<option value="">군/구</option>
+												<option value="">군/구</option>
+												<option value="">군/구</option>
+											</select>
+										</div>
 									</div>
 								</div>
-								<div>
-									<div class="select-wrap">
-										<select class="field__input field__input--select toteme-select-style toteme-button-style no-animation">
-											<option value="">군/구</option>
-											<option value="">군/구</option>
-											<option value="">군/구</option>
-										</select>
-									</div>
-								</div>
+								<ul class="addr_list">
+									<li><button type="button" class="addr_btn" data-address="address_detail">
+										<span class="addr-line rrr">
+											<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
+										</span>
+										<span class="addr-line jjj">
+											<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
+										</span>
+										<span class="zipcode">06088</span>
+									</button></li>
+									<li><button type="button" class="addr_btn" data-address="address_detail">
+										<span class="addr-line rrr">
+											<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
+										</span>
+										<span class="addr-line jjj">
+											<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
+										</span>
+										<span class="zipcode">06088</span>
+									</button></li>
+									<li><button type="button" class="addr_btn" data-address="address_detail">
+										<span class="addr-line rrr">
+											<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
+										</span>
+										<span class="addr-line jjj">
+											<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
+										</span>
+										<span class="zipcode">06088</span>
+									</button></li>
+									<li><button type="button" class="addr_btn" data-address="address_detail">
+										<span class="addr-line rrr">
+											<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
+										</span>
+										<span class="addr-line jjj">
+											<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
+										</span>
+										<span class="zipcode">06088</span>
+									</button></li>
+									<li><button type="button" class="addr_btn" data-address="address_detail">
+										<span class="addr-line rrr">
+											<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
+										</span>
+										<span class="addr-line jjj">
+											<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
+										</span>
+										<span class="zipcode">06088</span>
+									</button></li>
+								</ul>
 							</div>
-							<ul class="addr_list">
-								<li><a href="#">
-									<span class="addr-line rrr">
-										<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
-									</span>
-									<span class="addr-line jjj">
-										<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
-									</span>
-									<span class="zipcode">06088</span>
-								</a></li>
-								<li><a href="#">
-									<span class="addr-line rrr">
-										<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
-									</span>
-									<span class="addr-line jjj">
-										<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
-									</span>
-									<span class="zipcode">06088</span>
-								</a></li>
-								<li><a href="#">
-									<span class="addr-line rrr">
-										<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
-									</span>
-									<span class="addr-line jjj">
-										<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
-									</span>
-									<span class="zipcode">06088</span>
-								</a></li>
-								<li><a href="#">
-									<span class="addr-line rrr">
-										<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
-									</span>
-									<span class="addr-line jjj">
-										<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
-									</span>
-									<span class="zipcode">06088</span>
-								</a></li>
-								<li><a href="#">
-									<span class="addr-line rrr">
-										<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
-									</span>
-									<span class="addr-line jjj">
-										<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
-									</span>
-									<span class="zipcode">06088</span>
-								</a></li>
-							</ul>
-							<!-- 상세주소 입력 -->
-							<ul class="addr_list">
-								<li>
-									<div class="radio_custom_box">
-										<input id="addr_type1" class="radio_input" value="1" type="radio" name="addr_type" checked>
-										<label for="addr_type1"><span class="addr-mark-name">도로명</span> 서울특별시 강남구 학동로 402</label>
-									</div>
-									<div class="radio_custom_box">
-										<input id="addr_type2" class="radio_input" value="2" type="radio" name="addr_type">
-										<label for="addr_type2"><span class="addr-mark-num">지번</span> 서울특별시 강남구 삼성동 1</label>
-									</div>
-								</li>
-							</ul>
-							<div class="input-block form-group__field">
-								<label class="field__label field__label--visible" for="addr_detail">상세주소 입력</label>
-								<input placeholder="상세주소 입력" class="field__input" size="30" type="text" name="checkout[addr_detail]" id="addr_detail">
+							<div class="address_detail_box">
+								<ul class="addr_list">
+									<li>
+										<div class="radio_custom_box">
+											<input id="addr_type1" class="radio_input" value="1" type="radio" name="addr_type" checked>
+											<label for="addr_type1"><span class="addr-mark-name">도로명</span> 서울특별시 강남구 학동로 402</label>
+										</div>
+										<div class="radio_custom_box">
+											<input id="addr_type2" class="radio_input" value="2" type="radio" name="addr_type">
+											<label for="addr_type2"><span class="addr-mark-num">지번</span> 서울특별시 강남구 삼성동 1</label>
+										</div>
+									</li>
+								</ul>
+								<div class="input-block form-group__field">
+									<label class="field__label field__label--visible" for="addr_detail">상세주소 입력</label>
+									<input placeholder="상세주소 입력" class="field__input" size="30" type="text" name="checkout[addr_detail]" id="addr_detail">
+								</div>
 							</div>
 							<div class="input-block pcs2">
 								<input class="step__footer__continue-btn btn" type="submit" value="확인">
@@ -794,9 +784,4 @@ setTimeout(function(){
 	$("body").css("paddingTop","0px")
 },100);
 	/* // 꼼수 */
-
-$('[data-address]').on('click', function(){
-	var data_address=$(this).attr('data-address');
-	$('.address_wrap .'+data_address+'_box').addClass('active').siblings().removeClass('active');
-});
 </script>

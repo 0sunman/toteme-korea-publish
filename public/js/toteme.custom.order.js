@@ -91,6 +91,12 @@ $(function(){
 			$('.bank_account-modal').addClass('is-active');
 		}
 	});
+	
+	//주소 관련 클릭 이벤트
+	$('[data-address]').on('click', function(){
+		var data_address=$(this).attr('data-address');
+		$('.address_wrap .'+data_address+'_box').addClass('active').siblings().removeClass('active');
+	});
 
 
 
