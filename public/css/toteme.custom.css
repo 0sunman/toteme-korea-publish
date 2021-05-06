@@ -9,9 +9,9 @@
 
 
 @font-face {
-    font-family: 'Noto Sans KR3';
+    font-family: 'Noto Sans Toteme';
     font-style: normal;
-    src: url(https://0sunman.github.io/toteme-korea-publish/public/css/NotoSansCJKKRRegular_reduce.ttf) format('truetype')
+    src: url(https://0sunman.github.io/toteme-korea-publish/public/css/NotoSans_Hyundai_ForToteme.ttf) format('truetype')
 } 
 
 @font-face {
@@ -45,7 +45,7 @@ body#toteme-official-online-store.has-announcement-bar{padding-top:51px;}
 .no-padding{ padding-top:0px !important; padding-bottom:0px !important; }
 /* // 2-1 회원가입 로그인 초기 */
 
-html,body,div,p,h1,h2,h3,span,*{font-family: 'MonumentGrotesk','Noto Sans KR3','Noto Sans KR',-apple-system,blinkmacsystemfont,San Francisco,Helvetica,sans-serif !important;}
+html,body,div,p,h1,h2,h3,span,*{font-family: 'MonumentGrotesk','Noto Sans Toteme','Noto Sans KR',-apple-system,blinkmacsystemfont,San Francisco,Helvetica,sans-serif !important;}
 
 
 /* 2-2 회원가입 페이지 */
