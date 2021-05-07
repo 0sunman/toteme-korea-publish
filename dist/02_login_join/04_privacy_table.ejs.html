@@ -951,7 +951,88 @@
       <main id="MainContent" class="main-content critical-clear">
          <!-- BEGIN content_for_index -->
          <!--  include ("./pages/00_main/index.ejs") BEGIN content_for_index -->
-         <div class="container">
+         <style>
+   .top-d20{margin-top:20px;}
+   h2.title{font-size:15px; color:#171616}
+   table, tr, th, td{border:1px #000 solid; border-collapse: collapse;padding:10px;text-align: center; font-size:13px;}
+   th{font-weight: normal;}
+   .agree_radio{margin-bottom:10px;}
+   .agree_radio > input{margin-right:9px !important;}
+   .agree_radio > label{font-size:15px}
+   input.button--block.small_button.agreement{ width: auto; padding: 0px 18px; font-size: 13px; line-height: 13px; min-height: 23px; float: right; padding-bottom: 0px; }
+
+   input.button--block:hover.small_button { width:auto;  }
+   input.button--block.agreement.button-padding-52 {width:54ox; }
+
+
+
+   .privacy_agreement .verify-modal .verify_container .button {
+      margin-left: 0;
+      padding: 0px 18px;
+      width: auto;
+      margin-right: 12px;
+      height: 23px !important;
+      min-height: auto;
+      font-size: 13px;
+   }
+
+   .privacy_agreement .modal__header{
+      justify-content: left;
+      padding: 15px;
+      font-size: 14px;
+      border-bottom: 0px;
+   }
+   .privacy_agreement .modal__close{ padding: 13px;}
+   .privacy_agreement .icon__close{ width: 22px; height: 22px; }
+   .privacy_agreement .modal__body{ padding: 0px 15px; }
+   .privacy_agreement .input-block.form-group__footer{ padding-top: 0px; margin-top: 0px; text-align: left; justify-content: left; margin-bottom: 30px;}
+   .privacy_agreement .payment_tit1{ font-weight: bold; }
+   .privacy_agreement .verify_container{ max-width: 100%; }
+   .privacy_agreement .modal__body{ margin-bottom:30px; }
+</style>
+
+<div class="container">
+   <div id="verify-modal" class="privacy_agreement modal modal--light agreement-verify-modal" role="dialog" tabindex="-1">
+      <div class="modal__overlay" tabindex="-1">
+         <div class="verify-modal">
+            <div class="modal__card custom_modal__card">
+               <div class="modal__header">
+                  <h5 class="modal__title  preorder-modal__title">전문보기</h5>
+                  <button class="modal__close custom_modal__close">
+                     <span class="visually-hidden">
+                        Close
+                     </span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+                     </svg> </button>
+               </div>
+               <div class="modal__body">
+                  <div class="verify_container">
+                     <div class="input-block form-group__footer">
+                        <input class="button button--primary button--block button--large is-valid" type="button" value="이용약관">
+                        <input class="button button--primary button--block button--large is-valid" type="button" value="개인정보처리방침">
+                    </div>
+                    <div class="verify_txt_box">
+                        <h6 class="payment_tit1">제1조 목적</h6>
+                        <p>이 약관은 주식회사 현대백화점(이하 “회사”라 합니다)가
+                           운영하는 온라인몰, 코스스토어닷컴, 스토리즈닷컴 등의 사이트
+                           (이하 통칭하여 “온라인몰”이라 합니다)에서 제공하는 인터넷
+                           관련 서비스(이하 “서비스”라 합니다)를 이용함에 있어, “회사”와
+                           “이용자”의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.</p>
+                        <h6 class="payment_tit1">제2조 정의</h6>
+                        <p>① “온라인몰”이란 “회사”가 재화 또는 용역(이하 “재화 등”이라
+                           합니다)을 이용자에게 제공하기 위하여 컴퓨터 등 정보통신설비를
+                           이용하여 재화 등을 거래할 수 있도록 설정한 가상의 영업장을
+                           말하며, 아울러 ”온라인몰”을 운영하는 사업자의 의미로도
+                           사용합니다.<br>
+                           ② “이용자”란 “온라인몰”에 접속하여 이 약관에 따라 “온라인몰”
+                           이제공하는 서비스를 이용하는 자를 통칭합니다.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
    <div class="template-account__header">
       회원가입
    </div>
@@ -1058,20 +1139,12 @@
                <div class='text-block left-m15 top-m20 bottom-m15 left-d15 top-d20 bottom-d15'>
                   <h2 class='title'>개인정보 수집·이용 동의</h2>
                </div>
-               <style>
-                  .top-d20{margin-top:20px;}
-                  h2.title{font-size:15px; color:#171616}
-                  table, tr, th, td{border:1px #000 solid; border-collapse: collapse;padding:10px;text-align: center;;}
-                  th{font-weight: normal;}
-                  .agree_radio{margin-bottom:10px;}
-                  .agree_radio > input{margin-right:9px !important;}
-               </style>
                 <div class="join template-login__form">
                    
                   
                      <div class='text-block top-m20 top-d20 bottom-m15 bottom-d15 left-m15 left-d15 right-m15 right-d15'>
                         <h3 clas='caption'>필수사항 1 - 개인정보 및 이용 동의</h3>
-                        <table style='font-size:13px;'>
+                        <table>
                            <tr>
                               <th>구분</th>
                               <th>이용목적</th>
@@ -1099,11 +1172,11 @@
                         <p class='top-m15 top-d15 bottom-m15 bottom-d15 right-m15 right-d15'>
                            필수사항은 당사의 서비스 제공을 위한 최소한의 개인정보이므로 동의를 해주셔야 서비스를 이용하실 수 있습니다.
                         </p>
-                        <div class="agree_radio radio_custom_box" style='font-size:13px;'>
+                        <div class="agree_radio radio_custom_box">
                            <input id="agreement1_1" class="radio_input" value="10" type="radio" name="agreement1">
                            <label for="agreement1_1">동의합니다.</label>
                            </div>
-                        <div class="agree_radio radio_custom_box" style='font-size:13px;'>
+                        <div class="agree_radio radio_custom_box">
                            <input id="agreement1_2" class="radio_input" value="10" type="radio" name="agreement1">
                            <label for="agreement1_2">동의하지 않습니다.</label>
                         </div>
@@ -1156,7 +1229,7 @@
 
                      <div class='text-block top-m20 top-d20 bottom-m15 bottom-d15 left-m15 left-d15 right-m15 right-d15'>
                         <h3 clas='caption'>선택사항 2 - 마케팅 수신 목적 제3자 정보 제공 동의</h3>
-                        <table style='font-size:13px;'>
+                        <table>
                            <tr>
                               <th>구분</th>
                               <th>이용목적</th>
@@ -1197,7 +1270,21 @@
                         </div>
                         
                      </div>
+                     <div class="text-block top-m30 top-d30 left-m15 left-d15 right-m15 right-d15">
+                        <p>이용약관 및 개인정보 처리방침 <input class="button button--primary button--block button--large is-valid small_button agreement custom_modal_trigger" data-modal='agreement-verify-modal' type="submit" value="전문 보기"></p>                       
+                     </div>
 
+                     <div class="text-block top-m30 top-d30 bottom-m30 bottom-d30 left-m15 left-d15 right-m15 right-d15">
+                        <p style='font-size:15px; text-align: center;'>이용약관 및 개인정보 수집 및 이용에 대한<br>내용을 확인하고 동의합니다.</p>                       
+                     </div>
+
+                     <div class="text-block top-m30 top-d30 left-m15 left-d15 right-m15 right-d15" style="
+    margin-left: 52px;
+    margin-right: 52px;
+    margin-bottom: 100px;
+">
+                        <p><input class="button button--primary button--block button--large is-valid agreement button-padding-52" type="submit" value="동의하고 회원가입"></p>                       
+                     </div>
                   </form>
                   
             </div>
@@ -2163,7 +2250,7 @@
       
 
       <script src="https://image.thehyundai.com/pc/js/jquery-1.11.3.min.js"></script>
-      <!---script src="/js/toteme.custom.js"></script-->
+      <!---script src="/js/toteme.custom.js"></script--->
       <script src='https://0sunman.github.io/toteme-korea-publish/public/js/toteme.custom.js'></script>
 
       <script src="https://cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/multi-store.config.js?v=3834433138071325330" type="text/javascript"></script>

@@ -101,6 +101,29 @@ Util.prototype.registerEvent = function(option){
                 }).bind(this))
             /* // 한국 애로우 변경 */
         break;
+
+
+        
+        case "activeModal":
+            //modal toggle
+            $('.modal_trigger').on('click', function(){
+                var modal_name = $(this).attr('data-modal');
+                $('.'+modal_name).addClass("is-active");
+                $('body').css('overflow','hidden');
+            });
+            // modal close
+            $('.modal__close').on('click', function(){
+                $(this).parents('.modal').removeClass("is-active");
+                $('body').css('overflow','');
+            });
+            $(document).on('mouseup', function (e){
+                var modal = $(".modal__card");
+                if(modal.has(e.target).length === 0){
+                        modal.parents('.modal').removeClass("is-active");
+                        $('body').css('overflow','');
+                }
+            });
+        break;
     }
 
     
@@ -108,8 +131,6 @@ Util.prototype.registerEvent = function(option){
 }
 
 Util.prototype.resetSubFunction = function(){
-
-
 
     $("button[data-right-header-button-type]").each(function(idx,ele){
       //  debugger;
@@ -132,6 +153,8 @@ var SiteController = function(){
     
     /* 20210430 애로우 수정 요청 */
     this.initListPointerArrow();
+
+    this.initModalPopup();
 }
 
 SiteController.prototype.initMobileMenu = function(){
@@ -144,6 +167,11 @@ SiteController.prototype.initRightMenu = function(){
         utilInstance.registerEvent({cmd:"showRightMenu", target:targetId, element:ele});        
         // data-header-button-type에 버튼 ID를 입력하면, 우측 메뉴 이벤트가 작동됩니다.             
     })
+}
+
+
+SiteController.prototype.initModalPopup = function(){
+    utilInstance.registerEvent({cmd:"activeModal"});    
 }
 
 
