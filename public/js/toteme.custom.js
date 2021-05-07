@@ -167,7 +167,7 @@ var changeURLList = [
     { old : "/our-story"                , new : "https://0sunman.github.io/toteme-korea-publish/dist/05_page_about/01_about_toteme.ejs.html"},
     { old : "/questions-1"              , new : "https://0sunman.github.io/toteme-korea-publish/dist/04_page_question/01_page_covid.ejs.html"},
     { old : "/scarves"                  , new : "https://0sunman.github.io/toteme-korea-publish/dist/00_main/shop_scarves.ejs.html"},
-    { old : "int.toteme-studio.com"     , new : "https://0sunman.github.io/toteme-korea-publish/dist/00_main/index.ejs.html"},
+    { old : "int.toteme-studio.com"     , new : "https://0sunman.github.io/toteme-korea-publish/dist/00_main/index2.ejs.html"},
     { old : "/product2"                 , new : "https://0sunman.github.io/toteme-korea-publish/dist/00_main/shop_scarves.ejs.html"},
     { old : "/pages/our-story"          , new : "https://0sunman.github.io/toteme-korea-publish/dist/05_page_about/01_about_toteme.ejs.html"},
     { old : "/pages/stores"             , new : "https://0sunman.github.io/toteme-korea-publish/dist/05_page_about/02_about_store.ejs.html"},
