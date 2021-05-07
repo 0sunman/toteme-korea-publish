@@ -419,3 +419,7 @@ body.overflow-hidden {overflow: hidden;}
 li > a.navlist__link.text-link{padding-left:15px}
 /* // 한국 애로우 변경 */
 /* //테이블 */
+
+
+#MainContent .template-account__wrapper .custom-module__text-column{border-right: 0px;}
+#MainContent .template-account__wrapper .custom-module__text-column.custom-module__text-column--content{border-top:0px;}
