@@ -33,6 +33,7 @@ app.use(livereloadMiddleware());
 const pageData = [
   {"type":"index","title":"퍼블리스트","url" : "/publist", "pageurl" : "list.ejs", "isMain":true},
   {"type":"main","title":"Main","url" : "/00_main/1", "pageurl" : "00_main/index.ejs"},
+  {"type":"main","title":"Main2","url" : "/00_main/11", "pageurl" : "00_main/index2.ejs"},
   {"type":"main","title":"Guidelines for Input (error,commit..etc)","url" : "/00_main/2", "pageurl" : "00_main/inputguide.ejs"},
   {"type":"main","title":"Display Page Type 01 (2–4 columns) ","url" : "/00_main/3", "pageurl" : "00_main/shop_scarves.ejs"},
   {"type":"main","title":"Display Page Type 02 (1-2–4 columns)","url" : "/00_main/4", "pageurl" : "00_main/shop_silk.ejs"},
