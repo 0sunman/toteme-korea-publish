@@ -1,22 +1,5 @@
 $(function(){
-	//modal toggle
-	$('.modal_trigger').on('click', function(){
-		var modal_name = $(this).attr('data-modal');
-		$('.'+modal_name).addClass("is-active");
-		$('body').css('overflow','hidden');
-	});
-	// modal close
-	$('.modal__close').on('click', function(){
-		$(this).parents('.modal').removeClass("is-active");
-		$('body').css('overflow','');
-	});
-	$(document).on('mouseup', function (e){
-		var modal = $(".modal__card");
-		if(modal.has(e.target).length === 0){
-				modal.parents('.modal').removeClass("is-active");
-				$('body').css('overflow','');
-		}
-	});
+	
 
 	//전화번호 추가
 	$('.phone_form .btn_plus').on('click', function(){
