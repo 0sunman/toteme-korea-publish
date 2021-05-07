@@ -327,6 +327,7 @@ body.overflow-hidden {overflow: hidden;}
     .addr_list{font-size: 12px;}
 }
 .addr_list .addr_btn{display: table; width: 100%; padding: 10px; border-collapse: separate; border-top: 1px solid #171616;}
+.addr_list .addr-line-wrap{display: table-cell; width: calc(100% - 60px);}
 .addr_list .addr-line{display: block; text-align: left;}
 .addr_list .addr-line:first-child{margin-bottom: 7px;}
 .addr_list .addr-line span{display: table-cell;}
@@ -433,3 +434,7 @@ body.overflow-hidden {overflow: hidden;}
 li > a.navlist__link.text-link{padding-left:15px}
 /* // 한국 애로우 변경 */
 /* //테이블 */
+
+
+#MainContent .template-account__wrapper .custom-module__text-column{border-right: 0px;}
+#MainContent .template-account__wrapper .custom-module__text-column.custom-module__text-column--content{border-top:0px;}
