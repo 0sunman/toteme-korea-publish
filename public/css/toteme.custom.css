@@ -300,6 +300,9 @@ body.overflow-hidden {overflow: hidden;}
 .deposit_attr_box .field__message--error{display: inline-block;}
 .deposit_attr_box .btn_deposit{position: relative; font-size: 12px;}
 .deposit_attr_box .btn_deposit:after{content: ''; height: 1px; position: absolute; bottom: 0; left: 0; right: 0; background: #444;}
+.deposit_result_box{display: none;}
+.deposit_active .deposit_result_box{display: table;}
+.deposit_active [data-deposit], .deposit_active>*{display: none;}
 .direct_input{display: none;}
 .direct_input.active{display: block;}
 
