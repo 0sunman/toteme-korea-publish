@@ -404,6 +404,8 @@ body.overflow-hidden {overflow: hidden;}
 .address_add_box .input-block{text-align: left;}
 .address_add_box .checkbox_custom_box+.comment{margin-top: .5rem;}
 .checkout .step__sections .section.section--contact-information .section__title:before, .checkout [data-step=shipping_method] .step__sections .section.section--shipping-method .section__title:before{display: none;}
+.checkout .step__sections .section.section--contact-information>.section__content{border-bottom-width: 0;}
+.checkout .step__sections .section.section--shipping-address .section__header{border-bottom: 1px solid #171616;}
 /* //주문 */
 
 
