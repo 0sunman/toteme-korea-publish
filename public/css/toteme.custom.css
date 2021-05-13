@@ -403,7 +403,7 @@ body.overflow-hidden {overflow: hidden;}
 .address_info_change_box{padding: .5rem 2.5rem};
 .address_add_box .input-block{text-align: left;}
 .address_add_box .checkbox_custom_box+.comment{margin-top: .5rem;}
-.checkout .section.section--contact-information .section__title:before, .checkout [data-step=shipping_method] .section.section--shipping-method .section__title:before{display: none;}
+.checkout .step__sections .section.section--contact-information .section__title:before, .checkout [data-step=shipping_method] .step__sections .section.section--shipping-method .section__title:before{display: none;}
 /* //주문 */
 
 
