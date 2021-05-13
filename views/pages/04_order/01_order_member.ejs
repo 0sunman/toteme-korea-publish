@@ -4,6 +4,8 @@
 	/* header, footer hide */
 	.site-header-wrapper, #shopify-section-site-footer{display: none;}
 	/* //header, footer hide */
+	.address_change_box{display: none;}
+	.address_select_box .content-box__row .address_change_box{display: block;}
 </style>
 
 <div class="checkout js display-table container anyflexbox">
@@ -210,7 +212,7 @@
 																서울특별시 강남구 강남대로1길 1층
 															</address>
 															<div class="address_btn_box">
-																<button type="button" class="a_link" data-address="address_add">수정</button>
+																<button type="button" class="a_link" data-address-change="true">수정</button>
 															</div>
 														</div>
 													</div>
@@ -231,7 +233,7 @@
 																서울특별시 강남구 강남대로1길 1층
 															</address>
 															<div class="address_btn_box">
-																<button type="button" class="a_link" data-address="address_add">수정</button><button type="button" class="a_link">삭제</button>
+																<button type="button" class="a_link" data-address-change="true">수정</button><button type="button" class="a_link">삭제</button>
 															</div>
 														</div>
 													</div>
@@ -252,12 +254,65 @@
 																서울특별시 강남구 강남대로1길 1층
 															</address>
 															<div class="address_btn_box">
-																<button type="button" class="a_link" data-address="address_add">수정</button><button type="button" class="a_link">삭제</button>
+																<button type="button" class="a_link" data-address-change="true">수정</button><button type="button" class="a_link">삭제</button>
 															</div>
 														</div>
 													</div>
 													<div role="cell" class="review-block__link">
 														<button type="button" class="link--small" data-address="address_info">선택</button>
+													</div>
+												</div>
+											</div>
+											<div class="address_change_box">
+												<div class="form-group">
+													<div class="input-block form-group__field">
+														<label class="field__label field__label--visible" for="checkout_name2">받는 사람</label>
+														<input placeholder="받는 사람" value="더현대" class="field__input" size="30" type="text" name="checkout[name2]" id="checkout_name2">
+													</div>
+													<div class="input-block form-group__field">
+														<div class="input-table phone_form">
+															<div>
+																<label class="field__label field__label--visible" for="checkout_phone3">휴대폰번호(필수)</label>
+																<input placeholder="휴대폰번호(필수)" value="010-1234-5678" class="field__input" size="30" type="text" name="checkout[phone3]" id="checkout_phone3">
+															</div>
+															<div>
+																<button type="button" class="btn_plus">추가
+																	<svg class="icon icon--large" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(45deg);">
+																		<path fill-rule="evenodd" clip-rule="evenodd" d="M2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+																	</svg>
+																</button>
+															</div>
+														</div>
+														<div class="input_phone_plus">
+															<input placeholder="추가연락처" class="field__input" size="30" type="text" name="checkout[phone4]">
+														</div>
+													</div>
+													<div class="input-block form-group__field">
+														<div class="input-table phone_addr">
+															<div>
+																<label class="field__label field__label--visible" for="checkout_addr4">배송지주소</label>
+																<input placeholder="배송지주소" value="05325" class="field__input" size="30" type="text" name="checkout[addr]" id="checkout_addr4">
+															</div>
+															<div>
+																<button type="button" class="button button--large no-animation modal_trigger" data-modal="address-modal">찾기</button>
+															</div>
+														</div>
+													</div>
+													<div class="input-block form-group__field">
+														<label class="field__label field__label--visible" for="checkout_addr5">주소</label>
+														<input placeholder="주소" value="서울특별시 강남구 강남대로 1길" class="field__input" size="30" type="text" name="checkout[addr5]" id="checkout_addr5" readonly="">
+													</div>
+													<div class="input-block form-group__field">
+														<label class="field__label field__label--visible" for="checkout_addr6">상세주소</label>
+														<input placeholder="상세주소" value="1층" class="field__input" size="30" type="text" name="checkout[addr3]" id="checkout_addr6">
+													</div>
+													<div class="checkbox_custom_box">
+														<input id="address_default" class="checkbox" value="1" type="checkbox">
+														<label for="address_default">기본배송지 설정</label>
+													</div>
+													<div class="input-block pcs2">
+														<input class="step__footer__continue-btn btn white" type="submit" value="취소">
+														<input class="step__footer__continue-btn btn" type="submit" value="저장">
 													</div>
 												</div>
 											</div>
@@ -478,7 +533,7 @@
 													<label class="field__label field__label--visible" for="checkout_reduction_code">프로모션 코드</label>
 													<input placeholder="프로모션 코드 입력" class="field__input" id="checkout_reduction_code" autocomplete="off" aria-required="true" size="30" type="text" name="checkout[reduction_code]">
 												</div>
-												<button name="button" type="submit" class="field__input-btn btn btn--disabled" disabled="disabled">
+												<button name="button" type="button" class="field__input-btn btn btn--disabled" data-deposit="true">
 													<span class="btn__content visually-hidden-on-mobile" aria-hidden="true">
 														적용
 													</span>
@@ -492,14 +547,14 @@
 														<use xlink:href="#spinner-button"></use>
 													</svg>
 												</button>
-												<!-- <div class="deposit_attr_box">
+												<div class="deposit_attr_box deposit_result_box">
 													<div>
 														<p class="field__message" id="">SALE20 (-10,000원)</p>
 													</div>
 													<div>
 														<button type="button" class="btn_deposit">삭제</button>
 													</div>
-												</div> -->
+												</div>
 											</div>
 											<p class="field__message field__message--error" id="error-for-reduction_code">프로모션 코드가 정확하지 않습니다.</p>
 										</div>
@@ -525,7 +580,7 @@
 														<button type="button" class="btn_deposit">모두사용</button>
 													</div>
 												</div>
-												<button name="button" type="submit" class="field__input-btn btn btn--disabled" disabled="disabled">
+												<button name="button" type="button" class="field__input-btn btn btn--disabled" data-deposit="true">
 													<span class="btn__content visually-hidden-on-mobile" aria-hidden="true">
 														적용
 													</span>
@@ -539,6 +594,14 @@
 														<use xlink:href="#spinner-button"></use>
 													</svg>
 												</button>
+												<div class="deposit_attr_box deposit_result_box">
+													<div>
+														<p class="field__message" id="">예치금 (-10,000원)</p>
+													</div>
+													<div>
+														<button type="button" class="btn_deposit">삭제</button>
+													</div>
+												</div>
 											</div>
 											<p class="field__message field__message--error" id="error-for-reduction_code">예치금은 10원 단위로 사용할 수 있습니다.</p>
 										</div>

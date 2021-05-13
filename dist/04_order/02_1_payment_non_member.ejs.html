@@ -959,6 +959,11 @@
 	/* //header, footer hide */
 	.table_type1 td:first-child, .table_type1 th:first-child{padding-left: .25rem; text-align: inherit;}
 	.table_type1 td:last-child, .table_type1 th:last-child{text-align: left;}
+	.payment_account_info{margin-top: 1.25rem;}
+	.payment_account_info ul .tit{display: inline-block; min-width: 80px;}
+	.deposit_result_box{display: none;}
+	.deposit_active .deposit_result_box{display: table;}
+	.deposit_active [data-deposit], .deposit_active>*{display: none;}
 </style>
 
 <div class="checkout js display-table container anyflexbox">
@@ -1210,6 +1215,14 @@
 														<li>무통장입금 정보는 결제 시 보여집니다.</li>
 														<li>무통장입금계좌번호는 주문접수 후 즉시 주문하시는 분의 휴대폰 번호와 이메일로 자동 발송됩니다.</li>
 													</ul>
+													<div class="payment_account_info">
+													<!-- 회원일 경우 -->
+														<ul>
+															<li><span class="tit">입금금액</span><span>1,000,000원</span></li>
+															<li><span class="tit">입금은행</span><span>국민 1234-1234-1234</span></li>
+															<li><span class="tit">입금자명</span><span>김선호</span></li>
+														</ul>
+													</div>
 												</div>
 												<div class="cash_receipt_box">
 													<h5 class="payment_tit1">현금영수증 발급 신청</h5>
@@ -1447,7 +1460,7 @@
 													<label class="field__label field__label--visible" for="checkout_reduction_code">프로모션 코드</label>
 													<input placeholder="프로모션 코드 입력" class="field__input" id="checkout_reduction_code" autocomplete="off" aria-required="true" size="30" type="text" name="checkout[reduction_code]">
 												</div>
-												<button name="button" type="submit" class="field__input-btn btn btn--disabled" disabled="disabled">
+												<button name="button" type="button" class="field__input-btn btn btn--disabled" data-deposit="true">
 													<span class="btn__content visually-hidden-on-mobile" aria-hidden="true">
 														적용
 													</span>
@@ -1461,14 +1474,14 @@
 														<use xlink:href="#spinner-button"></use>
 													</svg>
 												</button>
-												<!-- <div class="deposit_attr_box">
+												<div class="deposit_attr_box deposit_result_box">
 													<div>
 														<p class="field__message" id="">SALE20 (-10,000원)</p>
 													</div>
 													<div>
 														<button type="button" class="btn_deposit">삭제</button>
 													</div>
-												</div> -->
+												</div>
 											</div>
 											<p class="field__message field__message--error" id="error-for-reduction_code">프로모션 코드가 정확하지 않습니다.</p>
 										</div>
@@ -1494,7 +1507,7 @@
 														<button type="button" class="btn_deposit">모두사용</button>
 													</div>
 												</div>
-												<button name="button" type="submit" class="field__input-btn btn btn--disabled" disabled="disabled">
+												<button name="button" type="button" class="field__input-btn btn btn--disabled" data-deposit="true">
 													<span class="btn__content visually-hidden-on-mobile" aria-hidden="true">
 														적용
 													</span>
@@ -1508,6 +1521,14 @@
 														<use xlink:href="#spinner-button"></use>
 													</svg>
 												</button>
+												<div class="deposit_attr_box deposit_result_box">
+													<div>
+														<p class="field__message" id="">예치금 (-10,000원)</p>
+													</div>
+													<div>
+														<button type="button" class="btn_deposit">삭제</button>
+													</div>
+												</div>
 											</div>
 											<p class="field__message field__message--error" id="error-for-reduction_code">예치금은 10원 단위로 사용할 수 있습니다.</p>
 										</div>
