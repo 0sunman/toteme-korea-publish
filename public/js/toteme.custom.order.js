@@ -44,6 +44,15 @@ $(function(){
 		$(this).val() ? btn.removeClass(className) : btn.addClass(className);
 	});
 
+	//할인코드 입력 결과
+	$('[data-deposit]').on('click', function(){
+		$(this).parents('.field__input-btn-wrapper').addClass('deposit_active');
+	});
+	$('.btn_deposit').on('click', function(){
+		$(this).parents('.order-summary__section--discount').removeClass('enable-form');
+		$(this).parents('.field__input-btn-wrapper').removeClass('deposit_active');
+	});
+
 	//결제 타입 선택
 	$('.payment_type input').on('click', function(){
 		var type = $(this).attr('data-type');
@@ -75,10 +84,21 @@ $(function(){
 		}
 	});
 	
-	//주소 관련 클릭 이벤트
+	//주소 선택, 추가 toggle
 	$('[data-address]').on('click', function(){
 		var data_address=$(this).attr('data-address');
 		$('.address_wrap .'+data_address+'_box').addClass('active').siblings().removeClass('active');
+	});
+	
+	// 주소 수정 toggle
+	var changeHTML = $('.address_select_box .address_change_box').clone();
+	$('[data-address-change]').on('click', function(){
+		var thisWrap = $(this).parents('.content-box__row'),
+				openClass = 'change_open',
+				cloneBox = '.address_change_box';
+		if ( !thisWrap.hasClass(openClass) ){
+			thisWrap.addClass(openClass).append(changeHTML).siblings().removeClass(openClass).find(cloneBox).remove();
+		}
 	});
 
 

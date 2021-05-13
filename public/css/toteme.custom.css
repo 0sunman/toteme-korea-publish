@@ -300,6 +300,9 @@ body.overflow-hidden {overflow: hidden;}
 .deposit_attr_box .field__message--error{display: inline-block;}
 .deposit_attr_box .btn_deposit{position: relative; font-size: 12px;}
 .deposit_attr_box .btn_deposit:after{content: ''; height: 1px; position: absolute; bottom: 0; left: 0; right: 0; background: #444;}
+.deposit_result_box{display: none;}
+.deposit_active .deposit_result_box{display: table;}
+.order-summary__sections .deposit_active [data-deposit], .deposit_active>*{display: none;}
 .direct_input{display: none;}
 .direct_input.active{display: block;}
 
@@ -387,18 +390,22 @@ body.overflow-hidden {overflow: hidden;}
 .ly_guarantee_container:after{content: ''; display: block; clear: both;}
 .ly_guarantee_container img{float: left; width: 50%;}
 
-.member_infomation{border-bottom: 1px solid #171616;}
+/* .member_infomation{border-bottom: 1px solid #171616;} */
+.checkout [data-step=shipping_method] .section:first-of-type{border-width: 0;}
 .checkout .review-block__label{flex: 0 1 15em; -webkit-flex: 0 1 15em;}
 .member_info_change_box{padding: 1.75rem 2.5rem;}
 .address_btn_box{margin-top: 4px;}
 .a_link + .a_link{margin-left: 7px;}
 .address_wrap>div{display: none;}
 .address_wrap>div.active{display: block;}
-.address_wrap .address_info_box .input-block{padding: 0 2.5rem;}
+.address_wrap .address_info_box>.input-block{padding: 0 2.5rem;}
 .address_add_box, .address_select_box{padding: 0 2.5rem;}
 .address_info_change_box{padding: .5rem 2.5rem};
 .address_add_box .input-block{text-align: left;}
 .address_add_box .checkbox_custom_box+.comment{margin-top: .5rem;}
+.checkout .step__sections .section.section--contact-information .section__title:before, .checkout [data-step=shipping_method] .step__sections .section.section--shipping-method .section__title:before{display: none;}
+.checkout .step__sections .section.section--contact-information>.section__content{border-bottom-width: 0;}
+.checkout .step__sections .section.section--shipping-address .section__header{border-bottom: 1px solid #171616;}
 /* //주문 */
 
 
