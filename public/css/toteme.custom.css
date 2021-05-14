@@ -207,8 +207,8 @@ select.toteme-select-style{
 
  /* 인풋 가이드 */
  .form-group .error.comment {font-size:12px;margin-top:5px;color:#ff0000;text-align: left;}
- .checkbox_custom_box{font-size: 12px; position: relative; padding-left: 15px;}
- .checkbox_custom_box .checkbox{width:10px; height:10px; border: 1px solid #171616; vertical-align: middle; position: absolute; top: 0.46em; left: 0;}
+ .checkbox_custom_box{font-size: 15px; position: relative; padding-left: 15px;}
+ .checkbox_custom_box .checkbox{width:10px; height:10px; border: 1px solid #171616; vertical-align: middle; position: absolute; top: 6px; left: 0;}
  .checkbox_custom_box .checkbox:after{content: ''; display: block; width: 6px; height: 6px; background: #000; opacity: 0; position: absolute; top: 1px; left: 1px; box-sizing: border-box; transform: scale(0); transition: all 0.2s ease-in-out; z-index: 1;}
  .checkbox_custom_box .checkbox:checked{background: #fff;}
  .checkbox_custom_box .checkbox:checked:after{opacity: 1; transform: scale(1);}
@@ -253,7 +253,7 @@ body.overflow-hidden {overflow: hidden;}
 .table_type1 th, .table_type1 td{min-width: 3rem; padding: .25rem; border-bottom: 1px solid #171616; border-right: 1px solid #171616; font-weight: 400;}
 .table_type1 th{text-align: center;}
 .table_type1 td{text-align: left;}
-
+/* //테이블 */
 
 /* 상품 */
 .boost-pfs-container-default .boost-pfs-filter-refine-by-wrapper-h .boost-pfs-filter-clear-all.boost-pfs-filter-clear-all{display: none;}
@@ -288,11 +288,13 @@ body.overflow-hidden {overflow: hidden;}
 @media (max-width: 47.99em){.checkout input{font-size: 15px}}
 .phone_form{display: table; width: 100%;}
 .phone_form>div:last-child{width: 41px;}
-.phone_form .btn_plus{display: block; font-size: 0; width: 34px; height: 34px; margin-left: 7px; border: 1px solid #171616; border-radius: 50%;}
+.phone_form .btn_plus{display: block; font-size: 0; width: 34px; height: 34px; margin-left: 7px; border: 1px solid #171616; border-radius: 50%; position: relative;}
 .phone_form .btn_plus svg{transform: rotate(45deg);}
 .input_phone_plus{display: none; margin-top: 10px;}
-.input_phone_plus.active{display: block;}
-.phone_addr .button{width: calc(100% - 7px); min-height: 35px; margin-left: 7px;}
+.phone_form.active+.input_phone_plus{display: block;}
+.phone_form.active .btn_plus svg{display: none;}
+.phone_form.active .btn_plus:before{content: ''; display: block; width: 8px; height: 1px; background: #171616; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.phone_addr .button{width: calc(100% - 7px); min-height: 34px; margin-left: 7px;}
 .product-table:not(.stock-problem-table) .product__quantity .visually-hidden, .checkout .order-summary__section--discount .field__input-btn .visually-hidden-on-mobile{overflow: visible;}
 .deposit_attr_box{display: table; width: 100%; font-size: 15px;}
 .deposit_attr_box>div{display: table-cell;}
@@ -305,7 +307,7 @@ body.overflow-hidden {overflow: hidden;}
 .order-summary__sections .deposit_active [data-deposit], .deposit_active>*{display: none;}
 .direct_input{display: none;}
 .direct_input.active{display: block;}
-
+/* 주문-주소모달 */
 .checkout .modal{background: transparent; box-shadow: unset;}
 .checkout .modal .modal__header{display: flex;}
 .checkout .modal .modal__body{justify-content: normal;}
@@ -324,7 +326,6 @@ body.overflow-hidden {overflow: hidden;}
 .bank_account-modal .bank_account_container .button:first-of-type{margin-left: 0;}
 .bank_account-modal .bank_account_container .bank_account_txt_box p{margin-top: 0.5714285714em; text-align: left; word-break: keep-all;}
 .payment_tit1{display: block; margin-bottom: 7px;}
-
 .addr_list{padding: 0;}
 @media screen and (max-width: 999px) {
     .addr_list{font-size: 12px;}
@@ -337,14 +338,14 @@ body.overflow-hidden {overflow: hidden;}
 .addr_list .addr-mark-name, .addr_list .addr-mark-num{display: inline-block; width: 50px;}
 .addr_list .zipcode{display: table-cell; width: 60px; text-align: center; vertical-align: middle;}
 .addr_list .radio_custom_box{text-align: left;}
-
+/* 주문-버튼2개 */
 .input-block.pcs2:after{content: ''; display: block; clear: both;}
 .input-block.pcs2 .btn{width: calc(50% - 4px); float: left;}
 .input-block.pcs2 .btn:hover{margin-left: 0; margin-right: 0; width: calc(50% - 4px);}
 .input-block.pcs2 .btn.white{background: #fff; color: #171616;}
 .input-block.pcs2 .btn:last-child{margin-left: 7px;}
 .input-block.pcs2 .btn:last-child:hover{margin-left: 7px;}
-
+/* 결제 */
 .breadcrumb__item--completed .breadcrumb__link{color: #171616;}
 .checkout .comment{font-size: 12px; line-height: 15px;}
 .payment_guaranty{font-size: 15px;}
@@ -445,3 +446,54 @@ li > a.navlist__link.text-link{padding-left:15px}
 
 #MainContent .template-account__wrapper .custom-module__text-column{border-right: 0px;}
 #MainContent .template-account__wrapper .custom-module__text-column.custom-module__text-column--content{border-top:0px;}
+
+/* 마이페이지 - 회원정보변경 */
+.template-mypage__form-wrapper ul, .template-mypage__form-wrapper li{list-style: none; padding: 0;}
+.template-mypage__form{padding: 20px 15px;}
+.template-mypage__form+.template-mypage__form{border-top: 1px solid #171616;}
+.template-mypage__form .form_padding{padding: 0 37px;}
+.mypage_each{margin-bottom: 30px;}
+.mypage_each2{margin-bottom: 20px;}
+.mypage_each .mypage_name{margin-bottom: 10px;}
+.mypage_btn_box{margin: 30px 37px;}
+.mypage_tit2{margin-bottom: 15px;}
+.radio_custom_box.mypage_radio_box{margin-bottom: 10px;}
+
+/* 마이페이지 - 비밀번호 변경 */
+.template-mypage__form-wrapper .mypage_toggle_menu{margin: 30px 15px; border-bottom: 1px solid #171616;}
+.mypage_toggle_menu>li{border-top: 1px solid #171616;}
+.mypage_toggle_menu .toggle_tit{display: block; width: 100%; padding: 15px 0; text-align: left; position: relative;}
+.mypage_toggle_menu .toggle_tit:before{content: ''; display: block; width: 22px; height: 22px; border: 1px solid #171616; border-radius: 50%; position: absolute; top: 50%; right: 15px; transform: translateY(-50%);}
+.mypage_toggle_menu .toggle_tit .ico{position: absolute; top: 50%; right: 14px; transform: translateY(-50%);}
+.mypage_toggle_menu .toggle_con_box{display: none; padding: 15px 0;}
+.mypage_toggle_menu>li.is-active .toggle_tit .ico{display: none;}
+.mypage_toggle_menu>li.is-active .toggle_tit:after{content: ''; display: block; width: 9px; height: 1px; background: #171616; position: absolute; top: 50%; right: 21px; transform: translateY(-50%);}
+.mypage_toggle_menu>li.is-active .toggle_con_box{display: block;}
+.mypage_each2 .txt_btn_box{display: table; width: 100%;}
+.mypage_each2 .txt_btn_box .mypage_tit2{display: table-cell; vertical-align: middle;}
+.mypage_each2 .txt_btn_box>div{display: table-cell; vertical-align: middle; text-align: right;}
+.mypage_each2 .txt_btn_box .button{font-size: 13px; padding: 0 18px; line-height: 21px;}
+
+.dot_list{margin-top: 15px;}
+.dot_list>li{margin-bottom: 10px; padding-left: 12px; word-break: keep-all; position: relative;}
+.dot_list>li:last-child{margin-bottom: 0;}
+.dot_list>li:before{content: ''; display: block; width: 2px; height: 2px; background: #171616; position: absolute; top: 9px; left: 0;}
+
+.custom_textarea label{margin-bottom: 15px;}
+.custom_textarea textarea{border-radius: 0; resize: none;}
+
+.form-group input[type="text"][readonly]{background-color: #ddd; cursor: not-allowed;}
+.refund-modal .modal__body, .account-modal .modal__body, .receipt1-modal .modal__body, .receipt2-modal .modal__body{padding: 15px 15px 40px;}
+.refund-modal .modal__body form, .account-modal .modal__body form, .receipt1-modal .modal__body form, .receipt2-modal .modal__body form{width: 100%; padding: 0 12px;}
+.withdrawal-modal .modal__body{padding: 15px 15px 40px; text-align: left;}
+.withdrawal-modal form{width: 100%;}
+.withdrawal_list{list-style: none; padding: 0; margin-bottom: 15px;}
+.withdrawal_list>li{list-style: none; padding: 0; margin-bottom: 10px;}
+.withdrawal_list>li:after{content: ''; display: block; clear: both;}
+.withdrawal_list>li:last-child{margin-bottom: 0;}
+.withdrawal_list>li span{float: left; width: calc(100% - 140px);}
+.withdrawal_list>li span:first-child{width: 140px;}
+.mypage-modal__button-wrapper{margin: 0 12px;}
+.mypage-modal__button-wrapper .button{margin-bottom: 10px;}
+.mypage-modal__button-wrapper .button:last-of-type{margin-bottom: 0;}
+/* //마이페이지 - 회원정보변경 */
