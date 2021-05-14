@@ -1,6 +1,6 @@
 $(function(){
 	//전화번호 추가
-	$('.phone_form .btn_plus').on('click', function(){
+	$(document).on('click', '.phone_form .btn_plus', function(){
 		$(this).parents('.phone_form').toggleClass("active");
 	});
 	$('.field__input--select').on('change', function() {
