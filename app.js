@@ -45,6 +45,15 @@ const pageData = [
   {"type":"join","title":"3. Create account _ E-mail Authentication","url" : "/02_login_join/3", "pageurl" : "02_login_join/03_select_email.ejs"},
   {"type":"join","title":"4. privacy table","url" : "/02_login_join/4", "pageurl" : "02_login_join/04_privacy_table.ejs"},
 
+  
+  {"type":"join","title":"5. Forgot your password ","url" : "/02_login_join/50", "pageurl" : "02_login_join/05_0_findpassword.ejs"}, // 완료
+  {"type":"join","title":"5-1. Forgot your password - complete page","url" : "/02_login_join/51", "pageurl" : "02_login_join/05_1_findpassword_complete.ejs"}, // 완료
+  {"type":"join","title":"5-2. Forgot your password - replace to password","url" : "/02_login_join/52", "pageurl" : "02_login_join/05_2_modifypassword.ejs"}, // 완료
+  {"type":"join","title":"5-3. Forgot your password - replace to new password","url" : "/02_login_join/53", "pageurl" : "02_login_join/05_3_newpassword.ejs"}, // 완료
+  {"type":"join","title":"5-4. Forgot your password - Send to email","url" : "/02_login_join/54", "pageurl" : "02_login_join/05_4_email_send.ejs"}, // 완료
+  {"type":"join","title":"5-5. Forgot your password - Confirm and send to email","url" : "/02_login_join/55", "pageurl" : "02_login_join/05_5_email_confirm_and_resend.ejs"}, // 완료
+  {"type":"join","title":"5-6. Forgot your password - Send to cellphone","url" : "/02_login_join/56", "pageurl" : "02_login_join/05_6_findpassword_withphone.ejs"}, // 완료
+
   {"type":"product","title":"1. PDP","url" : "/03_product/1", "pageurl" : "03_product/01_product_detail.ejs"},
 /*  {"type":"product","title":"1-1. Pre-order","url" : "/03_product/11", "pageurl" : "03_product/01_1_product_detail_preorder.ejs"},*/
   {"type":"product","title":"2. Product Display","url" : "/03_product/2", "pageurl" : "03_product/02_product_list.ejs"},

@@ -95,7 +95,7 @@ html,body,div,p,h1,h2,h3,span,*{font-family: 'MonumentGrotesk','Noto Sans Toteme
 @media(min-width:768px){
     .top-d10{margin-top:10px}
     .top-d15{margin-top:15px}
-    .top-d20{margin-top:30px}
+    .top-d20{margin-top:20px}
     .top-d30{margin-top:30px}
     .left-d10{margin-left:10px}
     .left-d15{margin-left:15px}
@@ -121,6 +121,20 @@ html,body,div,p,h1,h2,h3,span,*{font-family: 'MonumentGrotesk','Noto Sans Toteme
  
 
 
+
+
+
+
+ h2.title{font-size:15px; color:#171616}
+ table, tr, th, td{border:1px #000 solid; border-collapse: collapse;padding:10px;text-align: center; font-size:13px;}
+ th{font-weight: normal;}
+ .agree_radio{margin-bottom:10px;}
+ .agree_radio > input{margin-right:9px !important;}
+ .agree_radio > label{font-size:15px}
+ input.button--block.small_button.agreement{ width: auto; padding: 0px 18px; font-size: 13px; line-height: 13px; min-height: 23px; float: right; padding-bottom: 0px; }
+ 
+ input.button--block:hover.small_button { width:auto;  }
+ input.button--block.agreement.button-padding-52 {width:54px; }
 
 
 .progressbar{width:100%;padding: 15px 90px;;margin: 0 auto;font-size: 0px;letter-spacing: -1px;}
@@ -438,3 +452,44 @@ li > a.navlist__link.text-link{padding-left:15px}
 
 #MainContent .template-account__wrapper .custom-module__text-column{border-right: 0px;}
 #MainContent .template-account__wrapper .custom-module__text-column.custom-module__text-column--content{border-top:0px;}
+
+
+
+
+/* 4번 개인정보보호 */
+.privacy_agreement .verify-modal .verify_container .button {
+   margin-left: 0;
+   padding: 0px 18px;
+   width: auto;
+   margin-right: 12px;
+   height: 23px !important;
+   min-height: auto;
+   font-size: 13px;
+}
+
+.privacy_agreement .modal__header{
+   justify-content: left;
+   padding: 15px;
+   font-size: 14px;
+   border-bottom: 0px;
+}
+.privacy_agreement .modal__close{ padding: 13px;}
+.privacy_agreement .icon__close{ width: 22px; height: 22px; }
+.privacy_agreement .modal__body{ padding: 0px 15px; }
+.privacy_agreement .input-block.form-group__footer{ padding-top: 0px; margin-top: 0px; text-align: left; justify-content: left; margin-bottom: 30px;}
+.privacy_agreement .payment_tit1{ font-weight: bold; }
+.privacy_agreement .verify_container{ max-width: 100%; }
+.privacy_agreement .modal__body{ margin-bottom:30px; }
+/* // 4번 개인정보보호 */
+
+/* 5번 패스워드 찾기 */
+.findpassword .input-table.two-cols{ width:70%; margin:0 auto; margin-bottom:10px; }
+.findpassword .input-table.two-cols input{ font-size: 13px !important; }
+.findpassword .input-table.two-cols input[type='button']{ width:100px; }
+.findpassword .text-block.time{ margin-bottom: 10px; }
+.findpassword .text-block.time p{ width: 70%; margin:0 auto; font-size:13px !important}
+.findpassword .text-block li{ font-size: 13px !important; }
+.findpassword .text-block li::marker{font-size: 1px;}
+.findpassword.findpassword_complete .text{ text-align: center; margin-bottom: 30px;}
+.findpassword.email_send table{width:100%; margin:15px;}
+/* // 5번 패스워드 찾기 */
