@@ -106,13 +106,13 @@ Util.prototype.registerEvent = function(option){
         
         case "activeModal":
             //modal toggle
-            $('.modal_trigger').on('click', function(){
+            $(document).on('click', '.modal_trigger', function(){
                 var modal_name = $(this).attr('data-modal');
                 $('.'+modal_name).addClass("is-active");
                 $('body').css('overflow','hidden');
             });
             // modal close
-            $('.modal__close').on('click', function(){
+            $(document).on('click', '.modal__close', function(){
                 $(this).parents('.modal').removeClass("is-active");
                 $('body').css('overflow','');
             });

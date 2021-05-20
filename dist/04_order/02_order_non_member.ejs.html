@@ -1289,7 +1289,7 @@
 													<label class="field__label field__label--visible" for="checkout_reduction_code">프로모션 코드</label>
 													<input placeholder="프로모션 코드 입력" class="field__input" id="checkout_reduction_code" autocomplete="off" aria-required="true" size="30" type="text" name="checkout[reduction_code]">
 												</div>
-												<button name="button" type="submit" class="field__input-btn btn btn--disabled" disabled="disabled">
+												<button name="button" type="button" class="field__input-btn btn btn--disabled" data-deposit="true">
 													<span class="btn__content visually-hidden-on-mobile" aria-hidden="true">
 														적용
 													</span>
@@ -1303,14 +1303,14 @@
 														<use xlink:href="#spinner-button"></use>
 													</svg>
 												</button>
-												<!-- <div class="deposit_attr_box">
+												<div class="deposit_attr_box deposit_result_box">
 													<div>
 														<p class="field__message" id="">SALE20 (-10,000원)</p>
 													</div>
 													<div>
 														<button type="button" class="btn_deposit">삭제</button>
 													</div>
-												</div> -->
+												</div>
 											</div>
 											<p class="field__message field__message--error" id="error-for-reduction_code">프로모션 코드가 정확하지 않습니다.</p>
 										</div>
@@ -1325,8 +1325,8 @@
 										<div class="field">
 											<div class="field__input-btn-wrapper">
 												<div class="field__input-wrapper">
-													<label class="field__label field__label--visible" for="checkout_reduction_code">예치금 사용</label>
-													<input placeholder="사용할 금액을 입력하세요" class="field__input" id="checkout_reduction_code" autocomplete="off" aria-required="true" size="30" type="text" name="checkout[reduction_code]">
+													<label class="field__label field__label--visible" for="checkout_deposit_code">예치금 사용</label>
+													<input placeholder="사용할 금액을 입력하세요" class="field__input" id="checkout_deposit_code" autocomplete="off" aria-required="true" size="30" type="text" name="checkout[deposit_code]">
 												</div>
 												<div class="deposit_attr_box">
 													<div>
@@ -1336,7 +1336,7 @@
 														<button type="button" class="btn_deposit">모두사용</button>
 													</div>
 												</div>
-												<button name="button" type="submit" class="field__input-btn btn btn--disabled" disabled="disabled">
+												<button name="button" type="button" class="field__input-btn btn btn--disabled" data-deposit="true">
 													<span class="btn__content visually-hidden-on-mobile" aria-hidden="true">
 														적용
 													</span>
@@ -1350,6 +1350,14 @@
 														<use xlink:href="#spinner-button"></use>
 													</svg>
 												</button>
+												<div class="deposit_attr_box deposit_result_box">
+													<div>
+														<p class="field__message" id="">예치금 (-10,000원)</p>
+													</div>
+													<div>
+														<button type="button" class="btn_deposit">삭제</button>
+													</div>
+												</div>
 											</div>
 											<p class="field__message field__message--error" id="error-for-reduction_code">예치금은 10원 단위로 사용할 수 있습니다.</p>
 										</div>
@@ -1391,7 +1399,7 @@
 											<th class="total-line__name payment-due-label" scope="row">
 												<span class="payment-due-label__total">합계</span>
 											</th>
-											<td class="total-line__price payment-due" data-presentment-currency="EUR">
+											<td class="total-line__price payment-due">
 												<span class="payment-due__price skeleton-while-loading--lg notranslate">669,000원</span>
 											</td>
 										</tr>
@@ -2589,27 +2597,29 @@ setTimeout(function(){
     </div>
  </div> 
       <!-- // 11. 위시리스트 -->
-      
 
       <script src="https://image.thehyundai.com/pc/js/jquery-1.11.3.min.js"></script>
       <!---script src="/js/toteme.custom.js"></script--->
+
+  
       <script src='https://0sunman.github.io/toteme-korea-publish/public/js/toteme.custom.js'></script>
 
-      <script src="https://cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/multi-store.config.js?v=3834433138071325330" type="text/javascript"></script>
+      
+      <link type="text/css" href="https://cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/layout.theme.css?v=11319339974545446336" rel="stylesheet">
+      <link rel="prefetch" href="https://cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/layout.checkout.css?v=4919846318103799731" as="style">
+      <link rel="prefetch" href="https://cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/layout.gift_card.css?v=5539515425278837408" as="style">
+      <link rel="prefetch" href="https://cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/layout.password.css?v=11319339974545446336" as="style">
+      <link rel="prefetch" href="https://cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/layout.styleguide.css?v=56257713711684864" as="style">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/css/flag-icon.min.css" rel="stylesheet" type="text/css" media="all">
+      <!---script src="https://cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/multi-store.config.js?v=3834433138071325330" type="text/javascript"></script>
       <script src="https://cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/store-currencies.js?v=15895889998660920555" type="text/javascript"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" type="text/javascript"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/plugins/rias/ls.rias.min.js" type="text/javascript"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/plugins/bgset/ls.bgset.min.js" type="text/javascript"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/plugins/respimg/ls.respimg.min.js" type="text/javascript"></script>
-      <link type="text/css" href="https://cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/layout.theme.css?v=11319339974545446336" rel="stylesheet">
-
-      <link rel="prefetch" href="https://cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/layout.checkout.css?v=4919846318103799731" as="style">
-      <link rel="prefetch" href="https://cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/layout.gift_card.css?v=5539515425278837408" as="style">
-      <link rel="prefetch" href="https://cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/layout.password.css?v=11319339974545446336" as="style">
-      <link rel="prefetch" href="https://cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/layout.styleguide.css?v=56257713711684864" as="style">
+      <script type="text/javascript" src="https://cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/layout.theme.js?v=11565107981520840275" defer="defer"></script>
       <script type="text/javascript" src="https://cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/vendors.min.js?v=17692476819344137541" defer="defer"></script>
       <script type="text/javascript" src="https://cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/shopify.min.js?v=13365512054474014388" defer="defer"></script>
-      <script type="text/javascript" src="https://cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/layout.theme.js?v=11565107981520840275" defer="defer"></script>
       <link rel="prefetch" href="https://cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/template.cart.js?v=2826028351259950301" as="script">
       <link rel="prefetch" href="https://cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/template.collection.collection-blank-template.js?v=4574668646399290996" as="script">
       <link rel="prefetch" href="https://cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/template.collection.collection-page-template.js?v=3644737765115976929" as="script">
@@ -2630,10 +2640,7 @@ setTimeout(function(){
       <link rel="prefetch" href="https://cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/template.account.returns.js?v=7701001827492686103" as="script">
       <link rel="prefetch" href="https://cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/template.addresses.js?v=14848950091802048559" as="script">
       <link rel="prefetch" href="https://cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/template.login.js?v=17176649194286505746" as="script">
-      <link rel="prefetch" href="https://cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/template.register.js?v=6648124670233666324" as="script">
-
-
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/css/flag-icon.min.css" rel="stylesheet" type="text/css" media="all">
+      <link rel="prefetch" href="https://cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/template.register.js?v=6648124670233666324" as="script"> -->
 
    </body>
 </html>

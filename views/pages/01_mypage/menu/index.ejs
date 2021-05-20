@@ -1,0 +1,119 @@
+<div class="template-account__navlist ">
+    <div class="template-account__navlist--content">
+       <div class="navlist__dropdown-wrapper">
+          <div class="custom-select__wrapper">
+             <select class="navlist__dropdown custom-select__select m-font-14" style="background-image: url(//cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/icon-small-arrow-down.svg?v=9521334029086756349);">
+                <option value=""> <!-- selected=""-->
+                  나의 쇼핑정보
+                </option>
+                <option value="">
+                  회원정보 변경
+                </option>
+                <option value="">
+                  배송주소록
+                </option>
+                <option value="">
+                  위시리스트
+                </option>
+                <option value="">
+                  입고 알림 목록
+                </option>
+                <option value="">
+                  주문내역
+                </option>
+                <option value="">
+                  반품신청
+                </option>
+                <option value="">
+                  로그아웃
+                </option>
+             </select>
+             <span class="main-title custom-select__label text-small">나의 쇼핑정보</span>
+          </div>
+       </div>
+       <ul class="navlist" js-account-nav="navlist">
+          <li class="navlist__item navlist__item--margin">
+             <a class="navlist__link text-link" href="#">나의 쇼핑정보</a>
+          </li>
+          <li class="navlist__item">
+             <a class="navlist__link text-link" href="#">회원정보 변경</a>
+          </li>
+          <li class="navlist__item">
+             <a class="navlist__link text-link" href="#">배송주소록</a>
+          </li>
+          <li class="navlist__item">
+             <a class="navlist__link text-link" href="#">위시리스트</a>
+          </li>
+          <li class="navlist__item">
+             <a class="navlist__link text-link" href="#">입고 알림 목록</a>
+          </li>
+          <li class="navlist__item">
+            <a class="navlist__link text-link" href="#">주문내역</a>
+         </li>
+         <li class="navlist__item navlist__item--margin">
+            <a class="navlist__link text-link" href="#">반품신청</a>
+         </li>
+         <li class="navlist__item">
+            <a class="navlist__link text-link" href="#">로그아웃</a>
+         </li>
+       </ul>
+    </div>
+ </div>
+
+ <% if(state == 1){%>
+   <script>
+      setTimeout(function(){
+         $(".main-title.custom-select__label").text("나의 쇼핑정보");
+         $(".navlist>li:nth-child(1) a").addClass("is-active");
+      },100)
+      </script>
+   <%}else if(state == 21){%>
+   <script>
+      setTimeout(function(){
+         $(".main-title.custom-select__label").text("회원정보 변경");
+         $(".navlist>li:nth-child(2) a").addClass("is-active");
+      },100)
+      </script>
+   <%}else if(state == 22){%>
+   <script>
+      setTimeout(function(){
+         $(".main-title.custom-select__label").text("배송주소록");
+         $(".navlist>li:nth-child(3) a").addClass("is-active");
+      },100)
+      </script>
+   <%}else if(state == 23){%>
+   <script>
+      setTimeout(function(){
+         $(".main-title.custom-select__label").text("위시리스트");
+         $(".navlist>li:nth-child(4) a").addClass("is-active");
+      },100)
+      </script>
+   <%}else if(state == 24){%>
+   <script>
+      setTimeout(function(){
+         $(".main-title.custom-select__label").text("입고 알림 목록");
+         $(".navlist>li:nth-child(5) a").addClass("is-active");
+      },100)
+      </script>
+   <%}else if(state == 25){%>
+   <script>
+      setTimeout(function(){
+         $(".main-title.custom-select__label").text("주문내역");
+         $(".navlist>li:nth-child(6) a").addClass("is-active");
+      },100)
+      </script>
+   <%}else if(state == 26){%>
+   <script>
+      setTimeout(function(){
+         $(".main-title.custom-select__label").text("반품신청");
+         $(".navlist>li:nth-child(7) a").addClass("is-active");
+      },100)
+      </script>
+   <%}else if(state == 3){%>
+      <script>
+         setTimeout(function(){
+            $(".main-title.custom-select__label").text("로그아웃");
+            $(".navlist>li:nth-child(8) a").addClass("is-active");
+         },100)
+         </script>
+   <%}%>
