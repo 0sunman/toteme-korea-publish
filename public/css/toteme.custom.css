@@ -284,6 +284,8 @@ body.overflow-hidden {overflow: hidden;}
 .preorder-modal__button-wrapper {margin: auto; max-width: 240px;}
 .preorder-modal__button:first-child {margin-bottom: 1rem;}
 .preorder-modal__footer {padding: 20px 2rem; text-align: center;}
+.modal__header .modal__close{padding: 13px;}
+.modal__header .modal__close svg{width: 22px; height: 22px;}
 @media (max-width: 61.99em) {
     .preorder-modal .modal__card {width:calc(100% - 75px);}
 }
@@ -516,9 +518,10 @@ li > a.navlist__link.text-link{padding-left:15px}
 /* 마이페이지 - 비밀번호 변경 */
 .template-mypage__form-wrapper .mypage_toggle_menu{margin: 30px 15px; border-bottom: 1px solid #171616;}
 .mypage_toggle_menu>li{border-top: 1px solid #171616;}
-.mypage_toggle_menu .toggle_tit{display: block; width: 100%; padding: 15px 0; text-align: left; position: relative;}
+.mypage_toggle_menu .toggle_tit{display: block; width: 100%; padding: 15px 40px 15px 0; text-align: left; position: relative;}
 .mypage_toggle_menu .toggle_tit:before{content: ''; display: block; width: 22px; height: 22px; border: 1px solid #171616; border-radius: 50%; position: absolute; top: 50%; right: 15px; transform: translateY(-50%);}
 .mypage_toggle_menu .toggle_tit .ico{position: absolute; top: 50%; right: 14px; transform: translateY(-50%);}
+.mypage_toggle_menu .toggle_tit .ico .icon.icon--large{width: 22px; height: 22px;}
 .mypage_toggle_menu .toggle_con_box{display: none; padding: 15px 0;}
 .mypage_toggle_menu>li.is-active .toggle_tit .ico{display: none;}
 .mypage_toggle_menu>li.is-active .toggle_tit:after{content: ''; display: block; width: 9px; height: 1px; background: #171616; position: absolute; top: 50%; right: 21px; transform: translateY(-50%);}
