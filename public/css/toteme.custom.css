@@ -125,16 +125,16 @@ html,body,div,p,h1,h2,h3,span,*{font-family: 'MonumentGrotesk','Noto Sans Toteme
 
 
 
- h2.title{font-size:15px; color:#171616}
- table, tr, th, td{border:1px #000 solid; border-collapse: collapse;padding:10px;text-align: center; font-size:13px;}
- th{font-weight: normal;}
- .agree_radio{margin-bottom:10px;}
- .agree_radio > input{margin-right:9px !important;}
- .agree_radio > label{font-size:15px}
- input.button--block.small_button.agreement{ width: auto; padding: 0px 18px; font-size: 13px; line-height: 13px; min-height: 23px; float: right; padding-bottom: 0px; }
- 
- input.button--block:hover.small_button { width:auto;  }
- input.button--block.agreement.button-padding-52 {width:54px; }
+/* h2.title{font-size:15px; color:#171616}
+table, tr, th, td{border:1px #000 solid; border-collapse: collapse;padding:10px;text-align: center; font-size:13px;}
+th{font-weight: normal;} */
+.agree_radio{margin-bottom:10px;}
+.agree_radio > input{margin-right:9px !important;}
+.agree_radio > label{font-size:15px}
+input.button--block.small_button.agreement{ width: auto; padding: 0px 18px; font-size: 13px; line-height: 13px; min-height: 23px; float: right; padding-bottom: 0px; }
+
+input.button--block:hover.small_button { width:auto;  }
+input.button--block.agreement.button-padding-52 {width:54px; }
 
 
 .progressbar{width:100%;padding: 15px 90px;;margin: 0 auto;font-size: 0px;letter-spacing: -1px;}
@@ -264,9 +264,10 @@ body.overflow-hidden {overflow: hidden;}
 
 /* 테이블 */
 .table_type1{border-spacing: 0; min-width: 100%; table-layout: fixed; border-top: 1px solid #171616; border-left: 1px solid #171616;}
-.table_type1 th, .table_type1 td{min-width: 3rem; padding: .25rem; border-bottom: 1px solid #171616; border-right: 1px solid #171616; font-weight: 400;}
+.table_type1 th, .table_type1 td{min-width: 3rem; padding: .25rem; font-size: 13px; border-bottom: 1px solid #171616; border-right: 1px solid #171616; font-weight: 400;}
 .table_type1 th{text-align: center;}
 .table_type1 td{text-align: left;}
+.table_type1 p{font-size: inherit;}
 /* //테이블 */
 
 /* 상품 */
