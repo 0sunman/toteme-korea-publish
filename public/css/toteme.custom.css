@@ -511,14 +511,15 @@ li > a.navlist__link.text-link{padding-left:15px}
 .p_small{font-size: 13px;}
 .mypage_each{margin-bottom: 30px;}
 .mypage_each2{margin-bottom: 20px;}
-.mypage_each2:after{content: ''; display: block; clear: both;}
 .mypage_each .mypage_name{margin-bottom: 10px;}
 .mypage_btn_box{margin: 30px 37px;}
 .mypage_tit2{margin-bottom: 15px;}
-.radio_custom_box.mypage_radio_box{float: left; width: 50%; margin-bottom: 10px; word-break: keep-all;}
-.radio_custom_box.mypage_radio_box:nth-of-type(2n+1){clear: both;}
+.radio_custom_box.mypage_radio_box{margin-bottom: 10px;}
+.radio_two_col:after{content: ''; display: block; clear: both;}
+.radio_two_col .radio_custom_box{float: left; width: 50%; word-break: keep-all;}
+.radio_two_col .radio_custom_box:nth-of-type(2n+1){clear: both;}
 @media screen and (max-width: 1000px) {
-    .radio_custom_box.mypage_radio_box{float: none; width: 100%;}
+    .radio_two_col .radio_custom_box{float: none; width: 100%;}
 }
 
 /* 마이페이지 - 비밀번호 변경 */
