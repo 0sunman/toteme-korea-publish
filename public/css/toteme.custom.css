@@ -565,3 +565,17 @@ li > a.navlist__link.text-link{padding-left:15px}
 
 figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 .containerZoom.active{cursor: zoom-out;}
+
+
+/* header, footer hide */
+/*.site-header-wrapper, #shopify-section-site-footer{display: none;}*/
+/* //header, footer hide */
+.orderpage .table_type1 td:first-child, .orderpage .table_type1 th:first-child{padding-left: .25rem; text-align: inherit;}
+.orderpage .table_type1 td:last-child, .orderpage .table_type1 th:last-child{text-align: left;}
+.orderpage .payment_account_info{margin-top: 1.25rem;}
+.orderpage .payment_account_info ul .tit{display: inline-block; min-width: 80px;}
+.orderpage .address_change_box{display: none;}
+.orderpage .address_select_box .content-box__row .address_change_box{display: block;}
+
+
+.uniform-page .custom-module__content{background: #fff;}

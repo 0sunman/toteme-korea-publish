@@ -458,13 +458,18 @@ var changeURLList = [
 
 setTimeout(function(){
     $("a").each(function(idx,ele){
-        var hrefText = $(ele).attr("href");
-        changeURLList.forEach(function(data){
-            if(hrefText.indexOf(data.old) > -1){
-                $(ele).attr("href",data.new)
-            }
+        try{
+            var hrefText = $(ele).attr("href");
+            changeURLList.forEach(function(data){
+                if(hrefText.indexOf(data.old) > -1){
+                    $(ele).attr("href",data.new)
+                }
+    
+            })
+        }catch(e){
 
-        })
+        }
+
     })
  },100)
 
