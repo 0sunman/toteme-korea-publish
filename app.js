@@ -2,6 +2,7 @@ const livereload = require('livereload');
 const livereloadMiddleware = require('connect-livereload');
 const path = require('path');
 const fs = require('fs');
+var fse = require('fs-extra');
 const axios = require('axios');
 
 
@@ -121,7 +122,9 @@ pageData.forEach((data)=>{
         fs.writeFileSync(__dirname + "/index.html",html)
       }else{
         fs.writeFileSync(__dirname + "/dist/"+ pageurl+".html",html)
+
       }
+      
       res.send(html);
     });
     
@@ -130,6 +133,39 @@ pageData.forEach((data)=>{
 
 
 })
+
+
+fse.copy(__dirname + "/public/css", __dirname + "/dist/css", function (err) {
+  if (err) {
+    console.error(err);
+  } else {
+    console.log("success!");
+  }
+});
+
+fse.copy(__dirname + "/public/js", __dirname + "/dist/js", function (err) {
+  if (err) {
+    console.error(err);
+  } else {
+    console.log("success!");
+  }
+});
+
+fse.copy(__dirname + "/public/font", __dirname + "/dist/font", function (err) {
+  if (err) {
+    console.error(err);
+  } else {
+    console.log("success!");
+  }
+});
+
+fse.copy(__dirname + "/public/assets", __dirname + "/dist/assets", function (err) {
+  if (err) {
+    console.error(err);
+  } else {
+    console.log("success!");
+  }
+});
 
 
 server.listen(port, hostname, () => {
