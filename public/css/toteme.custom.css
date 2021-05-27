@@ -562,3 +562,6 @@ li > a.navlist__link.text-link{padding-left:15px}
 .mypage-modal__button-wrapper .button{margin-bottom: 10px;}
 .mypage-modal__button-wrapper .button:last-of-type{margin-bottom: 0;}
 /* //마이페이지 - 회원정보변경 */
+
+figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
+.containerZoom.active{cursor: zoom-out;}
