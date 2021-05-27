@@ -951,7 +951,10 @@
       <main id="MainContent" class="main-content critical-clear">
          <!-- BEGIN content_for_index -->
          <!--  include ("./pages/00_main/index.ejs") BEGIN content_for_index -->
-         <div class="container">
+         <!-- <link rel="stylesheet" href="/css/toteme.custom.css"> -->
+<link rel="stylesheet" href="https://cdn.shopify.com/app/services/47530672294/assets/122613563558/checkout_stylesheet/v2-ltr-2021-01-25-1dd58b0ad54342536b141709174f812a-5607" media="all">
+<link type="text/css" href="https://cdn.shopify.com/s/files/1/0475/3067/2294/t/44/assets/layout.checkout.css?v=981295653317797159" rel="stylesheet">
+<div class="container checkout">
 	<div class="template-account__header">
 		안녕하세요, 이현대님
 	</div>
@@ -1022,97 +1025,220 @@
  
    <script>
       setTimeout(function(){
-         $(".main-title.custom-select__label").text("회원정보 변경");
-         $(".navlist>li:nth-child(2) a").addClass("is-active");
+         $(".main-title.custom-select__label").text("배송주소록");
+         $(".navlist>li:nth-child(3) a").addClass("is-active");
       },100)
       </script>
    
 		 <div class="template-account__content">
-			<div class="template-account__text_hdtype_1 alert" style="display: none;">
-				<div class="rte">
-					회원정보
-				</div>
-			</div>
-			<div class="template-mypage__form-wrapper">
-				<div class="template-mypage__form">
-					<div class="mypage_each">
-						<h3 class="mypage_tit1">회원정보</h3>
-					</div>
-					<form method="post" action="#">
-						<div class="form-group">
-							<div class="form-group__field form_padding">
-								<label class="form-group__label subtitle-2 is-hidden" for="CustomerName">이름</label>
-								<input id="CustomerName" autocapitalize="off" autocomplete="off" autofocus="" name="customer[name]" placeholder="이름" required="" spellcheck="false" type="text">
-							</div>
-							<div class="form-group__field form_padding">
-								<label class="form-group__label subtitle-2 is-hidden" for="CustomerLastName">성</label>
-								<input id="CustomerLastName" autocapitalize="off" autocomplete="off" autofocus="" name="customer[lastname]" placeholder="성" required="" spellcheck="false" type="text">
-							</div>
-							<div class="form-group__field form_padding">
-								<label class="form-group__label subtitle-2 is-hidden" for="CustomerEmail">이메일</label>
-								<input id="CustomerEmail" autocapitalize="off" autocomplete="off" autofocus="" name="customer[email]" placeholder="이메일" required="" spellcheck="false" type="text">
-							</div>
-							<div class="form-group__field form_padding">
-								<label class="form-group__label subtitle-2 is-hidden" for="CustomerBirthday">생년월일</label>
-								<input id="CustomerBirthday" autocapitalize="off" autocomplete="off" autofocus="" name="customer[birthday]" placeholder="생년월일" required="" spellcheck="false" type="text">
-							</div>
-							<div class="form-group__field form_padding">
-								<label class="form-group__label subtitle-2 is-hidden" for="CustomerPhone">휴대폰번호</label>
-								<input id="CustomerPhone" autocapitalize="off" autocomplete="off" autofocus="" name="customer[phone]" placeholder="휴대폰번호" required="" spellcheck="false" type="text">
-							</div>
-							<!-- <div class="form-group__field form_padding">
-								<input class="button button--primary button--block button--large" type="button" value="변경 사항 저장">
-							</div> -->
-						</div>
-					</form>
-				</div>
-				<div class="template-mypage__form">
-					<div class="mypage_each">
-						<h3 class="mypage_tit1">부가정보(선택)</h3>
-					</div>
-					<form method="post" action="#">
-						<div class="form-group">
-							<div class="form-group__field">
-								<p class="mypage_tit2">성별</p>
-								<div class="mypage_each">
-									<div class="radio_custom_box mypage_radio_box">
-										<input id="info_gender1" class="radio_input" value="10" type="radio" name="info_gender">
-										<label for="info_gender1">남</label>
+				<div class="template-addresses__list">
+					<div class="template-addresses__item template-addresses">
+						<div class="row">
+              <div class="col xs12">
+                <h4 class="address-item__title">배송지 추가</h4>
+              </div>
+            </div>
+						<div class="row">
+							<div class="form-group template-addresses__form">
+								<form action="" method="">
+									<div class="input-block form-group__field">
+										<input placeholder="받는 사람" class="field__input" size="30" type="text" name="checkout[name1]" id="checkout_name1">
 									</div>
-									<div class="radio_custom_box mypage_radio_box">
-										<input id="info_gender2" class="radio_input" value="10" type="radio" name="info_gender">
-										<label for="info_gender2">여</label>
+									<div class="input-block form-group__field">
+										<div class="input-table phone_form">
+											<div>
+												<input placeholder="휴대폰번호(필수)" class="field__input" size="30" type="text" name="checkout[phone]" id="checkout_phone">
+											</div>
+											<div>
+												<button type="button" class="btn_plus">추가
+													<svg class="icon icon--large" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(45deg);">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+													</svg>
+												</button>
+											</div>
+										</div>
+										<div class="input_phone_plus">
+											<input placeholder="추가연락처" class="field__input" size="30" type="text" name="checkout[phone2]">
+										</div>
 									</div>
-									<div class="checkbox_custom_box mypage_check_box">
-										<input id="info_agree1" class="checkbox" value="2" type="checkbox">
-										<label for="info_agree1">성별을 마케팅 정보로 활용하는 것에 동의 (선택)</label>
+									<div class="input-block form-group__field">
+										<div class="input-table phone_addr">
+											<div>
+												<input placeholder="배송지주소" class="field__input" size="30" type="text" name="checkout[addr]" id="checkout_addr">
+											</div>
+											<div>
+												<button type="button" class="button button--large no-animation modal_trigger" data-modal="address-modal">찾기</button>
+											</div>
+										</div>
 									</div>
-								</div>
-							</div>
-							<div class="form-group__field">
-								<h4 class="mypage_tit2">제3자 정보제공동의</h4>
-								<div class="mypage_each">
-									<div class="radio_custom_box mypage_radio_box">
-										<input id="info_agree2_1" class="radio_input" value="10" type="radio" name="info_agree2">
-										<label for="info_agree2_1">동의합니다</label>
+									<div class="input-block form-group__field">
+										<input placeholder="주소" class="field__input" size="30" type="text" name="checkout[addr2]" id="checkout_addr2" readonly="">
 									</div>
-									<div class="radio_custom_box mypage_radio_box">
-										<input id="info_agree2_2" class="radio_input" value="10" type="radio" name="info_agree2">
-										<label for="info_agree2_2">동의하지 않습니다</label>
+									<div class="input-block form-group__field">
+										<input placeholder="상세주소" class="field__input" size="30" type="text" name="checkout[addr3]" id="checkout_addr3">
 									</div>
-								</div>
-							</div>
-							<div class="form-group__field form_padding">
-								<input class="button button--primary button--block button--large" type="button" value="변경 사항 저장">
+									<div class="input-block form-group__field">
+										<select id="checkout_memo" class="field__input field__input--select toteme-select-style toteme-button-style no-animation">
+											<option value="" disabled="" selected="">배송시 요청사항 선택</option>
+											<option value="">배송 전 연락바랍니다.</option>
+											<option value="">택배함에 넣어주세요.</option>
+											<option value="">빠른 배송 부탁 드립니다.</option>
+											<option value="">부재 시 경비실에 맡겨주세요.</option>
+											<option value="">핸드폰으로 연락 부탁 드립니다.</option>
+											<option value="direct">직접입력</option>
+										</select>
+										<div class="input-block direct_input">
+											<input type="text" placeholder="배송 시 요청사항을 입력하세요" class="field__input" size="30">
+										</div>
+									</div>
+									<div class="input-block pcs2">
+										<input class="btn white" type="submit" value="취소">
+										<input class="btn" type="submit" value="저장">
+									</div>
+								</form>
 							</div>
 						</div>
-					</form>
+					</div>
 				</div>
 			</div>
-					 
-		 </div>
+		
+	</div>
+	<div id="address-modal" class="modal modal--light address-modal" role="dialog" tabindex="-1">
+		<div class="modal__overlay" tabindex="-1">
+			<div class="modal__card">
+				<div class="modal__header">
+					<h5 class="modal__title  preorder-modal__title">주소검색</h5>
+					<button class="modal__close">
+						<span class="visually-hidden">
+							Close
+						</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+						</svg> </button>
+				</div>
+				<div class="modal__body">
+					<div class="address_modal_container">
+						<div class="section__content form-group">
+							<div class="input-block form-group__field">
+								<label class="field__label field__label--visible" for="checkout_addr_find">주소 찾기</label>
+								<input placeholder="찾고자 하는 주소를 입력하세요" class="field__input" size="30" type="text" name="checkout[addr_find]" id="checkout_addr_find">
+							</div>
+							<div class="input-block">
+								<input class="step__footer__continue-btn btn" type="submit" value="검색" data-address="address_search_list">
+								<p class="comment">예: 동(읍/면)명 또는 도로명주소(건물번호/건물명)<br>일부 군사지역은 배송이 불가능할 수 있습니다.</p>
+							</div>
+						</div>
+						<div class="address_find_content address_wrap">
+							<div class="address_search_list_box">
+								<div class="input-table form-group__field">
+									<div>
+										<div class="select-wrap">
+											<select class="field__input field__input--select toteme-select-style toteme-button-style no-animation">
+												<option value="">시/도</option>
+												<option value="">시/도</option>
+												<option value="">시/도</option>
+											</select>
+										</div>
+									</div>
+									<div>
+										<div class="select-wrap">
+											<select class="field__input field__input--select toteme-select-style toteme-button-style no-animation">
+												<option value="">군/구</option>
+												<option value="">군/구</option>
+												<option value="">군/구</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<ul class="addr_list">
+									<li><a href="#" class="addr_btn" data-address="address_detail">
+										<span class="addr-line-wrap">
+											<span class="addr-line rrr">
+												<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
+											</span>
+											<span class="addr-line jjj">
+												<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
+											</span>
+										</span>
+										<span class="zipcode">06088</span>
+									</a></li>
+									<li><a href="#" class="addr_btn" data-address="address_detail">
+										<span class="addr-line-wrap">
+											<span class="addr-line rrr">
+												<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
+											</span>
+											<span class="addr-line jjj">
+												<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
+											</span>
+										</span>
+										<span class="zipcode">06088</span>
+									</a></li>
+									<li><a href="#" class="addr_btn" data-address="address_detail">
+										<span class="addr-line-wrap">
+											<span class="addr-line rrr">
+												<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
+											</span>
+											<span class="addr-line jjj">
+												<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
+											</span>
+										</span>
+										<span class="zipcode">06088</span>
+									</a></li>
+									<li><a href="#" class="addr_btn" data-address="address_detail">
+										<span class="addr-line-wrap">
+											<span class="addr-line rrr">
+												<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
+											</span>
+											<span class="addr-line jjj">
+												<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
+											</span>
+										</span>
+										<span class="zipcode">06088</span>
+									</a></li>
+									<li><a href="#" class="addr_btn" data-address="address_detail">
+										<span class="addr-line-wrap">
+											<span class="addr-line rrr">
+												<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
+											</span>
+											<span class="addr-line jjj">
+												<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
+											</span>
+										</span>
+										<span class="zipcode">06088</span>
+									</a></li>
+								</ul>
+							</div>
+							<div class="address_detail_box">
+								<ul class="addr_list">
+									<li>
+										<div class="radio_custom_box">
+											<input id="addr_type1" class="radio_input" value="1" type="radio" name="addr_type" checked>
+											<label for="addr_type1"><span class="addr-mark-name">도로명</span> 서울특별시 강남구 학동로 402</label>
+										</div>
+										<div class="radio_custom_box">
+											<input id="addr_type2" class="radio_input" value="2" type="radio" name="addr_type">
+											<label for="addr_type2"><span class="addr-mark-num">지번</span> 서울특별시 강남구 삼성동 1</label>
+										</div>
+									</li>
+								</ul>
+								<div class="input-block form-group__field">
+									<label class="field__label field__label--visible" for="addr_detail">상세주소 입력</label>
+									<input placeholder="상세주소 입력" class="field__input" size="30" type="text" name="checkout[addr_detail]" id="addr_detail">
+								</div>
+								<div class="input-block pcs2">
+									<input class="step__footer__continue-btn btn" type="submit" value="확인">
+									<input class="step__footer__continue-btn btn white" type="submit" value="취소">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
+
+<script src="https://image.thehyundai.com/pc/js/jquery-1.11.3.min.js"></script>
+<script src="https://0sunman.github.io/toteme-korea-publish/public/js/toteme.custom.order.js"></script>
          <!-- END content_for_index -->
       </main>
       <!-- Footer -->

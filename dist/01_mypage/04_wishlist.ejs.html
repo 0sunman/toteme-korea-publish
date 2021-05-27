@@ -951,13 +951,15 @@
       <main id="MainContent" class="main-content critical-clear">
          <!-- BEGIN content_for_index -->
          <!--  include ("./pages/00_main/index.ejs") BEGIN content_for_index -->
-         <div class="container">
+         <!-- <link rel="stylesheet" href="/css/toteme.custom.css"> -->
+
+<div class="container">
 	<div class="template-account__header">
 		안녕하세요, 이현대님
 	</div>
-	<div class="template-account__wrapper">
-		 <div class="template-account__left"></div>
-		 <div class="template-account__navlist ">
+	<div class="template-account__wrapper template-wishlist">
+		<div class="template-account__left"></div>
+		<div class="template-account__navlist ">
     <div class="template-account__navlist--content">
        <div class="navlist__dropdown-wrapper">
           <div class="custom-select__wrapper">
@@ -1022,95 +1024,145 @@
  
    <script>
       setTimeout(function(){
-         $(".main-title.custom-select__label").text("회원정보 변경");
-         $(".navlist>li:nth-child(2) a").addClass("is-active");
+         $(".main-title.custom-select__label").text("위시리스트");
+         $(".navlist>li:nth-child(4) a").addClass("is-active");
       },100)
       </script>
    
-		 <div class="template-account__content">
-			<div class="template-account__text_hdtype_1 alert" style="display: none;">
-				<div class="rte">
-					회원정보
-				</div>
-			</div>
-			<div class="template-mypage__form-wrapper">
-				<div class="template-mypage__form">
-					<div class="mypage_each">
-						<h3 class="mypage_tit1">회원정보</h3>
-					</div>
-					<form method="post" action="#">
-						<div class="form-group">
-							<div class="form-group__field form_padding">
-								<label class="form-group__label subtitle-2 is-hidden" for="CustomerName">이름</label>
-								<input id="CustomerName" autocapitalize="off" autocomplete="off" autofocus="" name="customer[name]" placeholder="이름" required="" spellcheck="false" type="text">
+		<div class="template-account__content">
+			<div class="wishlist-collection">
+				<div class="wk-row">
+					<div class="wk-item-column">
+						<div class="wk-item">
+							<div class="wk-image">
+								<a href="#" class="wk-variant-link wk-content" title="View product">
+									<img class="wk-variant-image" src="https://cdn.shopify.com/s/files/1/0480/1141/1607/products/Toteme_PF21_THESOFTPOUCHSMALL213-809-703LEATHERBLACK_0159_1000x.jpg?v=1620810239" alt="Small leather pouch">
+								</a>
 							</div>
-							<div class="form-group__field form_padding">
-								<label class="form-group__label subtitle-2 is-hidden" for="CustomerLastName">성</label>
-								<input id="CustomerLastName" autocapitalize="off" autocomplete="off" autofocus="" name="customer[lastname]" placeholder="성" required="" spellcheck="false" type="text">
-							</div>
-							<div class="form-group__field form_padding">
-								<label class="form-group__label subtitle-2 is-hidden" for="CustomerEmail">이메일</label>
-								<input id="CustomerEmail" autocapitalize="off" autocomplete="off" autofocus="" name="customer[email]" placeholder="이메일" required="" spellcheck="false" type="text">
-							</div>
-							<div class="form-group__field form_padding">
-								<label class="form-group__label subtitle-2 is-hidden" for="CustomerBirthday">생년월일</label>
-								<input id="CustomerBirthday" autocapitalize="off" autocomplete="off" autofocus="" name="customer[birthday]" placeholder="생년월일" required="" spellcheck="false" type="text">
-							</div>
-							<div class="form-group__field form_padding">
-								<label class="form-group__label subtitle-2 is-hidden" for="CustomerPhone">휴대폰번호</label>
-								<input id="CustomerPhone" autocapitalize="off" autocomplete="off" autofocus="" name="customer[phone]" placeholder="휴대폰번호" required="" spellcheck="false" type="text">
-							</div>
-							<!-- <div class="form-group__field form_padding">
-								<input class="button button--primary button--block button--large" type="button" value="변경 사항 저장">
-							</div> -->
-						</div>
-					</form>
-				</div>
-				<div class="template-mypage__form">
-					<div class="mypage_each">
-						<h3 class="mypage_tit1">부가정보(선택)</h3>
-					</div>
-					<form method="post" action="#">
-						<div class="form-group">
-							<div class="form-group__field">
-								<p class="mypage_tit2">성별</p>
-								<div class="mypage_each">
-									<div class="radio_custom_box mypage_radio_box">
-										<input id="info_gender1" class="radio_input" value="10" type="radio" name="info_gender">
-										<label for="info_gender1">남</label>
-									</div>
-									<div class="radio_custom_box mypage_radio_box">
-										<input id="info_gender2" class="radio_input" value="10" type="radio" name="info_gender">
-										<label for="info_gender2">여</label>
-									</div>
-									<div class="checkbox_custom_box mypage_check_box">
-										<input id="info_agree1" class="checkbox" value="2" type="checkbox">
-										<label for="info_agree1">성별을 마케팅 정보로 활용하는 것에 동의 (선택)</label>
-									</div>
+							<div class="wk-item__content">
+								<div class="wk-product-title">
+									<a href="/products/small-leather-pouch?variant=39095646879895" class="wk-variant-link" title="View product">스몰 레더 파우치</a>
 								</div>
-							</div>
-							<div class="form-group__field">
-								<h4 class="mypage_tit2">제3자 정보제공동의</h4>
-								<div class="mypage_each">
-									<div class="radio_custom_box mypage_radio_box">
-										<input id="info_agree2_1" class="radio_input" value="10" type="radio" name="info_agree2">
-										<label for="info_agree2_1">동의합니다</label>
+								<div class="wk-purchase">
+									<span class="wk-price wk-price-preview"><span><span class="money">389,000 원</span></span></span></div>
+								<button type="button" class="wk-button-wishlist-page wk-remove-item wk-with-hover" title="Remove from Wishlist">
+									<div class="">
+										<svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z">
+											</path>
+										</svg>
 									</div>
-									<div class="radio_custom_box mypage_radio_box">
-										<input id="info_agree2_2" class="radio_input" value="10" type="radio" name="info_agree2">
-										<label for="info_agree2_2">동의하지 않습니다</label>
+									<span class="wk-label">In Wishlist</span>
+								</button>
+								<form id="" action="#" method="post" class="wk-add-item-form">
+									<!-- Begin product options -->
+									<div class="wk-product-options">
+										<div class="wk-select">
+											<div class="selector-wrapper" style="display: none"><label>One size</label>
+												<select class="single-option-selector" 
+													style="background-image: url(&quot;//cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/icon-small-arrow-down.svg?v=9521334029086756349&quot;);">
+													<option value="One size">One size</option>
+												</select></div>
+												<select class="wk-option-select" name="id" style="background-image: url(&quot;//cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/icon-small-arrow-down.svg?v=9521334029086756349&quot;); display: none;">
+												<option value="39095646879895" selected="selected">
+													One size - 380.00
+												</option>
+											</select>
+										</div>
+										<div class="wk-purchase-section">
+											<button type="submit" class="wk-add-to-cart">
+												<span class="wk-label-select-size">사이즈를 선택하세요</span>
+												<span class="wk-label-atc">장바구니 담기</span>
+											</button>
+										</div>
 									</div>
-								</div>
-							</div>
-							<div class="form-group__field form_padding">
-								<input class="button button--primary button--block button--large" type="button" value="변경 사항 저장">
+									<!-- End product options -->
+								</form>
 							</div>
 						</div>
-					</form>
+					</div>
+					<div class="wk-item-column">
+						<div class="wk-item">
+							<div class="wk-image">
+								<a href="#" class="wk-variant-link wk-content"
+									title="View product">
+									<img class="wk-variant-image"
+										src="https://cdn.shopify.com/s/files/1/0480/1141/1607/products/Toteme_PF21_BOUCL_C9_TWEED_JACKET_213-109-728_COTTON_BLEND_CREME_105_1_1000x.jpg?v=1619002345"
+										alt="Bouclé tweed jacket creme">
+								</a>
+							</div>
+							<div class="wk-item__content">
+								<div class="wk-product-title">
+									<a href="#" class="wk-variant-link"
+										title="View product">부 클레 트위드 자켓 크림</a>
+								</div>
+								<div class="wk-purchase">
+									<span class="wk-price wk-price-preview"><span><span class="money">589,000 원</span></span></span></div>
+								<button type="button" class="wk-button-wishlist-page wk-remove-item wk-with-hover" title="Remove from Wishlist">
+									<div class="">
+										<svg class="icon icon--large icon__close"  viewBox="0 0 24 24" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z">
+											</path>
+										</svg>
+									</div>
+									<span class="wk-label">In Wishlist</span>
+								</button>
+								<form action="#" method="post" class="wk-add-item-form">
+									<!-- Begin product options -->
+									<div class="wk-product-options ">
+										<div class="wk-select">
+											<div class="selector-wrapper"><label>Size</label><select class="single-option-selector"
+													style="background-image: url(&quot;//cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/icon-small-arrow-down.svg?v=9521334029086756349&quot;);">
+													<option value="" disabled="">사이즈 선택</option>
+													<option value="32">32</option>
+													<option value="34">34</option>
+													<option value="36">36</option>
+													<option value="38">38</option>
+													<option value="40">40</option>
+													<option value="42">42</option>
+												</select></div>
+												<select  class="wk-option-select" 
+												style="background-image: url(&quot;//cdn.shopify.com/s/files/1/0480/1141/1607/t/2/assets/icon-small-arrow-down.svg?v=9521334029086756349&quot;); display: none;"
+												disabled="">
+												<option value="39885372063895">
+													32 - 530.00
+												</option>
+												<option value="39885372391575" selected="selected">
+													34 - 530.00
+												</option>
+												<option value="39885372752023">
+													36 - 530.00
+												</option>
+												<option value="39885373046935">
+													38 - 530.00
+												</option>
+												<option value="39885373341847">
+													40 - 530.00
+												</option>
+												<option value="39885373702295">
+													42 - 530.00
+												</option>
+											</select>
+										</div>
+										<div class="wk-purchase-section wk-multiple need-size">
+											<button type="submit" class="wk-add-to-cart disabled" disabled="disabled">
+												<span class="wk-label-select-size">사이즈를 선택하세요</span>
+												<span class="wk-label-atc">장바구니 담기</span>
+											</button>
+										</div>
+									</div>
+									<!-- End product options -->
+								</form>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-					 
-		 </div>
+		</div>
+		
 	</div>
 </div>
          <!-- END content_for_index -->
