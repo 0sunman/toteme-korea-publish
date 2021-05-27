@@ -41,6 +41,9 @@ const pageData = [
   {"type":"mypage","title":"2. Edit member information","url" : "/01_mypage/20", "pageurl" : "01_mypage/02_0_edit_info.ejs"},
   {"type":"mypage","title":"2-1. Edit member information-additional","url" : "/01_mypage/21", "pageurl" : "01_mypage/02_1_edit_info_additional.ejs"},
   {"type":"mypage","title":"2-2. Change password","url" : "/01_mypage/22", "pageurl" : "01_mypage/02_2_edit_password.ejs"},
+  {"type":"mypage","title":"3. addresses","url" : "/01_mypage/30", "pageurl" : "01_mypage/03_0_address_list.ejs"},
+  {"type":"mypage","title":"3. add address","url" : "/01_mypage/31", "pageurl" : "01_mypage/03_1_address_add.ejs"},
+  {"type":"mypage","title":"4. wishlist","url" : "/01_mypage/40", "pageurl" : "01_mypage/04_wishlist.ejs"},
 
   {"type":"join","title":"1. Sign in","url" : "/02_login_join/10", "pageurl" : "02_login_join/01_0_login_page.ejs"},
   {"type":"join","title":"1-1. Forgot ID","url" : "/02_login_join/11", "pageurl" : "02_login_join/01_1_id_check.ejs"},
