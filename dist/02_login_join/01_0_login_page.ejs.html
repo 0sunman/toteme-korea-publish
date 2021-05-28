@@ -957,11 +957,11 @@
       <main id="MainContent" class="main-content critical-clear">
          <!-- BEGIN content_for_index -->
          <!--  include ("./pages/00_main/index.ejs") BEGIN content_for_index -->
-         <div class="container">
+         <div class="container login_join login_page">
     <div class="template-account__header">
        로그인
     </div>
-    <div class="template-account__wrapper login_page">
+    <div class="template-account__wrapper">
        <div class="template-account__left"></div>
        <div class="template-account__navlist ">
     <div class="template-account__navlist--content">
@@ -1018,7 +1018,7 @@
        <div class="template-account__content">
           <div class="template-login__content">
  
-             <div class="template-account__text_hdtype_1 alert" style='display:none'>
+             <div class="template-account__text_hdtype_1 alert title" style='display:none'>
                 <div class="rte">
                    안내문구 출력 영역
                 </div>
@@ -1028,37 +1028,38 @@
                    <form method="post" action="/account/login" id="customer_login" accept-charset="UTF-8">
                       <input type="hidden" name="form_type" value="customer_login"><input type="hidden" name="utf8" value="✓">
                       <div class="form-group">
-                         <div class="form-group__field bottom-m10 bottom-d10">
+                         <div class="form-group__field idoremail label-block input-block">
                             <label class="form-group__label subtitle-2 is-hidden" for="CustomerEmail">
                             ID 또는 이메일
                             </label>
-                            <input id="CustomerEmail" class='m-font-14' autocapitalize="off" autocomplete="off" autofocus="" name="customer[email]" placeholder="ID 또는 이메일" required="" spellcheck="false" type="email">
+                            <input id="CustomerEmail" autocapitalize="off" autocomplete="off" autofocus="" name="customer[email]" placeholder="ID 또는 이메일" required="" spellcheck="false" type="email">
                          </div>
-                         <div class="form-group__field">
+                         <div class="form-group__field password label-block input-block">
                             <label class="form-group__label subtitle-2 is-hidden" for="CustomerPassword">
                             비밀번호
                             </label>
-                            <input id="CustomerPassword" class='m-font-14' name="customer[password]" placeholder="비밀번호" required="" type="password">
+                            <input id="CustomerPassword" name="customer[password]" placeholder="비밀번호" required="" type="password">
                          </div>
-                         <div class="form-group__field">
-                            <input class="button button--primary button--block button--large m-font-14" disabled="true" type="submit" value="로그인">
+
+                         <div class="form-group__field login button-block">
+                            <input class="button button--primary button--block button--large" disabled="true" type="submit" value="로그인">
                           </div>
 
-                         <div class='defaultblock sns-buttons top-m30 bottom-m15 top-d15 bottom-d15'>
-                           <label class='radiobutton'>
+                         <div class='defaultblock sns-buttons label-block input-block'>
+                           <label class='radiobutton naver'>
                               <input type="radio" name="test_radio" value="옵션1" checked/>
                               <span>네이버</span>
                            </label>
-                           <label class='radiobutton' style='clear:both'>
+                           <label class='radiobutton kakao' style='clear:both'>
                               <input type="radio" name="test_radio" value="옵션1"/>
                               <span>카카오톡</span>
                            </label>
                            <div class='newline only_mo'></div>
-                           <label class='radiobutton'>
+                           <label class='radiobutton facebook'>
                               <input type="radio" name="test_radio" value="옵션1"/>
                               <span>페이스북</span>
                            </label>
-                           <label class='radiobutton'>
+                           <label class='radiobutton google'>
                               <input type="radio" name="test_radio" value="옵션1"/>
                               <span>구글</span>
                            </label>
@@ -1068,40 +1069,16 @@
                    </form>
                 </div>
 
-               <div class='line-block top-m30 bottom-m20 top-d15 bottom-d15'>
+               <div class='line-block content-line'>
                </div>
 
-                <div class="template-account__text_hdtype_1 no-margin no-padding m-font-14">
+                <div class="template-account__text_hdtype_1 no-margin no-padding m-font-14 div-block sub-description">
                    <div class="rte">
                       Toteme 온라인스토어에는 더현대닷컴이 운영 제공하는 사이트로 기존 회원은 더현대닷컴 아이디와 비밀번호로 바로 이용 가능합니다.
                    </div>
                 </div>
              </div>
-             <div class="template-login__form-wrapper is-hidden" js-password-form="recoverPasswordForm">
-                <div class="template-login__form">
-                   <form method="post" action="/account/recover" accept-charset="UTF-8">
-                      <input type="hidden" name="form_type" value="recover_customer_password"><input type="hidden" name="utf8" value="✓">
-                      <div class="form-errors">
-                      </div>
-                      <div class="form-group">
-                         <div class="form-group__field">
-                            <label for="RecoverEmail" class="form-group__label subtitle-2 is-hidden">
-                               ID 또는 이메일
-                            </label>
-                            <input id="RecoverEmail" autocapitalize="off" autocomplete="off" name="email" placeholder="Email" required="" spellcheck="false" tabindex="-1" type="email">
-                         </div>
-                         <div class="form-group__footer">
-                            <input class="button button--primary button--block button--large" disabled="true" tabindex="-1" type="submit" value="Reset password">
-                         </div>
-                      </div>
-                      <div class="template-account__footer">
-                         <div class="rte">
-                            Forgot your password? Enter your username or email address and you’ll receive an email to change it.
-                         </div>
-                      </div>
-                   </form>
-                </div>
-             </div>
+
           </div>
        </div>
     </div>

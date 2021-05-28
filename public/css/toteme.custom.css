@@ -567,3 +567,81 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 
 
 .uniform-page .custom-module__content{background: #fff;}
+
+
+/* 
+    2-0-0 로그인 & 회원가입 공통 
+
+        1. 버튼 공통
+        2. 하단설명 공통
+        3. 라인
+*/
+
+/* 1. 버튼 공통 */
+.table-block {display:table}
+.input-block, .button-block{text-align: center;}
+.input-block input[type=email], .input-block input[type=text], .input-block input[type=password], 
+.button-block input[type=submit], .button-block input[type=button]{max-width:500px}
+/* // 1. 버튼 공통 */
+
+/* 2. 하단 설명 */
+.input-block.sub-description p, .text-block.sub-description p{max-width: 500px; margin: 0 auto; text-align: left;}
+/* 2. 하단 설명 공통 */
+
+/* 3. 라인 */
+.content-line.line-block{margin-top:30px; margin-bottom:20px;}
+@media (min-width:768px){      
+    .content-line.line-block {margin-top:15px; margin-bottom:15px;}
+}
+/* // 3. 라인 */
+
+/* // 공통*/
+
+/* 2-1-0 로그인 & 회원가입 페이지 1 */
+.login_join.login_page .idoremail.input-block{margin-bottom:10px;}
+.login_join.login_page .sns-block.input-block{margin-top:30px; margin-bottom:15px;}   
+.login_join.login_page .content-line.line-block{margin-top:30px; margin-bottom:20px;}
+.login_join.login_page .idoremail.input-block input, .login_join.login_page .idoremail.input-block label, 
+.login_join.login_page .password.input-block input, .login_join.login_page .password.input-block label, 
+.login_join.login_page .login.button-block, .login_join.login_page .div-block.sub-description{font-size:14px}
+/* 아이디 입력창, 비밀번호 입력창, 로그인버튼, 하단 설명 */
+@media (min-width:768px){      
+    .login_join.login_page .content-line.line-block, 
+    .login_join.login_page .sns-buttons.label-block{margin-top:15px; margin-bottom:15px;}
+    /* 중간 라인선, sns 버튼*/
+}
+/* // 로그인 & 회원가입 페이지 */
+
+
+/* 2-1-1 로그인 & 회원가입 아이디 체크 */   
+.login_join.id_check .name.input-block{margin-bottom:10px;}
+.login_join.id_check .birthday.input-block{margin-bottom:10px;}
+
+.login_join.id_check .sns-block.input-block{margin-top:30px; margin-bottom:15px;}   
+.login_join.id_check .content-line.line-block{margin-top:30px; margin-bottom:20px;}
+.login_join.id_check .name.input-block input, .login_join.id_check .name.input-block label, 
+.login_join.id_check .birthday.input-block input, .login_join.id_check .birthday.input-block label, 
+.login_join.id_check .findid.button-block, .login_join.id_check .div-block.sub-description{font-size:14px}
+
+/* // 로그인 페이지 1-1 : 아이디 체크  */
+
+
+/* 2-1-2 로그인 & 회원가입 아이디 체크 */   
+
+.login_join.no_member_login .orderNumber.input-block{margin-bottom:10px;}
+.login_join.no_member_login .password.input-block{margin-bottom:10px;}
+.login_join.no_member_login .orderNumber.input-block input, .login_join.no_member_login .orderNumber.input-block label
+.login_join.no_member_login .password.input-block input, .login_join.no_member_login .password.input-block label
+.findOrder.button-block input {font-size:14px}
+
+/* // 2-1-2 로그인 & 회원가입 아이디 체크 */   
+
+
+/* 2-1-3 로그인 & 회원가입 아이디 체크 */   
+.login_join.join_page .joinInfoHeader.text-block{margin:15px; margin-bottom:30px}
+.login_join.join_page .idorpasswordCheck.table-block{max-width: 500px; margin: 0 auto;}
+.login_join.join_page .idorpasswordCheck.table-block > div:nth-child(1){width:70%; }
+.login_join.join_page .idorpasswordCheck.table-block > div:nth-child(2){width:30%; }
+@media (min-width:768px){      
+}
+/* // 2-1-3 로그인 & 회원가입 아이디 체크 */   
