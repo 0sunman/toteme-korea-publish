@@ -957,7 +957,7 @@
       <main id="MainContent" class="main-content critical-clear">
          <!-- BEGIN content_for_index -->
          <!--  include ("./pages/00_main/index.ejs") BEGIN content_for_index -->
-         <div class="container">
+         <div class="container login_join email_confirm_and_resend">
    <div class="template-account__header">
       회원가입
    </div>
@@ -1016,63 +1016,31 @@
       </script>
    
       <div class="template-account__content">
-         <div class="template-login__content">
 
-            <div class="template-account__text_hdtype_1 alert" style='display:none'>
-               <div class="rte">
-                  안내문구 출력 영역
-               </div>
+         <div class="template-account__text_hdtype_1 alert" style='display:none'>
+            <div class="rte">
+               안내문구 출력 영역
             </div>
-            <div class="text-block left-m15 top-m15 bottom-m30 left-d15 top-d15 bottom-d30">
-               <h2 class='m-font-15'>이메일 인증</h2>
+         </div>
+
+         <div class='section'>
+
+            <div class="text-block title">
+               <h2>이메일 인증</h2>
                <p>parkhyundai@thehyundai.com으로<br>인증메일이 발송되었습니다.<br>인증 완료 후 비밀번호를 재설정 하실 수 있습니다.</p>
             </div>
-            <div class="template-login__form-wrapper" js-password-form="customerLoginForm">
-               <div class="template-login__form">
-                  <form method="post" action="/account/login" id="customer_login" accept-charset="UTF-8">
-                     <input type="hidden" name="form_type" value="customer_login"><input type="hidden" name="utf8" value="✓">
-                     <div class="form-group">
-                        
-                       <div class="form-group__field">
-                        <input class="button button--primary button--block button--large m-font-14" type="submit" value="확인">
-                      </div>
 
-                     </div>
-                  </form>
-               </div>
-
+            <div class="button-block confirm">
+               <input class="button button--primary button--block button--large" type="submit" value="확인">
             </div>
-            <div class="template-login__form-wrapper is-hidden" js-password-form="recoverPasswordForm">
-               <div class="template-login__form">
-                  <form method="post" action="/account/recover" accept-charset="UTF-8">
-                     <input type="hidden" name="form_type" value="recover_customer_password"><input type="hidden" name="utf8" value="✓">
-                     <div class="form-errors">
-                     </div>
-                     <div class="form-group">
-                        <div class="form-group__field">
-                           <label for="RecoverEmail" class="form-group__label subtitle-2 is-hidden">
-                              ID 또는 이메일
-                           </label>
-                           <input id="RecoverEmail" autocapitalize="off" autocomplete="off" name="email" placeholder="Email" required="" spellcheck="false" tabindex="-1" type="email">
-                        </div>
-                        <div class="form-group__footer">
-                           <input class="button button--primary button--block button--large" disabled="true" tabindex="-1" type="submit" value="Reset password">
-                        </div>
-                     </div>
-                     <div class="template-account__footer">
-                        <div class="rte">
-                           Forgot your password? Enter your username or email address and you’ll receive an email to change it.
-                        </div>
-                     </div>
-                  </form>
-               </div>
-            </div>
-
-
-
-
 
          </div>
+           
+
+
+
+
+
       </div>
    </div>
 </div>

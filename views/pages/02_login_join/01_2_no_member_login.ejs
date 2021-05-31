@@ -13,61 +13,34 @@
                    안내문구 출력 영역
                 </div>
              </div>
-             <div class="template-login__form-wrapper" js-password-form="customerLoginForm">
-               <div class="template-login__form">
-                  <form method="post" action="/account/login" id="customer_login" accept-charset="UTF-8">
+             <div class="section">
+                  <form method="post" >
                      <input type="hidden" name="form_type" value="customer_login"><input type="hidden" name="utf8" value="✓">
-                     <div class="form-group">
-                        <div class="form-group__field orderNumber input-block label-block">
+                        <div class="orderNumber input-block label-block">
                            <label class="form-group__label subtitle-2 is-hidden" for="CustomerEmail">
                            </label>
                            <input id="CustomerEmail" autocapitalize="off" autocomplete="off" autofocus="" name="customer[email]" placeholder="주문번호" required="" spellcheck="false" type="email">
                         </div>
-                        <div class="form-group__field password input-block label-block">
+                        <div class="password input-block label-block">
                            <label class="form-group__label subtitle-2 is-hidden" for="CustomerPassword">
                            </label>
                            <input id="CustomerEmail" autocapitalize="off" autocomplete="off" autofocus="" name="customer[email]" placeholder="비밀번호" required="" spellcheck="false" type="email">
                         </div>
-                        <div class="form-group__field findOrder button-block">
+                        <div class="findOrder button-block">
                            <input class="button button--primary button--block button--large m-font-14" disabled="true" type="submit" value="주문배송조회">
-                         </div>
+                        </div>
 
-                     </div>
                   </form>
                </div>
 
                <div class='content-line line-block'>
                </div>
+               <div class='section'>
 
-                <div class="text-block description form-group__field ">
-                  <p class='m-font-14 left-m15 left-d15'>주문번호가 기억나지 않으시면, 고객센터(0000-0000)로 문의주세요.</p>
+                  <div class="text-block sub-description ">
+                     <p >주문번호가 기억나지 않으시면, 고객센터(0000-0000)로 문의주세요.</p>
+                  </div>
                </div>
-            </div>
-             <div class="template-login__form-wrapper is-hidden" js-password-form="recoverPasswordForm">
-                <div class="template-login__form">
-                   <form method="post" action="/account/recover" accept-charset="UTF-8">
-                      <input type="hidden" name="form_type" value="recover_customer_password"><input type="hidden" name="utf8" value="✓">
-                      <div class="form-errors">
-                      </div>
-                      <div class="form-group">
-                         <div class="form-group__field">
-                            <label for="RecoverEmail" class="form-group__label subtitle-2 is-hidden">
-                               ID<span class='kor'> 또는 이메일</span>
-                            </label>
-                            <input id="RecoverEmail" autocapitalize="off" autocomplete="off" name="email" placeholder="Email" required="" spellcheck="false" tabindex="-1" type="email">
-                         </div>
-                         <div class="form-group__footer">
-                            <input class="button button--primary button--block button--large" disabled="true" tabindex="-1" type="submit" value="Reset password">
-                         </div>
-                      </div>
-                      <div class="template-account__footer">
-                         <div class="rte">
-                            Forgot your password? Enter your username or email address and you’ll receive an email to change it.
-                         </div>
-                      </div>
-                   </form>
-                </div>
-             </div>
           </div>
        </div>
     </div>

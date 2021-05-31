@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container login_join select_email">
    <div class="template-account__header">
       회원가입
    </div>
@@ -19,42 +19,44 @@
             </div>
             <div class=" template-login__form-wrapper" js-password-form="customerLoginForm">
 
-               <div class='defaultblock sns-buttons top-m15 bottom-m15 top-d15 bottom-d15'>
-                  <label class='radiobutton'>
+               <div class='defaultblock sns-buttons label-block '>
+                  <label class='radiobutton kakao'>
                      <input type="radio" name="test_radio" value="옵션1" checked/>
                      <span>카카오톡</span>
                   </label>
-                  <label class='radiobutton' style='clear:both'>
+                  <label class='radiobutton email' style='clear:both'>
                      <input type="radio" name="test_radio" value="옵션1"/>
                      <span>이메일</span>
                   </label>
                   <div class='newline'></div>
-                  <label class='radiobutton'>
+                  <label class='radiobutton google'>
                      <input type="radio" name="test_radio" value="옵션1"/>
                      <span>구글</span>
                   </label>
-                  <label class='radiobutton'>
+                  <label class='radiobutton facebook'>
                      <input type="radio" name="test_radio" value="옵션1"/>
                      <span>페이스북</span>
                   </label>
-                  <label class='radiobutton'>
+                  <label class='radiobutton cellphone'>
                      <input type="radio" name="test_radio" value="옵션1"/>
                      <span>휴대폰 인증</span>
                   </label>
 
                </div>
 
-               <div class='line-block top-m15 bottom-m15 top-d15 bottom-d15'>
+               
+               <div class='line-block content-line'>
                </div>
+               <div class='section'>
+                  
+               <div class='defaultblock email align-center'>
 
-               <div class='defaultblock left-m15 right-m15 top-m15 bottom-m15 left-d15 right-d15 top-d15 bottom-d15 align-center'>
-
-                  <div class="input-table form-group__field" style='width:67%;margin:0 auto;'>
-                     <div style='width:60%;'>
+                  <div class="inputEmail table-block">
+                     <div>
                         <input style='display: inline-block;' autocapitalize="off" autocomplete="off" autofocus="" placeholder="이메일" required="" spellcheck="false" type="email">
                      </div>
-                     <div style='width:40%;'>
-                        <div class='select-wrap' style='width:100%;margin-left:7px'>
+                     <div>
+                        <div class='select-wrap'>
    
                            <select  class="toteme-select-style toteme-button-style" >
                               <option value="AF">naver.com</option>
@@ -70,14 +72,15 @@
 
 
                
-               <div class='text-block left-m15 right-m15 top-m15 bottom-m30 left-d15 right-d15 top-d15 bottom-d30'>
+               <div class='text-block description'>
                   <p>
-                     이메일을 인증을 위한 이메일 주소 수집/이용에 동의하십니까? 동의에 거부할 권리나 의사가 있으나,
+                     이메일을 인증을 위한 이메일 주소 수집/이용에 동의하십니까? <br>동의에 거부할 권리나 의사가 있으나,
                      거부시 회원가입이 진행되지 않습니다. 수집한 개인정보는 인증 완료 시까지 보관합니다.
                   </p>
                </div>
-               <div class='defaultblock left-m15 right-m15 top-m15 bottom-m30 left-d15 right-d15 top-d15 bottom-d30 align-center'>
-                  <input class="toteme-button-style button big" type="button" value="동의하고 인증하기"/>
+               <div class='button-block agree align-center'>
+                  <input class="toteme-button-style button big agree-button" type="button" value="동의하고 인증하기"/>
+               </div>
                </div>
                          
             </div>
