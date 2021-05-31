@@ -170,7 +170,7 @@
 													</div>
 												</div>
 											</div>
-											<div class="input-block form-group__field">
+											<div class="input-block form-group__field form_padding">
 												<label class="field__label field__label--visible" for="checkout_memo">배송시 요청사항 선택</label>
 												<select id="checkout_memo" class="field__input field__input--select toteme-select-style toteme-button-style no-animation">
 													<option value="" disabled="" selected="">배송시 요청사항 선택</option>
@@ -187,7 +187,7 @@
 											</div>
 										</div>
 										<div class="address_select_box">
-											<div class="input-block form-group__footer">
+											<div class="input-block form-group__footer form_padding">
 												<input class="button button--primary button--block button--large is-valid" type="button" value="신규 배송지 추가" data-address="address_add">
 											</div>
 											<div class="content-box__row">
@@ -255,11 +255,11 @@
 											</div>
 											<div class="address_change_box">
 												<div class="form-group">
-													<div class="input-block form-group__field">
+													<div class="input-block form-group__field form_padding">
 														<label class="field__label field__label--visible" for="checkout_name2">받는 사람</label>
 														<input placeholder="받는 사람" value="더현대" class="field__input" size="30" type="text" name="checkout[name2]" id="checkout_name2">
 													</div>
-													<div class="input-block form-group__field">
+													<div class="input-block form-group__field form_padding">
 														<div class="input-table phone_form">
 															<div>
 																<label class="field__label field__label--visible" for="checkout_phone3">휴대폰번호(필수)</label>
@@ -277,7 +277,7 @@
 															<input placeholder="추가연락처" class="field__input" size="30" type="text" name="checkout[phone4]">
 														</div>
 													</div>
-													<div class="input-block form-group__field">
+													<div class="input-block form-group__field form_padding">
 														<div class="input-table phone_addr">
 															<div>
 																<label class="field__label field__label--visible" for="checkout_addr4">배송지주소</label>
@@ -288,19 +288,21 @@
 															</div>
 														</div>
 													</div>
-													<div class="input-block form-group__field">
+													<div class="input-block form-group__field form_padding">
 														<label class="field__label field__label--visible" for="checkout_addr5">주소</label>
 														<input placeholder="주소" value="서울특별시 강남구 강남대로 1길" class="field__input" size="30" type="text" name="checkout[addr5]" id="checkout_addr5" readonly="">
 													</div>
-													<div class="input-block form-group__field">
+													<div class="input-block form-group__field form_padding">
 														<label class="field__label field__label--visible" for="checkout_addr6">상세주소</label>
 														<input placeholder="상세주소" value="1층" class="field__input" size="30" type="text" name="checkout[addr3]" id="checkout_addr6">
 													</div>
-													<div class="checkbox_custom_box">
-														<input id="address_default" class="checkbox" value="1" type="checkbox">
-														<label for="address_default">기본배송지 설정</label>
+													<div class="form_padding">
+														<div class="checkbox_custom_box">
+															<input id="address_default" class="checkbox" value="1" type="checkbox">
+															<label for="address_default">기본배송지 설정</label>
+														</div>
 													</div>
-													<div class="input-block pcs2">
+													<div class="input-block pcs2 form_padding">
 														<input class="step__footer__continue-btn btn white" type="submit" value="취소">
 														<input class="step__footer__continue-btn btn" type="submit" value="저장">
 													</div>
@@ -308,15 +310,15 @@
 											</div>
 										</div>
 										<div class="address_add_box">
-											<div class="input-block form-group__footer">
+											<div class="input-block form-group__footer form_padding">
 												<input class="button button--primary button--block button--large is-valid" type="button" value="배송 주소록에서 선택" data-address="address_select">
 											</div>
 											<div class="form-group">
-												<div class="input-block form-group__field">
+												<div class="input-block form-group__field form_padding">
 													<label class="field__label field__label--visible" for="checkout_name1">받는 사람</label>
 													<input placeholder="받는 사람" class="field__input" size="30" type="text" name="checkout[name1]" id="checkout_name1">
 												</div>
-												<div class="input-block form-group__field">
+												<div class="input-block form-group__field form_padding">
 													<div class="input-table phone_form">
 														<div>
 															<label class="field__label field__label--visible" for="checkout_phone">휴대폰번호(필수)</label>
@@ -334,7 +336,7 @@
 														<input placeholder="추가연락처" class="field__input" size="30" type="text" name="checkout[phone2]">
 													</div>
 												</div>
-												<div class="input-block form-group__field">
+												<div class="input-block form-group__field form_padding">
 													<div class="input-table phone_addr">
 														<div>
 															<label class="field__label field__label--visible" for="checkout_addr">배송지주소</label>
@@ -345,15 +347,15 @@
 														</div>
 													</div>
 												</div>
-												<div class="input-block form-group__field">
+												<div class="input-block form-group__field form_padding">
 													<label class="field__label field__label--visible" for="checkout_addr2">주소</label>
 													<input placeholder="주소" class="field__input" size="30" type="text" name="checkout[addr2]" id="checkout_addr2" readonly="">
 												</div>
-												<div class="input-block form-group__field">
+												<div class="input-block form-group__field form_padding">
 													<label class="field__label field__label--visible" for="checkout_addr3">상세주소</label>
 													<input placeholder="상세주소" class="field__input" size="30" type="text" name="checkout[addr3]" id="checkout_addr3">
 												</div>
-												<div class="input-block form-group__field">
+												<div class="input-block form-group__field form_padding">
 													<label class="field__label field__label--visible" for="checkout_memo2">배송시 요청사항 선택</label>
 													<select id="checkout_memo2" class="field__input field__input--select toteme-select-style toteme-button-style no-animation">
 														<option value="" disabled="" selected="">배송시 요청사항 선택</option>
@@ -368,17 +370,19 @@
 														<input type="text" placeholder="배송 시 요청사항을 입력하세요" class="field__input" size="30">
 													</div>
 												</div>
-												<div class="checkbox_custom_box">
-													<input id="address_default2" class="checkbox" value="1" type="checkbox">
-													<label for="address_default2">기본배송지 설정</label>
+												<div class="form_padding">
+													<div class="checkbox_custom_box">
+														<input id="address_default2" class="checkbox" value="1" type="checkbox">
+														<label for="address_default2">기본배송지 설정</label>
+													</div>
 												</div>
-												<p class="comment">주문 시 입력한 신규 배송지는 자동으로 배송주소록에 추가됩니다.</p>
+												<p class="comment form_padding">주문 시 입력한 신규 배송지는 자동으로 배송주소록에 추가됩니다.</p>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="step__footer">
+							<div class="step__footer btn_padding">
 								<button name="button" type="submit" id="continue_button" class="step__footer__continue-btn btn">
 									<span class="btn__content">결제수단 선택</span>
 									<svg class="icon-svg icon-svg--size-18 btn__spinner icon-svg--spinner-button" aria-hidden="true" focusable="false">
@@ -469,7 +473,7 @@
 												<td class="product__image">
 													<div class="product-thumbnail">
 														<div class="product-thumbnail__wrapper">
-															<img alt="Centered monogram silk scarf creme - One size" class="product-thumbnail__image" src="//cdn.shopify.com/s/files/1/0480/1141/1607/products/TOTEME_Flats_Core_Scarfs_4_GB_100x.jpg?v=1613490734">
+															<img alt="Centered monogram silk scarf creme - One size" class="product-thumbnail__image" src="../assets/order1.jpg">
 														</div>
 														<span class="product-thumbnail__quantity" aria-hidden="true">1</span>
 													</div>
@@ -491,7 +495,7 @@
 												<td class="product__image">
 													<div class="product-thumbnail ">
 														<div class="product-thumbnail__wrapper">
-															<img alt="The Regulars sunglasses black - One size" class="product-thumbnail__image" src="//cdn.shopify.com/s/files/1/0480/1141/1607/products/Toteme_SS21_212-802-900_SUNGLASSES_AcetateBlack0199_1_100x.jpg?v=1616001300">
+															<img alt="The Regulars sunglasses black - One size" class="product-thumbnail__image" src="../assets/order2.jpg">
 														</div>
 														<span class="product-thumbnail__quantity" aria-hidden="true">1</span>
 													</div>
@@ -518,7 +522,7 @@
 								<form class="edit_checkout animate-floating-labels" action="#" method="post">
 									<div class="fieldset">
 										<div class="field"><!-- error시 .field--error 추가 -->
-											<div class="field__input-btn-wrapper">
+											<div class="field__input-btn-wrapper form_padding">
 												<div class="field__input-wrapper">
 													<label class="field__label field__label--visible" for="checkout_reduction_code">프로모션 코드</label>
 													<input placeholder="프로모션 코드 입력" class="field__input" id="checkout_reduction_code" autocomplete="off" aria-required="true" size="30" type="text" name="checkout[reduction_code]">
@@ -557,7 +561,7 @@
 								<form class="edit_checkout animate-floating-labels" action="#" method="post">
 									<div class="fieldset">
 										<div class="field">
-											<div class="field__input-btn-wrapper">
+											<div class="field__input-btn-wrapper form_padding">
 												<div class="field__input-wrapper">
 													<label class="field__label field__label--visible" for="checkout_deposit_code">예치금 사용</label>
 													<input placeholder="사용할 금액을 입력하세요" class="field__input" id="checkout_deposit_code" autocomplete="off" aria-required="true" size="30" type="text" name="checkout[deposit_code]">
