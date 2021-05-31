@@ -301,14 +301,16 @@ body.overflow-hidden {overflow: hidden;}
 .phone_form.active .btn_plus:before{content: ''; display: block; width: 8px; height: 1px; background: #171616; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 .phone_addr .button{width: calc(100% - 7px); min-height: 34px; margin-left: 7px;}
 .product-table:not(.stock-problem-table) .product__quantity .visually-hidden, .checkout .order-summary__section--discount .field__input-btn .visually-hidden-on-mobile{overflow: visible;}
-.deposit_attr_box{display: table; width: 100%; font-size: 15px;}
+.discount-trigger{display: block; max-width: 500px; margin: 0 auto; padding-left: 0; padding-right: 0;}
+.checkout .order-summary__section--discount{text-align: center; padding-left: 37px; padding-right: 37px;}
+.deposit_attr_box{display: table; width: 100%; font-size: 15px; text-align: left;}
 .deposit_attr_box>div{display: table-cell;}
 .deposit_attr_box>div:last-child{text-align: right;}
 .deposit_attr_box .field__message--error{display: inline-block;}
-.deposit_attr_box .btn_deposit{position: relative; font-size: 12px;}
+.deposit_attr_box .btn_deposit{position: relative; font-size: 13px;}
 .deposit_attr_box .btn_deposit:after{content: ''; height: 1px; position: absolute; bottom: 0; left: 0; right: 0; background: #444;}
 .deposit_result_box{display: none;}
-.deposit_active .deposit_result_box{display: table;}
+.deposit_active .deposit_result_box{display: table; text-align: left;}
 .order-summary__sections .deposit_active [data-deposit], .deposit_active>*{display: none;}
 .direct_input{display: none;}
 .direct_input.active{display: block;}
@@ -318,7 +320,7 @@ body.overflow-hidden {overflow: hidden;}
 .checkout .modal .modal__body{justify-content: normal;}
 .address-modal .address_modal_container{width: 100%; max-width: 600px;}
 .address-modal .btn{float: none;}
-.address-modal .comment{text-align: left; font-size: 12px; line-height: 15px; margin-top: 0.5714285714em;}
+.address-modal .comment{text-align: left; font-size: 13px; line-height: 17px; margin-top: 0.5714285714em;}
 .address_find_content .input-table>div{width: 50%;}
 .address_find_content .select-wrap{display: block;}
 .address_find_content .select-wrap:last-child{margin-left: 7px;}
@@ -333,7 +335,7 @@ body.overflow-hidden {overflow: hidden;}
 .payment_tit1{display: block; margin-bottom: 7px;}
 .addr_list{padding: 0;}
 @media screen and (max-width: 999px) {
-    .addr_list{font-size: 12px;}
+    .addr_list{font-size: 13px;}
 }
 .addr_list .addr_btn{display: table; width: 100%; padding: 10px; border-collapse: separate; border-top: 1px solid #171616;}
 .addr_list .addr-line-wrap{display: table-cell; width: calc(100% - 60px);}
@@ -352,7 +354,7 @@ body.overflow-hidden {overflow: hidden;}
 .input-block.pcs2 .btn:last-child:hover{margin-left: 7px;}
 /* 결제 */
 .breadcrumb__item--completed .breadcrumb__link{color: #171616;}
-.checkout .comment{font-size: 12px; line-height: 15px;}
+.checkout .comment{font-size: 13px; line-height: 17px;}
 .payment_guaranty{font-size: 15px;}
 .a_link{display: inline-block; position: relative;}
 .a_link:after{content: ''; width: 100%; height: 1px; background: #171616; position: absolute; bottom: 0; left: 0;}
@@ -404,14 +406,30 @@ body.overflow-hidden {overflow: hidden;}
 .a_link + .a_link{margin-left: 7px;}
 .address_wrap>div{display: none;}
 .address_wrap>div.active{display: block;}
-.address_wrap .address_info_box>.input-block{padding: 0 2.5rem;}
-.address_add_box, .address_select_box{padding: 0 2.5rem;}
+/* .address_add_box, .address_select_box{padding: 0 2.5rem;} */
 .address_info_change_box{padding: .5rem 2.5rem};
 .address_add_box .input-block{text-align: left;}
 .address_add_box .checkbox_custom_box+.comment{margin-top: .5rem;}
 .checkout .step__sections .section.section--contact-information .section__title:before, .checkout [data-step=shipping_method] .step__sections .section.section--shipping-method .section__title:before{display: none;}
 .checkout .step__sections .section.section--contact-information>.section__content{border-bottom-width: 0;}
 .checkout .step__sections .section.section--shipping-address .section__header{border-bottom: 1px solid #171616;}
+
+.checkout .review-block.review-block{padding: 0;}
+.checkout .checkbox__label, .checkout .field__message, .checkout .reduction-code__text, .checkout .review-block, .checkout .review-block__link, .checkout .section__header p, .checkout__breadcrumbs, .checkout__breadcrumbs .breadcrumb__item, .page--thank-you .checkout .os-step__description, .text-xsmall{ font-size: 13px; line-height: 17px;}
+.checkout .step__footer.btn_padding{display: block; text-align: center; padding-left: 37px; padding-right: 37px; margin: 0;}
+.checkout .step__footer.btn_padding .btn{max-width: 500px; float: none;}
+@media screen and (max-width: 767px){
+    .checkout .step__footer.btn_padding{padding: 0 52px;}
+    .checkout .step__footer.btn_padding .btn{max-width: 426px;}
+}
+.checkout .order-summary__section--discount .edit_checkout{padding: 0;}
+.checkout .section.section--contact-information>.section__content, .checkout .section.section--shipping-address>.section__content{padding: 10px 15px;}
+.checkout .section.section--shipping-address .section__header{margin-bottom: 0;}
+.content-box__row.non_member_info{padding-left: 15px; padding-right: 15px;}
+.checkout .section.section--payment-method .payment_type.sns-buttons{padding-top: 15px; padding-bottom: 20px;}
+.checkout__content .step__footer{padding: 0 22px;}
+.checkout .dot_list{padding: 0;}
+.checkout .form_padding+.dot_list{padding: 0 22px;}
 /* //주문 */
 
 
@@ -484,12 +502,18 @@ li > a.navlist__link.text-link{padding-left:15px}
 .template-mypage__form-wrapper ul, .template-mypage__form-wrapper li{list-style: none; padding: 0;}
 .template-mypage__form{padding: 20px 15px;}
 .template-mypage__form+.template-mypage__form{border-top: 1px solid #171616;}
-.template-mypage__form .form_padding{padding: 0 37px;}
+#MainContent .form_padding{max-width: 544px; margin-left: auto; margin-right: auto; padding-right: 22px; padding-left: 22px;}
+@media screen and (max-width: 767px){
+    /* #MainContent .form_padding{padding: 0 37px;} */
+    #MainContent .field__input-btn-wrapper.form_padding{padding: 0;}
+    .checkout .order-summary__section--discount.enable-form .edit_checkout{padding: 0;}
+}
 .p_small{font-size: 13px;}
 .mypage_each{margin-bottom: 30px;}
 .mypage_each2{margin-bottom: 20px;}
 .mypage_each .mypage_name{margin-bottom: 10px;}
-.mypage_btn_box{margin: 30px 37px;}
+.mypage_btn_box{margin: 30px 37px; text-align: center;}
+.mypage_btn_box .button{max-width: 500px;}
 .mypage_tit2{margin-bottom: 15px;}
 .radio_custom_box.mypage_radio_box{margin-bottom: 10px;}
 .radio_two_col:after{content: ''; display: block; clear: both;}
@@ -526,7 +550,7 @@ li > a.navlist__link.text-link{padding-left:15px}
 
 .form-group input[type="text"][readonly]{background-color: #ddd; cursor: not-allowed;}
 .refund-modal .modal__body, .account-modal .modal__body, .receipt1-modal .modal__body, .receipt2-modal .modal__body{padding: 15px 15px 40px;}
-.refund-modal .modal__body form, .account-modal .modal__body form, .receipt1-modal .modal__body form, .receipt2-modal .modal__body form{width: 100%; padding: 0 12px;}
+.refund-modal .modal__body form, .account-modal .modal__body form, .receipt1-modal .modal__body form, .receipt2-modal .modal__body form, .login-modal .modal__body form{width: 100%;}
 .withdrawal-modal .modal__body{padding: 15px 15px 40px; text-align: left;}
 .withdrawal-modal form{width: 100%;}
 .withdrawal_list{list-style: none; padding: 0; margin-bottom: 15px;}
@@ -538,6 +562,7 @@ li > a.navlist__link.text-link{padding-left:15px}
 .mypage-modal__button-wrapper{margin: 0 12px;}
 .mypage-modal__button-wrapper .button{margin-bottom: 10px;}
 .mypage-modal__button-wrapper .button:last-of-type{margin-bottom: 0;}
+.text-link+.text-link{margin-left: 15px;}
 /* //마이페이지 - 회원정보변경 */
 
 figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
