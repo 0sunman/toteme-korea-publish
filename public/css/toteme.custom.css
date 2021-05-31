@@ -125,7 +125,7 @@ input.button--block:hover.small_button { width:auto;  }
 input.button--block.agreement.button-padding-52 {width:54px; }
 
 
-.progressbar{width:100%;padding: 15px 90px;;margin: 0 auto;font-size: 0px;letter-spacing: -1px;}
+.progressbar{width:100%;margin: 0 auto;font-size: 0px;letter-spacing: -1px;max-width: 465px;}
 .progressbar .line{background: black;height:1px;width: 99%;top:8px;position: relative;z-index: -1; margin: 0 auto;}
 .progressbar .circle{display: inline-block; width:15px;height:15px;border-radius: 50%;background: white;border:1px solid #171616;}
 .progressbar ul{list-style-type: none;}
@@ -496,17 +496,6 @@ li > a.navlist__link.text-link{padding-left:15px}
 .privacy_agreement .modal__body{ margin-bottom:30px; }
 /* // 4번 개인정보보호 */
 
-/* 5번 패스워드 찾기 */
-.findpassword .input-table.two-cols{ width:70%; margin:0 auto; margin-bottom:10px; }
-.findpassword .input-table.two-cols input{ font-size: 13px !important; }
-.findpassword .input-table.two-cols input[type='button']{ width:100px; }
-.findpassword .text-block.time{ margin-bottom: 10px; }
-.findpassword .text-block.time p{ width: 70%; margin:0 auto; font-size:13px !important}
-.findpassword .text-block li{ font-size: 13px !important; }
-.findpassword .text-block li::marker{font-size: 1px;}
-.findpassword.findpassword_complete .text{ text-align: center; margin-bottom: 30px;}
-.findpassword.email_send table{width:100%; margin:15px;}
-/* // 5번 패스워드 찾기 */
 
 
 /* 마이페이지 - 회원정보변경 */
@@ -603,14 +592,21 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 */
 
 /* 1. 버튼 공통 */
-.table-block {display:table}
+.table-block {display:table; max-width:500px;}
+.table-block > div {display: table-cell;}
 .input-block, .button-block{text-align: center;}
 .input-block input[type=email], .input-block input[type=text], .input-block input[type=password], 
 .button-block input[type=submit], .button-block input[type=button]{max-width:500px}
+.template-account__navlist .template-account__navlist--content{ max-width: 500px; margin: 0 auto;}
+.login_join .section{ display: block; margin:20px 52px; padding-top:0px; padding-bottom:0px;}
+.login_join form div{ margin-bottom: 10px;}
+.login_join .progress.section{margin:20px 69px;}
 /* // 1. 버튼 공통 */
 
 /* 2. 하단 설명 */
-.input-block.sub-description p, .text-block.sub-description p{max-width: 500px; margin: 0 auto; text-align: left;}
+.input-block.sub-description p, .text-block.sub-description p, .text-block.sub-description ul{max-width: 500px; margin: 0 auto; margin-bottom:10px; text-align: left;}
+.text-block.sub-description ul{padding:0}
+.text-block.sub-description ul li {list-style-type: '-'; padding-left: 10px;}
 /* 2. 하단 설명 공통 */
 
 /* 3. 라인 */
@@ -623,12 +619,14 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 /* // 공통*/
 
 /* 2-1-0 로그인 & 회원가입 페이지 1 */
+.login_join.login_page .newline.only_mo{margin-bottom: 0px;}
 .login_join.login_page .idoremail.input-block{margin-bottom:10px;}
 .login_join.login_page .sns-block.input-block{margin-top:30px; margin-bottom:15px;}   
 .login_join.login_page .content-line.line-block{margin-top:30px; margin-bottom:20px;}
 .login_join.login_page .idoremail.input-block input, .login_join.login_page .idoremail.input-block label, 
 .login_join.login_page .password.input-block input, .login_join.login_page .password.input-block label, 
 .login_join.login_page .login.button-block, .login_join.login_page .div-block.sub-description{font-size:14px}
+.login_join.login_page .defaultblock.sns-buttons{margin-top:30px;}
 /* 아이디 입력창, 비밀번호 입력창, 로그인버튼, 하단 설명 */
 @media (min-width:768px){      
     .login_join.login_page .content-line.line-block, 
@@ -663,10 +661,89 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 
 
 /* 2-1-3 로그인 & 회원가입 아이디 체크 */   
+.login_join.join_page .title.text-block{max-width:500px; margin:0 auto; margin-bottom:30px;}
 .login_join.join_page .joinInfoHeader.text-block{margin:15px; margin-bottom:30px}
 .login_join.join_page .idorpasswordCheck.table-block{max-width: 500px; margin: 0 auto;}
 .login_join.join_page .idorpasswordCheck.table-block > div:nth-child(1){width:70%; }
 .login_join.join_page .idorpasswordCheck.table-block > div:nth-child(2){width:30%; }
+.login_join.join_page .button-join{margin-top:30px}
 @media (min-width:768px){      
 }
 /* // 2-1-3 로그인 & 회원가입 아이디 체크 */   
+
+/* 2-1-3 로그인 & 회원가입 이메일 선택 */   
+.login_join.select_email .sns-buttons.label-block{ margin-top:15px; margin-bottom: 15px;}
+.login_join.select_email div.sns-buttons + .content-line.line-block{margin-top:0px}
+.login_join.select_email .defaultblock{margin:15px;}
+.login_join.select_email .inputEmail.table-block { width:80%; margin:0 auto; }
+.login_join.select_email .inputEmail.table-block > div:nth-child(1){width:60%; }
+.login_join.select_email .inputEmail.table-block > div:nth-child(2){width:40%; }
+.login_join.select_email .inputEmail.table-block > div:nth-child(2) .select-wrap{width:100%; margin-left:7px }
+.login_join.select_email div.defaultblock.email + .description.text-block{margin-top:15px; margin-right:15px; margin-bottom:30px; margin-left:15px; }
+@media (min-width:768px){      
+}
+/* // 2-1-4 로그인 & 회원가입 이메일 선택 */   
+
+
+/* 2-1-4 로그인 & 회원가입 개인정보보호정책 선택 */   
+.login_join.privacy_table .title{ margin-top:20px; margin-bottom:15px; }
+.login_join.privacy_table .title h2{ font-size: 15px;}
+.login_join.privacy_table .progress + .content-line.line-block{margin-top:20px;}
+.login_join.privacy_table .contentblock{ margin-top:20px; margin-bottom:15px;}
+.login_join.privacy_table .description{ margin-top:15px; margin-bottom:15px;}
+.login_join.privacy_table .description.top30{ margin-top:30px; }
+.login_join.privacy_table .description.top30.agree{ margin-top:30px; }
+@media (min-width:768px){      
+}
+/* // 2-1-4 로그인 & 회원가입 개인정보보호정책 선택 */   
+
+/* 5번 패스워드 찾기 */
+.text-block.sub-description, .table-block{ margin:0 auto}
+.login_join.findpassword{}
+.login_join.findpassword .table-block { max-width:500px;}
+.login_join.findpassword .text-block { max-width:500px;}
+.login_join.findpassword .table-block > div:nth-child(1){width:calc(100% - 120px); }
+.login_join.findpassword .table-block > div:nth-child(2){width:120px; }
+.login_join.findpassword .content-line.line-block + .sub-description { margin-bottom:10px;}
+.login_join.findpassword div.table-block.input-table{margin-bottom: 10px;}
+ 
+.login_join.findpassword .text-block.time{ margin-bottom: 10px; }
+.login_join.findpassword .text-block.time p{ font-size:13px !important}
+.login_join.findpassword .text-block li{ font-size: 13px !important; }
+.login_join.findpassword .text-block li::marker{font-size: 1px;}
+.login_join.findpassword.findpassword_complete .text{ text-align: center; margin-bottom: 30px;}
+.login_join.findpassword.email_send table{width:100%; margin:15px;}
+.login_join.findpassword .birthday + .sub-description{margin-bottom:10px; padding:0px;}
+/* // 5번 패스워드 찾기 */
+
+
+.login_join.findpassword_complete .text-complete{ max-width: 500px; margin:0 auto; margin-bottom: 10px; }
+.login_join.findpassword_complete .text-complete p{ font-size: 15px; text-align: center; }
+
+
+.login_join.modifypassword{}
+
+/* 5-3 새로운 패스워드 */
+.login_join.newpassword .password-modify-header{ max-width:500px; margin: 0 auto; margin-top: 15px; }
+.login_join.newpassword .password-modify-header h2{ font-size: 15px;}
+/* // 5-3 새로운 패스워드 */
+
+
+.login_join.email_send .title p{  max-width: 500px; margin:0 auto; margin-top:20px;  margin-bottom:30px; }  
+.login_join.email_send .information-table{max-width: 500px; margin:0 auto;}
+.login_join.email_send form{ margin:30px 0px;}
+.login_join.email_send form.form-group__field{ margin-bottom: 10px;}
+
+.login_join.email_confirm_and_resend .title{ max-width: 500px; margin-top:15px; margin-bottom:15px; }
+.login_join.email_confirm_and_resend .title h2{ font-size:15px;}
+
+.login_join.findpassword_withphone .birthday + .sub-description{ margin-bottom:10px;}
+
+
+/* 수정해도되나 */
+/* // 수정해도 되나*/
+
+
+/* 
+  //  2-0-0 로그인 & 회원가입 공통 (끝)
+ */

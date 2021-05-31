@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container login_join email_send">
    <div class="template-account__header">
       회원가입
    </div>
@@ -13,68 +13,43 @@
                   안내문구 출력 영역
                </div>
             </div>
-            <div class="text-block left-m15 top-m15 bottom-m30 left-d15 top-d15 bottom-d30">
-               <p>비밀번호를 재설정하기 위하여 하단의 다음을 선택하여 주세요. 사용하시던 비밀번호는 개인정보보안상 확인이 불가하오니 새로운 비밀번호를 설정해주세요.</p>
-            </div>
+            <div class='section'>
 
-            <div>
-               <table>
-                  <tr>
-                     <td>아이디</td>
-                     <td>thehyundai</td>
-                  </tr>
-                  <tr>
-                     <td>이름</td>
-                     <td>박현대</td>
-                  </tr>
-                  <tr>
-                     <td>생년월일</td>
-                     <td>2001-01-09</td>
-                  </tr>
-               </table>
-            </div>
-            <div class="template-login__form-wrapper" js-password-form="customerLoginForm">
-               <div class="template-login__form">
-                  <form method="post" action="/account/login" id="customer_login" accept-charset="UTF-8">
-                     <input type="hidden" name="form_type" value="customer_login"><input type="hidden" name="utf8" value="✓">
-                     <div class="form-group">
-                        
-                       <div class="form-group__field">
-                        <input class="button button--primary button--block button--large m-font-14" type="submit" value="인증메일 재발송">
-                      </div>
-                       <div class="form-group__field">
-                        <input class="button button--primary button--block button--large m-font-14" type="submit" value="확인">
-                      </div>
-
-                     </div>
-                  </form>
+               <div class="text-block title">
+                  <p>비밀번호를 재설정하기 위하여 하단의 다음을 선택하여 주세요. 사용하시던 비밀번호는 개인정보보안상 확인이 불가하오니 새로운 비밀번호를 설정해주세요.</p>
+               </div>
+   
+               <div class='text-block information-table'>
+                  <table>
+                     <tr>
+                        <td>아이디</td>
+                        <td>thehyundai</td>
+                     </tr>
+                     <tr>
+                        <td>이름</td>
+                        <td>박현대</td>
+                     </tr>
+                     <tr>
+                        <td>생년월일</td>
+                        <td>2001-01-09</td>
+                     </tr>
+                  </table>
                </div>
 
-            </div>
-            <div class="template-login__form-wrapper is-hidden" js-password-form="recoverPasswordForm">
-               <div class="template-login__form">
-                  <form method="post" action="/account/recover" accept-charset="UTF-8">
-                     <input type="hidden" name="form_type" value="recover_customer_password"><input type="hidden" name="utf8" value="✓">
-                     <div class="form-errors">
+               <form method="post">
+                  <input type="hidden" name="form_type" value="customer_login"><input type="hidden" name="utf8" value="✓">
+                  <div class="form-group">
+                     
+                     <div class="button-block confirmEmail">
+                        <input class="button button--primary button--block button--large" type="submit" value="인증메일 재발송">
                      </div>
-                     <div class="form-group">
-                        <div class="form-group__field">
-                           <label for="RecoverEmail" class="form-group__label subtitle-2 is-hidden">
-                              ID 또는 이메일
-                           </label>
-                           <input id="RecoverEmail" autocapitalize="off" autocomplete="off" name="email" placeholder="Email" required="" spellcheck="false" tabindex="-1" type="email">
-                        </div>
-                        <div class="form-group__footer">
-                           <input class="button button--primary button--block button--large" disabled="true" tabindex="-1" type="submit" value="Reset password">
-                        </div>
+                     <div class="button-block confirm">
+                        <input class="button button--primary button--block button--large " type="submit" value="확인">
                      </div>
-                     <div class="template-account__footer">
-                        <div class="rte">
-                           Forgot your password? Enter your username or email address and you’ll receive an email to change it.
-                        </div>
-                     </div>
-                  </form>
-               </div>
+
+                  </div>
+               </form>
+   
             </div>
 
 

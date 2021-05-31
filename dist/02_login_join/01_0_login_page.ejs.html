@@ -1023,29 +1023,27 @@
                    안내문구 출력 영역
                 </div>
              </div>
-             <div class="template-login__form-wrapper" js-password-form="customerLoginForm">
-                <div class="template-login__form">
-                   <form method="post" action="/account/login" id="customer_login" accept-charset="UTF-8">
-                      <input type="hidden" name="form_type" value="customer_login"><input type="hidden" name="utf8" value="✓">
-                      <div class="form-group">
-                         <div class="form-group__field idoremail label-block input-block">
-                            <label class="form-group__label subtitle-2 is-hidden" for="CustomerEmail">
-                            ID 또는 이메일
-                            </label>
-                            <input id="CustomerEmail" autocapitalize="off" autocomplete="off" autofocus="" name="customer[email]" placeholder="ID 또는 이메일" required="" spellcheck="false" type="email">
-                         </div>
-                         <div class="form-group__field password label-block input-block">
-                            <label class="form-group__label subtitle-2 is-hidden" for="CustomerPassword">
-                            비밀번호
-                            </label>
-                            <input id="CustomerPassword" name="customer[password]" placeholder="비밀번호" required="" type="password">
-                         </div>
+             <div class="section">
+                   <form method="post">
+                        <input type="hidden" name="form_type" value="customer_login"><input type="hidden" name="utf8" value="✓">
+                        <div class="idoremail label-block input-block">
+                           <label class="form-group__label subtitle-2 is-hidden" for="customerId">
+                           ID 또는 이메일
+                           </label>
+                           <input id="customerId" autocapitalize="off" autocomplete="off" autofocus="" name="customer[id]" placeholder="ID 또는 이메일" required="" spellcheck="false" type="email">
+                        </div>
+                        <div class="password label-block input-block">
+                           <label class="form-group__label subtitle-2 is-hidden" for="CustomerPassword">
+                           비밀번호
+                           </label>
+                           <input id="CustomerPassword" name="customer[password]" placeholder="비밀번호" required="" type="password">
+                        </div>
 
-                         <div class="form-group__field login button-block">
-                            <input class="button button--primary button--block button--large" disabled="true" type="submit" value="로그인">
-                          </div>
+                        <div class="login button-block">
+                           <input class="button button--primary button--block button--large" type="submit" value="로그인">
+                        </div>
 
-                         <div class='defaultblock sns-buttons label-block input-block'>
+                        <div class='defaultblock sns-buttons label-block input-block'>
                            <label class='radiobutton naver'>
                               <input type="radio" name="test_radio" value="옵션1" checked/>
                               <span>네이버</span>
@@ -1065,20 +1063,18 @@
                            </label>
          
                         </div>
-                      </div>
                    </form>
-                </div>
 
-               <div class='line-block content-line'>
-               </div>
-
-                <div class="template-account__text_hdtype_1 no-margin no-padding m-font-14 div-block sub-description">
-                   <div class="rte">
-                      Toteme 온라인스토어에는 더현대닷컴이 운영 제공하는 사이트로 기존 회원은 더현대닷컴 아이디와 비밀번호로 바로 이용 가능합니다.
-                   </div>
-                </div>
              </div>
 
+             <div class='line-block content-line'>
+            </div>
+
+             <div class="section">
+                <div class="rte">
+                   Toteme 온라인스토어에는 더현대닷컴이 운영 제공하는 사이트로 기존 회원은 더현대닷컴 아이디와 비밀번호로 바로 이용 가능합니다.
+                </div>
+             </div>
           </div>
        </div>
     </div>
