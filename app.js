@@ -32,7 +32,7 @@ app.use(livereloadMiddleware());
 
 
 const pageData = [
-  {"type":"index","title":"퍼블리스트","url" : "/publist", "pageurl" : "list.ejs", "isMain":true},
+  {"type":"index","title":"퍼블리스트","url" : "/00_main/0", "pageurl" : "00_main/list.ejs", "isMain":true},
   {"type":"main","title":"Main","url" : "/00_main/1", "pageurl" : "00_main/index.ejs"},
   {"type":"main","title":"Main2","url" : "/00_main/11", "pageurl" : "00_main/index2.ejs"},
   {"type":"main","title":"Guidelines for Input (error,commit..etc)","url" : "/00_main/2", "pageurl" : "00_main/inputguide.ejs"},
@@ -118,8 +118,9 @@ pageData.forEach((data)=>{
     res.render('./index',{targetPath : pageurl, pageList : pageData},(err,html) => {
       console.log(pageurl);
       if(isMain){
-        console.log("isMain",__dirname + "/index.html");
-        fs.writeFileSync(__dirname + "/index.html",html)
+      //  console.log("isMain",__dirname + "/index.html");
+      //  fs.writeFileSync(__dirname + "/index.html",html)
+        fs.writeFileSync(__dirname + "/dist/"+ pageurl+".html",html)
       }else{
         fs.writeFileSync(__dirname + "/dist/"+ pageurl+".html",html)
 

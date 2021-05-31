@@ -2,7 +2,6 @@
 p.gnbcheck{text-align: center; margin-top: 30px;}
 .publishlist{padding:50px;padding-top:0px;}
 </style>
-<link href="../css/toteme.custom.css" rel="stylesheet">
     <p class='gnbcheck'>*You can check GNB Above*</p>
     <div class='publishlist'>   
        <h2>Main</h2>
@@ -10,7 +9,7 @@ p.gnbcheck{text-align: center; margin-top: 30px;}
             <% pageList.forEach(function(data){ 
                 if(data.type == "main"){ %>
             <li>
-                <a href='https://0sunman.github.io/toteme-korea-publish/dist/<%= data.pageurl %>.html'><%= data.title %></a>
+                <a href='../<%= data.pageurl %>.html'><%= data.title %></a>
             </li>
             <%}}) %> 
         </ul>
@@ -20,7 +19,7 @@ p.gnbcheck{text-align: center; margin-top: 30px;}
             <% pageList.forEach(function(data){ 
                 if(data.type == "mypage"){ %>
             <li>
-                <a href='https://0sunman.github.io/toteme-korea-publish/dist/<%= data.pageurl %>.html'><%= data.title %></a>
+                <a href='../<%= data.pageurl %>.html'><%= data.title %></a>
             </li>
             <%}}) %> 
         </ul>
@@ -30,7 +29,7 @@ p.gnbcheck{text-align: center; margin-top: 30px;}
             <% pageList.forEach(function(data){ 
                 if(data.type == "join"){ %>
             <li>
-                <a href='https://0sunman.github.io/toteme-korea-publish/dist/<%= data.pageurl %>.html'><%= data.title %></a>
+                <a href='../<%= data.pageurl %>.html'><%= data.title %></a>
             </li>
             <%}}) %> 
         </ul>
@@ -40,7 +39,7 @@ p.gnbcheck{text-align: center; margin-top: 30px;}
             <% pageList.forEach(function(data){ 
                 if(data.type == "product"){ %>
             <li>
-                <a href='https://0sunman.github.io/toteme-korea-publish/dist/<%= data.pageurl %>.html'><%= data.title %></a>
+                <a href='../<%= data.pageurl %>.html'><%= data.title %></a>
             </li>
             <%}}) %> 
         </ul>
@@ -51,7 +50,7 @@ p.gnbcheck{text-align: center; margin-top: 30px;}
             <% pageList.forEach(function(data){ 
                 if(data.type == "order"){ %>
             <li>
-                <a href='https://0sunman.github.io/toteme-korea-publish/dist/<%= data.pageurl %>.html'><%= data.title %></a>
+                <a href='../<%= data.pageurl %>.html'><%= data.title %></a>
             </li>
             <%}}) %> 
         </ul>
@@ -61,7 +60,7 @@ p.gnbcheck{text-align: center; margin-top: 30px;}
             <% pageList.forEach(function(data){ 
                 if(data.type == "page"){ %>
             <li>
-                <a href='https://0sunman.github.io/toteme-korea-publish/dist/<%= data.pageurl %>.html'><%= data.title %></a>
+                <a href='../<%= data.pageurl %>.html'><%= data.title %></a>
             </li>
             <%}}) %> 
         </ul>
