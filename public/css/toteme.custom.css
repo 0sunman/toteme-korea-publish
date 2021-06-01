@@ -302,7 +302,7 @@ body.overflow-hidden {overflow: hidden;}
 .phone_addr .button{width: calc(100% - 7px); min-height: 34px; margin-left: 7px;}
 .product-table:not(.stock-problem-table) .product__quantity .visually-hidden, .checkout .order-summary__section--discount .field__input-btn .visually-hidden-on-mobile{overflow: visible;}
 .discount-trigger{display: block; max-width: 500px; margin: 0 auto; padding-left: 0; padding-right: 0;}
-.checkout .order-summary__section--discount{text-align: center; padding-left: 37px; padding-right: 37px;}
+.checkout .order-summary__section--discount{text-align: center; padding-left: 52px; padding-right: 52px;}
 .deposit_attr_box{display: table; width: 100%; font-size: 15px; text-align: left;}
 .deposit_attr_box>div{display: table-cell;}
 .deposit_attr_box>div:last-child{text-align: right;}
@@ -416,18 +416,18 @@ body.overflow-hidden {overflow: hidden;}
 
 .checkout .review-block.review-block{padding: 0;}
 .checkout .checkbox__label, .checkout .field__message, .checkout .reduction-code__text, .checkout .review-block, .checkout .review-block__link, .checkout .section__header p, .checkout__breadcrumbs, .checkout__breadcrumbs .breadcrumb__item, .page--thank-you .checkout .os-step__description, .text-xsmall{ font-size: 13px; line-height: 17px;}
-.checkout .step__footer.btn_padding{display: block; text-align: center; padding-left: 37px; padding-right: 37px; margin: 0;}
+.checkout .step__footer.btn_padding{display: block; text-align: center; padding-left: 52px; padding-right: 52px; margin: 0;}
 .checkout .step__footer.btn_padding .btn{max-width: 500px; float: none;}
 @media screen and (max-width: 767px){
     .checkout .step__footer.btn_padding{padding: 0 52px;}
     .checkout .step__footer.btn_padding .btn{max-width: 426px;}
 }
 .checkout .order-summary__section--discount .edit_checkout{padding: 0;}
-.checkout .section.section--contact-information>.section__content, .checkout .section.section--shipping-address>.section__content{padding: 10px 15px;}
+.checkout .section.section--contact-information>.section__content, .checkout .section.section--shipping-address>.section__content{padding: 10px 37px;}
 .checkout .section.section--shipping-address .section__header{margin-bottom: 0;}
 .content-box__row.non_member_info{padding-left: 15px; padding-right: 15px;}
 .checkout .section.section--payment-method .payment_type.sns-buttons{padding-top: 15px; padding-bottom: 20px;}
-.checkout__content .step__footer{padding: 0 22px;}
+.checkout__content .step__footer{padding: 0 37px;}
 .checkout .dot_list{padding: 0;}
 .checkout .form_padding+.dot_list{padding: 0 22px;}
 /* //주문 */
@@ -502,7 +502,7 @@ li > a.navlist__link.text-link{padding-left:15px}
 .template-mypage__form-wrapper ul, .template-mypage__form-wrapper li{list-style: none; padding: 0;}
 .template-mypage__form{padding: 20px 15px;}
 .template-mypage__form+.template-mypage__form{border-top: 1px solid #171616;}
-#MainContent .form_padding{max-width: 544px; margin-left: auto; margin-right: auto; padding-right: 22px; padding-left: 22px;}
+#MainContent .form_padding{max-width: 574px; margin-left: auto; margin-right: auto; padding-right: 37px; padding-left: 37px;}
 @media screen and (max-width: 767px){
     /* #MainContent .form_padding{padding: 0 37px;} */
     #MainContent .field__input-btn-wrapper.form_padding{padding: 0;}
