@@ -747,3 +747,6 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 /* 
   //  2-0-0 로그인 & 회원가입 공통 (끝)
  */
+
+ /* 검색 input edit */
+ .search-bar__input[type=search]{height: auto;}
