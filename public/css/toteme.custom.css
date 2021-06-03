@@ -529,6 +529,7 @@ li > a.navlist__link.text-link{padding-left:15px}
 
 /* 마이페이지 - 비밀번호 변경 */
 .template-mypage__form-wrapper .mypage_toggle_menu{margin: 30px 15px; border-bottom: 1px solid #171616;}
+.template-mypage__form-wrapper p{word-break: keep-all;}
 .mypage_toggle_menu>li{border-top: 1px solid #171616;}
 .mypage_toggle_menu .toggle_tit{display: block; width: 100%; padding: 15px 40px 15px 0; text-align: left; position: relative;}
 .mypage_toggle_menu .toggle_tit:before{content: ''; display: block; width: 22px; height: 22px; border: 1px solid #171616; border-radius: 50%; position: absolute; top: 50%; right: 15px; transform: translateY(-50%);}
