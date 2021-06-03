@@ -318,7 +318,7 @@ body.overflow-hidden {overflow: hidden;}
 .checkout .modal{background: transparent; box-shadow: unset;}
 .checkout .modal .modal__header{display: flex;}
 .checkout .modal .modal__body{justify-content: normal;}
-.address-modal .address_modal_container{width: 100%; max-width: 600px;}
+.address-modal .address_modal_container{width: 100%; max-width: 500px;}
 .address-modal .btn{float: none;}
 .address-modal .comment{text-align: left; font-size: 13px; line-height: 17px; margin-top: 0.5714285714em;}
 .address_find_content .input-table>div{width: 50%;}
@@ -499,6 +499,7 @@ li > a.navlist__link.text-link{padding-left:15px}
 
 
 /* 마이페이지 - 회원정보변경 */
+.template-mypage__form-wrapper{margin-bottom: 30px;}
 .template-mypage__form-wrapper ul, .template-mypage__form-wrapper li{list-style: none; padding: 0;}
 .template-mypage__form{padding: 20px 15px;}
 .template-mypage__form+.template-mypage__form{border-top: 1px solid #171616;}
