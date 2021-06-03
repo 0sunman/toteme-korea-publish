@@ -355,6 +355,9 @@ body.overflow-hidden {overflow: hidden;}
 /* 결제 */
 .breadcrumb__item--completed .breadcrumb__link{color: #171616;}
 .checkout .comment{font-size: 13px; line-height: 17px;}
+.checkout .btn{max-width: 500px; float: none;}
+.checkout .btn:hover{margin-left: 0; margin-right: 0;}
+.checkout__content .step__footer__previous-link{display: block;}
 .payment_guaranty{font-size: 15px;}
 .a_link{display: inline-block; position: relative;}
 .a_link:after{content: ''; width: 100%; height: 1px; background: #171616; position: absolute; bottom: 0; left: 0;}
