@@ -356,7 +356,7 @@ body.overflow-hidden {overflow: hidden;}
 .breadcrumb__item--completed .breadcrumb__link{color: #171616;}
 .checkout .comment{font-size: 13px; line-height: 17px;}
 .checkout .btn{max-width: 500px; float: none;}
-.checkout .btn:hover{margin-left: 0; margin-right: 0;}
+.checkout .btn:hover{margin-left: 0; margin-right: 0; width: 100%;}
 .checkout__content .step__footer__previous-link{display: block;}
 .payment_guaranty{font-size: 15px;}
 .a_link{display: inline-block; position: relative;}
@@ -426,7 +426,7 @@ body.overflow-hidden {overflow: hidden;}
     .checkout .step__footer.btn_padding .btn{max-width: 426px;}
 }
 .checkout .order-summary__section--discount .edit_checkout{padding: 0;}
-.checkout .section.section--contact-information>.section__content, .checkout .section.section--shipping-address>.section__content{padding: 10px 37px;}
+.checkout .section.section--contact-information>.section__content, .checkout .section.section--shipping-address>.section__content{padding: 10px 15px;}
 .checkout .section.section--shipping-address .section__header{margin-bottom: 0;}
 .content-box__row.non_member_info{padding-left: 15px; padding-right: 15px;}
 .checkout .section.section--payment-method .payment_type.sns-buttons{padding-top: 15px; padding-bottom: 20px;}
