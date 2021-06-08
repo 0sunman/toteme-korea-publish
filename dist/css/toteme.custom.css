@@ -433,6 +433,9 @@ body.overflow-hidden {overflow: hidden;}
 .checkout__content .step__footer{padding: 0 37px;}
 .checkout .dot_list{padding: 0;}
 .checkout .form_padding+.dot_list{padding: 0 22px;}
+
+.section--order-summary .section__content{padding: 10px 15px;}
+.section--order-summary:first-of-type .section__content{padding:0;}
 /* //주문 */
 
 
