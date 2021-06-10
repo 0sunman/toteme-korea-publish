@@ -315,7 +315,7 @@ body.overflow-hidden {overflow: hidden;}
 .direct_input{display: none;}
 .direct_input.active{display: block;}
 /* 주문-주소모달 */
-.checkout .modal{background: transparent; box-shadow: unset;}
+.modal{background: transparent; box-shadow: unset;}
 .checkout .modal .modal__header{display: flex;}
 .checkout .modal .modal__body{justify-content: normal;}
 .address-modal .address_modal_container{width: 100%; max-width: 500px;}
