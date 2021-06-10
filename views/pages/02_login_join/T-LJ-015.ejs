@@ -1,0 +1,192 @@
+<div class="container login_join simple_auth">
+	<div class="template-account__header">회원가입</div>
+	<div class="template-account__wrapper join_page">
+		<div class="template-account__left"></div>
+      <%- include ("./menu/index.ejs",{state:2}) %>
+
+
+			<div class="template-account__content">
+            <div class="template-account__text_hdtype_1 alert" style='display: none;'>
+               <div class="rte">안내문구 출력 영역</div>
+            </div>
+            <div class="section" js-password-form="customerLoginForm">
+               <div class='text-block align-center'>
+                  <h2>회원가입</h2>
+               </div>
+            </div>
+            <div class="progress section">
+               <div class='progressbar'>
+                  <div class='line'></div>
+                  <ul>
+                     <li class='active'>
+                        <p> <span class='circle'></span>
+                           <br> <span class='text'>간편인증</span> 
+                        </p>
+                     </li>
+                     <li>
+                        <p> <span class='circle'></span>
+                           <br> <span class='text'>가입정보 입력</span> 
+                        </p>
+                     </li>
+                     <li>
+                        <p> <span class='circle'></span>
+                           <br> <span class='text'>개인정보 동의</span> 
+                        </p>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class='line-block content-line'></div>
+            <div class='section text'>
+               <div class='text-block auth-title'>
+                  <h2>인증 방식 선택</h2>
+                  <p>Totême 온라인 스토어는 더현대닷컴이 운영 제공하는 사이트로 기존 회원은 더현대닷컴 아이디와 비밀번호로 바로 이용 가능합니다.</p>
+               </div>
+            </div>
+            <div class='defaultblock sns-buttons label-block '>
+               <label class='radiobutton kakao'>
+                  <input type="radio" name="radio_auth" value="kakao"/>
+                  <span>카카오톡</span>
+               </label>
+               <label class='radiobutton email' style='clear:both'>
+                  <input type="radio" name="radio_auth" value="email"/>
+                  <span>이메일</span>
+               </label>
+               <div class='newline'></div>
+               <label class='radiobutton google'>
+                  <input type="radio" name="radio_auth" value="google"/>
+                  <span>구글</span>
+               </label>
+               <label class='radiobutton facebook'>
+                  <input type="radio" name="radio_auth" value="facebook"/>
+                  <span>페이스북</span>
+               </label>
+               <label class='radiobutton cellphone'>
+                  <input type="radio" name="radio_auth" value="phone"/>
+                  <span>휴대폰 인증</span>
+               </label>
+
+            </div>
+
+            
+            <div class='line-block content-line'>
+            </div>
+
+            
+            <!-- 이메일 인증 -->
+            <div class='tab auth-mail'>
+               <div class='section'>
+               
+                  <div class='defaultblock email align-center'>
+   
+                     <div class="inputEmail table-block">
+                        <div>
+                           <input style='display: inline-block;' autocapitalize="off" autocomplete="off" autofocus="" placeholder="이메일" required="" spellcheck="false" type="email">
+                        </div>
+                        <div>
+                           <div class='select-wrap'>
+   
+                              <select  class="toteme-select-style toteme-button-style" >
+                                 <option value="AF">naver.com</option>
+                                 <option value="AX">gmail.com</option>
+                                 <option value="AX">직접입력</option>
+                              </select>
+                              </div>
+      
+                        </div>
+                     </div>
+                  </div>
+               </div>
+   
+   
+               
+               <div class='section text'>
+                  <div class='text-block description emailInfo'>
+                     <div class='step1'>
+                        <p>
+                           이메일을 인증을 위한 이메일 주소 수집/이용에 동의하십니까? <br>동의에 거부할 권리나 의사가 있으나,
+                           거부시 회원가입이 진행되지 않습니다. 수집한 개인정보는 인증 완료 시까지 보관합니다.
+                        </p>
+                     </div>
+                     
+                     <div class='step2'>
+                        <p>
+                           hyundaipark@thehyundai.com 으로 이메일이 발송되었습니다.<br>
+                           인증이 유효한 1시간 내에 이메일 내용 중 이메일 인증 버튼을 클릭하여 주세요.
+                        </p>
+                     </div>
+                     
+                     <div class='step3'>
+                        <p class='resend'>
+                           hyundaipark@thehyundai.com 으로 이메일이 재발송되었습니다.<br>
+                           인증이 유효한 1시간 내에 이메일 내용 중 이메일 인증 버튼을 클릭하여 주세요.
+                        </p>
+                        <p class='fail'>
+                           이메일 인증이 완료되지 않았습니다.<br>
+                           이메일이 도착하지 않았다면 재발송을 시도해주세요.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div class='section confirm_button'>
+                  <div class='step1'>
+                     <div class='button-block align-center agree-button'>
+                        <input class="toteme-button-style button big " type="button" value="동의하고 인증하기"/>
+                     </div>   
+                  </div>
+                  
+                  <div class='step2'>               
+                     <div class='button-block align-center resend-button'>
+                        <input class="toteme-button-style button big" type="button" value="인증메일 재발송"/>
+                     </div>
+
+                     <div class='button-block align-center email-complete-button'>
+                        <input class="toteme-button-style button big" type="button" value="인증완료"/>
+                     </div>
+                  </div>
+                  
+                     
+
+               </div>
+            </div>
+            <!-- 이메일 인증 -->
+
+            <!-- 휴대폰 인증 -->
+            <div class='tab auth-phone'>
+               <div class="section">
+                  <div class="table-block input-table">
+                     <div>
+                        <input id="CustomerPassword" name="customer[password]" placeholder="휴대폰번호 입력" required="" type="text">
+                     </div>
+                     <div>
+                        <input type="button" class="button duplicatebtn" value="인증번호 받기">
+                     </div>
+                  </div>
+                  <div class="table-block input-table">
+                     <div>
+                        <input id="CustomerPassword" name="customer[password]" placeholder="인증번호 입력" required="" type="text">
+                     </div>
+                     <div>
+                        <input type="button" class="button duplicatebtn" value="휴대폰 인증">
+                     </div>
+                  </div>
+                  <div class="text-block sub-description">
+                     <p class='time'>유효시간 <span class='hour'>03</span>:<span class='second'>00</span></p>
+                     <p class='error'>인증번호가 정확하지 않습니다. 다시 확인해주세요.</p>
+                  </div>
+                  <div class="text section">
+                     <div class="text-block infolist">
+                        <ul>
+                           <li>휴대폰으로 발송된 인증번호를 유효시간 내에 입력해주시고, 인증번호가 도착하지 않을 시 재발송을 해주세요.</li>
+                           <li>입력한 휴대폰번호는 보안 시스템을 통해 안전하게 관리됩니다.</li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- // 휴대폰 인증 -->
+            
+			</div>
+
+	</div>
+</div>

@@ -957,15 +957,12 @@
       <main id="MainContent" class="main-content critical-clear">
          <!-- BEGIN content_for_index -->
          <!--  include ("./pages/00_main/index.ejs") BEGIN content_for_index -->
-         <div class="container login_join select_email">
+         
+<div class="container login_join newpassword complete">
    <div class="template-account__header">
       회원가입
    </div>
-   <div class="template-account__wrapper select_email">
-
-
-
-
+   <div class="template-account__wrapper findpassword newpassword">
       <div class="template-account__left"></div>
       <div class="template-account__navlist ">
     <div class="template-account__navlist--content">
@@ -1014,95 +1011,43 @@
  
    <script>
       setTimeout(function(){
-         $(".main-title.custom-select__label").text("회원가입");
-         $("a[href='/account/register']").addClass("is-active");
+         $(".main-title.custom-select__label").text("아이디 찾기");
+         $("a[href='/account/login#reactivate']").addClass("is-active");
       },100)
       </script>
    
       <div class="template-account__content">
          <div class="template-login__content">
 
-            <div class="template-account__text_hdtype_1 alert" style='display:none;'>
+            <div class="template-account__text_hdtype_1 alert" style='display:none'>
                <div class="rte">
                   안내문구 출력 영역
                </div>
             </div>
-            <div class=" template-login__form-wrapper" js-password-form="customerLoginForm">
-
-               <div class='defaultblock sns-buttons label-block '>
-                  <label class='radiobutton kakao'>
-                     <input type="radio" name="test_radio" value="옵션1" checked/>
-                     <span>카카오톡</span>
-                  </label>
-                  <label class='radiobutton email' style='clear:both'>
-                     <input type="radio" name="test_radio" value="옵션1"/>
-                     <span>이메일</span>
-                  </label>
-                  <div class='newline'></div>
-                  <label class='radiobutton google'>
-                     <input type="radio" name="test_radio" value="옵션1"/>
-                     <span>구글</span>
-                  </label>
-                  <label class='radiobutton facebook'>
-                     <input type="radio" name="test_radio" value="옵션1"/>
-                     <span>페이스북</span>
-                  </label>
-                  <label class='radiobutton cellphone'>
-                     <input type="radio" name="test_radio" value="옵션1"/>
-                     <span>휴대폰 인증</span>
-                  </label>
-
+            <div class='text section'>
+               <div class="text-block password-modify-header">
+                  <h2>고객님의 비밀번호 변경이 완료되었습니다.</h2>
+                  <p>변경하신 비밀번호로 다시 로그인 해주세요.<br><br>
+                     안전한 비밀번호 관리를 위해서 비밀번호는 반드시 정기적으로 변경을 해주시고 다른사람이 비밀번호를 알 수 없도록 관리해주세요.<br><br>
+                     비밀번호를 다시 변경하고자 하신다면, 로그인 후 마이페이지 > 나의정보 > 회원정보변경 메뉴를 통하여 변경해주시기 바랍니다.<br>
+                     아이디 찾기에 더 궁금하신 사항이 있다면 Toteme 고객센터[1234-000]로 문의하여 주십시오.<br>
+                  </p>
                </div>
-
-               
-               <div class='line-block content-line'>
-               </div>
-               <div class='section'>
-                  
-                  <div class='defaultblock email align-center'>
-
-                     <div class="inputEmail table-block">
-                        <div>
-                           <input style='display: inline-block;' autocapitalize="off" autocomplete="off" autofocus="" placeholder="이메일" required="" spellcheck="false" type="email">
-                        </div>
-                        <div>
-                           <div class='select-wrap'>
-
-                              <select  class="toteme-select-style toteme-button-style" >
-                                 <option value="AF">naver.com</option>
-                                 <option value="AX">gmail.com</option>
-                                 <option value="AX">직접입력</option>
-                              </select>
-                              </div>
-      
-                        </div>
-                     </div>
-                  </div>
-               </div>
-
-
-               
-               <div class='section text'>
-                  <div class='text-block description emailInfo'>
-                     <p>
-                        이메일을 인증을 위한 이메일 주소 수집/이용에 동의하십니까? <br>동의에 거부할 권리나 의사가 있으나,
-                        거부시 회원가입이 진행되지 않습니다. 수집한 개인정보는 인증 완료 시까지 보관합니다.
-                     </p>
-                  </div>
-               </div>
-               <div class='section'>
-                  <div class='button-block agree align-center'>
-                     <input class="toteme-button-style button big agree-button" type="button" value="동의하고 인증하기"/>
-                  </div>
-               </div>
-                         
             </div>
+            <div class='section'>
+               
+               <div class="button-block login-button">
+                  <input class="button button--primary button--block button--large" type="submit" value="로그인 하기">
+               </div>
+
+         </div>
+
+
+
+
 
          </div>
       </div>
-
-
-
    </div>
 </div>
          <!-- END content_for_index -->

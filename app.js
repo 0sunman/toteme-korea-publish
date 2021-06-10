@@ -30,6 +30,9 @@ app.set('views', './views');
 app.use(express.static('public'));
 app.use(livereloadMiddleware());
 
+const State = {
+  done : "DONE"
+}
 
 const pageData = [
   {"type":"index", "pid":"T-MI-001", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"퍼블리스트","url" : "/00_main/0", "pageurl" : "00_main/list.ejs", "isMain":true},
@@ -48,21 +51,36 @@ const pageData = [
   {"type":"mypage", "pid":"T-MY-001", "state":"DONE" , "completedate":"2021-06-01", "etc":"","title":"4. Wishlist","url" : "/01_mypage/40", "pageurl" : "01_mypage/04_wishlist.ejs"},
   {"type":"mypage", "pid":"T-MY-001", "state":"DONE" , "completedate":"2021-06-01", "etc":"","title":"5. Returns","url" : "/01_mypage/50", "pageurl" : "01_mypage/08_return.ejs"},
 
-  {"type":"join", "pid":"T-LJ-001", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"1. Sign in","url" : "/02_login_join/10", "pageurl" : "02_login_join/01_0_login_page.ejs"},
-  {"type":"join", "pid":"T-LJ-001", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"1-1. Forgot ID","url" : "/02_login_join/11", "pageurl" : "02_login_join/01_1_id_check.ejs"},
-  {"type":"join", "pid":"T-LJ-001", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"1-2. Order for non-member (order check)","url" : "/02_login_join/12", "pageurl" : "02_login_join/01_2_no_member_login.ejs"},
-  {"type":"join", "pid":"T-LJ-001", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"2. Create account","url" : "/02_login_join/2", "pageurl" : "02_login_join/02_join_page.ejs"},
-  {"type":"join", "pid":"T-LJ-001", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"3. Create account _ E-mail Authentication","url" : "/02_login_join/3", "pageurl" : "02_login_join/03_select_email.ejs"},
-  {"type":"join", "pid":"T-LJ-001", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"4. privacy table","url" : "/02_login_join/4", "pageurl" : "02_login_join/04_privacy_table.ejs"},
+  {"type":"join", "pid":"T-LJ-001", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"T-LJ-001. 로그인","url" : "/02_login_join/T-LJ-001.ejs.html", "pageurl" : "02_login_join/T-LJ-001.ejs"},
+  {"type":"join", "pid":"T-LJ-002", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"T-LJ-002. 비회원 주문조회","url" : "/02_login_join/T-LJ-002.ejs.html", "pageurl" : "02_login_join/T-LJ-002.ejs"},
+  {"type":"join", "pid":"T-LJ-004", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"T-LJ-004. 아이디찾기","url" : "/02_login_join/T-LJ-004.ejs.html", "pageurl" : "02_login_join/T-LJ-004.ejs"},
+  {"type":"join", "pid":"T-LJ-005", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"T-LJ-005. 비밀번호 찾기 - 정보 입력","url" : "/02_login_join/T-LJ-005.ejs.html", "pageurl" : "02_login_join/T-LJ-005.ejs"}, // 완료
+  {"type":"join", "pid":"T-LJ-006", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"T-LJ-006. 비밀번호 찾기 - 이메일 인증","url" : "/02_login_join/T-LJ-006.ejs.html", "pageurl" : "02_login_join/T-LJ-006.ejs"}, // 완료
+  {"type":"join", "pid":"T-LJ-007", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"T-LJ-007. 비밀번호 찾기 - 이메일 인증 - (테이블과 팝업)","url" : "/02_login_join/T-LJ-007.ejs.html", "pageurl" : "02_login_join/T-LJ-007.ejs"}, // 완료
+  {"type":"join", "pid":"T-LJ-008", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"T-LJ-008. 비밀번호 찾기 - 휴대폰 인증","url" : "/02_login_join/T-LJ-008.ejs.html", "pageurl" : "02_login_join/T-LJ-008.ejs"}, // 완료
+  {"type":"join", "pid":"T-LJ-009", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"T-LJ-009. 비밀번호 찾기 - 새 비밀번호 입력","url" : "/02_login_join/T-LJ-009.ejs.html", "pageurl" : "02_login_join/T-LJ-009.ejs"}, // 완료
+  {"type":"join", "pid":"T-LJ-010", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"T-LJ-010. 비밀번호 찾기 - 비밀번호 변경","url" : "/02_login_join/T-LJ-010.ejs.html", "pageurl" : "02_login_join/T-LJ-010.ejs"}, // 완료
+  {"type":"join", "pid":"T-LJ-011", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"T-LJ-011. 비밀번호 찾기 - 비밀번호 변경 완료","url" : "/02_login_join/T-LJ-011.ejs.html", "pageurl" : "02_login_join/T-LJ-011.ejs"}, // 완료
+  {"type":"join", "pid":"T-LJ-012", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"T-LJ-012. 비밀번호 찾기 - 90일 이상 사용 비밀번호 변경","url" : "/02_login_join/T-LJ-012.ejs.html", "pageurl" : "02_login_join/T-LJ-012.ejs"}, // 완료
+  {"type":"join", "pid":"T-LJ-014", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"T-LJ-014. 비밀번호 찾기 - 90일 이상 사용 비밀번호 변경 - 비밀번호 변경 완료","url" : "/02_login_join/T-LJ-014.ejs.html", "pageurl" : "02_login_join/T-LJ-014.ejs"}, // 완료
+
+
+  {"type":"join", "pid":"T-LJ-015", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"T-LJ-015. 회원가입 - 간편인증","url" : "/02_login_join/T-LJ-015.ejs.html", "pageurl" : "02_login_join/T-LJ-015.ejs"},
+
+  {"type":"join", "pid":"T-LJ-015-1", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"T-LJ-015-1. 회원가입 - 간편인증 - 이메일 인증 완료 페이지 - (REDIRECTION)","url" : "/02_login_join/T-LJ-015-1.ejs.html", "pageurl" : "02_login_join/T-LJ-015-1.ejs"},
+  {"type":"join", "pid":"T-LJ-015-2", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"T-LJ-015-2. 회원가입 - 간편인증 - 이메일 인증 완료 페이지 - (인증)","url" : "/02_login_join/T-LJ-015-2.ejs.html",         "pageurl" : "02_login_join/T-LJ-015-2.ejs"},
+
+  {"type":"join", "pid":"T-LJ-016", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"T-LJ-016. 회원가입 - 간편인증 - 기존 계정이 존재하는 경우","url" : "/02_login_join/T-LJ-016.ejs.html", "pageurl" : "02_login_join/T-LJ-016.ejs"},
+
+  {"type":"join", "pid":"T-LJ-017", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"T-LJ-017. 회원가입 - 가입정보 입력","url" : "/02_login_join/T-LJ-017.ejs.html", "pageurl" : "02_login_join/T-LJ-017.ejs"},
+/*  {"type":"join", "pid":"T-LJ-001", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"3. Create account _ E-mail Authentication","url" : "/02_login_join/3", "pageurl" : "02_login_join/03_select_email.ejs"}, */
+  {"type":"join", "pid":"T-LJ-018", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"T-LJ-018 / T-LJ-019 회원가입 - 개인정보 수집 이용 동의","url" : "/02_login_join/T-LJ-018.ejs.html", "pageurl" : "02_login_join/T-LJ-018.ejs"},
+
+  {"type":"join", "pid":"T-LJ-020", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"T-LJ-020. 회원가입 - 가입완료","url" : "/02_login_join/T-LJ-020.ejs.html", "pageurl" : "02_login_join/T-LJ-020.ejs"},
 
   
-  {"type":"join", "pid":"T-LJ-001", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"5. Forgot your password ","url" : "/02_login_join/50", "pageurl" : "02_login_join/05_0_findpassword.ejs"}, // 완료
-  {"type":"join", "pid":"T-LJ-001", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"5-1. Forgot your password - complete page","url" : "/02_login_join/51", "pageurl" : "02_login_join/05_1_findpassword_complete.ejs"}, // 완료
-  {"type":"join", "pid":"T-LJ-001", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"5-2. Forgot your password - replace to password","url" : "/02_login_join/52", "pageurl" : "02_login_join/05_2_modifypassword.ejs"}, // 완료
-  {"type":"join", "pid":"T-LJ-001", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"5-3. Forgot your password - replace to new password","url" : "/02_login_join/53", "pageurl" : "02_login_join/05_3_newpassword.ejs"}, // 완료
-  {"type":"join", "pid":"T-LJ-001", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"5-4. Forgot your password - Send to email","url" : "/02_login_join/54", "pageurl" : "02_login_join/05_4_email_send.ejs"}, // 완료
-  {"type":"join", "pid":"T-LJ-001", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"5-5. Forgot your password - Confirm and send to email","url" : "/02_login_join/55", "pageurl" : "02_login_join/05_5_email_confirm_and_resend.ejs"}, // 완료
-  {"type":"join", "pid":"T-LJ-001", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"5-6. Forgot your password - Send to cellphone","url" : "/02_login_join/56", "pageurl" : "02_login_join/05_6_findpassword_withphone.ejs"}, // 완료
+   
+
 
   {"type":"product", "pid":"T-PD-001", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"1. PDP","url" : "/03_product/1", "pageurl" : "03_product/01_product_detail.ejs"},
 /*  {"type":"product","title":"1-1. Pre-order","url" : "/03_product/11", "pageurl" : "03_product/01_1_product_detail_preorder.ejs"},*/
