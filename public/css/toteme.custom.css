@@ -505,6 +505,7 @@ li > a.navlist__link.text-link{padding-left:15px}
 
 
 /* 마이페이지 - 회원정보변경 */
+.text-link.is-active:before, .container .text-icon .icon, .container .text-icon:before, .container .text-error:before{top: 5px; transform: translateY(0);}
 .template-mypage__form-wrapper{margin-bottom: 30px;}
 .template-mypage__form-wrapper ul, .template-mypage__form-wrapper li{list-style: none; padding: 0;}
 .template-mypage__form{padding: 20px 15px;}
