@@ -1,0 +1,72 @@
+<div class="container login_join simple_auth connect-account">
+	<div class="template-account__header">회원가입</div>
+	<div class="template-account__wrapper join_page">
+		<div class="template-account__left"></div>
+      <%- include ("./menu/index.ejs",{state:2}) %>
+
+
+			<div class="template-account__content">
+            <div class="template-account__text_hdtype_1 alert" style='display: none;'>
+               <div class="rte">안내문구 출력 영역</div>
+            </div>
+            <div class="section" js-password-form="customerLoginForm">
+               <div class='text-block align-center'>
+                  <h2>회원가입</h2>
+               </div>
+            </div>
+            <div class="progress section">
+               <div class='progressbar'>
+                  <div class='line'></div>
+                  <ul>
+                     <li class='active'>
+                        <p> <span class='circle'></span>
+                           <br> <span class='text'>간편인증</span> 
+                        </p>
+                     </li>
+                     <li>
+                        <p> <span class='circle'></span>
+                           <br> <span class='text'>가입정보 입력</span> 
+                        </p>
+                     </li>
+                     <li>
+                        <p> <span class='circle'></span>
+                           <br> <span class='text'>개인정보 동의</span> 
+                        </p>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class='line-block content-line'></div>
+            <div class='section text'>
+               <div class='text-block auth-title'>
+                  <p>
+                     기존에 hyundaipark을 아이디 또는 이메일로 사용중인 계정이 있습니다.<br><br>
+                     기존의 계정에 로그인해서 SNS계정을 연결하시면, 하나의 계정으로 회원/주문 정보를 통합 관리할 수 있습니다.<br><br>                     
+                     개인 계정 연결 및 해제는 마이페이지에서 가능합니다.
+                  </p>
+               </div>
+            </div>
+            <div class='section'>
+               <form method="post" action="#">
+                  <div class=" label-block input-block id">
+                     <label class="form-group__label subtitle-2 is-hidden" for="CustomerId">
+                     </label>
+                     <input id="CustomerId" autocapitalize="off" autocomplete="off" autofocus="" name="customer[id]" placeholder="아이디 또는 이메일" required="" spellcheck="false" type="email">
+                  </div>
+                  <div class=" label-block input-block password">
+                     <label class="form-group__label subtitle-2 is-hidden" for="CustomerPassword">
+                     </label>
+                     <input id="CustomerBirthday" autocapitalize="off" autocomplete="off" autofocus="" name="customer[password]" placeholder="비밀번호" required="" spellcheck="false" type="password">
+                  </div>
+                  <div class="button-block connect-button">
+                     <input class="button button--primary button--block button--large m-font-14" type="submit" value="연결하기">
+                  </div>
+
+               </form>
+            </div>
+
+            
+			</div>
+
+	</div>
+</div>

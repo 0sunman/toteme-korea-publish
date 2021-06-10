@@ -1,0 +1,69 @@
+<div class="container login_join simple_auth email_complete">
+   <div class="template-account__header">
+      회원가입
+   </div>
+   <div class="template-account__wrapper">
+      <div class="template-account__left"></div>
+      <%- include ("./menu/index.ejs",{state:2}) %>
+      <div class="template-account__content">
+
+         <div class="template-account__text_hdtype_1 alert" style='display:none'>
+            <div class="rte">
+               안내문구 출력 영역
+            </div>
+         </div>
+         <div class="section" js-password-form="customerLoginForm">
+            <div class='text-block align-center'>
+               <h2>회원가입</h2>
+            </div>
+         </div>
+         <div class="progress section">
+            <div class='progressbar'>
+               <div class='line'></div>
+               <ul>
+                  <li class='active'>
+                     <p> <span class='circle'></span>
+                        <br> <span class='text'>간편인증</span> 
+                     </p>
+                  </li>
+                  <li>
+                     <p> <span class='circle'></span>
+                        <br> <span class='text'>가입정보 입력</span> 
+                     </p>
+                  </li>
+                  <li>
+                     <p> <span class='circle'></span>
+                        <br> <span class='text'>개인정보 동의</span> 
+                     </p>
+                  </li>
+               </ul>
+            </div>
+         </div>
+
+         
+         <div class='line-block content-line'>
+         </div>
+         <div class='text section'>
+
+            <div class="text-block title">
+               <h2>인증 완료</h2>
+               <p><br>이메일 인증이 완료되었습니다.<br><br>인증메일이 발송되었습니다.<br>이전 화면에서 인증완료 버튼을 클릭하여 다음단계를 진행해주세요.</p>
+            </div>
+
+         </div>
+
+         <div class='section'>
+            <div class="button-block confirm">
+               <input class="button button--primary button--block button--large" type="submit" value="확인">
+            </div>
+
+         </div>
+           
+
+
+
+
+
+      </div>
+   </div>
+</div>

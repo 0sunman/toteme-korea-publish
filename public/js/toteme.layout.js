@@ -475,3 +475,140 @@ setTimeout(function(){
 
 /* // 퍼블리싱 사이트용 커스텀 영역 */
 
+
+
+
+
+function showOrhideArray(option){
+    /* 
+       설명 : Array로 받은 css를 모두 hide or show를 합니다.
+       매개변수 :
+       - 타입 : JSON
+       - 변수 설명
+          array : array | CSS Selector
+          show : bool | 보여주기 true, 숨김 false
+    */
+    if(!option){
+       alert("showOrhideArray : Array가 필요합니다.");
+       return false;
+    }
+    $(option.array).each((function(idx,element){
+       if(option.show == false){
+          $(element).hide();
+       }else{
+          $(element).show();
+       }
+    }).bind(this));
+    if(option.end == true){
+       return true;         
+    }
+    return showOrhideArray;
+ }
+
+
+
+ /*
+    LoginJoinObjects
+
+    - 속성값 
+       name : 객체의 이름
+       description : 설명
+       selector : 타켓의 셀렉터
+       event : 이벤트
+       listner : 이벤트의 리스너
+ */
+ var LoginJoinObjects = [
+    /* 이메일인증 */
+    {  name:"EmailAuthRadio", description:"이메일 - 인증 라디오 버튼", selector:".simple_auth .sns-buttons input[type=radio]", event:"click", listner:actionAuthRadio },
+    {  name:"EmailAuthStep2Button", description:"이메일 - 1단계 버튼 : 동의하고 인증하기",selector:".simple_auth .button-block.agree-button > input", event:"click", 
+       listner:function(){
+          /* TODO */
+          showOrhideArray({
+             array:[".emailInfo > .step2", ".confirm_button > .step2"],show:true})({ // show
+             array:[".emailInfo > .step1", ".confirm_button > .step1"],show:false,   // hide
+             end:true
+          })
+          /* TODO */            
+       }
+    },
+    {  name:"EmailAuthStep3Case1", description:"이메일 - 2단계 버튼 : 인증메일 재발송", selector:".simple_auth .button-block.resend-button > input", event:"click", 
+       listner:function(){
+          /* TODO */
+          showOrhideArray({
+             array:[".emailInfo > .step3", ".emailInfo > .step3 > p.resend"],show:true})({
+             array:[".emailInfo > .step2", ".emailInfo > .step3 > p.fail"],show:false, 
+             end:true
+          })
+          /* TODO */
+       }
+    },
+    {  name:"EmailAuthStep3Case2", description:"이메일 - 2단계 버튼 : 인증 완료 버튼", selector:".simple_auth .button-block.email-complete-button > input ", event:"click", 
+       listner:function(){
+          /* TODO */
+          showOrhideArray({
+             array:[".emailInfo > .step3", ".emailInfo > .step3 > p.fail"],show:true})({
+             array:[".emailInfo > .step2", ".emailInfo > .step3 > p.resend"],show:false, 
+             end:true
+          })
+          /* TODO */
+       }
+    },
+    {  name:"PhoneAuthRadio", description:"핸드폰 - 1단계", selector:".simple_auth .button-block > .email-complete-button", event:"click", 
+       listner:function(){
+          /* TODO */
+          showOrhideArray({
+             array:[".emailInfo > .step3", ".emailInfo > .step3 > p.fail"],show:true})({
+             array:[".emailInfo > .step2", ".emailInfo > .step3 > p.resend"],show:false, 
+             end:true
+          })
+          /* TODO */
+       }
+    }
+    /* // 이메일인증 */
+ ]
+
+
+ function actionAuthRadio(){
+    $(".simple_auth .tab").hide();
+      
+    var authType = $("input:radio[name='radio_auth']:checked").val();
+    switch(authType){
+       case "email":
+          $(".tab.auth-mail").show();
+       break;
+       case "phone":
+          $(".tab.auth-phone").show();
+       break;
+       case "kakao":
+          /* TODO */
+          debugger;
+       break;
+       
+       case "facebook":
+          /* TODO */
+          debugger;
+       break;
+       
+       case "google":
+          /* TODO */
+          debugger;
+       break;
+    }
+ }
+
+ setTimeout(function(){
+    
+    LoginJoinObjects.forEach(function(element){
+       $(document).on(element.event, element.selector, element.listner.bind(this));
+    })
+    if($(".simple_auth").length > 0){
+        showOrhideArray({
+            array:[
+               ".simple_auth .tab.auth-mail", ".simple_auth .tab.auth-phone",
+               ".simple_auth .emailInfo > .step2", ".simple_auth .confirm_button > .step2",
+               ".simple_auth .emailInfo > .step3", ".simple_auth .emailInfo > .step3 p"
+            ], show:false})
+    }
+
+    
+ },100)
