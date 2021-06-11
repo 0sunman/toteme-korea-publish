@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="esc-bind" lang="en">
+<html class="esc-bind" lang="ko">
    <head>
     <title>Totême - Official online store</title>
       <meta charset="utf-8">
@@ -13,9 +13,17 @@
       <link type="text/css" href="../css/layout.checkout.css" rel="stylesheet">
       
       <link href="../css/main_etc.css" rel="stylesheet">
+      
+      <link type="text/css" href="../css/layout.theme.css" rel="stylesheet">
+      <link rel="prefetch"  href="../css/layout.checkout.css" as="style">
+      <link rel="prefetch"  href="../css/layout.gift_card.css" as="style">
+      <link rel="prefetch"  href="../css/layout.password.css" as="style">
+      <link rel="prefetch"  href="../css/layout.styleguide.css" as="style">
+      <link href="../css/flag-icon.min.css" rel="stylesheet" type="text/css" media="all">
+      <link href="../css/appmate-wishlist-king.scss.css" rel="stylesheet">
+
       <!--link href="/css/toteme.custom.css" rel="stylesheet"-->
       <link href="../css/toteme.custom.css" rel="stylesheet">
-      <link href="../css/appmate-wishlist-king.scss.css" rel="stylesheet">
       <style>
 
          header.site-header-wrapper .site-nav__link{border:0px; background-color: transparent;}
@@ -1010,145 +1018,93 @@
 	<div class="checkout__content content">
 		<div class="wrap">
 			<div class="checkout__main main">
-				<header class="checkout__main-header main__header">
-					<div class="checkout__breadcrumbs">
-						<nav>
-							<ol class="breadcrumb">
-								<li class="breadcrumb__item breadcrumb__item--completed">
-									<a class="breadcrumb__link" href="https://int.toteme-studio.com/">장바구니</a>
-									<svg class="icon-svg icon-svg--color-adaptive-light icon-svg--size-10 breadcrumb__chevron-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><path d="M2 1l1-1 4 4 1 1-1 1-4 4-1-1 4-4"></path></svg>
-								</li>
-								<li class="breadcrumb__item breadcrumb__item--current">
-									<span class="breadcrumb__text">주문정보</span>
-									<svg class="icon-svg icon-svg--color-adaptive-light icon-svg--size-10 breadcrumb__chevron-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><path d="M2 1l1-1 4 4 1 1-1 1-4 4-1-1 4-4"></path></svg>
-								</li>
-								<li class="breadcrumb__item breadcrumb__item--blank">
-									<span class="breadcrumb__text">결제</span>
-								</li>
-							</ol>
-						</nav>
+				<div class="checkout_wrap">
+					<div class="checkout_header">
+						<ol class="checkout_breadcrumb">
+							<li class="active">주문정보</li>
+							<li>결제</li>
+						</ol>
 					</div>
-				</header>
-				<main class="main__content">
-					<div class="step" data-step="contact_information">
-						<form class="edit_checkout animate-floating-labels" action="#" method="post">
-							<div class="step__sections">
-								<div class="section section--contact-information">
-									<div class="section__header">
-										<div class="layout-flex layout-flex--tight-vertical layout-flex--loose-horizontal layout-flex--wrap">
-											<h2 class="section__title layout-flex__item layout-flex__item--stretch" id="main-header">
-												주문정보
-											</h2>
-											<!-- <p class="layout-flex__item">
-												<span>Already have an account?</span>
-												<a href="#">
-													<span class="visually-hidden">Already have an account?</span>
-													Log in
-												</a> </p> -->
-										</div>
+				</div>
+				<div class="checkout_body">
+					<div class="checkout_section">
+						<h5 class="checkout_tit1">주문정보</h5>
+						<div class="checkout_content">
+							<form action="">
+								<div class="input-block name">
+									<label class="field__label" for="checkout_name3">이름</label>
+									<input placeholder="이름" class="field__input" type="text" name="checkout[name]" id="checkout_name3">
+								</div>
+								<div class="input-block email_form">
+									<div>
+										<input class="field__input" placeholder="이메일" type="text">
 									</div>
-									<div class="section__content form-group">
-										<div class="input-block form-group__field form_padding">
-											<label class="field__label field__label--visible" for="checkout_name">이름</label>
-											<input placeholder="이름" class="field__input" required="" size="30" type="text" name="checkout[name]" id="checkout_name">
-										</div>
-										<div class="input-block form-group__field form_padding">
-											<div class="input-table form-group__field email_form">
-												<div>
-													<input class="field__input" placeholder="이메일" required="" type="text">
-												</div>
-												<div>
-													<div class="select-wrap">
-														<select class="field__input field__input--select toteme-select-style toteme-button-style no-animation">
-															<option value="">naver.com</option>
-															<option value="">gmail.com</option>
-															<option value="">직접입력</option>
-														</select>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="input-block form-group__footer form_padding">
-											<input class="step__footer__continue-btn btn modal_trigger" type="submit" value="본인인증" data-modal="verify-modal">
-									 </div>
+									<div>
+										<select class="toteme-select-style">
+											<option value="">naver.com</option>
+											<option value="">gmail.com</option>
+											<option value="">직접입력</option>
+										</select>
 									</div>
 								</div>
-								<div class="section section--shipping-address">
-									<div class="section__header">
-										<h2 class="section__title" id="section-delivery-title">
-											배송지 정보
-										</h2>
-									</div>
-									<div class="section__content form-group">
-										<div class="input-block form-group__field form_padding">
-											<label class="field__label field__label--visible" for="checkout_name1">받는 사람</label>
-											<input placeholder="받는 사람" class="field__input" size="30" type="text" name="checkout[name1]" id="checkout_name1">
-										</div>
-										<div class="input-block form-group__field form_padding">
-											<div class="input-table phone_form">
-												<div>
-													<label class="field__label field__label--visible" for="checkout_phone">휴대폰번호(필수)</label>
-													<input placeholder="휴대폰번호(필수)" class="field__input" size="30" type="text" name="checkout[phone]" id="checkout_phone">
-												</div>
-												<div>
-													<button type="button" class="btn_plus">추가
-														<svg class="icon icon--large" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(45deg);">
-															<path fill-rule="evenodd" clip-rule="evenodd" d="M2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
-														</svg>
-													</button>
-												</div>
-											</div>
-											<div class="input_phone_plus">
-												<input placeholder="추가연락처" class="field__input" size="30" type="text" name="checkout[phone2]">
-											</div>
-										</div>
-										<div class="input-block form-group__field form_padding">
-											<div class="input-table phone_addr">
-												<div>
-													<label class="field__label field__label--visible" for="checkout_addr">배송지주소</label>
-													<input placeholder="배송지주소" class="field__input" size="30" type="text" name="checkout[addr]" id="checkout_addr">
-												</div>
-												<div>
-													<button type="button" class="button button--large no-animation modal_trigger" data-modal="address-modal">찾기</button>
-												</div>
-											</div>
-										</div>
-										<div class="input-block form-group__field form_padding">
-											<label class="field__label field__label--visible" for="checkout_addr2">주소</label>
-											<input placeholder="주소" class="field__input" size="30" type="text" name="checkout[addr2]" id="checkout_addr2" readonly>
-										</div>
-										<div class="input-block form-group__field form_padding">
-											<label class="field__label field__label--visible" for="checkout_addr3">상세주소</label>
-											<input placeholder="상세주소" class="field__input" size="30" type="text" name="checkout[addr3]" id="checkout_addr3">
-										</div>
-										<div class="input-block form-group__field form_padding">
-											<label class="field__label field__label--visible" for="checkout_memo">배송시 요청사항 선택</label>
-											<select id="checkout_memo" class="field__input field__input--select toteme-select-style toteme-button-style no-animation">
-												<option value="" disabled selected>배송시 요청사항 선택</option>
-												<option value="">배송 전 연락바랍니다.</option>
-												<option value="">택배함에 넣어주세요.</option>
-												<option value="">빠른 배송 부탁 드립니다.</option>
-												<option value="">부재 시 경비실에 맡겨주세요.</option>
-												<option value="">핸드폰으로 연락 부탁 드립니다.</option>
-												<option value="direct">직접입력</option>
-											</select>
-											<div class="input-block direct_input">
-												<input type="text" placeholder="배송 시 요청사항을 입력하세요" class="field__input" size="30">
-											</div>
-										</div>
-										<div class="step__footer form_padding">
-											<button name="button" type="submit" id="continue_button" class="step__footer__continue-btn btn">
-												<span class="btn__content">결제수단 선택</span>
-												<svg class="icon-svg icon-svg--size-18 btn__spinner icon-svg--spinner-button" aria-hidden="true" focusable="false">
-													<use xlink:href="#spinner-button"></use>
-												</svg></button>
-										</div>
-									</div>
+								<div class="button-block">
+									<input class="btn modal_trigger" type="button" value="본인인증" data-modal="verify-modal">
+							 </div>
+							</form>
+						</div>
+					</div>
+
+					<div class="checkout_section">
+						<h5 class="checkout_tit1">배송지 정보</h5>
+						<form action="">
+							<div class="input-block name">
+								<label class="field__label" for="checkout_name2">받는 사람</label>
+								<input placeholder="받는 사람" class="field__input" type="text" name="checkout[name2]" id="checkout_name2">
+							</div>
+							<div class="input-block phone_form">
+								<div>
+									<label class="field__label" for="checkout_phone3">휴대폰번호(필수)</label>
+									<input placeholder="휴대폰번호(필수)" class="field__input" type="text" name="checkout[phone3]" id="checkout_phone3">
 								</div>
+								<div>
+									<button type="button" class="btn_plus">추가
+										<svg class="icon icon--large" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(45deg);">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="input-block input_phone_plus">
+								<input placeholder="추가연락처" class="field__input" type="text" name="checkout[phone4]">
+							</div>
+							<div class="input-block addr_form">
+								<div>
+									<label class="field__label" for="checkout_addr4">배송지주소</label>
+									<input placeholder="배송지주소" class="field__input" size="30" type="text" name="checkout[addr]" id="checkout_addr4">
+								</div>
+								<div>
+									<button type="button" class="button button--large no-animation modal_trigger" data-modal="address-modal">찾기</button>
+								</div>
+							</div>
+							<div class="input-block address1">
+								<label class="field__label" for="checkout_addr5">주소</label>
+								<input placeholder="주소" class="field__input" size="30" type="text" name="checkout[addr5]" id="checkout_addr5">
+							</div>
+							<div class="input-block address2">
+								<label class="field__label" for="checkout_addr6">상세주소</label>
+								<input placeholder="상세주소" class="field__input" size="30" type="text" name="checkout[addr3]" id="checkout_addr6">
+							</div>
+							<div class="checkout_btn_box">
+								<button name="button" type="submit" id="continue_button" class="step__footer__continue-btn btn">
+									<span class="btn__content">결제수단 선택</span>
+									<svg class="icon-svg icon-svg--size-18 btn__spinner icon-svg--spinner-button" aria-hidden="true" focusable="false">
+										<use xlink:href="#spinner-button"></use>
+									</svg></button>
 							</div>
 						</form>
 					</div>
-				</main>
+				</div>
+
 				<div class="additional-content checkout__additional-content">
 					<div class="additional-content__container">
 						<p class="additional-content__title">
@@ -1492,7 +1448,10 @@
 							</div>
 							<div class="input-block">
 								<input class="step__footer__continue-btn btn" type="submit" value="검색" data-address="address_search_list">
-								<p class="comment">예: 동(읍/면)명 또는 도로명주소(건물번호/건물명)<br>일부 군사지역은 배송이 불가능할 수 있습니다.</p>
+								<ul class="dot_list">
+									<li>예: 동(읍/면)명 또는 도로명주소(건물번호/건물명)</li>
+									<li>일부 군사지역은 배송이 불가능할 수 있습니다.</li>
+								</ul>
 							</div>
 						</div>
 						<div class="address_find_content address_wrap">
@@ -1619,9 +1578,9 @@
 					</div>
 					<div class="modal__body">
 						<div class="verify_container">
-							<div class="input-block form-group__footer">
-								<input class="button button--primary button--block button--large is-valid" type="button" value="휴대폰 인증">
-								<input class="button button--primary button--block button--large is-valid" type="button" value="I-PIN 인증">
+							<div class="button-block pcs2">
+								<input class="btn white" type="button" value="휴대폰 인증">
+								<input class="btn white" type="button" value="I-PIN 인증">
 						  </div>
 						  <div class="verify_txt_box">
 								<h6 class="payment_tit1">본인인증 시 유의사항</h6>
@@ -2593,14 +2552,6 @@
       <script src="../js/swiper-bundle.min.js"></script>
       <script src="../js/image-zoom.min.js"></script>
       <script src='../js/toteme.layout.js'></script>
-
-      
-      <link type="text/css" href="../css/layout.theme.css" rel="stylesheet">
-      <link rel="prefetch"  href="../css/layout.checkout.css" as="style">
-      <link rel="prefetch"  href="../css/layout.gift_card.css" as="style">
-      <link rel="prefetch"  href="../css/layout.password.css" as="style">
-      <link rel="prefetch"  href="../css/layout.styleguide.css" as="style">
-      <link href="../css/flag-icon.min.css" rel="stylesheet" type="text/css" media="all">
 
    </body>
 </html>
