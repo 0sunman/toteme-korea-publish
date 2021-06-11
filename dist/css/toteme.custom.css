@@ -50,7 +50,7 @@ html,body,div,p,h1,h2,h3,span,*{font-family: 'MonumentGrotesk','Noto Sans Toteme
 .text-block.description{font-size: 12px; color:#171616; font-family: 'Noto Sans KR', sans-serif;}
 .text-block .checkbox{width:10px; height:10px; margin-right:9px; border: 1px solid #171616}
 .text-block .checkbox:checked{background-color: #171616;}
-.text-block h2{font-size: 14px;margin-bottom:10px}
+.text-block h2{font-size: 15px;margin-bottom:10px}
 .input-block{display: block; margin:10px 0px; text-align: center;}
 
 .line-block{display: block; height:1px; background-color: #171616;}
@@ -103,7 +103,7 @@ html,body,div,p,h1,h2,h3,span,*{font-family: 'MonumentGrotesk','Noto Sans Toteme
     .d-font-14{font-size:14px !important;}
     .d-font-15{font-size:15px !important;}
  }
- .align-center{text-align: center;}
+ .align-center{text-align: center; margin:0 auto}
  .align-left{text-align: left;}
  .align-right{text-align: right;}
  
@@ -163,7 +163,7 @@ input[type=email], input[type=password], input[type=search], input[type=tel], in
    -ms-flex-align: center;  align-items: center; -webkit-appearance: none; -moz-appearance: none;
    appearance: none; background-color: #fff; border: 1px solid #171616; border-radius: 33px;
    box-shadow: none; color: #171616; display: -ms-inline-flexbox; display: inline-flex;
-   font-size: 14px; -ms-flex-pack: center; justify-content: center; letter-spacing: .04px; line-height: 15px;
+   font-size: 15px; -ms-flex-pack: center; justify-content: center; letter-spacing: .04px; line-height: 15px;
    margin:5px 8px;min-height: 33px; padding: 0 18px; text-align: center; text-decoration: none; -webkit-user-select: none;
    -moz-user-select: none; -ms-user-select: none; user-select: none; vertical-align: middle; white-space: nowrap; width: auto;
    cursor : pointer; letter-spacing:0px;
@@ -171,7 +171,7 @@ input[type=email], input[type=password], input[type=search], input[type=tel], in
 /* // 라디오 버튼 */
 /* 셀렉트 버튼 */
 /* .input-table input,.input-table select{font-size: 14px;} */
-input.toteme-button-style{ font-size: 14px; margin:5px 8px; min-height: 33px; padding: 0 18px; line-height: 15px;}
+input.toteme-button-style{ font-size: 15px; margin:5px 8px; min-height: 33px; padding: 0 18px; line-height: 15px;}
 input.toteme-button-style.big{width:67%;}
 select.select--center{background-image: url(../assets/icon-small-arrow-down.svg);}
 select.toteme-select-style{ 
@@ -245,7 +245,7 @@ body.overflow-hidden {overflow: hidden;}
 @media (max-width: 767px){
     .site-footer__action { width: 80%; }
     .custom-module__nav-dropdown{ width:80%; }
-    .custom-select__wrapper{ width:80%; }
+   /* .custom-select__wrapper{ width:80%; }*/
     .custom-module__text-column.custom-module__text-column--content{border-top:0}
 }
 
@@ -567,7 +567,7 @@ li > a.navlist__link.text-link{padding-left:15px}
 .privacy_agreement .modal__header{
    justify-content: left;
    padding: 15px;
-   font-size: 14px;
+   font-size: 15px;
    border-bottom: 0px;
 }
 .privacy_agreement .modal__close{ padding: 13px;}
@@ -692,6 +692,10 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 .button-block input[type=submit], .button-block input[type=button]{max-width:500px}
 .template-account__navlist .template-account__navlist--content{ max-width: 500px; margin: 0 auto;}
 .login_join .section{ display: block; margin:20px 52px; padding-top:0px; padding-bottom:0px;}
+
+@media(min-width:768px){
+    .login_join .section{ margin:34px 60px; }
+}
 .login_join .text.section{ margin:20px 15px;}
 .login_join form div{ margin-bottom: 10px;}
 .login_join .progress.section{margin:20px 69px;}
@@ -716,6 +720,8 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 /* 4. 상단 에러 */
 .alert.title p.error{ color:red; margin-bottom: 0px; }
 /* // 4. 상단에러 */
+
+.text-block.align-center{ text-align: center; margin:0 auto }
 
 /* // 공통*/
 
@@ -746,7 +752,9 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 .login_join.id_check .name.input-block input, .login_join.id_check .name.input-block label, 
 .login_join.id_check .birthday.input-block input, .login_join.id_check .birthday.input-block label, 
 .login_join.id_check .findid.button-block, .login_join.id_check .div-block.sub-description{font-size:14px}
-
+/*
+.login_join.id_check .findid.button-block.findid {margin-top:10px}
+*/
 /* // 로그인 페이지 1-1 : 아이디 체크  */
 
 
@@ -856,14 +864,14 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 
 /* 2-1-3 로그인 & 회원가입 이메일 선택 */   
 .login_join.simple_auth .sns-buttons.label-block{ margin-top:15px; margin-bottom: 15px;}
-.login_join.simple_auth div.sns-buttons + .content-line.line-block{margin-top:0px}
+.login_join.simple_auth div.sns-buttons + .content-line.line-block{margin-bottom: 30px; margin-top: 20px;}
 .login_join.simple_auth .defaultblock{margin:15px;}
-.login_join.simple_auth .inputEmail.table-block { width:80%; margin:0 auto; }
-.login_join.simple_auth .inputEmail.table-block > div:nth-child(1){width:60%; }
-.login_join.simple_auth .inputEmail.table-block > div:nth-child(2){width:40%; }
+.login_join.simple_auth .inputEmail.table-block { width:100%; margin:0 auto; }
+.login_join.simple_auth .inputEmail.table-block > div:nth-child(1){width:55%; }
+.login_join.simple_auth .inputEmail.table-block > div:nth-child(2){width:45%; }
 .login_join.simple_auth .inputEmail.table-block > div:nth-child(2) .select-wrap{width:100%; margin-left:7px }
 .login_join.simple_auth div.defaultblock.email + .description.text-block{margin-top:15px; margin-right:15px; margin-bottom:15px; margin-left:15px; }
-.login_join.simple_auth .section.text{margin-top:0px;margin-bottom:0px}
+/*.login_join.simple_auth .section.text{margin-top:0px;margin-bottom:0px}*/
 .login_join.simple_auth .emailInfo{margin-top:15px;margin-bottom:30px}
 .login_join.simple_auth .line-block.content-line + div{margin-bottom:15px;}
 .login_join.simple_auth .agree-button{margin-top:0px}
@@ -871,9 +879,10 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 .text-block.sub-description, .table-block{ margin:0 auto}
 .login_join.simple_auth{}
 .login_join.simple_auth .table-block { max-width:500px;}
-.login_join.simple_auth .text-block { max-width:500px;}
-.login_join.simple_auth .table-block > div:nth-child(1){width:calc(100% - 140px); }
-.login_join.simple_auth .table-block > div:nth-child(2){width:140px; }
+.login_join.simple_auth .text-block { max-width:500px; margin:0 auto}
+.login_join.simple_auth .table-block > div:nth-child(1){width:calc(100% - 130px);  }
+.login_join.simple_auth .table-block > div > input[type='button']{ font-size:14px }
+.login_join.simple_auth .table-block > div:nth-child(2){width:130px;   }
 .login_join.simple_auth .table-block input[type='button']{font-size:15px}
 .login_join.simple_auth .content-line.line-block + .sub-description { margin-bottom:10px;}
 .login_join.simple_auth div.table-block.input-table{margin-bottom: 10px;}
