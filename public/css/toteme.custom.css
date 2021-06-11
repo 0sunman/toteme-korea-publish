@@ -629,6 +629,10 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 }
 /* // 3. 라인 */
 
+/* 4. 상단 에러 */
+.alert.title p.error{ color:red; margin-bottom: 0px; }
+/* // 4. 상단에러 */
+
 /* // 공통*/
 
 /* 2-1-0 로그인 & 회원가입 페이지 1 */
