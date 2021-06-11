@@ -66,7 +66,7 @@ const pageData = [
   {"type":"product", "pid":"T-PD-006", "state":"DONE" , "completedate":"2021-06-01", "url" : "/03_product/T-PD-006.ejs.html", "pageurl" : "03_product/T-PD-006.ejs", "title":"T-PD-006. PDP", "title2":"상품 상세"},
 
   {"type":"order", "pid":"T-OD-007", "state":"DONE" , "completedate":"2021-06-11", "url" : "/04_order/T-OD-007.ejs.html", "pageurl" : "04_order/T-OD-007.ejs", "title":"T-OD-007 ~ 025. Order Page", "title2":"주문서 - 회원"},
-  {"type":"order", "pid":"T-OD-022", "state":"DONE" , "completedate":"2021-06-11", "url" : "/04_order/T-OD-022.ejs.html", "pageurl" : "04_order/T-OD-025.ejs", "title":"T-OD-022. Order Page(non-member)", "title2":"주문서 - 비회원"},
+  {"type":"order", "pid":"T-OD-022", "state":"DONE" , "completedate":"2021-06-11", "url" : "/04_order/T-OD-022.ejs.html", "pageurl" : "04_order/T-OD-022.ejs", "title":"T-OD-022. Order Page(non-member)", "title2":"주문서 - 비회원"},
   {"type":"order", "pid":"T-OD-024", "state":"DONE" , "completedate":"2021-06-11", "url" : "/04_order/T-OD-024.ejs.html", "pageurl" : "04_order/T-OD-024.ejs", "title":"T-OD-024. Payment Page(non-member)", "title2":"결제"},
   {"type":"order", "pid":"T-OD-037", "state":"DONE" , "completedate":"2021-06-11", "url" : "/04_order/T-OD-037.ejs.html", "pageurl" : "04_order/T-OD-037.ejs", "title":"T-OD-037. Order Summary", "title2":"주문완료"},
   
