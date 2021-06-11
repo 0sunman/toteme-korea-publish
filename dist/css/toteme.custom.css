@@ -645,6 +645,9 @@ li > a.navlist__link.text-link{padding-left:15px}
 .button-block.pcs2_vertical .button{margin-bottom: 10px;}
 .button-block.pcs2_vertical .button:last-child{margin-bottom: 0;}
 /* //마이페이지 - 회원정보변경 */
+.wishlist-collection .selector-wrapper .single-option-selector{border-radius: 50px;}
+.wishlist-collection .selector-wrapper label{display: none;}
+.wishlist-collection .wk-item .wk-purchase-section{margin-top: 0;}
 
 figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 .containerZoom.active{cursor: zoom-out;}
