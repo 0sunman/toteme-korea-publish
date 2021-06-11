@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="esc-bind" lang="ko">
+<html class="esc-bind" lang="en">
    <head>
     <title>Totême - Official online store</title>
       <meta charset="utf-8">
@@ -13,17 +13,9 @@
       <link type="text/css" href="../css/layout.checkout.css" rel="stylesheet">
       
       <link href="../css/main_etc.css" rel="stylesheet">
-      
-      <link type="text/css" href="../css/layout.theme.css" rel="stylesheet">
-      <link rel="prefetch"  href="../css/layout.checkout.css" as="style">
-      <link rel="prefetch"  href="../css/layout.gift_card.css" as="style">
-      <link rel="prefetch"  href="../css/layout.password.css" as="style">
-      <link rel="prefetch"  href="../css/layout.styleguide.css" as="style">
-      <link href="../css/flag-icon.min.css" rel="stylesheet" type="text/css" media="all">
-      <link href="../css/appmate-wishlist-king.scss.css" rel="stylesheet">
-
       <!--link href="/css/toteme.custom.css" rel="stylesheet"-->
       <link href="../css/toteme.custom.css" rel="stylesheet">
+      <link href="../css/appmate-wishlist-king.scss.css" rel="stylesheet">
       <style>
 
          header.site-header-wrapper .site-nav__link{border:0px; background-color: transparent;}
@@ -965,11 +957,11 @@
       <main id="MainContent" class="main-content critical-clear">
          <!-- BEGIN content_for_index -->
          <!--  include ("./pages/00_main/index.ejs") BEGIN content_for_index -->
-         <div class="container login_join join_page">
+         <div class="container login_join simple_auth connect-account">
 	<div class="template-account__header">회원가입</div>
 	<div class="template-account__wrapper join_page">
 		<div class="template-account__left"></div>
-		<div class="template-account__navlist ">
+      <div class="template-account__navlist ">
     <div class="template-account__navlist--content">
        <div class="navlist__dropdown-wrapper">
           <div class="custom-select__wrapper">
@@ -1024,7 +1016,7 @@
 
 
 			<div class="template-account__content">
-            <div class="template-account__text_hdtype_1 alert">
+            <div class="template-account__text_hdtype_1 alert" style='display: none;'>
                <div class="rte">안내문구 출력 영역</div>
             </div>
             <div class="section" js-password-form="customerLoginForm">
@@ -1036,12 +1028,12 @@
                <div class='progressbar'>
                   <div class='line'></div>
                   <ul>
-                     <li>
+                     <li class='active'>
                         <p> <span class='circle'></span>
                            <br> <span class='text'>간편인증</span> 
                         </p>
                      </li>
-                     <li class='active'>
+                     <li>
                         <p> <span class='circle'></span>
                            <br> <span class='text'>가입정보 입력</span> 
                         </p>
@@ -1056,63 +1048,35 @@
             </div>
             <div class='line-block content-line'></div>
             <div class='section text'>
-               <div class='text-block title'>
-                  <h2>가입정보 입력</h2>
-                  <p>[Google] 계정으로 인증이 완료되었습니다.</p>
+               <div class='text-block auth-title'>
+                  <p>
+                     기존에 hyundaipark을 아이디 또는 이메일로 사용중인 계정이 있습니다.<br><br>
+                     기존의 계정에 로그인해서 SNS계정을 연결하시면, 하나의 계정으로 회원/주문 정보를 통합 관리할 수 있습니다.<br><br>                     
+                     개인 계정 연결 및 해제는 마이페이지에서 가능합니다.
+                  </p>
                </div>
             </div>
             <div class='section'>
-               <form method="post">
-                  <input type="hidden" name="form_type" value="customer_login">
-                  <input type="hidden" name="utf8" value="✓">
-                  <div class="input-block idorpassword input-block">
-                     <input id="CustomerId" autocapitalize="off" autocomplete="off" autofocus="" placeholder="아이디 또는 이메일" required="" spellcheck="false" type="email">
+               <form method="post" action="#">
+                  <div class=" label-block input-block id">
+                     <label class="form-group__label subtitle-2 is-hidden" for="CustomerId">
+                     </label>
+                     <input id="CustomerId" autocapitalize="off" autocomplete="off" autofocus="" name="customer[id]" placeholder="아이디 또는 이메일" required="" spellcheck="false" type="email">
                   </div>
-                  <div class="text-block description checkEmail sub-description input-block">
-                     <p>
-                        <input class='checkbox' value="1" type="checkbox"></input>위 이메일 주소를 아이디로 사용</p>
+                  <div class=" label-block input-block password">
+                     <label class="form-group__label subtitle-2 is-hidden" for="CustomerPassword">
+                     </label>
+                     <input id="CustomerBirthday" autocapitalize="off" autocomplete="off" autofocus="" name="customer[password]" placeholder="비밀번호" required="" spellcheck="false" type="password">
                   </div>
-                  <div class="input-table idorpasswordCheck input-block table-block">
-                     <div>
-                        <input id="CustomerPassword" name="customer[password]" placeholder="아이디 또는 이메일" required="" type="password">
-                     </div>
-                     <div>
-                        <input type='button' class='button duplicatebtn' value='중복확인'>
-                        </button>
-                     </div>
+                  <div class="button-block connect-button">
+                     <input class="button button--primary button--block button--large m-font-14" type="submit" value="연결하기">
                   </div>
-                  <div class="input-block password">
-                     <input id="CustomerPassword" autocapitalize="off" autocomplete="off" autofocus="" placeholder="비밀번호" required="" spellcheck="false" type="email">
-                  </div>
-                  <div class="input-block confirmPassword">
-                     <input id="CustomerPasswordComfirm" autocapitalize="off" autocomplete="off" autofocus="" placeholder="비밀번호 확인" required="" spellcheck="false" type="email">
-                  </div>
-                  <div class="input-block name">
-                     <input id="CustomerPasswordComfirm" autocapitalize="off" autocomplete="off" autofocus="" placeholder="이름" required="" spellcheck="false" type="email">
-                  </div>
-                  <div class="input-block birthday">
-                     <input id="CustomerBirthday" autocapitalize="off" autocomplete="off" autofocus="" placeholder="생년월일" required="" spellcheck="false" type="email">
-                  </div>
-                  <div class="text-block description sub-description">
-                     <p>생년월일 8자리를 입력해주세요 (예. 20150115)</p>
-                  </div>
-                  <div class="input-block phoneNumber">
-                     <input id="CustomerPhonenumber" autocapitalize="off" autocomplete="off" autofocus="" placeholder="휴대폰번호" required="" spellcheck="false" type="email">
-                  </div>
-                  <div class="text-block description  sub-description">
-                     <p>'-'를 빼고 휴대폰 번호를 입력해주세요.</p>
-                  </div>
-                  <div class="button-block button-join">
-                     <input class="button button--primary button--block button--large" type="submit" value="회원가입">
-                  </div>
+
                </form>
             </div>
+
+            
 			</div>
-
-
-
-
-
 
 	</div>
 </div>
@@ -2072,6 +2036,14 @@
       <script src="../js/swiper-bundle.min.js"></script>
       <script src="../js/image-zoom.min.js"></script>
       <script src='../js/toteme.layout.js'></script>
+
+      
+      <link type="text/css" href="../css/layout.theme.css" rel="stylesheet">
+      <link rel="prefetch"  href="../css/layout.checkout.css" as="style">
+      <link rel="prefetch"  href="../css/layout.gift_card.css" as="style">
+      <link rel="prefetch"  href="../css/layout.password.css" as="style">
+      <link rel="prefetch"  href="../css/layout.styleguide.css" as="style">
+      <link href="../css/flag-icon.min.css" rel="stylesheet" type="text/css" media="all">
 
    </body>
 </html>

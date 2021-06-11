@@ -1,0 +1,35 @@
+<div class="container login_join join_complete">
+   <div class="template-account__header">
+      회원가입
+   </div>
+   <div class="template-account__wrapper">
+      <div class="template-account__left"></div>
+      <%- include ("./menu/index.ejs",{state:2}) %>
+      <div class="template-account__content">
+         <div class="template-login__content">
+
+            <div class="template-account__text_hdtype_1 alert" style='display:none'>
+               <div class="rte">
+                  안내문구 출력 영역
+               </div>
+            </div>
+            <div class="section">
+               <form method="post">
+                  <input type="hidden" name="form_type" value="customer_login"><input type="hidden" name="utf8" value="✓">
+                     <div class="text-block text-complete align-center">
+                        <p class='text'>Totême 회원가입을 축하합니다.<br><br>아이디 hyundaipark으로<br>고객님의 회원가입이 완료되었습니다.</p>
+                     </div>
+                     <div class="button-block auth-button">
+                        <input class="button button--primary button--block button--large" type="submit" value="Totême 메인으로">
+                     </div>
+               </form>
+
+            </div>
+
+
+
+
+         </div>
+      </div>
+   </div>
+</div>

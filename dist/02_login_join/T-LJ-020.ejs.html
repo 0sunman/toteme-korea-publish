@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="esc-bind" lang="ko">
+<html class="esc-bind" lang="en">
    <head>
     <title>Totême - Official online store</title>
       <meta charset="utf-8">
@@ -13,17 +13,9 @@
       <link type="text/css" href="../css/layout.checkout.css" rel="stylesheet">
       
       <link href="../css/main_etc.css" rel="stylesheet">
-      
-      <link type="text/css" href="../css/layout.theme.css" rel="stylesheet">
-      <link rel="prefetch"  href="../css/layout.checkout.css" as="style">
-      <link rel="prefetch"  href="../css/layout.gift_card.css" as="style">
-      <link rel="prefetch"  href="../css/layout.password.css" as="style">
-      <link rel="prefetch"  href="../css/layout.styleguide.css" as="style">
-      <link href="../css/flag-icon.min.css" rel="stylesheet" type="text/css" media="all">
-      <link href="../css/appmate-wishlist-king.scss.css" rel="stylesheet">
-
       <!--link href="/css/toteme.custom.css" rel="stylesheet"-->
       <link href="../css/toteme.custom.css" rel="stylesheet">
+      <link href="../css/appmate-wishlist-king.scss.css" rel="stylesheet">
       <style>
 
          header.site-header-wrapper .site-nav__link{border:0px; background-color: transparent;}
@@ -965,13 +957,13 @@
       <main id="MainContent" class="main-content critical-clear">
          <!-- BEGIN content_for_index -->
          <!--  include ("./pages/00_main/index.ejs") BEGIN content_for_index -->
-         <div class="container login_join no_member_login">
-    <div class="template-account__header">
-      비회원 주문조회
-    </div>
-    <div class="template-account__wrapper no_memeber_login">
-       <div class="template-account__left"></div>
-       <div class="template-account__navlist ">
+         <div class="container login_join join_complete">
+   <div class="template-account__header">
+      회원가입
+   </div>
+   <div class="template-account__wrapper">
+      <div class="template-account__left"></div>
+      <div class="template-account__navlist ">
     <div class="template-account__navlist--content">
        <div class="navlist__dropdown-wrapper">
           <div class="custom-select__wrapper">
@@ -1018,51 +1010,39 @@
  
    <script>
       setTimeout(function(){
-         $(".main-title.custom-select__label").text("비회원 주문조회");
-         $("a[href='/account/login#nomember']").addClass("is-active");
+         $(".main-title.custom-select__label").text("회원가입");
+         $("a[href='/account/register']").addClass("is-active");
       },100)
       </script>
    
-       <div class="template-account__content">
-          <div class="template-login__content">
- 
-             <div class="template-account__text_hdtype_1 alert" style='display:none'>
-                <div class="rte">
-                   안내문구 출력 영역
-                </div>
-             </div>
-             <div class="section">
-                  <form method="post" >
-                     <input type="hidden" name="form_type" value="customer_login"><input type="hidden" name="utf8" value="✓">
-                        <div class="orderNumber input-block label-block">
-                           <label class="form-group__label subtitle-2 is-hidden" for="CustomerEmail">
-                           </label>
-                           <input id="CustomerEmail" autocapitalize="off" autocomplete="off" autofocus="" name="customer[email]" placeholder="주문번호" required="" spellcheck="false" type="email">
-                        </div>
-                        <div class="password input-block label-block">
-                           <label class="form-group__label subtitle-2 is-hidden" for="CustomerPassword">
-                           </label>
-                           <input id="CustomerEmail" autocapitalize="off" autocomplete="off" autofocus="" name="customer[email]" placeholder="비밀번호" required="" spellcheck="false" type="email">
-                        </div>
-                        <div class="findOrder button-block">
-                           <input class="button button--primary button--block button--large m-font-14" disabled="true" type="submit" value="주문배송조회">
-                        </div>
+      <div class="template-account__content">
+         <div class="template-login__content">
 
-                  </form>
+            <div class="template-account__text_hdtype_1 alert" style='display:none'>
+               <div class="rte">
+                  안내문구 출력 영역
                </div>
+            </div>
+            <div class="section">
+               <form method="post">
+                  <input type="hidden" name="form_type" value="customer_login"><input type="hidden" name="utf8" value="✓">
+                     <div class="text-block text-complete align-center">
+                        <p class='text'>Totême 회원가입을 축하합니다.<br><br>아이디 hyundaipark으로<br>고객님의 회원가입이 완료되었습니다.</p>
+                     </div>
+                     <div class="button-block auth-button">
+                        <input class="button button--primary button--block button--large" type="submit" value="Totême 메인으로">
+                     </div>
+               </form>
 
-               <div class='content-line line-block'>
-               </div>
-               <div class='section text'>
+            </div>
 
-                  <div class="text-block ">
-                     <p >주문번호가 기억나지 않으시면, 고객센터(0000-0000)로 문의주세요.</p>
-                  </div>
-               </div>
-          </div>
-       </div>
-    </div>
- </div>
+
+
+
+         </div>
+      </div>
+   </div>
+</div>
          <!-- END content_for_index -->
       </main>
       <!-- Footer -->
@@ -2019,6 +1999,14 @@
       <script src="../js/swiper-bundle.min.js"></script>
       <script src="../js/image-zoom.min.js"></script>
       <script src='../js/toteme.layout.js'></script>
+
+      
+      <link type="text/css" href="../css/layout.theme.css" rel="stylesheet">
+      <link rel="prefetch"  href="../css/layout.checkout.css" as="style">
+      <link rel="prefetch"  href="../css/layout.gift_card.css" as="style">
+      <link rel="prefetch"  href="../css/layout.password.css" as="style">
+      <link rel="prefetch"  href="../css/layout.styleguide.css" as="style">
+      <link href="../css/flag-icon.min.css" rel="stylesheet" type="text/css" media="all">
 
    </body>
 </html>

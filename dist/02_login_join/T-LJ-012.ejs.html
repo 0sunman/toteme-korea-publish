@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="esc-bind" lang="ko">
+<html class="esc-bind" lang="en">
    <head>
     <title>Totême - Official online store</title>
       <meta charset="utf-8">
@@ -13,17 +13,9 @@
       <link type="text/css" href="../css/layout.checkout.css" rel="stylesheet">
       
       <link href="../css/main_etc.css" rel="stylesheet">
-      
-      <link type="text/css" href="../css/layout.theme.css" rel="stylesheet">
-      <link rel="prefetch"  href="../css/layout.checkout.css" as="style">
-      <link rel="prefetch"  href="../css/layout.gift_card.css" as="style">
-      <link rel="prefetch"  href="../css/layout.password.css" as="style">
-      <link rel="prefetch"  href="../css/layout.styleguide.css" as="style">
-      <link href="../css/flag-icon.min.css" rel="stylesheet" type="text/css" media="all">
-      <link href="../css/appmate-wishlist-king.scss.css" rel="stylesheet">
-
       <!--link href="/css/toteme.custom.css" rel="stylesheet"-->
       <link href="../css/toteme.custom.css" rel="stylesheet">
+      <link href="../css/appmate-wishlist-king.scss.css" rel="stylesheet">
       <style>
 
          header.site-header-wrapper .site-nav__link{border:0px; background-color: transparent;}
@@ -965,15 +957,12 @@
       <main id="MainContent" class="main-content critical-clear">
          <!-- BEGIN content_for_index -->
          <!--  include ("./pages/00_main/index.ejs") BEGIN content_for_index -->
-         <div class="container login_join select_email">
+         
+<div class="container login_join newpassword day-90">
    <div class="template-account__header">
       회원가입
    </div>
-   <div class="template-account__wrapper select_email">
-
-
-
-
+   <div class="template-account__wrapper findpassword newpassword">
       <div class="template-account__left"></div>
       <div class="template-account__navlist ">
     <div class="template-account__navlist--content">
@@ -1022,95 +1011,74 @@
  
    <script>
       setTimeout(function(){
-         $(".main-title.custom-select__label").text("회원가입");
-         $("a[href='/account/register']").addClass("is-active");
+         $(".main-title.custom-select__label").text("아이디 찾기");
+         $("a[href='/account/login#reactivate']").addClass("is-active");
       },100)
       </script>
    
       <div class="template-account__content">
          <div class="template-login__content">
 
-            <div class="template-account__text_hdtype_1 alert" style='display:none;'>
+            <div class="template-account__text_hdtype_1 alert" style='display:none'>
                <div class="rte">
                   안내문구 출력 영역
                </div>
             </div>
-            <div class=" template-login__form-wrapper" js-password-form="customerLoginForm">
-
-               <div class='defaultblock sns-buttons label-block '>
-                  <label class='radiobutton kakao'>
-                     <input type="radio" name="test_radio" value="옵션1" checked/>
-                     <span>카카오톡</span>
-                  </label>
-                  <label class='radiobutton email' style='clear:both'>
-                     <input type="radio" name="test_radio" value="옵션1"/>
-                     <span>이메일</span>
-                  </label>
-                  <div class='newline'></div>
-                  <label class='radiobutton google'>
-                     <input type="radio" name="test_radio" value="옵션1"/>
-                     <span>구글</span>
-                  </label>
-                  <label class='radiobutton facebook'>
-                     <input type="radio" name="test_radio" value="옵션1"/>
-                     <span>페이스북</span>
-                  </label>
-                  <label class='radiobutton cellphone'>
-                     <input type="radio" name="test_radio" value="옵션1"/>
-                     <span>휴대폰 인증</span>
-                  </label>
-
+            <div class='text section'>
+               <div class="text-block password-modify-header">
+                  <h2>비밀번호 변경해 주세요</h2>
+                  <p>현재 고객님께서는 오랫동안 비밀번호를 변경하지 않고 같은 비밀번호를 사용하고 계십니다.<br><br>
+                     소중한 개인정보를 지키기 위해 비밀번호 변경을 해주시기 바랍니다.<br><br>
+                     - 비밀번호를 변경하시려면 기존의 비밀번호와 새 비밀번호를 차례대로 입력하여 주세요.<br>
+                     - 기존에 사용하셨던 비밀번호는 사용하실 수 없습니다.<br>
+                     - 비밀번호는 10~30자 이내로 영문자, 숫자, 특수문자 중 2가지 이상 포함으로 사용 가능합니다.
+                  </p>
                </div>
-
-               
-               <div class='line-block content-line'>
-               </div>
-               <div class='section'>
-                  
-                  <div class='defaultblock email align-center'>
-
-                     <div class="inputEmail table-block">
-                        <div>
-                           <input style='display: inline-block;' autocapitalize="off" autocomplete="off" autofocus="" placeholder="이메일" required="" spellcheck="false" type="email">
-                        </div>
-                        <div>
-                           <div class='select-wrap'>
-
-                              <select  class="toteme-select-style toteme-button-style" >
-                                 <option value="AF">naver.com</option>
-                                 <option value="AX">gmail.com</option>
-                                 <option value="AX">직접입력</option>
-                              </select>
-                              </div>
-      
-                        </div>
-                     </div>
-                  </div>
-               </div>
-
-
-               
-               <div class='section text'>
-                  <div class='text-block description emailInfo'>
-                     <p>
-                        이메일을 인증을 위한 이메일 주소 수집/이용에 동의하십니까? <br>동의에 거부할 권리나 의사가 있으나,
-                        거부시 회원가입이 진행되지 않습니다. 수집한 개인정보는 인증 완료 시까지 보관합니다.
-                     </p>
-                  </div>
-               </div>
-               <div class='section'>
-                  <div class='button-block agree align-center'>
-                     <input class="toteme-button-style button big agree-button" type="button" value="동의하고 인증하기"/>
-                  </div>
-               </div>
-                         
             </div>
+            <div class='section'>
+               <form method="post">
+                  <input type="hidden" name="form_type" value="customer_login"><input type="hidden" name="utf8" value="✓">
+                  <div class="label-block input-block password">
+                     <label class="subtitle-2 is-hidden" for="password">
+                     </label>
+                     <input id="password" autocapitalize="off" autocomplete="off" autofocus="" name="customer[password]" placeholder="기존 비밀번호" required="" spellcheck="false" type="password">
+                  </div>
+                  
+                  <div class="text-block sub-description ">
+                     <p class='m-font-13'>10-30자 이내로 영문자, 숫자, 특수문자 등 2가지 이상 포함</p>
+                  </div>
+                  
+                  <div class="label-block input-block newpassword">
+                     <label class="subtitle-2 is-hidden" for="newpassowrd">
+                     </label>
+                     <input id="newpassowrd" autocapitalize="off" autocomplete="off" autofocus="" name="customer[newpassword]" placeholder="새 비밀번호" required="" spellcheck="false" type="password">
+                  </div>
+                  
+                  <div class="label-block input-block newpasswordconfirm">
+                     <label class="form-group__label subtitle-2 is-hidden" for="CustomerEmail">
+                     </label>
+                     <input id="CustomerEmail" autocapitalize="off" autocomplete="off" autofocus="" name="customer[newpasswordconfirm]" placeholder="새 비밀번호 확인" required="" spellcheck="false" type="password">
+                  </div>
+                  <div class="text-block sub-description ">
+                     <p>비밀번호를 다시 입력해 주세요.</p>
+                  </div>
+                  <div class="button-block button-password-modify">
+                     <input class="button button--primary button--block button--large m-font-14" type="submit" value="비밀번호 변경하기">
+                  </div>
+                  <div class="button-block button-password-skip">
+                     <input class="button button--primary button--block button--large m-font-14" type="submit" value="다음에 변경하기">
+                  </div>
+
+               </form>
+
+         </div>
+
+
+
+
 
          </div>
       </div>
-
-
-
    </div>
 </div>
          <!-- END content_for_index -->
@@ -2069,6 +2037,14 @@
       <script src="../js/swiper-bundle.min.js"></script>
       <script src="../js/image-zoom.min.js"></script>
       <script src='../js/toteme.layout.js'></script>
+
+      
+      <link type="text/css" href="../css/layout.theme.css" rel="stylesheet">
+      <link rel="prefetch"  href="../css/layout.checkout.css" as="style">
+      <link rel="prefetch"  href="../css/layout.gift_card.css" as="style">
+      <link rel="prefetch"  href="../css/layout.password.css" as="style">
+      <link rel="prefetch"  href="../css/layout.styleguide.css" as="style">
+      <link href="../css/flag-icon.min.css" rel="stylesheet" type="text/css" media="all">
 
    </body>
 </html>
