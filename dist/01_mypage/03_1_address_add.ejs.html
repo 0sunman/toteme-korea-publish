@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="esc-bind" lang="en">
+<html class="esc-bind" lang="ko">
    <head>
     <title>Totême - Official online store</title>
       <meta charset="utf-8">
@@ -13,9 +13,17 @@
       <link type="text/css" href="../css/layout.checkout.css" rel="stylesheet">
       
       <link href="../css/main_etc.css" rel="stylesheet">
+      
+      <link type="text/css" href="../css/layout.theme.css" rel="stylesheet">
+      <link rel="prefetch"  href="../css/layout.checkout.css" as="style">
+      <link rel="prefetch"  href="../css/layout.gift_card.css" as="style">
+      <link rel="prefetch"  href="../css/layout.password.css" as="style">
+      <link rel="prefetch"  href="../css/layout.styleguide.css" as="style">
+      <link href="../css/flag-icon.min.css" rel="stylesheet" type="text/css" media="all">
+      <link href="../css/appmate-wishlist-king.scss.css" rel="stylesheet">
+
       <!--link href="/css/toteme.custom.css" rel="stylesheet"-->
       <link href="../css/toteme.custom.css" rel="stylesheet">
-      <link href="../css/appmate-wishlist-king.scss.css" rel="stylesheet">
       <style>
 
          header.site-header-wrapper .site-nav__link{border:0px; background-color: transparent;}
@@ -1040,61 +1048,61 @@
 							배송지 추가
 						</div>
 						<form action="" method="">
-							<div class="form-group">
-								<div class="input-block form-group__field form_padding">
-									<input placeholder="받는 사람" class="field__input" size="30" type="text" name="checkout[name1]" id="checkout_name1">
+							<div class="input-block name">
+								<label class="field__label" for="checkout_name2">받는 사람</label>
+								<input placeholder="받는 사람" class="field__input" type="text" name="checkout[name2]" id="checkout_name2">
+							</div>
+							<div class="input-block phone_form">
+								<div>
+									<label class="field__label" for="checkout_phone3">휴대폰번호(필수)</label>
+									<input placeholder="휴대폰번호(필수)" class="field__input" type="text" name="checkout[phone3]" id="checkout_phone3">
 								</div>
-								<div class="input-block form-group__field form_padding">
-									<div class="input-table phone_form">
-										<div>
-											<input placeholder="휴대폰번호(필수)" class="field__input" size="30" type="text" name="checkout[phone]" id="checkout_phone">
-										</div>
-										<div>
-											<button type="button" class="btn_plus">추가
-												<svg class="icon icon--large" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(45deg);">
-													<path fill-rule="evenodd" clip-rule="evenodd" d="M2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
-												</svg>
-											</button>
-										</div>
-									</div>
-									<div class="input_phone_plus">
-										<input placeholder="추가연락처" class="field__input" size="30" type="text" name="checkout[phone2]">
-									</div>
+								<div>
+									<button type="button" class="btn_plus">추가
+										<svg class="icon icon--large" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(45deg);">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+										</svg>
+									</button>
 								</div>
-								<div class="input-block form-group__field form_padding">
-									<div class="input-table phone_addr">
-										<div>
-											<input placeholder="배송지주소" class="field__input" size="30" type="text" name="checkout[addr]" id="checkout_addr">
-										</div>
-										<div>
-											<button type="button" class="button button--large no-animation modal_trigger" data-modal="address-modal">찾기</button>
-										</div>
-									</div>
+							</div>
+							<div class="input-block input_phone_plus">
+								<input placeholder="추가연락처" class="field__input" type="text" name="checkout[phone4]">
+							</div>
+							<div class="input-block addr_form">
+								<div>
+									<label class="field__label" for="checkout_addr4">배송지주소</label>
+									<input placeholder="배송지주소" class="field__input" type="text" name="checkout[addr]" id="checkout_addr4">
 								</div>
-								<div class="input-block form-group__field form_padding">
-									<input placeholder="주소" class="field__input" size="30" type="text" name="checkout[addr2]" id="checkout_addr2" readonly="">
+								<div>
+									<button type="button" class="button button--large no-animation modal_trigger" data-modal="address-modal">찾기</button>
 								</div>
-								<div class="input-block form-group__field form_padding">
-									<input placeholder="상세주소" class="field__input" size="30" type="text" name="checkout[addr3]" id="checkout_addr3">
+							</div>
+							<div class="input-block address1">
+								<label class="field__label" for="checkout_addr5">주소</label>
+								<input placeholder="주소" class="field__input" type="text" name="checkout[addr5]" id="checkout_addr5" readonly>
+							</div>
+							<div class="input-block address2">
+								<label class="field__label" for="checkout_addr6">상세주소</label>
+								<input placeholder="상세주소" class="field__input" type="text" name="checkout[addr3]" id="checkout_addr6">
+							</div>
+							<div class="input-block delivery_message">
+								<label class="field__label" for="checkout_memo2">배송시 요청사항 선택</label>
+								<select id="checkout_memo2" class="toteme-select-style">
+									<option value="" disabled="" selected="">배송시 요청사항 선택</option>
+									<option value="">배송 전 연락바랍니다.</option>
+									<option value="">택배함에 넣어주세요.</option>
+									<option value="">빠른 배송 부탁 드립니다.</option>
+									<option value="">부재 시 경비실에 맡겨주세요.</option>
+									<option value="">핸드폰으로 연락 부탁 드립니다.</option>
+									<option value="direct">직접입력</option>
+								</select>
+								<div class="input-block direct_input">
+									<input type="text" placeholder="배송 시 요청사항을 입력하세요" class="field__input" size="30">
 								</div>
-								<div class="input-block form-group__field form_padding">
-									<select id="checkout_memo" class="field__input field__input--select toteme-select-style toteme-button-style no-animation">
-										<option value="" disabled="" selected="">배송시 요청사항 선택</option>
-										<option value="">배송 전 연락바랍니다.</option>
-										<option value="">택배함에 넣어주세요.</option>
-										<option value="">빠른 배송 부탁 드립니다.</option>
-										<option value="">부재 시 경비실에 맡겨주세요.</option>
-										<option value="">핸드폰으로 연락 부탁 드립니다.</option>
-										<option value="direct">직접입력</option>
-									</select>
-									<div class="input-block direct_input">
-										<input type="text" placeholder="배송 시 요청사항을 입력하세요" class="field__input" size="30">
-									</div>
-								</div>
-								<div class="input-block pcs2 form_padding">
-									<input class="btn white" type="submit" value="취소">
-									<input class="btn" type="submit" value="저장">
-								</div>
+							</div>
+							<div class="button-block pcs2">
+								<input class="btn white" type="submit" value="취소">
+								<input class="btn" type="submit" value="저장">
 							</div>
 						</form>
 					</div>
@@ -2192,14 +2200,6 @@
       <script src="../js/swiper-bundle.min.js"></script>
       <script src="../js/image-zoom.min.js"></script>
       <script src='../js/toteme.layout.js'></script>
-
-      
-      <link type="text/css" href="../css/layout.theme.css" rel="stylesheet">
-      <link rel="prefetch"  href="../css/layout.checkout.css" as="style">
-      <link rel="prefetch"  href="../css/layout.gift_card.css" as="style">
-      <link rel="prefetch"  href="../css/layout.password.css" as="style">
-      <link rel="prefetch"  href="../css/layout.styleguide.css" as="style">
-      <link href="../css/flag-icon.min.css" rel="stylesheet" type="text/css" media="all">
 
    </body>
 </html>

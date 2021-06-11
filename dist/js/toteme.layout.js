@@ -130,7 +130,7 @@ Util.prototype.registerEvent = function(option){
             $(document).on('click', '.phone_form .btn_plus', function(){
                 $(this).parents('.phone_form').toggleClass("active");
             });
-            $('.field__input--select').on('change', function() {
+            $('.toteme-select-style').on('change', function() {
                 if($(this).val() == "direct"){
                         $(this).next('.input-block.direct_input').addClass('active');
                 }else{
@@ -216,9 +216,9 @@ Util.prototype.registerEvent = function(option){
             });
             
             // 주소 수정 toggle
-            var changeHTML = $('.address_select_box .address_change_box').clone();
+            var changeHTML = $('.address_change_box').clone();
             $('[data-address-change]').on('click', function(){
-                var thisWrap = $(this).parents('.content-box__row'),
+                var thisWrap = $(this).parents('.address_each'),
                         openClass = 'change_open',
                         cloneBox = '.address_change_box';
                 if ( !thisWrap.hasClass(openClass) ){

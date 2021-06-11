@@ -50,309 +50,281 @@
 	<div class="checkout__content content">
 		<div class="wrap">
 			<div class="checkout__main main">
-				<header class="checkout__main-header main__header">
-					<div class="checkout__breadcrumbs">
-						<nav>
-							<ol class="breadcrumb">
-								<li class="breadcrumb__item breadcrumb__item--completed">
-									<a class="breadcrumb__link" href="https://int.toteme-studio.com/">장바구니</a>
-									<svg class="icon-svg icon-svg--color-adaptive-light icon-svg--size-10 breadcrumb__chevron-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><path d="M2 1l1-1 4 4 1 1-1 1-4 4-1-1 4-4"></path></svg>
-								</li>
-								<li class="breadcrumb__item breadcrumb__item--completed">
-									<a class="breadcrumb__link" href="#">주문정보</a>
-									<svg class="icon-svg icon-svg--color-adaptive-light icon-svg--size-10 breadcrumb__chevron-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><path d="M2 1l1-1 4 4 1 1-1 1-4 4-1-1 4-4"></path></svg>
-								</li>
-								<li class="breadcrumb__item breadcrumb__item--current">
-									<span class="breadcrumb__text">결제</span>
-								</li>
-							</ol>
-						</nav>
+				<div class="checkout_wrap">
+					<div class="checkout_header">
+						<ol class="checkout_breadcrumb">
+							<li class="active">주문정보</li>
+							<li class="active">결제</li>
+						</ol>
 					</div>
-				</header>
-				<main class="main__content">
-					<div class="step" data-step="shipping_method">
-						<form class="edit_checkout animate-floating-labels" action="#" method="post">
-							<div class="step__sections">
-								<div class="section section--contact-information">
-									<div class="content-box__row non_member_info">
-										<div class="review-block">
-											<div class="review-block__inner">
-												<div class="review-block__label">
-													이현대
+					<div class="checkout_body">
+						<div class="checkout_section">
+							<div class="address_info_box">
+								<div class="member_address_info">
+									<p>이현대<br>
+										010-1234-5678<br>
+										서울특별시 강남구 강남대로1길 1층</p>
+								</div>
+								<button type="button" class="a_link address_edit_btn" data-address="address_info_change">수정</button>
+							</div>
+						</div>
+
+						<div class="checkout_section">
+							<h5 class="checkout_tit1">결제</h5>
+							<div class="checkout_content payment_wrap">
+								<div class="sns-buttons payment_type">
+									<label class="radiobutton">
+										<input type="radio" name="test_radio" value="1" data-type="payment_type1">
+										<span>신용카드</span>
+									</label>
+									<label class="radiobutton" style="clear:both">
+										<input type="radio" name="test_radio" value="2" data-type="payment_type2">
+										<span>무통장입금</span>
+									</label>
+									<br>
+									<label class="radiobutton">
+										<input type="radio" name="test_radio" value="3" data-type="payment_type3">
+										<span>휴대폰결제</span>
+									</label>
+									<label class="radiobutton">
+										<input type="radio" name="test_radio" value="4" data-type="payment_type4">
+										<span>실시간계좌이체</span>
+									</label>
+									<label class="radiobutton">
+										<input type="radio" name="test_radio" value="5" data-type="payment_type5">
+										<span>네이버페이</span>
+									</label>
+
+									<div class="payment_con_box">
+										<div class="payment_type1">
+											<h5 class="payment_tit1">카드선택</h5>
+											<div class="payment_radio_wrap">
+												<div class="radio_custom_box">
+													<input id="credit_card1" class="radio_input" value="1" type="radio" name="credit_card">
+													<label for="credit_card1">KB국민카드</label>
 												</div>
-												<div class="review-block__content">
-													<address class="address address--tight">
-														010-1234-5678<br>
-														서울특별시 강남구 강남대로1길 1층
-													</address>
+												<div class="radio_custom_box">
+													<input id="credit_card2" class="radio_input" value="2" type="radio" name="credit_card" data-card-attr="add_plan">
+													<label for="credit_card2">삼성카드</label>
+												</div>
+												<div class="radio_custom_box">
+													<input id="credit_card3" class="radio_input" value="3" type="radio" name="credit_card" data-card-attr="add_plan">
+													<label for="credit_card3">현대카드</label>
+												</div>
+												<div class="radio_custom_box">
+													<input id="credit_card4" class="radio_input" value="4" type="radio" name="credit_card" data-card-attr="add_plan">
+													<label for="credit_card4">신한카드</label>
+												</div>
+												<div class="radio_custom_box">
+													<input id="credit_card5" class="radio_input" value="5" type="radio" name="credit_card" data-card-attr="add_bc">
+													<label for="credit_card5">BC카드</label>
+												</div>
+												<div class="radio_custom_box">
+													<input id="credit_card6" class="radio_input" value="6" type="radio" name="credit_card" data-card-attr="add_plan">
+													<label for="credit_card6">롯데카드</label>
+												</div>
+												<div class="radio_custom_box">
+													<input id="credit_card7" class="radio_input" value="7" type="radio" name="credit_card" data-card-attr="add_plan">
+													<label for="credit_card7">KEB하나카드</label>
+												</div>
+												<div class="radio_custom_box">
+													<input id="credit_card8" class="radio_input" value="8" type="radio" name="credit_card" data-card-attr="add_plan">
+													<label for="credit_card8">NH농협카드</label>
+												</div>
+												<div class="radio_custom_box">
+													<input id="credit_card9" class="radio_input" value="9" type="radio" name="credit_card">
+													<label for="credit_card9">카카오뱅크</label>
+												</div>
+												<div class="radio_custom_box">
+													<input id="credit_card10" class="radio_input" value="10" type="radio" name="credit_card">
+													<label for="credit_card10">케이뱅크</label>
+												</div>
+												<div class="radio_custom_box">
+													<input id="credit_card11" class="radio_input" value="11" type="radio" name="credit_card" data-card-attr="add_hpoint">
+													<label for="credit_card11">H.point KB 국민카드</label>
 												</div>
 											</div>
-											<div role="cell" class="review-block__link">
-												<a class="link--small" href="#">
-													<span aria-hidden="true">수정</span>
-												</a>
+											
+											<div class="card_type_box">
+												<div class="add_plan">
+													<div class="input-block form-group__field form_padding">
+														<select id="payment_plan" class="field__input field__input--select toteme-select-style toteme-button-style no-animation" title="할부 선택">
+															<option value="" selected="">일시불</option>
+															<option value="">2개월</option>
+														</select>
+													</div>
+												</div>
+												<div class="add_bc">
+													<h6 class="payment_tit1">BC카드종류</h6>
+													교보증권, 유진투자증권, 미래에셋증권, 유안타증권, DB금융투자, SK증권, NH투자증권, 코나카드, 토스카드, 산림조합, 한국투자증권, 은행카드
+												</div>
+												<div class="add_hpoint">
+													<h6 class="payment_tit1">H.Point 추가적립</h6>
+													결제금액 최대 1.5% H.Point 추가적립 (기본적립율 포함 최대 1.65% 적립)
+													카드대금 결제일 다음주 첫 영업일 적립
+												</div>
 											</div>
 										</div>
-									</div>
-								</div>
-								<div class="section section--shipping-method section--payment section--payment-method">
-									<div class="section__header">
-										<h2 class="section__title" id="section-delivery-title">
-											결제
-										</h2>
-									</div>
-									<div class="section__content sns-buttons payment_type">
-										<label class="radiobutton">
-											<input type="radio" name="test_radio" value="1" data-type="payment_type1">
-											<span>신용카드</span>
-										</label>
-										<label class="radiobutton" style="clear:both">
-											<input type="radio" name="test_radio" value="2" data-type="payment_type2">
-											<span>무통장입금</span>
-										</label>
-										<br>
-										<label class="radiobutton">
-											<input type="radio" name="test_radio" value="3" data-type="payment_type3">
-											<span>휴대폰결제</span>
-										</label>
-										<label class="radiobutton">
-											<input type="radio" name="test_radio" value="4" data-type="payment_type4">
-											<span>실시간계좌이체</span>
-										</label>
-										<label class="radiobutton">
-											<input type="radio" name="test_radio" value="5" data-type="payment_type5">
-											<span>네이버페이</span>
-										</label>
-
-										<div class="payment_con_box">
-											<div class="payment_type1">
-												<h5 class="payment_tit1">카드선택</h5>
-												<div class="payment_radio_wrap">
-													<div class="radio_custom_box">
-														<input id="credit_card1" class="radio_input" value="1" type="radio" name="credit_card">
-														<label for="credit_card1">KB국민카드</label>
-													</div>
-													<div class="radio_custom_box">
-														<input id="credit_card2" class="radio_input" value="2" type="radio" name="credit_card" data-card-attr="add_plan">
-														<label for="credit_card2">삼성카드</label>
-													</div>
-													<div class="radio_custom_box">
-														<input id="credit_card3" class="radio_input" value="3" type="radio" name="credit_card" data-card-attr="add_plan">
-														<label for="credit_card3">현대카드</label>
-													</div>
-													<div class="radio_custom_box">
-														<input id="credit_card4" class="radio_input" value="4" type="radio" name="credit_card" data-card-attr="add_plan">
-														<label for="credit_card4">신한카드</label>
-													</div>
-													<div class="radio_custom_box">
-														<input id="credit_card5" class="radio_input" value="5" type="radio" name="credit_card" data-card-attr="add_bc">
-														<label for="credit_card5">BC카드</label>
-													</div>
-													<div class="radio_custom_box">
-														<input id="credit_card6" class="radio_input" value="6" type="radio" name="credit_card" data-card-attr="add_plan">
-														<label for="credit_card6">롯데카드</label>
-													</div>
-													<div class="radio_custom_box">
-														<input id="credit_card7" class="radio_input" value="7" type="radio" name="credit_card" data-card-attr="add_plan">
-														<label for="credit_card7">KEB하나카드</label>
-													</div>
-													<div class="radio_custom_box">
-														<input id="credit_card8" class="radio_input" value="8" type="radio" name="credit_card" data-card-attr="add_plan">
-														<label for="credit_card8">NH농협카드</label>
-													</div>
-													<div class="radio_custom_box">
-														<input id="credit_card9" class="radio_input" value="9" type="radio" name="credit_card">
-														<label for="credit_card9">카카오뱅크</label>
-													</div>
-													<div class="radio_custom_box">
-														<input id="credit_card10" class="radio_input" value="10" type="radio" name="credit_card">
-														<label for="credit_card10">케이뱅크</label>
-													</div>
-													<div class="radio_custom_box">
-														<input id="credit_card11" class="radio_input" value="11" type="radio" name="credit_card" data-card-attr="add_hpoint">
-														<label for="credit_card11">H.point KB 국민카드</label>
-													</div>
+										<div class="payment_type2">
+											<h5 class="payment_tit1">은행선택</h5>
+											<div class="payment_radio_wrap">
+												<div class="radio_custom_box">
+													<input id="bank1" class="radio_input" value="1" type="radio" name="bank">
+													<label for="bank1">NH농협은행</label>
 												</div>
-												
-												<div class="card_type_box">
-													<div class="add_plan">
-														<div class="input-block form-group__field form_padding">
-															<select id="payment_plan" class="field__input field__input--select toteme-select-style toteme-button-style no-animation" title="할부 선택">
-																<option value="" selected="">일시불</option>
-																<option value="">2개월</option>
-															</select>
-														</div>
-													</div>
-													<div class="add_bc">
-														<h6 class="payment_tit1">BC카드종류</h6>
-														교보증권, 유진투자증권, 미래에셋증권, 유안타증권, DB금융투자, SK증권, NH투자증권, 코나카드, 토스카드, 산림조합, 한국투자증권, 은행카드
-													</div>
-													<div class="add_hpoint">
-														<h6 class="payment_tit1">H.Point 추가적립</h6>
-														결제금액 최대 1.5% H.Point 추가적립 (기본적립율 포함 최대 1.65% 적립)
-														카드대금 결제일 다음주 첫 영업일 적립
-													</div>
+												<div class="radio_custom_box">
+													<input id="bank2" class="radio_input" value="2" type="radio" name="bank">
+													<label for="bank2">KB국민은행</label>
+												</div>
+												<div class="radio_custom_box">
+													<input id="bank3" class="radio_input" value="3" type="radio" name="bank">
+													<label for="bank3">우리은행</label>
+												</div>
+												<div class="radio_custom_box">
+													<input id="bank4" class="radio_input" value="4" type="radio" name="bank">
+													<label for="bank4">신한은행</label>
+												</div>
+												<div class="radio_custom_box">
+													<input id="bank5" class="radio_input" value="5" type="radio" name="bank">
+													<label for="bank5">IBK기업은행</label>
+												</div>
+												<div class="radio_custom_box">
+													<input id="bank6" class="radio_input" value="6" type="radio" name="bank">
+													<label for="bank6">대구은행</label>
+												</div>
+												<div class="radio_custom_box">
+													<input id="bank7" class="radio_input" value="7" type="radio" name="bank">
+													<label for="bank7">부산은행</label>
+												</div>
+												<div class="radio_custom_box">
+													<input id="bank8" class="radio_input" value="8" type="radio" name="bank">
+													<label for="bank8">우체국</label>
+												</div>
+												<div class="radio_custom_box">
+													<input id="bank9" class="radio_input" value="9" type="radio" name="bank">
+													<label for="bank9">KEB하나은행</label>
+												</div>
+												<div class="radio_custom_box">
+													<input id="bank10" class="radio_input" value="10" type="radio" name="bank">
+													<label for="bank10">경남은행</label>
 												</div>
 											</div>
-											<div class="payment_type2">
-												<h5 class="payment_tit1">은행선택</h5>
-												<div class="payment_radio_wrap">
-													<div class="radio_custom_box">
-														<input id="bank1" class="radio_input" value="1" type="radio" name="bank">
-														<label for="bank1">NH농협은행</label>
-													</div>
-													<div class="radio_custom_box">
-														<input id="bank2" class="radio_input" value="2" type="radio" name="bank">
-														<label for="bank2">KB국민은행</label>
-													</div>
-													<div class="radio_custom_box">
-														<input id="bank3" class="radio_input" value="3" type="radio" name="bank">
-														<label for="bank3">우리은행</label>
-													</div>
-													<div class="radio_custom_box">
-														<input id="bank4" class="radio_input" value="4" type="radio" name="bank">
-														<label for="bank4">신한은행</label>
-													</div>
-													<div class="radio_custom_box">
-														<input id="bank5" class="radio_input" value="5" type="radio" name="bank">
-														<label for="bank5">IBK기업은행</label>
-													</div>
-													<div class="radio_custom_box">
-														<input id="bank6" class="radio_input" value="6" type="radio" name="bank">
-														<label for="bank6">대구은행</label>
-													</div>
-													<div class="radio_custom_box">
-														<input id="bank7" class="radio_input" value="7" type="radio" name="bank">
-														<label for="bank7">부산은행</label>
-													</div>
-													<div class="radio_custom_box">
-														<input id="bank8" class="radio_input" value="8" type="radio" name="bank">
-														<label for="bank8">우체국</label>
-													</div>
-													<div class="radio_custom_box">
-														<input id="bank9" class="radio_input" value="9" type="radio" name="bank">
-														<label for="bank9">KEB하나은행</label>
-													</div>
-													<div class="radio_custom_box">
-														<input id="bank10" class="radio_input" value="10" type="radio" name="bank">
-														<label for="bank10">경남은행</label>
-													</div>
+											
+											<div class="bank_type_box">
+												<div class="input-block payment_name">
+													<input placeholder="입금자명" value="이현대" class="field__input" type="text" name="payment[name]" id="payment_name" title="입금자명">
 												</div>
-												
-												<div class="bank_type_box form-group">
-													<div class="input-block form-group__field form_padding">
-														<input placeholder="입금자명" value="이현대" class="field__input" size="30" type="text" name="payment[name]" id="payment_name" title="입금자명">
-													</div>
-													<ul class="comment dot_list">
-														<li>무통장입금 정보는 결제 시 보여집니다.</li>
-														<li>무통장입금계좌번호는 주문접수 후 즉시 주문하시는 분의 휴대폰 번호와 이메일로 자동 발송됩니다.</li>
+												<ul class="dot_list">
+													<li>무통장입금 정보는 결제 시 보여집니다.</li>
+													<li>무통장입금계좌번호는 주문접수 후 즉시 주문하시는 분의 휴대폰 번호와 이메일로 자동 발송됩니다.</li>
+												</ul>
+												<div class="payment_account_info">
+												<!-- 회원일 경우 -->
+													<ul>
+														<li><span class="tit">입금금액</span><span>1,000,000원</span></li>
+														<li><span class="tit">입금은행</span><span>국민 1234-1234-1234</span></li>
+														<li><span class="tit">입금자명</span><span>김선호</span></li>
 													</ul>
-													<div class="payment_account_info">
-													<!-- 회원일 경우 -->
-														<ul>
-															<li><span class="tit">입금금액</span><span>1,000,000원</span></li>
-															<li><span class="tit">입금은행</span><span>국민 1234-1234-1234</span></li>
-															<li><span class="tit">입금자명</span><span>김선호</span></li>
-														</ul>
+												</div>
+											</div>
+											<div class="cash_receipt_box">
+												<h5 class="payment_tit1">현금영수증 발급 신청</h5>
+												<div class="payment_radio_wrap">
+													<div class="radio_custom_box">
+														<input id="receipt1" class="radio_input" value="1" type="radio" name="receipt" data-receipt="receipt_type1">
+														<label for="receipt1">소득공제용</label>
+													</div>
+													<div class="radio_custom_box">
+														<input id="receipt2" class="radio_input" value="2" type="radio" name="receipt" data-receipt="receipt_type2">
+														<label for="receipt2">지출증빙용</label>
+													</div>
+													<div class="radio_custom_box">
+														<input id="receipt3" class="radio_input" value="3" type="radio" name="receipt" checked>
+														<label for="receipt3">신청안함</label>
 													</div>
 												</div>
-												<div class="cash_receipt_box">
-													<h5 class="payment_tit1">현금영수증 발급 신청</h5>
-													<div class="payment_radio_wrap">
-														<div class="radio_custom_box">
-															<input id="receipt1" class="radio_input" value="1" type="radio" name="receipt" data-receipt="receipt_type1">
-															<label for="receipt1">소득공제용</label>
-														</div>
-														<div class="radio_custom_box">
-															<input id="receipt2" class="radio_input" value="2" type="radio" name="receipt" data-receipt="receipt_type2">
-															<label for="receipt2">지출증빙용</label>
-														</div>
-														<div class="radio_custom_box">
-															<input id="receipt3" class="radio_input" value="3" type="radio" name="receipt" checked>
-															<label for="receipt3">신청안함</label>
-														</div>
-													</div>
-													<div class="receipt_type_box">
-														<div class="receipt_type1">
-															<div class="bank_type_box form-group">
-																<div class="input-block form-group__field">
-																	<input placeholder="휴대폰번호(필수)" class="field__input" size="30" type="text" name="receipt[phone]" id="receipt_phone" title="휴대폰번호 필수입력">
-																</div>
-																<p class="comment">'-' 없이 숫자만 입력하세요.</p>
+												<div class="receipt_type_box">
+													<div class="receipt_type1">
+														<div class="bank_type_box">
+															<div class="input-block">
+																<input placeholder="휴대폰번호(필수)" class="field__input"  type="text" name="receipt[phone]" id="receipt_phone" title="휴대폰번호 필수입력">
+															</div>
+															<div class="text-block sub-description">
+																<p>'-' 없이 숫자만 입력하세요.</p>
 															</div>
 														</div>
-														<div class="receipt_type2">
-															<div class="bank_type_box form-group">
-																<div class="input-block form-group__field">
-																	<input placeholder="사업자등록번호(필수)" class="field__input" size="30" type="text" name="receipt[num]" id="receipt_num" title="사업자등록번호 필수입력">
-																</div>
+													</div>
+													<div class="receipt_type2">
+														<div class="bank_type_box">
+															<div class="input-block">
+																<input placeholder="사업자등록번호(필수)" class="field__input"  type="text" name="receipt[num]" id="receipt_num" title="사업자등록번호 필수입력">
 															</div>
 														</div>
 													</div>
 												</div>
 											</div>
-											<div class="payment_type3">
-												<p>결제금액 1,000,000원</p>
-												<ul class="tlist">
-													<li>휴대폰으로 결제하신 금액은 다음달 휴대폰 요금에 함께 청구됩니다.<br>(한도 : 이동통신사 및 개인마다 다름)</li>
-												</ul>
-											</div>
-											<div class="payment_type4">
-												<p>결제금액 1,000,000원</p>
-												<ul class="dot_list">
-													<li>폰뱅킹, 인터넷 뱅킹에 가입하신 고객만 사용 가능합니다. 계좌이체 수수료는 더현대에서 부담합니다.</li>
-													<li>[결제하기] 버튼을 선택하시면 온라인 계좌이체 화면으로 연결되어 결제를 진행할수 있습니다.</li>
-												</ul>
-											</div>
-											<div class="payment_type5">
-												<p>결제금액 1,000,000원</p>
-												<ul class="dot_list">
-													<li>주문 변경 시 카드사 혜택 및 할부 적용 여부는 해당 카드사 정책에 따라 변경될 수 있습니다.</li>
-													<li>네이버페이는 네이버ID로 별도 앱 설치 없이 신용카드 또는 은행계좌 정보를 등록하여 네이버페이 비밀번호로 결제할 수 있는 간편결제 서비스입니다.</li>
-													<li>결제 가능한 신용카드: 신한, 삼성, 현대, BC, 국민, 하나, 롯데, NH농협, 씨티, 카카오뱅크</li>
-													<li>결제 가능한 은행: NH농협, 국민, 신한, 우리, 기업, SC제일, 부산, 경남, 수협, 우체국, 미래에셋대우, 광주, 대구, 전북, 새마을금고, 제주은행, 신협, 하나은행, 케이뱅크, 카카오뱅크, 삼성증권, KDB산업은행,씨티은행, SBI은행, 유안타증권, 유진투자증권</li>
-													<li>네이버페이 카드 간편결제는 네이버페이에서 제공하는 카드사 별 무이자, 청구할인 혜택을 받을 수 있습니다.</li>
-												</ul>
-											</div>
-									 </div>
-								 </div>
-								</div>
-								<div class="section section--payment section--billing-address">
-									<div class="section__content">
-										<div class="form-group">
-											<div class="input-block form-group__field form_padding">
-												<input placeholder="비회원 주문조회 비밀번호" class="field__input" size="30" type="text" name="payment[pw]" id="payment_pw" title="비회원 주문조회 비밀번호 입력">
-											</div>
-											<ul class="comment dot_list">
-												<li>결제완료 후 주문내역 확인을 위해 사용하는 비밀번호입니다.</li>
-												<li>8~10자리 영문, 숫자, 특수문자 중 2가지 이상 조합으로 입력해주세요.</li>
+										</div>
+										<div class="payment_type3">
+											<p><span class="payment_tit2">결제금액</span> 1,000,000원</p>
+											<ul class="dot_list">
+												<li>휴대폰으로 결제하신 금액은 다음달 휴대폰 요금에 함께 청구됩니다.<br>(한도 : 이동통신사 및 개인마다 다름)</li>
 											</ul>
 										</div>
-										<div class="nm_payment_attr field">
-											<p class="payment_guaranty">채무지급 보증안내 - 고객님의 안전거래를 위해 현금결제시 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다. <a href="#" class="a_link modal_trigger" data-modal="ly_guarantee-modal">서비스 가입사실 확인</a></p>
-											<div class="checkbox_custom_box">
-												<input id="payment_agree1" class="checkbox" value="1" type="checkbox">
-												<label for="payment_agree1">비회원 개인정보 수집 이용에 대한 내용을 확인하였으며, 이에 동의합니다. <a href="#" class="a_link modal_trigger" data-modal="nm_privacy-modal">내용보기</a></label>
-											</div>
-											<div class="checkbox_custom_box">
-													<input id="payment_agree2" class="checkbox" value="2" type="checkbox">
-													<label for="payment_agree2">주문하실 상품의 상품평, 가격, 배송정보를 확인하였으며, 이에 동의합니다.</label>
-											</div>
+										<div class="payment_type4">
+											<p><span class="payment_tit2">결제금액</span> 1,000,000원</p>
+											<ul class="dot_list">
+												<li>폰뱅킹, 인터넷 뱅킹에 가입하신 고객만 사용 가능합니다. 계좌이체 수수료는 더현대에서 부담합니다.</li>
+												<li>[결제하기] 버튼을 선택하시면 온라인 계좌이체 화면으로 연결되어 결제를 진행할수 있습니다.</li>
+											</ul>
+										</div>
+										<div class="payment_type5">
+											<p><span class="payment_tit2">결제금액</span> 1,000,000원</p>
+											<ul class="dot_list">
+												<li>주문 변경 시 카드사 혜택 및 할부 적용 여부는 해당 카드사 정책에 따라 변경될 수 있습니다.</li>
+												<li>네이버페이는 네이버ID로 별도 앱 설치 없이 신용카드 또는 은행계좌 정보를 등록하여 네이버페이 비밀번호로 결제할 수 있는 간편결제 서비스입니다.</li>
+												<li>결제 가능한 신용카드: 신한, 삼성, 현대, BC, 국민, 하나, 롯데, NH농협, 씨티, 카카오뱅크</li>
+												<li>결제 가능한 은행: NH농협, 국민, 신한, 우리, 기업, SC제일, 부산, 경남, 수협, 우체국, 미래에셋대우, 광주, 대구, 전북, 새마을금고, 제주은행, 신협, 하나은행, 케이뱅크, 카카오뱅크, 삼성증권, KDB산업은행,씨티은행, SBI은행, 유안타증권, 유진투자증권</li>
+												<li>네이버페이 카드 간편결제는 네이버페이에서 제공하는 카드사 별 무이자, 청구할인 혜택을 받을 수 있습니다.</li>
+											</ul>
+										</div>
+								 </div>
+							 </div>
+							</div>
+							<div class="checkout_content non_member_content">
+								<form action="">
+									<div class="input-block non_member_password">
+										<input placeholder="비회원 주문조회 비밀번호" class="field__input" size="30" type="text" name="payment[pw]" id="payment_pw" title="비회원 주문조회 비밀번호 입력">
+									</div>
+									<ul class="dot_list">
+										<li>결제완료 후 주문내역 확인을 위해 사용하는 비밀번호입니다.</li>
+										<li>8~10자리 영문, 숫자, 특수문자 중 2가지 이상 조합으로 입력해주세요.</li>
+									</ul>
+									<div class="nm_payment_attr">
+										<p class="payment_guaranty">채무지급 보증안내 - 고객님의 안전거래를 위해 현금결제시 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다. <a href="#" class="a_link modal_trigger" data-modal="ly_guarantee-modal">서비스 가입사실 확인</a></p>
+										<div class="checkbox_custom_box">
+											<input id="payment_agree1" class="checkbox" value="1" type="checkbox">
+											<label for="payment_agree1">비회원 개인정보 수집 이용에 대한 내용을 확인하였으며, 이에 동의합니다. <a href="#" class="a_link modal_trigger" data-modal="nm_privacy-modal">내용보기</a></label>
+										</div>
+										<div class="checkbox_custom_box">
+											<input id="payment_agree2" class="checkbox" value="2" type="checkbox">
+											<label for="payment_agree2">주문하실 상품의 상품평, 가격, 배송정보를 확인하였으며, 이에 동의합니다.</label>
 										</div>
 									</div>
-								</div>
-								<div class="step__footer">
-									<button type="button" id="continue_button" class="step__footer__continue-btn btn payment_btn">
-										<span class="btn__content">결제하기</span>
-										<svg class="icon-svg icon-svg--size-18 btn__spinner icon-svg--spinner-button" aria-hidden="true" focusable="false">
-											<use xlink:href="#spinner-button"></use>
-										</svg></button>
-										<a class="step__footer__previous-link" href="#"><svg focusable="false" aria-hidden="true" class="icon-svg icon-svg--color-accent icon-svg--size-10 previous-link__icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><path d="M8 1L7 0 3 4 2 5l1 1 4 4 1-1-4-4"></path></svg><span class="step__footer__previous-link-content">이전 단계로 돌아가기</span></a>
-								</div>
+								</form>
 							</div>
-						</form>
+							<div class="checkout_btn_box">
+								<button name="button" type="submit" id="continue_button" class="step__footer__continue-btn btn">
+									<span class="btn__content">결제하기</span>
+									<svg class="icon-svg icon-svg--size-18 btn__spinner icon-svg--spinner-button" aria-hidden="true" focusable="false">
+										<use xlink:href="#spinner-button"></use>
+									</svg></button>
+								<a class="step__footer__previous-link" href="#"><svg focusable="false" aria-hidden="true" class="icon-svg icon-svg--color-accent icon-svg--size-10 previous-link__icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><path d="M8 1L7 0 3 4 2 5l1 1 4 4 1-1-4-4"></path></svg><span class="step__footer__previous-link-content">이전 단계로 돌아가기</span></a>
+							</div>
+						</div>
 					</div>
-				</main>
+			</div>
+
+
 				<div class="additional-content checkout__additional-content">
 					<div class="additional-content__container">
 						<p class="additional-content__title">
