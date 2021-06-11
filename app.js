@@ -75,7 +75,7 @@ const pageData = [
   {"type":"mypage", "pid":"T-MY-005", "state":"DONE" , "completedate":"2021-06-01", "url" : "/01_mypage/T-MY-005.ejs.html", "pageurl" : "01_mypage/T-MY-005.ejs", "title":"T-MY-005 ~ 008. Edit member information-additional", "title2":"마이페이지 - 회원정보변경 - 입력"},
   // {"type":"mypage", "pid":"T-MY-001", "state":"DONE" , "completedate":"2021-06-01", "url" : "/01_mypage/22", "pageurl" : "01_mypage/02_2_edit_password.ejs", "title":"2-2. Change password"},
   {"type":"mypage", "pid":"T-MY-009", "state":"DONE" , "completedate":"2021-06-01", "url" : "/01_mypage/T-MY-009.ejs.html", "pageurl" : "01_mypage/T-MY-009.ejs", "title":"T-MY-009. Addresses", "title2":"마이페이지 - 배송지목록"},
-  {"type":"mypage", "pid":"T-MY-010", "state":"DONE" , "completedate":"2021-06-01", "url" : "/01_mypage/T-MY-010.ejs.html", "pageurl" : "01_mypage/T-MY-010.ejs", "title":"T-MY-010. Add address", "title2":"마이페이지 - 배송정보수정"},
+  {"type":"mypage", "pid":"T-MY-010", "state":"DONE" , "completedate":"2021-06-01", "url" : "/01_mypage/T-MY-010.ejs.html", "pageurl" : "01_mypage/T-MY-010.ejs", "title":"T-MY-010. Add address", "title2":"마이페이지 - 배송지 추가"},
   {"type":"mypage", "pid":"T-MY-014", "state":"DONE" , "completedate":"2021-06-01", "url" : "/01_mypage/T-MY-014.ejs.html", "pageurl" : "01_mypage/T-MY-014.ejs", "title":"T-MY-014. Wishlist", "title2":"마이페이지 - 위시리스트"},
   {"type":"mypage", "pid":"T-MY-023", "state":"DONE" , "completedate":"2021-06-01", "url" : "/01_mypage/T-MY-023.ejs.html", "pageurl" : "01_mypage/T-MY-023.ejs", "title":"T-MY-023. Returns", "title2":"마이페이지 - 반품신청"},
 
