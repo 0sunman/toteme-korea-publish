@@ -315,6 +315,7 @@ body.overflow-hidden {overflow: hidden;}
 .member_address_info.with_button .member_address_inner{display: table-cell; vertical-align: middle;}
 .member_address_inner p{margin-bottom: 0;}
 .member_address_info.with_button .member_address_inner:last-child{text-align: right;}
+.member_address_info p{font-size: 14px; line-height: 18px;}
 .round_button{padding: 0 18px; line-height: 23px; font-size: 13px;}
 .checkout_btn_box{padding: 15px 0; text-align: center;}
 .checkout_btn_box .btn{max-width: 500px;}
@@ -322,6 +323,7 @@ body.overflow-hidden {overflow: hidden;}
 .direct_input{display: none;}
 .direct_input.active{display: block;}
 .address_info_change_box{margin: 20px 0;}
+.address_info_change_box .text-block p{font-size: 14px;}
 .orderpage .address_change_box{display: none;}
 .orderpage .address_select_box .address_each .address_change_box{display: block;}
 @media (max-width: 47.99em){.checkout input{font-size: 15px}}
@@ -346,18 +348,19 @@ body.overflow-hidden {overflow: hidden;}
 /* 결제 */
 .sns-buttons.payment_type{padding-bottom: 15px; border-bottom: 1px solid #171616;}
 .checkout_content.non_member_content{margin-top: 20px; margin-bottom: 25px;}
-.nm_payment_attr{max-width: 500px; margin: 20px auto 0;}
+.nm_payment_attr{margin: 20px auto 0;}
 .nm_payment_attr .checkbox_custom_box{margin-bottom: 5px;}
 .nm_payment_attr .checkbox_custom_box .checkbox{top: 0.36em;}
-.input-block+.dot_list{max-width: 500px; margin: 15px auto 0;}
-.checkout .dot_list>li{margin-bottom: 5px;}
+.input-block+.dot_list{max-width: 500px; margin: 10px auto 0; font-size: 14px; line-height: 18px;}
+.input-block+.dot_list>li:before{top: 7px;}
+.checkout .dot_list>li{margin-bottom: 3px;}
 .checkout .payment_account_info{margin-top: 20px;}
 .payment_account_info ul{padding: 0; margin: 0;}
 .payment_tit2{display: inline-block; margin-right: 30px;}
 
 /* 주문완료 */
 .summary_content{margin-bottom: 25px;}
-.summary_text_block p{line-height: 25px;}
+.summary_text_block p{font-size: 14px; line-height: 23px;}
 
 .product-table:not(.stock-problem-table) .product__quantity .visually-hidden, .checkout .order-summary__section--discount .field__input-btn .visually-hidden-on-mobile{overflow: visible;}
 .discount-trigger{display: block; max-width: 500px; margin: 0 auto; padding-left: 0; padding-right: 0;}
@@ -416,7 +419,7 @@ body.overflow-hidden {overflow: hidden;}
 .checkout .btn:hover{margin-left: 0; margin-right: 0; width: 100%;}
 .checkout__content .step__footer__previous-link{display: block;}
 .payment_guaranty{font-size: 15px;}
-.a_link{display: inline-block; position: relative;}
+.a_link{display: inline-block; position: relative; font-size: 14px;}
 .a_link:after{content: ''; width: 100%; height: 1px; background: #171616; position: absolute; bottom: 0; left: 0;}
 
 .checkbox_custom_box .a_link{vertical-align: top;}
@@ -429,10 +432,13 @@ body.overflow-hidden {overflow: hidden;}
 .payment_con_box{text-align: left; margin-bottom: 5px;}
 .payment_con_box>div{display: none;}
 .payment_con_box>.active{display: block; margin-top: 1.25rem;}
+.payment_con_box .dot_list{font-size: 14px; line-height: 18px;}
+.payment_con_box .dot_list>li:before{top: 7px;}
 .payment_radio_wrap{font-size: 0; letter-spacing: -1px;}
 .payment_radio_wrap:before, .payment_radio_wrap:after{display: none;}
 .payment_radio_wrap>*{font-size: 15px; letter-spacing: 0;}
-.payment_radio_wrap .radio_custom_box{display: inline-block; width: 33.33%; font-size: 15px;}
+.payment_radio_wrap .radio_custom_box{display: inline-block; width: 33.33%; font-size: 14px;}
+.payment_radio_wrap .radio_custom_box .radio_input{top: 0.35em;}
 @media screen and (max-width: 1300px){
     .payment_radio_wrap .radio_custom_box{width: 50%;}
 }
@@ -505,6 +511,8 @@ body.overflow-hidden {overflow: hidden;}
 .checkout .field__input:focus, .checkout .field__input:hover{margin: auto;}
 .checkout .order-summary__section--discount .field__input-btn-wrapper{justify-content: center;}
 .input-table.email_form{max-width: 500px; margin-left: auto; margin-right: auto;}
+.order_summary_text{max-width: 500px; margin: -10px auto 0;}
+.order_summary_text p{font-size: 14px;}
 /* //주문 */
 
 
@@ -580,6 +588,9 @@ li > a.navlist__link.text-link{padding-left:15px}
 .template-mypage__form-wrapper ul, .template-mypage__form-wrapper li{list-style: none; padding: 0;}
 .template-mypage__form{padding: 20px 15px;}
 .template-mypage__form+.template-mypage__form{border-top: 1px solid #171616;}
+.template-mypage__form.mypage_plus_info{max-width: 530px; margin: 0 auto; padding-top: 0; border-top-width: 0;}
+.template-mypage__form.mypage_plus_info>.mypage_each{margin-bottom: 15px;}
+.template-mypage__form.mypage_plus_info .mypage_tit1{margin-bottom: 0; padding-bottom: 15px; border-bottom: 1px solid #171616;}
 #MainContent .form_padding{max-width: 574px; margin-left: auto; margin-right: auto; padding-right: 37px; padding-left: 37px;}
 @media screen and (max-width: 767px){
     /* #MainContent .form_padding{padding: 0 37px;} */
