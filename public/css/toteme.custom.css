@@ -235,8 +235,9 @@ select.toteme-select-style{
 .example-description{background-color: #e2e2e2; margin-top:10px; padding:20px; border-radius: 10px;}
 
 input.button--block:hover,input.template-login input.AAI_submit:hover, select:focus, select:hover { margin-left: 0; width: 100% }
-.no-animation:hover, .no-animation:focus{margin-left: 0; width: 100% }
-
+.no-animation:hover, .no-animation:focus{margin-left: auto; width: 100% }
+.animation{transition: all 0.25s;}
+.animation:hover{max-width: 510px;}
 
 body.drawer--open--blur .site-header-wrapper{z-index:25;}
 body.overflow-hidden {overflow: hidden;}
@@ -286,6 +287,8 @@ body.overflow-hidden {overflow: hidden;}
 /* //상품 */
 
 /* 주문 */
+.comment.error{max-width: 500px; margin: 3px auto 0; text-align: left; color: #ff0000;}
+.email_form .comment, .phone_form .comment, .addr_form .comment{display: table-row; width:100%; line-height: 26px;}
 .checkout select{height: 100%;}
 .checkout_header{padding: 15px; border-bottom: 1px solid #171616;}
 .checkout_breadcrumb{padding: 0;}
@@ -301,7 +304,7 @@ body.overflow-hidden {overflow: hidden;}
 .input-block.email_form{display: table; width: 100%; max-width: 500px; height: 100%; margin-left: auto; margin-right: auto;}
 .email_form>div{display: table-cell;}
 .email_form>div:first-child{width: 60%;}
-.email_form>div:last-child{width: 40%; padding-left: 7px;}
+.email_form>div:last-of-type{width: 40%; padding-left: 7px;}
 .address_edit_btn{margin-top: 5px;}
 .input-block [readonly]{background-color: #ddd; cursor: not-allowed;}
 .button-block{max-width: 500px; margin: 20px auto;}
@@ -329,7 +332,7 @@ body.overflow-hidden {overflow: hidden;}
 @media (max-width: 47.99em){.checkout input{font-size: 15px}}
 .phone_form{display: table; width: 100%; max-width: 500px; margin-left: auto; margin-right: auto;}
 .phone_form>div{display: table-cell; vertical-align: middle;}
-.phone_form>div:last-child{width: 41px;}
+.phone_form>div:last-of-type{width: 41px;}
 .phone_form .btn_plus{display: block; font-size: 0; width: 34px; height: 34px; margin-left: 7px; border: 1px solid #171616; border-radius: 50%; position: relative;}
 .phone_form .btn_plus svg{transform: rotate(45deg);}
 .input_phone_plus{display: none; margin-top: 10px;}
@@ -338,7 +341,7 @@ body.overflow-hidden {overflow: hidden;}
 .phone_form.active .btn_plus:before{content: ''; display: block; width: 8px; height: 1px; background: #171616; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 .addr_form{display: table; width: 100%; max-width: 500px; margin-left: auto; margin-right: auto;}
 .addr_form>div{display: table-cell; vertical-align: middle;}
-.addr_form>div:last-child{width: 137px;}
+.addr_form>div:last-of-type{width: 137px;}
 .addr_form .button{width: calc(100% - 7px); min-height: 35px; margin-left: 7px;}
 .address_add_box .address_each{margin-bottom: 0;}
 .checkbox-block{max-width: 500px; margin: 15px auto 0;}
@@ -374,14 +377,14 @@ body.overflow-hidden {overflow: hidden;}
 .product-table:not(.stock-problem-table) .product__quantity .visually-hidden, .checkout .order-summary__section--discount .field__input-btn .visually-hidden-on-mobile{overflow: visible;}
 .discount-trigger{display: block; max-width: 500px; margin: 0 auto; padding-left: 0; padding-right: 0;}
 .checkout .order-summary__section--discount{text-align: center; padding-left: 52px; padding-right: 52px;}
-.deposit_attr_box{display: table; width: 100%; max-width: 500px; font-size: 15px; text-align: left;}
+.deposit_attr_box{display: table; width: 100%; max-width: 500px; font-size: 15px; text-align: left; margin: 0 auto;}
 .deposit_attr_box>div{display: table-cell;}
 .deposit_attr_box>div:last-child{text-align: right;}
 .deposit_attr_box .field__message--error{display: inline-block;}
 .deposit_attr_box .btn_deposit{position: relative; font-size: 13px;}
 .deposit_attr_box .btn_deposit:after{content: ''; height: 1px; position: absolute; bottom: 0; left: 0; right: 0; background: #444;}
 .deposit_result_box{display: none;}
-.deposit_active .deposit_result_box{display: table; max-width: 500px; text-align: left;}
+.deposit_active .deposit_result_box{display: table; max-width: 500px; text-align: left; margin: 0 auto;}
 .order-summary__sections .deposit_active [data-deposit], .deposit_active>*{display: none;}
 
 /* 주문-주소모달 */
@@ -516,9 +519,9 @@ body.overflow-hidden {overflow: hidden;}
 .checkout .review-block, .checkout .link--small{font-size: 15px; line-height: 20px;}
 .address--tight{line-height:initial;}
 .checkout__content .section__content{padding-bottom: 5px;}
-.anyflexbox .field__input-btn-wrapper .field__input-wrapper{max-width: 500px;}
+.anyflexbox .field__input-btn-wrapper .field__input-wrapper{max-width: 500px; margin: 0 auto;}
 .checkout .field__input:focus, .checkout .field__input:hover{margin: auto;}
-.checkout .order-summary__section--discount .field__input-btn-wrapper{justify-content: center;}
+.checkout .order-summary__section--discount .field__input-btn-wrapper{justify-content: center; display: block;}
 .input-table.email_form{max-width: 500px; margin-left: auto; margin-right: auto;}
 .order_summary_text{max-width: 500px; margin: -10px auto 0;}
 .order_summary_text p{font-size: 14px;}
@@ -697,7 +700,7 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 .table-block > div {display: table-cell;}
 .input-block, .button-block{text-align: center;}
 .input-block input[type=email], .input-block input[type=text], .input-block input[type=password], 
-.button-block input[type=submit], .button-block input[type=button]{max-width:500px}
+.button-block input[type=submit], .button-block input[type=button], .input-block input[type=submit]{max-width:500px}
 .template-account__navlist .template-account__navlist--content{ max-width: 500px; margin: 0 auto;}
 .login_join .section{ display: block; margin:20px 52px; padding-top:0px; padding-bottom:0px;}
 
