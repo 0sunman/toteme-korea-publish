@@ -66,11 +66,12 @@
 							<form action="">
 								<div class="input-block name">
 									<label class="field__label" for="checkout_name3">이름</label>
-									<input placeholder="이름" class="field__input" type="text" name="checkout[name]" id="checkout_name3">
+									<input placeholder="이름" class="field__input input-error" type="text" name="checkout[name]" id="checkout_name3">
+									<p class="comment error">이름을 입력해주세요.</p>
 								</div>
 								<div class="input-block email_form">
 									<div>
-										<input class="field__input" placeholder="이메일" type="text">
+										<input class="field__input input-error" placeholder="이메일" type="text">
 									</div>
 									<div>
 										<select class="toteme-select-style">
@@ -79,6 +80,7 @@
 											<option value="">직접입력</option>
 										</select>
 									</div>
+									<p class="comment error">이메일을 입력해주세요.</p>
 								</div>
 								<div class="button-block">
 									<input class="btn modal_trigger" type="button" value="본인인증" data-modal="verify-modal">
@@ -92,12 +94,13 @@
 						<form action="">
 							<div class="input-block name">
 								<label class="field__label" for="checkout_name2">받는 사람</label>
-								<input placeholder="받는 사람" class="field__input" type="text" name="checkout[name2]" id="checkout_name2">
+								<input placeholder="받는 사람" class="field__input input-error" type="text" name="checkout[name2]" id="checkout_name2">
+								<p class="comment error">받는 사람을 입력해주세요.</p>
 							</div>
 							<div class="input-block phone_form">
 								<div>
 									<label class="field__label" for="checkout_phone3">휴대폰번호(필수)</label>
-									<input placeholder="휴대폰번호(필수)" class="field__input" type="text" name="checkout[phone3]" id="checkout_phone3">
+									<input placeholder="휴대폰번호(필수)" class="field__input input-error" type="text" name="checkout[phone3]" id="checkout_phone3">
 								</div>
 								<div>
 									<button type="button" class="btn_plus">추가
@@ -106,6 +109,7 @@
 										</svg>
 									</button>
 								</div>
+								<p class="comment error">연락처를 입력해주세요.</p>
 							</div>
 							<div class="input-block input_phone_plus">
 								<input placeholder="추가연락처" class="field__input" type="text" name="checkout[phone4]">
@@ -113,11 +117,12 @@
 							<div class="input-block addr_form">
 								<div>
 									<label class="field__label" for="checkout_addr4">배송지주소</label>
-									<input placeholder="배송지주소" class="field__input" size="30" type="text" name="checkout[addr]" id="checkout_addr4">
+									<input placeholder="배송지주소" class="field__input input-error" size="30" type="text" name="checkout[addr]" id="checkout_addr4">
 								</div>
 								<div>
 									<button type="button" class="button button--large no-animation modal_trigger" data-modal="address-modal">찾기</button>
 								</div>
+								<p class="comment error">주소를 입력해주세요.</p>
 							</div>
 							<div class="input-block address1">
 								<label class="field__label" for="checkout_addr5">주소</label>
@@ -275,7 +280,8 @@
 											<div class="field__input-btn-wrapper">
 												<div class="field__input-wrapper">
 													<label class="field__label field__label--visible" for="checkout_reduction_code">프로모션 코드</label>
-													<input placeholder="프로모션 코드 입력" class="field__input" id="checkout_reduction_code" autocomplete="off" aria-required="true" size="30" type="text" name="checkout[reduction_code]">
+													<input placeholder="프로모션 코드 입력" class="field__input input-error" id="checkout_reduction_code" autocomplete="off" aria-required="true" size="30" type="text" name="checkout[reduction_code]">
+													<p class="comment error">프로모션 코드{}가 정확하지 않습니다.</p>
 												</div>
 												<button name="button" type="button" class="field__input-btn btn btn--disabled" data-deposit="true">
 													<span class="btn__content visually-hidden-on-mobile" aria-hidden="true">
@@ -300,7 +306,6 @@
 													</div>
 												</div>
 											</div>
-											<p class="field__message field__message--error" id="error-for-reduction_code">프로모션 코드가 정확하지 않습니다.</p>
 										</div>
 									</div>
 								</form>
@@ -314,7 +319,8 @@
 											<div class="field__input-btn-wrapper">
 												<div class="field__input-wrapper">
 													<label class="field__label field__label--visible" for="checkout_deposit_code">예치금 사용</label>
-													<input placeholder="사용할 금액을 입력하세요" class="field__input" id="checkout_deposit_code" autocomplete="off" aria-required="true" size="30" type="text" name="checkout[deposit_code]">
+													<input placeholder="사용할 금액을 입력하세요" class="field__input input-error" id="checkout_deposit_code" autocomplete="off" aria-required="true" size="30" type="text" name="checkout[deposit_code]">
+													<p class="comment error">예치금은 10원 단위로 사용할 수 있습니다.</p>
 												</div>
 												<div class="deposit_attr_box">
 													<div>
@@ -347,7 +353,6 @@
 													</div>
 												</div>
 											</div>
-											<p class="field__message field__message--error" id="error-for-reduction_code">예치금은 10원 단위로 사용할 수 있습니다.</p>
 										</div>
 									</div>
 								</form>
