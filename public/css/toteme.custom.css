@@ -351,7 +351,8 @@ body.overflow-hidden {overflow: hidden;}
 .nm_payment_attr{margin: 20px auto 0;}
 .nm_payment_attr .checkbox_custom_box{margin-bottom: 5px;}
 .nm_payment_attr .checkbox_custom_box .checkbox{top: 0.36em;}
-.input-block+.dot_list{max-width: 500px; margin: 10px auto 0; font-size: 14px; line-height: 18px;}
+.input-block+.dot_list{margin-top: 10px;}
+.input-block+.dot_list>li{max-width: 500px; margin-left: auto; margin-right: auto; font-size: 14px; line-height: 18px;}
 .input-block+.dot_list>li:before{top: 7px;}
 .checkout .dot_list>li{margin-bottom: 3px;}
 .checkout .payment_account_info{margin-top: 20px;}
@@ -361,6 +362,14 @@ body.overflow-hidden {overflow: hidden;}
 /* 주문완료 */
 .summary_content{margin-bottom: 25px;}
 .summary_text_block p{font-size: 14px; line-height: 23px;}
+
+@media screen and (max-width: 999px) {
+    .checkout .input-block, .checkout .button-block, .checkout .checkout_btn_box, .checkout .checkbox-block, .mypage .input-block, .mypage .button-block{max-width: unset; padding-left: 36px; padding-right: 36px;}
+    .mypage .phone_form, .mypage .addr_form, .mypage .button-block{max-width: 572px;}
+    .template-mypage__form.mypage_plus_info{padding-left: 52px; padding-right: 52px;}
+    .template-mypage__form.mypage_plus_info .button-block{padding: 0;}
+    .checkout .checkbox-block+.text-block, .checkout .input-block+.text-block, .checkout .input-block+.dot_list, .mypage .button-block+.text-block{padding-left: 36px; padding-right: 36px;}
+}
 
 .product-table:not(.stock-problem-table) .product__quantity .visually-hidden, .checkout .order-summary__section--discount .field__input-btn .visually-hidden-on-mobile{overflow: visible;}
 .discount-trigger{display: block; max-width: 500px; margin: 0 auto; padding-left: 0; padding-right: 0;}
@@ -417,7 +426,7 @@ body.overflow-hidden {overflow: hidden;}
 .breadcrumb__item--completed .breadcrumb__link{color: #171616;}
 .checkout .btn{max-width: 500px; float: none;}
 .checkout .btn:hover{margin-left: 0; margin-right: 0; width: 100%;}
-.checkout__content .step__footer__previous-link{display: block;}
+.checkout__content .step__footer__previous-link{display: block; float: none; margin-right: 0;}
 .payment_guaranty{font-size: 15px;}
 .a_link{display: inline-block; position: relative; font-size: 14px;}
 .a_link:after{content: ''; width: 100%; height: 1px; background: #171616; position: absolute; bottom: 0; left: 0;}
@@ -617,12 +626,11 @@ li > a.navlist__link.text-link{padding-left:15px}
 .template-mypage__form-wrapper p{word-break: keep-all;}
 .mypage_toggle_menu>li{border-top: 1px solid #171616;}
 .mypage_toggle_menu .toggle_tit{display: block; width: 100%; padding: 15px 40px 15px 0; text-align: left; position: relative;}
-.mypage_toggle_menu .toggle_tit:before{content: ''; display: block; width: 22px; height: 22px; border: 1px solid #171616; border-radius: 50%; position: absolute; top: 50%; right: 15px; transform: translateY(-50%);}
-.mypage_toggle_menu .toggle_tit .ico{position: absolute; top: 50%; right: 14px; transform: translateY(-50%);}
+.mypage_toggle_menu .toggle_tit:before{content: ''; display: block; width: 22px; height: 22px; background: url("../assets/icon_plus.png") no-repeat center / 9px auto; border: 1px solid #171616; border-radius: 50%; position: absolute; top: 50%; right: 15px; transform: translateY(-50%);}
+.mypage_toggle_menu .toggle_tit .ico{font-size: 0; position: absolute; top: 50%; right: 14px; transform: translateY(-50%);}
 .mypage_toggle_menu .toggle_tit .ico .icon.icon--large{width: 22px; height: 22px;}
 .mypage_toggle_menu .toggle_con_box{display: none; padding: 15px 0;}
-.mypage_toggle_menu>li.is-active .toggle_tit .ico{display: none;}
-.mypage_toggle_menu>li.is-active .toggle_tit:after{content: ''; display: block; width: 9px; height: 1px; background: #171616; position: absolute; top: 50%; right: 21px; transform: translateY(-50%);}
+.mypage_toggle_menu>li.is-active .toggle_tit:before{background-image: url("../assets/icon_minus.png");}
 .mypage_toggle_menu>li.is-active .toggle_con_box{display: block;}
 .mypage_each2 .txt_btn_box{display: table; width: 100%;}
 .mypage_each2 .txt_btn_box .mypage_tit2{display: table-cell; vertical-align: middle;}
