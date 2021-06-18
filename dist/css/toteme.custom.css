@@ -289,8 +289,8 @@ body.overflow-hidden {overflow: hidden;}
 
 /* 주문 */
 .comment.error{max-width: 500px; margin: 3px auto 0; text-align: left; color: #ff0000;}
+.checkout .field__input{padding: 0 11px;}
 .email_form .comment, .phone_form .comment, .addr_form .comment{display: table-row; width:100%; line-height: 26px;}
-.checkout select{min-height: 35px;}
 .checkout_header{padding: 15px; border-bottom: 1px solid #171616;}
 .checkout_breadcrumb{padding: 0;}
 .checkout_breadcrumb:after{content: ''; display: block; clear: both;}
@@ -334,16 +334,16 @@ body.overflow-hidden {overflow: hidden;}
 .phone_form{display: table; width: 100%; max-width: 500px; margin-left: auto; margin-right: auto;}
 .phone_form>div{display: table-cell; vertical-align: middle;}
 .phone_form>div:last-of-type{width: 41px;}
-.phone_form .btn_plus{display: block; font-size: 0; width: 34px; height: 34px; margin-left: 7px; border: 1px solid #171616; border-radius: 50%; position: relative;}
-.phone_form .btn_plus svg{transform: rotate(45deg);}
+.phone_form .btn_plus{display: block; font-size: 0; width: 33px; height: 33px; margin-left: 7px; border: 1px solid #171616; border-radius: 50%; position: relative;}
+.phone_form .btn_plus svg{transform: rotate(45deg); width: 23px; height: 23px;}
 .input_phone_plus{display: none; margin-top: 10px;}
 .phone_form.active+.input_phone_plus{display: block;}
 .phone_form.active .btn_plus svg{display: none;}
-.phone_form.active .btn_plus:before{content: ''; display: block; width: 8px; height: 1px; background: #171616; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.phone_form.active .btn_plus:before{content: ''; display: block; width: 9px; height: 1px; background: #171616; position: absolute; top: calc(50% - 1px); left: 11px;}
 .addr_form{display: table; width: 100%; max-width: 500px; margin-left: auto; margin-right: auto;}
 .addr_form>div{display: table-cell; vertical-align: middle;}
 .addr_form>div:last-of-type{width: 137px;}
-.addr_form .button{width: calc(100% - 7px); min-height: 35px; margin-left: 7px;}
+.addr_form .button{width: calc(100% - 7px); margin-left: 7px;}
 .address_add_box .address_each{margin-bottom: 0;}
 .checkbox-block{max-width: 500px; margin: 15px auto 0;}
 .checkbox-block+.text-block.sub-description{margin-top: 10px;}
@@ -384,6 +384,10 @@ body.overflow-hidden {overflow: hidden;}
 .checkout .modal .modal__header{display: flex;}
 .checkout .modal .modal__body{justify-content: normal;}
 .address-modal .address_modal_container{width: 100%; max-width: 500px;}
+.standard_addr_box{display: none;}
+.standard_addr_box .table_type1 .radio_custom_box{display: inline-block; height: 10px; padding-left: 10px;}
+.standard_addr_box .table_type1 .radio_custom_box input{top: 0; margin: 0;}
+.standard_addr_box.is-active{display: block;}
 .address-modal .btn{float: none;}
 .address-modal .comment{text-align: left; font-size: 13px; line-height: 17px; margin-top: 0.5714285714em;}
 .address_find_content .input-table>div{width: 50%;}
