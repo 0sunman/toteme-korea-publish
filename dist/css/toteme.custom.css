@@ -299,7 +299,7 @@ body.overflow-hidden {overflow: hidden;}
 .checkout_breadcrumb>li.active{opacity: 1;}
 .checkout_section{padding: 15px; border-bottom: 1px solid #171616;}
 .checkout_section:last-child{border-bottom-width: 0;}
-.checkout_tit1{padding-bottom: 15px; border-bottom: 1px solid #171616;}
+.checkout_tit1{margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #171616;}
 .checkout_tit2{margin-bottom: 10px;}
 .input-block.email_form{display: table; width: 100%; max-width: 500px; height: 100%; margin-left: auto; margin-right: auto;}
 .email_form>div{display: table-cell;}
@@ -365,15 +365,6 @@ body.overflow-hidden {overflow: hidden;}
 /* 주문완료 */
 .summary_content{margin-bottom: 25px;}
 .summary_text_block p{font-size: 14px; line-height: 23px;}
-
-@media screen and (max-width: 999px) {
-    .checkout .input-block, .checkout .button-block, .checkout .checkout_btn_box, .checkout .checkbox-block, .mypage .input-block, .mypage .button-block{max-width: unset; padding-left: 36px; padding-right: 36px;}
-    .mypage .phone_form, .mypage .addr_form, .mypage .button-block{max-width: 572px;}
-    .template-mypage__form.mypage_plus_info{padding-left: 52px; padding-right: 52px;}
-    .template-mypage__form.mypage_plus_info .button-block{padding: 0;}
-    .checkout .checkbox-block+.text-block, .checkout .input-block+.text-block, .checkout .input-block+.dot_list, .mypage .button-block+.text-block{padding-left: 36px; padding-right: 36px;}
-}
-
 .product-table:not(.stock-problem-table) .product__quantity .visually-hidden, .checkout .order-summary__section--discount .field__input-btn .visually-hidden-on-mobile{overflow: visible;}
 .discount-trigger{display: block; max-width: 500px; margin: 0 auto; padding-left: 0; padding-right: 0;}
 .checkout .order-summary__section--discount{text-align: center; padding-left: 52px; padding-right: 52px;}
@@ -674,6 +665,15 @@ li > a.navlist__link.text-link{padding-left:15px}
 .mypage_address_list .row+.row{margin-top: 20px;}
 .mypage_address_list .mypage_address_text{margin-bottom: 5px;}
 .mypage_address_list .button-block{margin-top: 25px;}
+
+@media screen and (max-width: 1800px) {
+    .checkout .input-block, .checkout .button-block, .checkout .checkout_btn_box, .checkout .checkbox-block, .mypage .input-block, .mypage .button-block{max-width: unset; padding-left: 36px; padding-right: 36px;}
+    .mypage .phone_form, .mypage .addr_form, .mypage .button-block{max-width: 572px;}
+    .template-mypage__form.mypage_plus_info{max-width: 604px;}
+    .template-mypage__form.mypage_plus_info{padding-left: 52px; padding-right: 52px;}
+    .template-mypage__form.mypage_plus_info .button-block{padding: 0;}
+    .checkout .checkbox-block+.text-block, .checkout .input-block+.text-block, .checkout .input-block+.dot_list, .mypage .button-block+.text-block{padding-left: 36px; padding-right: 36px;}
+}
 
 figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 .containerZoom.active{cursor: zoom-out;}
