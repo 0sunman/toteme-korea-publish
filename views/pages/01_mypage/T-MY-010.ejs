@@ -86,15 +86,16 @@
 				</div>
 				<div class="modal__body">
 					<div class="address_modal_container">
-						<div class="section__content form-group">
-							<div class="input-block form-group__field">
-								<label class="field__label field__label--visible" for="checkout_addr_find">주소 찾기</label>
-								<input placeholder="찾고자 하는 주소를 입력하세요" class="field__input" size="30" type="text" name="checkout[addr_find]" id="checkout_addr_find">
-							</div>
-							<div class="input-block">
-								<input class="step__footer__continue-btn btn" type="submit" value="검색" data-address="address_search_list">
-								<p class="comment">예: 동(읍/면)명 또는 도로명주소(건물번호/건물명)<br>일부 군사지역은 배송이 불가능할 수 있습니다.</p>
-							</div>
+						<div class="input-block">
+							<label class="field__label field__label--visible" for="checkout_addr_find">주소 찾기</label>
+							<input placeholder="찾고자 하는 주소를 입력하세요" class="field__input" size="30" type="text" name="checkout[addr_find]" id="checkout_addr_find">
+						</div>
+						<div class="input-block">
+							<input class="btn" type="submit" value="검색" data-address="address_search_list">
+							<ul class="dot_list">
+								<li>예: 동(읍/면)명 또는 도로명주소(건물번호/건물명)</li>
+								<li>일부 군사지역은 배송이 불가능할 수 있습니다.</li>
+							</ul>
 						</div>
 						<div class="address_find_content address_wrap">
 							<div class="address_search_list_box">
@@ -193,11 +194,49 @@
 									<label class="field__label field__label--visible" for="addr_detail">상세주소 입력</label>
 									<input placeholder="상세주소 입력" class="field__input" size="30" type="text" name="checkout[addr_detail]" id="addr_detail">
 								</div>
-								<div class="input-block pcs2">
-									<input class="step__footer__continue-btn btn" type="submit" value="확인">
-									<input class="step__footer__continue-btn btn white" type="submit" value="취소">
+								<div class="button-block pcs2">
+									<input class="btn btn_addr_standard" type="button" value="확인">
+									<input class="btn white" type="button" value="취소">
 								</div>
 							</div>
+						</div>
+					</div>
+					<div class="address_modal_container standard_addr_box">
+						<div class="text-block addr_modal_text">
+							<p>입력하신 주소에 해당하는 표준주소가 있습니다.<br>
+								아래 표준주소로 바꾸시겠습니까?</p>
+						</div>
+						<table class="table_type1">
+							<colgroup>
+								<col style="width: 50px;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">
+										<div class="radio_custom_box">
+											<input id="addr_type3" class="radio_input" value="1" type="radio" name="addr_type2">
+										</div>
+									</th>
+									<td>
+										<label for="addr_type3"><span class="payment_tit2">[입력한주소]</span> 12345 <br> 서울특별시 강남구 삼성동 1</label>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">
+										<div class="radio_custom_box">
+											<input id="addr_type4" class="radio_input" value="2" type="radio" name="addr_type2" checked>
+										</div>
+									</th>
+									<td>
+										<label for="addr_type4"><span class="payment_tit2">[표준주소]</span> 12345 (111-222) <br> 서울특별시 강남구 삼성동 1</label>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="button-block pcs2">
+							<input class="btn" type="button" value="확인">
+							<input class="btn white" type="button" value="취소">
 						</div>
 					</div>
 				</div>

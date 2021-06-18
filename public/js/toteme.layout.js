@@ -334,6 +334,10 @@ Util.prototype.registerEvent = function(option){
                 var unit = $(this).attr('data-unit');
                 $('.size-guide__table-container').attr('data-show-unit',unit);
             });
+            //주소검색 팝업_N개 도로명주소 매칭
+            $('.btn_addr_standard').on('click', function(){
+                $('.standard_addr_box').addClass('is-active').siblings('.address_modal_container').addClass('is-hidden');
+            });
 
         break;
         
