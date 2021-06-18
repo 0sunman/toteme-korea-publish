@@ -285,6 +285,7 @@ body.overflow-hidden {overflow: hidden;}
     .preorder-modal__footer {padding: 20px 80px;}
 }
 .product-form__add-to-cart>button.button.is-active:hover .label-atc{display: block;}
+.accordion__ul{margin-bottom: 23px;}
 /* //상품 */
 
 /* 주문 */
@@ -661,7 +662,7 @@ li > a.navlist__link.text-link{padding-left:15px}
 .mypage-modal__button-wrapper{margin: 0 12px;}
 .mypage-modal__button-wrapper .button{margin-bottom: 10px;}
 .mypage-modal__button-wrapper .button:last-of-type{margin-bottom: 0;}
-.text-link+.text-link{margin-left: 15px;}
+/* .text-link+.text-link{margin-left: 15px;} */
 .button-block.pcs2_vertical .button{margin-bottom: 10px;}
 .button-block.pcs2_vertical .button:last-child{margin-bottom: 0;}
 /* //마이페이지 - 회원정보변경 */
