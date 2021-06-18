@@ -13,6 +13,7 @@
 
 
 body#toteme-official-online-store.has-announcement-bar{padding-top:51px;}
+body{color: #171616;}
 
 
 /* 2-1 회원가입 로그인 초기*/
@@ -293,7 +294,7 @@ body.overflow-hidden {overflow: hidden;}
 .checkout_header{padding: 15px; border-bottom: 1px solid #171616;}
 .checkout_breadcrumb{padding: 0;}
 .checkout_breadcrumb:after{content: ''; display: block; clear: both;}
-.checkout_breadcrumb>li{float: left; padding-right: 17px; margin-right: 9px; font-size: 13px; line-height: 17px; color: #161717; opacity: 0.5; position: relative;}
+.checkout_breadcrumb>li{float: left; padding-right: 17px; margin-right: 9px; font-size: 13px; line-height: 17px; color: #171616; opacity: 0.5; position: relative;}
 .checkout_breadcrumb>li:after{content: ''; display: block; width: 8px; height: 8px; background-image: url(../assets/icon-small-arrow-down.svg); transform: rotate(-90deg); position: absolute; top: 4px; right: 0;}
 .checkout_breadcrumb>li:last-child:after{display: none;}
 .checkout_breadcrumb>li.active{opacity: 1;}
@@ -360,7 +361,7 @@ body.overflow-hidden {overflow: hidden;}
 .checkout .dot_list>li{margin-bottom: 3px;}
 .checkout .payment_account_info{margin-top: 20px;}
 .payment_account_info ul{padding: 0; margin: 0;}
-.payment_tit2{display: inline-block; margin-right: 30px;}
+.payment_tit2{display: inline-block; min-width: 82px; padding-right: 10px;}
 
 /* 주문완료 */
 .summary_content{margin-bottom: 25px;}
@@ -515,8 +516,9 @@ body.overflow-hidden {overflow: hidden;}
 .checkout .field__input:focus, .checkout .field__input:hover{margin: auto;}
 .checkout .order-summary__section--discount .field__input-btn-wrapper{justify-content: center; display: block;}
 .input-table.email_form{max-width: 500px; margin-left: auto; margin-right: auto;}
-.order_summary_text{max-width: 500px; margin: -10px auto 0;}
+.order_summary_text{max-width: 500px; margin: 0 auto;}
 .order_summary_text p{font-size: 14px;}
+.order_summary_each1 .button-block{margin: 30px auto 10px;}
 /* //주문 */
 
 
@@ -684,7 +686,7 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 /* //header, footer hide */
 .orderpage .table_type1 td:first-child, .orderpage .table_type1 th:first-child{padding-left: .25rem; text-align: inherit;}
 .orderpage .table_type1 td:last-child, .orderpage .table_type1 th:last-child{text-align: left;}
-.orderpage .payment_account_info ul .tit{display: inline-block; min-width: 80px;}
+.orderpage .payment_account_info ul .tit{display: inline-block; min-width: 82px; padding-right: 10px;}
 
 
 
