@@ -548,7 +548,7 @@ body.overflow-hidden {overflow: hidden;}
 #menuDrawer > div > div.menu-drawer__body ul.is-active > li a{padding-left:30px;}
 
 /* 줄 크기 */
-#menuDrawer .menu-drawer__bordered-menu>li:not(:last-child):after{margin: 20px 1.75rem 20px;}
+#menuDrawer .menu-drawer__bordered-menu>li:not(:last-child):after{margin: 20px 30px 20px;}
 #menuDrawer .responsive-image__wrapper.menu-drawer__image-wrapper{margin:20px 15px 10px 30px;}
 
 /* 화살표 크기 */
