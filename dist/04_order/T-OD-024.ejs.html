@@ -965,7 +965,15 @@
       <main id="MainContent" class="main-content critical-clear">
          <!-- BEGIN content_for_index -->
          <!--  include ("./pages/00_main/index.ejs") BEGIN content_for_index -->
-         <div class="orderpage checkout js display-table container anyflexbox">
+         <script>
+	//header, footer hide
+	setTimeout(function(){
+		$('#shopify-section-site-footer, .site-header-wrapper').hide();
+		$('body').css('padding-top','0');
+	},50)
+</script>
+
+<div class="orderpage checkout js display-table container anyflexbox">
 	<a href="#main-header" class="skip-to-content">
 		Skip to content
 	</a>
@@ -1020,7 +1028,7 @@
 				<div class="checkout_wrap">
 					<div class="checkout_header">
 						<ol class="checkout_breadcrumb">
-							<li class="active">주문정보</li>
+							<li class="active"><a href="#">주문정보</a></li>
 							<li class="active">결제</li>
 						</ol>
 					</div>

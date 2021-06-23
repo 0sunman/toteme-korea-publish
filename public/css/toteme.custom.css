@@ -289,6 +289,8 @@ body.overflow-hidden {overflow: hidden;}
 /* //상품 */
 
 /* 주문 */
+.checkout__header{padding: 9px 15px;}
+.checkout .input-block:last-of-type{margin-bottom: 0;}
 .comment.error{max-width: 500px; margin: 3px auto 0; text-align: left; color: #ff0000;}
 .checkout .field__input{padding: 0 11px;}
 .email_form .comment, .phone_form .comment, .addr_form .comment{display: table-row; width:100%; line-height: 26px;}
@@ -299,9 +301,9 @@ body.overflow-hidden {overflow: hidden;}
 .checkout_breadcrumb>li:after{content: ''; display: block; width: 8px; height: 8px; background-image: url(../assets/icon-small-arrow-down.svg); transform: rotate(-90deg); position: absolute; top: 4px; right: 0;}
 .checkout_breadcrumb>li:last-child:after{display: none;}
 .checkout_breadcrumb>li.active{opacity: 1;}
-.checkout_section{padding: 15px; border-bottom: 1px solid #171616;}
+.checkout_section{padding: 15px 15px 20px; border-bottom: 1px solid #171616;}
 .checkout_section:last-child{border-bottom-width: 0;}
-.checkout_tit1{margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #171616;}
+.checkout_tit1{margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #171616;}
 .checkout_tit2{margin-bottom: 10px;}
 .input-block.email_form{display: table; width: 100%; max-width: 500px; height: 100%; margin-left: auto; margin-right: auto;}
 .email_form>div{display: table-cell;}
@@ -322,7 +324,7 @@ body.overflow-hidden {overflow: hidden;}
 .member_address_info.with_button .member_address_inner:last-child{text-align: right;}
 .member_address_info p{font-size: 14px; line-height: 18px;}
 .round_button{padding: 0 18px; line-height: 23px; font-size: 13px;}
-.checkout_btn_box{padding: 15px 0; text-align: center;}
+.checkout_btn_box{padding: 20px 0; text-align: center;}
 .checkout_btn_box .btn{max-width: 500px;}
 .address_each{margin: 30px 0;}
 .direct_input{display: none;}
@@ -523,7 +525,9 @@ body.overflow-hidden {overflow: hidden;}
 .input-table.email_form{max-width: 500px; margin-left: auto; margin-right: auto;}
 .order_summary_text{max-width: 500px; margin: 0 auto;}
 .order_summary_text p{font-size: 14px;}
+.order_summary_each1{padding-bottom: 30px;}
 .order_summary_each1 .button-block{margin: 30px auto 10px;}
+.order_summary_each1 .text-block{margin-top: 0;}
 /* //주문 */
 
 
