@@ -289,6 +289,8 @@ body.overflow-hidden {overflow: hidden;}
 /* //상품 */
 
 /* 주문 */
+.product__description__name{display: block; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
+.checkout__content.content{height: 100%;}
 .checkout__header{padding: 9px 15px;}
 .checkout .input-block:last-of-type{margin-bottom: 0;}
 .comment.error{max-width: 500px; margin: 3px auto 0; text-align: left; color: #ff0000;}
