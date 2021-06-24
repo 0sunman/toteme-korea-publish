@@ -681,12 +681,19 @@ li > a.navlist__link.text-link{padding-left:15px}
 
 @media screen and (max-width: 1800px) {
     .checkout .input-block, .checkout .button-block, .checkout .checkout_btn_box, .checkout .checkbox-block, .mypage .input-block, .mypage .button-block{max-width: unset; padding-left: 36px; padding-right: 36px;}
-    .modal .input-block, .modal .button-block{padding-left: 0; padding-right: 0;}
-    .mypage .phone_form, .mypage .addr_form, .mypage .button-block{max-width: 572px; padding-left: 36px; padding-right: 36px;}
+    .checkout .button-block{max-width: 572px;}
+    .input-block.addr_form, .input-block.phone_form{max-width: 572px;}
+    .modal .input-block, .modal .button-block{padding-left: 0; padding-right: 0; margin-left: auto; margin-right: auto;}
+    .modal .input-block.addr_form, .modal .input-block.phone_form{max-width: 500px;}
     .template-mypage__form.mypage_plus_info{max-width: 604px;}
     .template-mypage__form.mypage_plus_info{padding-left: 52px; padding-right: 52px;}
     .template-mypage__form.mypage_plus_info .button-block{padding: 0;}
     .checkout .checkbox-block+.text-block, .checkout .input-block+.text-block, .checkout .input-block+.dot_list, .mypage .button-block+.text-block{padding-left: 36px; padding-right: 36px;}
+}
+@media screen and (max-width: 1000px){
+    .modal .addr_list{padding: 0 22px;}
+    .modal .input-block, .modal .button-block, .address_find_content .input-table{max-width: 544px;  padding-left: 22px; padding-right: 22px;}
+    .modal .input-block.addr_form, .modal .input-block.phone_form{max-width: 544px;}
 }
 
 figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
