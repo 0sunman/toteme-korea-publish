@@ -408,7 +408,7 @@ body.overflow-hidden {overflow: hidden;}
 .bank_account-modal .bank_account_container .button:first-of-type{margin-left: 0;}
 .bank_account-modal .bank_account_container .bank_account_txt_box p{margin-top: 0.5714285714em; text-align: left; word-break: keep-all;}
 .payment_tit1{display: block; margin-bottom: 10px;}
-.addr_list{padding: 0;}
+.addr_list{padding: 0; max-height: 340px; overflow-y: auto;}
 @media screen and (max-width: 999px) {
     .addr_list{font-size: 13px;}
 }
