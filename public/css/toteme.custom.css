@@ -266,7 +266,7 @@ body.overflow-hidden {overflow: hidden;}
     .boost-pfs-container-default .boost-pfs-filter-refine-by-wrapper-h .boost-pfs-filter-clear-all.boost-pfs-filter-clear-all.is-active{display: inline-block;}
 }
 #MainContent .mo_only{display: none;}
-@media screen and (max-width: 720px){
+@media screen and (max-width: 1000px){
     #MainContent .pc_only{display: none;}
     #MainContent .mo_only{display: block;}
 }
@@ -474,8 +474,6 @@ body.overflow-hidden {overflow: hidden;}
 .table_type1 th{text-align: center;}
 .table_type1 td{text-align: left;}
 .ly_guarantee_container:after{content: ''; display: block; clear: both;}
-.ly_guarantee_container img{float: left; width: 50%;}
-
 /* .member_infomation{border-bottom: 1px solid #171616;} */
 .checkout [data-step=shipping_method] .section:first-of-type{border-width: 0;}
 .checkout .review-block__label{flex: 0 1 15em; -webkit-flex: 0 1 15em;}
@@ -957,3 +955,4 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
  .error_page .section{margin: 34px 15px;}
  .error_page .template-404__column.template-404__column--content{padding-right: 1.25rem;}
  .error_page .text{word-break: keep-all;}
+
