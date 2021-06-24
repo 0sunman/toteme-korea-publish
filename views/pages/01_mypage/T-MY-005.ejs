@@ -6,9 +6,9 @@
 		 <div class="template-account__left"></div>
 		 <%- include ("./menu/index.ejs",{state:21}) %>
 		 <div class="template-account__content">
-			<div class="template-account__text_hdtype_1 alert" style="display: none;">
+			<div class="template-account__text_hdtype_1 alert title" style="display: none;">
 				<div class="rte">
-					회원정보
+					<p class="error">이름을 입력해 주세요.</p>
 				</div>
 			</div>
 			<div class="template-mypage__form-wrapper">
@@ -307,6 +307,7 @@
 								<option value="">KEB하나은행</option>
 								<option value="">경남은행</option>
 							</select>
+							<p class="comment error" style="display: none;">은행을 선택해주세요.</p>
 						</div>
 						<div class="input-block addr_form">
 							<div>
@@ -315,6 +316,7 @@
 							<div>
 								<button type="button" class="button button--large">계좌인증</button>
 							</div>
+							<p class="comment error" style="display: none;">계좌번호 입력 시(-)를 제외하고 입력해주세요.</p>
 						</div>
 						<div class="button-block">
 							<input class="button button--primary button--block button--large" type="button" value="등록">
