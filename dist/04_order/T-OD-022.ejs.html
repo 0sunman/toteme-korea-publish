@@ -1175,6 +1175,12 @@
 				</div>
 			</div>
 			<aside class="checkout__sidebar sidebar" role="complementary">
+				<div class="template-account__text_hdtype_1 alert title" style="display: none;">
+					<div class="rte">
+						<p class="error">이름을 입력해 주세요.
+						</p>
+					</div>
+			  </div>
 				<div class="sidebar__content">
 					<div id="order-summary" class="order-summary order-summary--is-collapsed">
 						<div class="order-summary__sections">
@@ -1553,6 +1559,7 @@
 								<div class="input-block form-group__field">
 									<label class="field__label field__label--visible" for="addr_detail">상세주소 입력</label>
 									<input placeholder="상세주소 입력" class="field__input" size="30" type="text" name="checkout[addr_detail]" id="addr_detail">
+									<p class="comment error" style="display: none;">상세주소를 입력하세요.</p>
 								</div>
 								<div class="button-block pcs2">
 									<input class="btn btn_addr_standard" type="button" value="확인">
