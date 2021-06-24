@@ -682,7 +682,7 @@ li > a.navlist__link.text-link{padding-left:15px}
 @media screen and (max-width: 1800px) {
     .checkout .input-block, .checkout .button-block, .checkout .checkout_btn_box, .checkout .checkbox-block, .mypage .input-block, .mypage .button-block{max-width: unset; padding-left: 36px; padding-right: 36px;}
     .modal .input-block, .modal .button-block{padding-left: 0; padding-right: 0;}
-    .mypage .phone_form, .mypage .addr_form, .mypage .button-block{max-width: 572px;}
+    .mypage .phone_form, .mypage .addr_form, .mypage .button-block{max-width: 572px; padding-left: 36px; padding-right: 36px;}
     .template-mypage__form.mypage_plus_info{max-width: 604px;}
     .template-mypage__form.mypage_plus_info{padding-left: 52px; padding-right: 52px;}
     .template-mypage__form.mypage_plus_info .button-block{padding: 0;}
