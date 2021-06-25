@@ -956,3 +956,11 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
  .error_page .template-404__column.template-404__column--content{padding-right: 1.25rem;}
  .error_page .text{word-break: keep-all;}
 
+/* 미니 장바구니 */
+.cart-drawer__close{margin-right: 1rem; text-align: right;}
+.cart-drawer__list{padding: 0 1.5rem; border-top: 1px solid #171616;}
+.cart-drawer__list .drawer_each{display: flex; flex-flow: row nowrap; justify-content: space-between; padding: 1rem 0; border-bottom: 1px solid #171616;}
+.cart-drawer__list .drawer_each:last-child{border-bottom-width: 0;}
+.cart_soldout .responsive-image__wrapper{position: relative;}
+.cart_soldout .responsive-image__wrapper:before{content: 'sold out'; display: block; width: 100%; font-size: 22px; text-align: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 1;}
+.cart_soldout .responsive-image__wrapper:after{content: ''; display: block; width: 100%; height: 100%; background: #ececea; opacity: 80%; position: absolute; top: 0; left: 0;}
