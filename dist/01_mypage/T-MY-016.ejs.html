@@ -886,7 +886,7 @@
       <div class="cart-drawer__container drawer__content">
          <div class="cart-drawer__header">
             <div class="cart-drawer__title h3">
-               <span class="cart-drawer__title-text">Your order</span>
+               <span class="cart-drawer__title-text">장바구니</span>
                <button class="cart-drawer__close button" value="Close" data-cy="cartDrawerClose" data-target="cartDrawer" js-toggle="cartDrawer" tabindex="-1">
                   <span class="visually-hidden">Close</span>
                   <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -895,18 +895,18 @@
                </button>
             </div>
          </div>
-         <div class="cart-drawer__body ajax-cart" js-ajax-cart="container" js-cart-drawer="body">
-            <div class="ajax-cart__line-item gip-secondary-cart-line-item notranslate" data-index="1" data-key="37703302578327:2f2769284fc5baed72bb463e47582eaa" js-ajax-cart="lineItem">
+         <div class="cart-drawer__body ajax-cart">
+            <div class="ajax-cart__line-item gip-secondary-cart-line-item">
                <div class="ajax-cart__image responsive-image__wrapper">
                   <img alt="" sizes="auto" src="https://cdn.shopify.com/s/files/1/0480/1141/1607/products/TotemeCashmerebeanie_hazelmelange_320x.jpg">
                </div>
                <div class="ajax-cart__description">
                   <div class="ajax-cart__inner">
                      <a class="ajax-cart__title" href="/products/cashmere-beanie-hazel-melange?variant=37703302578327" tabindex="-1">
-                     Cashmere beanie hazel melange
+                     캐시미어 니트
                      </a>
                      <p class="ajax-cart__variant-title caption">
-                        One size
+                        XS
                      </p>
                   </div>
                   <div class="ajax-cart__amount" data-label="Price">
@@ -916,16 +916,36 @@
                         </span>
                         ×
                      </div>
-                     <div class="ajax-cart__price">
-                        <span data-product-id="6067186172055" data-variant-id="37703302578327" data-price="15000" js-currency="price">
-                        <span class="gip-secondary-cart-line-item-price-display notranslate" data-gip-converted="true">₩214,000 KRW</span>
-                        </span>
-                        <span class="gip-secondary-cart-line-item-price" style="display:none;" data-product-id="6067186172055" data-variant-id="37703302578327">
-                        <span class="money notranslate" data-gip-price-id="Q07fzx6v6Zdxp7e8" data-gip-original-value="150" data-gip-converted="true">₩214,000 KRW</span>
-                        </span>
-                        <span class="gip-secondary-cart-line-item-meta" style="display:none;" data-original-price-cents="15000" data-discounted-price-cents="15000">
+                     <div class="ajax-cart__price">214,000 원</div>
+                  </div>
+                  <button class="ajax-cart__remove" tabindex="-1" data-key="37703302578327:2f2769284fc5baed72bb463e47582eaa" js-ajax-cart="remove">
+                     <svg class="icon icon--medium icon__delete" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.517.25h6.966l.437 2.5H16v1h-1.077l-.923 12H2l-.923-12H0v-1h4.08l.437-2.5zm6.125 1l.263 1.5h-5.81l.263-1.5h5.285zM2.08 3.75l.846 11h10.148l.846-11H2.08zm3.42 9v-7h-1v7h1zm3-7v7h-1v-7h1zm3 7v-7h-1v7h1z"></path>
+                     </svg>
+                     <span class="visually-hidden">Remove</span>
+                  </button>
+               </div>
+            </div>
+            <div class="ajax-cart__line-item gip-secondary-cart-line-item cart_soldout">
+               <div class="ajax-cart__image responsive-image__wrapper">
+                  <img alt="" sizes="auto" src="https://cdn.shopify.com/s/files/1/0480/1141/1607/products/TotemeCashmerebeanie_hazelmelange_320x.jpg">
+               </div>
+               <div class="ajax-cart__description">
+                  <div class="ajax-cart__inner">
+                     <a class="ajax-cart__title" href="/products/cashmere-beanie-hazel-melange?variant=37703302578327" tabindex="-1">
+                     캐시미어 니트
+                     </a>
+                     <p class="ajax-cart__variant-title caption">
+                        XS
+                     </p>
+                  </div>
+                  <div class="ajax-cart__amount" data-label="Price">
+                     <div class="ajax-cart__quantity">
+                        <span class="gip-secondary-cart-line-item-qty">
+                        품절
                         </span>
                      </div>
+                     <div class="ajax-cart__price"></div>
                   </div>
                   <button class="ajax-cart__remove" tabindex="-1" data-key="37703302578327:2f2769284fc5baed72bb463e47582eaa" js-ajax-cart="remove">
                      <svg class="icon icon--medium icon__delete" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -936,21 +956,35 @@
                </div>
             </div>
          </div>
-         <div class="cart-drawer__footer " js-cart-drawer="footer">
-            <div class="cart-drawer__meta">
+         <div class="cart-drawer__footer">
+            <div class="cart-drawer__meta" style="display: none;">
                <p class="cart-drawer__disclaimer caption">
                   Fast shipping and free returns
                </p>
             </div>
+            <div class="cart-drawer__list" style="display: none;">
+               <div class="drawer_each">
+                  <span class="subtitle-1">
+                     상품금액
+                  </span>
+                  <span class="subtitle-1">214,000 원</span>
+               </div>
+               <div class="drawer_each">
+                  <span class="subtitle-1">
+                     배송비
+                  </span>
+                  <span class="subtitle-1">0 원</span>
+               </div>
+            </div>
             <div class="cart-drawer__total">
                <span class="subtitle-1">
-               Total
-               </span>
-               <span class="subtitle-1 gip-secondary-cart-total notranslate" data-price="15000" js-ajax-cart="subtotal" js-currency="price" data-gip-converted="true">₩214,000 KRW</span>
+                  합계
+                  </span>
+                  <span class="subtitle-1">214,000 원</span>
             </div>
             <div class="cart-drawer__buttons">
                <a class="button button--large button--primary button--block" href="/checkout" data-cy="cartDrawerLink" js-ajax-cart="checkout" tabindex="-1">
-               Go to checkout
+               주문하기
                </a>
             </div>
          </div>
