@@ -307,6 +307,9 @@ body.overflow-hidden {overflow: hidden;}
 .checkout_section{padding: 15px 15px 20px; border-bottom: 1px solid #171616;}
 .checkout_section:last-child{border-bottom-width: 0;}
 .checkout_tit1{margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #171616;}
+.checkout_tit1:after{content: ''; display: block; clear: both;}
+.checkout_tit1 .button--primary{float: right; font-size: 13px; padding: 0 18px; line-height: 21px;}
+.my_price_list>li{display: table; width: 100%; margin-bottom: 10px;}
 .checkout_tit2{margin-bottom: 10px;}
 .input-block.email_form{display: table; width: 100%; max-width: 500px; height: 100%; margin-left: auto; margin-right: auto;}
 .email_form>div{display: table-cell;}
@@ -445,11 +448,9 @@ body.overflow-hidden {overflow: hidden;}
 .non_member_info .info_box{display: table-cell;}
 .non_member_info .info_box p{margin-bottom: 0;}
 .non_member_info .btn_box{display: table-cell; width: 50px; text-align: right;}
-
 .payment_con_box{text-align: left; margin-bottom: 5px;}
 .payment_con_box>div{display: none;}
 .payment_con_box>.active{display: block; margin-top: 1.25rem;}
-.payment_con_box .dot_list>li:before{top: 7px;}
 .payment_radio_wrap{font-size: 0; letter-spacing: -1px;}
 .payment_radio_wrap:before, .payment_radio_wrap:after{display: none;}
 .payment_radio_wrap>*{font-size: 15px; letter-spacing: 0;}
@@ -694,6 +695,39 @@ li > a.navlist__link.text-link{padding-left:15px}
     .modal .input-block, .modal .button-block, .address_find_content .input-table{max-width: 544px;  padding-left: 22px; padding-right: 22px;}
     .modal .input-block.addr_form, .modal .input-block.phone_form{max-width: 544px;}
 }
+
+/* 마이페이지 - 주문내역 */
+.mypage_time_select{text-align-last: center;}
+.mypage_toggle_menu.mypage_order_menu{margin: 5px 0 0;}
+.mypage_toggle_menu.mypage_order_menu .toggle_tit{padding-left: 15px;}
+.mypage_toggle_menu.mypage_order_menu .toggle_tit:before{background-image: url(../assets/icon-small-arrow-down.svg); background-size: 8px auto; right: 13px; border-width: 0;}
+.mypage_toggle_menu.mypage_order_menu>li.is-active .toggle_tit:before{background-image: url(../assets/icon-small-arrow-down.svg); transform: translateY(-50%) rotate(180deg);}
+.mypage_toggle_menu.mypage_order_menu .toggle_con_box{padding-top: 0;}
+.mypage_order_menu .product-table{border-top: 1px solid #171616;}
+.mypage_order_menu .summary_content{margin-bottom: 0; padding: 15px;}
+.mypage_order_menu .product-table img{height: 100%; object-fit: cover; width: 100%;}
+.my_price_list>li:last-child{margin-bottom: 0;}
+.my_price_list .tit1{display: table-cell;}
+.my_price_list .txt1{display: table-cell; text-align: right;}
+.button-block.mypage_order_button{margin-top: 30px;}
+.button-block.mypage_order_button .button{margin-bottom: 10px;}
+@media screen and (max-width: 1000px){
+    .payment_edit-modal .modal__card{width: calc(100% - 10px);}
+}
+.payment_edit-modal .modal__body{display: block; padding: 15px; text-align: left;}
+.payment_edit-modal .payment_type{font-size: 0; letter-spacing: -1px;}
+.payment_edit-modal .payment_type>*{font-size: 15px; letter-spacing: 0;}
+.payment_edit-modal .payment_type>.radio_custom_box{display: inline-block; width: 50%;}
+.payment_edit-modal .payment_con_box > .active{margin-top: 20px;}
+.payment_edit-modal ul{padding: 0; margin: 0;}
+.payment_edit-modal .payment_guaranty{margin-bottom: 30px;}
+.payment_edit-modal .payment_guaranty .checkout_tit1{margin-bottom: 10px; padding-bottom: 0; border-bottom-width: 0;}
+.payment_edit-modal .my_price_list{margin-bottom: 20px; padding-top: 15px; border-top: 1px solid #171616;}
+.payment_edit-modal .checkbox_custom_box .comment.error{max-width: unset;}
+.modal__body .error.comment{margin-top: 5px; font-size: 13px;}
+.payment_edit-modal .payment_type2 .my_price_list{border-top-width: 0; margin-bottom: 10px; padding-top: 0;}
+.mypage_each.mypage_pw_input{padding-top: 10px; border-top: 1px solid #171616;}
+.mypage_each.mypage_pw_input .text-block.sub-description{padding: 0 36px;}
 
 figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 .containerZoom.active{cursor: zoom-out;}
