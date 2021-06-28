@@ -360,14 +360,14 @@
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M11 4.5a3 3 0 11-6 0 3 3 0 016 0zm1 0a4 4 0 11-8 0 4 4 0 018 0zm-10 7a1 1 0 011-1h10a1 1 0 011 1v3H2v-3zm-1 0a2 2 0 012-2h10a2 2 0 012 2v4H1v-4z"></path>
                 </svg>
                 <span class="visually-hidden">
-                Account
+                계정
                 </span>
             </button>
             <div id="accountNav" class="account-drawer drawer critical-hide">
                 <div class="account-drawer__content drawer__content">
                 <div class="account-drawer__header">
                     <div class="account-drawer__title h3">
-                        <span class="account-drawer__title-text">Account</span>
+                        <span class="account-drawer__title-text">계정</span>
                         <button class="account-drawer__close button">
                             <span class="visually-hidden">Close</span>
                             <svg class="icon icon--large icon__close">
@@ -379,23 +379,28 @@
                 <div class="account-drawer__body">
                     <ul class="site-header__account-navlist navlist navlist--large critical-hide">
                         <li class="navlist__item">
-                            <a class="navlist__link text-link" href="/account/login">
-                            Sign in
+                            <a class="navlist__link text-link" href="#">
+                            로그인
+                            </a>
+                        </li>
+                        <li class="navlist__item navlist__item--margin">
+                            <a class="navlist__link text-link" href="#">
+                            회원가입
                             </a>
                         </li>
                         <li class="navlist__item">
-                            <a class="navlist__link text-link" href="/account/register">
-                            Create account
+                            <a class="navlist__link text-link" href="#">
+                            아이디 찾기
                             </a>
                         </li>
-                        <li class="navlist__item navlist__item--margin ">
-                            <a class="navlist__link text-link" href="/account/login#reactivate">
-                            Reactivate account
+                        <li class="navlist__item navlist__item--margin">
+                            <a class="navlist__link text-link" href="#">
+                            비밀번호 찾기
                             </a>
                         </li>
                         <li class="navlist__item">
-                            <a class="navlist__link text-link" href="/account/login#recover">
-                            Forgot password
+                            <a class="navlist__link text-link" href="#">
+                            비회원 주문조회
                             </a>
                         </li>
                     </ul>
@@ -419,9 +424,9 @@
             </button>
         </div>
         <div class="site-header__col">
-            <div class="site-header__icon site-header__icon--wishlist">
+            <div class="site-header__icon site-header__icon--wishlist" data-right-header-button-type="wishlistListDrawer">
                 <!-- start: include 'wishlist-link' -->
-                <a href="/account/login?wk-redirect=%7B%22path%22%3A%22%2Fpages%2Fwishlist%22%7D" class="wk-link wk-empty" title="View Wishlist">
+                <a href="#" class="wk-link wk-empty" title="View Wishlist">
                 <span class="wishlist-close">
                     <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
@@ -487,7 +492,7 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M10.838 10.131c1.656-1.9 1.553-4.811-.288-6.652-1.922-1.922-5.008-1.95-6.894-.064-1.887 1.887-1.858 4.973.063 6.895 1.757 1.757 4.49 1.93 6.387.503l3.34 3.34.707-.708-3.315-3.314zm-.92-.454c-1.51 1.509-3.98 1.486-5.516-.05-1.537-1.538-1.56-4.007-.05-5.516 1.508-1.509 3.978-1.486 5.515.05 1.537 1.538 1.56 4.007.05 5.516z"></path>
                             </svg>
                         </button>
-                        <button class="search-bar__close" tabindex="0" type="submit" data-target="searchBarHeader" js-toggle="searchBarHeader">
+                        <button class="search-bar__close" tabindex="0" type="button" data-target="searchBarHeader" js-toggle="searchBarHeader">
                             <span class="icon-fallback-text">Search</span>
                             <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
@@ -879,8 +884,6 @@
        </div>
     </section>
  </div>
-
-
  <div id="shopify-section-cart-drawer" class="shopify-section">
    <section id="cartDrawer" class="cart-drawer drawer critical-hide gip-secondary-cart " role="navigation" data-cy="cartDrawer" data-enable-vendor-title="false" data-section-id="cart-drawer" data-section-type="cart-drawer" js-cart-drawer="container">
       <div class="cart-drawer__container drawer__content">
@@ -990,7 +993,98 @@
          </div>
       </div>
    </section>
-</div> 
+</div>
+
+<section id="wishlistListDrawer" class="wishlist-drawer wishlist-list-drawer drawer critical-hide"
+   role="navigation" data-cy="wishlistDrawer" data-section-id="" data-section-type="wishlist-drawer"
+   js-wishlist-list-drawer="container">
+   <div class="drawer__content" js-wishlist-list-drawer="body">
+      <div class="wishlist-drawer__header">
+         <div class="wishlist-drawer__title h3">
+            <span class="wishlist-drawer__title-text">위시리스트</span>
+            <button class="wishlist-drawer__close button" value="Close" data-cy="wishlistDrawerClose"
+               data-target="wishlistListDrawer" js-toggle="wishlistListDrawer" tabindex="-1">
+               <span class="visually-hidden">Close</span>
+               <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                     d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z">
+                  </path>
+               </svg>
+            </button>
+         </div>
+      </div>
+      <div class="wishlist-drawer__list" js-wishlist-list-drawer="list">
+         <!-- start: include 'wishlist-collection' -->
+         <div class="wishlist-collection">
+            <div class="wk-row">
+               <div class="wk-item-column">
+                  <div class="wk-item wk-fadeout">
+                     <div class="wk-image">
+                        <a href="#"
+                           class="wk-variant-link wk-content" title="View product" tabindex="0">
+                           <img class="wk-variant-image"
+                              src="https://cdn.shopify.com/s/files/1/0480/1141/1607/products/Toteme_PF21_MONOGRAM_SILK_PJ_TOP_213-755-707_SILK_SKYSCRAPER_343_1_1000x.jpg?v=1618929191"
+                              alt="Monogram silk PJ top skyscraper">
+                        </a>
+                     </div>
+                     <div class="wk-item__content">
+                        <div class="wk-product-title">
+                           <a href="#"
+                              class="wk-variant-link" title="View product" tabindex="0">모노 실크 탑</a>
+                        </div>
+                        <div class="wk-purchase">
+                           <span class="wk-price wk-price-preview">
+                              <span class="money">783,750 원</span>
+                           </span>
+                        </div>
+                        <button type="button" class="wk-button-wishlist-page wk-remove-item wk-with-hover" title="Remove from Wishlist">
+                           <div class="wk-icon">
+                             <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+                         </svg>
+                           </div>
+                           <span class="wk-label">Remove from Wishlist</span>
+                         </button>
+                     </div>
+                  </div>
+               </div>
+               <div class="wk-item-column wl_soldout">
+                  <div class="wk-item wk-fadeout">
+                     <div class="wk-image">
+                        <a href="#"
+                           class="wk-variant-link wk-content" title="View product" tabindex="0">
+                           <img class="wk-variant-image"
+                              src="https://cdn.shopify.com/s/files/1/0480/1141/1607/products/Toteme_PF21_MONOGRAM_SILK_PJ_TOP_213-755-707_SILK_SKYSCRAPER_343_1_1000x.jpg?v=1618929191"
+                              alt="Monogram silk PJ top skyscraper">
+                        </a>
+                     </div>
+                     <div class="wk-item__content">
+                        <div class="wk-product-title">
+                           <a href="#"
+                              class="wk-variant-link" title="View product" tabindex="0">모노 실크 탑</a>
+                        </div>
+                        <div class="wk-purchase">
+                           <span class="wk-price wk-price-preview">
+                              <span class="money">품절</span>
+                           </span>
+                        </div>
+                        <button type="button" class="wk-button-wishlist-page wk-remove-item wk-with-hover" title="Remove from Wishlist">
+                           <div class="wk-icon">
+                             <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+                         </svg>
+                           </div>
+                           <span class="wk-label">Remove from Wishlist</span>
+                         </button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div><!-- end: include 'wishlist-collection' -->
+      </div>
+   </div>
+</section> 
       <!-- // MO 헤더 -->
       
       

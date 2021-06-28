@@ -26,13 +26,32 @@ Util.prototype.registerEvent = function(option){
 
                 if($target.hasClass("is-active")){ // 액티브 일 경우
                     this.resetSubFunction();
+                }else if( $target.hasClass('site-header__search') ){
+                    this.resetSubFunction();
+                    $target.addClass("is-active");
+                    $('.search-bar__input').focus();
                 }else{
                     this.resetSubFunction();
-                    $("body").addClass("drawer--open--blur");
+                    $("body").addClass("drawer--open--blur overflow-hidden").append("<div class='window-overlay is-active'></div>");
                     $target.addClass("is-active");
+
+                    $('.window-overlay').on('click', (function (e){
+                        this.resetSubFunction();
+                        $('.drawer').removeClass('is-active');
+                        $("body").removeClass("drawer--open--blur overflow-hidden");
+                    }).bind(this));
                 }
             }).bind(this)); 
 
+            $('.button[class*=drawer__close]').on('click', (function(){
+                var $target = $(this).parents('.drawer');
+
+                this.resetSubFunction();
+            }).bind(this));
+            $('.search-bar__close').on('click', function(){
+                $('.site-header__search').removeClass('is-active');
+            });
+            
             // 우측 메뉴 이벤트 끝
         break;
 
@@ -358,16 +377,16 @@ Util.prototype.registerEvent = function(option){
 /* 기타 함수 */
 Util.prototype.resetSubFunction = function(){
 
-    $("button[data-right-header-button-type]").each(function(idx,ele){
+    $("[data-right-header-button-type]").each(function(idx,ele){
       //  debugger;
         var targetData = $(ele).data("rightHeaderButtonType");
         $("html").removeClass("js-menu-active")
         $("body").removeClass("drawer--open--blur").removeClass("overflow-hidden");
         $("#"+targetData).removeClass("is-active");
-
         
         $("#menuDrawer").removeClass("is-active")
-        $(".site-header__hamburger .site-header__icon.site-header__icon--menu").removeClass("is-active")   
+        $(".site-header__hamburger .site-header__icon.site-header__icon--menu").removeClass("is-active");
+        $('.window-overlay').remove(); 
     })
 }
 /* // 기타 함수 */
@@ -395,7 +414,7 @@ SiteController.prototype.initMobileMenu = function(){
 }
 
 SiteController.prototype.initRightMenu = function(){
-    $("button[data-right-header-button-type]").each(function(idx,ele){
+    $("[data-right-header-button-type]").each(function(idx,ele){
         var targetId = $(ele).data("rightHeaderButtonType");                        
         utilInstance.registerEvent({cmd:"showRightMenu", target:targetId, element:ele});        
         // data-header-button-type에 버튼 ID를 입력하면, 우측 메뉴 이벤트가 작동됩니다.             
