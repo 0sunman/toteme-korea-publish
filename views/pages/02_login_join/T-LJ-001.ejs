@@ -8,14 +8,11 @@
        <div class="template-account__content">
           <div class="template-login__content">
  
-             <div class="template-account__text_hdtype_1 alert title" style='display:none'>
-                <div class="rte">
-                  <p class='error fail-login' style='display:none'>입력하신 아이디 또는 비밀번호가 맞지 않습니다.</p>
-                  <p class='error no-id' style='display:none'>아이디를 입력해주세요.</p>
-                  <p class='error no-pass' style='display:none'>비밀번호를 입력해주세요.</p>
-                  <p class='error try-5' style='display:none'>비밀번호를 5회 이상 잘못 입력하셨습니다. 도용방지를 위해 "비밀번호 찾기"에서 재설정해주세요.</p>
-                </div>
-             </div>
+            <div class="template-account__text_hdtype_1 alert title" style='display:none'>
+               <div class="rte">
+                 <p class='error'></p>
+               </div>
+            </div>
              <div class="section">
                    <form method="post">
                         <input type="hidden" name="form_type" value="customer_login"><input type="hidden" name="utf8" value="✓">
@@ -23,17 +20,22 @@
                            <label class="form-group__label subtitle-2 is-hidden" for="customerId">
                            ID 또는 이메일
                            </label>
-                           <input id="customerId" autocapitalize="off" autocomplete="off" autofocus="" name="customer[id]" placeholder="ID 또는 이메일" required="" spellcheck="false" type="text" data-need="id">
+                           <input id="customerId" autocapitalize="off" autocomplete="off" autofocus="" name="customer[id]" placeholder="ID 또는 이메일" required="" spellcheck="false" type="text" data-need="id" data-need-length="8">
                         </div>
                         <div class="password label-block input-block">
                            <label class="form-group__label subtitle-2 is-hidden" for="CustomerPassword">
                            비밀번호
                            </label>
-                           <input id="CustomerPassword" name="customer[password]" placeholder="비밀번호" required="" type="password"  data-need="password">
+                           <input id="CustomerPassword" name="customer[password]" placeholder="비밀번호" required="" type="password"  data-need="password" data-need-length="8">
                         </div>
 
-                        <div class="login button-block">
-                           <input class="button button--primary button--block button--large" type="submit" value="로그인">
+                        <div class="login button-block loading-wrap">
+                           <input class="button button--primary button--block button--large" type="submit" data-form-submit="doLogin" value="로그인">
+                           <div class="loader">
+                              <div class="smiley-spin">
+                                 <svg class="icon icon--medium icon__smiley" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 15.5a7.5 7.5 0 110-15 7.5 7.5 0 010 15zm0-1a6.5 6.5 0 100-13 6.5 6.5 0 000 13zM4.947 9.776l-.894.448a4.413 4.413 0 007.894 0l-.894-.448a3.413 3.413 0 01-6.106 0zM9.5 5h1v2h-1V5zm-3 0h-1v2h1V5z"></path></svg>
+                              </div>
+                           </div>
                         </div>
 
                         <div class='defaultblock sns-buttons label-block input-block'>
@@ -72,65 +74,3 @@
        </div>
     </div>
  </div>
- <script>
-    setTimeout(function(){
-      $("input[data-need]").on("keyup",function(evt){
-         var isValid = true;
-         var $needData = $(evt.target);
-
-         
-         $needData.removeClass("input-valid")
-
-         if( $needData.data("need") === "id" && $needData.val().length >= 5){
-            $needData.removeClass("input-error")
-            $needData.addClass("input-valid")
-         }
-         
-         if( $needData.data("need") === "password" && $needData.val().length >= 5){
-            $needData.removeClass("input-error")
-            $needData.addClass("input-valid")
-         }
-
-
-         if($("input[data-need='id'].input-valid").length > 0 && $("input[data-need='password'].input-valid").length > 0){
-            $(".login.button-block > input").addClass("is-active")
-            $(".login.button-block > input").removeClass("is-error")
-         }else{
-            $(".login.button-block > input").removeClass("is-active")
-         }
-      })
-       $(".login.button-block > input").click(function(evt){
-         evt.preventDefault();
-
-         $("input[data-need]").each((function(idx,element){
-            if($(element).val().length < 5){
-               errorObj = $(element).data("need");
-               $(element).addClass("input-error");                  
-               $(".login.button-block > input").addClass("is-error")
-               return true;
-            }else{
-               $(element).removeClass("input-error");
-            }
-            
-         }).bind(this));
-
-         if($("input[data-need='id']").val().length == 0){
-            $(".alert.title .error").hide();
-            $(".alert.title").show();
-            $(".alert.title .error.no-id").show();
-               
-         }else if($("input[data-need='password']").val().length == 0){
-            $(".alert.title .error").hide();
-            $(".alert.title").show();
-            $(".alert.title .error.no-pass").show();
-
-         }else{
-            
-            $(".alert.title").hide();
-            $(".alert.title .error.no-pass").hide();
-         }
-       })
-
-
-    },1000)
- </script>

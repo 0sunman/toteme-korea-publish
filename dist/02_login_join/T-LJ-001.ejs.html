@@ -1154,14 +1154,11 @@
        <div class="template-account__content">
           <div class="template-login__content">
  
-             <div class="template-account__text_hdtype_1 alert title" style='display:none'>
-                <div class="rte">
-                  <p class='error fail-login' style='display:none'>입력하신 아이디 또는 비밀번호가 맞지 않습니다.</p>
-                  <p class='error no-id' style='display:none'>아이디를 입력해주세요.</p>
-                  <p class='error no-pass' style='display:none'>비밀번호를 입력해주세요.</p>
-                  <p class='error try-5' style='display:none'>비밀번호를 5회 이상 잘못 입력하셨습니다. 도용방지를 위해 "비밀번호 찾기"에서 재설정해주세요.</p>
-                </div>
-             </div>
+            <div class="template-account__text_hdtype_1 alert title" style='display:none'>
+               <div class="rte">
+                 <p class='error'></p>
+               </div>
+            </div>
              <div class="section">
                    <form method="post">
                         <input type="hidden" name="form_type" value="customer_login"><input type="hidden" name="utf8" value="✓">
@@ -1169,17 +1166,22 @@
                            <label class="form-group__label subtitle-2 is-hidden" for="customerId">
                            ID 또는 이메일
                            </label>
-                           <input id="customerId" autocapitalize="off" autocomplete="off" autofocus="" name="customer[id]" placeholder="ID 또는 이메일" required="" spellcheck="false" type="text" data-need="id">
+                           <input id="customerId" autocapitalize="off" autocomplete="off" autofocus="" name="customer[id]" placeholder="ID 또는 이메일" required="" spellcheck="false" type="text" data-need="id" data-need-length="8">
                         </div>
                         <div class="password label-block input-block">
                            <label class="form-group__label subtitle-2 is-hidden" for="CustomerPassword">
                            비밀번호
                            </label>
-                           <input id="CustomerPassword" name="customer[password]" placeholder="비밀번호" required="" type="password"  data-need="password">
+                           <input id="CustomerPassword" name="customer[password]" placeholder="비밀번호" required="" type="password"  data-need="password" data-need-length="8">
                         </div>
 
-                        <div class="login button-block">
-                           <input class="button button--primary button--block button--large" type="submit" value="로그인">
+                        <div class="login button-block loading-wrap">
+                           <input class="button button--primary button--block button--large" type="submit" data-form-submit="doLogin" value="로그인">
+                           <div class="loader">
+                              <div class="smiley-spin">
+                                 <svg class="icon icon--medium icon__smiley" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 15.5a7.5 7.5 0 110-15 7.5 7.5 0 010 15zm0-1a6.5 6.5 0 100-13 6.5 6.5 0 000 13zM4.947 9.776l-.894.448a4.413 4.413 0 007.894 0l-.894-.448a3.413 3.413 0 01-6.106 0zM9.5 5h1v2h-1V5zm-3 0h-1v2h1V5z"></path></svg>
+                              </div>
+                           </div>
                         </div>
 
                         <div class='defaultblock sns-buttons label-block input-block'>
@@ -1218,68 +1220,6 @@
        </div>
     </div>
  </div>
- <script>
-    setTimeout(function(){
-      $("input[data-need]").on("keyup",function(evt){
-         var isValid = true;
-         var $needData = $(evt.target);
-
-         
-         $needData.removeClass("input-valid")
-
-         if( $needData.data("need") === "id" && $needData.val().length >= 5){
-            $needData.removeClass("input-error")
-            $needData.addClass("input-valid")
-         }
-         
-         if( $needData.data("need") === "password" && $needData.val().length >= 5){
-            $needData.removeClass("input-error")
-            $needData.addClass("input-valid")
-         }
-
-
-         if($("input[data-need='id'].input-valid").length > 0 && $("input[data-need='password'].input-valid").length > 0){
-            $(".login.button-block > input").addClass("is-active")
-            $(".login.button-block > input").removeClass("is-error")
-         }else{
-            $(".login.button-block > input").removeClass("is-active")
-         }
-      })
-       $(".login.button-block > input").click(function(evt){
-         evt.preventDefault();
-
-         $("input[data-need]").each((function(idx,element){
-            if($(element).val().length < 5){
-               errorObj = $(element).data("need");
-               $(element).addClass("input-error");                  
-               $(".login.button-block > input").addClass("is-error")
-               return true;
-            }else{
-               $(element).removeClass("input-error");
-            }
-            
-         }).bind(this));
-
-         if($("input[data-need='id']").val().length == 0){
-            $(".alert.title .error").hide();
-            $(".alert.title").show();
-            $(".alert.title .error.no-id").show();
-               
-         }else if($("input[data-need='password']").val().length == 0){
-            $(".alert.title .error").hide();
-            $(".alert.title").show();
-            $(".alert.title .error.no-pass").show();
-
-         }else{
-            
-            $(".alert.title").hide();
-            $(".alert.title .error.no-pass").hide();
-         }
-       })
-
-
-    },1000)
- </script>
          <!-- END content_for_index -->
       </main>
       <!-- Footer -->
@@ -1625,7 +1565,36 @@
                </div>
             </div>
          </footer>
-      </div> 
+      </div>
+
+      <div class="hyundai-footer">
+         <div class="footer_cont">
+             <div class="section_top">
+                 <div class="section_top">
+                     <p class="footer_hyundai"><span class="hidden">the HYUNDAI.COM</span></p>
+                     <div class="link_lst">
+                         <p>
+                             <span class="inner">Totême 온라인 스토어는</span>
+                             <span class="inner">더현대닷컴을 이용하고 있습니다.</span>
+                         </p>
+                         <ul>
+                             <li><a href="#" class="modal_trigger" data-modal="verify-modal">이용약관</a></li>
+                             <li><a href="#" class="modal_trigger" data-modal="verify-modal">개인정보 처리방침</a></li>
+                             <li><a href="http://www.ehyundai.com/newPortal/ir/main.do" target="_blank">현대백화점 그룹</a></li>
+                         </ul>
+                     </div>
+                 </div>
+                 <div class="section_middle">
+                     <div class="txt"><span>주식회사 현대백화점  |  대표이사 : 김형종 외 2인</span></div>
+                     <p class="txt"></p><address>서울시 강남구 테헤란로98길 12 </address><span> | 사업자등록번호 : 211-87-21455 [<a href="http://www.ftc.go.kr/www/bizCommView.do?key=232&amp;apv_perm_no=2010322014830201882&amp;pageUnit=10&amp;searchCnd=wrkr_no&amp;searchKrwd=2118721455&amp;pageIndex=1" data-toggle="winpopup" data-api="center,750,700,scrollbars" target="_blank">사업자정보 확인</a>] | 통신판매업신고 : 2010-서울강남-01882</span><p></p>
+                     <p class="txt"><span>고객센터 : 1661-8444 / <a href="mailto:shop.kr@toteme-studio.com">shop.kr@toteme-studio.com</a> | 개인정보관리 및 청소년보호 책임자 : 회원운영관리담당 장근혁 | 호스팅서비스 : (주)현대백화점</span></p>
+                    
+                     <p class="txt copy">CopyrightⓒHyundai Department Store. All rights reserved.</p>
+                     <p class="txt safe">고객님의 안전거래를 위해 현금결제시 우리은행과 채무지급보증계약을 체결하여 안전거래를 보장하고 있습니다. <a href="#" class="modal_trigger" data-modal="ly_guarantee-modal">서비스 가입사실 확인</a></p>
+                  </div>
+             </div>
+         </div>
+     </div> 
       <!-- // Footer -->
 
       <!-- 하단 쿠키배너 -->
