@@ -84,6 +84,7 @@ const pageData = [
   {"type":"mypage", "pid":"T-MY-014", "state":"DONE" , "completedate":"2021-06-01", "url" : "/01_mypage/T-MY-014.ejs.html", "pageurl" : "01_mypage/T-MY-014.ejs", "title":"T-MY-014. Wishlist", "title2":"마이페이지 - 위시리스트"},
   {"type":"mypage", "pid":"T-MY-016", "state":"DONE" , "completedate":"2021-06-01", "url" : "/01_mypage/T-MY-016.ejs.html", "pageurl" : "01_mypage/T-MY-016.ejs", "title":"T-MY-016. Waitinglist(empty)", "title2":"마이페이지 - 입고 알림 목록(상품이 없는 경우)"},
   {"type":"mypage", "pid":"T-MY-017", "state":"DONE" , "completedate":"2021-06-01", "url" : "/01_mypage/T-MY-017.ejs.html", "pageurl" : "01_mypage/T-MY-017.ejs", "title":"T-MY-017. Waitinglist", "title2":"마이페이지 - 입고 알림 목록"},
+  {"type":"mypage", "pid":"T-MY-021", "state":"DONE" , "completedate":"2021-06-01", "url" : "/01_mypage/T-MY-021.ejs.html", "pageurl" : "01_mypage/T-MY-021.ejs", "title":"T-MY-021. Orders", "title2":"마이페이지 - 주문내역"},
   {"type":"mypage", "pid":"T-MY-023", "state":"DONE" , "completedate":"2021-06-01", "url" : "/01_mypage/T-MY-023.ejs.html", "pageurl" : "01_mypage/T-MY-023.ejs", "title":"T-MY-023. Returns", "title2":"마이페이지 - 반품신청"},
 
   {"type":"page", "pid":"T-ETC-001", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"1-1. About - Totême","url" : "/05_page_about/11",   "pageurl" : "05_page_about/01_about_toteme.ejs"},
