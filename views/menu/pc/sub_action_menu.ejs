@@ -6,14 +6,14 @@
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M11 4.5a3 3 0 11-6 0 3 3 0 016 0zm1 0a4 4 0 11-8 0 4 4 0 018 0zm-10 7a1 1 0 011-1h10a1 1 0 011 1v3H2v-3zm-1 0a2 2 0 012-2h10a2 2 0 012 2v4H1v-4z"></path>
                 </svg>
                 <span class="visually-hidden">
-                Account
+                계정
                 </span>
             </button>
             <div id="accountNav" class="account-drawer drawer critical-hide">
                 <div class="account-drawer__content drawer__content">
                 <div class="account-drawer__header">
                     <div class="account-drawer__title h3">
-                        <span class="account-drawer__title-text">Account</span>
+                        <span class="account-drawer__title-text">계정</span>
                         <button class="account-drawer__close button">
                             <span class="visually-hidden">Close</span>
                             <svg class="icon icon--large icon__close">
@@ -25,23 +25,28 @@
                 <div class="account-drawer__body">
                     <ul class="site-header__account-navlist navlist navlist--large critical-hide">
                         <li class="navlist__item">
-                            <a class="navlist__link text-link" href="/account/login">
-                            Sign in
+                            <a class="navlist__link text-link" href="#">
+                            로그인
+                            </a>
+                        </li>
+                        <li class="navlist__item navlist__item--margin">
+                            <a class="navlist__link text-link" href="#">
+                            회원가입
                             </a>
                         </li>
                         <li class="navlist__item">
-                            <a class="navlist__link text-link" href="/account/register">
-                            Create account
+                            <a class="navlist__link text-link" href="#">
+                            아이디 찾기
                             </a>
                         </li>
-                        <li class="navlist__item navlist__item--margin ">
-                            <a class="navlist__link text-link" href="/account/login#reactivate">
-                            Reactivate account
+                        <li class="navlist__item navlist__item--margin">
+                            <a class="navlist__link text-link" href="#">
+                            비밀번호 찾기
                             </a>
                         </li>
                         <li class="navlist__item">
-                            <a class="navlist__link text-link" href="/account/login#recover">
-                            Forgot password
+                            <a class="navlist__link text-link" href="#">
+                            비회원 주문조회
                             </a>
                         </li>
                     </ul>
@@ -65,9 +70,9 @@
             </button>
         </div>
         <div class="site-header__col">
-            <div class="site-header__icon site-header__icon--wishlist">
+            <div class="site-header__icon site-header__icon--wishlist" data-right-header-button-type="wishlistListDrawer">
                 <!-- start: include 'wishlist-link' -->
-                <a href="/account/login?wk-redirect=%7B%22path%22%3A%22%2Fpages%2Fwishlist%22%7D" class="wk-link wk-empty" title="View Wishlist">
+                <a href="#" class="wk-link wk-empty" title="View Wishlist">
                 <span class="wishlist-close">
                     <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>

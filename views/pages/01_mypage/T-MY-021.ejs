@@ -1,0 +1,656 @@
+<div class="container mypage">
+	<div class="template-account__header">
+		안녕하세요, 이현대님
+	</div>
+	<div class="template-account__wrapper">
+		 <div class="template-account__left"></div>
+		 <%- include ("./menu/index.ejs",{state:25}) %>
+		 <div class="template-account__content">
+			<div class="template-account__text_hdtype_1 alert" style="display: none;">
+				<div class="rte">
+					주문 내역
+				</div>
+			</div>
+			<div class="template-mypage__form-wrapper">
+				<div class="template-mypage__form">
+					<div class="input-block">
+						<label class="form-group__label is-hidden" for="selectTime">기간보기</label>
+						<select name="selectTime" id="refundBank" class="toteme-select-style mypage_time_select">
+							<option value="" selected="" disabled="">기간보기</option>
+							<option value="">1개월</option>
+							<option value="">3개월 </option>
+							<option value="">6개월</option>
+							<option value="">전체보기</option>
+						</select>
+					</div>
+				</div>
+				<ul class="mypage_toggle_menu mypage_order_menu">
+					<li class="accordion__item">
+						<button type="button" class="toggle_tit accordion__control"># 17032700034509 (2020-05-05)</button>
+						<div class="toggle_con_box">
+							<table class="product-table">
+								<caption class="visually-hidden">Shopping cart</caption>
+								<thead class="product-table__header">
+									<tr>
+										<th scope="col"><span class="visually-hidden">Product image</span></th>
+										<th scope="col"><span class="visually-hidden">Description</span></th>
+										<th scope="col"><span class="visually-hidden">Quantity</span></th>
+										<th scope="col"><span class="visually-hidden">Price</span></th>
+									</tr>
+								</thead>
+								<tbody id="gip-product-table-processed">
+									<tr class="product">
+										<td class="product__image">
+											<div class="product-thumbnail">
+												<div class="product-thumbnail__wrapper">
+													<img alt="Centered monogram silk scarf creme - One size" class="product-thumbnail__image" src="../assets/order1.jpg">
+												</div>
+												<span class="product-thumbnail__quantity" aria-hidden="true">1</span>
+											</div>
+										</td>
+										<th class="product__description" scope="row">
+											<span class="product__description__name order-summary__emphasis">센터드 모노그램 실크 스카프 크림</span>
+											<span class="product__description__variant">원 사이즈</span>
+										</th>
+										<td class="product__quantity">
+											<span class="visually-hidden">
+												1
+											</span>
+										</td>
+										<td class="product__price">
+											<span class="order-summary__emphasis skeleton-while-loading notranslate">279,000원</span>
+										</td>
+									</tr>
+									<tr class="product">
+										<td class="product__image">
+											<div class="product-thumbnail ">
+												<div class="product-thumbnail__wrapper">
+													<img alt="The Regulars sunglasses black - One size" class="product-thumbnail__image" src="../assets/order2.jpg">
+												</div>
+												<span class="product-thumbnail__quantity" aria-hidden="true">1</span>
+											</div>
+										</td>
+										<th class="product__description" scope="row">
+											<span class="product__description__name order-summary__emphasis">더 레귤러 선글래스 블랙</span>
+											<span class="product__description__variant">원 사이즈</span>
+										</th>
+										<td class="product__quantity">
+											<span class="visually-hidden">
+												1
+											</span>
+										</td>
+										<td class="product__price">
+											<span class="order-summary__emphasis skeleton-while-loading notranslate">390,000원</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="summary_content mypage_each2">
+								<h5 class="checkout_tit1">주문상태</h5>
+								<div class="txt_btn_box">
+									<h4 class="mypage_tit2">배송완료</h4>
+									<div>
+										<button type="button" class="button button--primary">상세보기</button>
+									</div>
+								</div>
+							</div>
+							<div class="summary_content">
+								<h5 class="checkout_tit1">배송정보</h5>
+								<div class="summary_text_block">
+									<p>택배배송<br>
+										이현대<br>
+										010-1234-5678<br>
+										서울특별시 강남구 강남대로1길 1층<br>
+										부재 시 경비실에 맡겨주세요.</p>
+								</div>
+							</div>
+							<div class="summary_content mypage_each2">
+								<h5 class="checkout_tit1">결제정보 <button type="button" class="button button--primary modal_trigger" data-modal="payment_edit-modal">결제수단 변경</button></h5>
+								<div class="summary_text_block">
+									<ul class="my_price_list">
+										<li>
+											<span class="tit1">주문금액</span>
+											<span class="txt1">200,000원</span>
+										</li>
+										<li>
+											<span class="tit1">배송비</span>
+											<span class="txt1">무료배송</span>
+										</li>
+										<li>
+											<span class="tit1">할인금액</span>
+											<span class="txt1">-50,000원</span>
+										</li>
+										<li>
+											<span class="tit1">총 결제금액</span>
+											<span class="txt1">150,000원</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="summary_content mypage_each2">
+								<h5 class="checkout_tit1">결제수단</h5>
+								<div class="summary_text_block">
+									<ul class="my_price_list">
+										<li>
+											<span class="tit1">신용카드</span>
+											<span class="txt1">150,000원</span>
+										</li>
+										<li>
+											<span class="tit1">KEB하나카드</span>
+											<span class="txt1">일시불</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="summary_content mypage_each2">
+								<h5 class="checkout_tit1">승인내역</h5>
+								<div class="summary_text_block">
+									<ul class="my_price_list">
+										<li>
+											<span class="tit1">2021-05-05 12:41:22</span>
+											<span class="txt1">150,000원</span>
+										</li>
+										<li>
+											<span class="tit1">카드</span>
+											<span class="txt1"></span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="button-block">
+								<input class="button button--primary button--block button--large" type="button" value="주문 취소">
+							</div>
+							<div class="button-block mypage_order_button">
+								<input class="button button--primary button--block button--large" type="button" value="카드전표 출력">
+								<input class="button button--primary button--block button--large" type="button" value="현금영수증">
+								<input class="button button--primary button--block button--large" type="button" value="세금계산서 신청">
+							</div>
+						</div>
+					</li>
+					<li class="accordion__item">
+						<button type="button" class="toggle_tit accordion__control"># 17032700034509 (2020-03-03)</button>
+						<div class="toggle_con_box">
+							<table class="product-table">
+								<caption class="visually-hidden">Shopping cart</caption>
+								<thead class="product-table__header">
+									<tr>
+										<th scope="col"><span class="visually-hidden">Product image</span></th>
+										<th scope="col"><span class="visually-hidden">Description</span></th>
+										<th scope="col"><span class="visually-hidden">Quantity</span></th>
+										<th scope="col"><span class="visually-hidden">Price</span></th>
+									</tr>
+								</thead>
+								<tbody id="gip-product-table-processed">
+									<tr class="product">
+										<td class="product__image">
+											<div class="product-thumbnail">
+												<div class="product-thumbnail__wrapper">
+													<img alt="Centered monogram silk scarf creme - One size" class="product-thumbnail__image" src="../assets/order1.jpg">
+												</div>
+												<span class="product-thumbnail__quantity" aria-hidden="true">1</span>
+											</div>
+										</td>
+										<th class="product__description" scope="row">
+											<span class="product__description__name order-summary__emphasis">센터드 모노그램 실크 스카프 크림</span>
+											<span class="product__description__variant">원 사이즈</span>
+										</th>
+										<td class="product__quantity">
+											<span class="visually-hidden">
+												1
+											</span>
+										</td>
+										<td class="product__price">
+											<span class="order-summary__emphasis skeleton-while-loading notranslate">279,000원</span>
+										</td>
+									</tr>
+									<tr class="product">
+										<td class="product__image">
+											<div class="product-thumbnail ">
+												<div class="product-thumbnail__wrapper">
+													<img alt="The Regulars sunglasses black - One size" class="product-thumbnail__image" src="../assets/order2.jpg">
+												</div>
+												<span class="product-thumbnail__quantity" aria-hidden="true">1</span>
+											</div>
+										</td>
+										<th class="product__description" scope="row">
+											<span class="product__description__name order-summary__emphasis">더 레귤러 선글래스 블랙</span>
+											<span class="product__description__variant">원 사이즈</span>
+										</th>
+										<td class="product__quantity">
+											<span class="visually-hidden">
+												1
+											</span>
+										</td>
+										<td class="product__price">
+											<span class="order-summary__emphasis skeleton-while-loading notranslate">390,000원</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="summary_content mypage_each2">
+								<h5 class="checkout_tit1">주문상태</h5>
+								<div class="txt_btn_box">
+									<h4 class="mypage_tit2">배송완료</h4>
+									<div>
+										<button type="button" class="button button--primary">상세보기</button>
+									</div>
+								</div>
+							</div>
+							<div class="summary_content">
+								<h5 class="checkout_tit1">배송정보</h5>
+								<div class="summary_text_block">
+									<p>택배배송<br>
+										이현대<br>
+										010-1234-5678<br>
+										서울특별시 강남구 강남대로1길 1층<br>
+										부재 시 경비실에 맡겨주세요.</p>
+								</div>
+							</div>
+							<div class="summary_content mypage_each2">
+								<h5 class="checkout_tit1">결제정보 <button type="button" class="button button--primary modal_trigger" data-modal="payment_edit-modal">결제수단 변경</button></h5>
+								<div class="summary_text_block">
+									<ul class="my_price_list">
+										<li>
+											<span class="tit1">주문금액</span>
+											<span class="txt1">200,000원</span>
+										</li>
+										<li>
+											<span class="tit1">배송비</span>
+											<span class="txt1">무료배송</span>
+										</li>
+										<li>
+											<span class="tit1">할인금액</span>
+											<span class="txt1">-50,000원</span>
+										</li>
+										<li>
+											<span class="tit1">총 결제금액</span>
+											<span class="txt1">150,000원</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="summary_content mypage_each2">
+								<h5 class="checkout_tit1">결제수단</h5>
+								<div class="summary_text_block">
+									<ul class="my_price_list">
+										<li>
+											<span class="tit1">신용카드</span>
+											<span class="txt1">150,000원</span>
+										</li>
+										<li>
+											<span class="tit1">KEB하나카드</span>
+											<span class="txt1">일시불</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="summary_content mypage_each2">
+								<h5 class="checkout_tit1">승인내역</h5>
+								<div class="summary_text_block">
+									<ul class="my_price_list">
+										<li>
+											<span class="tit1">2021-05-05 12:41:22</span>
+											<span class="txt1">150,000원</span>
+										</li>
+										<li>
+											<span class="tit1">카드</span>
+											<span class="txt1"></span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="button-block">
+								<input class="button button--primary button--block button--large" type="button" value="주문 취소">
+							</div>
+							<div class="button-block mypage_order_button">
+								<input class="button button--primary button--block button--large" type="button" value="카드전표 출력">
+								<input class="button button--primary button--block button--large" type="button" value="현금영수증">
+								<input class="button button--primary button--block button--large" type="button" value="세금계산서 신청">
+							</div>
+						</div>
+					</li>
+					<li class="accordion__item">
+						<button type="button" class="toggle_tit accordion__control"># 17032700034509 (2020-01-01)</button>
+						<div class="toggle_con_box">
+							<table class="product-table">
+								<caption class="visually-hidden">Shopping cart</caption>
+								<thead class="product-table__header">
+									<tr>
+										<th scope="col"><span class="visually-hidden">Product image</span></th>
+										<th scope="col"><span class="visually-hidden">Description</span></th>
+										<th scope="col"><span class="visually-hidden">Quantity</span></th>
+										<th scope="col"><span class="visually-hidden">Price</span></th>
+									</tr>
+								</thead>
+								<tbody id="gip-product-table-processed">
+									<tr class="product">
+										<td class="product__image">
+											<div class="product-thumbnail">
+												<div class="product-thumbnail__wrapper">
+													<img alt="Centered monogram silk scarf creme - One size" class="product-thumbnail__image" src="../assets/order1.jpg">
+												</div>
+												<span class="product-thumbnail__quantity" aria-hidden="true">1</span>
+											</div>
+										</td>
+										<th class="product__description" scope="row">
+											<span class="product__description__name order-summary__emphasis">센터드 모노그램 실크 스카프 크림</span>
+											<span class="product__description__variant">원 사이즈</span>
+										</th>
+										<td class="product__quantity">
+											<span class="visually-hidden">
+												1
+											</span>
+										</td>
+										<td class="product__price">
+											<span class="order-summary__emphasis skeleton-while-loading notranslate">279,000원</span>
+										</td>
+									</tr>
+									<tr class="product">
+										<td class="product__image">
+											<div class="product-thumbnail ">
+												<div class="product-thumbnail__wrapper">
+													<img alt="The Regulars sunglasses black - One size" class="product-thumbnail__image" src="../assets/order2.jpg">
+												</div>
+												<span class="product-thumbnail__quantity" aria-hidden="true">1</span>
+											</div>
+										</td>
+										<th class="product__description" scope="row">
+											<span class="product__description__name order-summary__emphasis">더 레귤러 선글래스 블랙</span>
+											<span class="product__description__variant">원 사이즈</span>
+										</th>
+										<td class="product__quantity">
+											<span class="visually-hidden">
+												1
+											</span>
+										</td>
+										<td class="product__price">
+											<span class="order-summary__emphasis skeleton-while-loading notranslate">390,000원</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="summary_content mypage_each2">
+								<h5 class="checkout_tit1">주문상태</h5>
+								<div class="txt_btn_box">
+									<h4 class="mypage_tit2">배송완료</h4>
+									<div>
+										<button type="button" class="button button--primary">상세보기</button>
+									</div>
+								</div>
+							</div>
+							<div class="summary_content">
+								<h5 class="checkout_tit1">배송정보</h5>
+								<div class="summary_text_block">
+									<p>택배배송<br>
+										이현대<br>
+										010-1234-5678<br>
+										서울특별시 강남구 강남대로1길 1층<br>
+										부재 시 경비실에 맡겨주세요.</p>
+								</div>
+							</div>
+							<div class="summary_content mypage_each2">
+								<h5 class="checkout_tit1">결제정보 <button type="button" class="button button--primary modal_trigger" data-modal="payment_edit-modal">결제수단 변경</button></h5>
+								<div class="summary_text_block">
+									<ul class="my_price_list">
+										<li>
+											<span class="tit1">주문금액</span>
+											<span class="txt1">200,000원</span>
+										</li>
+										<li>
+											<span class="tit1">배송비</span>
+											<span class="txt1">무료배송</span>
+										</li>
+										<li>
+											<span class="tit1">할인금액</span>
+											<span class="txt1">-50,000원</span>
+										</li>
+										<li>
+											<span class="tit1">총 결제금액</span>
+											<span class="txt1">150,000원</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="summary_content mypage_each2">
+								<h5 class="checkout_tit1">결제수단</h5>
+								<div class="summary_text_block">
+									<ul class="my_price_list">
+										<li>
+											<span class="tit1">신용카드</span>
+											<span class="txt1">150,000원</span>
+										</li>
+										<li>
+											<span class="tit1">KEB하나카드</span>
+											<span class="txt1">일시불</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="summary_content mypage_each2">
+								<h5 class="checkout_tit1">승인내역</h5>
+								<div class="summary_text_block">
+									<ul class="my_price_list">
+										<li>
+											<span class="tit1">2021-05-05 12:41:22</span>
+											<span class="txt1">150,000원</span>
+										</li>
+										<li>
+											<span class="tit1">카드</span>
+											<span class="txt1"></span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="button-block">
+								<input class="button button--primary button--block button--large" type="button" value="주문 취소">
+							</div>
+							<div class="button-block mypage_order_button">
+								<input class="button button--primary button--block button--large" type="button" value="카드전표 출력">
+								<input class="button button--primary button--block button--large" type="button" value="현금영수증">
+								<input class="button button--primary button--block button--large" type="button" value="세금계산서 신청">
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+					 
+		 </div>
+	</div>
+</div>
+
+<div id="payment_edit-modal" class="modal modal--light payment_edit-modal" role="dialog" tabindex="-1">
+	<div class="modal__overlay" tabindex="-1">
+		<div class="modal__card">
+			<div class="modal__header">
+				<h5 class="modal__title  preorder-modal__title">결제수단 변경</h5>
+				<button class="modal__close">
+					<span class="visually-hidden">
+						Close
+					</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+					</svg> </button>
+			</div>
+			<div class="modal__body">
+				<div class="payment_edit_container">
+					<div class="checkout_content payment_wrap">
+						<div class="payment_type">
+							<div class="radio_custom_box">
+								<input id="payment_edit_type1" class="radio_input" type="radio" name="payment_edit_type" data-type="payment_type1" checked>
+								<label for="payment_edit_type1">신용카드</label>
+							</div>
+							<div class="radio_custom_box">
+								<input id="payment_edit_type2" class="radio_input" type="radio" name="payment_edit_type" data-type="payment_type2">
+								<label for="payment_edit_type2">실시간계좌이체</label>
+							</div>
+
+							<div class="payment_con_box">
+								<div class="payment_type1 active">
+									<h5 class="payment_tit1">카드선택</h5>
+									<div class="payment_radio_wrap">
+										<div class="radio_custom_box">
+											<input id="credit_card1" class="radio_input" value="1" type="radio" name="credit_card">
+											<label for="credit_card1">KB국민카드</label>
+										</div>
+										<div class="radio_custom_box">
+											<input id="credit_card2" class="radio_input" value="2" type="radio" name="credit_card" data-card-attr="add_plan">
+											<label for="credit_card2">삼성카드</label>
+										</div>
+										<div class="radio_custom_box">
+											<input id="credit_card3" class="radio_input" value="3" type="radio" name="credit_card" data-card-attr="add_plan">
+											<label for="credit_card3">현대카드</label>
+										</div>
+										<div class="radio_custom_box">
+											<input id="credit_card4" class="radio_input" value="4" type="radio" name="credit_card" data-card-attr="add_plan">
+											<label for="credit_card4">신한카드</label>
+										</div>
+										<div class="radio_custom_box">
+											<input id="credit_card5" class="radio_input" value="5" type="radio" name="credit_card" data-card-attr="add_bc">
+											<label for="credit_card5">BC카드</label>
+										</div>
+										<div class="radio_custom_box">
+											<input id="credit_card6" class="radio_input" value="6" type="radio" name="credit_card" data-card-attr="add_plan">
+											<label for="credit_card6">롯데카드</label>
+										</div>
+										<div class="radio_custom_box">
+											<input id="credit_card7" class="radio_input" value="7" type="radio" name="credit_card" data-card-attr="add_plan">
+											<label for="credit_card7">KEB하나카드</label>
+										</div>
+										<div class="radio_custom_box">
+											<input id="credit_card8" class="radio_input" value="8" type="radio" name="credit_card" data-card-attr="add_plan">
+											<label for="credit_card8">NH농협카드</label>
+										</div>
+										<div class="radio_custom_box">
+											<input id="credit_card9" class="radio_input" value="9" type="radio" name="credit_card">
+											<label for="credit_card9">카카오뱅크</label>
+										</div>
+										<div class="radio_custom_box">
+											<input id="credit_card10" class="radio_input" value="10" type="radio" name="credit_card">
+											<label for="credit_card10">케이뱅크</label>
+										</div>
+										<div class="radio_custom_box">
+											<input id="credit_card11" class="radio_input" value="11" type="radio" name="credit_card" data-card-attr="add_hpoint">
+											<label for="credit_card11">H.point KB 국민카드</label>
+										</div>
+									</div>
+									
+									<div class="card_type_box">
+										<div class="add_plan">
+											<div class="input-block">
+												<select id="payment_plan" class="toteme-select-style" title="할부 선택">
+													<option value="" selected="">일시불</option>
+													<option value="">2개월</option>
+												</select>
+											</div>
+										</div>
+										<div class="add_bc">
+											<h6 class="payment_tit1">BC카드종류</h6>
+											교보증권, 유진투자증권, 미래에셋증권, 유안타증권, DB금융투자, SK증권, NH투자증권, 코나카드, 토스카드, 산림조합, 한국투자증권, 은행카드
+										</div>
+										<div class="add_hpoint">
+											<h6 class="payment_tit1">H.Point 추가적립</h6>
+											결제금액 최대 1.5% H.Point 추가적립 (기본적립율 포함 최대 1.65% 적립)
+											카드대금 결제일 다음주 첫 영업일 적립
+										</div>
+									</div>
+								</div>
+								<div class="payment_type2">
+									<ul class="my_price_list">
+										<li>
+											<span class="tit1">결제금액</span>
+											<span class="txt1">150,000원</span>
+										</li>
+									</ul>
+									<ul class="dot_list">
+										<li>폰뱅킹, 인터넷 뱅킹에 가입하신 고객만 사용 가능합니다. 계좌이체 수수료는 더현대에서 부담합니다.</li>
+										<li>[결제하기] 버튼을 선택하시면 온라인 계좌이체 화면으로 연결되어 결제를 진행할수 있습니다.</li>
+									</ul>
+									<div class="cash_receipt_box">
+										<h5 class="payment_tit1">현금영수증 발급 신청</h5>
+										<div class="payment_radio_wrap">
+											<div class="radio_custom_box">
+												<input id="receipt1" class="radio_input" value="1" type="radio" name="receipt" data-receipt="receipt_type1">
+												<label for="receipt1">소득공제용</label>
+											</div>
+											<div class="radio_custom_box">
+												<input id="receipt2" class="radio_input" value="2" type="radio" name="receipt" data-receipt="receipt_type2">
+												<label for="receipt2">지출증빙용</label>
+											</div>
+											<div class="radio_custom_box">
+												<input id="receipt3" class="radio_input" value="3" type="radio" name="receipt" checked="">
+												<label for="receipt3">신청안함</label>
+											</div>
+										</div>
+										<div class="receipt_type_box">
+											<div class="receipt_type1">
+												<div class="bank_type_box">
+													<div class="input-block">
+														<input placeholder="휴대폰번호(필수)" class="field__input" type="text" name="receipt[phone]" id="receipt_phone" title="휴대폰번호 필수입력">
+													</div>
+													<div class="text-block sub-description">
+														<p>'-' 없이 숫자만 입력하세요.</p>
+													</div>
+												</div>
+											</div>
+											<div class="receipt_type2">
+												<div class="bank_type_box">
+													<div class="input-block">
+														<input placeholder="사업자등록번호(필수)" class="field__input" type="text" name="receipt[num]" id="receipt_num" title="사업자등록번호 필수입력">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+						 </div>
+
+						 <div class="nm_payment_attr">
+							<div class="payment_guaranty">
+								<h5 class="checkout_tit1">채무지급 보증안내 <button type="button" class="button button--primary modal_trigger modal_trigger" data-modal="ly_guarantee-modal">서비스 가입사실 확인</button></h5>
+								<p>고객님의 안전거래를 위해 현금결제시 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.</p>
+							</div>
+							<ul class="my_price_list">
+								<li>
+									<span class="tit1">총 결제예정 금액</span>
+									<span class="txt1">150,000원</span>
+								</li>
+							</ul>
+							<div class="checkbox_custom_box">
+								<input id="payment_agree2" class="checkbox" value="2" type="checkbox">
+								<label for="payment_agree2">주문하실 상품의 결제수단 변경에 동의하시겠습니까?
+									(전자상거래법 제8조 제2항)</label>
+									<p class="comment error">결제수단 변경에 동의해주셔야 결제가 가능합니다.</p>
+							</div>
+						</div>
+					 </div>
+					</div>
+					<div class="button-block pcs2_vertical">
+						<button class="button button--block button--large">결제</button> 
+						<button class="button button--block button--large">취소</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="ly_guarantee-modal" class="modal modal--light ly_guarantee-modal" role="dialog" tabindex="-1">
+	<div class="modal__overlay" tabindex="-1">
+		<div class="modal__card">
+			<div class="modal__header">
+				<h5 class="modal__title preorder-modal__title">지급보증서</h5>
+				<button class="modal__close">
+					<span class="visually-hidden">
+						Close
+					</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+					</svg> </button>
+			</div>
+			<div class="modal__body">
+				<div class="ly_guarantee_container">
+					<img src="https://image.thehyundai.com/hdmall/images/co/img_guarantee.jpg" alt="" class="pc_only">
+					<img src="https://image.thehyundai.com/hdsmart/images/co/img_guarantee.jpg" alt="" class="mo_only">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
