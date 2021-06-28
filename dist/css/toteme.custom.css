@@ -964,3 +964,16 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 .cart_soldout .responsive-image__wrapper{position: relative;}
 .cart_soldout .responsive-image__wrapper:before{content: 'sold out'; display: block; width: 100%; font-size: 22px; text-align: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 1;}
 .cart_soldout .responsive-image__wrapper:after{content: ''; display: block; width: 100%; height: 100%; background: #ececea; opacity: 80%; position: absolute; top: 0; left: 0;}
+
+
+/* 스마일 로딩 */
+
+.loading-wrap{ position: relative;  }
+.loading-wrap .loader{ display:none; position: absolute; top: calc(50% - 8px);  left: calc(50% - 8px); width: 16px; height: 16px; }
+.loading-wrap .loader .smiley-spin{ width:16px; height:16px; }
+.loading-wrap .loader .smiley-spin svg{ padding: 0; margin: 0; position: absolute; }
+
+.loading-wrap.is-load input{color:transparent !important}
+.loading-wrap.is-load .loader{display:block}
+.button.is-active + .loader .smiley-spin svg{ color:white }
+/* // 스마일 로딩 */

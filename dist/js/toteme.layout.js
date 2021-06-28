@@ -370,6 +370,11 @@ Util.prototype.resetSubFunction = function(){
         $(".site-header__hamburger .site-header__icon.site-header__icon--menu").removeClass("is-active")   
     })
 }
+
+Util.prototype.doLoadingSmile = function(){
+    $(".button-block.loading-wrap").addClass("is-load")
+}
+
 /* // 기타 함수 */
 
 var utilInstance = new Util();
@@ -616,3 +621,229 @@ function showOrhideArray(option){
 
     
  },100)
+
+
+
+ function formatDate(date) {
+    if(date.match(/\d{8}/i) !== null){
+        var currentDate = date;
+        if(currentDate.length < 8){
+            for(var i=0;i<8-date.length;i++){
+                currentDate += "0"
+            }
+    
+        }
+        return currentDate.substr(0,4)+"/"+currentDate.substr(4,2)+"/"+currentDate.substr(6,2);
+    }
+    return date;
+}
+
+
+var STRINGCODE = {
+    id : "아이디를",
+    oldpassword : "기존 비밀번호를",
+    password : "비밀번호를",
+    passwordconfirm : "비밀번호를 동일하게 ",
+    newpassword : "새 비밀번호를",
+    newpasswordconfirm : "새 비밀번호를 동일하게 ",
+    orderno : "주문번호를",
+    name : "이름을",
+    birthday : "생년월일을",
+    phone : "휴대폰 번호를",
+    authnumber : "인증번호를"
+}
+var ERRORCODE = {
+    "ERROR-WRONG-NAME":{
+        "code":"wrong-name",
+        "message":"이름은 한글 또는 영문만 입력 가능합니다."
+    },
+    "ERROR-WRONG-BIRTHDAY":{
+        "code":"wrong-birthday",
+        "message":"올바른 날짜형식이 아닙니다.(예:20010101)"
+    },
+    "ERROR-WRONG-EMAIL":{
+        "code":"wrong-email",
+        "message":"이메일 형식이 틀렸습니다. 다시 확인하고 입력해 주세요."
+    },
+
+    "ERROR-NO-DATA":{
+        "code":"no-data",
+        "message":" 입력해 주세요."
+    },
+
+    /* 1000번대 : 서버에러들을 모아 둡니다. 필요하면 커스텀 가능합니다. */
+    "ERROR-1000":{
+        "code":"not-found-data",
+        "message":"입력하신 정보가 일치하지 않습니다. <br>확인 후 다시 입력해 주세요. "
+    },
+    "ERROR-1001":{
+        "code":"no-login",
+        "message":"입력하신 정보가 일치하지 않습니다. <br>확인 후 다시 입력해 주세요. "
+    }
+}
+ var TotemeValidator = function(){
+     this.emptyList = [];
+     this.errorList = [];
+ }
+ TotemeValidator.prototype.checkAll = function(option){
+     this.errorList = [];
+    $("input[data-need]").each((function(idx,element){
+        this.checkValidate({
+            "target":$(element).data("need"),
+            "success":function(option){
+                option.$target.removeClass("input-error");
+                option.$target.addClass("input-valid");            
+            },
+            "fail":function(option){
+                option.$target.removeClass("input-valid");
+                option.$target.addClass("input-error");
+                var errorMessage =  ((option.target) ? option.target : "") + option.err.message
+                this.errorList.push(errorMessage);         
+            }
+        })
+    }.bind(this)));
+
+    if(this.result){
+        $(".alert.title").hide();
+        $("input[data-form-submit]").addClass("is-active")
+        $("input[data-form-submit]").removeClass("is-error")
+        utilInstance.doLoadingSmile();
+        
+    }else{
+        $(".alert.title").show();
+        $("input[data-form-submit]").addClass("is-error")
+        $(".alert.title p.error").html(this.errorList.reduce(function(a,v){
+            a = a + v + "<br>"
+            return a;
+        },""))
+    }
+
+ }
+ 
+ TotemeValidator.prototype.checkValidateForName = function(option){
+    this.checkValidate({
+        "target":option.target,
+        "success":function(option){
+            option.$target.addClass("input-valid");
+            option.$target.removeClass("input-error");
+        },
+        "fail":function(option){
+            option.$target.addClass("input-error");
+            option.$target.removeClass("input-valid");
+        }
+    })
+
+    
+ }
+ TotemeValidator.prototype.checkValidate = function(option){
+    var $needData = $("input[data-need='"+option.target+"']");
+   
+    var error = false;
+   if($needData.data("need") === option.target){
+       switch($needData.data("need")){
+            case "email": // 이메일 
+               
+                if($needData.val().match(/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i) == null){
+                    error = ERRORCODE["ERROR-WRONG-EMAIL"];
+                }
+            break;
+            case "birthday": // 생일 
+                if($needData.val().length >= 8){
+                    $needData.val(formatDate($needData.val()))
+                    
+                    if($needData.val().match(/^\d{4}\/(0[1-9]|1[012])\/(0[1-9]|[12][0-9]|3[01])$/) !== null){
+                    }else{
+                        error = ERRORCODE["ERROR-WRONG-BIRTHDAY"];
+                    }
+                }else{
+                    error = ERRORCODE["ERROR-NO-DATA"];
+                }
+                
+            break;
+            default:
+                if($needData.val().length < $needData.data("needLength")){ // 텍스트 제한이 초과됨
+                    error = ERRORCODE["ERROR-NO-DATA"];
+                 }
+            break;
+       }
+       if(error == false){
+            if(option.success !== undefined){
+                option.success.call(this,{$target : $needData});
+                this.result = true;   
+            } 
+            return true;
+       }else{
+
+            if(option.fail !== undefined){
+                option.fail.call(this, {$target : $needData, err : error, target : STRINGCODE[$needData.data("need")]});
+                this.result = false
+            }
+            return false;
+       }
+            
+
+   }
+   
+ }
+ var tValidator = new TotemeValidator();
+
+ 
+$(document).on("keyup", "input[numberOnly]", function() {$(this).val( $(this).val().replace(/[^0-9]/gi,"") );})
+$(document).on("keyup", "input[charOnly]", function() {$(this).val( $(this).val().replace(/[^ㄱ-힣a-zA-Z]/gi,"") );})
+
+
+var actionValidate = function(evt){
+
+    var $needData = $(evt.target);
+    tValidator.checkValidateForName({target:$(evt.target).data("need")})  
+    
+    if($("input[data-need]").length === $("input[data-need].input-valid").length){
+        $("input[data-form-submit]").addClass("is-active")
+    }     
+}
+
+$("input[data-need]").on("keyup",actionValidate);
+$("input[data-form-submit]").click(function(evt){
+    evt.preventDefault();
+    if($("input[data-need]").length > 0){
+        tValidator.checkAll();
+        if(tValidator.result){
+            window[$(evt.target).data("form-submit")].call(this);
+        }
+    }else{
+        utilInstance.doLoadingSmile();
+        window[$(evt.target).data("form-submit")].call(this);
+    }
+})
+
+function doFindid(){
+    // TODO
+    console.log("DONE!");
+}
+
+function doFindOrder(){
+    // TODO
+    console.log("DONE!");
+}
+
+function doLogin(){
+    // TODO
+    console.log("DONE!");
+}
+
+function doAuthButton(){
+    // TODO
+    console.log("DONE!");
+
+}
+
+function doConfirm(){
+    // TODO
+    console.log("DONE!");
+}
+
+function doAuthJoinButton(){
+    // TODO
+    console.log("DONE!");
+
+}

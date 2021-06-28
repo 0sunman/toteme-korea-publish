@@ -1060,26 +1060,32 @@
        <div class="template-account__content">
           <div class="template-login__content">
  
-             <div class="template-account__text_hdtype_1 alert" style='display:none'>
-                <div class="rte">
-                   안내문구 출력 영역
-                </div>
-             </div>
+             
+            <div class="template-account__text_hdtype_1 alert title" style='display:none'>
+               <div class="rte">
+                 <p class='error'></p>
+               </div>
+            </div>
              <div class="section">
                   <form method="post" >
                      <input type="hidden" name="form_type" value="customer_login"><input type="hidden" name="utf8" value="✓">
-                        <div class="orderNumber input-block label-block">
-                           <label class="form-group__label subtitle-2 is-hidden" for="CustomerEmail">
+                        <div class="orderno input-block label-block">
+                           <label class="form-group__label subtitle-2 is-hidden" for="orderNo">
                            </label>
-                           <input id="CustomerEmail" autocapitalize="off" autocomplete="off" autofocus="" name="customer[email]" placeholder="주문번호" required="" spellcheck="false" type="text">
+                           <input id="orderNo" autocapitalize="off" autocomplete="off" autofocus="" name="customer[orderno]" placeholder="주문번호" required="" spellcheck="false" type="text"  data-need="orderno" data-need-length="8">
                         </div>
                         <div class="password input-block label-block">
                            <label class="form-group__label subtitle-2 is-hidden" for="CustomerPassword">
                            </label>
-                           <input id="CustomerEmail" autocapitalize="off" autocomplete="off" autofocus="" name="customer[email]" placeholder="비밀번호" required="" spellcheck="false" type="password">
+                           <input id="CustomerPassword" autocapitalize="off" autocomplete="off" autofocus="" name="customer[customerpassword]" placeholder="비밀번호" required="" spellcheck="false" type="password"  data-need="password" data-need-length="8">
                         </div>
-                        <div class="findOrder button-block">
-                           <input class="button button--primary button--block button--large m-font-14" disabled="true" type="submit" value="주문배송조회">
+                        <div class="findOrder button-block loading-wrap">
+                           <input class="button button--primary button--block button--large m-font-14" data-form-submit="doFindOrder" type="submit" value="주문배송조회">
+                           <div class="loader">
+                              <div class="smiley-spin">
+                                 <svg class="icon icon--medium icon__smiley" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 15.5a7.5 7.5 0 110-15 7.5 7.5 0 010 15zm0-1a6.5 6.5 0 100-13 6.5 6.5 0 000 13zM4.947 9.776l-.894.448a4.413 4.413 0 007.894 0l-.894-.448a3.413 3.413 0 01-6.106 0zM9.5 5h1v2h-1V5zm-3 0h-1v2h1V5z"></path></svg>
+                              </div>
+                           </div>
                         </div>
 
                   </form>
@@ -1097,6 +1103,7 @@
        </div>
     </div>
  </div>
+
          <!-- END content_for_index -->
       </main>
       <!-- Footer -->

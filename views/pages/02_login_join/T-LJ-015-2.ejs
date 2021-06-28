@@ -7,10 +7,10 @@
       <%- include ("./menu/index.ejs",{state:2}) %>
       <div class="template-account__content">
 
-         <div class="template-account__text_hdtype_1 alert" style='display:none'>
+         <div class="template-account__text_hdtype_1 alert title" style='display:none'>
             <div class="rte">
-               안내문구 출력 영역
-            </div>
+               <p class='error'></p>
+             </div>
          </div>
          <div class="text section" js-password-form="customerLoginForm">
             <div class='text-block align-center'>
@@ -84,8 +84,13 @@
          </div>
 
          <div class='section'>
-            <div class="button-block confirm">
-               <input class="button button--primary button--block button--large" type="submit" value="확인">
+            <div class="button-block confirm loading-wrap">
+               <input class="button button--primary button--block button--large" type="submit" value="확인" data-form-submit="doEmailAuth">
+               <div class="loader">
+                  <div class="smiley-spin">
+                     <svg class="icon icon--medium icon__smiley" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 15.5a7.5 7.5 0 110-15 7.5 7.5 0 010 15zm0-1a6.5 6.5 0 100-13 6.5 6.5 0 000 13zM4.947 9.776l-.894.448a4.413 4.413 0 007.894 0l-.894-.448a3.413 3.413 0 01-6.106 0zM9.5 5h1v2h-1V5zm-3 0h-1v2h1V5z"></path></svg>
+                  </div>
+               </div>
             </div>
 
          </div>

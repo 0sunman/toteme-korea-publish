@@ -1059,11 +1059,11 @@
    
       <div class="template-account__content">
 
-            <div class="template-account__text_hdtype_1 alert" style='display:none'>
-               <div class="rte">
-                  안내문구 출력 영역
-               </div>
+         <div class="template-account__text_hdtype_1 alert title" style='display:none'>
+            <div class="rte">
+              <p class='error'></p>
             </div>
+         </div>
 
 
             <div class="section">
@@ -1071,23 +1071,28 @@
                   <div class="label-block input-block id">
                      <label class="form-group__label subtitle-2 is-hidden" for="customerId">
                      </label>
-                     <input id="customerId" class='m-font-14' autocapitalize="off" autocomplete="off" autofocus="" name="customer[id]" placeholder="아이디" required="" spellcheck="false" type="text">
+                     <input id="customerId" class='m-font-14' autocapitalize="off" autocomplete="off" autofocus="" name="customer[id]" placeholder="아이디" required="" spellcheck="false" type="text" data-need="id" data-need-length="8">
                   </div>
                   <div class="label-block input-block email">
                      <label class="form-group__label subtitle-2 is-hidden" for="CustomerEmail">
                      </label>
-                     <input id="CustomerEmail" class='m-font-14' autocapitalize="off" autocomplete="off" autofocus="" name="customer[email]" placeholder="이름" required="" spellcheck="false" type="text">
+                     <input id="CustomerEmail" class='m-font-14' autocapitalize="off" autocomplete="off" autofocus="" name="customer[email]" placeholder="이름" required="" spellcheck="false" type="text" data-need="name">
                   </div>
                   <div class="label-block input-block birthday">
                      <label class="form-group__label subtitle-2 is-hidden" for="CustomerBirthday">
                      </label>
-                     <input id="CustomerBirthday" class='m-font-14' autocapitalize="off" autocomplete="off" autofocus="" name="customer[birthday]" placeholder="생년월일 (숫자 8자리 입력 / 예. 20150115)" required="" spellcheck="false" type="text">
+                     <input id="CustomerBirthday" class='m-font-14' autocapitalize="off" autocomplete="off" autofocus="" name="customer[birthday]" placeholder="생년월일 (숫자 8자리 입력 / 예. 20150115)" required="" spellcheck="false" type="text" data-need="birthday">
                   </div>
                   <!---div class="text-block sub-description">
                      <p class='m-font-13'>생년월일 8자리를 입력해주세요 (예. 20150115)</p>
                   </div--->
-                  <div class="button-block auth-button">
-                     <input class="button button--primary button--block button--large" type="submit" value="인증하기">
+                  <div class="button-block auth-button  loading-wrap">
+                     <input class="button button--primary button--block button--large" type="submit" value="인증하기" data-form-submit="doAuthButton">
+                     <div class="loader">
+                        <div class="smiley-spin">
+                           <svg class="icon icon--medium icon__smiley" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 15.5a7.5 7.5 0 110-15 7.5 7.5 0 010 15zm0-1a6.5 6.5 0 100-13 6.5 6.5 0 000 13zM4.947 9.776l-.894.448a4.413 4.413 0 007.894 0l-.894-.448a3.413 3.413 0 01-6.106 0zM9.5 5h1v2h-1V5zm-3 0h-1v2h1V5z"></path></svg>
+                        </div>
+                     </div>
                   </div>
 
                </form>
