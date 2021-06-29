@@ -1,0 +1,232 @@
+<div id='component_controller' style='position: fixed; bottom:0; left: 0; background-color: white; width: 100%; z-index: 9999999; height:200px; overflow-y:scroll'>
+<div>
+   <b>블록스타일 - 보더 영역</b> : custom-module--border-inner-dark (안쪽 라인 컬러)
+   <input class='SWB_border1' type="checkbox">
+   &nbsp;custom-module--border-outer-dark (바깥쪽 라인 컬러)
+   <input class='SWB_border2' type="checkbox">   
+   &nbsp;only_pc (모바일에서 블록 숨기기)
+   <input class='SWB_border3' type="checkbox">
+   &nbsp;only_mo (PC에서 블록 숨기기)
+   <input class='SWB_border4' type="checkbox">   
+   &nbsp;no-crop (배경 크롭)
+   <input class='SWB_border5' type="checkbox">   
+</div>
+<br>
+<div>
+   <b>타이틀 - 위치</b> : 
+   <select class='select_group1 SWB_select1'>
+      <option>is-bottom</option>
+      <option>is-top</option>
+      <option>is-middle</option>
+   </select>
+   <select class='select_group1 SWB_select2'>
+      <option>is-left</option>
+      <option>is-center</option>
+      <option>is-right</option>
+   </select>
+   <br>&nbsp;&nbsp;&nbsp; * 설명 위치도 동일하게 작업해주시면 됩니다! 
+</div>
+<br>
+<div>
+   <b>타이틀 - 텍스트 스타일 / URL</b> : 
+   <select class='select_group2 SWB_select1'>
+      <option>text-medium</option>
+      <option>text-large</option>
+      <option>text-mini</option>
+      <option>수동모드 (요청) </option>
+   </select>
+   <br>&nbsp;&nbsp;&nbsp; * 타이틀 색상,크기는 inline-style로 수정 필요
+   <br>&nbsp;&nbsp;&nbsp; * 해당 부분 _blank, _self, _parent, _top 도 필요 
+</div>
+<br>
+<div>
+   <b>배경사이즈 </b> : 
+   <select class='select_group3 SWB_select1'>
+      <option>custom-module__background--is-full</option>
+      <option>custom-module__background--is-half</option>
+      <option>custom-module__background--is-quarter</option>
+   </select>
+</div>
+<br>
+<div>
+   <b>상세 설명 항상 보이기 </b> : 
+   <select class='select_group4 SWB_select1'>
+      <option></option>
+      <option>custom-module__content--pinned-description</option>
+   </select>
+   <br>&nbsp;&nbsp;&nbsp; * 설명을 하버할떄 노출할지 말지 결정
+</div>
+<br>
+<script>
+   /*
+   
+   is-top
+   is-middle
+   is-bottom
+   is-left
+   is-center
+   is-right
+   
+   텍스트
+   text-medium
+   text-large
+   text-mini
+   .custom-module__background.custom-module__background--is-half .custom-module__background-image-wrapper,.custom-module__background.custom-module__background--is-quarter
+   
+   
+             custom-module__content--pinned-description
+             custom-module__content-description
+   */
+   function resetSelectLayout(selector){
+   
+   $(selector).removeClass("is-top")
+   $(selector).removeClass("is-middle")
+   $(selector).removeClass("is-bottom")
+   $(selector).removeClass("is-left")
+   $(selector).removeClass("is-center")
+   $(selector).removeClass("is-right")
+   }
+   
+   
+   function resetSelectLayoutText(selector){
+   $(selector).removeClass("text-medium")
+   $(selector).removeClass("text-large")
+   $(selector).removeClass("text-mini")
+   }
+   
+   function resetSelectLayoutBackground(selector){
+   $(selector).removeClass("custom-module__background--is-full")
+   $(selector).removeClass("custom-module__background--is-half")
+   $(selector).removeClass("custom-module__background--is-quarter")
+   }
+   
+   
+   function resetSelectLayoutDescription(selector){
+   $(selector).removeClass("custom-module__content--pinned-description")
+   }
+   
+   setTimeout(function(){
+   
+   $("#component_controller input[type='checkbox']").on("click",function(){
+    console.log("done");
+    ($(".SWB_border1").is(":checked") == true ) ? $(".sectionwithbackground").addClass("custom-module--border-inner-dark") : $(".sectionwithbackground").removeClass("custom-module--border-inner-dark");
+    ($(".SWB_border2").is(":checked") == true ) ? $(".sectionwithbackground").addClass("custom-module--border-outer-dark") : $(".sectionwithbackground").removeClass("custom-module--border-outer-dark");
+    ($(".SWB_border3").is(":checked") == true ) ? $(".sectionwithbackground").addClass("only_pc") : $(".sectionwithbackground").removeClass("only_pc");
+    ($(".SWB_border4").is(":checked") == true ) ? $(".sectionwithbackground").addClass("only_mo") : $(".sectionwithbackground").removeClass("only_mo");
+    ($(".SWB_border5").is(":checked") == true ) ? $(".sectionwithbackground").addClass("custom-module--no-crop") : $(".sectionwithbackground").removeClass("custom-module--no-crop");
+    
+   
+   })
+   $("#component_controller .select_group1").on("click",function(){
+    resetSelectLayout(".sectionwithbackground .custom-module__content-title");
+    $(".sectionwithbackground .custom-module__content-title").addClass($(".select_group1.SWB_select1").val())
+    $(".sectionwithbackground .custom-module__content-title").addClass($(".select_group1.SWB_select2").val())
+   })
+   
+   
+   $("#component_controller .select_group2").on("click",function(){
+    console.log("why");
+    resetSelectLayoutText(".sectionwithbackground .custom-module__text-link");
+    $(".sectionwithbackground .custom-module__text-link").addClass($(".select_group2.SWB_select1").val())
+   })
+   
+   
+   $("#component_controller .select_group3").on("click",function(){
+    console.log("why");
+    resetSelectLayoutBackground(".sectionwithbackground .custom-module__background");
+    $(".sectionwithbackground .custom-module__background").addClass($(".select_group3.SWB_select1").val())
+   })
+   
+   $("#component_controller .select_group4").on("click",function(){
+    console.log("why");
+    resetSelectLayoutDescription(".sectionwithbackground .custom-module__content");
+    $(".sectionwithbackground .custom-module__content").addClass($(".select_group4.SWB_select1").val())
+   })
+   },1000)
+          
+       
+</script>
+<style>
+   #component_controller input[type='checkbox']{ display:inline-block; width:10px; height:10px; border:1px solid #000}
+   #component_controller input[type='checkbox']:checked{ background-color: black; }
+   #component_controller select{display:inline-block; width:auto;}
+</style>
+</div>
+<!--- 설명 : 유영선 -->
+<!--- Sesction with background 내용 시작 -->
+<!-- 1. Block Style -->
+<section class="sectionwithbackground custom-module custom-module--1-bkgd-1-section custom-module--has-background custom-module--text-color-dark">
+   <!--- class = custom-module--border-inner-light custom-module--border-inner-dark (2-안쪽 라인) custom-module--border-inner-dark custom-module--border-outer-dark (3-바깥쪽 라인) 
+      only_pc only_mo (4-모바일 / 5-PC에서 숨기기) 
+      * custom-module--no-crop (4.4-배경 크롭 선택)
+      custom-module__content--text-color-dark custom-module__content--text-color-light (1-텍스트 스타일)
+      
+      ---> 
+   <!-- // 1. Block Style -->
+   <!-- 4. 배경 ( Block Background ) -->
+   <!-- 1- 배경 이미지 선택 -->
+   <div class="custom-module__background custom-module__background--is-full">
+      <!---class = custom-module__background--is-full custom-module__background--is-half custom-module__background--is-quarter (3-배경 사이즈) --->
+      <div class="responsive-image__wrapper custom-module__background-image-wrapper"> 
+         <span style="display: block; padding-top:56.25%;" aria-hidden="true"></span>
+         <img class="responsive-image__image blur-up custom-module__background-image lazyautosizes" alt="" src="../assets/col1_pc2.jpg" tabindex="-1" > 
+      </div>
+   </div>
+   <!-- /// 1- 배경 이미지 선택 -->
+   <!-- 2- 배경 영상 선택 - 비디오 (코드 참고)-->
+   <!---div class="custom-module__background custom-module__background--is-full">
+      class = custom-module__background--is-full custom-module__background--is-half custom-module__background--is-quarter (3-배경 사이즈) 
+      <div class="custom-module__video-wrapper">
+        <video class="custom-module__video" autoplay="1" loop="1" muted="1" playsinline="1" preload="1" js-video-hero="video">
+           <source src="../assets/col1.mp4" type="video/mp4">
+        </video>
+      </div>
+      </div---->
+   <!-- // 배경 -->
+   <!-- 3. 콘텐츠를 위한 블록 (Content) -->
+   <div class="custom-module__container">
+      <div class="custom-module__content custom-module__content--section-1 custom-module__content--col-24">
+         <!-- 6. 상세 설명 항상 보이기-->
+         <!--- class = custom-module__content--pinned-description -->
+         <div class="custom-module__content-wrapper">
+            <!-- 이미지 (Media Content) -->
+            <div class="responsive-image__wrapper custom-module__content-image-wrapper is-center">
+               <!--1-URL (자바스크립트 활용)-->
+               <!--- class= is-left is-right is-center (2-이미지 위치)-->
+               <span style="display: block; padding-top:140.0%;" aria-hidden="true"></span>
+               <img class="responsive-image__image blur-up custom-module__content-image" alt="" src="../assets/col2_inside1.jpg"> <!-- (1-이미지)-->
+            </div>
+            <!-- // 이미지 -->
+            <!-- Text Content -->
+            <!-- -->
+            <div class="content_description custom-module__content-description is-bottom is-left">
+               <!-- 2.  5. 상세설명 위치  -->
+               <!--- class= is-top is-middle is-bottom is-left is-right is-center (2-이미지 위치)-->
+               <span class="custom-module__content-description-text text-large">
+                  <!-- 4. 상세설명 폰트크기 -->
+                  <!--- class= is-left is-right is-center (2-이미지 위치)-->
+                  설명은 하버시 생성이 됩니다.<!--1-URL (a태그 활용) / 색상은 span 태그의 인라인으로 진행요--><!-- 3-상세설명 -->
+                  <!-- 예시 : <span class="custom-module__content-description-text text-large" style='color:#ffffff'> -->
+               </span>
+            </div>
+            <div class="custom-module__content-title is-bottom is-left">
+               <!-- 5. 타이틀 위치 -->
+               <!--- class= is-left is-right is-center (2-이미지 위치)-->
+               <span class="custom-module__text-link text-large">
+                  <!-- 4. 타이틀 폰트 크기 -->
+                  <!--- class= text-medium text-large text-mini 텍스트 크기-->
+                  <!---<a href='http://www.naver.com' target='_blank Or _self Or ...'>타이틀입니다</a> 1-URL 설정시--->
+                  타이틀입니다<!-- 2-타이틀 / 색상은 span 태그의 인라인으로 진행요 -->
+                  <svg class="icon icon--small icon__arrow--right" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M2.008 1.238L2.705.5 6 3.996 2.697 7.5 2 6.762l2.608-2.766-2.6-2.758z"></path>
+                  </svg>
+               </span>
+            </div>
+            <!-- // Text Content -->
+         </div>
+      </div>
+   </div>
+   <!-- // 3.콘텐츠를 위한 블록 -->
+</section>
+<!--- // Sesction with background 내용 끝 -->
+<!--- // 설명 끝 -->
