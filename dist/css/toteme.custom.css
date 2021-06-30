@@ -777,6 +777,9 @@ li > a.navlist__link.text-link{padding-left:15px}
 .addr_form .addr_form_txt{display: table-row; text-align: left;}
 .addr_form_txt .a_link{margin-top: 5px;}
 .color_red{color: #ff0000;}
+@media screen and (min-width: 62em){
+    .md-modal .modal__card{width: 40%;}
+}
 
 figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 .containerZoom.active{cursor: zoom-out;}
