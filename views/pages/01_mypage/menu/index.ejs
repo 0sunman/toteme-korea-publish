@@ -25,6 +25,9 @@
                   영수증/세금계산서
                 </option>
                 <option value="">
+                  예치금
+                </option>
+                <option value="">
                   로그아웃
                 </option>
              </select>
@@ -52,6 +55,9 @@
          </li>
          <li class="navlist__item navlist__item--margin">
             <a class="navlist__link text-link" href="#">영수증/세금계산서</a>
+         </li>
+         <li class="navlist__item">
+            <a class="navlist__link text-link" href="#">예치금</a>
          </li>
          <li class="navlist__item">
             <a class="navlist__link text-link" href="#">로그아웃</a>
@@ -109,11 +115,18 @@
          $(".navlist.mypage>li:nth-child(7) a").addClass("is-active");
       },100)
       </script>
+      <%}else if(state == 27){%>
+         <script>
+            setTimeout(function(){
+               $(".main-title.custom-select__label").text("예치금");
+               $(".navlist.mypage>li:nth-child(8) a").addClass("is-active");
+            },100)
+            </script>
    <%}else if(state == 3){%>
       <script>
          setTimeout(function(){
             $(".main-title.custom-select__label").text("로그아웃");
-            $(".navlist.mypage>li:nth-child(8) a").addClass("is-active");
+            $(".navlist.mypage>li:nth-child(9) a").addClass("is-active");
          },100)
          </script>
    <%}%>

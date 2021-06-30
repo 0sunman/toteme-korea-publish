@@ -331,7 +331,7 @@ body.overflow-hidden {overflow: hidden;}
 .member_address_info.with_button .member_address_inner:last-child{text-align: right;}
 .checkbox-block+.text-block.sub-description p{font-size: 14px;}
 .round_button{padding: 0 18px; line-height: 23px; font-size: 13px;}
-.checkout_btn_box{padding: 20px 0; text-align: center;}
+.checkout_btn_box{margin: 30px 0; text-align: center;}
 .checkout_btn_box .btn{max-width: 500px;}
 .address_each{margin: 30px 0;}
 .direct_input{display: none;}
@@ -655,9 +655,9 @@ li > a.navlist__link.text-link{padding-left:15px}
 .custom_textarea textarea{border-radius: 0; resize: none;}
 
 .form-group input[type="text"][readonly], .form-group select[readonly]{background-color: #ddd; cursor: not-allowed;}
-.refund-modal .modal__body, .account-modal .modal__body, .receipt1-modal .modal__body, .receipt2-modal .modal__body{padding: 15px 15px 40px;}
+.refund-modal .modal__body, .account-modal .modal__body, .receipt1-modal .modal__body, .receipt2-modal .modal__body{padding: 15px 15px 30px;}
 .refund-modal .modal__body form, .account-modal .modal__body form, .receipt1-modal .modal__body form, .receipt2-modal .modal__body form, .login-modal .modal__body form{width: 100%;}
-.withdrawal-modal .modal__body{padding: 15px 15px 40px; text-align: left;}
+.withdrawal-modal .modal__body{padding: 15px 15px 30px; text-align: left;}
 .withdrawal-modal form{width: 100%;}
 .withdrawal_list{list-style: none; padding: 0; margin-bottom: 15px;}
 .withdrawal_list>li{list-style: none; padding: 0; margin-bottom: 10px;}
@@ -670,7 +670,7 @@ li > a.navlist__link.text-link{padding-left:15px}
 .mypage-modal__button-wrapper .button:last-of-type{margin-bottom: 0;}
 /* .text-link+.text-link{margin-left: 15px;} */
 .button-block.pcs2_vertical .button{margin-bottom: 10px; max-width: 500px;}
-.button-block.pcs2_vertical .button:hover{margin-left: auto;}
+.button-block.pcs2_vertical .button:hover{margin-left: auto; width: 100%;}
 .button-block.pcs2_vertical .button:last-child{margin-bottom: 0;}
 /* //마이페이지 - 회원정보변경 */
 .wishlist-collection .selector-wrapper .single-option-selector{border-radius: 50px;}
@@ -685,7 +685,7 @@ li > a.navlist__link.text-link{padding-left:15px}
     .checkout .button-block{max-width: 572px;}
     .input-block.addr_form, .input-block.phone_form{max-width: 572px;}
     .modal .input-block, .modal .button-block{padding-left: 0; padding-right: 0; margin-left: auto; margin-right: auto;}
-    .modal .input-block.addr_form, .modal .input-block.phone_form{max-width: 500px;}
+    .modal .input-block.addr_form, .modal .input-block.phone_form, .modal .input-block.email_form{max-width: 500px;}
     .template-mypage__form.mypage_plus_info{max-width: 604px;}
     .template-mypage__form.mypage_plus_info{padding-left: 52px; padding-right: 52px;}
     .template-mypage__form.mypage_plus_info .button-block{padding: 0;}
@@ -694,7 +694,7 @@ li > a.navlist__link.text-link{padding-left:15px}
 @media screen and (max-width: 1000px){
     .modal .addr_list{padding: 0 22px;}
     .modal .input-block, .modal .button-block, .address_find_content .input-table{max-width: 544px;  padding-left: 22px; padding-right: 22px;}
-    .modal .input-block.addr_form, .modal .input-block.phone_form{max-width: 544px;}
+    .modal .input-block.addr_form, .modal .input-block.phone_form, .modal .input-block.email_form{max-width: 544px;}
 }
 
 /* 마이페이지 - 주문내역 */
@@ -715,7 +715,7 @@ li > a.navlist__link.text-link{padding-left:15px}
 @media screen and (max-width: 1000px){
     .payment_edit-modal .modal__card{width: calc(100% - 10px);}
 }
-.payment_edit-modal .modal__body{display: block; padding: 15px; text-align: left;}
+.payment_edit-modal .modal__body{display: block; padding: 15px 15px 30px; text-align: left;}
 .payment_edit-modal .payment_type{font-size: 0; letter-spacing: -1px;}
 .payment_edit-modal .payment_type>*{font-size: 15px; letter-spacing: 0;}
 .payment_edit-modal .payment_type>.radio_custom_box{display: inline-block; width: 50%;}
@@ -727,12 +727,14 @@ li > a.navlist__link.text-link{padding-left:15px}
 .payment_edit-modal .checkbox_custom_box .comment.error{max-width: unset;}
 .modal__body .error.comment{margin-top: 5px; font-size: 13px;}
 .payment_edit-modal .payment_type2 .my_price_list{border-top-width: 0; margin-bottom: 10px; padding-top: 0;}
+.payment_edit-modal .button-block{margin-top: 30px;}
 .mypage_each.mypage_pw_input{padding-top: 10px; border-top: 1px solid #171616;}
 .mypage_each.mypage_pw_input .text-block.sub-description{padding: 0 36px;}
 .return_tr td{padding: 15px 15px 30px;}
 .return_tr .return_attr_list>li{display: table; width: 100%; margin-bottom: 8px;}
 .return_attr_list .tit1{display: table-cell; text-align: left; vertical-align: middle;}
-.return_attr_list .txt1{display: table-cell; width: 80px;  vertical-align: middle;}
+.return_attr_list .txt1{display: table-cell; width: 30%; text-align: right; vertical-align: middle;}
+.return_attr_list .txt1 select{display: inline-block; max-width: 80px;}
 .return_attr_list .toteme-select-style{min-height: 23px; padding-left: 18px; padding-right: 30px; text-align-last: right; font-size: 12px; background-position: right 15px center;}
 .return_tr+.product{border-top: 1px solid #171616;}
 .return_btn_block{margin-top: 0; margin-bottom: 15px;}
@@ -748,6 +750,9 @@ li > a.navlist__link.text-link{padding-left:15px}
 .return_addr_type1 .radio_custom_box{margin-bottom: 30px; line-height: 23px;}
 .return_addr_type1 .radio_custom_box:last-child{margin-bottom: 0;}
 .input-block.return_reason_select{margin-top: 20px; margin-bottom: 30px;}
+.receipt_wrap .return_tr:last-child td{padding-bottom: 15px;}
+.mypage_order_menu .mypage_each2.receipt_txt_list{padding-top: 0;}
+.receipt_txt_list .dot_list{margin-top: 0;}
 
 @media screen and (max-width: 1800px){
     .mypage_order_menu .summary_content .input-block, .mypage_order_menu .summary_content .button-block{padding-left: 21px; padding-right: 21px;}
@@ -756,7 +761,22 @@ li > a.navlist__link.text-link{padding-left:15px}
 .return_txt:last-child{margin-bottom: 0;}
 .cancel_wrap .mypage_order_menu{margin-top: -1px;}
 .dot_list.cancel_ul{padding: 5px 15px 15px;}
-.return-modal .button-block{margin: 30px auto;}
+.return-modal .button-block{margin: 30px auto 35px;}
+.deposit_wrap .mypage_order_menu{margin-top: 0;}
+.deposit_wrap .mypage_order_menu .toggle_con_box{border-top: 1px solid #171616;}
+.deposit_txt1{margin-bottom: 15px;}
+.receipt_wrap .template-mypage__form .input-block{margin-top: 20px; margin-bottom: 20px;}
+.receipt_wrap .mypage_order_menu{margin-top: 10px;}
+.receipt_wrap .receipt_btn_box{display: table; width: 100%; border-top: 1px solid #171616;}
+.return_attr_list.receipt_attr_list{margin-top: 30px; padding-top: 15px; border-top: 1px solid #171616;}
+.receipt_attr_list .button{display: inline-block; margin-right: 0;}
+.receipt_attr_list p{text-align: left;}
+.receipt_input-modal .modal__body, .no_number-modal .modal__body, .receipt_done-modal .modal__body{display: block; text-align: left;}
+.checkout_tit1 .tit_inner_txt{display: block; margin-top: 3px;}
+.receipt_search_form{margin-bottom: 20px;}
+.addr_form .addr_form_txt{display: table-row; text-align: left;}
+.addr_form_txt .a_link{margin-top: 5px;}
+.color_red{color: #ff0000;}
 
 figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 .containerZoom.active{cursor: zoom-out;}

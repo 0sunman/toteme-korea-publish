@@ -1,0 +1,464 @@
+<div class="container mypage checkout">
+	<div class="template-account__header">
+		안녕하세요, 이현대님
+	</div>
+	<div class="template-account__wrapper">
+		 <div class="template-account__left"></div>
+		 <%- include ("./menu/index.ejs",{state:26}) %>
+		 <div class="template-account__content">
+			<div class="template-account__text_hdtype_1 alert title" style="display: none;">
+				<div class="rte">
+					<p class="error">받는 사람을 입력해 주세요.</p>
+				</div>
+			</div>
+			<div class="template-mypage__form-wrapper receipt_wrap">
+				<div class="template-mypage__form">
+					<h3 class="mypage_tit1">영수증/세금계산서</h3>
+					<div class="input-block">
+						<label class="form-group__label is-hidden" for="selectTime">기간보기</label>
+						<select name="selectTime" id="refundBank" class="toteme-select-style mypage_time_select">
+							<option value="" selected="" disabled="">기간보기</option>
+							<option value="">1개월</option>
+							<option value="">3개월 </option>
+							<option value="">6개월</option>
+							<option value="">전체보기</option>
+						</select>
+					</div>
+					<p>주문하신 상품이 출고가 완료되어 현금영수증 및 세금계산서 발행 가능한 주문에 대해 확인 하실 수 있습니다.</p>
+				</div>
+				<ul class="mypage_toggle_menu mypage_order_menu">
+					<li class="accordion__item">
+						<button type="button" class="toggle_tit accordion__control"># 17032700034509 (2020-05-05)</button>
+						<div class="toggle_con_box">
+							<table class="product-table">
+								<tbody>
+									<tr class="product">
+										<td class="product__image">
+											<div class="product-thumbnail">
+												<div class="product-thumbnail__wrapper">
+													<img alt="Centered monogram silk scarf creme - One size" class="product-thumbnail__image" src="../assets/order1.jpg">
+												</div>
+												<span class="product-thumbnail__quantity" aria-hidden="true">1</span>
+											</div>
+										</td>
+										<th class="product__description" scope="row">
+											<span class="product__description__name order-summary__emphasis">센터드 모노그램 실크 스카프 크림</span>
+											<span class="product__description__variant">원 사이즈</span>
+										</th>
+										<td class="product__quantity">
+											<span class="visually-hidden">
+												1
+											</span>
+										</td>
+										<td class="product__price">
+											<span class="order-summary__emphasis skeleton-while-loading notranslate">279,000원</span>
+										</td>
+									</tr>
+									<tr class="return_tr">
+										<td colspan="2">
+											<ul class="return_attr_list">
+												<li>
+													<span class="tit1">사업소명</span>
+													<div class="txt1">현대백화점 판교점</div>
+												</li>
+												<li>
+													<span class="tit1">주문금액</span>
+													<div class="txt1">100,000원</div>
+												</li>
+											</ul>
+											<ul class="return_attr_list receipt_attr_list">
+												<li>
+													<span class="tit1">영수증</span>
+													<div class="txt1"><button type="button" class="button button--primary modal_trigger" data-modal="">출력</button></div>
+												</li>
+												<li>
+													<span class="tit1">세금계산서</span>
+													<div class="txt1"><button type="button" class="button button--primary modal_trigger" data-modal="receipt_input-modal">신청</button></div>
+												</li>
+												<li>
+													<span class="tit1">세금계산서 신청 이력</span>
+													<div class="txt1">2021.05.28</div>
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr class="product">
+										<td class="product__image">
+											<div class="product-thumbnail ">
+												<div class="product-thumbnail__wrapper">
+													<img alt="The Regulars sunglasses black - One size" class="product-thumbnail__image" src="../assets/order2.jpg">
+												</div>
+												<span class="product-thumbnail__quantity" aria-hidden="true">1</span>
+											</div>
+										</td>
+										<th class="product__description" scope="row">
+											<span class="product__description__name order-summary__emphasis">더 레귤러 선글래스 블랙</span>
+											<span class="product__description__variant">원 사이즈</span>
+										</th>
+										<td class="product__quantity">
+											<span class="visually-hidden">
+												1
+											</span>
+										</td>
+										<td class="product__price">
+											<span class="order-summary__emphasis skeleton-while-loading notranslate">390,000원</span>
+										</td>
+									</tr>
+									<tr class="return_tr">
+										<td colspan="2">
+											<ul class="return_attr_list">
+												<li>
+													<span class="tit1">사업소명</span>
+													<div class="txt1">현대백화점 판교점</div>
+												</li>
+												<li>
+													<span class="tit1">주문금액</span>
+													<div class="txt1">100,000원</div>
+												</li>
+											</ul>
+											<ul class="return_attr_list receipt_attr_list">
+												<li>
+													<p>발급하실 전표(계산서)가 없습니다.</p>
+												</li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="summary_content mypage_each2 receipt_txt_list">
+								<ul class="dot_list">
+									<li>더현대는 고객님의 편의를 위해 고객님께서 신청하시지 않은 현금주문건에 대해서도 국세청이 지정한 코드 로 자진신고하고 있습니다.</li>
+									<li>더현대에서 자진신고한 현금영수증은 국세청 홈페이지內 "사용내역조회 &gt; 자진발급분 사용자등록" 메뉴를 통해 사용자등록시 고객님 내역으로 현금영수증을 신청 할 수 있습니다.</li>
+									<li>세금계산서 신청은 주문한 상품의 배송상태가 (발송완료)이후에 가능하며, 신용카드전표 및 현금영수증 출력은 (발송완료)이후에 가능합니다.</li>
+									<li>부가가치세법 제33조 (세금계산서 발급의무의 면제) 2항 규정에 의거하여, 신용카드 매출전표를 발급한 경우에는 세금계산서 발행이 불가합니다.</li>
+									<li>복합결제는 세금계산서 발행이 불가하며, 현금영수증(일반,사업자)만 신청 가능합니다.<br>  (예) 카드 + 현금 = 카드전표 + 현금영수증(일반,사업자) / 단, 현금 + 예치금은 세금계산서 신청이 가능합니다.</li>
+									<li>세금계산서 발행이 필요한 고객님께서는 현금영수증 취소 신청 후 세금계산서 발행이 가능합니다.</li>
+									<li>세금계산서 발급 가능 기간은 구매 월로 부터 익월 09일 오후 11시 59분까지 가능합니다.</li>
+									<li>익월 10일이 토/일요일/공휴일인 경우 신청기간은 연장되지 않으며, 익월 8일까지 신청해야 합니다.</li>
+									<li>해당일을 초과한 경우 세금계산서 신청이 가능하지 않습니다.</li>
+								</ul>
+							</div>
+							
+						</div>
+					</li>
+				</ul>
+			</div>
+					 
+		 </div>
+	</div>
+
+	<div id="receipt_input-modal" class="modal modal--light receipt_input-modal" role="dialog" tabindex="-1">
+		<div class="modal__overlay" tabindex="-1">
+			<div class="modal__card">
+				<div class="modal__header">
+					<h5 class="modal__title preorder-modal__title">세금계산서 신청</h5>
+					<button class="modal__close">
+						<span class="visually-hidden">
+							Close
+						</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+						</svg> </button>
+				</div>
+				<div class="modal__body">
+					<div class="mypage_each">
+						<h5 class="checkout_tit1">사업자 정보<span class="tit_inner_txt">신청 전에 사업자 정보를 확인해 주세요.</span></h5>
+						<form method="post" action="#">
+							<div class="input-block addr_form receipt_search_form">
+								<div>
+									<input placeholder="사업자 등록번호" size="30" type="text" name="receipt[Num]" id="receiptNum">
+								</div>
+								<div>
+									<button type="button" class="button button--large modal_trigger" data-modal="no_number-modal">찾기</button>
+								</div>
+								<p class="addr_form_txt"><a href="#" class="a_link">수정</a></p>
+							</div>
+							<div class="input-block label-block">
+								<label class="form-group__label is-hidden" for="receiptName">법인명</label>
+								<input id="receiptName" name="receipt[name]" placeholder="법인명(단체)" type="text">
+							</div>
+							<div class="input-block label-block">
+								<label class="form-group__label is-hidden" for="refundName2">대표 이사명</label>
+								<input id="refundName2" name="refund[name2]" placeholder="대표 이사명" type="text">
+							</div>
+							<div class="input-block addr_form">
+								<div>
+									<label class="field__label" for="checkout_addr1">배송지주소</label>
+									<input placeholder="배송지주소" class="field__input" type="text" name="checkout[addr]" id="checkout_addr1">
+								</div>
+								<div>
+									<button type="button" class="button button--large modal_trigger" data-modal="address-modal">찾기</button>
+								</div>
+							</div>
+							<div class="input-block address1">
+								<label class="field__label" for="checkout_addr2">주소</label>
+								<input placeholder="주소" class="field__input" type="text" name="checkout[addr5]" id="checkout_addr2">
+							</div>
+							<div class="input-block address2">
+								<label class="field__label" for="checkout_addr3">상세주소</label>
+								<input placeholder="상세주소" class="field__input" type="text" name="checkout[addr3]" id="checkout_addr3">
+							</div>
+							<div class="input-block label-block">
+								<label class="form-group__label is-hidden" for="refundType">업태</label>
+								<input id="refundType" name="refund[Type]" placeholder="업태" type="text">
+							</div>
+							<div class="input-block label-block">
+								<label class="form-group__label is-hidden" for="refundType2">종목</label>
+								<input id="refundType2" name="refund[Type2]" placeholder="종목" type="text">
+							</div>
+						</form>
+					</div>
+					<div class="mypage_each">
+						<h5 class="checkout_tit1">신청자 정보</h5>
+						<form method="post" action="#">
+							<div class="input-block label-block">
+								<label class="form-group__label is-hidden" for="refundPhone">전화번호</label>
+								<input id="refundPhone" name="refund[phone]" placeholder="전화번호" type="text">
+							</div>
+							<div class="input-block label-block">
+								<label class="form-group__label is-hidden" for="refundPhone2">휴대폰번호</label>
+								<input id="refundPhone2" name="refund[phone2]" placeholder="휴대폰번호" type="text">
+							</div>
+							<div class="input-block email_form">
+								<div>
+									<input class="field__input" placeholder="이메일" type="text">
+								</div>
+								<div>
+									<select class="toteme-select-style">
+										<option value="">naver.com</option>
+										<option value="">gmail.com</option>
+										<option value="">직접입력</option>
+									</select>
+								</div>
+							</div>
+							<div class="button-block pcs2_vertical">
+								<button type="button" class="button button--block button--large modal_trigger" data-modal="receipt_done-modal">신청</button> 
+								<button type="button" class="button button--block button--large">취소</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="no_number-modal" class="modal modal--light no_number-modal" role="dialog" tabindex="-1">
+		<div class="modal__overlay" tabindex="-1">
+			<div class="modal__card">
+				<div class="modal__header">
+					<h5 class="modal__title preorder-modal__title">사업자 등록번호 찾기</h5>
+					<button class="modal__close">
+						<span class="visually-hidden">
+							Close
+						</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+						</svg> </button>
+				</div>
+				<div class="modal__body">
+					<div class="text-block">
+						입력하신 사업자 번호로 등록된 이력이 없습니다.<br> 신규로 등록 하시겠습니까?
+					</div>
+					<div class="button-block pcs2_vertical">
+						<button type="button" class="button button--block button--large">확인</button> 
+						<button type="button" class="button button--block button--large">취소</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="receipt_done-modal" class="modal modal--light receipt_done-modal" role="dialog" tabindex="-1">
+		<div class="modal__overlay" tabindex="-1">
+			<div class="modal__card">
+				<div class="modal__header">
+					<h5 class="modal__title preorder-modal__title">세금계산서 신청 완료</h5>
+					<button class="modal__close">
+						<span class="visually-hidden">
+							Close
+						</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+						</svg> </button>
+				</div>
+				<div class="modal__body">
+					<div class="text-block">
+						고객님의 세금계산서 신청접수가 완료되었습니다.<br> 확인 후 고객님의 이메일 주소로 세금계산서를 보내드립니다.<br> 이메일 <span class="color_red">미전송 시</span> 신청화면에서 출력 가능합니다.
+					</div>
+					<div class="button-block pcs2_vertical">
+						<button type="button" class="button button--block button--large">확인</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="address-modal" class="modal modal--light checkout address-modal" role="dialog" tabindex="-1">
+		<div class="modal__overlay" tabindex="-1">
+			<div class="modal__card">
+				<div class="modal__header">
+					<h5 class="modal__title  preorder-modal__title">주소검색</h5>
+					<button class="modal__close">
+						<span class="visually-hidden">
+							Close
+						</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+						</svg> </button>
+				</div>
+				<div class="modal__body">
+					<div class="address_modal_container">
+						<div class="input-block">
+							<label class="field__label field__label--visible" for="checkout_addr_find">주소 찾기</label>
+							<input placeholder="찾고자 하는 주소를 입력하세요" class="field__input" size="30" type="text" name="checkout[addr_find]" id="checkout_addr_find">
+						</div>
+						<div class="input-block">
+							<input class="btn" type="submit" value="검색" data-address="address_search_list">
+							<ul class="dot_list">
+								<li>예: 동(읍/면)명 또는 도로명주소(건물번호/건물명)</li>
+								<li>일부 군사지역은 배송이 불가능할 수 있습니다.</li>
+							</ul>
+						</div>
+						<div class="address_find_content address_wrap">
+							<div class="address_search_list_box">
+								<div class="input-table">
+									<div>
+										<div class="select-wrap">
+											<select class="toteme-select-style">
+												<option value="">시/도</option>
+												<option value="">시/도</option>
+												<option value="">시/도</option>
+											</select>
+										</div>
+									</div>
+									<div>
+										<div class="select-wrap">
+											<select class="toteme-select-style">
+												<option value="">군/구</option>
+												<option value="">군/구</option>
+												<option value="">군/구</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<ul class="addr_list">
+									<li><a href="#" class="addr_btn" data-address="address_detail">
+										<span class="addr-line-wrap">
+											<span class="addr-line rrr">
+												<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
+											</span>
+											<span class="addr-line jjj">
+												<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
+											</span>
+										</span>
+										<span class="zipcode">06088</span>
+									</a></li>
+									<li><a href="#" class="addr_btn" data-address="address_detail">
+										<span class="addr-line-wrap">
+											<span class="addr-line rrr">
+												<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
+											</span>
+											<span class="addr-line jjj">
+												<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
+											</span>
+										</span>
+										<span class="zipcode">06088</span>
+									</a></li>
+									<li><a href="#" class="addr_btn" data-address="address_detail">
+										<span class="addr-line-wrap">
+											<span class="addr-line rrr">
+												<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
+											</span>
+											<span class="addr-line jjj">
+												<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
+											</span>
+										</span>
+										<span class="zipcode">06088</span>
+									</a></li>
+									<li><a href="#" class="addr_btn" data-address="address_detail">
+										<span class="addr-line-wrap">
+											<span class="addr-line rrr">
+												<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
+											</span>
+											<span class="addr-line jjj">
+												<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
+											</span>
+										</span>
+										<span class="zipcode">06088</span>
+									</a></li>
+									<li><a href="#" class="addr_btn" data-address="address_detail">
+										<span class="addr-line-wrap">
+											<span class="addr-line rrr">
+												<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
+											</span>
+											<span class="addr-line jjj">
+												<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
+											</span>
+										</span>
+										<span class="zipcode">06088</span>
+									</a></li>
+								</ul>
+							</div>
+							<div class="address_detail_box">
+								<ul class="addr_list">
+									<li>
+										<div class="radio_custom_box">
+											<input id="addr_type1" class="radio_input" value="1" type="radio" name="addr_type" checked="">
+											<label for="addr_type1"><span class="addr-mark-name">도로명</span> 서울특별시 강남구 학동로 402</label>
+										</div>
+										<div class="radio_custom_box">
+											<input id="addr_type2" class="radio_input" value="2" type="radio" name="addr_type">
+											<label for="addr_type2"><span class="addr-mark-num">지번</span> 서울특별시 강남구 삼성동 1</label>
+										</div>
+									</li>
+								</ul>
+								<div class="input-block form-group__field">
+									<label class="field__label field__label--visible" for="addr_detail">상세주소 입력</label>
+									<input placeholder="상세주소 입력" class="field__input" size="30" type="text" name="checkout[addr_detail]" id="addr_detail">
+									<p class="comment error" style="display: none;">상세주소를 입력하세요.</p>
+								</div>
+								<div class="button-block pcs2">
+									<input class="btn btn_addr_standard" type="button" value="확인">
+									<input class="btn white" type="button" value="취소">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="address_modal_container standard_addr_box">
+						<div class="text-block addr_modal_text">
+							<p>입력하신 주소에 해당하는 표준주소가 있습니다.<br>
+								아래 표준주소로 바꾸시겠습니까?</p>
+						</div>
+						<table class="table_type1">
+							<colgroup>
+								<col style="width: 50px;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">
+										<div class="radio_custom_box">
+											<input id="addr_type3" class="radio_input" value="1" type="radio" name="addr_type2">
+										</div>
+									</th>
+									<td>
+										<label for="addr_type3"><span class="payment_tit2">[입력한주소]</span> 12345 <br> 서울특별시 강남구 삼성동 1</label>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">
+										<div class="radio_custom_box">
+											<input id="addr_type4" class="radio_input" value="2" type="radio" name="addr_type2" checked="">
+										</div>
+									</th>
+									<td>
+										<label for="addr_type4"><span class="payment_tit2">[표준주소]</span> 12345 (111-222) <br> 서울특별시 강남구 삼성동 1</label>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="button-block pcs2">
+							<input class="btn" type="button" value="확인">
+							<input class="btn white" type="button" value="취소">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
