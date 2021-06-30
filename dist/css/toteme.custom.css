@@ -756,6 +756,7 @@ li > a.navlist__link.text-link{padding-left:15px}
 .return_txt:last-child{margin-bottom: 0;}
 .cancel_wrap .mypage_order_menu{margin-top: -1px;}
 .dot_list.cancel_ul{padding: 5px 15px 15px;}
+.return-modal .button-block{margin: 30px auto;}
 
 figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 .containerZoom.active{cursor: zoom-out;}
