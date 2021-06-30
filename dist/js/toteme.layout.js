@@ -357,6 +357,17 @@ Util.prototype.registerEvent = function(option){
             $('.btn_addr_standard').on('click', function(){
                 $('.standard_addr_box').addClass('is-active').siblings('.address_modal_container').addClass('is-hidden');
             });
+            //환불 타입 선택
+            $('.return_type_box input').on('click', function(){
+                var type = $(this).attr('data-type');
+                $(this).parents('.return_type_box').siblings('.'+type).addClass('active').siblings().removeClass('active');
+            });
+
+            //환불 회수요청지 선택
+            $('.return_addr_box input').on('click', function(){
+                var type = $(this).attr('data-type');
+                $(this).parents('.return_addr_box').siblings('.'+type).addClass('active').siblings().removeClass('active');
+            });
 
         break;
         
