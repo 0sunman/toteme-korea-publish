@@ -1117,13 +1117,13 @@
                   위시리스트
                 </option>
                 <option value="">
-                  입고 알림 목록
-                </option>
-                <option value="">
                   주문내역
                 </option>
                 <option value="">
                   반품신청
+                </option>
+                <option value="">
+                  영수증/세금계산서
                 </option>
                 <option value="">
                   로그아웃
@@ -1146,13 +1146,13 @@
              <a class="navlist__link text-link" href="#">위시리스트</a>
           </li>
           <li class="navlist__item">
-             <a class="navlist__link text-link" href="#">입고 알림 목록</a>
-          </li>
-          <li class="navlist__item">
             <a class="navlist__link text-link" href="#">주문내역</a>
          </li>
-         <li class="navlist__item navlist__item--margin">
+         <li class="navlist__item">
             <a class="navlist__link text-link" href="#">반품신청</a>
+         </li>
+         <li class="navlist__item navlist__item--margin">
+            <a class="navlist__link text-link" href="#">영수증/세금계산서</a>
          </li>
          <li class="navlist__item">
             <a class="navlist__link text-link" href="#">로그아웃</a>
@@ -1165,14 +1165,14 @@
    <script>
       setTimeout(function(){
          $(".main-title.custom-select__label").text("주문내역");
-         $(".navlist.mypage>li:nth-child(6) a").addClass("is-active");
+         $(".navlist.mypage>li:nth-child(5) a").addClass("is-active");
       },100)
       </script>
    
 		 <div class="template-account__content">
-			<div class="template-account__text_hdtype_1 alert" style="display: none;">
+			<div class="template-account__text_hdtype_1 alert title" style="display: none;">
 				<div class="rte">
-					주문 내역
+					<p class="error">이름을 입력해 주세요.</p>
 				</div>
 			</div>
 			<div class="template-mypage__form-wrapper">
@@ -1252,9 +1252,9 @@
 							<div class="summary_content mypage_each2">
 								<h5 class="checkout_tit1">주문상태</h5>
 								<div class="txt_btn_box">
-									<h4 class="mypage_tit2">배송완료</h4>
+									<h4 class="mypage_tit2">반품</h4>
 									<div>
-										<button type="button" class="button button--primary">상세보기</button>
+										<button type="button" class="button button--primary modal_trigger" data-modal="return-modal">상세보기</button>
 									</div>
 								</div>
 							</div>
@@ -1813,6 +1813,52 @@
 				<div class="ly_guarantee_container">
 					<img src="https://image.thehyundai.com/hdmall/images/co/img_guarantee.jpg" alt="" class="pc_only">
 					<img src="https://image.thehyundai.com/hdsmart/images/co/img_guarantee.jpg" alt="" class="mo_only">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="return-modal" class="modal modal--light return-modal" role="dialog" tabindex="-1">
+	<div class="modal__overlay" tabindex="-1">
+		<div class="modal__card">
+			<div class="modal__header">
+				<h5 class="modal__title preorder-modal__title">상세보기</h5>
+				<button class="modal__close">
+					<span class="visually-hidden">
+						Close
+					</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+					</svg> </button>
+			</div>
+			<div class="modal__body">
+				<div class="return_modal_container">
+					<table class="table_type1">
+						<colgroup>
+							<col style="width: 30%;">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">반품상태</th>
+								<td>반품접수 2017-03-24 11:12:13<br> 
+									반품진행중 2017-03-24 11:03:12</td>
+							</tr>
+							<tr>
+								<th scope="row">반품정보<br> (상품/배송지)</th>
+								<td>
+									<p class="return_txt">브이넥 면 카라 티셔츠 STRIPE
+										<br> 옵션 : Pear green / 사이즈 40  1개</p>
+									<p class="return_txt">박현대 <br>010-8989-1212<br> 
+										12456 서울 강남구 청담동 123-5 <br>현대빌딩 3층 </p>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">환불방법</th>
+								<td>신용카드</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			</div>
 		</div>
