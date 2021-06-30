@@ -35,12 +35,12 @@ const State = {
 }
 
 const pageData = [
-  {"type":"index", "pid":"T-MI-001", "state":"DONE" , "completedate":"2021-06-01",  "url" : "/00_main/0", "pageurl" : "00_main/list.ejs", "title":"퍼블리스트", "isMain":true},
-  {"type":"main" , "pid":"T-MI-001", "state":"DONE" , "completedate":"2021-06-01",  "url" : "/00_main/1", "pageurl" : "00_main/index.ejs", "title":"Component Guide"},
-  {"type":"main" , "pid":"T-MI-001", "state":"DONE" , "completedate":"2021-06-01",  "title":"Main2","url" : "/00_main/11", "pageurl" : "00_main/index2.ejs"},
-  {"type":"main" , "pid":"T-MI-001", "state":"DONE" , "completedate":"2021-06-01",  "title":"Guidelines for Input (error,commit..etc)","url" : "/00_main/2", "pageurl" : "00_main/inputguide.ejs"},
-  {"type":"main" , "pid":"T-MI-001", "state":"DONE" , "completedate":"2021-06-01",  "title":"Display Page Type 01 (2–4 columns) ","url" : "/00_main/3", "pageurl" : "00_main/shop_scarves.ejs"},
-  {"type":"main" , "pid":"T-MI-001", "state":"DONE" , "completedate":"2021-06-01",  "title":"Display Page Type 02 (1-2–4 columns)","url" : "/00_main/4", "pageurl" : "00_main/shop_silk.ejs"},
+  {"type":"index", "pid":"T-MI-001", "state":"DONE" , "completedate":"2021-06-01",  "url" : "/00_main/list.ejs.html", "pageurl" : "00_main/list.ejs", "title":"퍼블리스트", "isMain":true},
+  {"type":"main" , "pid":"T-MI-001", "state":"DONE" , "completedate":"2021-06-01",  "url" : "/00_main/1", "pageurl" : "00_main/index.ejs.html", "title":"Component Guide"},
+  {"type":"main" , "pid":"T-MI-001", "state":"DONE" , "completedate":"2021-06-01",  "title":"Main2","url" : "/00_main/index2.ejs.html", "pageurl" : "00_main/index2.ejs"},
+  {"type":"main" , "pid":"T-MI-001", "state":"DONE" , "completedate":"2021-06-01",  "title":"Guidelines for Input (error,commit..etc)","url" : "/00_main/inputguide.ejs.html", "pageurl" : "00_main/inputguide.ejs"},
+  {"type":"main" , "pid":"T-MI-001", "state":"DONE" , "completedate":"2021-06-01",  "title":"Display Page Type 01 (2–4 columns) ","url" : "/00_main/shop_scarves.ejs.html", "pageurl" : "00_main/shop_scarves.ejs"},
+  {"type":"main" , "pid":"T-MI-001", "state":"DONE" , "completedate":"2021-06-01",  "title":"Display Page Type 02 (1-2–4 columns)","url" : "/00_main/shop_silk.ejs.html", "pageurl" : "00_main/shop_silk.ejs"},
 
   
   {"type":"main" , "pid":"T-CT-001", "state":"DONE" , "completedate":"2021-06-30",  "title":"T-CT-001. Component - Section with background (Tutorial)","url" : "/00_main/T-CT-001.sectionwithbackground",   "pageurl" : "00_main/T-CT-001.sectionwithbackground.ejs"},
@@ -105,6 +105,11 @@ const pageData = [
   {"type":"mypage", "pid":"T-MY-028", "state":"DONE" , "completedate":"2021-06-01", "url" : "/01_mypage/T-MY-028.ejs.html", "pageurl" : "01_mypage/T-MY-028.ejs", "title":"T-MY-028. Cancel Order", "title2":"마이페이지 - 취소신청"},
   {"type":"mypage", "pid":"T-MY-031", "state":"DONE" , "completedate":"2021-06-01", "url" : "/01_mypage/T-MY-031.ejs.html", "pageurl" : "01_mypage/T-MY-031.ejs", "title":"T-MY-031. Receipt(empty)", "title2":"영수증/세금계산서(내역이 없는 경우)"},
   {"type":"mypage", "pid":"T-MY-032", "state":"DONE" , "completedate":"2021-06-01", "url" : "/01_mypage/T-MY-032.ejs.html", "pageurl" : "01_mypage/T-MY-032.ejs", "title":"T-MY-032. Receipt", "title2":"영수증/세금계산서"},
+  
+  {"type":"mypage", "pid":"T-MY-034", "state":"DONE" , "completedate":"2021-06-01", "url" : "/01_mypage/T-MY-034.ejs.html", "pageurl" : "01_mypage/T-MY-034.ejs", "title":"T-MY-033. Tax Receipt", "title2":"세금계산서"},
+  {"type":"mypage", "pid":"T-MY-035", "state":"DONE" , "completedate":"2021-06-01", "url" : "/01_mypage/T-MY-035.ejs.html", "pageurl" : "01_mypage/T-MY-035.ejs", "title":"T-MY-034. Credit Receipt", "title2":"카드 영수증"},
+  {"type":"mypage", "pid":"T-MY-036", "state":"DONE" , "completedate":"2021-06-01", "url" : "/01_mypage/T-MY-036.ejs.html", "pageurl" : "01_mypage/T-MY-036.ejs", "title":"T-MY-035. Cash Receipt", "title2":"현금영수증"},
+  
   {"type":"mypage", "pid":"T-MY-038", "state":"DONE" , "completedate":"2021-06-01", "url" : "/01_mypage/T-MY-038.ejs.html", "pageurl" : "01_mypage/T-MY-038.ejs", "title":"T-MY-038. Deposit(empty)", "title2":"예치금(사용 내역이 없는 경우)"},
   {"type":"mypage", "pid":"T-MY-039", "state":"DONE" , "completedate":"2021-06-01", "url" : "/01_mypage/T-MY-039.ejs.html", "pageurl" : "01_mypage/T-MY-039.ejs", "title":"T-MY-039. Deposit", "title2":"예치금"},
 
