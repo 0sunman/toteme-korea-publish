@@ -103,6 +103,9 @@ const pageData = [
   {"type":"mypage", "pid":"T-MY-025", "state":"DONE" , "completedate":"2021-06-01", "url" : "/01_mypage/T-MY-025.ejs.html", "pageurl" : "01_mypage/T-MY-025.ejs", "title":"T-MY-025. Returns - details", "title2":"마이페이지 - 반품신청 - 상세"},
   {"type":"mypage", "pid":"T-MY-026", "state":"DONE" , "completedate":"2021-06-01", "url" : "/01_mypage/T-MY-026.ejs.html", "pageurl" : "01_mypage/T-MY-026.ejs", "title":"T-MY-026. Returns - Done", "title2":"마이페이지 - 반품신청 - 완료"},
   {"type":"mypage", "pid":"T-MY-028", "state":"DONE" , "completedate":"2021-06-01", "url" : "/01_mypage/T-MY-028.ejs.html", "pageurl" : "01_mypage/T-MY-028.ejs", "title":"T-MY-028. Cancel Order", "title2":"마이페이지 - 취소신청"},
+  {"type":"mypage", "pid":"T-MY-032", "state":"DONE" , "completedate":"2021-06-01", "url" : "/01_mypage/T-MY-032.ejs.html", "pageurl" : "01_mypage/T-MY-032.ejs", "title":"T-MY-032. Receipt", "title2":"영수증/세금계산서"},
+  {"type":"mypage", "pid":"T-MY-038", "state":"DONE" , "completedate":"2021-06-01", "url" : "/01_mypage/T-MY-038.ejs.html", "pageurl" : "01_mypage/T-MY-038.ejs", "title":"T-MY-038. Deposit(empty)", "title2":"예치금(사용 내역이 없는 경우)"},
+  {"type":"mypage", "pid":"T-MY-039", "state":"DONE" , "completedate":"2021-06-01", "url" : "/01_mypage/T-MY-039.ejs.html", "pageurl" : "01_mypage/T-MY-039.ejs", "title":"T-MY-039. Deposit", "title2":"예치금"},
 
   {"type":"page", "pid":"T-ETC-001", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"1-1. About - Totême","url" : "/05_page_about/11",   "pageurl" : "05_page_about/01_about_toteme.ejs"},
   {"type":"page", "pid":"T-ETC-001", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"1-2. About - Store","url" : "/05_page_about/12", "pageurl" : "05_page_about/02_about_store.ejs"},

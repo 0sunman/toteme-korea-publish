@@ -1,0 +1,66 @@
+<div class="container mypage">
+	<div class="template-account__header">
+		안녕하세요, 이현대님
+	</div>
+	<div class="template-account__wrapper">
+		 <div class="template-account__left"></div>
+		 <%- include ("./menu/index.ejs",{state:27}) %>
+		 <div class="template-account__content">
+			<div class="template-account__text_hdtype_1 alert title" style="display: none;">
+				<div class="rte">
+					<p class="error">이름을 입력해 주세요.</p>
+				</div>
+			</div>
+			<div class="template-mypage__form-wrapper deposit_wrap">
+				<div class="template-mypage__form">
+					<div class="input-block">
+						<label class="form-group__label is-hidden" for="selectTime">기간보기</label>
+						<select name="selectTime" id="refundBank" class="toteme-select-style mypage_time_select">
+							<option value="" selected="" disabled="">기간보기</option>
+							<option value="">1개월</option>
+							<option value="">3개월 </option>
+							<option value="">6개월</option>
+							<option value="">전체보기</option>
+						</select>
+					</div>
+				</div>
+				<div class="template-mypage__form">
+					<p>사용 가능한 예치금 : 30,000원</p>
+				</div>
+				<ul class="mypage_toggle_menu mypage_order_menu">
+					<li class="accordion__item">
+						<button type="button" class="toggle_tit accordion__control"># 17032700034509 (2020-05-05)</button>
+						<div class="toggle_con_box">
+							<div class="summary_content mypage_each2 deposit_txt_box">
+								<h5 class="checkout_tit1">예치금 내용</h5>
+								<p class="deposit_txt1">주문에 의한 예치금 사용</p>
+								<ul class="my_price_list">
+									<li>
+										<span class="tit1">금액</span>
+										<span class="txt1">-10,000원</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="accordion__item">
+						<button type="button" class="toggle_tit accordion__control"># 17032700034509 (2020-03-03)</button>
+						<div class="toggle_con_box">
+							<div class="summary_content mypage_each2 deposit_txt_box">
+								<h5 class="checkout_tit1">예치금 내용</h5>
+								<p class="deposit_txt1">주문에 의한 예치금 사용</p>
+								<ul class="my_price_list">
+									<li>
+										<span class="tit1">금액</span>
+										<span class="txt1">-10,000원</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+					 
+		 </div>
+	</div>
+</div>

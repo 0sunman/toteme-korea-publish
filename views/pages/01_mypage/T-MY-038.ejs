@@ -1,0 +1,37 @@
+<div class="container mypage">
+	<div class="template-account__header">
+		안녕하세요, 이현대님
+	</div>
+	<div class="template-account__wrapper">
+		 <div class="template-account__left"></div>
+		 <%- include ("./menu/index.ejs",{state:27}) %>
+		 <div class="template-account__content">
+			<div class="template-account__text_hdtype_1 alert title" style="display: none;">
+				<div class="rte">
+					<p class="error">이름을 입력해 주세요.</p>
+				</div>
+			</div>
+			<div class="template-mypage__form-wrapper">
+				<div class="template-mypage__form">
+					<div class="input-block">
+						<label class="form-group__label is-hidden" for="selectTime">기간보기</label>
+						<select name="selectTime" id="refundBank" class="toteme-select-style mypage_time_select">
+							<option value="" selected="" disabled="">기간보기</option>
+							<option value="">1개월</option>
+							<option value="">3개월 </option>
+							<option value="">6개월</option>
+							<option value="">전체보기</option>
+						</select>
+					</div>
+				</div>
+				<div class="template-mypage__form">
+					<div class="deposit_txt_box">
+						<p>사용 가능한 예치금 : 30,000원</p>
+						<p>예치금 내역이 없습니다.</p>
+					</div>
+				</div>
+			</div>
+					 
+		 </div>
+	</div>
+</div>
