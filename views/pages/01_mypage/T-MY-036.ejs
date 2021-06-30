@@ -1,0 +1,112 @@
+<div class="container mypage checkout">
+	<div class="template-account__header">
+		안녕하세요, 이현대님
+	</div>
+	<div class="template-account__wrapper">
+		 <div class="template-account__left"></div>
+		 <%- include ("./menu/index.ejs",{state:24}) %>
+		 <div class="template-account__content">
+			<div class="template-account__text_hdtype_1 alert title" style="display: none;">
+				<div class="rte">
+					<p class="error">받는 사람을 입력해 주세요.</p>
+				</div>
+			</div>
+			<div class="template-mypage__form-wrapper cash-receipts">
+				<div class="button-block auth-join-button loading-wrap">
+					<input class="button button--primary button--block button--large m-font-14 modal_trigger" type="button" value="팝업열기" data-modal="popup-cash-receipts">
+				 </div>
+			</div>
+					 
+		 </div>
+	</div>
+
+</div>
+<div class="receipts popup-cash-receipts modal modal--light refund-modal" role="dialog" tabindex="-1">
+	<div class="modal__overlay" tabindex="-1">
+		<div class="modal__card">
+			<div class="modal__header">
+				<h5 class="modal__title preorder-modal__title">현금영수증 인쇄</h5>
+				<button class="modal__close">
+					<span class="visually-hidden">
+						Close
+					</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+					</svg> </button>
+			</div>
+			<div class="modal__body">
+				<form method="post" action="#">
+					<div class="text-block title receipts-templete header-text">
+						<h2>이용안내</h2>
+						<p>주문에 상품의 출고지가 다를 경우 지점별로 각 각 인쇄 하실 수 있습니다.<br>인쇄하실 지점을 선택 후 인쇄버튼을 선택하세요.</p>
+					 </div>
+					
+					 <div class='blockType receipts-contents'>
+						 <!-- 현금영수증 시작-->
+						 <div class="popup_cont">
+							<div class="receipt-print-wrap">
+								<div class="tax-receipt-print type02">
+									<div class="base-img-wrap"><img src="../assets/bg_card_taxrecepipit.jpg" alt=""></div>
+									<div class="base-info-wrap">
+										<!-- 일반정보 -->
+										<div class="txtbox text01">12345</div> <!-- 전표번호 -->
+		
+										<div class="txtbox text02">123456</div> <!-- 매입사 일련번호 -->
+										<div class="txtbox text03">현금(소득공제용)</div> <!-- 카드종류 -->
+										<div class="txtbox text04">승인</div> <!-- 거래종류 -->
+										<div class="txtbox text05">43028023********</div> <!-- 회원번호or카드번호 -->
+										<div class="txtbox text06">** / **</div> <!-- 유효기간 -->
+										<div class="txtbox text07">2015-12-09 20:02:05</div> <!-- 거래일시 -->
+										<div class="txtbox text08">20150705</div> <!-- 매출취소시당초거래일 -->
+		
+										<!-- 금액 정보-->
+										<div class="txtbox text09 cnum">72227</div> <!-- 가맹점번호 -->
+										<div class="txtbox text09_01">(주)현대백화점 판교점</div> <!-- 가맹점 -->
+										<div class="txtbox text09_02 cnum">000-00-0000</div> <!-- 가맹점 사업자등록번호 -->
+										<div class="txtbox text10 cnum">7222</div> <!-- 금액 -->
+										<div class="txtbox text11 cnum">7222</div> <!-- 세금 -->
+										<div class="txtbox text12 cnum">7222</div> <!-- 봉사료 -->
+										<div class="txtbox text12_01 cnum">7222</div> <!-- 봉사료 -->
+										<div class="txtbox text13 cnum">79450</div> <!-- 합계 -->
+										<div class="txtbox text14">79450</div> <!-- 승인번호 -->
+										<div class="txtbox text15">211-87-21455</div> <!-- 사업자등록번호 -->
+										<div class="txtbox text16">일시불</div> <!-- 일반 -->
+										<div class="txtbox text17">6개월</div> <!-- 할부 -->
+										<div class="txtbox text18">5678</div> <!-- 단말번호 -->
+										<div class="txtbox text19">LG</div> <!-- 매출전표매입사 -->
+		
+										<!-- 회사정보 -->
+										<div class="txtbox text20">누들앤부 누들앤...</div> <!-- 품명 -->
+										<div class="txtbox text21">김인권</div> <!-- 대표자 -->
+										<div class="txtbox text22">(주)현대백화점 판교점</div> <!-- 가맹점명 -->
+										<div class="txtbox text23">서울 강동구 천호동 454-2 서울 강동구 천호동 454-2</div> <!-- 가맹점주소 -->
+										<div class="txtbox text24">1800-2233-2233</div> <!-- 문의전화 -->
+										<div class="txtbox text25">알림</div> <!-- 알림 -->
+										<div class="txtbox text26">00000</div> <!-- 거래고유번호 -->
+										<div class="txtbox text27">ㅇㅇㅇ</div> <!-- 서명 -->
+		
+									</div>
+								</div>
+							</div>
+						</div>
+						 <!-- ///현금영수증 끝 -->
+					 </div>
+					 <div class="text-block title receipts-templete bottom-text" style='display: none;'>
+						 <p></p>
+					  </div>
+					<div class="button-block receipts-templete">
+						<input class="button button--primary button--block button--large" type="button" value="인쇄하기">
+					</div>
+					<div class="button-block receipts-templete">
+						<input class="button button--primary button--block button--large" type="button" value="닫기">
+					</div>
+			 </form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	setTimeout(function(){
+		$('input[data-modal="popup-cash-receipts"]').click();
+	},1000)
+</script>

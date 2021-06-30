@@ -1,0 +1,129 @@
+<div class="container mypage checkout">
+	<div class="template-account__header">
+		안녕하세요, 이현대님
+	</div>
+	<div class="template-account__wrapper">
+		 <div class="template-account__left"></div>
+		 <%- include ("./menu/index.ejs",{state:24}) %>
+		 <div class="template-account__content">
+			<div class="template-account__text_hdtype_1 alert title" style="display: none;">
+				<div class="rte">
+					<p class="error">받는 사람을 입력해 주세요.</p>
+				</div>
+			</div>
+			<div class="template-mypage__form-wrapper cash-receipts">
+				<div class="button-block auth-join-button loading-wrap">
+					<input class="button button--primary button--block button--large m-font-14 modal_trigger" type="button" value="팝업열기" data-modal="popup-tax-receipts">
+				 </div>
+			</div>
+					 
+		 </div>
+	</div>
+
+</div>
+<div class="receipts popup-tax-receipts modal modal--light refund-modal" role="dialog" tabindex="-1">
+	<div class="modal__overlay" tabindex="-1">
+		<div class="modal__card">
+			<div class="modal__header">
+				<h5 class="modal__title preorder-modal__title">세금계산서 인쇄</h5>
+				<button class="modal__close">
+					<span class="visually-hidden">
+						Close
+					</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+					</svg> </button>
+			</div>
+			<div class="modal__body">
+				<form method="post" action="#">
+					<div class="text-block title receipts-templete header-text">
+						<h2>이용안내</h2>
+						<p>주문에 상품의 출고지가 다를 경우 지점별로 각 각 인쇄 하실 수 있습니다.<br>인쇄하실 지점을 선택 후 인쇄버튼을 선택하세요.</p>
+					 </div>
+					
+					 <div class='blockType receipts-contents'>
+						 <!-- 세금계산서 시작-->
+						 <div class="popup_cont">
+							<div class="receipt-print-wrap">
+								<div class="tax-receipt-print type01">
+									<div class="base-img-wrap"><img src="../assets/bg_taxreceipit.jpg" alt=""></div>
+		
+									<div class="base-info-wrap ">
+										<div class="txtbox text01"><p class="cell">20151005-41000052-755aac2d</p></div> <!-- 승인번호 -->
+										<!-- 공급자 -->
+										<div class="txtbox text02"><p class="cell">000-00-000000</p></div> <!-- 등록번호 -->
+										<div class="txtbox text03"><p class="cell">12345-45</p></div> <!-- 종사업장번호 -->
+										<div class="txtbox text04"><p class="cell">주식회사 현대백화점</p></div> <!-- 상호 -->
+										<div class="txtbox text05"><p class="cell">이동호</p></div> <!-- 성명 -->
+										<div class="txtbox text06"><p class="cell">서울시 강남구 압구정로 201 2층</p></div> <!-- 사업장주소 -->
+										<div class="txtbox text07"><p class="cell">서비스, 소매</p></div> <!-- 업태 -->
+										<div class="txtbox text08"><p class="cell">방송프로그램 제작, TV홈쇼핑</p></div> <!-- 종목 -->
+										<div class="txtbox text09"><p class="cell"></p></div> <!-- 이메일 -->
+										<!-- 공급받는자 -->
+										<div class="txtbox text10"><p class="cell">131-04-53100</p></div> <!-- 등록번호 -->
+										<div class="txtbox text11"><p class="cell">12345-54</p></div> <!-- 종사업장번호 -->
+										<div class="txtbox text12"><p class="cell">선일테크</p></div> <!-- 상호 -->
+										<div class="txtbox text13"><p class="cell">박한서</p></div> <!-- 성명 -->
+										<div class="txtbox text14"><p class="cell">인천광역시 남구 용현동 96-8(인하로 119번길)</p></div> <!-- 사업장주소 -->
+										<div class="txtbox text15"><p class="cell"><span class="mtline"><i>도소매도소매도소매도소매도소매</i></span></p></div> <!-- 업태 -->
+										<div class="txtbox text16"><p class="cell"><span class="mtline"><i>의류판매의류판매의류판매의류판매</i></span></p></div> <!-- 종목 -->
+										<div class="txtbox text17"><p class="cell">aaaaa@aaaa.aaaa</p></div> <!-- 이메일 -->
+		
+										<!-- 중간 금액-->
+										<div class="txtbox text18"><p class="cell">2015&nbsp;11&nbsp;04</p></div> <!-- 날짜(공란) -->
+										<div class="txtbox text19"><p class="cell"><span class="bnum">7</span><span class="num">630450123456</span></p></div> <!-- 공급가액 -->
+										<div class="txtbox text20"><p class="cell"><span class="num">06304501234</span></p></div> <!-- 세액 -->
+										<div class="txtbox text20_1"><p class="cell"></p></div> <!-- 수정사유 -->
+										<div class="txtbox text20_2"><p class="cell"></p></div> <!-- 비고 -->
+		
+										<!-- 목록-->
+		
+										<!-- 목록라인1 -->
+										<div class="txtbox text21">
+											<span class="intxt it01">10&nbsp;&nbsp;05</span><!-- 월/일 -->
+											<span class="intxt it02 line">코코비안코 코코넛 오일처럼 이름 코코비안코 코코넛 오일처럼 이름... 외 3건</span><!-- 품목 -->
+											<span class="intxt it03"></span><!-- 규격 -->
+											<span class="intxt it04">5</span><!-- 수량 -->
+											<span class="intxt it05">\10,000</span><!-- 단가 -->
+											<span class="intxt it06">\50,000</span><!-- 공급가액 -->
+											<span class="intxt it07">\5,000</span><!-- 세액 -->
+											<span class="intxt it08"></span><!-- 비고 -->
+										</div>
+										<div class="txtbox text22"></div> <!-- 목록라인2 -->
+										<div class="txtbox text23"></div> <!-- 목록라인3 -->
+										<div class="txtbox text24"></div> <!-- 목록라인4 -->
+		
+										<!-- 합계 -->
+										<div class="txtbox text25"><p class="cell">67,950</p></div><!-- 합계금액 -->
+										<div class="txtbox text26"><p class="cell"></p></div><!-- 현금 -->
+										<div class="txtbox text27"><p class="cell"></p></div><!-- 수표 -->
+										<div class="txtbox text28"><p class="cell"></p></div><!-- 어음 -->
+										<div class="txtbox text29"><p class="cell"></p></div><!-- 외상미수금 -->
+									</div>
+								</div>
+		
+							</div>
+						</div>
+						 <!-- ///세금계산서 끝 -->
+					 </div>
+					 <div class="text-block title receipts-templete bottom-text">
+						 
+						<p>1)본 전자금계산서는 공인인증서를 사용하여 전자서명한 세금계산서로 서명법에 의거 법적 효력을 갖는 문서입니다.</p>
+						<p>2)본 세금계산서는 www.esero.go.kr에서도 확인할 수 있습니다.</p>
+					  </div>
+					<div class="button-block receipts-templete">
+						<input class="button button--primary button--block button--large" type="button" value="인쇄하기">
+					</div>
+					<div class="button-block receipts-templete">
+						<input class="button button--primary button--block button--large" type="button" value="닫기">
+					</div>
+			 </form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	setTimeout(function(){
+		$('input[data-modal="popup-tax-receipts"]').click();
+	},1000)
+</script>
