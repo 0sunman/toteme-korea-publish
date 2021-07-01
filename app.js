@@ -109,7 +109,7 @@ const pageData = [
   {"type":"mypage", "pid":"T-MY-034", "state":"DONE" , "completedate":"2021-06-01", "url" : "/01_mypage/T-MY-034.ejs.html", "pageurl" : "01_mypage/T-MY-034.ejs", "title":"T-MY-034. Tax Receipt", "title2":"세금계산서"},
   {"type":"mypage", "pid":"T-MY-035", "state":"DONE" , "completedate":"2021-06-01", "url" : "/01_mypage/T-MY-035.ejs.html", "pageurl" : "01_mypage/T-MY-035.ejs", "title":"T-MY-035. Credit Receipt", "title2":"카드 영수증"},
   {"type":"mypage", "pid":"T-MY-036", "state":"DONE" , "completedate":"2021-06-01", "url" : "/01_mypage/T-MY-036.ejs.html", "pageurl" : "01_mypage/T-MY-036.ejs", "title":"T-MY-036. Cash Receipt", "title2":"현금영수증"},
-  {"type":"mypage", "pid":"T-MY-037", "state":"DONE" , "completedate":"2021-06-01", "url" : "/01_mypage/T-MY-037.ejs.html", "pageurl" : "01_mypage/T-MY-037.ejs", "title":"T-MY-037. Cash Receipt", "title2":"현금영수증"},
+  {"type":"mypage", "pid":"T-MY-037", "state":"DONE" , "completedate":"2021-06-01", "url" : "/01_mypage/T-MY-037.ejs.html", "pageurl" : "01_mypage/T-MY-037.ejs", "title":"T-MY-037. Receipt popup", "title2":"영수증 팝업"},
   
   {"type":"mypage", "pid":"T-MY-038", "state":"DONE" , "completedate":"2021-06-01", "url" : "/01_mypage/T-MY-038.ejs.html", "pageurl" : "01_mypage/T-MY-038.ejs", "title":"T-MY-038. Deposit(empty)", "title2":"예치금(사용 내역이 없는 경우)"},
   {"type":"mypage", "pid":"T-MY-039", "state":"DONE" , "completedate":"2021-06-01", "url" : "/01_mypage/T-MY-039.ejs.html", "pageurl" : "01_mypage/T-MY-039.ejs", "title":"T-MY-039. Deposit", "title2":"예치금"},
