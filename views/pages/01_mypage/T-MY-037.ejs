@@ -1,0 +1,158 @@
+<div class="container mypage checkout">
+	<div class="template-account__header">
+		안녕하세요, 이현대님
+	</div>
+	<div class="template-account__wrapper">
+		 <div class="template-account__left"></div>
+		 <%- include ("./menu/index.ejs",{state:24}) %>
+		 <div class="template-account__content">
+			<div class="template-account__text_hdtype_1 alert title" style="display: none;">
+				<div class="rte">
+					<p class="error">받는 사람을 입력해 주세요.</p>
+				</div>
+			</div>
+			<div class="template-mypage__form-wrapper cash-receipts">
+				<div class="button-block auth-join-button loading-wrap">
+					<input class="button button--primary button--block button--large m-font-14 modal_trigger" type="button" value="팝업열기" data-modal="popup-cash-receipts">
+				 </div>
+			</div>
+					 
+		 </div>
+	</div>
+
+</div>
+<div class="receipts popup-cash-receipts modal modal--light receipt-print-modal" role="dialog" tabindex="-1">
+	<div class="modal__overlay" tabindex="-1">
+		<div class="modal__card">
+			<div class="modal__header">
+				<h5 class="modal__title preorder-modal__title">영수증 </h5>
+				<button class="modal__close">
+					<span class="visually-hidden">
+						Close
+					</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+					</svg> </button>
+			</div>
+			<div class="modal__body">
+				<form method="post" action="#">
+					<div class="text-block title receipts-templete header-text">
+						<div class="receipt_print_txt">
+							<div class="left">
+								<span>주문하시는분 : 이현대</span>
+								<span>회원ID: abc@gmail.com</span>
+							</div>
+							<div class="right">
+								<span>㈜현대백화점 대표 : 이동호 외 2인(인)</span>
+								<span>사업자등록번호 : 211-87-21455</span>
+								<span>서울특별시 강남구 압구정로 201</span>
+								<span>업태 : 소매업 종목 : 백화점</span>
+							</div>
+						</div>
+					 </div>
+					
+					 <div class='blockType receipts-contents'>
+						 <!-- 영수증 시작-->
+						 <div class="popup_cont">
+							<div class="receipt-print-wrap">
+								<div class="receipt_each">
+									<span class="receipt_tit1">주문번호 : 45446235798751</span>
+									<div class="table_wrap">
+										<table class="table_type1">
+											<thead>
+												<tr>
+													<th scope="col">결제수단</th>
+													<th scope="col">결제금액</th>
+													<th scope="col">카드번호</th>
+													<th scope="col">승인번호</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>카드</td>
+													<td>32,000원</td>
+													<td>5350-2000-****-****</td>
+													<td>59247452</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="receipt_each">
+									<span class="receipt_tit1">거래내역상세</span>
+									<div class="table_wrap">
+										<table class="table_type1">
+											<thead>
+												<tr>
+													<th scope="col">거래일자</th>
+													<th scope="col">품목</th>
+													<th scope="col">공급가액</th>
+													<th scope="col">세액</th>
+													<th scope="col">수량</th>
+													<th scope="col">합계</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>2020-05-05</td>
+													<td>핏플랍 힐 샌들</td>
+													<td>32,000원</td>
+													<td>0원</td>
+													<td>1</td>
+													<td>0원</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<ul class="return_attr_list">
+										<li>
+											<span class="tit1">면세물품가액</span>
+											<div class="txt1">32,000원</div>
+										</li>
+										<li>
+											<span class="tit1">과세물품가액</span>
+											<div class="txt1">0원</div>
+										</li>
+										<li>
+											<span class="tit1">부가세</span>
+											<div class="txt1">0원</div>
+										</li>
+										<li>
+											<span class="tit1">배송료</span>
+											<div class="txt1">0원</div>
+										</li>
+										<li>
+											<span class="tit1">총합계</span>
+											<div class="txt1">32,000원</div>
+										</li>
+									</ul>
+								</div>
+								<div class="receipt_each">
+									<ul class="dot_list">
+										<li>본 영수증은 매입세액공제용도로 사용이 불가하며, 신용카드, 현금영수증전표가 필요하실 경우 본 영수증에서 각 전표를 별도 인쇄하셔야 합니다.</li>
+										<li>개별 전표가 필요하시면 전표 출력의 인쇄버튼을 클릭하시면 됩니다. </li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						 <!-- ///영수증 끝 -->
+					 </div>
+					 <div class="text-block title receipts-templete bottom-text" style='display: none;'>
+						 <p></p>
+					  </div>
+					<div class="button-block receipts-templete">
+						<input class="button button--primary button--block button--large" type="button" value="인쇄하기">
+					</div>
+					<div class="button-block receipts-templete">
+						<input class="button button--primary button--block button--large" type="button" value="닫기">
+					</div>
+			 </form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	setTimeout(function(){
+		$('input[data-modal="popup-cash-receipts"]').click();
+	},1000)
+</script>

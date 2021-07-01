@@ -731,7 +731,7 @@ li > a.navlist__link.text-link{padding-left:15px}
 .mypage_each.mypage_pw_input{padding-top: 10px; border-top: 1px solid #171616;}
 .mypage_each.mypage_pw_input .text-block.sub-description{padding: 0 36px;}
 .return_tr td{padding: 15px 15px 30px;}
-.return_tr .return_attr_list>li{display: table; width: 100%; margin-bottom: 8px;}
+.return_attr_list>li{display: table; width: 100%; margin-bottom: 8px;}
 .return_attr_list .tit1{display: table-cell; text-align: left; vertical-align: middle;}
 .return_attr_list .txt1{display: table-cell; width: 30%; text-align: right; vertical-align: middle;}
 .return_attr_list .txt1 select{display: inline-block; max-width: 80px;}
@@ -784,6 +784,19 @@ li > a.navlist__link.text-link{padding-left:15px}
 figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 .containerZoom.active{cursor: zoom-out;}
 
+.receipts.receipt-print-modal .modal__card{max-width: unset;}
+.receipts.receipt-print-modal .modal__body{padding: 20px 15px 40px;}
+.receipts.receipt-print-modal .button-block.receipts-templete{margin: 0px auto 10px;}
+.receipt_print_txt{display: table; width: 100%;}
+.receipt_print_txt .left{display: table-cell;}
+.receipt_print_txt .right{display: table-cell; text-align: right;}
+.receipt_print_txt span{display: block;}
+.receipt_each{margin-bottom: 30px; font-size: 15px;}
+.receipt_tit1{display: block; margin-bottom: 15px; text-align: left;}
+.receipt_each .table_type1 th, .receipt_each .table_type1 td{padding: 14px 10px; font-size: 15px; text-align: center;}
+.receipt_each .return_attr_list{margin-top: 10px;}
+.receipt_each .return_attr_list>li{margin-bottom: 3px;}
+.popup_cont .dot_list>li{margin-bottom: 3px; padding-left: 12px;}
 
 /* header, footer hide */
 /*.site-header-wrapper, #shopify-section-site-footer{display: none;}*/
