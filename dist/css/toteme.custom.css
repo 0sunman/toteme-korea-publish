@@ -349,7 +349,7 @@ body.overflow-hidden {overflow: hidden;}
 .input_phone_plus{display: none; margin-top: 10px;}
 .phone_form.active+.input_phone_plus{display: block;}
 .phone_form.active .btn_plus svg{display: none;}
-.phone_form.active .btn_plus:before{content: ''; display: block; width: 9px; height: 1px; background: #171616; position: absolute; top: calc(50% - 1px); left: 11px;}
+.phone_form.active .btn_plus:before{content: ''; display: block; width: 9px; height: 1px; background: #171616; position: absolute; top: 50%; left: 11px;}
 .addr_form{display: table; width: 100%; max-width: 500px; margin-left: auto; margin-right: auto;}
 .addr_form>div{display: table-cell; vertical-align: middle;}
 .addr_form>div:last-of-type{width: 137px;}
