@@ -25,72 +25,48 @@ Contact
                      COVID-19 FAQ
                 </option>
                 <option value="/pages/payments">
-                  Payments
+                  결제 및 가격 정보
                 </option>
                 <option value="/pages/shipping">
-                  Shipping
+                  배송정보
                 </option>
                 <option value="/pages/return">
-                  Returns
+                  반품 및 환불
                 </option>
                 <option value="/pages/order-tracking">
-                  Order tracking
+                  개인정보 처리방침
                 </option>
                 <option value="/pages/store-pick-up">
-                  Store pick-up
+                  이용약관
                 </option>
                 <option value="/pages/coming-soon">
-                  Coming soon
-                </option>
-                <option value="/pages/privacy-policy">
-                  Privacy policy
-                </option>
-                <option value="/pages/cookie-policy">
-                  Cookie policy
-                </option>
-                <option value="/pages/terms-conditions">
-                  Terms & Conditions
-                </option>
-                <option value="/pages/contact">
-                  Contact
+                  고객문의
                 </option>
              </select>
              <span class="main-title custom-select__label text-small"></span>
           </div>
        </div>
        <ul class="navlist" js-account-nav="navlist">
-         <li class="navlist__item ">
+         <li class="navlist__item navlist__item--margin">
             <a class="navlist__link text-link" href="/pages/covid-19-faq">COVID-19 FAQ</a>
          </li>
          <li class="navlist__item ">
-            <a class="navlist__link text-link" href="/pages/payments">Payments</a>
+            <a class="navlist__link text-link" href="/pages/payments">결제 및 가격 정보</a>
          </li>
          <li class="navlist__item ">
-            <a class="navlist__link text-link" href="/pages/shipping">Shipping</a>
+            <a class="navlist__link text-link" href="/pages/shipping">배송정보</a>
          </li>
-         <li class="navlist__item ">
-            <a class="navlist__link text-link" href="/pages/return">Returns</a>
+         <li class="navlist__item navlist__item--margin">
+            <a class="navlist__link text-link" href="/pages/return">반품 및 환불</a>
          </li>
-         <li class="navlist__item ">
-            <a class="navlist__link text-link" href="/pages/order-tracking">Order tracking</a>
-         </li>
-         <li class="navlist__item ">
-            <a class="navlist__link text-link" href="/pages/store-pick-up">Store pick-up</a>
-         </li>
-          <li class="navlist__item navlist__item--margin">
-             <a class="navlist__link text-link" href="/pages/coming-soon">Coming soon</a>
-          </li>
           <li class="navlist__item">
-             <a class="navlist__link text-link" href="/pages/privacy-policy" js-password-form="reactivateLink">Privacy policy</a>
-          </li>
-          <li class="navlist__item">
-             <a class="navlist__link text-link" href="/pages/cookie-policy" js-password-form="reactivateLink">Cookie policy</a>
+             <a class="navlist__link text-link" href="/pages/privacy-policy" js-password-form="reactivateLink">개인정보 처리방침</a>
           </li>
           <li class="navlist__item navlist__item--margin">
-             <a class="navlist__link text-link" href="/pages/terms-conditions" js-password-form="forgotPasswordLink">Terms & Conditions</a>
+             <a class="navlist__link text-link" href="/pages/terms-conditions" js-password-form="forgotPasswordLink">이용약관</a>
           </li>
           <li class="navlist__item">
-             <a class="navlist__link text-link" href="/pages/contact" js-password-form="reactivateLink">Contact</a>
+             <a class="navlist__link text-link" href="/pages/contact" js-password-form="reactivateLink">고객문의</a>
           </li>
        </ul>
     </div>
@@ -143,77 +119,42 @@ Contact
    <%}else if(state == 2){%>
    <script>
       setTimeout(function(){
-         $(".main-title.custom-select__label").text("Payments");
+         $(".main-title.custom-select__label").text("결제 및 가격 정보");
          $("a[href='/pages/payments']").addClass("is-active");
       },100)
       </script>
    <%}else if(state == 3){%>
    <script>
       setTimeout(function(){
-         $(".main-title.custom-select__label").text("Shipping");
+         $(".main-title.custom-select__label").text("배송정보");
          $("a[href='/pages/shipping']").addClass("is-active");
       },100)
       </script>
    <%}else if(state == 4){%>
    <script>
       setTimeout(function(){
-         $(".main-title.custom-select__label").text("Returns");
+         $(".main-title.custom-select__label").text("반품 및 환불");
          $("a[href='/pages/return']").addClass("is-active");
       },100)
       </script>
    <%}else if(state == 5){%>
-   <script>
-      setTimeout(function(){
-         $(".main-title.custom-select__label").text("Order tracking");
-         $("a[href='/pages/order-tracking']").addClass("is-active");
-      },100)
-      </script>
-   <%}else if(state == 6){%>
-   <script>
-      setTimeout(function(){
-         $(".main-title.custom-select__label").text("Store pick-up");
-         $("a[href='/pages/store-pick-up']").addClass("is-active");
-      },100)
-      </script>
-   <%}else if(state == 7){%>
-   <script>
-      setTimeout(function(){
-         $(".main-title.custom-select__label").text("Coming soon");
-         $("a[href='/pages/coming-soon']").addClass("is-active");
-      },100)
-      </script>
-   <%}else if(state == 8){%>
       <script>
       setTimeout(function(){
-         $(".main-title.custom-select__label").text("Privacy policy");
+         $(".main-title.custom-select__label").text("개인정보 처리방침");
          $("a[href='/pages/privacy-policy']").addClass("is-active");
       },100)
       </script>
-   <%}else if(state == 9){%>
+   <%}else if(state == 6){%>
       <script>
          setTimeout(function(){
-            $(".main-title.custom-select__label").text("Cookie policy");
-            $("a[href='/pages/cookie-policy']").addClass("is-active");
-         },100)
-         </script>
-   <%}else if(state == 100){%>
-      <script>
-         setTimeout(function(){
-            $(".main-title.custom-select__label").text("Newsletter Club Terms & Conditions");
-            $("a[href='/pages/newsletter-club-terms-conditions']").addClass("is-active");
-         },100)
-         </script>
-   <%}else if(state == 10){%>
-      <script>
-         setTimeout(function(){
-            $(".main-title.custom-select__label").text("Terms & Conditions");
+            $(".main-title.custom-select__label").text("이용약관");
             $("a[href='/pages/terms-conditions']").addClass("is-active");
          },100)
          </script>
-   <%}else if(state == 11){%>
+   <%}else if(state == 7){%>
    <script>
       setTimeout(function(){
-         $(".main-title.custom-select__label").text("Contact");
+         $(".main-title.custom-select__label").text("고객문의");
          $("a[href='/pages/contact']").addClass("is-active");
       },100)
       </script>
