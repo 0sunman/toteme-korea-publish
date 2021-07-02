@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="template-account__header">
+      Questions?
+    </div>
+    <div class="template-account__wrapper">
+       <div class="template-account__left"></div>
+       <%- include ("./menu/index.ejs",{state:6}) %>
+       <div class='template-account__content'>
+         <div class="template-mypage__form-wrapper">
+            <div class="template-mypage__form">
+            <div class="mypage_each">
+               <h3 class="mypage_tit1">이용 약관</h3>
+            </div>
+            <p>* 업데이트 버전 별도 전달 예정</p>
+            </div>
+            <ul class="mypage_toggle_menu">
+            <li class="accordion__item">
+               <button type="button" class="toggle_tit accordion__control">아코디언 제목</button>
+               <div class="toggle_con_box">
+                  <p>내용1</p> 
+               </div>
+            </li>
+            <li class="accordion__item">
+               <button type="button" class="toggle_tit accordion__control">아코데언 제목2</button>
+               <div class="toggle_con_box">
+                  <p>내용2</p>
+               </div>
+            </li>
+            </ul>
+         </div>
+      </div>
+    </div>
+ </div>

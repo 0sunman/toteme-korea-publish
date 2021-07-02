@@ -835,7 +835,13 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
     .login_join .section{ margin:34px 60px; }
 }
 .login_join .text.section{ margin:20px 15px;}
-.login_join form div{ margin-bottom: 10px;}
+.login_join form div{ margin-bottom: 20px;}
+                           
+.login_join .sns-buttons.defaultblock > div{display:table; width:100%; max-width: 500px; margin:0 auto; margin-bottom:10px}
+.login_join .sns-buttons.defaultblock > div > label {display: table-cell; width:50%; text-align: left;}
+.login_join .sns-buttons.defaultblock > div > label > span{width:calc(100% - 3px); margin:0px;}
+.login_join .sns-buttons.defaultblock > div > label.last{text-align: right;}
+                           
 .login_join .progress.section{margin:20px 69px;}
 .login_join input{font-size: 15px}
 .login_join .sub-description p.error{color:red}
