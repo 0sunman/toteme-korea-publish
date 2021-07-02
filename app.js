@@ -76,7 +76,7 @@ const pageData = [
   {"type":"join", "pid":"T-LJ-020",   "state":"DONE" , "completedate":"2021-06-30", "url" : "/02_login_join/T-LJ-020.ejs.html",   "pageurl" : "02_login_join/T-LJ-020.ejs",   "title": "T-LJ-020. Create my account_Account created", "title2":"회원가입 - 가입완료"},
 
   {"type":"product", "pid":"T-PD-001", "state":"DONE" , "completedate":"2021-06-01", "url" : "/03_product/T-PD-001.ejs.html", "pageurl" : "03_product/T-PD-001.ejs", "title":"T-PD-001. Product Display", "title2":"상품 리스트"},
-  {"type":"product", "pid":"T-PD-006", "state":"DONE" , "completedate":"2021-06-01", "url" : "/03_product/T-PD-006.ejs.html", "pageurl" : "03_product/T-PD-006.ejs", "title":"T-PD-006. PDP", "title2":"상품 상세"},
+  {"type":"product", "pid":"T-PD-006", "state":"DONE" , "completedate":"2021-07-02", "url" : "/03_product/T-PD-006.ejs.html", "pageurl" : "03_product/T-PD-006.ejs", "title":"T-PD-006. PDP", "title2":"상품 상세"},
   {"type":"product", "pid":"T-PD-015", "state":"DONE" , "completedate":"2021-06-11", "url" : "/03_product/T-PD-015.ejs.html", "pageurl" : "03_product/T-PD-015.ejs", "title":"T-PD-015. PDP (End of sale + no_image)", "title2":"상품 상세 - 판매중단상품+no_image"},
   {"type":"product", "pid":"T-PD-016", "state":"DONE" , "completedate":"2021-06-11", "url" : "/03_product/T-PD-016.ejs.html", "pageurl" : "03_product/T-PD-016.ejs", "title":"T-PD-016. Error page 404", "title2":"에러페이지 404"},
   {"type":"product", "pid":"T-PD-017", "state":"DONE" , "completedate":"2021-06-11", "url" : "/03_product/T-PD-017.ejs.html", "pageurl" : "03_product/T-PD-017.ejs", "title":"T-PD-017. Error page 500", "title2":"에러페이지 500"},
