@@ -114,10 +114,11 @@ const pageData = [
   {"type":"mypage", "pid":"T-MY-038", "state":"DONE" , "completedate":"2021-06-30", "url" : "/01_mypage/T-MY-038.ejs.html", "pageurl" : "01_mypage/T-MY-038.ejs", "title":"T-MY-038. Deposit(empty)", "title2":"예치금(사용 내역이 없는 경우)"},
   {"type":"mypage", "pid":"T-MY-039", "state":"DONE" , "completedate":"2021-06-30", "url" : "/01_mypage/T-MY-039.ejs.html", "pageurl" : "01_mypage/T-MY-039.ejs", "title":"T-MY-039. Deposit", "title2":"예치금"},
 
-  {"type":"page", "pid":"T-ETC-001", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"1-1. About - Totême","url" : "/05_page_about/11",   "pageurl" : "05_page_about/01_about_toteme.ejs"},
-  {"type":"page", "pid":"T-ETC-001", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"1-2. About - Store","url" : "/05_page_about/12", "pageurl" : "05_page_about/02_about_store.ejs"},
-  {"type":"page", "pid":"T-ETC-001", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"1-3. About - Sustainability","url" : "/05_page_about/13", "pageurl" : "05_page_about/03_about_sustainability.ejs"},
-  {"type":"page", "pid":"T-ETC-001", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"1-4. About - Careers","url" : "/05_page_about/14", "pageurl" : "05_page_about/04_about_careers.ejs"},
+  {"type":"page", "pid":"T-AB-001", "state":"DONE" , "completedate":"2021-07-02", "url" : "/05_page_about/T-AB-001.ejs.html", "pageurl" : "05_page_about/T-AB-001.ejs", "title":"T-AB-001. About - Totême", "title2":"토템"},
+  {"type":"page", "pid":"T-AB-002", "state":"DONE" , "completedate":"2021-07-02", "url" : "/05_page_about/T-AB-002.ejs.html", "pageurl" : "05_page_about/T-AB-002.ejs", "title":"T-AB-002. About - Store - Biblioteksgatan no.5", "title2":"매장안내 - Biblioteksgatan no.5"},
+  {"type":"page", "pid":"T-AB-003", "state":"DONE" , "completedate":"2021-07-02", "url" : "/05_page_about/T-AB-003.ejs.html", "pageurl" : "05_page_about/T-AB-003.ejs", "title":"T-AB-003. About - Store - Nordiska Kompaniet", "title2":"매장안내 - Nordiska Kompaniet"},
+  {"type":"page", "pid":"T-AB-004", "state":"DONE" , "completedate":"2021-07-02", "url" : "/05_page_about/T-AB-004.ejs.html", "pageurl" : "05_page_about/T-AB-004.ejs", "title":"T-AB-004. About - Sustainability", "title2":"지속가능성"},
+  // {"type":"page", "pid":"T-AB-005", "state":"DONE" , "completedate":"2021-06-01", "url" : "/05_page_about/T-AB-005.ejs.html", "pageurl" : "05_page_about/T-AB-005.ejs", "title":"T-AB-005. About - Careers", "title2":"채용"},
 
   {"type":"page", "pid":"T-ETC-001", "state":"DONE" , "completedate":"2021-06-01", "etc":"",  "title":"2-1. Question - COVID-19 FAQ","url" : "/04_page_question/21"  , "pageurl" : "04_page_question/01_page_covid.ejs"},
   {"type":"page", "pid":"T-ETC-001", "state":"DONE" , "completedate":"2021-06-01", "etc":"",  "title":"2-2. Question - Payments","url" : "/04_page_question/22"      , "pageurl" : "04_page_question/02_page_payment.ejs"},
