@@ -75,8 +75,15 @@ const pageData = [
   {"type":"join", "pid":"T-LJ-018",   "state":"DONE" , "completedate":"2021-06-30", "url" : "/02_login_join/T-LJ-018.ejs.html",   "pageurl" : "02_login_join/T-LJ-018.ejs",   "title": "T-LJ-018 ~ 019. Create my account_Privacy policy", "title2":"회원가입 - 개인정보 수집 이용 동의"},
   {"type":"join", "pid":"T-LJ-020",   "state":"DONE" , "completedate":"2021-06-30", "url" : "/02_login_join/T-LJ-020.ejs.html",   "pageurl" : "02_login_join/T-LJ-020.ejs",   "title": "T-LJ-020. Create my account_Account created", "title2":"회원가입 - 가입완료"},
 
-  {"type":"product", "pid":"T-PD-001", "state":"DONE" , "completedate":"2021-06-01", "url" : "/03_product/T-PD-001.ejs.html", "pageurl" : "03_product/T-PD-001.ejs", "title":"T-PD-001. Product Display", "title2":"상품 리스트"},
-  {"type":"product", "pid":"T-PD-006", "state":"DONE" , "completedate":"2021-06-01", "url" : "/03_product/T-PD-006.ejs.html", "pageurl" : "03_product/T-PD-006.ejs", "title":"T-PD-006. PDP", "title2":"상품 상세"},
+  {"type":"product", "pid":"T-PD-001", "state":"DONE" , "completedate":"2021-07-02", "url" : "/03_product/T-PD-001.ejs.html", "pageurl" : "03_product/T-PD-001.ejs", "title":"T-PD-001. Product Display", "title2":"상품 리스트"},
+  {"type":"product", "pid":"T-PD-006", "state":"DONE" , "completedate":"2021-07-02", "url" : "/03_product/T-PD-006.ejs.html", "pageurl" : "03_product/T-PD-006.ejs", "title":"T-PD-006. PDP", "title2":"상품 상세"},
+  {"type":"product", "pid":"T-PD-006-1", "state":"DONE" , "completedate":"2021-07-02", "url" : "/03_product/T-PD-006-1.ejs.html", "pageurl" : "03_product/T-PD-006-1.ejs", "title":"T-PD-006-1. size guide (Clothes)", "title2":"사이즈 가이드 - 의류"},
+  {"type":"product", "pid":"T-PD-006-2", "state":"DONE" , "completedate":"2021-07-02", "url" : "/03_product/T-PD-006-2.ejs.html", "pageurl" : "03_product/T-PD-006-2.ejs", "title":"T-PD-006-2. size guide (Denim - Twisted seam)", "title2":"사이즈 가이드 - Twisted seam 데님"},
+  {"type":"product", "pid":"T-PD-006-3", "state":"DONE" , "completedate":"2021-07-02", "url" : "/03_product/T-PD-006-3.ejs.html", "pageurl" : "03_product/T-PD-006-3.ejs", "title":"T-PD-006-3. size guide (Denim - Flare fit)", "title2":"사이즈 가이드 - Flare fit 데님"},
+  {"type":"product", "pid":"T-PD-006-4", "state":"DONE" , "completedate":"2021-07-02", "url" : "/03_product/T-PD-006-4.ejs.html", "pageurl" : "03_product/T-PD-006-4.ejs", "title":"T-PD-006-4. size guide (Denim - Loose fit)", "title2":"사이즈 가이드 - Loose fit 데님"},
+  {"type":"product", "pid":"T-PD-006-5", "state":"DONE" , "completedate":"2021-07-02", "url" : "/03_product/T-PD-006-5.ejs.html", "pageurl" : "03_product/T-PD-006-5.ejs", "title":"T-PD-006-5. size guide (Denim - Barrel leg)", "title2":"사이즈 가이드 - Barrel leg 데님"},
+  {"type":"product", "pid":"T-PD-006-6", "state":"DONE" , "completedate":"2021-07-02", "url" : "/03_product/T-PD-006-6.ejs.html", "pageurl" : "03_product/T-PD-006-6.ejs", "title":"T-PD-006-6. size guide (Denim - Regular fit)", "title2":"사이즈 가이드 - Regular fit 데님"},
+  {"type":"product", "pid":"T-PD-006-7", "state":"DONE" , "completedate":"2021-07-02", "url" : "/03_product/T-PD-006-7.ejs.html", "pageurl" : "03_product/T-PD-006-7.ejs", "title":"T-PD-006-7. size guide (Shoes)", "title2":"사이즈 가이드 - 슈즈"},
   {"type":"product", "pid":"T-PD-015", "state":"DONE" , "completedate":"2021-06-11", "url" : "/03_product/T-PD-015.ejs.html", "pageurl" : "03_product/T-PD-015.ejs", "title":"T-PD-015. PDP (End of sale + no_image)", "title2":"상품 상세 - 판매중단상품+no_image"},
   {"type":"product", "pid":"T-PD-016", "state":"DONE" , "completedate":"2021-06-11", "url" : "/03_product/T-PD-016.ejs.html", "pageurl" : "03_product/T-PD-016.ejs", "title":"T-PD-016. Error page 404", "title2":"에러페이지 404"},
   {"type":"product", "pid":"T-PD-017", "state":"DONE" , "completedate":"2021-06-11", "url" : "/03_product/T-PD-017.ejs.html", "pageurl" : "03_product/T-PD-017.ejs", "title":"T-PD-017. Error page 500", "title2":"에러페이지 500"},
@@ -114,21 +121,25 @@ const pageData = [
   {"type":"mypage", "pid":"T-MY-038", "state":"DONE" , "completedate":"2021-06-30", "url" : "/01_mypage/T-MY-038.ejs.html", "pageurl" : "01_mypage/T-MY-038.ejs", "title":"T-MY-038. Deposit(empty)", "title2":"예치금(사용 내역이 없는 경우)"},
   {"type":"mypage", "pid":"T-MY-039", "state":"DONE" , "completedate":"2021-06-30", "url" : "/01_mypage/T-MY-039.ejs.html", "pageurl" : "01_mypage/T-MY-039.ejs", "title":"T-MY-039. Deposit", "title2":"예치금"},
 
-  {"type":"page", "pid":"T-AB-001", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"1-1. About - Totême","url" : "/05_page_about/11",   "pageurl" : "05_page_about/01_about_toteme.ejs"},
-  {"type":"page", "pid":"T-AB-002", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"1-2. About - Store","url" : "/05_page_about/12", "pageurl" : "05_page_about/02_about_store.ejs"},
-  {"type":"page", "pid":"T-AB-003", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"1-3. About - Sustainability","url" : "/05_page_about/13", "pageurl" : "05_page_about/03_about_sustainability.ejs"},
-  {"type":"page", "pid":"T-AB-004", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"1-4. About - Careers","url" : "/05_page_about/14", "pageurl" : "05_page_about/04_about_careers.ejs"},
+
+{"type":"page", "pid":"T-AB-001", "state":"DONE" , "completedate":"2021-07-02", "url" : "/05_page_about/T-AB-001.ejs.html", "pageurl" : "05_page_about/T-AB-001.ejs", "title":"T-AB-001. About - Totême", "title2":"토템"},
+{"type":"page", "pid":"T-AB-002", "state":"DONE" , "completedate":"2021-07-02", "url" : "/05_page_about/T-AB-002.ejs.html", "pageurl" : "05_page_about/T-AB-002.ejs", "title":"T-AB-002. About - Store - Biblioteksgatan no.5", "title2":"매장안내 - Biblioteksgatan no.5"},
+{"type":"page", "pid":"T-AB-003", "state":"DONE" , "completedate":"2021-07-02", "url" : "/05_page_about/T-AB-003.ejs.html", "pageurl" : "05_page_about/T-AB-003.ejs", "title":"T-AB-003. About - Store - Nordiska Kompaniet", "title2":"매장안내 - Nordiska Kompaniet"},
+{"type":"page", "pid":"T-AB-004", "state":"DONE" , "completedate":"2021-07-02", "url" : "/05_page_about/T-AB-004.ejs.html", "pageurl" : "05_page_about/T-AB-004.ejs", "title":"T-AB-004. About - Sustainability", "title2":"지속가능성"},
 
   {"type":"page", "pid":"T-QA-001", "state":"DONE" , "completedate":"2021-07-01", "etc":"",  "title":"2-1. Question - COVID-19 FAQ",       "url" : "/04_page_question/T-QA-001.ejs.html", "pageurl" : "04_page_question/T-QA-001.ejs"},
   {"type":"page", "pid":"T-QA-002", "state":"DONE" , "completedate":"2021-07-01", "etc":"",  "title":"2-2. Question - Payments",           "url" : "/04_page_question/T-QA-002.ejs.html", "pageurl" : "04_page_question/T-QA-002.ejs"},
   {"type":"page", "pid":"T-QA-003", "state":"DONE" , "completedate":"2021-07-01", "etc":"",  "title":"2-3. Question - Shipping",           "url" : "/04_page_question/T-QA-003.ejs.html", "pageurl" : "04_page_question/T-QA-003.ejs"},
   {"type":"page", "pid":"T-QA-004", "state":"DONE" , "completedate":"2021-07-01", "etc":"",  "title":"2-4. Question - Returns",            "url" : "/04_page_question/T-QA-004.ejs.html", "pageurl" : "04_page_question/T-QA-004.ejs"},
-  {"type":"page", "pid":"T-QA-005", "state":"DONE" , "completedate":"2021-07-01", "etc":"",  "title":"2-5. Question - Order tracking",     "url" : "/04_page_question/T-QA-005.ejs.html", "pageurl" : "04_page_question/T-QA-005.ejs"},
-  {"type":"page", "pid":"T-QA-006", "state":"DONE" , "completedate":"2021-07-01", "etc":"",  "title":"2-6. Question - Store pick-up",      "url" : "/04_page_question/T-QA-006.ejs.html", "pageurl" : "04_page_question/T-QA-006.ejs"},
-  {"type":"page", "pid":"T-QA-007", "state":"DONE" , "completedate":"2021-07-01", "etc":"",  "title":"2-7. Question - Coming soon",        "url" : "/04_page_question/T-QA-007.ejs.html", "pageurl" : "04_page_question/T-QA-007.ejs"},
+  {"type":"page", "pid":"T-QA-005", "state":"DONE" , "completedate":"2021-07-01", "etc":"",  "title":"2-5. Question - Private policy",     "url" : "/04_page_question/T-QA-005.ejs.html", "pageurl" : "04_page_question/T-QA-005.ejs"},
+  {"type":"page", "pid":"T-QA-006", "state":"DONE" , "completedate":"2021-07-01", "etc":"",  "title":"2-6. Question - Terms",              "url" : "/04_page_question/T-QA-006.ejs.html", "pageurl" : "04_page_question/T-QA-006.ejs"},
+  {"type":"page", "pid":"T-QA-007", "state":"DONE" , "completedate":"2021-07-01", "etc":"",  "title":"2-7. Question - contact",            "url" : "/04_page_question/T-QA-007.ejs.html", "pageurl" : "04_page_question/T-QA-007.ejs"},
 
   {"type":"page", "pid":"T-ETC-001", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"3-1. Uniforms - 1depth(3col)",        "url" : "/06_page_uniforms/T-ETC-001.ejs.html",  "pageurl" : "06_page_uniforms/T-ETC-001.ejs"},
   {"type":"page", "pid":"T-ETC-002", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"3-2. Uniforms - 2depth(2col)",        "url" : "/06_page_uniforms/T-ETC-002.ejs.html",  "pageurl" : "06_page_uniforms/T-ETC-002.ejs"},
+
+  {"type":"page", "pid":"T-ETC-001", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"3-1. Uniforms - 1depth(3col)","url" : "/06_page_uniforms/11",   "pageurl" : "06_page_uniforms/01_uniforms_1depth.ejs"},
+  {"type":"page", "pid":"T-ETC-001", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"3-2. Uniforms - 2depth(2col)","url" : "/06_page_uniforms/12",   "pageurl" : "06_page_uniforms/02_uniforms_2depth.ejs"},
 
 ]
 

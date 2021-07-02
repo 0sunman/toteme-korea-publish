@@ -287,6 +287,9 @@ body.overflow-hidden {overflow: hidden;}
 .product-form__add-to-cart>button.button.is-active:hover .label-atc{display: block;}
 .accordion__ul{margin-bottom: 23px;}
 .size-guide td:last-child{text-align: center;}
+.pdp_guide_ul{margin-bottom: 10px;}
+#productAccordion .accordion__content{margin-top: 15px; margin-bottom: 30px;}
+.size-guide td:first-child, .size-guide th:first-child{text-align: center;}
 /* //상품 */
 
 /* 주문 */
@@ -806,7 +809,7 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 .orderpage .table_type1 td:last-child, .orderpage .table_type1 th:last-child{text-align: left;}
 .orderpage .payment_account_info ul .tit{display: inline-block; min-width: 82px; padding-right: 10px;}
 
-
+.about_toteme p, .about_store p, .about_sustainability p{word-break: keep-all;}
 
 .uniform-page .custom-module__content{background: #fff;}
 

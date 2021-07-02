@@ -1093,390 +1093,347 @@
       <main id="MainContent" class="main-content critical-clear">
          <!-- BEGIN content_for_index -->
          <!--  include ("./pages/00_main/index.ejs") BEGIN content_for_index -->
-         <style>
-p.gnbcheck{text-align: center; margin-top: 30px;}
-.publishlist{padding:50px;padding-top:0px;}
-a.pub_link{display: inline-block; min-width: 500px;}
-@media screen and (max-width: 1000px){
-    a.pub_link{display: inline; min-width: unset;}
-    .publishlist{padding-left: 15px; padding-right: 15px;}
-}
-.publishlist ul{margin-bottom: 40px;}
-.publishlist ul>li{list-style-type: circle;}
-</style>
-    <p class='gnbcheck'>*You can check GNB Above*</p>
-    <div class='publishlist'>   
-       <h2>Main</h2>
-        <ul id='main'>
-            
-            <li>
-                <a class="pub_link" href='../00_main/index.ejs.html.html'>Component Guide</a>&nbsp;&nbsp;2021-06-01
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../00_main/index2.ejs.html'>Main2</a>&nbsp;&nbsp;2021-06-01
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../00_main/inputguide.ejs.html'>Guidelines for Input (error,commit..etc)</a>&nbsp;&nbsp;2021-06-01
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../00_main/shop_scarves.ejs.html'>Display Page Type 01 (2–4 columns) </a>&nbsp;&nbsp;2021-06-01
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../00_main/shop_silk.ejs.html'>Display Page Type 02 (1-2–4 columns)</a>&nbsp;&nbsp;2021-06-01
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../00_main/T-CT-001.sectionwithbackground.ejs.html'>T-CT-001. Component - Section with background (Tutorial)</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../00_main/T-CT-002.onebackgroundtwosection.ejs.html'>T-CT-002. Component - One background two section</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../00_main/T-CT-003.twobackgroundtwosection.ejs.html'>T-CT-003. Component - Two background tw section</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../00_main/T-CT-004.twosectionwithmedia.ejs.html'>T-CT-004. Component - Two section with media</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../00_main/T-CT-005.threesesctionwithmedia.ejs.html'>T-CT-005. Component - Rhreesesction with media</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../00_main/T-CT-006.videosection.ejs.html'>T-CT-006. Component - Videosection</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../00_main/T-CT-007.manualproductlist.ejs.html'>T-CT-007. Component - Manual product list</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../00_main/T-CT-008.pageheader.ejs.html'>T-CT-008. Component - Page header</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../00_main/T-CT-009.freeHTML.ejs.html'>T-CT-009. Component - Free HTML</a>&nbsp;&nbsp;2021-06-30
-            </li>
-             
-        </ul>
+         <div class="container mypage checkout">
+	<div class="template-account__header">
+		안녕하세요, 이현대님
+	</div>
+	<div class="template-account__wrapper">
+		 <div class="template-account__left"></div>
+		 <div class="template-account__content">
+			<div class="template-account__text_hdtype_1 alert title" style="display: none;">
+				<div class="rte">
+					<p class="error">받는 사람을 입력해 주세요.</p>
+				</div>
+			</div>
+			<div class="template-mypage__form-wrapper cash-receipts">
+				<div class="button-block auth-join-button loading-wrap">
+					<input class="button button--primary button--block button--large m-font-14 modal_trigger" type="button" value="팝업열기" data-modal="size-guide-modal">
+				 </div>
+			</div>
+					 
+		 </div>
+	</div>
 
-        <h2>My Page</h2>
-        <ul id='mypage'>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-003.ejs.html'>T-MY-003. Mypage</a>&nbsp;&nbsp;2021-06-11
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-004.ejs.html'>T-MY-004. Edit member information</a>&nbsp;&nbsp;2021-06-11
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-005.ejs.html'>T-MY-005 ~ 008. Edit member information-additional</a>&nbsp;&nbsp;2021-06-11
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-009.ejs.html'>T-MY-009. Addresses</a>&nbsp;&nbsp;2021-06-11
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-010.ejs.html'>T-MY-010. Add address</a>&nbsp;&nbsp;2021-06-11
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-011.ejs.html'>T-MY-011. Addresses(empty)</a>&nbsp;&nbsp;2021-06-11
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-013.ejs.html'>T-MY-013. Wishlist(empty)</a>&nbsp;&nbsp;2021-06-11
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-014.ejs.html'>T-MY-014. Wishlist</a>&nbsp;&nbsp;2021-06-11
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-021.ejs.html'>T-MY-021. Orders</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-023.ejs.html'>T-MY-023. Returns</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-024.ejs.html'>T-MY-024. Returns(empty)</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-025.ejs.html'>T-MY-025. Returns - details</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-026.ejs.html'>T-MY-026. Returns - Done</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-028.ejs.html'>T-MY-028. Cancel Order</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-031.ejs.html'>T-MY-031. Receipt(empty)</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-032.ejs.html'>T-MY-032. Receipt</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-034.ejs.html'>T-MY-034. Tax Receipt</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-035.ejs.html'>T-MY-035. Credit Receipt</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-036.ejs.html'>T-MY-036. Cash Receipt</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-037.ejs.html'>T-MY-037. Receipt popup</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-038.ejs.html'>T-MY-038. Deposit(empty)</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-039.ejs.html'>T-MY-039. Deposit</a>&nbsp;&nbsp;2021-06-30
-            </li>
-             
-        </ul>
+</div>
+<div class="modal modal--light size-guide size-guide-modal size-guide-clothes" role="dialog" tabindex="-1">
+	<div class="modal__overlay" tabindex="-1">
+		<div class="modal__card">
+			<div class="modal__header">
+				<h5 class="modal__title size-guide__title">사이즈 가이드 : 의류</h5>
+				<!-- <div class="size-guide__unit-toggle-container">
+					<button class="size-guide__unit-toggle text-xsmall" data-unit="in">
+						inches
+					</button> <span class="size-guide__unit-separator text-xsmall">/</span> <button class="size-guide__unit-toggle text-xsmall is-active" data-unit="cm">
+						cm
+					</button>
+				</div>  -->
+				<button class="modal__close">
+					<span class="visually-hidden">
+						Close
+					</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+					</svg> </button>
+			</div>
+			<div class="size-guide__body modal__body">
+				<div class="size-guide__table-container text-xsmall" data-show-unit="cm">
+					<div class="table-wrapper">
+						<table>
+							<tbody>
+								<tr>
+									<td width="80">사이즈</td>
+									<td width="69">XXS</td>
+									<td width="69">XS</td>
+									<td width="69">S</td>
+									<td width="69">M</td>
+									<td width="69">L</td>
+									<td width="69">XL</td>
+									<td width="69">XS/S</td>
+									<td width="69">M/L</td>
+								</tr>
+								<tr>
+									<td>한국</td>
+									<td>
+										<span class="in">33-44</span>
+										<span class="cm">33-44</span>
+									</td>
+									<td>
+										<span class="in">44</span>
+										<span class="cm">44</span>
+									</td>
+									<td>
+										<span class="in">55</span>
+										<span class="cm">55</span>
+									</td>
+									<td>
+										<span class="in">66</span>
+										<span class="cm">66</span>
+									</td>
+									<td>
+										<span class="in">77</span>
+										<span class="cm">77</span>
+									</td>
+									<td>
+										<span class="in">88</span>
+										<span class="cm">88</span>
+									</td>
+									<td>
+										<span class="in">44/55</span>
+										<span class="cm">44/55</span>
+									</td>
+									<td>
+										<span class="in">66/77</span>
+										<span class="cm">66/77</span>
+									</td>
+								</tr>
+								<tr>
+									<td>유럽</td>
+									<td>
+										<span class="in">32</span>
+										<span class="cm">32</span>
+									</td>
+									<td>
+										<span class="in">34</span>
+										<span class="cm">34</span>
+									</td>
+									<td>
+										<span class="in">36</span>
+										<span class="cm">36</span>
+									</td>
+									<td>
+										<span class="in">38</span>
+										<span class="cm">38</span>
+									</td>
+									<td>
+										<span class="in">40</span>
+										<span class="cm">40</span>
+									</td>
+									<td>
+										<span class="in">42</span>
+										<span class="cm">42</span>
+									</td>
+									<td>
+										<span class="in">34/36</span>
+										<span class="cm">34/36</span>
+									</td>
+									<td>
+										<span class="in">38/40</span>
+										<span class="cm">38/40</span>
+									</td>
+								</tr>
+								<tr>
+									<td>영국</td>
+									<td>
+										<span class="in">4</span>
+										<span class="cm">4</span>
+									</td>
+									<td>
+										<span class="in">6</span>
+										<span class="cm">6</span>
+									</td>
+									<td>
+										<span class="in">8</span>
+										<span class="cm">8</span>
+									</td>
+									<td>
+										<span class="in">10</span>
+										<span class="cm">10</span>
+									</td>
+									<td>
+										<span class="in">12</span>
+										<span class="cm">12</span>
+									</td>
+									<td>
+										<span class="in">14</span>
+										<span class="cm">14</span>
+									</td>
+									<td>
+										<span class="in">6/8</span>
+										<span class="cm">6/8</span>
+									</td>
+									<td>
+										<span class="in">10/12</span>
+										<span class="cm">10/12</span>
+									</td>
+								</tr>
+								<tr>
+									<td>미국</td>
+									<td>
+										<span class="in">0</span>
+										<span class="cm">0</span>
+									</td>
+									<td>
+										<span class="in">2</span>
+										<span class="cm">2</span>
+									</td>
+									<td>
+										<span class="in">4</span>
+										<span class="cm">4</span>
+									</td>
+									<td>
+										<span class="in">6</span>
+										<span class="cm">6</span>
+									</td>
+									<td>
+										<span class="in">8</span>
+										<span class="cm">8</span>
+									</td>
+									<td>
+										<span class="in">10</span>
+										<span class="cm">10</span>
+									</td>
+									<td>
+										<span class="in">2/4</span>
+										<span class="cm">2/4</span>
+									</td>
+									<td>
+										<span class="in">6/8</span>
+										<span class="cm">6/8</span>
+									</td>
+								</tr>
+								<tr>
+									<td>이탈리아</td>
+									<td>
+										<span class="in">36</span>
+										<span class="cm">36</span>
+									</td>
+									<td>
+										<span class="in">38</span>
+										<span class="cm">38</span>
+									</td>
+									<td>
+										<span class="in">40</span>
+										<span class="cm">40</span>
+									</td>
+									<td>
+										<span class="in">42</span>
+										<span class="cm">42</span>
+									</td>
+									<td>
+										<span class="in">44</span>
+										<span class="cm">44</span>
+									</td>
+									<td>
+										<span class="in">46</span>
+										<span class="cm">46</span>
+									</td>
+									<td>
+										<span class="in">38/40</span>
+										<span class="cm">38/40</span>
+									</td>
+									<td>
+										<span class="in">42/44</span>
+										<span class="cm">42/44</span>
+									</td>
+								</tr>
+								<tr>
+									<td>호주</td>
+									<td>
+										<span class="in">4</span>
+										<span class="cm">4</span>
+									</td>
+									<td>
+										<span class="in">6</span>
+										<span class="cm">6</span>
+									</td>
+									<td>
+										<span class="in">8</span>
+										<span class="cm">8</span>
+									</td>
+									<td>
+										<span class="in">10</span>
+										<span class="cm">10</span>
+									</td>
+									<td>
+										<span class="in">12</span>
+										<span class="cm">12</span>
+									</td>
+									<td>
+										<span class="in">14</span>
+										<span class="cm">14</span>
+									</td>
+									<td>
+										<span class="in">6/8</span>
+										<span class="cm">6/8</span>
+									</td>
+									<td>
+										<span class="in">10/12</span>
+										<span class="cm">10/12</span>
+									</td>
+								</tr>
+								<tr>
+									<td>러시아</td>
+									<td>
+										<span class="in">36</span>
+										<span class="cm">36</span>
+									</td>
+									<td>
+										<span class="in">38</span>
+										<span class="cm">38</span>
+									</td>
+									<td>
+										<span class="in">40</span>
+										<span class="cm">40</span>
+									</td>
+									<td>
+										<span class="in">42</span>
+										<span class="cm">42</span>
+									</td>
+									<td>
+										<span class="in">44</span>
+										<span class="cm">44</span>
+									</td>
+									<td>
+										<span class="in">46</span>
+										<span class="cm">46</span>
+									</td>
+									<td>
+										<span class="in">38/40</span>
+										<span class="cm">38/40</span>
+									</td>
+									<td>
+										<span class="in">42/44</span>
+										<span class="cm">42/44</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="size-guide__footer text-xsmall">
+					<div class="size-guide__footer-column size-guide__details">
+						<ul>
+							<li>모델은 179cm(5'10") 이며, S사이즈를 착용하고 있습니다.</li>
+							<li>블랙</li>
+							<li>100% 오가닉 코튼</li>
+							<li>30°C  기계 세탁 가능</li>
+							<li>정사이즈</li>
+							<li>제조국 : 포르투갈</li>
+						</ul>
+					</div>
+					<div class="size-guide__footer-column size-guide__contact">
+						<p class="size-guide__contact-title text-xsmall">
+							Totême 온라인 고객 센터 <br>월요일 - 일요일 : 09:00 - 21:00 KST
+						</p>
+						<ul class="size-guide__contact-list">
+							<li class="size-guide__contact-item">
+								<a class="size-guide__contact-link text-link text-link--static" href="mailto:shop.kr@toteme-studio.com">shop.kr@toteme-studio.com<br></a>
+							</li>
+							<li class="size-guide__contact-item">
+								<a class="size-guide__contact-link text-link text-link--static" href="tel:+82-1522-0274">1522-0274 (유료)</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
-        <h2>Accounts</h2>
-        <ul id='join'>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-001.ejs.html'>T-LJ-001. Sign-in</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-002.ejs.html'>T-LJ-002. Order status (Guest)</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-004.ejs.html'>T-LJ-004. Find my ID</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-005.ejs.html'>T-LJ-005. Reset my paswword_Input my data</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-006.ejs.html'>T-LJ-006. Reset my paswword_Confirmation email sent</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-007.ejs.html'>T-LJ-007. Reset my paswword_Email confirmed</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-008.ejs.html'>T-LJ-008. Reset my paswword_Certification via mobile phone</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-009.ejs.html'>T-LJ-009. Reset my paswword_Input new password</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-010.ejs.html'>T-LJ-010. Reset my password_Change my password</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-011.ejs.html'>T-LJ-011. Reset my password_Change my password_Done</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-012.ejs.html'>T-LJ-012. Reset my paswword_Old password update</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-014.ejs.html'>T-LJ-014. Reset my paswword_Old password update_done</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-015.ejs.html'>T-LJ-015. Create my account_Certification</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-015-1.ejs.html'>T-LJ-015-1. Create my account_Certification done (Email - REDIRECTION)</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-015-2.ejs.html'>T-LJ-015-2. Create my account_Certification done (Email)</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-016.ejs.html'>T-LJ-016. Create my account_Connect existing account</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-017.ejs.html'>T-LJ-017. Create my account_Input my data</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-018.ejs.html'>T-LJ-018 ~ 019. Create my account_Privacy policy</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-020.ejs.html'>T-LJ-020. Create my account_Account created</a>&nbsp;&nbsp;2021-06-30
-            </li>
-             
-        </ul>
-
-        <h2>Products</h2>
-        <ul id='product'>
-            
-            <li>
-                <a class="pub_link" href='../03_product/T-PD-001.ejs.html'>T-PD-001. Product Display</a>&nbsp;&nbsp;2021-07-02
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../03_product/T-PD-006.ejs.html'>T-PD-006. PDP</a>&nbsp;&nbsp;2021-07-02
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../03_product/T-PD-006-1.ejs.html'>T-PD-006-1. size guide (Clothes)</a>&nbsp;&nbsp;2021-07-02
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../03_product/T-PD-006-2.ejs.html'>T-PD-006-2. size guide (Denim - Twisted seam)</a>&nbsp;&nbsp;2021-07-02
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../03_product/T-PD-006-3.ejs.html'>T-PD-006-3. size guide (Denim - Flare fit)</a>&nbsp;&nbsp;2021-07-02
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../03_product/T-PD-006-4.ejs.html'>T-PD-006-4. size guide (Denim - Loose fit)</a>&nbsp;&nbsp;2021-07-02
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../03_product/T-PD-006-5.ejs.html'>T-PD-006-5. size guide (Denim - Barrel leg)</a>&nbsp;&nbsp;2021-07-02
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../03_product/T-PD-006-6.ejs.html'>T-PD-006-6. size guide (Denim - Regular fit)</a>&nbsp;&nbsp;2021-07-02
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../03_product/T-PD-006-7.ejs.html'>T-PD-006-7. size guide (Shoes)</a>&nbsp;&nbsp;2021-07-02
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../03_product/T-PD-015.ejs.html'>T-PD-015. PDP (End of sale + no_image)</a>&nbsp;&nbsp;2021-06-11
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../03_product/T-PD-016.ejs.html'>T-PD-016. Error page 404</a>&nbsp;&nbsp;2021-06-11
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../03_product/T-PD-017.ejs.html'>T-PD-017. Error page 500</a>&nbsp;&nbsp;2021-06-11
-            </li>
-             
-        </ul>
-
-
-        <h2>Orders</h2>
-        <ul id='order'>
-            
-            <li>
-                <a class="pub_link" href='../04_order/T-OD-007.ejs.html'>T-OD-007 ~ 025. Order Page</a>&nbsp;&nbsp;2021-06-11
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../04_order/T-OD-022.ejs.html'>T-OD-022. Order Page(non-member)</a>&nbsp;&nbsp;2021-06-11
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../04_order/T-OD-024.ejs.html'>T-OD-024. Payment Page(non-member)</a>&nbsp;&nbsp;2021-06-11
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../04_order/T-OD-037.ejs.html'>T-OD-037. Order Summary</a>&nbsp;&nbsp;2021-06-11
-            </li>
-             
-        </ul>
-        
-        <h2>About/Question/Uniforms</h2>
-        <ul id='page'>
-            
-            <li>
-                <a class="pub_link" href='../05_page_about/T-AB-001.ejs.html'>T-AB-001. About - Totême</a>&nbsp;&nbsp;2021-07-02
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../05_page_about/T-AB-002.ejs.html'>T-AB-002. About - Store - Biblioteksgatan no.5</a>&nbsp;&nbsp;2021-07-02
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../05_page_about/T-AB-003.ejs.html'>T-AB-003. About - Store - Nordiska Kompaniet</a>&nbsp;&nbsp;2021-07-02
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../05_page_about/T-AB-004.ejs.html'>T-AB-004. About - Sustainability</a>&nbsp;&nbsp;2021-07-02
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../04_page_question/T-QA-001.ejs.html'>2-1. Question - COVID-19 FAQ</a>&nbsp;&nbsp;2021-07-01
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../04_page_question/T-QA-002.ejs.html'>2-2. Question - Payments</a>&nbsp;&nbsp;2021-07-01
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../04_page_question/T-QA-003.ejs.html'>2-3. Question - Shipping</a>&nbsp;&nbsp;2021-07-01
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../04_page_question/T-QA-004.ejs.html'>2-4. Question - Returns</a>&nbsp;&nbsp;2021-07-01
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../04_page_question/T-QA-005.ejs.html'>2-5. Question - Order tracking</a>&nbsp;&nbsp;2021-07-01
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../04_page_question/T-QA-006.ejs.html'>2-6. Question - Store pick-up</a>&nbsp;&nbsp;2021-07-01
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../04_page_question/T-QA-007.ejs.html'>2-7. Question - Coming soon</a>&nbsp;&nbsp;2021-07-01
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../06_page_uniforms/T-ETC-001.ejs.html'>3-1. Uniforms - 1depth(3col)</a>&nbsp;&nbsp;2021-06-01
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../06_page_uniforms/T-ETC-002.ejs.html'>3-2. Uniforms - 2depth(2col)</a>&nbsp;&nbsp;2021-06-01
-            </li>
-             
-        </ul>
-    </div>
-    <a href='https://github.com/0sunman/toteme-korea-publish'>
-        <img src="https://0sunman.github.io/toteme-korea-publish/public/css/github.png" style='width:50px; height: 50px; position: fixed; bottom:10px;right:10px;z-index:999999'>
-    </a>
-
+<script>
+	setTimeout(function(){
+		$('input[data-modal="size-guide-modal"]').click();
+	},1000)
+</script>
          <!-- END content_for_index -->
       </main>
       <!-- Footer -->
@@ -1493,13 +1450,13 @@ a.pub_link{display: inline-block; min-width: 500px;}
                      이메일
                   </p>
                   <a class="site-footer__info" href="mailto:shop@toteme-studio.com">
-                     shop.kr@toteme-studio.com
+                  shop@toteme-studio.com
                   </a>
                   <p class="site-footer__title">
                      문의전화
                   </p>
-                  <a class="site-footer__info" href="tel:1522-0274">
-                     1522-0274 (유료)
+                  <a class="site-footer__info" href="tel:+46 8 20 38 20">
+                  +46 8 20 38 20
                   </a>
                </div>
                <div class="site-footer__col">
@@ -1532,11 +1489,6 @@ a.pub_link{display: inline-block; min-width: 500px;}
                         </a>
                      </li>
                      <li class="navlist__item">
-                        <a class="navlist__link text-link" href="/pages/about">
-                        About
-                        </a>
-                     </li>
-                     <li class="navlist__item">
                         <a class="navlist__link text-link" href="/pages/stores">
                         매장정보
                         </a>
@@ -1548,7 +1500,7 @@ a.pub_link{display: inline-block; min-width: 500px;}
                      </li>
                      <li class="navlist__item">
                         <a class="navlist__link text-link" href="/pages/careers">
-                        반품 및 환불
+                        채용정보
                         </a>
                      </li>
                   </ul>
@@ -1672,7 +1624,7 @@ a.pub_link{display: inline-block; min-width: 500px;}
                                  <option value="KZ">Kazakhstan</option>
                                  <option value="KE">Kenya</option>
                                  <option value="KI">Kiribati</option>
-                                 <option value="KR">대한민국</option>
+                                 <option value="KR">KR / KST</option>
                                  <option value="XK">Kosovo</option>
                                  <option value="KW">Kuwait</option>
                                  <option value="KG">Kyrgyzstan</option>
@@ -1800,7 +1752,7 @@ a.pub_link{display: inline-block; min-width: 500px;}
                                  <option value="ZM">Zambia</option>
                                  <option value="ZW">Zimbabwe</option>
                               </select>
-                              <span class="custom-select__label text-small">대한민국</span>
+                              <span class="custom-select__label text-small">KR / KST</span>
                            </div>
                            <span class="select__current-title"></span>
                         </div>
@@ -1849,7 +1801,7 @@ a.pub_link{display: inline-block; min-width: 500px;}
                  <div class="section_middle">
                      <div class="txt"><span>주식회사 현대백화점  |  대표이사 : 김형종 외 2인</span></div>
                      <p class="txt"></p><address>서울시 강남구 테헤란로98길 12 </address><span> | 사업자등록번호 : 211-87-21455 [<a href="http://www.ftc.go.kr/www/bizCommView.do?key=232&amp;apv_perm_no=2010322014830201882&amp;pageUnit=10&amp;searchCnd=wrkr_no&amp;searchKrwd=2118721455&amp;pageIndex=1" data-toggle="winpopup" data-api="center,750,700,scrollbars" target="_blank">사업자정보 확인</a>] | 통신판매업신고 : 2010-서울강남-01882</span><p></p>
-                     <p class="txt"><span>고객센터 : 1522-0274 / <a href="mailto:shop.kr@toteme-studio.com">shop.kr@toteme-studio.com</a> | 개인정보관리 및 청소년보호 책임자 : 회원운영관리담당 장근혁 | 호스팅서비스 : (주)현대백화점</span></p>
+                     <p class="txt"><span>고객센터 : 1661-8444 / <a href="mailto:shop.kr@toteme-studio.com">shop.kr@toteme-studio.com</a> | 개인정보관리 및 청소년보호 책임자 : 회원운영관리담당 장근혁 | 호스팅서비스 : (주)현대백화점</span></p>
                     
                      <p class="txt copy">CopyrightⓒHyundai Department Store. All rights reserved.</p>
                      <p class="txt safe">고객님의 안전거래를 위해 현금결제시 우리은행과 채무지급보증계약을 체결하여 안전거래를 보장하고 있습니다. <a href="#" class="modal_trigger" data-modal="ly_guarantee-modal">서비스 가입사실 확인</a></p>
