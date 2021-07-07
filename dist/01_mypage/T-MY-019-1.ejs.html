@@ -1093,820 +1093,355 @@
       <main id="MainContent" class="main-content critical-clear">
          <!-- BEGIN content_for_index -->
          <!--  include ("./pages/00_main/index.ejs") BEGIN content_for_index -->
-         <script>
-	//header, footer hide
-	setTimeout(function(){
-		$('#shopify-section-site-footer, .site-header-wrapper').hide();
-		$('body').css('padding-top','0');
-	},50)
-</script>
-
-<div class="orderpage checkout js display-table container anyflexbox">
-	<a href="#main-header" class="skip-to-content">
-		Skip to content
-	</a>
-	<header class="checkout__header">
-		<a class="checkout__return-link" href="/">
-			<svg class="icon icon--small icon__arrow--left" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path d="M5.992 6.762l-.697.738L2 4.004 5.303.5 6 1.238 3.392 4.004l2.6 2.758z"></path>
-			</svg>
-			뒤로 가기
-		</a>
-		<a class="checkout__header-logo" href="/">
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.69 56.69" class="site-logo">
-				<g>
-					<title>Totême</title>
-					<path d="M1.58 29.11h5.08v20.84h43.37V29.11h5.08v25.98H1.58V29.11zM42.75 8.34h5.7V27.5h-5.7V8.34zm-5.28 20.77h10.98v8.75H37.47v-8.75zm0 10.35h10.98v8.88H37.47v-8.88zm-7.82-11.95c4.66-.65 8.25-4.69 8.25-9.59 0-4.88-3.56-8.91-8.19-9.58h11.31V27.5H29.65zm-8.72 4.35l6.45 12.62h1.94l6.45-12.62v16.48H20.93V31.86zm14.35-2.75l-6.94 13.56-6.94-13.56h13.88zM28.35 9.85c4.38 0 7.94 3.61 7.94 8.07 0 4.46-3.56 8.07-7.94 8.07-4.39 0-7.94-3.61-7.94-8.07 0-4.45 3.55-8.07 7.94-8.07M15.64 27.51V8.34h11.34c-4.63.67-8.19 4.7-8.19 9.58 0 4.9 3.59 8.94 8.25 9.59h-11.4zM8.24 8.34h5.67V27.5H8.24V8.34zm10.99 40.01H8.24v-8.88h10.99v8.88zM8.24 29.11h10.99v8.75H8.24v-8.75zM1.58 1.6h53.53v25.91h-5.08V6.75H6.66v20.76H1.58V1.6zM0 56.69h56.69V0H0v56.69z"></path>
-				</g>
-			</svg>
-		</a>
-	</header>
-	<aside role="complementary">
-		<button class="order-summary-toggle order-summary-toggle--show shown-if-js">
-			<span class="wrap">
-				<span class="order-summary-toggle__inner">
-					<span class="order-summary-toggle__icon-wrapper">
-						<svg width="20" height="19" xmlns="http://www.w3.org/2000/svg" class="order-summary-toggle__icon">
-							<path d="M17.178 13.088H5.453c-.454 0-.91-.364-.91-.818L3.727 1.818H0V0h4.544c.455 0 .91.364.91.818l.09 1.272h13.45c.274 0 .547.09.73.364.18.182.27.454.18.727l-1.817 9.18c-.09.455-.455.728-.91.728zM6.27 11.27h10.09l1.454-7.362H5.634l.637 7.362zm.092 7.715c1.004 0 1.818-.813 1.818-1.817s-.814-1.818-1.818-1.818-1.818.814-1.818 1.818.814 1.817 1.818 1.817zm9.18 0c1.004 0 1.817-.813 1.817-1.817s-.814-1.818-1.818-1.818-1.818.814-1.818 1.818.814 1.817 1.818 1.817z"></path>
-						</svg>
-					</span>
-					<span class="order-summary-toggle__text order-summary-toggle__text--show">
-						<span>주문 상품 상세보기</span>
-						<svg width="11" height="6" xmlns="http://www.w3.org/2000/svg" class="order-summary-toggle__dropdown" fill="#000">
-							<path d="M.504 1.813l4.358 3.845.496.438.496-.438 4.642-4.096L9.504.438 4.862 4.534h.992L1.496.69.504 1.812z"></path>
-						</svg>
-					</span>
-					<span class="order-summary-toggle__text order-summary-toggle__text--hide">
-						<span>주문 상품 상세보기</span>
-						<svg width="11" height="7" xmlns="http://www.w3.org/2000/svg" class="order-summary-toggle__dropdown" fill="#000">
-							<path d="M6.138.876L5.642.438l-.496.438L.504 4.972l.992 1.124L6.138 2l-.496.436 3.862 3.408.992-1.122L6.138.876z"></path>
-						</svg>
-					</span>
-					<dl class="order-summary-toggle__total-recap total-recap">
-						<dt class="visually-hidden"><span>Sale price</span></dt>
-						<dd>
-							<span class="order-summary__emphasis total-recap__final-price skeleton-while-loading">669,000원</span>
-						</dd>
-					</dl>
-				</span></span></button>
-	</aside>
-	<div class="checkout__content content">
-		<div class="wrap">
-			<div class="checkout__main main">
-				<div class="checkout_wrap">
-					<div class="checkout_header">
-						<ol class="checkout_breadcrumb">
-							<li class="active">주문정보</li>
-							<li>결제</li>
-						</ol>
-					</div>
-					<div class="checkout_body">
-						<div class="checkout_section">
-							<h5 class="checkout_tit1">주문정보</h5>
-							<div class="checkout_content address_wrap">
-								<h6 class="checkout_tit2">주문고객</h6>
-								<div class="address_info_box active">
-									<div class="member_address_info">
-										<p>이현대<br>
-											010-1234-5678<br>
-											서울특별시 강남구 강남대로1길 1층</p>
-									</div>
-									<button type="button" class="a_link address_edit_btn" data-address="address_info_change">수정</button>
-								</div>
-								<div class="address_info_change_box">
-									<form action="">
-										<div class="input-block name">
-											<label class="field__label" for="checkout_name3">이름</label>
-											<input placeholder="이름" value="이현대" class="field__input" type="text" name="checkout[name]" id="checkout_name3">
-										</div>
-										<div class="input-block email_form">
-											<div>
-												<input class="field__input" placeholder="이메일" value="thehyundai" type="text" readonly>
+         <div class="container mypage">
+	<div class="template-account__header">
+		안녕하세요, 이현대님
+	</div>
+	<div class="template-account__wrapper">
+		 <div class="template-account__left"></div>
+		 <div class="template-account__navlist ">
+			<div class="template-account__navlist--content">
+				 <div class="navlist__dropdown-wrapper">
+						<div class="custom-select__wrapper">
+							 <select class="navlist__dropdown custom-select__select m-font-14" style="background-image: url(../assets/icon-small-arrow-down.svg);">
+									<option value=""> <!-- selected=""-->
+										비회원 주문조회
+									</option>
+							 </select>
+							 <span class="main-title custom-select__label text-small">비회원 주문조회</span>
+						</div>
+				 </div>
+				 <ul class="navlist mypage" js-account-nav="navlist">
+						<li class="navlist__item">
+							 <a class="navlist__link text-link is-active" href="#">비회원 주문조회</a>
+						</li>
+				 </ul>
+			</div>
+	 </div>
+		 <div class="template-account__content">
+			<div class="template-account__text_hdtype_1 alert title" style="display: none;">
+				<div class="rte">
+					<p class="error">이름을 입력해 주세요.</p>
+				</div>
+			</div>
+			<div class="template-mypage__form-wrapper guest_order_list">
+				<ul class="mypage_toggle_menu mypage_order_menu">
+					<li class="accordion__item is-active">
+						<button type="button" class="toggle_tit accordion__control"># 17032700034509 (2020-05-05)</button>
+						<div class="toggle_con_box">
+							<table class="product-table">
+								<caption class="visually-hidden">Shopping cart</caption>
+								<thead class="product-table__header">
+									<tr>
+										<th scope="col"><span class="visually-hidden">Product image</span></th>
+										<th scope="col"><span class="visually-hidden">Description</span></th>
+										<th scope="col"><span class="visually-hidden">Quantity</span></th>
+										<th scope="col"><span class="visually-hidden">Price</span></th>
+									</tr>
+								</thead>
+								<tbody id="gip-product-table-processed">
+									<tr class="product">
+										<td class="product__image">
+											<div class="product-thumbnail">
+												<div class="product-thumbnail__wrapper">
+													<img alt="Centered monogram silk scarf creme - One size" class="product-thumbnail__image" src="../assets/order1.jpg">
+												</div>
+												<span class="product-thumbnail__quantity" aria-hidden="true">1</span>
 											</div>
-											<div>
-												<select class="toteme-select-style" readonly>
-													<option value="">naver.com</option>
-													<option value="">gmail.com</option>
-													<option value="">직접입력</option>
+										</td>
+										<th class="product__description" scope="row">
+											<span class="product__description__name order-summary__emphasis">센터드 모노그램 실크 스카프 크림</span>
+											<span class="product__description__variant">원 사이즈</span>
+										</th>
+										<td class="product__quantity">
+											<span class="visually-hidden">
+												1
+											</span>
+										</td>
+										<td class="product__price">
+											<span class="order-summary__emphasis skeleton-while-loading notranslate">279,000원</span>
+										</td>
+									</tr>
+									<tr class="product">
+										<td class="product__image">
+											<div class="product-thumbnail ">
+												<div class="product-thumbnail__wrapper">
+													<img alt="The Regulars sunglasses black - One size" class="product-thumbnail__image" src="../assets/order2.jpg">
+												</div>
+												<span class="product-thumbnail__quantity" aria-hidden="true">1</span>
+											</div>
+										</td>
+										<th class="product__description" scope="row">
+											<span class="product__description__name order-summary__emphasis">더 레귤러 선글래스 블랙</span>
+											<span class="product__description__variant">원 사이즈</span>
+										</th>
+										<td class="product__quantity">
+											<span class="visually-hidden">
+												1
+											</span>
+										</td>
+										<td class="product__price">
+											<span class="order-summary__emphasis skeleton-while-loading notranslate">390,000원</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="summary_content mypage_each2">
+								<h5 class="checkout_tit1">주문상태</h5>
+								<div class="txt_btn_box">
+									<h4 class="mypage_tit2">반품</h4>
+									<div>
+										<button type="button" class="button button--primary modal_trigger" data-modal="return-modal">상세보기</button>
+									</div>
+								</div>
+							</div>
+							<div class="summary_content">
+								<h5 class="checkout_tit1">배송정보</h5>
+								<div class="summary_text_block">
+									<p>택배배송<br>
+										이현대<br>
+										010-1234-5678<br>
+										서울특별시 강남구 강남대로1길 1층<br>
+										부재 시 경비실에 맡겨주세요.</p>
+								</div>
+							</div>
+							<div class="summary_content mypage_each2">
+								<h5 class="checkout_tit1">결제정보 <button type="button" class="button button--primary modal_trigger" data-modal="payment_edit-modal">결제수단 변경</button></h5>
+								<div class="summary_text_block">
+									<ul class="my_price_list">
+										<li>
+											<span class="tit1">주문금액</span>
+											<span class="txt1">200,000원</span>
+										</li>
+										<li>
+											<span class="tit1">배송비</span>
+											<span class="txt1">무료배송</span>
+										</li>
+										<li>
+											<span class="tit1">할인금액</span>
+											<span class="txt1">-50,000원</span>
+										</li>
+										<li>
+											<span class="tit1">총 결제금액</span>
+											<span class="txt1">150,000원</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="summary_content mypage_each2">
+								<h5 class="checkout_tit1">결제수단</h5>
+								<div class="summary_text_block">
+									<ul class="my_price_list">
+										<li>
+											<span class="tit1">무통장입금</span>
+											<span class="txt1">150,000원</span>
+										</li>
+										<li>
+											<div class="summary_text_block">
+												<p>
+													<b>결제하실 금액: 150,000원</b> / 입금마감일 <b>2021-06-30</b> <br>
+													2021년 06년 30일까지 입금하지 않으면 주문이 취소됩니다.<br>
+													입금계좌 : 농협은행(12345678912345)<br>
+													입금자명 : 이현대
+												</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="summary_content mypage_each2">
+								<h5 class="checkout_tit1">승인내역</h5>
+								<div class="summary_text_block">
+									<ul class="my_price_list">
+										<li>
+											<span class="tit1">2021-05-05 12:41:22</span>
+											<span class="txt1">150,000원</span>
+										</li>
+										<li>
+											<span class="tit1">무통장입금</span>
+											<span class="txt1"></span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="button-block mypage_order_button">
+								<input class="button button--primary button--block button--large" type="button" value="반품 신청">
+								<input class="button button--primary button--block button--large" type="button" value="주문 취소">
+							</div>
+							<div class="button-block mypage_order_button">
+								<input class="button button--primary button--block button--large" type="button" value="카드전표 출력">
+								<input class="button button--primary button--block button--large" type="button" value="현금영수증">
+								<input class="button button--primary button--block button--large" type="button" value="세금계산서 신청">
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+					 
+		 </div>
+	</div>
+</div>
+
+<div id="payment_edit-modal" class="modal modal--light payment_edit-modal" role="dialog" tabindex="-1">
+	<div class="modal__overlay" tabindex="-1">
+		<div class="modal__card">
+			<div class="modal__header">
+				<h5 class="modal__title  preorder-modal__title">결제수단 변경</h5>
+				<button class="modal__close">
+					<span class="visually-hidden">
+						Close
+					</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+					</svg> </button>
+			</div>
+			<div class="modal__body">
+				<div class="payment_edit_container">
+					<div class="checkout_content payment_wrap">
+						<div class="">
+							<h5 class="checkout_tit1">신용카드</h5>
+							<div class="payment_con_box">
+								<div class="payment_type1 active">
+									<h5 class="payment_tit1">카드선택</h5>
+									<div class="payment_radio_wrap">
+										<div class="radio_custom_box">
+											<input id="credit_card1" class="radio_input" value="1" type="radio" name="credit_card">
+											<label for="credit_card1">KB국민카드</label>
+										</div>
+										<div class="radio_custom_box">
+											<input id="credit_card2" class="radio_input" value="2" type="radio" name="credit_card" data-card-attr="add_plan">
+											<label for="credit_card2">삼성카드</label>
+										</div>
+										<div class="radio_custom_box">
+											<input id="credit_card3" class="radio_input" value="3" type="radio" name="credit_card" data-card-attr="add_plan">
+											<label for="credit_card3">현대카드</label>
+										</div>
+										<div class="radio_custom_box">
+											<input id="credit_card4" class="radio_input" value="4" type="radio" name="credit_card" data-card-attr="add_plan">
+											<label for="credit_card4">신한카드</label>
+										</div>
+										<div class="radio_custom_box">
+											<input id="credit_card5" class="radio_input" value="5" type="radio" name="credit_card" data-card-attr="add_bc">
+											<label for="credit_card5">BC카드</label>
+										</div>
+										<div class="radio_custom_box">
+											<input id="credit_card6" class="radio_input" value="6" type="radio" name="credit_card" data-card-attr="add_plan">
+											<label for="credit_card6">롯데카드</label>
+										</div>
+										<div class="radio_custom_box">
+											<input id="credit_card7" class="radio_input" value="7" type="radio" name="credit_card" data-card-attr="add_plan">
+											<label for="credit_card7">KEB하나카드</label>
+										</div>
+										<div class="radio_custom_box">
+											<input id="credit_card8" class="radio_input" value="8" type="radio" name="credit_card" data-card-attr="add_plan">
+											<label for="credit_card8">NH농협카드</label>
+										</div>
+										<div class="radio_custom_box">
+											<input id="credit_card9" class="radio_input" value="9" type="radio" name="credit_card">
+											<label for="credit_card9">카카오뱅크</label>
+										</div>
+										<div class="radio_custom_box">
+											<input id="credit_card10" class="radio_input" value="10" type="radio" name="credit_card">
+											<label for="credit_card10">케이뱅크</label>
+										</div>
+										<div class="radio_custom_box">
+											<input id="credit_card11" class="radio_input" value="11" type="radio" name="credit_card" data-card-attr="add_hpoint">
+											<label for="credit_card11">H.point KB 국민카드</label>
+										</div>
+									</div>
+									
+									<div class="card_type_box">
+										<div class="add_plan">
+											<div class="input-block">
+												<select id="payment_plan" class="toteme-select-style" title="할부 선택">
+													<option value="" selected="">일시불</option>
+													<option value="">2개월</option>
 												</select>
 											</div>
 										</div>
-										<div class="input-block phone">
-											<label class="field__label field__label--visible" for="checkout_num">휴대폰번호</label>
-											<input placeholder="휴대폰번호" value="010-1234-5678" class="field__input"  type="text" name="checkout[num]" id="checkout_num" readonly>
+										<div class="add_bc">
+											<h6 class="payment_tit1">BC카드종류</h6>
+											교보증권, 유진투자증권, 미래에셋증권, 유안타증권, DB금융투자, SK증권, NH투자증권, 코나카드, 토스카드, 산림조합, 한국투자증권, 은행카드
 										</div>
-										<div class="text-block sub-description">
-											<p>이메일, 휴대폰번호는 회원정보에서 변경 가능합니다.</p>
+										<div class="add_hpoint">
+											<h6 class="payment_tit1">H.Point 추가적립</h6>
+											결제금액 최대 1.5% H.Point 추가적립 (기본적립율 포함 최대 1.65% 적립)
+											카드대금 결제일 다음주 첫 영업일 적립
 										</div>
-										<div class="button-block pcs2">
-											<input class="btn white" type="button" value="취소" data-address="address_info">
-											<input class="btn" type="button" value="저장" data-address="address_info">
-										</div>
-									</form>
+									</div>
 								</div>
-							</div>
-						</div>
+								<div class="payment_type2">
+									<ul class="my_price_list">
+										<li>
+											<span class="tit1">결제금액</span>
+											<span class="txt1">150,000원</span>
+										</li>
+									</ul>
+									<ul class="dot_list">
+										<li>폰뱅킹, 인터넷 뱅킹에 가입하신 고객만 사용 가능합니다. 계좌이체 수수료는 더현대에서 부담합니다.</li>
+										<li>[결제하기] 버튼을 선택하시면 온라인 계좌이체 화면으로 연결되어 결제를 진행할수 있습니다.</li>
+									</ul>
+									<div class="cash_receipt_box">
+										<h5 class="payment_tit1">현금영수증 발급 신청</h5>
+										<div class="payment_radio_wrap">
+											<div class="radio_custom_box">
+												<input id="receipt1" class="radio_input" value="1" type="radio" name="receipt" data-receipt="receipt_type1">
+												<label for="receipt1">소득공제용</label>
+											</div>
+											<div class="radio_custom_box">
+												<input id="receipt2" class="radio_input" value="2" type="radio" name="receipt" data-receipt="receipt_type2">
+												<label for="receipt2">지출증빙용</label>
+											</div>
+											<div class="radio_custom_box">
+												<input id="receipt3" class="radio_input" value="3" type="radio" name="receipt" checked="">
+												<label for="receipt3">신청안함</label>
+											</div>
+										</div>
+										<div class="receipt_type_box">
+											<div class="receipt_type1">
+												<div class="bank_type_box">
+													<div class="input-block">
+														<input placeholder="휴대폰번호(필수)" class="field__input" type="text" name="receipt[phone]" id="receipt_phone" title="휴대폰번호 필수입력">
+													</div>
+													<div class="text-block sub-description">
+														<p>'-' 없이 숫자만 입력하세요.</p>
+													</div>
+												</div>
+											</div>
+											<div class="receipt_type2">
+												<div class="bank_type_box">
+													<div class="input-block">
+														<input placeholder="사업자등록번호(필수)" class="field__input" type="text" name="receipt[num]" id="receipt_num" title="사업자등록번호 필수입력">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+						 </div>
 
-						<div class="checkout_section">
-							<h5 class="checkout_tit1">배송지 정보</h5>
-							<div class="checkout_content address_wrap">
-								<div class="address_info_box active">
-									<div class="member_address_info">
-										등록된 배송지가 없습니다.
-										<div class="button-block">
-											<input class="button button--primary button--block button--large is-valid" type="button" value="신규 배송지 추가" data-address="address_add">
-										</div>
-									</div>
-									<div class="member_address_info with_button">
-										<div class="member_address_inner">
-											<p>이현대<br>
-												010-1234-5678<br>
-												서울특별시 강남구 강남대로1길 1층</p>
-										</div>
-										<div class="member_address_inner">
-											<button type="button" class="button round_button" data-address="address_select">변경</button>
-										</div>
-									</div>
-									<div class="input-block delivery_message">
-										<label class="field__label" for="checkout_memo">배송시 요청사항 선택</label>
-										<select id="checkout_memo" class="toteme-select-style">
-											<option value="" disabled="" selected="">배송시 요청사항 선택</option>
-											<option value="">배송 전 연락바랍니다.</option>
-											<option value="">택배함에 넣어주세요.</option>
-											<option value="">빠른 배송 부탁 드립니다.</option>
-											<option value="">부재 시 경비실에 맡겨주세요.</option>
-											<option value="">핸드폰으로 연락 부탁 드립니다.</option>
-											<option value="direct">직접입력</option>
-										</select>
-										<div class="input-block direct_input">
-											<input type="text" placeholder="배송 시 요청사항을 입력하세요" class="field__input">
-										</div>
-									</div>
-								</div>
-								<div class="address_select_box">
-									<div class="button-block">
-										<input class="button button--primary button--block button--large is-valid" type="button" value="신규 배송지 추가" data-address="address_add">
-									</div>
-									<div class="address_each">
-										<div class="member_address_info with_button">
-											<div class="member_address_inner">
-												<p>이현대 [기본배송지]<br>
-													010-1234-5678<br>
-													서울특별시 강남구 강남대로1길 1층</p>
-												<button type="button" class="a_link address_edit_btn" data-address-change="true">수정</button>
-											</div>
-											<div class="member_address_inner">
-												<button type="button" class="button round_button" data-address="address_info">선택</button>
-											</div>
-										</div>
-									</div>
-									<div class="address_each">
-										<div class="member_address_info with_button">
-											<div class="member_address_inner">
-												<p>이현대<br>
-													010-1234-5678<br>
-													서울특별시 강남구 강남대로1길 1층</p>
-												<button type="button" class="a_link address_edit_btn" data-address-change="true">수정</button>
-												<button type="button" class="a_link address_edit_btn">삭제</button>
-											</div>
-											<div class="member_address_inner">
-												<button type="button" class="button round_button" data-address="address_info">선택</button>
-											</div>
-										</div>
-									</div>
-									<div class="address_each">
-										<div class="member_address_info with_button">
-											<div class="member_address_inner">
-												<p>이현대<br>
-													010-1234-5678<br>
-													서울특별시 강남구 강남대로1길 1층</p>
-												<button type="button" class="a_link address_edit_btn" data-address-change="true">수정</button>
-												<button type="button" class="a_link address_edit_btn">삭제</button>
-											</div>
-											<div class="member_address_inner">
-												<button type="button" class="button round_button" data-address="address_info">선택</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="address_change_box">
-									<div class="input-block name">
-										<label class="field__label" for="checkout_name2">받는 사람</label>
-										<input placeholder="받는 사람" value="더현대" class="field__input" type="text" name="checkout[name2]" id="checkout_name2">
-									</div>
-									<div class="input-block phone_form">
-										<div>
-											<label class="field__label" for="checkout_phone3">휴대폰번호(필수)</label>
-											<input placeholder="휴대폰번호(필수)" value="010-1234-5678" class="field__input" type="text" name="checkout[phone3]" id="checkout_phone3">
-										</div>
-										<div>
-											<button type="button" class="btn_plus">추가
-												<svg class="icon icon--large" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(45deg);">
-													<path fill-rule="evenodd" clip-rule="evenodd" d="M2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
-												</svg>
-											</button>
-										</div>
-									</div>
-									<div class="input-block input_phone_plus">
-										<input placeholder="추가연락처" class="field__input" type="text" name="checkout[phone4]">
-									</div>
-									<div class="input-block addr_form">
-										<div>
-											<label class="field__label" for="checkout_addr4">배송지주소</label>
-											<input placeholder="배송지주소" value="05325" class="field__input"  type="text" name="checkout[addr]" id="checkout_addr4">
-										</div>
-										<div>
-											<button type="button" class="button button--large modal_trigger" data-modal="address-modal">찾기</button>
-										</div>
-									</div>
-									<div class="input-block address1">
-										<label class="field__label" for="checkout_addr5">주소</label>
-										<input placeholder="주소" value="서울특별시 강남구 강남대로 1길" class="field__input" type="text" name="checkout[addr5]" id="checkout_addr5">
-									</div>
-									<div class="input-block address2">
-										<label class="field__label" for="checkout_addr6">상세주소</label>
-										<input placeholder="상세주소" value="1층" class="field__input" type="text" name="checkout[addr3]" id="checkout_addr6">
-									</div>
-									<div class="checkbox-block address_default">
-										<div class="checkbox_custom_box">
-											<input id="address_default" class="checkbox" value="1" type="checkbox">
-											<label for="address_default">기본배송지 설정</label>
-										</div>
-									</div>
-									<div class="button-block pcs2">
-										<input class="btn white" type="submit" value="취소">
-										<input class="btn" type="submit" value="저장">
-									</div>
-								</div>
-								<div class="address_add_box">
-									<div class="button-block">
-										<input class="button button--primary button--block button--large is-valid" type="button" value="배송 주소록에서 선택" data-address="address_select">
-									</div>
-									<div class="address_each">
-										<div class="input-block name">
-											<label class="field__label" for="checkout_name1">받는 사람</label>
-											<input placeholder="받는 사람" class="field__input" type="text" name="checkout[name1]" id="checkout_name1">
-										</div>
-										<div class="input-block phone_form">
-											<div>
-												<label class="field__label" for="checkout_phone">휴대폰번호(필수)</label>
-												<input placeholder="휴대폰번호(필수)" class="field__input" type="text" name="checkout[phone3]" id="checkout_phone">
-											</div>
-											<div>
-												<button type="button" class="btn_plus">추가
-													<svg class="icon icon--large" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(45deg);">
-														<path fill-rule="evenodd" clip-rule="evenodd" d="M2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
-													</svg>
-												</button>
-											</div>
-										</div>
-										<div class="input-block input_phone_plus">
-											<input placeholder="추가연락처" class="field__input" type="text" name="checkout[phone4]">
-										</div>
-										<div class="input-block addr_form">
-											<div>
-												<label class="field__label" for="checkout_addr44">배송지주소</label>
-												<input placeholder="배송지주소" class="field__input" type="text" name="checkout[addr]" id="checkout_addr44">
-											</div>
-											<div>
-												<button type="button" class="button button--large modal_trigger" data-modal="address-modal">찾기</button>
-											</div>
-										</div>
-										<div class="input-block address1">
-											<label class="field__label" for="checkout_addr55">주소</label>
-											<input placeholder="주소" class="field__input" type="text" name="checkout[addr5]" id="checkout_addr55">
-										</div>
-										<div class="input-block address2">
-											<label class="field__label" for="checkout_addr66">상세주소</label>
-											<input placeholder="상세주소" class="field__input" type="text" name="checkout[addr3]" id="checkout_addr66">
-										</div>
-										<div class="input-block delivery_message">
-											<label class="field__label" for="checkout_memo2">배송시 요청사항 선택</label>
-											<select id="checkout_memo2" class="toteme-select-style">
-												<option value="" disabled="" selected="">배송시 요청사항 선택</option>
-												<option value="">배송 전 연락바랍니다.</option>
-												<option value="">택배함에 넣어주세요.</option>
-												<option value="">빠른 배송 부탁 드립니다.</option>
-												<option value="">부재 시 경비실에 맡겨주세요.</option>
-												<option value="">핸드폰으로 연락 부탁 드립니다.</option>
-												<option value="direct">직접입력</option>
-											</select>
-											<div class="input-block direct_input">
-												<input type="text" placeholder="배송 시 요청사항을 입력하세요" class="field__input">
-											</div>
-										</div>
-										<div class="checkbox-block address_default">
-											<div class="checkbox_custom_box">
-												<input id="address_default2" class="checkbox" value="1" type="checkbox">
-												<label for="address_default2">기본배송지 설정</label>
-											</div>
-										</div>
-										<div class="text-block sub-description">
-											<p>주문 시 입력한 신규 배송지는 자동으로 배송주소록에 추가됩니다.</p>
-										</div>
-									</div>
-								</div>
+						 <div class="nm_payment_attr">
+							<div class="payment_guaranty">
+								<h5 class="checkout_tit1">채무지급 보증안내 <button type="button" class="button button--primary modal_trigger modal_trigger" data-modal="ly_guarantee-modal">서비스 가입사실 확인</button></h5>
+								<p>고객님의 안전거래를 위해 현금결제시 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.</p>
 							</div>
-							<div class="checkout_btn_box">
-								<button name="button" type="submit" id="continue_button" class="step__footer__continue-btn btn">
-									<span class="btn__content">결제수단 선택</span>
-									<svg class="icon-svg icon-svg--size-18 btn__spinner icon-svg--spinner-button" aria-hidden="true" focusable="false">
-										<use xlink:href="#spinner-button"></use>
-									</svg></button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="additional-content checkout__additional-content">
-					<div class="additional-content__container">
-						<p class="additional-content__title">
-							고객안내사항
-						</p>
-						<div id="additionalContentAccordion-main" class="additional-content__accordion accordion"
-							js-accordion="container">
-							<div class="accordion__item" js-accordion="item">
-								<h2 class="accordion__title">
-									<button id="Accordion1" class="accordion__control text-small" aria-controls="content-1" aria-expanded="false" js-accordion="control">
-										배송
-									</button>
-								</h2>
-								<div id="content-1" class="accordion__content" role="region" aria-labelledby="Accordion1" js-accordion="content">
-									<p>한국 내 무료 배송 서비스가 제공됩니다.<br><br>
-										주문하신 상품은 네덜란드 물류 창고에서 출고되며, 모든 제품 가격에는 세금 및 관세가 포함되어 있습니다.</p>
-								</div>
-							</div>
-							<div class="accordion__item" js-accordion="item">
-								<h2 class="accordion__title">
-									<button id="Accordion2" class="accordion__control text-small">
-										반품 및 교환
-									</button>
-								</h2>
-								<div id="content-2" class="accordion__content">
-									<p>상품 수령일을 기준으로 14일 이내 반품 신청이 가능합니다.<br><br>
-										다른 사이즈나 색상으로 교환을 원하실 경우 반품 후 새로 주문 해주시기 바랍니다.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="additional-content__container">
-						<p class="additional-content__title">
-							온라인 고객서비스센터 운영 시간 월요일 - 일요일: 09:00 - 21:00 KST
-						</p>
-						<ul class="additional-content__list">
-							<li class="additional-content__item">
-								<a class="additional-content__link text-link text-link--static" onclick="GorgiasChat.open();">
-									고객상담
-								</a>
-							</li>
-							<li class="additional-content__item">
-								<a class="additional-content__link text-link text-link--static" href="mailto:shop@toteme-studio.com">
-									shop@toteme-studio.com
-								</a>
-							</li>
-							<li class="additional-content__item">
-								<a class="additional-content__link text-link text-link--static" href="tel:+46 8 20 38 20">
-									+46 8 20 38 20
-								</a>
-							</li>
-							<li class="additional-content__item">
-								<a class="additional-content__link text-link text-link--static" href="https://wa.me/46733922282">
-									WhatsApp
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<aside class="checkout__sidebar sidebar" role="complementary">
-				<div class="template-account__text_hdtype_1 alert title" style="display: none;">
-					<div class="rte">
-						<p class="error">이름을 입력해 주세요.
-						</p>
-					</div>
-			  </div>
-				<div class="sidebar__content">
-					<div id="order-summary" class="order-summary order-summary--is-collapsed">
-						<div class="order-summary__sections">
-							<div class="order-summary__section order-summary__section--product-list">
-								<div class="order-summary__section__content">
-									<table class="product-table">
-										<caption class="visually-hidden">Shopping cart</caption>
-										<thead class="product-table__header">
-											<tr>
-												<th scope="col"><span class="visually-hidden">Product image</span></th>
-												<th scope="col"><span class="visually-hidden">Description</span></th>
-												<th scope="col"><span class="visually-hidden">Quantity</span></th>
-												<th scope="col"><span class="visually-hidden">Price</span></th>
-											</tr>
-										</thead>
-										<tbody id="gip-product-table-processed">
-											<tr class="product">
-												<td class="product__image">
-													<div class="product-thumbnail">
-														<div class="product-thumbnail__wrapper">
-															<img alt="Centered monogram silk scarf creme - One size" class="product-thumbnail__image" src="../assets/order1.jpg">
-														</div>
-														<span class="product-thumbnail__quantity" aria-hidden="true">1</span>
-													</div>
-												</td>
-												<th class="product__description" scope="row">
-													<span class="product__description__name order-summary__emphasis">센터드 모노그램 실크 스카프 크림</span>
-													<span class="product__description__variant order-summary__small-text">원 사이즈</span>
-												</th>
-												<td class="product__quantity">
-													<span class="visually-hidden">
-														1
-													</span>
-												</td>
-												<td class="product__price">
-													<span class="order-summary__emphasis skeleton-while-loading notranslate">279,000원</span>
-												</td>
-											</tr>
-											<tr class="product">
-												<td class="product__image">
-													<div class="product-thumbnail ">
-														<div class="product-thumbnail__wrapper">
-															<img alt="The Regulars sunglasses black - One size" class="product-thumbnail__image" src="../assets/order2.jpg">
-														</div>
-														<span class="product-thumbnail__quantity" aria-hidden="true">1</span>
-													</div>
-												</td>
-												<th class="product__description" scope="row">
-													<span class="product__description__name order-summary__emphasis">더 레귤러 선글래스 블랙</span>
-													<span class="product__description__variant order-summary__small-text">원 사이즈</span>
-												</th>
-												<td class="product__quantity">
-													<span class="visually-hidden">
-														1
-													</span>
-												</td>
-												<td class="product__price">
-													<span class="order-summary__emphasis skeleton-while-loading notranslate">390,000원</span>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-							<div class="order-summary__section order-summary__section--discount">
-								<h3 class="visually-hidden">프로모션 코드 적용</h3>
-								<form class="edit_checkout animate-floating-labels" action="#" method="post">
-									<div class="fieldset">
-										<div class="field">
-											<div class="field__input-btn-wrapper">
-												<div class="field__input-wrapper">
-													<label class="field__label field__label--visible" for="checkout_reduction_code">프로모션 코드</label>
-													<input placeholder="프로모션 코드 입력" class="field__input" id="checkout_reduction_code" autocomplete="off" aria-required="true" size="30" type="text" name="checkout[reduction_code]">
-												</div>
-												<button name="button" type="button" class="field__input-btn btn btn--disabled" data-deposit="true">
-													<span class="btn__content visually-hidden-on-mobile" aria-hidden="true">
-														적용
-													</span>
-													<span class="visually-hidden">
-														프로모션 코드 적용
-													</span>
-													<svg class="icon-svg icon-svg--size-16 btn__icon shown-on-mobile" aria-hidden="true" focusable="false">
-														<use xlink:href="#arrow"></use>
-													</svg>
-													<svg class="icon-svg icon-svg--size-18 btn__spinner icon-svg--spinner-button" aria-hidden="true" focusable="false">
-														<use xlink:href="#spinner-button"></use>
-													</svg>
-												</button>
-												<div class="deposit_attr_box deposit_result_box">
-													<div>
-														<p class="field__message" id="">SALE20 (-10,000원)</p>
-													</div>
-													<div>
-														<button type="button" class="btn_deposit">삭제</button>
-													</div>
-												</div>
-											</div>
-											<p class="field__message field__message--error" id="error-for-reduction_code">프로모션 코드가 정확하지 않습니다.</p>
-										</div>
-									</div>
-								</form>
-								<div class="discount-trigger"><button class="button button--large button--block">프로모션 코드 적용</button></div>
-							</div>
-							<div class="order-summary__section order-summary__section--discount">
-								<h3 class="visually-hidden">예치금 사용</h3>
-								<form class="edit_checkout animate-floating-labels" action="#" method="post">
-									<div class="fieldset">
-										<div class="field">
-											<div class="field__input-btn-wrapper">
-												<div class="field__input-wrapper">
-													<label class="field__label field__label--visible" for="checkout_deposit_code">예치금 사용</label>
-													<input placeholder="사용할 금액을 입력하세요" class="field__input" id="checkout_deposit_code" autocomplete="off" aria-required="true" size="30" type="text" name="checkout[deposit_code]">
-												</div>
-												<div class="deposit_attr_box">
-													<div>
-														<p class="field__message field__message--error" id="">예치금 : 50,000</p>
-													</div>
-													<div>
-														<button type="button" class="btn_deposit">모두사용</button>
-													</div>
-												</div>
-												<button name="button" type="button" class="field__input-btn btn btn--disabled" data-deposit="true">
-													<span class="btn__content visually-hidden-on-mobile" aria-hidden="true">
-														적용
-													</span>
-													<span class="visually-hidden">
-														예치금 사용
-													</span>
-													<svg class="icon-svg icon-svg--size-16 btn__icon shown-on-mobile" aria-hidden="true" focusable="false">
-														<use xlink:href="#arrow"></use>
-													</svg>
-													<svg class="icon-svg icon-svg--size-18 btn__spinner icon-svg--spinner-button" aria-hidden="true" focusable="false">
-														<use xlink:href="#spinner-button"></use>
-													</svg>
-												</button>
-												<div class="deposit_attr_box deposit_result_box">
-													<div>
-														<p class="field__message" id="">예치금 (-10,000원)</p>
-													</div>
-													<div>
-														<button type="button" class="btn_deposit">삭제</button>
-													</div>
-												</div>
-											</div>
-											<p class="field__message field__message--error" id="error-for-reduction_code">예치금은 10원 단위로 사용할 수 있습니다.</p>
-										</div>
-									</div>
-								</form>
-								<div class="discount-trigger"><button class="button button--large button--block">예치금 사용</button></div>
-							</div>
-							<div class="order-summary__section order-summary__section--total-lines">
-								<table class="total-line-table">
-									<caption class="visually-hidden">Cost summary</caption>
-									<thead>
-										<tr>
-											<th scope="col"><span class="visually-hidden">Description</span></th>
-											<th scope="col"><span class="visually-hidden">Price</span></th>
-										</tr>
-									</thead>
-									<tbody class="total-line-table__tbody">
-										<tr class="total-line total-line--subtotal">
-											<th class="total-line__name" scope="row">상품금액</th>
-											<td class="total-line__price">
-												<span class="order-summary__emphasis skeleton-while-loading notranslate">669,000원</span>
-											</td>
-										</tr>
-										<tr class="total-line total-line--shipping">
-											<th class="total-line__name" scope="row">
-												<span>
-													배송비
-												</span>
-											</th>
-											<td class="total-line__price">
-												<span class="skeleton-while-loading order-summary__small-text notranslate">
-													무료배송
-												</span>
-											</td>
-										</tr>
-									</tbody>
-									<tfoot class="total-line-table__footer">
-										<tr class="total-line">
-											<th class="total-line__name payment-due-label" scope="row">
-												<span class="payment-due-label__total">합계</span>
-											</th>
-											<td class="total-line__price payment-due">
-												<span class="payment-due__price skeleton-while-loading--lg notranslate">669,000원</span>
-											</td>
-										</tr>
-									</tfoot>
-								</table>
-							</div>
-						</div>
-					</div>
-					<div class="additional-content checkout__additional-content checkout__additional-content--sidebar">
-						<div class="additional-content__container">
-							<p class="additional-content__title">
-								고객안내사항
-							</p>
-							<div id="additionalContentAccordion-sidebar" class="additional-content__accordion accordion" js-accordion="container">
-								<div class="accordion__item" js-accordion="item">
-									<h2 class="accordion__title">
-										<button id="Accordion1" class="accordion__control text-small">
-											배송
-										</button>
-									</h2>
-									<div id="content-1" class="accordion__content">
-										<p>한국 내 무료 배송 서비스가 제공됩니다.<br><br>
-											주문하신 상품은 네덜란드 물류 창고에서 출고되며, 모든 제품 가격에는 세금 및 관세가 포함되어 있습니다.</p>
-									</div>
-								</div>
-								<div class="accordion__item" js-accordion="item">
-									<h2 class="accordion__title">
-										<button id="Accordion2" class="accordion__control text-small">
-											반품 및 교환
-										</button>
-									</h2>
-									<div id="content-2" class="accordion__content">
-										<p>상품 수령일을 기준으로 14일 이내 반품 신청이 가능합니다.<br><br>
-											다른 사이즈나 색상으로 교환을 원하실 경우 반품 후 새로 주문 해주시기 바랍니다.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="additional-content__container">
-							<p class="additional-content__title">
-								온라인 고객서비스센터 운영 시간 월요일 - 일요일: 09:00 - 21:00 KST
-							</p>
-							<ul class="additional-content__list">
-								<li class="additional-content__item">
-									<a class="additional-content__link text-link text-link--static" onclick="GorgiasChat.open();">
-										고객상담
-									</a>
-								</li>
-								<li class="additional-content__item">
-									<a class="additional-content__link text-link text-link--static" href="mailto:shop@toteme-studio.com">
-										shop@toteme-studio.com
-									</a>
-								</li>
-								<li class="additional-content__item">
-									<a class="additional-content__link text-link text-link--static" href="tel:+46 8 20 38 20">
-										+46 8 20 38 20
-									</a>
-								</li>
-								<li class="additional-content__item">
-									<a class="additional-content__link text-link text-link--static" href="https://wa.me/46733922282">
-										WhatsApp
-									</a>
+							<ul class="my_price_list">
+								<li>
+									<span class="tit1">총 결제예정 금액</span>
+									<span class="txt1">150,000원</span>
 								</li>
 							</ul>
-						</div>
-					</div>
-				</div>
-			</aside>
-		</div>
-	</div>
-
-	<div id="address-modal" class="modal modal--light address-modal" role="dialog" tabindex="-1">
-		<div class="modal__overlay" tabindex="-1">
-			<div class="modal__card">
-				<div class="modal__header">
-					<h5 class="modal__title  preorder-modal__title">주소검색</h5>
-					<button class="modal__close">
-						<span class="visually-hidden">
-							Close
-						</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
-						</svg> </button>
-				</div>
-				<div class="modal__body">
-					<div class="address_modal_container">
-						<div class="input-block">
-							<label class="field__label field__label--visible" for="checkout_addr_find">주소 찾기</label>
-							<input placeholder="찾고자 하는 주소를 입력하세요" class="field__input" size="30" type="text" name="checkout[addr_find]" id="checkout_addr_find">
-						</div>
-						<div class="input-block">
-							<input class="btn" type="submit" value="검색" data-address="address_search_list">
-							<ul class="dot_list">
-								<li>예: 동(읍/면)명 또는 도로명주소(건물번호/건물명)</li>
-								<li>일부 군사지역은 배송이 불가능할 수 있습니다.</li>
-							</ul>
-						</div>
-						<div class="address_find_content address_wrap">
-							<div class="address_search_list_box">
-								<div class="input-table">
-									<div>
-										<div class="select-wrap">
-											<select class="toteme-select-style">
-												<option value="">시/도</option>
-												<option value="">시/도</option>
-												<option value="">시/도</option>
-											</select>
-										</div>
-									</div>
-									<div>
-										<div class="select-wrap">
-											<select class="toteme-select-style">
-												<option value="">군/구</option>
-												<option value="">군/구</option>
-												<option value="">군/구</option>
-											</select>
-										</div>
-									</div>
-								</div>
-								<ul class="addr_list">
-									<li><a href="#" class="addr_btn" data-address="address_detail">
-										<span class="addr-line-wrap">
-											<span class="addr-line rrr">
-												<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
-											</span>
-											<span class="addr-line jjj">
-												<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
-											</span>
-										</span>
-										<span class="zipcode">06088</span>
-									</a></li>
-									<li><a href="#" class="addr_btn" data-address="address_detail">
-										<span class="addr-line-wrap">
-											<span class="addr-line rrr">
-												<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
-											</span>
-											<span class="addr-line jjj">
-												<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
-											</span>
-										</span>
-										<span class="zipcode">06088</span>
-									</a></li>
-									<li><a href="#" class="addr_btn" data-address="address_detail">
-										<span class="addr-line-wrap">
-											<span class="addr-line rrr">
-												<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
-											</span>
-											<span class="addr-line jjj">
-												<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
-											</span>
-										</span>
-										<span class="zipcode">06088</span>
-									</a></li>
-									<li><a href="#" class="addr_btn" data-address="address_detail">
-										<span class="addr-line-wrap">
-											<span class="addr-line rrr">
-												<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
-											</span>
-											<span class="addr-line jjj">
-												<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
-											</span>
-										</span>
-										<span class="zipcode">06088</span>
-									</a></li>
-									<li><a href="#" class="addr_btn" data-address="address_detail">
-										<span class="addr-line-wrap">
-											<span class="addr-line rrr">
-												<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
-											</span>
-											<span class="addr-line jjj">
-												<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
-											</span>
-										</span>
-										<span class="zipcode">06088</span>
-									</a></li>
-								</ul>
-							</div>
-							<div class="address_detail_box">
-								<ul class="addr_list">
-									<li>
-										<div class="radio_custom_box">
-											<input id="addr_type1" class="radio_input" value="1" type="radio" name="addr_type" checked>
-											<label for="addr_type1"><span class="addr-mark-name">도로명</span> 서울특별시 강남구 학동로 402</label>
-										</div>
-										<div class="radio_custom_box">
-											<input id="addr_type2" class="radio_input" value="2" type="radio" name="addr_type">
-											<label for="addr_type2"><span class="addr-mark-num">지번</span> 서울특별시 강남구 삼성동 1</label>
-										</div>
-									</li>
-								</ul>
-								<div class="input-block form-group__field">
-									<label class="field__label field__label--visible" for="addr_detail">상세주소 입력</label>
-									<input placeholder="상세주소 입력" class="field__input" size="30" type="text" name="checkout[addr_detail]" id="addr_detail">
-									<p class="comment error" style="display: none;">상세주소를 입력하세요.</p>
-								</div>
-								<div class="button-block pcs2">
-									<input class="btn btn_addr_standard" type="button" value="확인">
-									<input class="btn white" type="button" value="취소">
-								</div>
+							<div class="checkbox_custom_box">
+								<input id="payment_agree2" class="checkbox" value="2" type="checkbox">
+								<label for="payment_agree2">주문하실 상품의 결제수단 변경에 동의하시겠습니까?
+									(전자상거래법 제8조 제2항)</label>
+									<p class="comment error">결제수단 변경에 동의해주셔야 결제가 가능합니다.</p>
 							</div>
 						</div>
+					 </div>
 					</div>
-					<div class="address_modal_container standard_addr_box">
-						<div class="text-block addr_modal_text">
-							<p>입력하신 주소에 해당하는 표준주소가 있습니다.<br>
-								아래 표준주소로 바꾸시겠습니까?</p>
-						</div>
-						<table class="table_type1">
-							<colgroup>
-								<col style="width: 50px;">
-								<col>
-							</colgroup>
-							<tbody>
-								<tr>
-									<th scope="row">
-										<div class="radio_custom_box">
-											<input id="addr_type3" class="radio_input" value="1" type="radio" name="addr_type2">
-										</div>
-									</th>
-									<td>
-										<label for="addr_type3"><span class="payment_tit2">[입력한주소]</span> 12345 <br> 서울특별시 강남구 삼성동 1</label>
-									</td>
-								</tr>
-								<tr>
-									<th scope="row">
-										<div class="radio_custom_box">
-											<input id="addr_type4" class="radio_input" value="2" type="radio" name="addr_type2" checked>
-										</div>
-									</th>
-									<td>
-										<label for="addr_type4"><span class="payment_tit2">[표준주소]</span> 12345 (111-222) <br> 서울특별시 강남구 삼성동 1</label>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-						<div class="button-block pcs2">
-							<input class="btn" type="button" value="확인">
-							<input class="btn white" type="button" value="취소">
-						</div>
+					<div class="button-block pcs2_vertical">
+						<button class="button button--block button--large">결제</button> 
+						<button class="button button--block button--large">취소</button>
 					</div>
 				</div>
 			</div>
@@ -1914,6 +1449,76 @@
 	</div>
 </div>
 
+<div id="ly_guarantee-modal" class="modal modal--light ly_guarantee-modal md-modal" role="dialog" tabindex="-1">
+	<div class="modal__overlay" tabindex="-1">
+		<div class="modal__card">
+			<div class="modal__header">
+				<h5 class="modal__title preorder-modal__title">지급보증서</h5>
+				<button class="modal__close">
+					<span class="visually-hidden">
+						Close
+					</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+					</svg> </button>
+			</div>
+			<div class="modal__body">
+				<div class="ly_guarantee_container">
+					<img src="https://image.thehyundai.com/hdmall/images/co/img_guarantee.jpg" alt="" class="pc_only">
+					<img src="https://image.thehyundai.com/hdsmart/images/co/img_guarantee.jpg" alt="" class="mo_only">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="return-modal" class="modal modal--light return-modal" role="dialog" tabindex="-1">
+	<div class="modal__overlay" tabindex="-1">
+		<div class="modal__card">
+			<div class="modal__header">
+				<h5 class="modal__title preorder-modal__title">상세보기</h5>
+				<button class="modal__close">
+					<span class="visually-hidden">
+						Close
+					</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+					</svg> </button>
+			</div>
+			<div class="modal__body">
+				<div class="return_modal_container">
+					<table class="table_type1">
+						<colgroup>
+							<col style="width: 30%;">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">반품상태</th>
+								<td>반품접수 2017-03-24 11:12:13<br> 
+									반품진행중 2017-03-24 11:03:12</td>
+							</tr>
+							<tr>
+								<th scope="row">반품정보<br> (상품/배송지)</th>
+								<td>
+									<p class="return_txt">브이넥 면 카라 티셔츠 STRIPE
+										<br> 옵션 : Pear green / 사이즈 40  1개</p>
+									<p class="return_txt">박현대 <br>010-8989-1212<br> 
+										12456 서울 강남구 청담동 123-5 <br>현대빌딩 3층 </p>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">환불방법</th>
+								<td>신용카드</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="button-block">
+						<button class="button button--block button--large">닫기</button> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
          <!-- END content_for_index -->
       </main>
       <!-- Footer -->
