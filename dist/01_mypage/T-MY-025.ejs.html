@@ -1181,8 +1181,8 @@
 					<p class="error">받는 사람을 입력해 주세요.</p>
 				</div>
 			</div>
-			<div class="template-mypage__form-wrapper returns_wrap">
-				<div class="template-mypage__form">
+			<div class="template-mypage__form-wrapper cancel_wrap">
+				<!-- <div class="template-mypage__form">
 					<div class="input-block">
 						<label class="form-group__label is-hidden" for="selectTime">기간보기</label>
 						<select name="selectTime" id="refundBank" class="toteme-select-style mypage_time_select">
@@ -1193,9 +1193,9 @@
 							<option value="">전체보기</option>
 						</select>
 					</div>
-				</div>
+				</div> -->
 				<ul class="mypage_toggle_menu mypage_order_menu">
-					<li class="accordion__item">
+					<li class="accordion__item is-active">
 						<button type="button" class="toggle_tit accordion__control"># 17032700034509 (2020-05-05)</button>
 						<div class="toggle_con_box">
 							<table class="product-table">
@@ -1344,47 +1344,22 @@
 										</ul>
 									</div>
 									<div class="return_type2">
-										<!-- 환불계좌 정보가 없는 경우, 기존 환불계좌 수정하는 경우 -->
+										<!-- 환불계좌 정보가 없는 경우 -->
 										<div>
-											<div class="address_each">
-												<div class="input-block label-block">
-													<label class="form-group__label is-hidden" for="refundName1">이름</label>
-													<input id="refundName1" name="refund[name]" placeholder="이름" type="text" value="이현대" readonly="">
+											<div class="member_address_info with_button">
+												<div class="member_address_inner">
+													<p>등록된 환불계좌가 없습니다.</p>
 												</div>
-												<div class="input-block">
-													<label class="form-group__label is-hidden" for="refundBank1">은행선택</label>
-													<select name="refund[bank]" id="refundBank1" class="toteme-select-style">
-														<option value="" selected="" disabled="">은행선택</option>
-														<option value="">NH농협은행</option>
-														<option value="">KB국민은행 </option>
-														<option value="">우리은행</option>
-														<option value="">신한은행</option>
-														<option value="">IBK기업은행</option>
-														<option value="">대구은행</option>
-														<option value="">부산은행</option>
-														<option value="">우체국</option>
-														<option value="">KEB하나은행</option>
-														<option value="">경남은행</option>
-													</select>
+												<div class="member_address_inner">
+													<button type="button" class="button round_button modal_trigger" data-modal="refund-modal">등록</button>
 												</div>
-												<div class="input-block addr_form">
-													<div>
-														<input placeholder="계좌번호" size="30" type="text" name="refund[account]" id="refundAccount1">
-													</div>
-													<div>
-														<button type="button" class="button button--large">계좌인증</button>
-													</div>
-												</div>
-												<!-- <div class="button-block">
-													<input class="button button--primary button--block button--large" type="button" value="등록">
-												</div> -->
 											</div>
 										</div>
 										<!-- 기존 환불계좌 정보가 있는 경우 -->
-										<div style="display: none;">
-											<p class="account_txt">우리은행(이현대)<br>
-												34567893323
-											</p>
+										<div>
+											<span class="payment_tit2">예금주명</span> 이현대<br>
+											<span class="payment_tit2">은행명</span> 우리은행<br>
+											<span class="payment_tit2">계좌번호</span> 27820620718276<br>
 											<button type="button" class="a_link modal_trigger" data-modal="refund-modal">수정</button>
 										</div>
 									</div>
@@ -1500,321 +1475,6 @@
 								<div class="checkbox_custom_box">
 									<input id="return_agree1" class="checkbox" value="2" type="checkbox">
 									<label for="return_agree1">주문하실 상품의 상품명, 가격, 배송정보를 확인하였으며, 주문취소 재결제에 동의하시겠습니까? <br >(전자상거래법 제8조 제2항)
-									</label>
-								</div>
-							</div>
-							
-							<div class="button-block pcs2_vertical">
-								<button class="button button--block button--large">반품신청</button> 
-								<button class="button button--block button--large">취소</button>
-							</div>
-						</div>
-					</li>
-					<li class="accordion__item">
-						<button type="button" class="toggle_tit accordion__control"># 17032700034509 (2020-03-03)</button>
-						<div class="toggle_con_box">
-							<table class="product-table">
-								<tbody>
-									<tr class="product">
-										<td class="product__image">
-											<div class="product-thumbnail">
-												<div class="product-thumbnail__wrapper">
-													<img alt="Centered monogram silk scarf creme - One size" class="product-thumbnail__image" src="../assets/order1.jpg">
-												</div>
-												<span class="product-thumbnail__quantity" aria-hidden="true">1</span>
-											</div>
-										</td>
-										<th class="product__description" scope="row">
-											<span class="product__description__name order-summary__emphasis">센터드 모노그램 실크 스카프 크림</span>
-											<span class="product__description__variant">원 사이즈</span>
-										</th>
-										<td class="product__quantity">
-											<span class="visually-hidden">
-												1
-											</span>
-										</td>
-										<td class="product__price">
-											<span class="order-summary__emphasis skeleton-while-loading notranslate">279,000원</span>
-										</td>
-									</tr>
-									<tr class="return_tr">
-										<td colspan="2">
-											<ul class="return_attr_list">
-												<li>
-													<span class="tit1">반품 수량</span>
-													<div class="txt1">
-														<select class="toteme-select-style">
-															<option value="">0</option>
-															<option value="">1</option>
-															<option value="">2</option>
-														</select>
-													</div>
-												</li>
-												<li>
-													<span class="tit1">반품 금액</span>
-													<div class="txt1">0원</div>
-												</li>
-											</ul>
-										</td>
-									</tr>
-									<tr class="product">
-										<td class="product__image">
-											<div class="product-thumbnail ">
-												<div class="product-thumbnail__wrapper">
-													<img alt="The Regulars sunglasses black - One size" class="product-thumbnail__image" src="../assets/order2.jpg">
-												</div>
-												<span class="product-thumbnail__quantity" aria-hidden="true">1</span>
-											</div>
-										</td>
-										<th class="product__description" scope="row">
-											<span class="product__description__name order-summary__emphasis">더 레귤러 선글래스 블랙</span>
-											<span class="product__description__variant">원 사이즈</span>
-										</th>
-										<td class="product__quantity">
-											<span class="visually-hidden">
-												1
-											</span>
-										</td>
-										<td class="product__price">
-											<span class="order-summary__emphasis skeleton-while-loading notranslate">390,000원</span>
-										</td>
-									</tr>
-									<tr class="return_tr">
-										<td colspan="2">
-											<ul class="return_attr_list">
-												<li>
-													<span class="tit1">반품 수량</span>
-													<div class="txt1">
-														<select class="toteme-select-style">
-															<option value="">0</option>
-															<option value="" selected>1</option>
-															<option value="">2</option>
-														</select>
-													</div>
-												</li>
-												<li>
-													<span class="tit1">반품 금액</span>
-													<div class="txt1">- 100,000원</div>
-												</li>
-											</ul>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							<div class="button-block return_btn_block">
-								<input class="button button--primary button--block button--large" type="button" value="반품 수량 저장">
-							</div>
-							<div class="summary_content mypage_each2">
-								<h5 class="checkout_tit1">결제정보</h5>
-								<div class="summary_text_block">
-									<ul class="my_price_list">
-										<li>
-											<span class="tit1">결제 금액</span>
-											<span class="txt1">150,000원</span>
-										</li>
-										<li>
-											<span class="tit1">무통장</span>
-											<span class="txt1">0원</span>
-										</li>
-										<li>
-											<span class="tit1">예치금</span>
-											<span class="txt1">0원</span>
-										</li>
-									</ul>
-									<ul class="my_price_list">
-										<li>
-											<span class="tit1">반품 금액</span>
-											<span class="txt1">-100,000원</span>
-										</li>
-										<li>
-											<span class="tit1">무통장</span>
-											<span class="txt1">0원</span>
-										</li>
-										<li>
-											<span class="tit1">예치금</span>
-											<span class="txt1">0원</span>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="summary_content mypage_each2">
-								<h5 class="checkout_tit1">환불 방법 선택</h5>
-								<div class="summary_text_block">
-									<div class="return_type_box">
-										<div class="radio_custom_box">
-											<input id="return_type1-1" class="radio_input" type="radio" name="return_type" data-type="return_type1">
-											<label for="return_type1-1">예치금</label>
-										</div>
-										<div class="radio_custom_box">
-											<input id="return_type1-2" class="radio_input" type="radio" name="return_type" data-type="return_type2">
-											<label for="return_type1-2">환불계좌</label>
-										</div>
-									</div>
-									<div class="return_type1">
-										<ul class="my_price_list">
-											<li>
-												<span class="tit1">환불 금액</span>
-												<span class="txt1">100,000원</span>
-											</li>
-										</ul>
-									</div>
-									<div class="return_type2">
-										<!-- 환불계좌 정보가 없는 경우 -->
-										<div>
-											<div class="address_each">
-												<div class="input-block label-block">
-													<label class="form-group__label is-hidden" for="refundName2">이름</label>
-													<input id="refundName2" name="refund[name]" placeholder="이름" type="text" value="이현대" readonly="">
-												</div>
-												<div class="input-block">
-													<label class="form-group__label is-hidden" for="refundBank">은행선택</label>
-													<select name="refund[bank]" id="refundBank" class="toteme-select-style">
-														<option value="" selected="" disabled="">은행선택</option>
-														<option value="">NH농협은행</option>
-														<option value="">KB국민은행 </option>
-														<option value="">우리은행</option>
-														<option value="">신한은행</option>
-														<option value="">IBK기업은행</option>
-														<option value="">대구은행</option>
-														<option value="">부산은행</option>
-														<option value="">우체국</option>
-														<option value="">KEB하나은행</option>
-														<option value="">경남은행</option>
-													</select>
-												</div>
-												<div class="input-block addr_form">
-													<div>
-														<input placeholder="계좌번호" size="30" type="text" name="refund[account]" id="refundAccount2">
-													</div>
-													<div>
-														<button type="button" class="button button--large">계좌인증</button>
-													</div>
-												</div>
-												<!-- <div class="button-block">
-													<input class="button button--primary button--block button--large" type="button" value="등록">
-												</div> -->
-											</div>
-										</div>
-										<!-- 기존 환불계좌 정보가 있는 경우 -->
-										<div style="display: none;">
-											<p class="account_txt">우리은행(이현대)<br>
-												34567893323
-											</p>
-											<button type="button" class="a_link modal_trigger" data-modal="refund-modal">수정</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="summary_content mypage_each2">
-								<h5 class="checkout_tit1">회수 요청지</h5>
-								<div class="summary_text_block">
-									<div class="return_addr_box">
-										<div class="radio_custom_box">
-											<input id="return_addr_type1" class="radio_input" type="radio" name="return_addr_type" data-type="return_addr_type1">
-											<label for="return_addr_type1">회수요청지</label>
-										</div>
-										<div class="radio_custom_box">
-											<input id="return_addr_type2" class="radio_input" type="radio" name="return_addr_type" data-type="return_addr_type2">
-											<label for="return_addr_type2">새로 입력</label>
-										</div>
-									</div>
-									<div class="return_addr_type1">
-										<div class="radio_custom_box">
-											<input id="return_addr1" class="radio_input" type="radio" name="return_addr" data-type="return_addr1" checked>
-											<label for="return_addr1">
-												이현대 [기본배송지]<br>
-													010-1234-5678<br>
-													서울특별시 강남구 강남대로1길 1층
-											</label>
-											<div>
-												<button type="button" class="a_link">수정</button>
-											</div>
-										</div>
-										<div class="radio_custom_box">
-											<input id="return_addr2" class="radio_input" type="radio" name="return_addr" data-type="return_addr2">
-											<label for="return_addr2">
-												이현대<br>
-													010-1234-5678<br>
-													서울특별시 강남구 강남대로1길 1층
-											</label>
-											<div>
-												<button type="button" class="a_link">수정</button>
-												<button type="button" class="a_link">삭제</button>
-											</div>
-										</div>
-									</div>
-									<div class="return_addr_type2">
-										<div class="address_each">
-											<div class="input-block name">
-												<label class="field__label" for="checkout_name1">받는 사람</label>
-												<input placeholder="받는 사람" class="field__input" type="text" name="checkout[name1]" id="checkout_name1">
-											</div>
-											<div class="input-block phone_form">
-												<div>
-													<label class="field__label" for="checkout_phone">휴대폰번호(필수)</label>
-													<input placeholder="휴대폰번호(필수)" class="field__input" type="text" name="checkout[phone3]" id="checkout_phone">
-												</div>
-												<div>
-													<button type="button" class="btn_plus">추가
-														<svg class="icon icon--large" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(45deg);">
-															<path fill-rule="evenodd" clip-rule="evenodd" d="M2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
-														</svg>
-													</button>
-												</div>
-											</div>
-											<div class="input-block input_phone_plus">
-												<input placeholder="추가연락처" class="field__input" type="text" name="checkout[phone4]">
-											</div>
-											<div class="input-block addr_form">
-												<div>
-													<label class="field__label" for="checkout_addr44">배송지주소</label>
-													<input placeholder="배송지주소" class="field__input" type="text" name="checkout[addr]" id="checkout_addr44">
-												</div>
-												<div>
-													<button type="button" class="button button--large modal_trigger" data-modal="address-modal">찾기</button>
-												</div>
-											</div>
-											<div class="input-block address1">
-												<label class="field__label" for="checkout_addr55">주소</label>
-												<input placeholder="주소" class="field__input" type="text" name="checkout[addr5]" id="checkout_addr55">
-											</div>
-											<div class="input-block address2">
-												<label class="field__label" for="checkout_addr66">상세주소</label>
-												<input placeholder="상세주소" class="field__input" type="text" name="checkout[addr3]" id="checkout_addr66">
-											</div>
-											<div class="input-block delivery_message">
-												<label class="field__label" for="checkout_memo2">배송시 요청사항 선택</label>
-												<select id="checkout_memo2" class="toteme-select-style">
-													<option value="" disabled="" selected="">배송시 요청사항 선택</option>
-													<option value="">배송 전 연락바랍니다.</option>
-													<option value="">택배함에 넣어주세요.</option>
-													<option value="">빠른 배송 부탁 드립니다.</option>
-													<option value="">부재 시 경비실에 맡겨주세요.</option>
-													<option value="">핸드폰으로 연락 부탁 드립니다.</option>
-													<option value="direct">직접입력</option>
-												</select>
-												<div class="input-block direct_input">
-													<input type="text" placeholder="배송 시 요청사항을 입력하세요" class="field__input">
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="summary_content mypage_each2">
-								<h5 class="checkout_tit1">반품사유 선택</h5>
-								<div class="input-block return_reason_select">
-									<select class="toteme-select-style">
-										<option value="" selected disabled>반품사유를 선택해주세요.</option>
-										<option value="">변심</option>
-										<option value="">이미지 차이</option>
-										<option value="">상품불량(작동불량)</option>
-										<option value="">기타사유</option>
-									</select>
-								</div>
-								<div class="checkbox_custom_box">
-									<input id="return_agree" class="checkbox" value="2" type="checkbox">
-									<label for="return_agree">주문하실 상품의 상품명, 가격, 배송정보를 확인하였으며, 주문취소 재결제에 동의하시겠습니까? <br >(전자상거래법 제8조 제2항)
 									</label>
 								</div>
 							</div>

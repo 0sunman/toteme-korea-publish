@@ -89,8 +89,8 @@ const pageData = [
   {"type":"product", "pid":"T-PD-017", "state":"DONE" , "completedate":"2021-06-11", "url" : "/03_product/T-PD-017.ejs.html", "pageurl" : "03_product/T-PD-017.ejs", "title":"T-PD-017. Error page 500", "title2":"에러페이지 500"},
 
   {"type":"order", "pid":"T-OD-007", "state":"DONE" , "completedate":"2021-06-11", "url" : "/04_order/T-OD-007.ejs.html", "pageurl" : "04_order/T-OD-007.ejs", "title":"T-OD-007 ~ 025. Order Page", "title2":"주문서 - 회원"},
-  {"type":"order", "pid":"T-OD-022", "state":"DONE" , "completedate":"2021-06-11", "url" : "/04_order/T-OD-022.ejs.html", "pageurl" : "04_order/T-OD-022.ejs", "title":"T-OD-022. Order Page(non-member)", "title2":"주문서 - 비회원"},
-  {"type":"order", "pid":"T-OD-024", "state":"DONE" , "completedate":"2021-06-11", "url" : "/04_order/T-OD-024.ejs.html", "pageurl" : "04_order/T-OD-024.ejs", "title":"T-OD-024. Payment Page(non-member)", "title2":"결제"},
+  {"type":"order", "pid":"T-OD-022", "state":"DONE" , "completedate":"2021-06-11", "url" : "/04_order/T-OD-022.ejs.html", "pageurl" : "04_order/T-OD-022.ejs", "title":"T-OD-022. Order Page(Guest)", "title2":"주문서 - 비회원"},
+  {"type":"order", "pid":"T-OD-024", "state":"DONE" , "completedate":"2021-06-11", "url" : "/04_order/T-OD-024.ejs.html", "pageurl" : "04_order/T-OD-024.ejs", "title":"T-OD-024. Payment Page(Guest)", "title2":"결제"},
   {"type":"order", "pid":"T-OD-037", "state":"DONE" , "completedate":"2021-06-11", "url" : "/04_order/T-OD-037.ejs.html", "pageurl" : "04_order/T-OD-037.ejs", "title":"T-OD-037. Order Summary", "title2":"주문완료"},
   
   {"type":"mypage", "pid":"T-MY-003", "state":"DONE" , "completedate":"2021-06-11", "url" : "/01_mypage/T-MY-003.ejs.html", "pageurl" : "01_mypage/T-MY-003.ejs", "title":"T-MY-003. Mypage", "title2":"마이페이지 - 나의 쇼핑정보"},
@@ -105,7 +105,9 @@ const pageData = [
   // {"type":"mypage", "pid":"T-MY-016", "state":"DONE" , "completedate":"2021-06-11", "url" : "/01_mypage/T-MY-016.ejs.html", "pageurl" : "01_mypage/T-MY-016.ejs", "title":"T-MY-016. Waitinglist(empty)", "title2":"마이페이지 - 입고 알림 목록(상품이 없는 경우)"},
   // {"type":"mypage", "pid":"T-MY-017", "state":"DONE" , "completedate":"2021-06-11", "url" : "/01_mypage/T-MY-017.ejs.html", "pageurl" : "01_mypage/T-MY-017.ejs", "title":"T-MY-017. Waitinglist", "title2":"마이페이지 - 입고 알림 목록"},
   {"type":"mypage", "pid":"T-MY-021", "state":"DONE" , "completedate":"2021-06-30", "url" : "/01_mypage/T-MY-021.ejs.html", "pageurl" : "01_mypage/T-MY-021.ejs", "title":"T-MY-021. Orders", "title2":"마이페이지 - 주문내역"},
-  {"type":"mypage", "pid":"T-MY-023", "state":"DONE" , "completedate":"2021-06-30", "url" : "/01_mypage/T-MY-023.ejs.html", "pageurl" : "01_mypage/T-MY-023.ejs", "title":"T-MY-023. Returns", "title2":"마이페이지 - 반품신청"},
+  {"type":"mypage", "pid":"T-MY-021-1", "state":"DONE" , "completedate":"2021-07-05", "url" : "/01_mypage/T-MY-021-1.ejs.html", "pageurl" : "01_mypage/T-MY-021-1.ejs", "title":"T-MY-021-1. Orders - Details", "title2":"마이페이지 - 주문내역 - 상세"},
+  {"type":"mypage", "pid":"T-MY-019-1", "state":"DONE" , "completedate":"2021-06-30", "url" : "/01_mypage/T-MY-019-1.ejs.html", "pageurl" : "01_mypage/T-MY-019-1.ejs", "title":"T-MY-019-1. Orders (Guest)", "title2":"마이페이지 - 비회원 주문조회"},
+  {"type":"mypage", "pid":"T-MY-023", "state":"DONE" , "completedate":"2021-07-05", "url" : "/01_mypage/T-MY-023.ejs.html", "pageurl" : "01_mypage/T-MY-023.ejs", "title":"T-MY-023. Returns", "title2":"마이페이지 - 반품신청"},
   {"type":"mypage", "pid":"T-MY-024", "state":"DONE" , "completedate":"2021-06-30", "url" : "/01_mypage/T-MY-024.ejs.html", "pageurl" : "01_mypage/T-MY-024.ejs", "title":"T-MY-024. Returns(empty)", "title2":"마이페이지 - 반품신청(주문 내역이 없는 경우)"},
   {"type":"mypage", "pid":"T-MY-025", "state":"DONE" , "completedate":"2021-06-30", "url" : "/01_mypage/T-MY-025.ejs.html", "pageurl" : "01_mypage/T-MY-025.ejs", "title":"T-MY-025. Returns - details", "title2":"마이페이지 - 반품신청 - 상세"},
   {"type":"mypage", "pid":"T-MY-026", "state":"DONE" , "completedate":"2021-06-30", "url" : "/01_mypage/T-MY-026.ejs.html", "pageurl" : "01_mypage/T-MY-026.ejs", "title":"T-MY-026. Returns - Done", "title2":"마이페이지 - 반품신청 - 완료"},

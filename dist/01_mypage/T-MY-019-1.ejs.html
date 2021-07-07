@@ -1093,398 +1093,432 @@
       <main id="MainContent" class="main-content critical-clear">
          <!-- BEGIN content_for_index -->
          <!--  include ("./pages/00_main/index.ejs") BEGIN content_for_index -->
-         <style>
-p.gnbcheck{text-align: center; margin-top: 30px;}
-.publishlist{padding:50px;padding-top:0px;}
-a.pub_link{display: inline-block; min-width: 500px;}
-@media screen and (max-width: 1000px){
-    a.pub_link{display: inline; min-width: unset;}
-    .publishlist{padding-left: 15px; padding-right: 15px;}
-}
-.publishlist ul{margin-bottom: 40px;}
-.publishlist ul>li{list-style-type: circle;}
-</style>
-    <p class='gnbcheck'>*You can check GNB Above*</p>
-    <div class='publishlist'>   
-       <h2>Main</h2>
-        <ul id='main'>
-            
-            <li>
-                <a class="pub_link" href='../00_main/index.ejs.html.html'>Component Guide</a>&nbsp;&nbsp;2021-06-01
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../00_main/index2.ejs.html'>Main2</a>&nbsp;&nbsp;2021-06-01
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../00_main/inputguide.ejs.html'>Guidelines for Input (error,commit..etc)</a>&nbsp;&nbsp;2021-06-01
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../00_main/shop_scarves.ejs.html'>Display Page Type 01 (2–4 columns) </a>&nbsp;&nbsp;2021-06-01
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../00_main/shop_silk.ejs.html'>Display Page Type 02 (1-2–4 columns)</a>&nbsp;&nbsp;2021-06-01
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../00_main/T-CT-001.sectionwithbackground.ejs.html'>T-CT-001. Component - Section with background (Tutorial)</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../00_main/T-CT-002.onebackgroundtwosection.ejs.html'>T-CT-002. Component - One background two section</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../00_main/T-CT-003.twobackgroundtwosection.ejs.html'>T-CT-003. Component - Two background tw section</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../00_main/T-CT-004.twosectionwithmedia.ejs.html'>T-CT-004. Component - Two section with media</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../00_main/T-CT-005.threesesctionwithmedia.ejs.html'>T-CT-005. Component - Rhreesesction with media</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../00_main/T-CT-006.videosection.ejs.html'>T-CT-006. Component - Videosection</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../00_main/T-CT-007.manualproductlist.ejs.html'>T-CT-007. Component - Manual product list</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../00_main/T-CT-008.pageheader.ejs.html'>T-CT-008. Component - Page header</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../00_main/T-CT-009.freeHTML.ejs.html'>T-CT-009. Component - Free HTML</a>&nbsp;&nbsp;2021-06-30
-            </li>
-             
-        </ul>
+         <div class="container mypage">
+	<div class="template-account__header">
+		안녕하세요, 이현대님
+	</div>
+	<div class="template-account__wrapper">
+		 <div class="template-account__left"></div>
+		 <div class="template-account__navlist ">
+			<div class="template-account__navlist--content">
+				 <div class="navlist__dropdown-wrapper">
+						<div class="custom-select__wrapper">
+							 <select class="navlist__dropdown custom-select__select m-font-14" style="background-image: url(../assets/icon-small-arrow-down.svg);">
+									<option value=""> <!-- selected=""-->
+										비회원 주문조회
+									</option>
+							 </select>
+							 <span class="main-title custom-select__label text-small">비회원 주문조회</span>
+						</div>
+				 </div>
+				 <ul class="navlist mypage" js-account-nav="navlist">
+						<li class="navlist__item">
+							 <a class="navlist__link text-link is-active" href="#">비회원 주문조회</a>
+						</li>
+				 </ul>
+			</div>
+	 </div>
+		 <div class="template-account__content">
+			<div class="template-account__text_hdtype_1 alert title" style="display: none;">
+				<div class="rte">
+					<p class="error">이름을 입력해 주세요.</p>
+				</div>
+			</div>
+			<div class="template-mypage__form-wrapper guest_order_list">
+				<ul class="mypage_toggle_menu mypage_order_menu">
+					<li class="accordion__item is-active">
+						<button type="button" class="toggle_tit accordion__control"># 17032700034509 (2020-05-05)</button>
+						<div class="toggle_con_box">
+							<table class="product-table">
+								<caption class="visually-hidden">Shopping cart</caption>
+								<thead class="product-table__header">
+									<tr>
+										<th scope="col"><span class="visually-hidden">Product image</span></th>
+										<th scope="col"><span class="visually-hidden">Description</span></th>
+										<th scope="col"><span class="visually-hidden">Quantity</span></th>
+										<th scope="col"><span class="visually-hidden">Price</span></th>
+									</tr>
+								</thead>
+								<tbody id="gip-product-table-processed">
+									<tr class="product">
+										<td class="product__image">
+											<div class="product-thumbnail">
+												<div class="product-thumbnail__wrapper">
+													<img alt="Centered monogram silk scarf creme - One size" class="product-thumbnail__image" src="../assets/order1.jpg">
+												</div>
+												<span class="product-thumbnail__quantity" aria-hidden="true">1</span>
+											</div>
+										</td>
+										<th class="product__description" scope="row">
+											<span class="product__description__name order-summary__emphasis">센터드 모노그램 실크 스카프 크림</span>
+											<span class="product__description__variant">원 사이즈</span>
+										</th>
+										<td class="product__quantity">
+											<span class="visually-hidden">
+												1
+											</span>
+										</td>
+										<td class="product__price">
+											<span class="order-summary__emphasis skeleton-while-loading notranslate">279,000원</span>
+										</td>
+									</tr>
+									<tr class="product">
+										<td class="product__image">
+											<div class="product-thumbnail ">
+												<div class="product-thumbnail__wrapper">
+													<img alt="The Regulars sunglasses black - One size" class="product-thumbnail__image" src="../assets/order2.jpg">
+												</div>
+												<span class="product-thumbnail__quantity" aria-hidden="true">1</span>
+											</div>
+										</td>
+										<th class="product__description" scope="row">
+											<span class="product__description__name order-summary__emphasis">더 레귤러 선글래스 블랙</span>
+											<span class="product__description__variant">원 사이즈</span>
+										</th>
+										<td class="product__quantity">
+											<span class="visually-hidden">
+												1
+											</span>
+										</td>
+										<td class="product__price">
+											<span class="order-summary__emphasis skeleton-while-loading notranslate">390,000원</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="summary_content mypage_each2">
+								<h5 class="checkout_tit1">주문상태</h5>
+								<div class="txt_btn_box">
+									<h4 class="mypage_tit2">반품</h4>
+									<div>
+										<button type="button" class="button button--primary modal_trigger" data-modal="return-modal">상세보기</button>
+									</div>
+								</div>
+							</div>
+							<div class="summary_content">
+								<h5 class="checkout_tit1">배송정보</h5>
+								<div class="summary_text_block">
+									<p>택배배송<br>
+										이현대<br>
+										010-1234-5678<br>
+										서울특별시 강남구 강남대로1길 1층<br>
+										부재 시 경비실에 맡겨주세요.</p>
+								</div>
+							</div>
+							<div class="summary_content mypage_each2">
+								<h5 class="checkout_tit1">결제정보 <button type="button" class="button button--primary modal_trigger" data-modal="payment_edit-modal">결제수단 변경</button></h5>
+								<div class="summary_text_block">
+									<ul class="my_price_list">
+										<li>
+											<span class="tit1">주문금액</span>
+											<span class="txt1">200,000원</span>
+										</li>
+										<li>
+											<span class="tit1">배송비</span>
+											<span class="txt1">무료배송</span>
+										</li>
+										<li>
+											<span class="tit1">할인금액</span>
+											<span class="txt1">-50,000원</span>
+										</li>
+										<li>
+											<span class="tit1">총 결제금액</span>
+											<span class="txt1">150,000원</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="summary_content mypage_each2">
+								<h5 class="checkout_tit1">결제수단</h5>
+								<div class="summary_text_block">
+									<ul class="my_price_list">
+										<li>
+											<span class="tit1">무통장입금</span>
+											<span class="txt1">150,000원</span>
+										</li>
+										<li>
+											<div class="summary_text_block">
+												<p>
+													<b>결제하실 금액: 150,000원</b> / 입금마감일 <b>2021-06-30</b> <br>
+													2021년 06년 30일까지 입금하지 않으면 주문이 취소됩니다.<br>
+													입금계좌 : 농협은행(12345678912345)<br>
+													입금자명 : 이현대
+												</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="summary_content mypage_each2">
+								<h5 class="checkout_tit1">승인내역</h5>
+								<div class="summary_text_block">
+									<ul class="my_price_list">
+										<li>
+											<span class="tit1">2021-05-05 12:41:22</span>
+											<span class="txt1">150,000원</span>
+										</li>
+										<li>
+											<span class="tit1">무통장입금</span>
+											<span class="txt1"></span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="button-block mypage_order_button">
+								<input class="button button--primary button--block button--large" type="button" value="반품 신청">
+								<input class="button button--primary button--block button--large" type="button" value="주문 취소">
+							</div>
+							<div class="button-block mypage_order_button">
+								<input class="button button--primary button--block button--large" type="button" value="카드전표 출력">
+								<input class="button button--primary button--block button--large" type="button" value="현금영수증">
+								<input class="button button--primary button--block button--large" type="button" value="세금계산서 신청">
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+					 
+		 </div>
+	</div>
+</div>
 
-        <h2>My Page</h2>
-        <ul id='mypage'>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-003.ejs.html'>T-MY-003. Mypage</a>&nbsp;&nbsp;2021-06-11
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-004.ejs.html'>T-MY-004. Edit member information</a>&nbsp;&nbsp;2021-06-11
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-005.ejs.html'>T-MY-005 ~ 008. Edit member information-additional</a>&nbsp;&nbsp;2021-06-11
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-009.ejs.html'>T-MY-009. Addresses</a>&nbsp;&nbsp;2021-06-11
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-010.ejs.html'>T-MY-010. Add address</a>&nbsp;&nbsp;2021-06-11
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-011.ejs.html'>T-MY-011. Addresses(empty)</a>&nbsp;&nbsp;2021-06-11
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-013.ejs.html'>T-MY-013. Wishlist(empty)</a>&nbsp;&nbsp;2021-06-11
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-014.ejs.html'>T-MY-014. Wishlist</a>&nbsp;&nbsp;2021-06-11
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-021.ejs.html'>T-MY-021. Orders</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-021-1.ejs.html'>T-MY-021-1. Orders - Details</a>&nbsp;&nbsp;2021-07-05
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-019-1.ejs.html'>T-MY-019-1. Orders (Guest)</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-023.ejs.html'>T-MY-023. Returns</a>&nbsp;&nbsp;2021-07-05
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-024.ejs.html'>T-MY-024. Returns(empty)</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-025.ejs.html'>T-MY-025. Returns - details</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-026.ejs.html'>T-MY-026. Returns - Done</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-028.ejs.html'>T-MY-028. Cancel Order</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-031.ejs.html'>T-MY-031. Receipt(empty)</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-032.ejs.html'>T-MY-032. Receipt</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-034.ejs.html'>T-MY-034. Tax Receipt</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-035.ejs.html'>T-MY-035. Credit Receipt</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-036.ejs.html'>T-MY-036. Cash Receipt</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-037.ejs.html'>T-MY-037. Receipt popup</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-038.ejs.html'>T-MY-038. Deposit(empty)</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../01_mypage/T-MY-039.ejs.html'>T-MY-039. Deposit</a>&nbsp;&nbsp;2021-06-30
-            </li>
-             
-        </ul>
+<div id="payment_edit-modal" class="modal modal--light payment_edit-modal" role="dialog" tabindex="-1">
+	<div class="modal__overlay" tabindex="-1">
+		<div class="modal__card">
+			<div class="modal__header">
+				<h5 class="modal__title  preorder-modal__title">결제수단 변경</h5>
+				<button class="modal__close">
+					<span class="visually-hidden">
+						Close
+					</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+					</svg> </button>
+			</div>
+			<div class="modal__body">
+				<div class="payment_edit_container">
+					<div class="checkout_content payment_wrap">
+						<div class="">
+							<h5 class="checkout_tit1">신용카드</h5>
+							<div class="payment_con_box">
+								<div class="payment_type1 active">
+									<h5 class="payment_tit1">카드선택</h5>
+									<div class="payment_radio_wrap">
+										<div class="radio_custom_box">
+											<input id="credit_card1" class="radio_input" value="1" type="radio" name="credit_card">
+											<label for="credit_card1">KB국민카드</label>
+										</div>
+										<div class="radio_custom_box">
+											<input id="credit_card2" class="radio_input" value="2" type="radio" name="credit_card" data-card-attr="add_plan">
+											<label for="credit_card2">삼성카드</label>
+										</div>
+										<div class="radio_custom_box">
+											<input id="credit_card3" class="radio_input" value="3" type="radio" name="credit_card" data-card-attr="add_plan">
+											<label for="credit_card3">현대카드</label>
+										</div>
+										<div class="radio_custom_box">
+											<input id="credit_card4" class="radio_input" value="4" type="radio" name="credit_card" data-card-attr="add_plan">
+											<label for="credit_card4">신한카드</label>
+										</div>
+										<div class="radio_custom_box">
+											<input id="credit_card5" class="radio_input" value="5" type="radio" name="credit_card" data-card-attr="add_bc">
+											<label for="credit_card5">BC카드</label>
+										</div>
+										<div class="radio_custom_box">
+											<input id="credit_card6" class="radio_input" value="6" type="radio" name="credit_card" data-card-attr="add_plan">
+											<label for="credit_card6">롯데카드</label>
+										</div>
+										<div class="radio_custom_box">
+											<input id="credit_card7" class="radio_input" value="7" type="radio" name="credit_card" data-card-attr="add_plan">
+											<label for="credit_card7">KEB하나카드</label>
+										</div>
+										<div class="radio_custom_box">
+											<input id="credit_card8" class="radio_input" value="8" type="radio" name="credit_card" data-card-attr="add_plan">
+											<label for="credit_card8">NH농협카드</label>
+										</div>
+										<div class="radio_custom_box">
+											<input id="credit_card9" class="radio_input" value="9" type="radio" name="credit_card">
+											<label for="credit_card9">카카오뱅크</label>
+										</div>
+										<div class="radio_custom_box">
+											<input id="credit_card10" class="radio_input" value="10" type="radio" name="credit_card">
+											<label for="credit_card10">케이뱅크</label>
+										</div>
+										<div class="radio_custom_box">
+											<input id="credit_card11" class="radio_input" value="11" type="radio" name="credit_card" data-card-attr="add_hpoint">
+											<label for="credit_card11">H.point KB 국민카드</label>
+										</div>
+									</div>
+									
+									<div class="card_type_box">
+										<div class="add_plan">
+											<div class="input-block">
+												<select id="payment_plan" class="toteme-select-style" title="할부 선택">
+													<option value="" selected="">일시불</option>
+													<option value="">2개월</option>
+												</select>
+											</div>
+										</div>
+										<div class="add_bc">
+											<h6 class="payment_tit1">BC카드종류</h6>
+											교보증권, 유진투자증권, 미래에셋증권, 유안타증권, DB금융투자, SK증권, NH투자증권, 코나카드, 토스카드, 산림조합, 한국투자증권, 은행카드
+										</div>
+										<div class="add_hpoint">
+											<h6 class="payment_tit1">H.Point 추가적립</h6>
+											결제금액 최대 1.5% H.Point 추가적립 (기본적립율 포함 최대 1.65% 적립)
+											카드대금 결제일 다음주 첫 영업일 적립
+										</div>
+									</div>
+								</div>
+								<div class="payment_type2">
+									<ul class="my_price_list">
+										<li>
+											<span class="tit1">결제금액</span>
+											<span class="txt1">150,000원</span>
+										</li>
+									</ul>
+									<ul class="dot_list">
+										<li>폰뱅킹, 인터넷 뱅킹에 가입하신 고객만 사용 가능합니다. 계좌이체 수수료는 더현대에서 부담합니다.</li>
+										<li>[결제하기] 버튼을 선택하시면 온라인 계좌이체 화면으로 연결되어 결제를 진행할수 있습니다.</li>
+									</ul>
+									<div class="cash_receipt_box">
+										<h5 class="payment_tit1">현금영수증 발급 신청</h5>
+										<div class="payment_radio_wrap">
+											<div class="radio_custom_box">
+												<input id="receipt1" class="radio_input" value="1" type="radio" name="receipt" data-receipt="receipt_type1">
+												<label for="receipt1">소득공제용</label>
+											</div>
+											<div class="radio_custom_box">
+												<input id="receipt2" class="radio_input" value="2" type="radio" name="receipt" data-receipt="receipt_type2">
+												<label for="receipt2">지출증빙용</label>
+											</div>
+											<div class="radio_custom_box">
+												<input id="receipt3" class="radio_input" value="3" type="radio" name="receipt" checked="">
+												<label for="receipt3">신청안함</label>
+											</div>
+										</div>
+										<div class="receipt_type_box">
+											<div class="receipt_type1">
+												<div class="bank_type_box">
+													<div class="input-block">
+														<input placeholder="휴대폰번호(필수)" class="field__input" type="text" name="receipt[phone]" id="receipt_phone" title="휴대폰번호 필수입력">
+													</div>
+													<div class="text-block sub-description">
+														<p>'-' 없이 숫자만 입력하세요.</p>
+													</div>
+												</div>
+											</div>
+											<div class="receipt_type2">
+												<div class="bank_type_box">
+													<div class="input-block">
+														<input placeholder="사업자등록번호(필수)" class="field__input" type="text" name="receipt[num]" id="receipt_num" title="사업자등록번호 필수입력">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+						 </div>
 
-        <h2>Accounts</h2>
-        <ul id='join'>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-001.ejs.html'>T-LJ-001. Sign-in</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-002.ejs.html'>T-LJ-002. Order status (Guest)</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-004.ejs.html'>T-LJ-004. Find my ID</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-005.ejs.html'>T-LJ-005. Reset my paswword_Input my data</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-006.ejs.html'>T-LJ-006. Reset my paswword_Confirmation email sent</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-007.ejs.html'>T-LJ-007. Reset my paswword_Email confirmed</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-008.ejs.html'>T-LJ-008. Reset my paswword_Certification via mobile phone</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-009.ejs.html'>T-LJ-009. Reset my paswword_Input new password</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-010.ejs.html'>T-LJ-010. Reset my password_Change my password</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-011.ejs.html'>T-LJ-011. Reset my password_Change my password_Done</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-012.ejs.html'>T-LJ-012. Reset my paswword_Old password update</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-014.ejs.html'>T-LJ-014. Reset my paswword_Old password update_done</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-015.ejs.html'>T-LJ-015. Create my account_Certification</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-015-1.ejs.html'>T-LJ-015-1. Create my account_Certification done (Email - REDIRECTION)</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-015-2.ejs.html'>T-LJ-015-2. Create my account_Certification done (Email)</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-016.ejs.html'>T-LJ-016. Create my account_Connect existing account</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-017.ejs.html'>T-LJ-017. Create my account_Input my data</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-018.ejs.html'>T-LJ-018 ~ 019. Create my account_Privacy policy</a>&nbsp;&nbsp;2021-06-30
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../02_login_join/T-LJ-020.ejs.html'>T-LJ-020. Create my account_Account created</a>&nbsp;&nbsp;2021-06-30
-            </li>
-             
-        </ul>
+						 <div class="nm_payment_attr">
+							<div class="payment_guaranty">
+								<h5 class="checkout_tit1">채무지급 보증안내 <button type="button" class="button button--primary modal_trigger modal_trigger" data-modal="ly_guarantee-modal">서비스 가입사실 확인</button></h5>
+								<p>고객님의 안전거래를 위해 현금결제시 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.</p>
+							</div>
+							<ul class="my_price_list">
+								<li>
+									<span class="tit1">총 결제예정 금액</span>
+									<span class="txt1">150,000원</span>
+								</li>
+							</ul>
+							<div class="checkbox_custom_box">
+								<input id="payment_agree2" class="checkbox" value="2" type="checkbox">
+								<label for="payment_agree2">주문하실 상품의 결제수단 변경에 동의하시겠습니까?
+									(전자상거래법 제8조 제2항)</label>
+									<p class="comment error">결제수단 변경에 동의해주셔야 결제가 가능합니다.</p>
+							</div>
+						</div>
+					 </div>
+					</div>
+					<div class="button-block pcs2_vertical">
+						<button class="button button--block button--large">결제</button> 
+						<button class="button button--block button--large">취소</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
-        <h2>Products</h2>
-        <ul id='product'>
-            
-            <li>
-                <a class="pub_link" href='../03_product/T-PD-001.ejs.html'>T-PD-001. Product Display</a>&nbsp;&nbsp;2021-07-02
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../03_product/T-PD-006.ejs.html'>T-PD-006. PDP</a>&nbsp;&nbsp;2021-07-02
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../03_product/T-PD-006-1.ejs.html'>T-PD-006-1. size guide (Clothes)</a>&nbsp;&nbsp;2021-07-02
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../03_product/T-PD-006-2.ejs.html'>T-PD-006-2. size guide (Denim - Twisted seam)</a>&nbsp;&nbsp;2021-07-02
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../03_product/T-PD-006-3.ejs.html'>T-PD-006-3. size guide (Denim - Flare fit)</a>&nbsp;&nbsp;2021-07-02
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../03_product/T-PD-006-4.ejs.html'>T-PD-006-4. size guide (Denim - Loose fit)</a>&nbsp;&nbsp;2021-07-02
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../03_product/T-PD-006-5.ejs.html'>T-PD-006-5. size guide (Denim - Barrel leg)</a>&nbsp;&nbsp;2021-07-02
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../03_product/T-PD-006-6.ejs.html'>T-PD-006-6. size guide (Denim - Regular fit)</a>&nbsp;&nbsp;2021-07-02
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../03_product/T-PD-006-7.ejs.html'>T-PD-006-7. size guide (Shoes)</a>&nbsp;&nbsp;2021-07-02
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../03_product/T-PD-015.ejs.html'>T-PD-015. PDP (End of sale + no_image)</a>&nbsp;&nbsp;2021-06-11
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../03_product/T-PD-016.ejs.html'>T-PD-016. Error page 404</a>&nbsp;&nbsp;2021-06-11
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../03_product/T-PD-017.ejs.html'>T-PD-017. Error page 500</a>&nbsp;&nbsp;2021-06-11
-            </li>
-             
-        </ul>
+<div id="ly_guarantee-modal" class="modal modal--light ly_guarantee-modal md-modal" role="dialog" tabindex="-1">
+	<div class="modal__overlay" tabindex="-1">
+		<div class="modal__card">
+			<div class="modal__header">
+				<h5 class="modal__title preorder-modal__title">지급보증서</h5>
+				<button class="modal__close">
+					<span class="visually-hidden">
+						Close
+					</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+					</svg> </button>
+			</div>
+			<div class="modal__body">
+				<div class="ly_guarantee_container">
+					<img src="https://image.thehyundai.com/hdmall/images/co/img_guarantee.jpg" alt="" class="pc_only">
+					<img src="https://image.thehyundai.com/hdsmart/images/co/img_guarantee.jpg" alt="" class="mo_only">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
-
-        <h2>Orders</h2>
-        <ul id='order'>
-            
-            <li>
-                <a class="pub_link" href='../04_order/T-OD-007.ejs.html'>T-OD-007 ~ 025. Order Page</a>&nbsp;&nbsp;2021-06-11
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../04_order/T-OD-022.ejs.html'>T-OD-022. Order Page(Guest)</a>&nbsp;&nbsp;2021-06-11
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../04_order/T-OD-024.ejs.html'>T-OD-024. Payment Page(Guest)</a>&nbsp;&nbsp;2021-06-11
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../04_order/T-OD-037.ejs.html'>T-OD-037. Order Summary</a>&nbsp;&nbsp;2021-06-11
-            </li>
-             
-        </ul>
-        
-        <h2>About/Question/Uniforms</h2>
-        <ul id='page'>
-            
-            <li>
-                <a class="pub_link" href='../05_page_about/T-AB-001.ejs.html'>T-AB-001. About - Totême</a>&nbsp;&nbsp;2021-07-02
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../05_page_about/T-AB-002.ejs.html'>T-AB-002. About - Store - Biblioteksgatan no.5</a>&nbsp;&nbsp;2021-07-02
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../05_page_about/T-AB-003.ejs.html'>T-AB-003. About - Store - Nordiska Kompaniet</a>&nbsp;&nbsp;2021-07-02
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../05_page_about/T-AB-004.ejs.html'>T-AB-004. About - Sustainability</a>&nbsp;&nbsp;2021-07-02
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../04_page_question/T-QA-001.ejs.html'>2-1. Question - COVID-19 FAQ</a>&nbsp;&nbsp;2021-07-01
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../04_page_question/T-QA-002.ejs.html'>2-2. Question - Payments</a>&nbsp;&nbsp;2021-07-01
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../04_page_question/T-QA-003.ejs.html'>2-3. Question - Shipping</a>&nbsp;&nbsp;2021-07-01
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../04_page_question/T-QA-004.ejs.html'>2-4. Question - Returns</a>&nbsp;&nbsp;2021-07-01
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../04_page_question/T-QA-005.ejs.html'>2-5. Question - Order tracking</a>&nbsp;&nbsp;2021-07-01
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../04_page_question/T-QA-006.ejs.html'>2-6. Question - Store pick-up</a>&nbsp;&nbsp;2021-07-01
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../04_page_question/T-QA-007.ejs.html'>2-7. Question - Coming soon</a>&nbsp;&nbsp;2021-07-01
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../06_page_uniforms/T-ETC-001.ejs.html'>3-1. Uniforms - 1depth(3col)</a>&nbsp;&nbsp;2021-06-01
-            </li>
-            
-            <li>
-                <a class="pub_link" href='../06_page_uniforms/T-ETC-002.ejs.html'>3-2. Uniforms - 2depth(2col)</a>&nbsp;&nbsp;2021-06-01
-            </li>
-             
-        </ul>
-    </div>
-    <a href='https://github.com/0sunman/toteme-korea-publish'>
-        <img src="https://0sunman.github.io/toteme-korea-publish/public/css/github.png" style='width:50px; height: 50px; position: fixed; bottom:10px;right:10px;z-index:999999'>
-    </a>
-
+<div id="return-modal" class="modal modal--light return-modal" role="dialog" tabindex="-1">
+	<div class="modal__overlay" tabindex="-1">
+		<div class="modal__card">
+			<div class="modal__header">
+				<h5 class="modal__title preorder-modal__title">상세보기</h5>
+				<button class="modal__close">
+					<span class="visually-hidden">
+						Close
+					</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+					</svg> </button>
+			</div>
+			<div class="modal__body">
+				<div class="return_modal_container">
+					<table class="table_type1">
+						<colgroup>
+							<col style="width: 30%;">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">반품상태</th>
+								<td>반품접수 2017-03-24 11:12:13<br> 
+									반품진행중 2017-03-24 11:03:12</td>
+							</tr>
+							<tr>
+								<th scope="row">반품정보<br> (상품/배송지)</th>
+								<td>
+									<p class="return_txt">브이넥 면 카라 티셔츠 STRIPE
+										<br> 옵션 : Pear green / 사이즈 40  1개</p>
+									<p class="return_txt">박현대 <br>010-8989-1212<br> 
+										12456 서울 강남구 청담동 123-5 <br>현대빌딩 3층 </p>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">환불방법</th>
+								<td>신용카드</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="button-block">
+						<button class="button button--block button--large">닫기</button> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
          <!-- END content_for_index -->
       </main>
       <!-- Footer -->
@@ -1501,13 +1535,13 @@ a.pub_link{display: inline-block; min-width: 500px;}
                      이메일
                   </p>
                   <a class="site-footer__info" href="mailto:shop@toteme-studio.com">
-                     shop.kr@toteme-studio.com
+                  shop@toteme-studio.com
                   </a>
                   <p class="site-footer__title">
                      문의전화
                   </p>
-                  <a class="site-footer__info" href="tel:1522-0274">
-                     1522-0274 (유료)
+                  <a class="site-footer__info" href="tel:+46 8 20 38 20">
+                  +46 8 20 38 20
                   </a>
                </div>
                <div class="site-footer__col">
@@ -1540,11 +1574,6 @@ a.pub_link{display: inline-block; min-width: 500px;}
                         </a>
                      </li>
                      <li class="navlist__item">
-                        <a class="navlist__link text-link" href="/pages/about">
-                        About
-                        </a>
-                     </li>
-                     <li class="navlist__item">
                         <a class="navlist__link text-link" href="/pages/stores">
                         매장정보
                         </a>
@@ -1556,7 +1585,7 @@ a.pub_link{display: inline-block; min-width: 500px;}
                      </li>
                      <li class="navlist__item">
                         <a class="navlist__link text-link" href="/pages/careers">
-                        반품 및 환불
+                        채용정보
                         </a>
                      </li>
                   </ul>
@@ -1680,7 +1709,7 @@ a.pub_link{display: inline-block; min-width: 500px;}
                                  <option value="KZ">Kazakhstan</option>
                                  <option value="KE">Kenya</option>
                                  <option value="KI">Kiribati</option>
-                                 <option value="KR">대한민국</option>
+                                 <option value="KR">KR / KST</option>
                                  <option value="XK">Kosovo</option>
                                  <option value="KW">Kuwait</option>
                                  <option value="KG">Kyrgyzstan</option>
@@ -1808,7 +1837,7 @@ a.pub_link{display: inline-block; min-width: 500px;}
                                  <option value="ZM">Zambia</option>
                                  <option value="ZW">Zimbabwe</option>
                               </select>
-                              <span class="custom-select__label text-small">대한민국</span>
+                              <span class="custom-select__label text-small">KR / KST</span>
                            </div>
                            <span class="select__current-title"></span>
                         </div>
@@ -1857,7 +1886,7 @@ a.pub_link{display: inline-block; min-width: 500px;}
                  <div class="section_middle">
                      <div class="txt"><span>주식회사 현대백화점  |  대표이사 : 김형종 외 2인</span></div>
                      <p class="txt"></p><address>서울시 강남구 테헤란로98길 12 </address><span> | 사업자등록번호 : 211-87-21455 [<a href="http://www.ftc.go.kr/www/bizCommView.do?key=232&amp;apv_perm_no=2010322014830201882&amp;pageUnit=10&amp;searchCnd=wrkr_no&amp;searchKrwd=2118721455&amp;pageIndex=1" data-toggle="winpopup" data-api="center,750,700,scrollbars" target="_blank">사업자정보 확인</a>] | 통신판매업신고 : 2010-서울강남-01882</span><p></p>
-                     <p class="txt"><span>고객센터 : 1522-0274 / <a href="mailto:shop.kr@toteme-studio.com">shop.kr@toteme-studio.com</a> | 개인정보관리 및 청소년보호 책임자 : 회원운영관리담당 장근혁 | 호스팅서비스 : (주)현대백화점</span></p>
+                     <p class="txt"><span>고객센터 : 1661-8444 / <a href="mailto:shop.kr@toteme-studio.com">shop.kr@toteme-studio.com</a> | 개인정보관리 및 청소년보호 책임자 : 회원운영관리담당 장근혁 | 호스팅서비스 : (주)현대백화점</span></p>
                     
                      <p class="txt copy">CopyrightⓒHyundai Department Store. All rights reserved.</p>
                      <p class="txt safe">고객님의 안전거래를 위해 현금결제시 우리은행과 채무지급보증계약을 체결하여 안전거래를 보장하고 있습니다. <a href="#" class="modal_trigger" data-modal="ly_guarantee-modal">서비스 가입사실 확인</a></p>

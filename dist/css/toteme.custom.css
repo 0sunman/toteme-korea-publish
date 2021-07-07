@@ -290,6 +290,9 @@ body.overflow-hidden {overflow: hidden;}
 .pdp_guide_ul{margin-bottom: 10px;}
 #productAccordion .accordion__content{margin-top: 15px; margin-bottom: 30px;}
 .size-guide td:first-child, .size-guide th:first-child{text-align: center;}
+.template-collection__header-container.template-collection__header-container--with-description.is-collapsed, .template-collection__header-container.template-collection__header-container--with-description .template-collection__header{max-height: 207px;}
+.template-collection__header-container.template-collection__header-container--with-description{height: auto; max-height: 700px;}
+.template-collection__header-outer{position: static;}
 /* //상품 */
 
 /* 주문 */
@@ -705,8 +708,8 @@ li > a.navlist__link.text-link{padding-left:15px}
 .mypage_time_select{text-align-last: center;}
 .mypage_toggle_menu.mypage_order_menu{margin: 5px 0 0;}
 .mypage_toggle_menu.mypage_order_menu .toggle_tit{padding-left: 15px;}
-.mypage_toggle_menu.mypage_order_menu .toggle_tit:before{background-image: url(../assets/icon-small-arrow-down.svg); background-size: 8px auto; right: 13px; border-width: 0;}
-.mypage_toggle_menu.mypage_order_menu>li.is-active .toggle_tit:before{background-image: url(../assets/icon-small-arrow-down.svg); transform: translateY(-50%) rotate(180deg);}
+.mypage_toggle_menu.mypage_order_menu .toggle_tit:before{background-image: url(../assets/icon-small-arrow-down.svg); background-size: 8px auto; right: 13px; border-width: 0; transform: translateY(-50%) rotate(-90deg);}
+.mypage_toggle_menu.mypage_order_menu>li.is-active .toggle_tit:before{background: 0 none;}
 .mypage_toggle_menu.mypage_order_menu .toggle_con_box{padding-top: 0;}
 .mypage_order_menu .product-table{border-top: 1px solid #171616;}
 .mypage_order_menu .summary_content{margin-bottom: 0; padding: 15px;}
@@ -714,7 +717,7 @@ li > a.navlist__link.text-link{padding-left:15px}
 .my_price_list>li:last-child{margin-bottom: 0;}
 .my_price_list .tit1{display: table-cell;}
 .my_price_list .txt1{display: table-cell; text-align: right;}
-.button-block.mypage_order_button{margin-top: 30px;}
+.button-block.mypage_order_button+.mypage_order_button{margin-top: 30px;}
 .button-block.mypage_order_button .button{margin-bottom: 10px;}
 @media screen and (max-width: 1000px){
     .payment_edit-modal .modal__card{width: calc(100% - 10px);}
@@ -812,6 +815,10 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 .about_toteme p, .about_store p, .about_sustainability p{word-break: keep-all;}
 
 .uniform-page .custom-module__content{background: #fff;}
+
+/* 비회원 주문조회 */
+.guest_order_list .mypage_order_menu{margin-top: -1px;}
+.guest_order_list .mypage_order_menu>li .toggle_tit:before{display: none;}
 
 
 /* 
