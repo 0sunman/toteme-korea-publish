@@ -407,6 +407,31 @@
                             </a>
                         </li>
                     </ul>
+                    <ul class="site-header__account-navlist navlist navlist--large critical-hide">
+                        <li class="navlist__item navlist__item--margin">
+                            <a class="navlist__link text-link" href="#">
+                            로그아웃
+                            </a>
+                        </li>
+                        <li class="navlist__item">
+                            <a class="navlist__link text-link" href="#">
+                            나의 쇼핑정보
+                            </a>
+                        </li>
+                        <li class="navlist__item">
+                            <a class="navlist__link text-link" href="#">
+                            위시리스트
+                            <span class="badge" js-ajax-cart="cartCounter">
+                                2
+                            </span>
+                            </a>
+                        </li>
+                        <li class="navlist__item">
+                            <a class="navlist__link text-link" href="#">
+                            주문내역
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 </div>
             </div>
@@ -1126,9 +1151,6 @@
                   주문내역
                 </option>
                 <option value="">
-                  반품신청
-                </option>
-                <option value="">
                   영수증/세금계산서
                 </option>
                 <option value="">
@@ -1148,17 +1170,14 @@
           <li class="navlist__item">
              <a class="navlist__link text-link" href="#">회원정보 변경</a>
           </li>
-          <li class="navlist__item">
+          <li class="navlist__item navlist__item--margin">
              <a class="navlist__link text-link" href="#">배송주소록</a>
           </li>
           <li class="navlist__item">
              <a class="navlist__link text-link" href="#">위시리스트</a>
           </li>
-          <li class="navlist__item">
+          <li class="navlist__item navlist__item--margin">
             <a class="navlist__link text-link" href="#">주문내역</a>
-         </li>
-         <li class="navlist__item">
-            <a class="navlist__link text-link" href="#">반품신청</a>
          </li>
          <li class="navlist__item">
             <a class="navlist__link text-link" href="#">영수증/세금계산서</a>
@@ -1180,6 +1199,7 @@
          $(".navlist.mypage>li:nth-child(5) a").addClass("is-active");
       },100)
       </script>
+   
    
 		 <div class="template-account__content">
 			<div class="template-account__text_hdtype_1 alert title" style="display: none;">
