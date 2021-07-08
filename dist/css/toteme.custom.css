@@ -193,6 +193,7 @@ select.toteme-select-style{
     #MainContent .text-block.description{font-size:11px;}
 }
 
+
  /* //토템 요구사항 */
 
 
@@ -567,6 +568,10 @@ body.overflow-hidden {overflow: hidden;}
 /* 한국 애로우 변경 */
 li > a.navlist__link.text-link{padding-left:15px}
 /* // 한국 애로우 변경 */
+
+/* 개발요청요청*/
+#menuDrawer > div > div.menu-drawer__body ul.is-active > li span.text{padding-left: 30px;}
+.navlist__item > span.text{ display: inline-block; padding-left: 15px;}
 /* //테이블 */
 
 
@@ -693,6 +698,7 @@ li > a.navlist__link.text-link{padding-left:15px}
 .mypage_address_list .row+.row{margin-top: 20px;}
 .mypage_address_list .mypage_address_text{margin-bottom: 5px;}
 .mypage_address_list .button-block{margin-top: 25px;}
+.ta_c{text-align: center;}
 
 @media screen and (max-width: 1800px) {
     .checkout .input-block, .checkout .button-block, .checkout .checkout_btn_box, .checkout .checkbox-block, .mypage .input-block, .mypage .button-block, .mypage .checkbox-block{max-width: unset; padding-left: 36px; padding-right: 36px;}

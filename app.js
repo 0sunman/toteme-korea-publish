@@ -36,7 +36,7 @@ const State = {
 
 const pageData = [
   {"type":"index", "pid":"T-MI-001", "state":"DONE" , "completedate":"2021-06-01",  "url" : "/00_main/list.ejs.html", "pageurl" : "00_main/list.ejs", "title":"퍼블리스트", "isMain":true},
-  {"type":"main" , "pid":"T-MI-001", "state":"DONE" , "completedate":"2021-06-01",  "url" : "/00_main/1", "pageurl" : "00_main/index.ejs.html", "title":"Component Guide"},
+  {"type":"main" , "pid":"T-MI-001", "state":"DONE" , "completedate":"2021-06-01",  "url" : "/00_main/index.ejs.html", "pageurl" : "00_main/index.ejs", "title":"Component Guide"},
   {"type":"main" , "pid":"T-MI-001", "state":"DONE" , "completedate":"2021-06-01",  "title":"Main2","url" : "/00_main/index2.ejs.html", "pageurl" : "00_main/index2.ejs"},
   {"type":"main" , "pid":"T-MI-001", "state":"DONE" , "completedate":"2021-06-01",  "title":"Guidelines for Input (error,commit..etc)","url" : "/00_main/inputguide.ejs.html", "pageurl" : "00_main/inputguide.ejs"},
   {"type":"main" , "pid":"T-MI-001", "state":"DONE" , "completedate":"2021-06-01",  "title":"Display Page Type 01 (2–4 columns) ","url" : "/00_main/shop_scarves.ejs.html", "pageurl" : "00_main/shop_scarves.ejs"},
