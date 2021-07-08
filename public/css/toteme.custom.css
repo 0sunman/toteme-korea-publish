@@ -322,7 +322,7 @@ body.overflow-hidden {overflow: hidden;}
 .email_form>div:last-of-type{width: 40%; padding-left: 7px;}
 .address_edit_btn{margin-top: 5px;}
 .input-block [readonly]{background-color: #ddd; cursor: not-allowed;}
-.button-block{max-width: 500px; margin: 20px auto;}
+.button-block{max-width: 500px; margin: 10px auto;}
 .button-block.pcs2:after{content: ''; display: block; clear: both;}
 .button-block.pcs2 .btn{float: left; width: calc(50% - 4px);}
 .button-block.pcs2 .btn:hover{width: calc(50% - 4px);}
@@ -841,7 +841,7 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
     .login_join .section{ margin:34px 60px; }
 }
 .login_join .text.section{ margin:20px 15px;}
-.login_join form div{ margin-bottom: 20px;}
+.login_join form div{ margin-bottom: 10px;}
                            
 .login_join .sns-buttons.defaultblock > div{display:table; width:100%; max-width: 500px; margin:0 auto; margin-bottom:10px}
 .login_join .sns-buttons.defaultblock > div > label {display: table-cell; width:50%; text-align: left;}
