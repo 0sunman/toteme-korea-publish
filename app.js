@@ -113,7 +113,7 @@ const pageData = [
   {"type":"mypage", "pid":"T-MY-026", "state":"DONE" , "completedate":"2021-06-30", "url" : "/01_mypage/T-MY-026.ejs.html", "pageurl" : "01_mypage/T-MY-026.ejs", "title":"T-MY-026. Returns - Done", "title2":"마이페이지 - 반품신청 - 완료"},
   {"type":"mypage", "pid":"T-MY-028", "state":"DONE" , "completedate":"2021-07-08", "url" : "/01_mypage/T-MY-028.ejs.html", "pageurl" : "01_mypage/T-MY-028.ejs", "title":"T-MY-028. Cancel Order", "title2":"마이페이지 - 취소신청"},
   {"type":"mypage", "pid":"T-MY-031", "state":"DONE" , "completedate":"2021-06-30", "url" : "/01_mypage/T-MY-031.ejs.html", "pageurl" : "01_mypage/T-MY-031.ejs", "title":"T-MY-031. Receipt(empty)", "title2":"영수증/세금계산서(내역이 없는 경우)"},
-  {"type":"mypage", "pid":"T-MY-032", "state":"DONE" , "completedate":"2021-06-30", "url" : "/01_mypage/T-MY-032.ejs.html", "pageurl" : "01_mypage/T-MY-032.ejs", "title":"T-MY-032. Receipt", "title2":"영수증/세금계산서"},
+  {"type":"mypage", "pid":"T-MY-032", "state":"DONE" , "completedate":"2021-07-08", "url" : "/01_mypage/T-MY-032.ejs.html", "pageurl" : "01_mypage/T-MY-032.ejs", "title":"T-MY-032. Receipt", "title2":"영수증/세금계산서"},
   
   {"type":"mypage", "pid":"T-MY-034", "state":"DONE" , "completedate":"2021-06-30", "url" : "/01_mypage/T-MY-034.ejs.html", "pageurl" : "01_mypage/T-MY-034.ejs", "title":"T-MY-034. Tax Receipt", "title2":"세금계산서"},
   {"type":"mypage", "pid":"T-MY-035", "state":"DONE" , "completedate":"2021-06-30", "url" : "/01_mypage/T-MY-035.ejs.html", "pageurl" : "01_mypage/T-MY-035.ejs", "title":"T-MY-035. Credit Receipt", "title2":"카드 영수증"},
@@ -121,7 +121,7 @@ const pageData = [
   {"type":"mypage", "pid":"T-MY-037", "state":"DONE" , "completedate":"2021-06-30", "url" : "/01_mypage/T-MY-037.ejs.html", "pageurl" : "01_mypage/T-MY-037.ejs", "title":"T-MY-037. Receipt popup", "title2":"영수증 팝업"},
   
   {"type":"mypage", "pid":"T-MY-038", "state":"DONE" , "completedate":"2021-06-30", "url" : "/01_mypage/T-MY-038.ejs.html", "pageurl" : "01_mypage/T-MY-038.ejs", "title":"T-MY-038. Deposit(empty)", "title2":"예치금(사용 내역이 없는 경우)"},
-  {"type":"mypage", "pid":"T-MY-039", "state":"DONE" , "completedate":"2021-06-30", "url" : "/01_mypage/T-MY-039.ejs.html", "pageurl" : "01_mypage/T-MY-039.ejs", "title":"T-MY-039. Deposit", "title2":"예치금"},
+  {"type":"mypage", "pid":"T-MY-039", "state":"DONE" , "completedate":"2021-07-08", "url" : "/01_mypage/T-MY-039.ejs.html", "pageurl" : "01_mypage/T-MY-039.ejs", "title":"T-MY-039. Deposit", "title2":"예치금"},
 
 
 {"type":"page", "pid":"T-AB-001", "state":"DONE" , "completedate":"2021-07-02", "url" : "/05_page_about/T-AB-001.ejs.html", "pageurl" : "05_page_about/T-AB-001.ejs", "title":"T-AB-001. About - Totême", "title2":"토템"},
