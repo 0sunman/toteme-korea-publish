@@ -712,6 +712,7 @@ li > a.navlist__link.text-link{padding-left:15px}
 }
 
 /* 마이페이지 - 주문내역 */
+.input-block .input-block{padding-left: 0; padding-right: 0;}
 .mypage_time_select{text-align-last: center;}
 .mypage_toggle_menu.mypage_order_menu{margin: 5px 0 0;}
 .mypage_toggle_menu.mypage_order_menu .toggle_tit{padding-left: 15px;}
@@ -725,7 +726,7 @@ li > a.navlist__link.text-link{padding-left:15px}
 .my_price_list .tit1{display: table-cell;}
 .my_price_list .txt1{display: table-cell; text-align: right;}
 .button-block.mypage_order_button+.mypage_order_button{margin-top: 30px;}
-.button-block.mypage_order_button .button{margin-bottom: 10px;}
+.button-block.mypage_order_button .loading-wrap{margin-bottom: 10px;}
 @media screen and (max-width: 1000px){
     .payment_edit-modal .modal__card{width: calc(100% - 10px);}
 }
