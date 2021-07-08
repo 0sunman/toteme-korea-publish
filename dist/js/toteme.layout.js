@@ -250,7 +250,14 @@ Util.prototype.registerEvent = function(option){
             /******** 상품 ********/
             // 상품 필터
             $('.template-collection__filter-toggle').on('click', function(){
+                var filterHeight = $('.template-collection__header-outer').outerHeight();
                 $(this).parents('.template-collection__header-container').toggleClass('is-collapsed');
+                // height calc 20210708
+                if ( $('.template-collection__header-container').hasClass('is-collapsed') ){
+                    $('.template-collection__header-container').css('height','');
+                }else{
+                    $('.template-collection__header-container').css('height',filterHeight)
+                }
             });
             $('.boost-pfs-filter-button').on('click', function(){
                 $(this).parent('.boost-pfs-filter-option-item').toggleClass('selected');
