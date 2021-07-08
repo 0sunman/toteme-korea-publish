@@ -1110,7 +1110,7 @@ a[class*=drawer__close], button[class*=drawer__close], .search-bar__close{margin
 .loading-wrap{ position: relative;  }
 .loading-wrap .loader{ display:none; position: absolute; top: calc(50% - 8px);  left: calc(50% - 8px); width: 16px; height: 16px; }
 .loading-wrap .loader .smiley-spin{ width:16px; height:16px; }
-.loading-wrap .loader .smiley-spin svg{ padding: 0; margin: 0; position: absolute; }
+.loading-wrap .loader .smiley-spin svg{ padding: 0; margin: 0; position: absolute; left: 0;}
 
 .loading-wrap.is-load input, .loading-wrap.is-load button{color:transparent !important}
 .loading-wrap.is-load .loader{display:block}
