@@ -43,15 +43,15 @@ const pageData = [
   {"type":"main" , "pid":"T-MI-001", "state":"DONE" , "completedate":"2021-06-01",  "title":"Display Page Type 02 (1-2–4 columns)","url" : "/00_main/shop_silk.ejs.html", "pageurl" : "00_main/shop_silk.ejs"},
 
   
-  {"type":"main" , "pid":"T-CT-001", "state":"DONE" , "completedate":"2021-06-30",  "title":"T-CT-001. Component - Section with background (Tutorial)","url" : "/00_main/T-CT-001.sectionwithbackground",   "pageurl" : "00_main/T-CT-001.sectionwithbackground.ejs"},
-  {"type":"main" , "pid":"T-CT-002", "state":"DONE" , "completedate":"2021-06-30",  "title":"T-CT-002. Component - One background two section","url" : "/00_main/T-CT-002.onebackgroundtwosection", "pageurl" : "00_main/T-CT-002.onebackgroundtwosection.ejs"},
-  {"type":"main" , "pid":"T-CT-003", "state":"DONE" , "completedate":"2021-06-30",  "title":"T-CT-003. Component - Two background tw section","url" : "/00_main/T-CT-003.twobackgroundtwosection", "pageurl" : "00_main/T-CT-003.twobackgroundtwosection.ejs"},
-  {"type":"main" , "pid":"T-CT-004", "state":"DONE" , "completedate":"2021-06-30",  "title":"T-CT-004. Component - Two section with media","url" : "/00_main/T-CT-004.twosectionwithmedia",     "pageurl" : "00_main/T-CT-004.twosectionwithmedia.ejs"},
-  {"type":"main" , "pid":"T-CT-005", "state":"DONE" , "completedate":"2021-06-30",  "title":"T-CT-005. Component - Rhreesesction with media","url" : "/00_main/T-CT-005.threesesctionwithmedia",  "pageurl" : "00_main/T-CT-005.threesesctionwithmedia.ejs"},
-  {"type":"main" , "pid":"T-CT-006", "state":"DONE" , "completedate":"2021-06-30",  "title":"T-CT-006. Component - Videosection","url" : "/00_main/T-CT-006.videosection",            "pageurl" : "00_main/T-CT-006.videosection.ejs"},
-  {"type":"main" , "pid":"T-CT-007", "state":"DONE" , "completedate":"2021-06-30",  "title":"T-CT-007. Component - Manual product list","url" : "/00_main/T-CT-007.manualproductlist",       "pageurl" : "00_main/T-CT-007.manualproductlist.ejs"},
-  {"type":"main" , "pid":"T-CT-008", "state":"DONE" , "completedate":"2021-06-30",  "title":"T-CT-008. Component - Page header","url" : "/00_main/T-CT-008.pageheader",              "pageurl" : "00_main/T-CT-008.pageheader.ejs"},
-  {"type":"main" , "pid":"T-CT-009", "state":"DONE" , "completedate":"2021-06-30",  "title":"T-CT-009. Component - Free HTML","url" : "/00_main/T-CT-009.freeHTML",                "pageurl" : "00_main/T-CT-009.freeHTML.ejs"},
+  {"type":"main" , "pid":"T-CT-001", "state":"DONE" , "completedate":"2021-06-30",  "title":"T-CT-001. Component - Section with background (Tutorial)","url" : "/00_main/T-CT-001.sectionwithbackground.ejs.html",   "pageurl" : "00_main/T-CT-001.sectionwithbackground.ejs"},
+  {"type":"main" , "pid":"T-CT-002", "state":"DONE" , "completedate":"2021-06-30",  "title":"T-CT-002. Component - One background two section","url" : "/00_main/T-CT-002.onebackgroundtwosection.ejs.html", "pageurl" : "00_main/T-CT-002.onebackgroundtwosection.ejs"},
+  {"type":"main" , "pid":"T-CT-003", "state":"DONE" , "completedate":"2021-06-30",  "title":"T-CT-003. Component - Two background tw section","url" : "/00_main/T-CT-003.twobackgroundtwosection.ejs.html", "pageurl" : "00_main/T-CT-003.twobackgroundtwosection.ejs"},
+  {"type":"main" , "pid":"T-CT-004", "state":"DONE" , "completedate":"2021-06-30",  "title":"T-CT-004. Component - Two section with media","url" : "/00_main/T-CT-004.twosectionwithmedia.ejs.html",     "pageurl" : "00_main/T-CT-004.twosectionwithmedia.ejs"},
+  {"type":"main" , "pid":"T-CT-005", "state":"DONE" , "completedate":"2021-06-30",  "title":"T-CT-005. Component - Rhreesesction with media","url" : "/00_main/T-CT-005.threesesctionwithmedia.ejs.html",  "pageurl" : "00_main/T-CT-005.threesesctionwithmedia.ejs"},
+  {"type":"main" , "pid":"T-CT-006", "state":"DONE" , "completedate":"2021-06-30",  "title":"T-CT-006. Component - Videosection","url" : "/00_main/T-CT-006.videosection.ejs.html",            "pageurl" : "00_main/T-CT-006.videosection.ejs"},
+  {"type":"main" , "pid":"T-CT-007", "state":"DONE" , "completedate":"2021-06-30",  "title":"T-CT-007. Component - Manual product list","url" : "/00_main/T-CT-007.manualproductlist.ejs.html",       "pageurl" : "00_main/T-CT-007.manualproductlist.ejs"},
+  {"type":"main" , "pid":"T-CT-008", "state":"DONE" , "completedate":"2021-06-30",  "title":"T-CT-008. Component - Page header","url" : "/00_main/T-CT-008.pageheader.ejs.html",              "pageurl" : "00_main/T-CT-008.pageheader.ejs"},
+  {"type":"main" , "pid":"T-CT-009", "state":"DONE" , "completedate":"2021-06-30",  "title":"T-CT-009. Component - Free HTML","url" : "/00_main/T-CT-009.freeHTML.ejs.html",                "pageurl" : "00_main/T-CT-009.freeHTML.ejs"},
 
 
 
