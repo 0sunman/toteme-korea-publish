@@ -737,6 +737,8 @@ li > a.navlist__link.text-link{padding-left:15px}
 .mypage_order_menu .product-table{border-top: 1px solid #171616;}
 .mypage_order_menu .summary_content{margin-bottom: 0; padding: 15px;}
 .mypage_order_menu .product-table img{height: 100%; object-fit: cover; width: 100%;}
+.mypage_order_menu.arrow-up-down .toggle_tit:before{transform: translateY(-50%);}
+.mypage_order_menu.arrow-up-down>li.is-active .toggle_tit:before{background: url(../assets/icon-small-arrow-down.svg) center / 8px auto no-repeat; transform: translateY(-50%) rotate(180deg);}
 .my_price_list>li:last-child{margin-bottom: 0;}
 .my_price_list .tit1{display: table-cell;}
 .my_price_list .txt1{display: table-cell; text-align: right;}
