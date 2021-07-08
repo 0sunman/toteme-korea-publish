@@ -616,6 +616,8 @@ li > a.navlist__link.text-link{padding-left:15px}
 .template-mypage__form.mypage_plus_info{max-width: 530px; margin: 0 auto; padding-top: 0; border-top-width: 0;}
 .template-mypage__form.mypage_plus_info>.mypage_each{margin-bottom: 15px;}
 .template-mypage__form.mypage_plus_info .mypage_tit1{margin-bottom: 0; padding-bottom: 15px; border-bottom: 1px solid #171616;}
+.mypage_tit1:after{content: ''; display: block; clear: both;}
+.mypage_tit1 .button--primary{float: right;}
 #MainContent .form_padding{max-width: 574px; margin-left: auto; margin-right: auto; padding-right: 37px; padding-left: 37px;}
 @media screen and (max-width: 767px){
     /* #MainContent .form_padding{padding: 0 37px;} */
@@ -638,10 +640,13 @@ li > a.navlist__link.text-link{padding-left:15px}
     .radio_two_col .radio_custom_box{float: none; width: 100%;}
 }
 .mypage_tit_list{padding: 0;}
-.mypage_tit_list>li{margin-bottom: 5px;}
+.mypage_tit_list>li{margin-bottom: 7px;}
+.mypage_tit_list>li:after{content: ''; display: block; clear: both;}
 .mypage_tit_list>li:last-child{margin-bottom: 0;}
-.mypage_tit_list .tit1{display: inline-block; min-width: 100px; padding-right: 10px;}
+.mypage_tit_list .tit1{float: left; width: 50%; padding-right: 10px;}
+.mypage_tit_list .txt1{float: left; width: 50%;}
 .mypage_tit_list+p{margin-top: 10px;}
+.edit_btn_box{margin-top: 7px;}
 .checkbox-block.mypage_email{margin-top: 10px; margin-bottom: 20px;}
 .mypage_email .checkbox_custom_box{margin-bottom: 5px;}
 .mypage_email .checkbox_custom_box:last-child{margin-bottom: 0;}
