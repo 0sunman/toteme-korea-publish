@@ -844,7 +844,7 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 .table-block {display:table; max-width:500px;}
 .table-block > div {display: table-cell;}
 .input-block, .button-block{text-align: center;}
-.input-block input[type=email], .input-block input[type=text], .input-block input[type=password], 
+.input-block input[type=email], .input-block input[type=text], input[type=tel], .input-block input[type=password], 
 .button-block input[type=submit], .button-block input[type=button], .input-block input[type=submit]{max-width:500px}
 .template-account__navlist .template-account__navlist--content{ max-width: 500px; margin: 0 auto;}
 .login_join .section{ display: block; margin:20px 52px; padding-top:0px; padding-bottom:0px;}
