@@ -256,7 +256,7 @@ Util.prototype.registerEvent = function(option){
                 if ( $('.template-collection__header-container').hasClass('is-collapsed') ){
                     $('.template-collection__header-container').css('height','');
                 }else{
-                    $('.template-collection__header-container').css('height',filterHeight)
+                    $('.template-collection__header-container').css('height',filterHeight);
                 }
             });
             $('.boost-pfs-filter-button').on('click', function(){
