@@ -1184,28 +1184,54 @@
 			<div class="template-mypage__form-wrapper">
 				<div class="template-mypage__form">
 					<div class="mypage_each">
-						<h3 class="mypage_tit1">회원정보</h3>
+						<h3 class="mypage_tit1">회원정보 변경 <a href="#" class="a_link modal_trigger" data-modal="mypage_hide-modal">가려진 정보 보기</a></h3>
 					</div>
 					<form method="post" action="#">
 						<div class="input-block label-block">
+							<label class="form-group__label" for="CustomerEmail">아이디</label>
+							<input id="CustomerEmail" name="customer[email]" placeholder="이메일" value="hyu*@*********" type="text" readonly>
+						</div>
+						<div class="input-block label-block">
 							<label class="form-group__label" for="CustomerName">이름</label>
-							<input id="CustomerName" name="customer[name]" placeholder="이름" type="text">
-						</div>
-						<div class="input-block label-block">
-							<label class="form-group__label" for="CustomerLastName">성</label>
-							<input id="CustomerLastName" name="customer[lastname]" placeholder="성" type="text">
-						</div>
-						<div class="input-block label-block">
-							<label class="form-group__label" for="CustomerEmail">이메일</label>
-							<input id="CustomerEmail" name="customer[email]" placeholder="이메일"  type="text">
+							<input id="CustomerName" name="customer[name]" placeholder="이름" value="박*대" type="text" readonly>
 						</div>
 						<div class="input-block label-block">
 							<label class="form-group__label" for="CustomerBirthday">생년월일</label>
-							<input id="CustomerBirthday" name="customer[birthday]" placeholder="생년월일"  type="text">
+							<input id="CustomerBirthday" name="customer[birthday]" placeholder="생년월일" value="1982-05-**" type="text" readonly>
 						</div>
-						<div class="input-block label-block">
-							<label class="form-group__label" for="CustomerPhone">휴대폰번호</label>
-							<input id="CustomerPhone" name="customer[phone]" placeholder="휴대폰번호"  type="text">
+						<div class="input-block label-block email_form">
+							<div>
+								<label class="form-group__label" for="CustomerEmail">이메일</label>
+								<input id="CustomerEmail" name="customer[email]" placeholder="이메일"  type="text">
+							</div>
+							<div>
+								<input type="button" class="button button--block button--large modal_trigger" value="이메일 변경" data-modal="mypage_email-modal">
+							</div>
+						</div>
+						<div class="checkbox-block mypage_email">
+							<div class="checkbox_custom_box">
+								<input id="mypage_email_chekbox1" class="checkbox" value="1" type="checkbox">
+								<label for="mypage_email_chekbox1">Totême 상품/이벤트 정보 뉴스레터 수신 동의 (선택)	</label>
+							</div>
+						</div>
+						<div class="input-block label-block email_form">
+							<div>
+								<label class="form-group__label" for="CustomerPhone">휴대폰</label>
+								<input id="CustomerPhone" name="customer[Phone]" placeholder="휴대폰"  type="text">
+							</div>
+							<div>
+								<input type="button" class="button button--block button--large modal_trigger" value="휴대폰 변경" data-modal="mypage_phone-modal">
+							</div>
+						</div>
+						<div class="checkbox-block mypage_email">
+							<div class="checkbox_custom_box">
+								<input id="mypage_phone_chekbox1" class="checkbox" type="checkbox">
+								<label for="mypage_phone_chekbox1">Totême 상품/이벤트 정보 SMS 수신 동의 (선택)</label>
+							</div>
+							<div class="checkbox_custom_box">
+								<input id="mypage_phone_chekbox2" class="checkbox" type="checkbox">
+								<label for="mypage_phone_chekbox2">전화 상담을 통한 상품/이벤트 정보 수신 동의 (선택)</label>
+							</div>
 						</div>
 						<!-- <div class="button-block">
 							<input class="button button--primary button--block button--large" type="button" value="변경 사항 저장">
@@ -1235,7 +1261,7 @@
 							</div>
 						</div>
 						<div class="radio-block">
-							<h4 class="mypage_tit2">제3자 정보제공동의</h4>
+							<h4 class="mypage_tit2">개인정보 제3자(Totême) 제공 및 국외 이전(스웨덴) 동의</h4>
 							<div class="mypage_each">
 								<div class="radio_custom_box mypage_radio_box">
 									<input id="info_agree2_1" class="radio_input" value="10" type="radio" name="info_agree2">
@@ -1309,6 +1335,15 @@
 								</div>
 							</div>
 							<p>등록된 가상계좌가 없습니다.</p>
+							<ul class="mypage_tit_list">
+								<li><span class="tit1">예금주명</span><span class="txt1">박현대</span></li>
+								<li><span class="tit1">은행명</span><span class="txt1">우리은행</span></li>
+								<li><span class="tit1">계좌번호</span><span class="txt1">25489563451225</span></li>
+							</ul>
+							<div class="edit_btn_box">
+								<a href="#" class="a_link">수정</a>
+								<a href="#" class="a_link">삭제</a>
+							</div>
 							<ul class="dot_list">
 								<li>가상계좌가 없는 경우 은행을 선택하시면 가상계좌가 신규 발급됩니다.</li>
 								<li>기존에 등록된 가상계좌를 변경하고 싶으시면 변경하시고자 하는 은행을 선택해 주세요.</li>
@@ -1323,6 +1358,11 @@
 								</div>
 							</div>
 							<p>등록된 현금영수증 정보가 없습니다.</p>
+							<span>소득공제용(일반개인)<br>123-1234-1234</span>
+							<div class="edit_btn_box">
+								<a href="#" class="a_link">수정</a>
+								<a href="#" class="a_link">삭제</a>
+							</div>
 						</div>
 						<div class="mypage_each2">
 							<div class="txt_btn_box">
@@ -1332,6 +1372,11 @@
 								</div>
 							</div>
 							<p>등록된 현금영수증 정보가 없습니다.</p>
+							<span>지출증빙용(사업자)<br>123-12-12312</span>
+							<div class="edit_btn_box">
+								<a href="#" class="a_link">수정</a>
+								<a href="#" class="a_link">삭제</a>
+							</div>
 						</div>
 					</div>
 				</li>
@@ -1485,7 +1530,7 @@
 								<input placeholder="계좌번호" size="30" type="text" name="refund[account]" id="refundAccount">
 							</div>
 							<div>
-								<button type="button" class="button button--large">계좌인증</button>
+								<button type="button" class="button button--large modal_trigger" data-modal="refund-modal2">계좌인증</button>
 							</div>
 							<p class="comment error" style="display: none;">계좌번호 입력 시(-)를 제외하고 입력해주세요.</p>
 						</div>
@@ -1493,6 +1538,34 @@
 							<input class="button button--primary button--block button--large" type="button" value="등록">
 						</div>
 				 </form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="refund-modal2" class="modal modal--light sm-modal refund-modal2" role="dialog" tabindex="-1">
+		<div class="modal__overlay" tabindex="-1">
+			<div class="modal__card">
+				<div class="modal__header">
+					<h5 class="modal__title preorder-modal__title">계좌인증</h5>
+					<button class="modal__close">
+						<span class="visually-hidden">
+							Close
+						</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+						</svg> </button>
+				</div>
+				<div class="modal__body">
+					<ul class="mypage_tit_list">
+						<li><span class="tit1">예금주명</span><span class="txt1">박현대</span></li>
+						<li><span class="tit1">은행명</span><span class="txt1">우리은행</span></li>
+						<li><span class="tit1">계좌번호</span><span class="txt1">25489563451225</span></li>
+						<li><span class="tit1">응답메세지</span><span class="txt1">계좌인증성공</span></li>
+					</ul>
+					<p>내 환불계좌로 등록하시겠습니까?</p>
+					<div class="button-block pcs2_vertical">
+						<input class="button button--primary button--block button--large" type="button" value="확인">
+						<input class="button button--primary button--block button--large" type="button" value="취소">
+					</div>
 				</div>
 			</div>
 		</div>
@@ -1648,6 +1721,121 @@
 							<button class="button button--block button--large">확인</button> 
 							<button class="button button--block button--large">취소</button>
 						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="mypage_hide-modal" class="modal modal--light sm-modal mypage_hide-modal" role="dialog" tabindex="-1">
+		<div class="modal__overlay" tabindex="-1">
+			<div class="modal__card">
+				<div class="modal__header">
+					<h5 class="modal__title preorder-modal__title">가려진 정보 보기</h5>
+					<button class="modal__close">
+						<span class="visually-hidden">
+							Close
+						</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+						</svg> </button>
+				</div>
+				<div class="modal__body">
+					<p>고객님의 생년월일을 입력해 주세요.<br>
+						인증 성공 시, 회원정보 화면의 **** 표시가 해제됩니다.</p>
+					<form method="post" action="#">
+						<div class="input-block label-block">
+							<label class="form-group__label is-hidden" for="birthday1">생년월일</label>
+							<input id="birthday1" name="birthday1" placeholder="생년월일 (숫자 8자리 입력 / 예. 20150115)" type="text">
+							<p class="comment error">생년월일 8자리를 입력해주세요. (예. 20150115)</p>
+						</div>
+						<div class="button-block">
+							<input class="button button--primary button--block button--large" type="button" value="등록">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="mypage_email-modal" class="modal modal--light sm-modal mypage_email-modal" role="dialog" tabindex="-1">
+		<div class="modal__overlay" tabindex="-1">
+			<div class="modal__card">
+				<div class="modal__header">
+					<h5 class="modal__title preorder-modal__title">이메일 인증</h5>
+					<button class="modal__close">
+						<span class="visually-hidden">
+							Close
+						</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+						</svg> </button>
+				</div>
+				<div class="modal__body">
+					<form method="post" action="#">
+						<div class="input-block email_form">
+							<div>
+								<input class="field__input" placeholder="이메일" type="text">
+							</div>
+							<div>
+								<select class="toteme-select-style">
+									<option value="">naver.com</option>
+									<option value="">gmail.com</option>
+									<option value="">직접입력</option>
+								</select>
+							</div>
+						</div>
+						<p class="comment error">이메일 주소 변경을 위해 입력하신 이메일 주소로 인증메일이 발송되었습니다. <br>인증완료 후 변경완료 버튼을 선택해 주세요.</p>
+						<div class="button-block pcs2_vertical">
+							<input class="button button--primary button--block button--large" type="button" value="인증 메일 재발송">
+							<input class="button button--primary button--block button--large" type="button" value="변경 완료">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="mypage_phone-modal" class="modal modal--light sm-modal mypage_phone-modal" role="dialog" tabindex="-1">
+		<div class="modal__overlay" tabindex="-1">
+			<div class="modal__card">
+				<div class="modal__header">
+					<h5 class="modal__title preorder-modal__title">휴대폰 인증</h5>
+					<button class="modal__close">
+						<span class="visually-hidden">
+							Close
+						</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+						</svg> </button>
+				</div>
+				<div class="modal__body">
+					<form method="post" action="#" class="login_join findpassword">
+						<div class="">
+							<div class="table-block input-table">
+								 <div>
+										<input id="CustomerPassword" name="customer[password]" placeholder="휴대폰번호 입력" required="" type="text" data-need="phone" data-need-length="10" numberonly="">
+								 </div>
+								 <div>
+										<input type="button" class="button duplicatebtn" value="인증번호 받기">
+								 </div>
+								<p class="comment error">휴대폰으로 발송된 인증번호를 입력하세요. (3분이내)<br>
+								인증번호가 도착하지 않을 시에는 재발송을 해주세요</p>
+							</div>
+							<div class="table-block input-table">
+								 <div>
+										<input id="CustomerPassword" name="customer[password]" placeholder="인증번호 입력" required="" type="text" data-need="authnumber" data-need-length="6" numberonly="">
+								 </div>
+								 <div>
+										<input type="button" class="button duplicatebtn" value="휴대폰 인증">
+								 </div>
+							</div>
+							<div class="text-block sub-description time">
+								 <p class="m-font-13">유효시간 <span>03:00</span></p>
+							</div>
+					 </div>
+					 <div class="">
+						<div class="text-block infolist">
+							 <ul>
+									<li>휴대폰으로 발송된 인증번호를 유효시간 내에 입력해주시고, 인증번호가 도착하지 않을 시 재발송을 해주세요.</li>
+									<li>입력한 휴대폰번호는 보안 시스템을 통해 안전하게 관리됩니다.</li>
+							 </ul>
+						</div>
+				 </div>
 					</form>
 				</div>
 			</div>
