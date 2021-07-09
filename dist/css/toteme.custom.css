@@ -2652,3 +2652,20 @@ background: url('https://image.thehyundai.com/stories_cdn/images/hdstories/commo
 
 
 
+html.js-search-active{overflow:hidden}
+.suggestions__menu-bar.sorry{padding: .5rem 1rem;}
+
+
+
+.login-modal  .section.login_join.login_page { width:100%; }
+.login-modal  .login_join .sns-buttons.defaultblock > div > a.link-text-type span { text-decoration: underline;}
+.login-modal  .login_join .sns-buttons.defaultblock > div > a.link-text-type {display: table-cell; width: 50%;  text-align: left;}
+.login-modal .modal__body{padding:0px; margin:0px;}
+.login-modal .modal__footer {border-top:1px solid #000}
+.login-modal .modal__footer > p{margin:25px 15px 50px;}
+.login-modal  .idoremail.input-block{margin-top:15px}
+.login-modal .modal__footer{margin-top:5px}
+.login-modal .error.comment{padding-left: 0px;}
+@media (max-width:500px) {
+   .login-modal .section > form > div{margin:15px 15px 10px 15px;}
+}

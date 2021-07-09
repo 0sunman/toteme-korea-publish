@@ -23,13 +23,18 @@ Util.prototype.registerEvent = function(option){
 
             $(option.element).on('click',(function(target){ // 이벤트 클릭시 발생함.
                 var $target = $("#"+option.target);
-
                 if($target.hasClass("is-active")){ // 액티브 일 경우
+                    if($target.hasClass('site-header__search')){
+                        $("html").removeClass("js-search-active");
+                    }
                     this.resetSubFunction();
                 }else if( $target.hasClass('site-header__search') ){
                     this.resetSubFunction();
                     $target.addClass("is-active");
                     $('.search-bar__input').focus();
+                    console.log($("html").attr("class").indexOf("js-search-active"));
+                    var htmlAction = ($("html").attr("class").indexOf("js-search-active") > -1) ? "removeClass" : "addClass";
+                    $("html")[htmlAction]("js-search-active");
                 }else{
                     this.resetSubFunction();
                     $("body").addClass("drawer--open--blur overflow-hidden").append("<div class='window-overlay is-active'></div>");
@@ -41,6 +46,8 @@ Util.prototype.registerEvent = function(option){
                         $("body").removeClass("drawer--open--blur overflow-hidden");
                     }).bind(this));
                 }
+                
+                detectDraggableDiv();
             }).bind(this)); 
 
             $('.button[class*=drawer__close]').on('click', (function(){
@@ -52,6 +59,7 @@ Util.prototype.registerEvent = function(option){
                 $('.site-header__search').removeClass('is-active');
             });
             
+
             // 우측 메뉴 이벤트 끝
         break;
 
@@ -439,7 +447,7 @@ SiteController.prototype.initMobileMenu = function(){
 SiteController.prototype.initRightMenu = function(){
     $("[data-right-header-button-type]").each(function(idx,ele){
         var targetId = $(ele).data("rightHeaderButtonType");                        
-        utilInstance.registerEvent({cmd:"showRightMenu", target:targetId, element:ele});        
+        utilInstance.registerEvent({cmd:"showRightMenu", target:targetId, element:ele});       
         // data-header-button-type에 버튼 ID를 입력하면, 우측 메뉴 이벤트가 작동됩니다.             
     })
 }
@@ -884,3 +892,95 @@ function doAuthJoinButton(){
     console.log("DONE!");
 
 }
+
+
+                        /* 드래그 DIV 참고 */
+                        var draggableDivList = [];
+
+                        function isDraggable(target){
+                            return window.innerWidth < document.querySelector(target + " .suggestions__text-title").scrollWidth + 
+                                                        document.querySelector(target + " .suggestions__text-title ~ ul").scrollWidth;
+    
+                        }
+    
+    
+                        function convertDraggableDiv(selector){
+                            var ele = document.querySelector(selector);
+                            var pos = { top: 0, left: 0, x: 0, y: 0 };
+                            var isClick = false;
+                            this.selector = selector;
+                            this.isEnable = isDraggable(this.selector);
+    
+                            var mouseDownHandler = function(e) {
+                                if(this.isEnable){
+                                    ele.style.cursor = 'grabbing';
+                                    ele.style.userSelect = 'none';
+    
+                                    pos = {
+                                        left: ele.scrollLeft,
+                                        top: ele.scrollTop,
+                                        x: e.clientX,
+                                        y: e.clientY,
+                                    };
+                                    isClick = true;
+                                }
+    
+                            };
+    
+                            var mouseMoveHandler = function(e) {
+                                // Scroll the element
+                                if(isClick && this.isEnable){
+                                    // How far the mouse has been moved
+                                    const dx = e.clientX - pos.x;
+                                    const dy = e.clientY - pos.y;
+    
+                                    ele.scrollTop = pos.top - dy;
+                                    ele.scrollLeft = pos.left - dx;
+                                }
+                            };
+    
+                            var mouseUpHandler = function() {
+                                if(isClick && this.isEnable){
+                                    ele.style.cursor = 'grab';
+                                    ele.style.removeProperty('user-select');
+                                    isClick = false;
+                                }
+    
+                            };
+    
+    
+                            ele.style.cursor = 'grab';
+                            // Attach the handler    
+                            ele.addEventListener('mousedown', mouseDownHandler.bind(this));
+                            ele.addEventListener('mousemove', mouseMoveHandler.bind(this));
+                            ele.addEventListener('mouseup', mouseUpHandler.bind(this));
+                            
+                        }
+    
+                        convertDraggableDiv.prototype.setEnable = function(flag){ // public
+                                this.isEnable = flag
+                        }
+                        
+                        function detectDraggableDiv(){
+                            draggableDivList.forEach(function(target){
+                                if(isDraggable(target.selector)){
+                                    document.querySelector(target.selector).style.cursor = 'grab';
+                                    target.setEnable(true)
+                                }else{
+                                    document.querySelector(target.selector).style.cursor = 'auto';
+                                    target.setEnable(false)
+                                }
+                            })
+                        }
+    
+                        setTimeout(function(){
+                            draggableDivList = [
+                                new convertDraggableDiv('.suggestions__menu-bar.only_one .suggestions__filter-bar'),
+                                new convertDraggableDiv('.suggestions__menu-bar.suggestions__menu-bar--two-items .suggestions__filter-bar'),
+                                new convertDraggableDiv('.suggestions__text-suggestions')
+                            ];
+                            $(window).resize(function(){
+                                detectDraggableDiv();
+                            })
+                        },1000)
+                        /* // 드래그 DIV 참고 */
