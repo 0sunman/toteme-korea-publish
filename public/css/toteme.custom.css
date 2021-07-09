@@ -711,6 +711,7 @@ li > a.navlist__link.text-link{padding-left:15px}
 
 @media screen and (max-width: 1800px) {
     .checkout .input-block, .checkout .button-block, .checkout .checkout_btn_box, .checkout .checkbox-block, .mypage .input-block, .mypage .button-block, .mypage .checkbox-block{max-width: unset; padding-left: 36px; padding-right: 36px;}
+    .mypage .address_add_box .checkbox-block .checkbox_custom_box, .mypage .template-addresses .checkbox-block .checkbox_custom_box{max-width: 500px; margin: auto;}
     .checkout .button-block{max-width: 572px;}
     .input-block.addr_form, .input-block.phone_form, .input-block.email_form, .mypage .checkbox-block.mypage_email{max-width: 572px;}
     .modal .input-block, .modal .button-block{padding-left: 0; padding-right: 0; margin-left: auto; margin-right: auto;}
