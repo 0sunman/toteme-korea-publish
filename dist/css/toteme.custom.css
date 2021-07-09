@@ -244,7 +244,7 @@ input.button--block:hover,input.template-login input.AAI_submit:hover, select:fo
 body.drawer--open--blur .site-header-wrapper{z-index:25;}
 body.overflow-hidden {overflow: hidden;}
 .site-header__account-navlist .navlist__link{position: relative;}
-.site-header__account-navlist .navlist__link .badge{color: red; font-size: 9px; font-weight: 500; left: 100%; opacity: 1; position: absolute; right: -5px; top: -4px;}
+.site-header__account-navlist .navlist__link .badge{color: red; font-size: 9px; font-weight: 500; left: 100%; opacity: 1; position: absolute; right: -5px; top: 0;}
 
 
 @media (max-width: 767px){
@@ -786,9 +786,9 @@ li > a.navlist__link.text-link{padding-left:15px}
 .mypage_order_menu .mypage_each2.receipt_txt_list{padding-top: 0;}
 .receipt_txt_list .dot_list{margin-top: 0;}
 
-@media screen and (max-width: 1800px){
+/* @media screen and (max-width: 1800px){
     .mypage_order_menu .summary_content .input-block, .mypage_order_menu .summary_content .button-block{padding-left: 21px; padding-right: 21px;}
-}
+} */
 .return_txt{margin-bottom: 10px;}
 .return_txt:last-child{margin-bottom: 0;}
 .cancel_wrap .mypage_order_menu{margin-top: -1px;}
@@ -862,7 +862,7 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 .table-block {display:table; max-width:500px;}
 .table-block > div {display: table-cell;}
 .input-block, .button-block{text-align: center;}
-.input-block input[type=email], .input-block input[type=text], input[type=tel], .input-block input[type=password], 
+.input-block input[type=email], .input-block input[type=text], input[type=tel], .input-block input[type=password], .input-block input[type=button], 
 .button-block input[type=submit], .button-block input[type=button], .input-block input[type=submit]{max-width:500px}
 .template-account__navlist .template-account__navlist--content{ max-width: 500px; margin: 0 auto;}
 .login_join .section{ display: block; margin:20px 52px; padding-top:0px; padding-bottom:0px;}
