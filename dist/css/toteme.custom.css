@@ -355,7 +355,7 @@ body.overflow-hidden {overflow: hidden;}
 .input_phone_plus{display: none; margin-top: 10px;}
 .phone_form.active+.input_phone_plus{display: block;}
 .phone_form.active .btn_plus svg{display: none;}
-.phone_form.active .btn_plus:before{content: ''; display: block; width: 9px; height: 1px; background: #171616; position: absolute; top: 50%; left: 11px;}
+.phone_form.active .btn_plus:before{content: ''; display: block; width: 9px; height: 1px; background: #171616; position: absolute; top: 50%; left: 11px; margin-top: -1px;}
 .addr_form{display: table; width: 100%; max-width: 500px; margin-left: auto; margin-right: auto;}
 .addr_form>div{display: table-cell; vertical-align: middle;}
 .addr_form>div:last-of-type{width: 137px;}
@@ -402,7 +402,7 @@ body.overflow-hidden {overflow: hidden;}
 .checkout .modal .modal__body{justify-content: normal;}
 .address-modal .address_modal_container{width: 100%; max-width: 500px;}
 .standard_addr_box{display: none;}
-.standard_addr_box .table_type1 .radio_custom_box{display: inline-block; height: 10px; padding-left: 10px;}
+.standard_addr_box .table_type1 .radio_custom_box{display: inline-block; height: 11px; padding-left: 14px;}
 .standard_addr_box .table_type1 .radio_custom_box input{top: 0; margin: 0;}
 .standard_addr_box.is-active{display: block;}
 .address-modal .btn{float: none;}
@@ -673,7 +673,7 @@ li > a.navlist__link.text-link{padding-left:15px}
 .mypage_each2 .txt_btn_box .button{font-size: 13px; padding: 0 18px; line-height: 21px;}
 .mypage_each2 .txt_btn_box+p{margin-top: 15px;}
 
-.dot_list{margin-top: 15px;}
+.dot_list{padding-left: 0; margin-top: 15px;}
 .dot_list>li{margin-bottom: 5px; padding-left: 12px; word-break: keep-all; position: relative;}
 .dot_list>li:last-child{margin-bottom: 0;}
 .dot_list>li:before{content: ''; display: block; width: 2px; height: 2px; background: #171616; position: absolute; top: 9px; left: 0;}
@@ -708,6 +708,7 @@ li > a.navlist__link.text-link{padding-left:15px}
 .mypage_address_list .mypage_address_text{margin-bottom: 5px;}
 .mypage_address_list .button-block{margin-top: 25px;}
 .ta_c{text-align: center;}
+.wk-purchase s{color: #5e5e5e; margin-right: .25rem;}
 
 @media screen and (max-width: 1800px) {
     .checkout .input-block, .checkout .button-block, .checkout .checkout_btn_box, .checkout .checkbox-block, .mypage .input-block, .mypage .button-block, .mypage .checkbox-block{max-width: unset; padding-left: 36px; padding-right: 36px;}
