@@ -42,6 +42,10 @@ const pageData = [
   {"type":"main" , "pid":"T-MI-001", "state":"DONE" , "completedate":"2021-06-01",  "title":"Display Page Type 01 (2–4 columns) ","url" : "/00_main/shop_scarves.ejs.html", "pageurl" : "00_main/shop_scarves.ejs"},
   {"type":"main" , "pid":"T-MI-001", "state":"DONE" , "completedate":"2021-06-01",  "title":"Display Page Type 02 (1-2–4 columns)","url" : "/00_main/shop_silk.ejs.html", "pageurl" : "00_main/shop_silk.ejs"},
 
+
+  {"type":"main" , "pid":"T-MI-009", "state":"DONE" , "completedate":"2021-07-09",  "title":"Search - SUCESS","url" : "/00_main/T-MI-009.ejs.html", "pageurl" : "00_main/T-MI-009.ejs"},
+  {"type":"main" , "pid":"T-MI-009-2", "state":"DONE" , "completedate":"2021-07-09",  "title":"Search - FAIL","url" : "/00_main/T-MI-009-2.ejs.html", "pageurl" : "00_main/T-MI-009-2.ejs"},
+
   
   {"type":"main" , "pid":"T-CT-001", "state":"DONE" , "completedate":"2021-06-30",  "title":"T-CT-001. Component - Section with background (Tutorial)","url" : "/00_main/T-CT-001.sectionwithbackground.ejs.html",   "pageurl" : "00_main/T-CT-001.sectionwithbackground.ejs"},
   {"type":"main" , "pid":"T-CT-002", "state":"DONE" , "completedate":"2021-06-30",  "title":"T-CT-002. Component - One background two section","url" : "/00_main/T-CT-002.onebackgroundtwosection.ejs.html", "pageurl" : "00_main/T-CT-002.onebackgroundtwosection.ejs"},
@@ -58,6 +62,8 @@ const pageData = [
   {"type":"join", "pid":"T-LJ-001",   "state":"DONE" , "completedate":"2021-06-30", "url" : "/02_login_join/T-LJ-001.ejs.html",   "pageurl" : "02_login_join/T-LJ-001.ejs",   "title": "T-LJ-001. Sign-in", "title2":"로그인"},
   {"type":"join", "pid":"T-LJ-002",   "state":"DONE" , "completedate":"2021-06-30", "url" : "/02_login_join/T-LJ-002.ejs.html",   "pageurl" : "02_login_join/T-LJ-002.ejs",   "title": "T-LJ-002. Order status (Guest)", "title2":"비회원 주문조회"},
   {"type":"join", "pid":"T-LJ-004",   "state":"DONE" , "completedate":"2021-06-30", "url" : "/02_login_join/T-LJ-004.ejs.html",   "pageurl" : "02_login_join/T-LJ-004.ejs",   "title": "T-LJ-004. Find my ID", "title2":"아이디찾기"},
+  {"type":"join", "pid":"T-LJ-004-1",   "state":"DONE" , "completedate":"2021-06-30", "url" : "/02_login_join/T-LJ-004-1.ejs.html",   "pageurl" : "02_login_join/T-LJ-004-1.ejs",   "title": "T-LJ-004. Find my ID (Select ID #1 - In Progress)", "title2":"아이디찾기"},
+  {"type":"join", "pid":"T-LJ-004-2",   "state":"DONE" , "completedate":"2021-06-30", "url" : "/02_login_join/T-LJ-004-2.ejs.html",   "pageurl" : "02_login_join/T-LJ-004-2.ejs",   "title": "T-LJ-004. Find my ID (Select ID #2 - In Progress)", "title2":"아이디찾기"},
   {"type":"join", "pid":"T-LJ-005",   "state":"DONE" , "completedate":"2021-06-30", "url" : "/02_login_join/T-LJ-005.ejs.html",   "pageurl" : "02_login_join/T-LJ-005.ejs",   "title": "T-LJ-005. Reset my paswword_Input my data", "title2":"비밀번호 찾기 - 정보 입력"}, // 완료
   {"type":"join", "pid":"T-LJ-006",   "state":"DONE" , "completedate":"2021-06-30", "url" : "/02_login_join/T-LJ-006.ejs.html",   "pageurl" : "02_login_join/T-LJ-006.ejs",   "title": "T-LJ-006. Reset my paswword_Confirmation email sent", "title2":"비밀번호 찾기 - 이메일 인증"}, // 완료
   {"type":"join", "pid":"T-LJ-007",   "state":"DONE" , "completedate":"2021-06-30", "url" : "/02_login_join/T-LJ-007.ejs.html",   "pageurl" : "02_login_join/T-LJ-007.ejs",   "title": "T-LJ-007. Reset my paswword_Email confirmed", "title2":"비밀번호 찾기 - 이메일 인증 - (테이블과 팝업)"}, // 완료

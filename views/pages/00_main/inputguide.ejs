@@ -260,8 +260,118 @@
             </div>
          </div>
       </div>
+      
+      <div class="example-description">
+         <div class="rte" style='text-align: center;'>
+           [ 로그인 팝업 ]
+         </div>
+       </div>
+      <div class='example'>
+         <div class="button-block">
+            <button type="button" class="button button--large button--block modal_trigger" data-modal="login-modal">로그인 팝업</button>
+         </div>
+       </div>
+       <div id="login-modal" class="modal modal--light login-modal" role="dialog" tabindex="-1">
+         <div class="modal__overlay" tabindex="-1">
+            <div class="verify-modal">
+               <div class="modal__card">
+                  <div class="modal__header">
+                     <h5 class="modal__title  preorder-modal__title">로그인</h5>
+                     <button class="modal__close">
+                        <span class="visually-hidden">
+                           Close
+                        </span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+                        </svg> </button>
+                  </div>
+                  <div class="modal__body">
+                     <div class="section login_join login_page">
+                        <form method="post">
+                             <input type="hidden" name="form_type" value="customer_login"><input type="hidden" name="utf8" value="✓">
+                             <div class="idoremail label-block input-block">
+                                <label class="form-group__label subtitle-2 is-hidden" for="customerId">
+                                ID 또는 이메일
+                                </label>
+                                <input id="customerId" autocapitalize="off" autocomplete="off" autofocus="" name="customer[id]" placeholder="ID 또는 이메일" required="" spellcheck="false" type="text" data-need="id" data-need-length="8">
+                                <p class="error comment" style='display: none;'>아이디를 확인해주세요.</p>
+                             </div>
+                             <div class="password label-block input-block">
+                                <label class="form-group__label subtitle-2 is-hidden" for="CustomerPassword">
+                                비밀번호
+                                </label>
+                                <input id="CustomerPassword" name="customer[password]" placeholder="비밀번호" required="" type="password" data-need="password" data-need-length="8">
+                                <p class="error comment" style='display: none;'>비밀번호를 확인해주세요.</p>
+                             </div>
+     
+                             <div class="login button-block loading-wrap">
+                                <input class="button button--primary button--block button--large" type="submit" data-form-submit="doLogin" value="로그인">
+                                <div class="loader">
+                                   <div class="smiley-spin">
+                                      <svg class="icon icon--medium icon__smiley" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 15.5a7.5 7.5 0 110-15 7.5 7.5 0 010 15zm0-1a6.5 6.5 0 100-13 6.5 6.5 0 000 13zM4.947 9.776l-.894.448a4.413 4.413 0 007.894 0l-.894-.448a3.413 3.413 0 01-6.106 0zM9.5 5h1v2h-1V5zm-3 0h-1v2h1V5z"></path></svg>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="defaultblock sns-buttons label-block input-block">
+                              <div>
+                                 <a class='link-text-type'>
+                                    <span>아이디 찾기</span>
+                                 </a class='link-text-type'>
+                                 
+                                 <a class='link-text-type'>
+                                    <span>회원가입</span>
+                                 </a>
+   
+                              </div>
+                              <div>
+                                 <a class='link-text-type'>
+                                    <span>비밀번호 찾기</span>
+                                 </a>
+                                 <a class='link-text-type'>
+                                    <span>비회원 주문조회</span>
+                                 </a>   
+                              </div>
+            
+                           </div>
+                             <div class="defaultblock sns-buttons label-block input-block">
+                                <div>
+                                   <label class="radiobutton naver">
+                                      <input type="radio" name="test_radio" value="옵션1">
+                                      <span>네이버</span>
+                                   </label>
+                                   
+                                   <label class="radiobutton kakao last" style="clear:both">
+                                      <input type="radio" name="test_radio" value="옵션1">
+                                      <span>카카오톡</span>
+                                   </label>
+     
+                                </div>
+                                <div>
+                                   <label class="radiobutton facebook">
+                                      <input type="radio" name="test_radio" value="옵션1">
+                                      <span>페이스북</span>
+                                   </label>
+                                   <label class="radiobutton google last">
+                                      <input type="radio" name="test_radio" value="옵션1">
+                                      <span>구글</span>
+                                   </label>   
+                                </div>
+              
+                             </div>
+                        </form>
+     
+                  </div>
+                  </div>
+                  
+                  <div class="modal__footer">
+                     <p>Totême 온라인스토어는 더현대닷컴이 운영·제공하는 사이트로 기존 회원은 더현대닷컴 아이디와 비밀번호로 바로 이용 가능합니다.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
       <script src="https://image.thehyundai.com/pc/js/jquery-1.11.3.min.js"></script>
        <script>
+          
           //modal toggle
          $('.modal_trigger').on('click', function(){
             var modal_name = $(this).attr('data-modal');

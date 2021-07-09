@@ -1,0 +1,18 @@
+<style>
+p.gnbcheck{text-align: center; margin-top: 30px;}
+.publishlist{padding:50px;}
+a.pub_link{display: inline-block; min-width: 500px;}
+@media screen and (max-width: 1000px){
+    a.pub_link{display: inline; min-width: unset;}
+    .publishlist{padding-left: 15px; padding-right: 15px;}
+}
+.publishlist ul{margin-bottom: 40px;}
+.publishlist ul>li{list-style-type: circle;}
+</style>
+    <!-- <p class='gnbcheck'>*You can check GNB Above*</p> -->
+    <p> 잠시후 검색기능이 실행됩니다! (우측 상단 검색 버튼 눌러도 됩니다) (모든 케이스 통합)</p>
+    <script>
+        setTimeout(function(){
+            $(".site-header__col--desktop .site-header__icon.site-header__icon--search").click();
+        },2000)
+    </script>

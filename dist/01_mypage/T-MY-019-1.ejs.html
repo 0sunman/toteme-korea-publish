@@ -80,7 +80,7 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
                         </svg>
                     </button>
-                    <button id="mobileClose" class="site-header__icon site-header__icon--search" tabindex="0" type="submit" data-target="searchBarHeader" js-toggle="searchBarHeader">
+                    <button id="mobileClose" data-right-header-button-type="searchBarHeader" class="site-header__icon site-header__icon--search" tabindex="0" type="submit" data-target="searchBarHeader" js-toggle="searchBarHeader">
                         <span class="icon-fallback-text">
                         Search
                         </span>
@@ -127,6 +127,7 @@
                                         <li class="navlist__item">
                                         <a class="navlist__link text-link" href="/collections/new-in"> 
                                         New in
+                                        <span class="text-flag">New</span>
                                         </a>
                                         </li>
                                         <li class="navlist__item">
@@ -502,70 +503,195 @@
 
 
     <div id="shopify-section-site-search" class="shopify-section">
-    <div id="searchBarHeader" class="site-header__search critical-hide" data-section-id="site-search" data-section-type="site-search" data-search-min-chars="3" js-site-header="searchBar" js-search-bar-active="false">
-        <div class="search-bar ">
-            <div class="search-bar__input-wrapper">
-                <form class="search-bar__form" action="/search" autocomplete="off" method="get" role="search" js-site-search="form">
-                <div class="search-bar__container">
-                    <div class="search-bar__field">
-                        <label class="visually-hidden" for="Search-site-search">
-                        Search for products on our site
-                        </label>
-                        <input id="Search-site-search" class="search-bar__input text-medium" name="q" placeholder="Type your search" type="search" js-site-search="input">
-                        <button type="submit" class="button search-bar__submit">
-                            <span class="icon-fallback-text">
-                            Search
-                            </span>
-                            <svg class="icon icon__search" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.838 10.131c1.656-1.9 1.553-4.811-.288-6.652-1.922-1.922-5.008-1.95-6.894-.064-1.887 1.887-1.858 4.973.063 6.895 1.757 1.757 4.49 1.93 6.387.503l3.34 3.34.707-.708-3.315-3.314zm-.92-.454c-1.51 1.509-3.98 1.486-5.516-.05-1.537-1.538-1.56-4.007-.05-5.516 1.508-1.509 3.978-1.486 5.515.05 1.537 1.538 1.56 4.007.05 5.516z"></path>
-                            </svg>
-                        </button>
-                        <button class="search-bar__close" tabindex="0" type="button" data-target="searchBarHeader" js-toggle="searchBarHeader">
-                            <span class="icon-fallback-text">Search</span>
-                            <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
-                            </svg>
-                        </button>
+        <div id="searchBarHeader" class="site-header__search critical-hide">
+            <div class="search-bar ">
+                <div class="search-bar__input-wrapper">
+                    <form class="search-bar__form">
+                        <div class="search-bar__container">
+                            <div class="search-bar__field">
+                                <label class="visually-hidden" for="Search-site-search">검색어를 입력하세요</label>
+                                <input id="Search-site-search" class="search-bar__input text-medium" name="q" placeholder="검색어를 입력하세요" type="search">
+                                <button type="submit" class="button search-bar__submit"> <span class="icon-fallback-text">
+                                    Search
+                                    </span>
+                                    <svg class="icon icon__search" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.838 10.131c1.656-1.9 1.553-4.811-.288-6.652-1.922-1.922-5.008-1.95-6.894-.064-1.887 1.887-1.858 4.973.063 6.895 1.757 1.757 4.49 1.93 6.387.503l3.34 3.34.707-.708-3.315-3.314zm-.92-.454c-1.51 1.509-3.98 1.486-5.516-.05-1.537-1.538-1.56-4.007-.05-5.516 1.508-1.509 3.978-1.486 5.515.05 1.537 1.538 1.56 4.007.05 5.516z"></path>
+                                    </svg>
+                                </button>
+                                <button class="search-bar__close" tabindex="0" type="button" data-target="searchBarHeader" js-toggle="searchBarHeader"> <span class="icon-fallback-text">Search</span>
+                                    <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="search-bar__inner suggestions is-active">
+
+                    <div class="suggestions__menu-bar sorry"> 
+                        <p>죄송합니다. 입력하신 검색어에 맞는 상품을 찾을 수 없습니다.</p>
+                     </div>
+                    <div class="suggestions__menu-bar only_one"> <!-- 하나짜리 -->
+                        <div class="suggestions__filter-bar"> <span class="suggestions__text-title">
+                        상세 검색
+                      </span>
+                            <ul class="suggestions__filter-list ">
+                                <li class="suggestions__text-item">
+                                    <button class="suggestions__text-link button" js-site-search="filter" data-key="size" data-value="XXS"> XXS </button>
+                                </li>
+                                <li class="suggestions__text-item">
+                                    <button class="suggestions__text-link button" js-site-search="filter" data-key="size" data-value="S"> S </button>
+                                </li>
+                                <li class="suggestions__text-item">
+                                    <button class="suggestions__text-link button" js-site-search="filter" data-key="size" data-value="L"> L </button>
+                                </li>
+                                <li class="suggestions__text-item">
+                                    <button class="suggestions__text-link button" js-site-search="filter" data-key="size" data-value="M"> M </button>
+                                </li>
+                                <li class="suggestions__text-item">
+                                    <button class="suggestions__text-link button" js-site-search="filter" data-key="size" data-value="XS"> XS </button>
+                                </li>
+                                <li class="suggestions__text-item">
+                                    <button class="suggestions__text-link button" js-site-search="filter" data-key="size" data-value="32"> 32 </button>
+                                </li>
+                                <li class="suggestions__text-item">
+                                    <button class="suggestions__text-link button" js-site-search="filter" data-key="size" data-value="34"> 34 </button>
+                                </li>
+                                <li class="suggestions__text-item">
+                                    <button class="suggestions__text-link button" js-site-search="filter" data-key="size" data-value="36"> 36 </button>
+                                </li>
+                                <li class="suggestions__text-item">
+                                    <button class="suggestions__text-link button" js-site-search="filter" data-key="size" data-value="38"> 38 </button>
+                                </li>
+                                <li class="suggestions__text-item">
+                                    <button class="suggestions__text-link button" js-site-search="filter" data-key="size" data-value="40"> 40 </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="suggestions__menu-bar suggestions__menu-bar--two-items"> <!--- 두개짜리 -->
+      
+                    <div class="suggestions__text-suggestions">
+                        <span class="suggestions__text-title">
+                        연관 검색
+                        </span>
+                        <ul class="suggestions__text-list">
+                                            
+                            <li class="suggestions__text-item">
+                                <a class="suggestions__text-link button" href="https://int.toteme-studio.com/pages/order-tracking">
+                                배송 추적
+                                </a>
+                            </li>
+                            
+                            <li class="suggestions__text-item">
+                                <a class="suggestions__text-link button" href="https://int.toteme-studio.com/pages/preorders">
+                                예약 주문
+                                </a>
+                            </li>
+                
+                        </ul>
+                    </div>
+
+      
+                    <div class="suggestions__filter-bar">
+                        <span class="suggestions__text-title">
+                        상세 검색
+                        </span>
+                        <ul class="suggestions__filter-list">
+                            
+                            <li class="suggestions__text-item">
+                                <button class="suggestions__text-link button">
+                                One Size
+                                </button>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                </form>
-            </div>
-            <div class="search-bar__inner suggestions" js-site-search="suggestions" style="height: calc(1371px);">
-                <div class="search-bar__suggested-searches" js-drag-scroll="container">
-                <span class="search-bar__suggested-searches-label">
-                Suggested searches:
-                </span>
-                <ul class="search-bar__suggested-searches-list">
-                    <li class="search-bar__suggested-searches-item">
-                        <button class="search-bar__suggested-searches-term button" data-term="Scarf" js-site-search="suggestedSearch">
-                        Scarf
-                        </button>
-                    </li>
-                    <li class="search-bar__suggested-searches-item">
-                        <button class="search-bar__suggested-searches-term button" data-term="Trench" js-site-search="suggestedSearch">
-                        Trench
-                        </button>
-                    </li>
-                    <li class="search-bar__suggested-searches-item">
-                        <button class="search-bar__suggested-searches-term button" data-term="Sale" js-site-search="suggestedSearch">
-                        Sale
-                        </button>
-                    </li>
-                    <li class="search-bar__suggested-searches-item">
-                        <button class="search-bar__suggested-searches-term button" data-term="Coat" js-site-search="suggestedSearch">
-                        Coat
-                        </button>
-                    </li>
-                    <li class="search-bar__suggested-searches-item">
-                        <button class="search-bar__suggested-searches-term button" data-term="Leggings" js-site-search="suggestedSearch">
-                        Leggings
-                        </button>
-                    </li>
-                </ul>
+                    <div class="suggestions__product-grid card-grid has-products">
+                        <div class="card-grid__item">
+                            <a class="product-card product-card--small" href="#">
+                                <div class="product-card__thumbnail-container">
+                                    <div class="responsive-card-image__wrapper"> 
+                                        <img class="responsive-card-image__image" alt="Cotton tee dress white" src="../assets/no_image.jpg"> </div>
+                                </div>
+                                <div class="product-card__footer"> 
+                                    <span class="product-card__title">Cotton tee dress white</span>
+                                    <div class="product-card__details"> <span>
+                                    <span class="money notranslate">₩302,500 KRW</span> </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-grid__item">
+                            <a class="product-card product-card--small" href="#">
+                                <div class="product-card__thumbnail-container">
+                                    <div class="responsive-card-image__wrapper"> 
+                                        <img class="responsive-card-image__image" alt="Cotton tee dress white" src="../assets/no_image.jpg"> </div>
+                                </div>
+                                <div class="product-card__footer"> 
+                                    <span class="product-card__title">Cotton tee dress white</span>
+                                    <div class="product-card__details"> <span>
+                                    <span class="money notranslate">₩302,500 KRW</span> </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-grid__item">
+                            <a class="product-card product-card--small" href="#">
+                                <div class="product-card__thumbnail-container">
+                                    <div class="responsive-card-image__wrapper"> 
+                                        <img class="responsive-card-image__image" alt="Cotton tee dress white" src="../assets/no_image.jpg"> </div>
+                                </div>
+                                <div class="product-card__footer"> 
+                                    <span class="product-card__title">Cotton tee dress white</span>
+                                    <div class="product-card__details"> <span>
+                                    <span class="money notranslate">₩302,500 KRW</span> </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-grid__item">
+                            <a class="product-card product-card--small" href="#">
+                                <div class="product-card__thumbnail-container">
+                                    <div class="responsive-card-image__wrapper"> 
+                                        <img class="responsive-card-image__image" alt="Cotton tee dress white" src="../assets/no_image.jpg"> </div>
+                                </div>
+                                <div class="product-card__footer"> 
+                                    <span class="product-card__title">Cotton tee dress white</span>
+                                    <div class="product-card__details"> <span>
+                                    <span class="money notranslate">₩302,500 KRW</span> </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-grid__item">
+                            <a class="product-card product-card--small" href="#">
+                                <div class="product-card__thumbnail-container">
+                                    <div class="responsive-card-image__wrapper"> 
+                                        <img class="responsive-card-image__image" alt="Cotton tee dress white" src="../assets/no_image.jpg"> </div>
+                                </div>
+                                <div class="product-card__footer"> 
+                                    <span class="product-card__title">Cotton tee dress white</span>
+                                    <div class="product-card__details"> <span>
+                                    <span class="money notranslate">₩302,500 KRW</span> </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="suggestions__loading-bar">
+                        <div class="loader">
+                            <div class="smiley-spin">
+                                <svg class="icon icon--medium icon__smiley" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8 15.5a7.5 7.5 0 110-15 7.5 7.5 0 010 15zm0-1a6.5 6.5 0 100-13 6.5 6.5 0 000 13zM4.947 9.776l-.894.448a4.413 4.413 0 007.894 0l-.894-.448a3.413 3.413 0 01-6.106 0zM9.5 5h1v2h-1V5zm-3 0h-1v2h1V5z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 </header>
       <!-- // PC 헤더 -->
@@ -764,7 +890,8 @@
                    </li>
                    <li class="menu-drawer__item">
                       <a class="menu-drawer__link" href="/collections/new-in" tabindex="0">
-                      <span class="menu-drawer__primary-label">New in</span>
+                      <span class="menu-drawer__primary-label">New in</span> <span class="text-flag">New</span>
+                      
                       </a>
                    </li>
                    <li class="menu-drawer__item">

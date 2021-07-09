@@ -1,0 +1,62 @@
+<style>
+p.gnbcheck{text-align: center; margin-top: 30px;}
+.publishlist{padding:50px;}
+a.pub_link{display: inline-block; min-width: 500px;}
+@media screen and (max-width: 1000px){
+    a.pub_link{display: inline; min-width: unset;}
+    .publishlist{padding-left: 15px; padding-right: 15px;}
+}
+.publishlist ul{margin-bottom: 40px;}
+.publishlist ul>li{list-style-type: circle;}
+</style>
+    <!-- <p class='gnbcheck'>*You can check GNB Above*</p> -->
+    <div class='test-example'>
+        <p> 
+            <a href="#" class='btn-custom' onclick='doSuccessOne()'>검색 성공 (상세검색) </a>
+        </p>
+        <p> 
+            <a href="#" class='btn-custom' onclick='doSuccessTwo()'>검색 성공 (상세검색+연관검색)</a>
+        </p>
+        <p> 
+            <a href="#" class='btn-custom' onclick='doFail()'>검색 실패 </a>
+        </p>
+    </div>
+    <style>
+        .btn-custom{  display:inline-block; padding:15px; border:1px solid #000; }
+        .btn-custom:hover{ background-color: #000; color:#fff}
+        .test-example{padding-top:50px; text-align: center;}
+    </style>
+    <script>
+        function init(){
+            $(".site-header__col--desktop .site-header__icon.site-header__icon--search").click();            
+            return showOrhideArray({ // show
+             array:[
+                 ".suggestions__menu-bar.sorry", ".suggestions__menu-bar.only_one",  
+                 ".suggestions__menu-bar.suggestions__menu-bar--two-items", 
+                 ".suggestions__product-grid.card-grid.has-products"],
+             show:false// hide             
+            })
+        }
+        function doSuccessOne(){
+            init()({
+                array:[".suggestions__menu-bar.only_one",".suggestions__product-grid.card-grid.has-products"],
+                show:true,
+                end:true
+            })
+        }
+        function doSuccessTwo(){
+            init()({
+                array:[".suggestions__menu-bar.suggestions__menu-bar--two-items",".suggestions__product-grid.card-grid.has-products"],
+                show:true,
+                end:true
+            })
+        }
+        function doFail(){
+            init()({
+                array:[".suggestions__menu-bar.sorry"],
+                show:true,
+                end:true
+            })
+        }
+    </script>
+
