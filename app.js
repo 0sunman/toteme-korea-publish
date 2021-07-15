@@ -45,9 +45,9 @@ const pageData = [
   {"type":"main" , "pid":"T-MI-009", "state":"DONE" , "completedate":"2021-07-09",  "title":"Search_layer - SUCESS","url" : "/00_main/T-MI-009.ejs.html", "pageurl" : "00_main/T-MI-009.ejs"},
   {"type":"main" , "pid":"T-MI-009-2", "state":"DONE" , "completedate":"2021-07-09",  "title":"Search_layer - FAIL","url" : "/00_main/T-MI-009-2.ejs.html", "pageurl" : "00_main/T-MI-009-2.ejs"},
 
-  {"type":"main" , "pid":"T-MI-009-3", "state":"DONE" , "completedate":"2021-07-15",  "title":"Search_page - FAIL","url" : "/07_search/T-MI-009-3.html", "pageurl" : "../../dist/07_search/T-MI-009-3.html","isSearchPage":true},
-  {"type":"main" , "pid":"T-MI-009-4", "state":"DONE" , "completedate":"2021-07-15",  "title":"Search_page - SUCESS (1 column)","url" : "/07_search/T-MI-009-4.html", "pageurl" : "../../dist/07_search/T-MI-009-4.html","isSearchPage":true},
-  {"type":"main" , "pid":"T-MI-009-5", "state":"DONE" , "completedate":"2021-07-15",  "title":"Search_page - SUCESS (2 columns)","url" : "/07_search/T-MI-009-5.html", "pageurl" : "../../dist/07_search/T-MI-009-5.html","isSearchPage":true},
+  {"type":"main" , "pid":"T-MI-009-3", "state":"DONE" , "completedate":"2021-07-15",  "title":"Search_page - FAIL","url" : "/07_search/T-MI-009-3.html", "pageurl" : "../../dist/07_search/T-MI-009-3.html","pageurlsearch" : "07_search/T-MI-009-3.html","isSearchPage":true},
+  {"type":"main" , "pid":"T-MI-009-4", "state":"DONE" , "completedate":"2021-07-15",  "title":"Search_page - SUCESS (1 column)","url" : "/07_search/T-MI-009-4.html", "pageurl" : "../../dist/07_search/T-MI-009-4.html","pageurlsearch" : "07_search/T-MI-009-4.html","isSearchPage":true},
+  {"type":"main" , "pid":"T-MI-009-5", "state":"DONE" , "completedate":"2021-07-15",  "title":"Search_page - SUCESS (2 columns)","url" : "/07_search/T-MI-009-5.html", "pageurl" : "../../dist/07_search/T-MI-009-5.html","pageurlsearch" : "07_search/T-MI-009-5.html","isSearchPage":true},
 
   
   {"type":"main" , "pid":"T-CT-001", "state":"DONE" , "completedate":"2021-06-30",  "title":"T-CT-001. Component - Section with background (Tutorial)","url" : "/00_main/T-CT-001.sectionwithbackground.ejs.html",   "pageurl" : "00_main/T-CT-001.sectionwithbackground.ejs"},
