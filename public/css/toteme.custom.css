@@ -2692,3 +2692,12 @@ background: url('https://image.thehyundai.com/stories_cdn/images/hdstories/commo
 
 
 
+
+.dormant_id_select .button-block{margin-top:10px; margin-bottom:10px;}
+.dormant_id_select .username{margin-bottom:30px; }
+.dormant_id_select .select_id{margin:0px}
+.dormant_id_select .select_id div:first-child{margin-top:15px;}
+.dormant_id_select .select_id .mypage_radio_box{width:100%;display: block;}
+.dormant_id_select .content-line.line-block.margin-bottom-30{margin-bottom: 15px;}
+.dormant_id_select .title.text-block.description1{margin-bottom:20px;}
+.dormant_id_select .button-join-auth{margin-top:20px;}
