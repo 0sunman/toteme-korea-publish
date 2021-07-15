@@ -981,6 +981,7 @@ function doAuthJoinButton(){
                             ];
                             $(window).resize(function(){
                                 detectDraggableDiv();
-                            })
+                            });
+                            detectDraggableDiv();
                         },1000)
                         /* // 드래그 DIV 참고 */

@@ -42,9 +42,12 @@ const pageData = [
   {"type":"main" , "pid":"T-MI-001", "state":"DONE" , "completedate":"2021-06-01",  "title":"Display Page Type 01 (2–4 columns) ","url" : "/00_main/shop_scarves.ejs.html", "pageurl" : "00_main/shop_scarves.ejs"},
   {"type":"main" , "pid":"T-MI-001", "state":"DONE" , "completedate":"2021-06-01",  "title":"Display Page Type 02 (1-2–4 columns)","url" : "/00_main/shop_silk.ejs.html", "pageurl" : "00_main/shop_silk.ejs"},
 
+  {"type":"main" , "pid":"T-MI-009", "state":"DONE" , "completedate":"2021-07-09",  "title":"Search_layer - SUCESS","url" : "/00_main/T-MI-009.ejs.html", "pageurl" : "00_main/T-MI-009.ejs"},
+  {"type":"main" , "pid":"T-MI-009-2", "state":"DONE" , "completedate":"2021-07-09",  "title":"Search_layer - FAIL","url" : "/00_main/T-MI-009-2.ejs.html", "pageurl" : "00_main/T-MI-009-2.ejs"},
 
-  {"type":"main" , "pid":"T-MI-009", "state":"DONE" , "completedate":"2021-07-09",  "title":"Search - SUCESS","url" : "/00_main/T-MI-009.ejs.html", "pageurl" : "00_main/T-MI-009.ejs"},
-  {"type":"main" , "pid":"T-MI-009-2", "state":"DONE" , "completedate":"2021-07-09",  "title":"Search - FAIL","url" : "/00_main/T-MI-009-2.ejs.html", "pageurl" : "00_main/T-MI-009-2.ejs"},
+  {"type":"main" , "pid":"T-MI-009-3", "state":"DONE" , "completedate":"2021-07-15",  "title":"Search_page - FAIL","url" : "/07_search/T-MI-009-3.html", "pageurl" : "../../dist/07_search/T-MI-009-3.html","isSearchPage":true},
+  {"type":"main" , "pid":"T-MI-009-4", "state":"DONE" , "completedate":"2021-07-15",  "title":"Search_page - SUCESS (1 column)","url" : "/07_search/T-MI-009-4.html", "pageurl" : "../../dist/07_search/T-MI-009-4.html","isSearchPage":true},
+  {"type":"main" , "pid":"T-MI-009-5", "state":"DONE" , "completedate":"2021-07-15",  "title":"Search_page - SUCESS (2 columns)","url" : "/07_search/T-MI-009-5.html", "pageurl" : "../../dist/07_search/T-MI-009-5.html","isSearchPage":true},
 
   
   {"type":"main" , "pid":"T-CT-001", "state":"DONE" , "completedate":"2021-06-30",  "title":"T-CT-001. Component - Section with background (Tutorial)","url" : "/00_main/T-CT-001.sectionwithbackground.ejs.html",   "pageurl" : "00_main/T-CT-001.sectionwithbackground.ejs"},
@@ -136,12 +139,12 @@ const pageData = [
 {"type":"page", "pid":"T-AB-004", "state":"DONE" , "completedate":"2021-07-02", "url" : "/05_page_about/T-AB-004.ejs.html", "pageurl" : "05_page_about/T-AB-004.ejs", "title":"T-AB-004. About - Sustainability", "title2":"지속가능성"},
 
   {"type":"page", "pid":"T-QA-001", "state":"DONE" , "completedate":"2021-07-01", "etc":"",  "title":"T-QA-001. Question - COVID-19 FAQ",       "url" : "/04_page_question/T-QA-001.ejs.html", "pageurl" : "04_page_question/T-QA-001.ejs"},
-  {"type":"page", "pid":"T-QA-002", "state":"DONE" , "completedate":"2021-07-01", "etc":"",  "title":"T-QA-002. Question - Payments",           "url" : "/04_page_question/T-QA-002.ejs.html", "pageurl" : "04_page_question/T-QA-002.ejs"},
-  {"type":"page", "pid":"T-QA-003", "state":"DONE" , "completedate":"2021-07-01", "etc":"",  "title":"T-QA-003. Question - Shipping",           "url" : "/04_page_question/T-QA-003.ejs.html", "pageurl" : "04_page_question/T-QA-003.ejs"},
+  {"type":"page", "pid":"T-QA-002", "state":"DONE" , "completedate":"2021-07-15", "etc":"",  "title":"T-QA-002. Question - Payments",           "url" : "/04_page_question/T-QA-002.ejs.html", "pageurl" : "04_page_question/T-QA-002.ejs"},
+  {"type":"page", "pid":"T-QA-003", "state":"DONE" , "completedate":"2021-07-15", "etc":"",  "title":"T-QA-003. Question - Shipping",           "url" : "/04_page_question/T-QA-003.ejs.html", "pageurl" : "04_page_question/T-QA-003.ejs"},
   {"type":"page", "pid":"T-QA-004", "state":"DONE" , "completedate":"2021-07-01", "etc":"",  "title":"T-QA-004. Question - Returns",            "url" : "/04_page_question/T-QA-004.ejs.html", "pageurl" : "04_page_question/T-QA-004.ejs"},
   {"type":"page", "pid":"T-QA-005", "state":"DONE" , "completedate":"2021-07-15", "etc":"",  "title":"T-QA-005. Question - Private policy",     "url" : "/04_page_question/T-QA-005.ejs.html", "pageurl" : "04_page_question/T-QA-005.ejs"},
   {"type":"page", "pid":"T-QA-006", "state":"DONE" , "completedate":"2021-07-15", "etc":"",  "title":"T-QA-006. Question - Terms",              "url" : "/04_page_question/T-QA-006.ejs.html", "pageurl" : "04_page_question/T-QA-006.ejs"},
-  {"type":"page", "pid":"T-QA-007", "state":"DONE" , "completedate":"2021-07-01", "etc":"",  "title":"T-QA-007. Question - Contact",            "url" : "/04_page_question/T-QA-007.ejs.html", "pageurl" : "04_page_question/T-QA-007.ejs"},
+  {"type":"page", "pid":"T-QA-007", "state":"DONE" , "completedate":"2021-07-15", "etc":"",  "title":"T-QA-007. Question - Contact",            "url" : "/04_page_question/T-QA-007.ejs.html", "pageurl" : "04_page_question/T-QA-007.ejs"},
 
   {"type":"page", "pid":"T-ETC-001", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"T-ETC-001. Uniforms - 1depth(3col)",        "url" : "/06_page_uniforms/T-ETC-001.ejs.html",  "pageurl" : "06_page_uniforms/T-ETC-001.ejs"},
   {"type":"page", "pid":"T-ETC-002", "state":"DONE" , "completedate":"2021-06-01", "etc":"", "title":"T-ETC-002. Uniforms - 2depth(2col)",        "url" : "/06_page_uniforms/T-ETC-002.ejs.html",  "pageurl" : "06_page_uniforms/T-ETC-002.ejs"},
@@ -167,24 +170,38 @@ Terms & Conditions
 Contact
 */
 pageData.forEach((data)=>{
-  const {url, pageurl, isMain} = data;
+  const {url, pageurl, isMain, isSearchPage} = data;
   console.log(url, pageurl);
-  app.get(url, (req, res) => {
-    res.render('./index',{targetPath : pageurl, pageList : pageData},(err,html) => {
-      console.log(pageurl);
-      if(isMain){
-      //  console.log("isMain",__dirname + "/index.html");
-      //  fs.writeFileSync(__dirname + "/index.html",html)
-        fs.writeFileSync(__dirname + "/dist/"+ pageurl+".html",html)
-      }else{
-        fs.writeFileSync(__dirname + "/dist/"+ pageurl+".html",html)
 
-      }
+  
+  if(isSearchPage){
+    app.get(url, (req, res) => {
+      res.render('./index_free',{targetPath : pageurl, pageList : pageData},(err,html) => {
+        console.log("search url : "+pageurl);
+        res.send(html);
+      });
       
-      res.send(html);
-    });
-    
-  })
+    })
+  }else{
+    app.get(url, (req, res) => {
+      res.render('./index',{targetPath : pageurl, pageList : pageData},(err,html) => {
+        console.log(pageurl);
+  
+        if(isMain){
+        //  console.log("isMain",__dirname + "/index.html");
+        //  fs.writeFileSync(__dirname + "/index.html",html)
+          fs.writeFileSync(__dirname + "/dist/"+ pageurl+".html",html)
+        }else{
+          fs.writeFileSync(__dirname + "/dist/"+ pageurl+".html",html)
+  
+        }
+        
+        res.send(html);
+      });
+      
+    })
+  
+  }
   console.log(path.join(__dirname, pageurl));
 
 
