@@ -15,9 +15,18 @@ a.pub_link{display: inline-block; min-width: 500px;}
         <ul id='main'>
             <% pageList.forEach(function(data){ 
                 if(data.type == "main"){ %>
-            <li>
-                <a class="pub_link" href='../<%= data.pageurl %>.html'><%= data.title %></a>&nbsp;&nbsp;<%= data.completedate %>
-            </li>
+                    
+                <% if(data.isSearchPage){ %>
+                    <li>
+                        <a class="pub_link" href='<%= data.url %>'><%= data.title %></a>&nbsp;&nbsp;<%= data.completedate %>
+                    </li>                        
+
+                    <%}else{%>
+                    <li>
+                        <a class="pub_link" href='../<%= data.pageurl %>.html'><%= data.title %></a>&nbsp;&nbsp;<%= data.completedate %>
+                    </li>                        
+                <%} %> 
+
             <%}}) %> 
         </ul>
 

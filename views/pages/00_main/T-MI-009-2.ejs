@@ -10,9 +10,19 @@ a.pub_link{display: inline-block; min-width: 500px;}
 .publishlist ul>li{list-style-type: circle;}
 </style>
     <!-- <p class='gnbcheck'>*You can check GNB Above*</p> -->
-    <p> 잠시후 검색기능이 실행됩니다! (우측 상단 검색 버튼 눌러도 됩니다) (모든 케이스 통합)</p>
-    <script>
-        setTimeout(function(){
-            $(".site-header__col--desktop .site-header__icon.site-header__icon--search").click();
-        },2000)
-    </script>
+    <div class='test-example'>
+        <p> 
+            <a href="../07_search/T-MI-009-3.html" class='btn-custom'>검색 성공 (상세검색) </a>
+        </p>
+        <p> 
+            <a href="#" class='btn-custom' onclick='doSuccessTwo()'>검색 성공 (상세검색+연관검색)</a>
+        </p>
+        <p> 
+            <a href="#" class='btn-custom' onclick='doFail()'>검색 실패 </a>
+        </p>
+    </div>
+    <style>
+        .btn-custom{  display:inline-block; padding:15px; border:1px solid #000; }
+        .btn-custom:hover{ background-color: #000; color:#fff}
+        .test-example{padding-top:50px; text-align: center;}
+    </style>

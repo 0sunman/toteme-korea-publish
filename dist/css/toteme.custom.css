@@ -368,11 +368,17 @@ body.overflow-hidden {overflow: hidden;}
 .modal__body .dot_list{text-align: left;}
 
 /* 결제 */
-.sns-buttons.payment_type{padding-bottom: 15px; border-bottom: 1px solid #171616;}
-.sns-buttons.payment_type:after{content: ''; display: block; clear: both;}
+.sns-buttons.payment_type{display: flex; flex-wrap: wrap; justify-content: center; padding-bottom: 15px; border-bottom: 1px solid #171616;}
+/* .sns-buttons.payment_type:after{content: ''; display: block; clear: both;} */
 .sns-buttons.payment_type>label{float: left; width: 50%;}
-.sns-buttons.payment_type>label>span{width: calc(100% - 6px); margin: 5px 3px;}
+.sns-buttons.payment_type>label:nth-child(odd){text-align: right;}
+.sns-buttons.payment_type>label:nth-child(even){text-align: left;}
+.sns-buttons.payment_type>label>span{width: calc(100% - 6px); max-width: 250px; margin: 5px 3px;}
 .sns-buttons.payment_type>label:last-child{clear: right;}
+@media screen and (max-width: 999px){
+  .sns-buttons.payment_type>label{width: 100%; margin: 0 auto; padding: 0 36px;}
+  .sns-buttons.payment_type>label>span{max-width: unset;}
+}
 .payment_con_box{float: left; width: 100%;}
 .checkout_content.non_member_content{margin-top: 20px; margin-bottom: 25px;}
 .chekout_previous_link{display: block; text-align: center;}
@@ -881,6 +887,10 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 .center-info dd{margin-left: 10px;}
 .privacy_contents .mypage_toggle_menu{margin-top: 0;}
 .mypage_toggle_menu+.template-mypage__form{padding-top: 0;}
+.contact_each{margin-bottom: 30px;}
+.contact_title{margin-bottom: 0;}
+.footer_terms-modal .modal__body, .footer_privacy-modal .modal__body{display: block; text-align: left;}
+.footer_terms-modal ol, .footer_terms-modal ul, .footer_privacy-modal ol, .footer_privacy-modal ul{padding-left: 0;}
 
 /* 
     2-0-0 로그인 & 회원가입 공통 
