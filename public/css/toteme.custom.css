@@ -790,7 +790,7 @@ li > a.navlist__link.text-link{padding-left:15px}
 .return_attr_list .toteme-select-style{min-height: 23px; padding-left: 18px; padding-right: 30px; text-align-last: right; font-size: 12px; background-position: right 15px center;}
 .return_tr+.product{border-top: 1px solid #171616;}
 .return_btn_block{max-width: unset; margin-top: 0; margin-bottom: 0; padding-bottom: 15px; border-bottom: 1px solid #171616;}
-.my_price_list+.my_price_list{margin-top: 15px;}
+.my_price_list+.my_price_list{margin-top: 30px;}
 .return_type_box .radio_custom_box, .return_addr_box .radio_custom_box{float: left; width: 50%;}
 .return_type2 .address_each{margin-bottom: 0;}
 .return_type_box:after, .return_addr_box:after{content: ''; display: block; clear: both;}
