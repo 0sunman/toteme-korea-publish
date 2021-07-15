@@ -61,14 +61,14 @@
 				<div class="checkout_wrap">
 					<div class="checkout_header">
 						<ol class="checkout_breadcrumb">
-							<li class="active">주문정보</li>
-							<li>결제</li>
+							<li class="active">주문 정보</li>
+							<li>결제 정보</li>
 						</ol>
 					</div>
 				</div>
 				<div class="checkout_body">
 					<div class="checkout_section">
-						<h5 class="checkout_tit1">주문정보</h5>
+						<h5 class="checkout_tit1">주문 정보</h5>
 						<div class="checkout_content">
 							<form action="">
 								<div class="input-block name">
@@ -87,15 +87,20 @@
 										</select>
 									</div>
 								</div>
-								<div class="button-block">
-									<input class="btn modal_trigger" type="button" value="본인인증" data-modal="verify-modal">
+								<div class="checkout_btn_box button-block loading-wrap">
+									<input class="button button--block button--large modal_trigger is-active" type="button" value="본인인증" data-modal="verify-modal">
+									<div class="loader">
+										<div class="smiley-spin">
+											 <svg class="icon icon--medium icon__smiley" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 15.5a7.5 7.5 0 110-15 7.5 7.5 0 010 15zm0-1a6.5 6.5 0 100-13 6.5 6.5 0 000 13zM4.947 9.776l-.894.448a4.413 4.413 0 007.894 0l-.894-.448a3.413 3.413 0 01-6.106 0zM9.5 5h1v2h-1V5zm-3 0h-1v2h1V5z"></path></svg>
+										</div>
+								 </div>
 							 </div>
 							</form>
 						</div>
 					</div>
 
 					<div class="checkout_section">
-						<h5 class="checkout_tit1">배송지 정보</h5>
+						<h5 class="checkout_tit1">배송 정보</h5>
 						<form action="">
 							<div class="input-block name">
 								<label class="field__label" for="checkout_name2">받는 사람</label>
@@ -134,14 +139,17 @@
 								<label class="field__label" for="checkout_addr6">상세주소</label>
 								<input placeholder="상세주소" class="field__input" size="30" type="text" name="checkout[addr3]" id="checkout_addr6">
 							</div>
-							<div class="checkout_btn_box">
-								<button name="button" type="submit" id="continue_button" class="step__footer__continue-btn btn">
-									<span class="btn__content">결제수단 선택</span>
-									<svg class="icon-svg icon-svg--size-18 btn__spinner icon-svg--spinner-button" aria-hidden="true" focusable="false">
-										<use xlink:href="#spinner-button"></use>
-									</svg></button>
-							</div>
 						</form>
+					</div>
+					<div class="checkout_section">
+						<div class="checkout_btn_box button-block loading-wrap">
+							<input class="button button--primary button--block button--large is-active" type="button" value="결제수단 선택">
+							<div class="loader">
+								 <div class="smiley-spin">
+										<svg class="icon icon--medium icon__smiley" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 15.5a7.5 7.5 0 110-15 7.5 7.5 0 010 15zm0-1a6.5 6.5 0 100-13 6.5 6.5 0 000 13zM4.947 9.776l-.894.448a4.413 4.413 0 007.894 0l-.894-.448a3.413 3.413 0 01-6.106 0zM9.5 5h1v2h-1V5zm-3 0h-1v2h1V5z"></path></svg>
+								 </div>
+							</div>
+						</div>
 					</div>
 				</div>
 

@@ -261,6 +261,8 @@ body.overflow-hidden {overflow: hidden;}
 .table_type1 th{text-align: center;}
 .table_type1 td{text-align: left;}
 .table_type1 p{font-size: inherit;}
+.table_type1.center th, .table_type1.center td{text-align: center;}
+.orderpage .table_type1.center td:last-child, .orderpage .table_type1.center th:last-child, .orderpage .table_type1.center td:first-child, .orderpage .table_type1.center th:first-child{text-align: center;}
 /* //테이블 */
 
 /* 상품 */
@@ -302,7 +304,7 @@ body.overflow-hidden {overflow: hidden;}
 .checkout .input-block:last-of-type{margin-bottom: 0;}
 .comment.error{max-width: 500px; margin: 3px auto 0; text-align: left; color: #ff0000;}
 .checkout .field__input{padding: 0 11px;}
-.email_form .comment, .phone_form .comment, .addr_form .comment{display: table-row; width:100%; line-height: 26px;}
+.email_form .comment, .phone_form .comment, .addr_form .comment{display: table-caption; caption-side: bottom;}
 .checkout_header{padding: 15px; border-bottom: 1px solid #171616;}
 .checkout_breadcrumb{padding: 0;}
 .checkout_breadcrumb:after{content: ''; display: block; clear: both;}
@@ -312,7 +314,7 @@ body.overflow-hidden {overflow: hidden;}
 .checkout_breadcrumb>li.active{opacity: 1;}
 .checkout_section{padding: 15px 15px 20px; border-bottom: 1px solid #171616;}
 .checkout_section:last-child{border-bottom-width: 0;}
-.checkout_tit1{margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #171616;}
+.checkout_tit1{margin-bottom: 15px;}
 .checkout_tit1:after{content: ''; display: block; clear: both;}
 .checkout_tit1 .button--primary{float: right; font-size: 13px; padding: 0 18px; line-height: 21px;}
 .my_price_list>li{display: table; width: 100%; margin-bottom: 10px;}
@@ -323,7 +325,7 @@ body.overflow-hidden {overflow: hidden;}
 .email_form>div:last-of-type{width: 40%; padding-left: 7px; vertical-align: top;}
 .address_edit_btn{margin-top: 5px;}
 .input-block [readonly]{background-color: #ddd; cursor: not-allowed;}
-.button-block{max-width: 500px; margin: 10px auto;}
+.button-block{max-width: 500px; margin: 20px auto;}
 .button-block.pcs2:after{content: ''; display: block; clear: both;}
 .button-block.pcs2 .btn{float: left; width: calc(50% - 4px);}
 .button-block.pcs2 .btn:hover{width: calc(50% - 4px);}
@@ -337,7 +339,7 @@ body.overflow-hidden {overflow: hidden;}
 .member_address_info.with_button .member_address_inner:last-child{text-align: right;}
 .checkbox-block+.text-block.sub-description p{font-size: 14px;}
 .round_button{padding: 0 18px; line-height: 23px; font-size: 13px;}
-.checkout_btn_box{margin: 30px 0; text-align: center;}
+.checkout_btn_box{margin: 15px auto 10px; text-align: center;}
 .checkout_btn_box .btn{max-width: 500px;}
 .address_each{margin: 30px 0;}
 .direct_input{display: none;}
@@ -367,7 +369,13 @@ body.overflow-hidden {overflow: hidden;}
 
 /* 결제 */
 .sns-buttons.payment_type{padding-bottom: 15px; border-bottom: 1px solid #171616;}
+.sns-buttons.payment_type:after{content: ''; display: block; clear: both;}
+.sns-buttons.payment_type>label{float: left; width: 50%;}
+.sns-buttons.payment_type>label>span{width: calc(100% - 6px); margin: 5px 3px;}
+.sns-buttons.payment_type>label:last-child{clear: right;}
+.payment_con_box{float: left; width: 100%;}
 .checkout_content.non_member_content{margin-top: 20px; margin-bottom: 25px;}
+.chekout_previous_link{display: block; text-align: center;}
 .nm_payment_attr{margin: 20px auto 0;}
 .nm_payment_attr .checkbox_custom_box{margin-bottom: 5px;}
 .nm_payment_attr .checkbox_custom_box .checkbox{top: 0.36em;}
@@ -379,9 +387,10 @@ body.overflow-hidden {overflow: hidden;}
 .payment_account_info ul>li{margin-bottom: 5px;}
 .payment_account_info ul>li:last-child{margin-bottom: 0;}
 .payment_tit2{display: inline-block; min-width: 82px; padding-right: 10px;}
+.guest_checkout_terms{text-align: left;}
 
 /* 주문완료 */
-.summary_content{margin-bottom: 30px;}
+.summary_content{margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #171616;}
 .summary_text_block p{line-height: 23px;}
 .product-table:not(.stock-problem-table) .product__quantity .visually-hidden, .checkout .order-summary__section--discount .field__input-btn .visually-hidden-on-mobile{overflow: visible;}
 .discount-trigger{display: block; max-width: 500px; margin: 0 auto; padding-left: 0; padding-right: 0;}
@@ -713,18 +722,19 @@ li > a.navlist__link.text-link{padding-left:15px}
 @media screen and (max-width: 1800px) {
     .checkout .input-block, .checkout .button-block, .checkout .checkout_btn_box, .checkout .checkbox-block, .mypage .input-block, .mypage .button-block, .mypage .checkbox-block{max-width: unset; padding-left: 36px; padding-right: 36px;}
     .mypage .address_add_box .checkbox-block .checkbox_custom_box, .mypage .template-addresses .checkbox-block .checkbox_custom_box{max-width: 500px; margin: auto;}
-    .checkout .button-block{max-width: 572px;}
+    .checkout .button-block, .button-block.pcs2{max-width: 572px;}
     .input-block.addr_form, .input-block.phone_form, .input-block.email_form, .mypage .checkbox-block.mypage_email{max-width: 572px;}
     .modal .input-block, .modal .button-block{padding-left: 0; padding-right: 0; margin-left: auto; margin-right: auto;}
     .modal .input-block.addr_form, .modal .input-block.phone_form, .modal .input-block.email_form{max-width: 500px;}
     .template-mypage__form.mypage_plus_info{max-width: 604px;}
     .template-mypage__form.mypage_plus_info{padding-left: 52px; padding-right: 52px;}
     .template-mypage__form.mypage_plus_info .button-block{padding: 0;}
-    .checkout .checkbox-block+.text-block, .checkout .input-block+.text-block, .checkout .input-block+.dot_list, .mypage .button-block+.text-block{padding-left: 36px; padding-right: 36px;}
+    .checkbox-block+.text-block, .checkout .input-block+.text-block, .checkout .input-block+.dot_list, .mypage .button-block+.text-block{padding-left: 36px; padding-right: 36px;}
+    .checkout .return_btn_block{max-width: unset;}
 }
 @media screen and (max-width: 1000px){
     .modal .addr_list{padding: 0 22px;}
-    .modal .input-block, .modal .button-block, .address_find_content .input-table, .modal .comment.error{max-width: 544px; padding-left: 22px; padding-right: 22px;}
+    .modal .input-block, .modal .button-block, .address_find_content .input-table{max-width: 544px; padding-left: 22px; padding-right: 22px;}
     .modal .input-block.addr_form, .modal .input-block.phone_form, .modal .input-block.email_form, .modal .comment.error{max-width: 544px;}
 }
 
@@ -737,7 +747,8 @@ li > a.navlist__link.text-link{padding-left:15px}
 .mypage_toggle_menu.mypage_order_menu>li.is-active .toggle_tit:before{background: 0 none;}
 .mypage_toggle_menu.mypage_order_menu .toggle_con_box{padding-top: 0;}
 .mypage_order_menu .product-table{border-top: 1px solid #171616;}
-.mypage_order_menu .summary_content{margin-bottom: 0; padding: 15px;}
+.mypage_order_menu .summary_content{margin: 15px;}
+.mypage_order_menu .summary_content:last-child{margin-bottom: 0;}
 .mypage_order_menu .product-table img{height: 100%; object-fit: cover; width: 100%;}
 .mypage_order_menu.arrow-up-down .toggle_tit:before{transform: translateY(-50%);}
 .mypage_order_menu.arrow-up-down>li.is-active .toggle_tit:before{background: url(../assets/icon-small-arrow-down.svg) center / 8px auto no-repeat; transform: translateY(-50%) rotate(180deg);}
@@ -766,12 +777,13 @@ li > a.navlist__link.text-link{padding-left:15px}
 .mypage_each.mypage_pw_input .text-block.sub-description{padding: 0 36px;}
 .return_tr td{padding: 15px 15px 30px;}
 .main-content .return_attr_list>li{display: table; width: 100%; margin-bottom: 8px;}
+.main-content .return_attr_list>li:last-child{margin-bottom: 0;}
 .return_attr_list .tit1{display: table-cell; text-align: left; vertical-align: middle;}
 .return_attr_list .txt1{display: table-cell; width: 30%; text-align: right; vertical-align: middle;}
 .return_attr_list .txt1 select{display: inline-block; max-width: 80px;}
 .return_attr_list .toteme-select-style{min-height: 23px; padding-left: 18px; padding-right: 30px; text-align-last: right; font-size: 12px; background-position: right 15px center;}
 .return_tr+.product{border-top: 1px solid #171616;}
-.return_btn_block{margin-top: 0; margin-bottom: 15px;}
+.return_btn_block{max-width: unset; margin-top: 0; margin-bottom: 0; padding-bottom: 15px; border-bottom: 1px solid #171616;}
 .my_price_list+.my_price_list{margin-top: 15px;}
 .return_type_box .radio_custom_box, .return_addr_box .radio_custom_box{float: left; width: 50%;}
 .return_type2 .address_each{margin-bottom: 0;}
@@ -785,7 +797,8 @@ li > a.navlist__link.text-link{padding-left:15px}
 .return_addr_type1 .radio_custom_box:last-child{margin-bottom: 0;}
 .input-block.return_reason_select{margin-top: 20px; margin-bottom: 30px;}
 .receipt_wrap .return_tr:last-child td{padding-bottom: 15px;}
-.mypage_order_menu .mypage_each2.receipt_txt_list{padding-top: 0;}
+.mypage_order_menu .mypage_each2.receipt_txt_list{padding-top: 0; border-bottom-width: 0;}
+.mypage_order_menu .deposit_txt_box{border-bottom-width: 0;}
 .receipt_txt_list .dot_list{margin-top: 0;}
 
 /* @media screen and (max-width: 1800px){
@@ -817,7 +830,7 @@ li > a.navlist__link.text-link{padding-left:15px}
   .sm-modal .modal__body{padding: 1.5rem 3rem;}
 }
 .sm-modal .modal__body{display: block; text-align: left;}
-.table-block .comment.error{display: table-row;}
+.table-block .comment.error{display: table-caption; caption-side: bottom;}
 
 figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 .containerZoom.active{cursor: zoom-out;}
@@ -850,7 +863,24 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 /* 비회원 주문조회 */
 .guest_order_list .mypage_order_menu{margin-top: -1px;}
 .guest_order_list .mypage_order_menu>li .toggle_tit:before{display: none;}
+.btn{background-color: #171616; color: #fff; font-size: 15px; letter-spacing: .06px; line-height: 20px; margin: 0; min-height: 33px; padding: 0 2rem; width: 100%; border: 1px solid #171616; border-radius: 22px;}
 
+/* 이용약관 */
+.guest_checkout_terms .top-txt{margin-bottom: 30px;}
+.terms_each{margin-bottom: 30px;}
+.terms_each:last-child{margin-bottom: 0;}
+.terms_each p{margin-bottom: 10px;}
+.terms_each .table_type1{margin-bottom: 10px;}
+.privacy_contents p{margin-bottom: 10px;}
+.privacy_contents ol{padding-left: 0;}
+.privacy_contents .toggle_con_box ol>li{margin-bottom: 10px;}
+.privacy_contents .toggle_con_box ul>li{margin-bottom: 5px;}
+.privacy_contents .table_type1{margin-top: 10px; margin-bottom: 10px; table-layout: unset;}
+.privacy_contents ol ol, .privacy_contents ol ul{margin-top: 5px; margin-left: 10px;}
+.center-info dd+dt{margin-top: 10px;}
+.center-info dd{margin-left: 10px;}
+.privacy_contents .mypage_toggle_menu{margin-top: 0;}
+.mypage_toggle_menu+.template-mypage__form{padding-top: 0;}
 
 /* 
     2-0-0 로그인 & 회원가입 공통 
@@ -873,7 +903,7 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
     .login_join .section{ margin:34px 60px; }
 }
 .login_join .text.section{ margin:20px 15px;}
-.login_join form div{ margin-bottom: 10px;}
+.login_join form div{ margin-bottom: 20px;}
                            
 .login_join .sns-buttons.defaultblock > div{display:table; width:100%; max-width: 500px; margin:0 auto; margin-bottom:10px}
 .login_join .sns-buttons.defaultblock > div > label {display: table-cell; width:50%; text-align: left;}
@@ -2652,20 +2682,3 @@ background: url('https://image.thehyundai.com/stories_cdn/images/hdstories/commo
 
 
 
-html.js-search-active{overflow:hidden}
-.suggestions__menu-bar.sorry{padding: .5rem 1rem;}
-
-
-
-.login-modal  .section.login_join.login_page { width:100%; }
-.login-modal  .login_join .sns-buttons.defaultblock > div > a.link-text-type span { text-decoration: underline;}
-.login-modal  .login_join .sns-buttons.defaultblock > div > a.link-text-type {display: table-cell; width: 50%;  text-align: left;}
-.login-modal .modal__body{padding:0px; margin:0px;}
-.login-modal .modal__footer {border-top:1px solid #000}
-.login-modal .modal__footer > p{margin:25px 15px 50px;}
-.login-modal  .idoremail.input-block{margin-top:15px}
-.login-modal .modal__footer{margin-top:5px}
-.login-modal .error.comment{padding-left: 0px;}
-@media (max-width:500px) {
-   .login-modal .section > form > div{margin:15px 15px 10px 15px;}
-}
