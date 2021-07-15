@@ -92,7 +92,7 @@
 								</tbody>
 							</table>
 							<div class="summary_content mypage_each2">
-								<h5 class="checkout_tit1">주문상태</h5>
+								<h5 class="checkout_tit1">주문 상태</h5>
 								<div class="txt_btn_box">
 									<h4 class="mypage_tit2">반품</h4>
 									<div>
@@ -101,7 +101,7 @@
 								</div>
 							</div>
 							<div class="summary_content">
-								<h5 class="checkout_tit1">배송정보 <button type="button" class="button button--primary" data-address="address_select">변경</button></h5>
+								<h5 class="checkout_tit1">배송 정보</h5>
 								<div class="summary_text_block">
 									<span>택배배송</span>
 										<div class="checkout_content address_wrap">
@@ -110,26 +110,15 @@
 													<div class="member_address_inner">
 														<p>이현대<br>
 															010-1234-5678<br>
-															서울특별시 강남구 강남대로1길 1층</p>
+															서울특별시 강남구 강남대로1길 1층<br>
+															부재 시 경비실에 맡겨주세요.</p>
 													</div>
 													<div class="member_address_inner">
 														<!-- <button type="button" class="button round_button" data-address="address_select">변경</button> -->
 													</div>
 												</div>
-												<div class="input-block delivery_message">
-													<label class="field__label" for="checkout_memo">배송시 요청사항 선택</label>
-													<select id="checkout_memo" class="toteme-select-style">
-														<option value="" disabled="">배송시 요청사항 선택</option>
-														<option value="">배송 전 연락바랍니다.</option>
-														<option value="">택배함에 넣어주세요.</option>
-														<option value="">빠른 배송 부탁 드립니다.</option>
-														<option value="" selected="">부재 시 경비실에 맡겨주세요.</option>
-														<option value="">핸드폰으로 연락 부탁 드립니다.</option>
-														<option value="direct">직접입력</option>
-													</select>
-													<div class="input-block direct_input">
-														<input type="text" placeholder="배송 시 요청사항을 입력하세요" class="field__input">
-													</div>
+												<div class="button-block">
+													<input class="button button--primary button--block button--large is-valid" type="button" value="배송 정보 변경" data-address="address_select">
 												</div>
 											</div>
 											<div class="address_select_box">
@@ -293,13 +282,17 @@
 													<div class="text-block sub-description">
 														<p>주문 시 입력한 신규 배송지는 자동으로 배송주소록에 추가됩니다.</p>
 													</div>
+													<div class="button-block pcs2">
+														<input class="btn white" type="submit" value="취소">
+														<input class="btn" type="submit" value="저장">
+													</div>
 												</div>
 											</div>
 										</div>
 								</div>
 							</div>
 							<div class="summary_content mypage_each2">
-								<h5 class="checkout_tit1">결제정보 <button type="button" class="button button--primary modal_trigger" data-modal="payment_edit-modal">결제수단 변경</button></h5>
+								<h5 class="checkout_tit1">결제 정보</h5>
 								<div class="summary_text_block">
 									<ul class="my_price_list">
 										<li>
@@ -322,7 +315,7 @@
 								</div>
 							</div>
 							<div class="summary_content mypage_each2">
-								<h5 class="checkout_tit1">결제수단</h5>
+								<h5 class="checkout_tit1">결제 수단</h5>
 								<div class="summary_text_block">
 									<ul class="my_price_list">
 										<li>
@@ -341,9 +334,12 @@
 										</li>
 									</ul>
 								</div>
+								<div class="button-block">
+									<input class="button button--primary button--block button--large modal_trigger" type="button" value="결제수단 변경" data-modal="payment_edit-modal">
+								</div>
 							</div>
 							<div class="summary_content mypage_each2">
-								<h5 class="checkout_tit1">승인내역</h5>
+								<h5 class="checkout_tit1">승인 내역</h5>
 								<div class="summary_text_block">
 									<ul class="my_price_list">
 										<li>
@@ -414,7 +410,7 @@
 	<div class="modal__overlay" tabindex="-1">
 		<div class="modal__card">
 			<div class="modal__header">
-				<h5 class="modal__title  preorder-modal__title">결제수단 변경</h5>
+				<h5 class="modal__title  preorder-modal__title">결제 수단 변경</h5>
 				<button class="modal__close">
 					<span class="visually-hidden">
 						Close
