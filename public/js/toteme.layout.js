@@ -1018,8 +1018,11 @@ function doAuthJoinButton(){
                             }
                          }
 
+
+
                          $(window).scroll(ToastScrollEvent);
 /*
+                      토스트
                          alertToast({message:"토스트 메시지입니다. 테스트1",timming:1000})
                          alertToast({message:"토스트 메시지입니다. 테스트2",timming:3000})
                          alertToast({message:"토스트 메시지입니다. 테스트3",timming:5000})
