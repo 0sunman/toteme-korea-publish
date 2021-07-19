@@ -101,9 +101,9 @@ const pageData = [
   {"type":"order", "pid":"T-OD-007", "state":"DONE" , "completedate":"2021-07-15", "url" : "/04_order/T-OD-007.ejs.html", "pageurl" : "04_order/T-OD-007.ejs", "title":"T-OD-007 ~ 025. Order Page", "title2":"주문서 - 회원"},
   {"type":"order", "pid":"T-OD-022", "state":"DONE" , "completedate":"2021-07-15", "url" : "/04_order/T-OD-022.ejs.html", "pageurl" : "04_order/T-OD-022.ejs", "title":"T-OD-022. Order Page(Guest)", "title2":"주문서 - 비회원"},
   {"type":"order", "pid":"T-OD-024", "state":"DONE" , "completedate":"2021-07-15", "url" : "/04_order/T-OD-024.ejs.html", "pageurl" : "04_order/T-OD-024.ejs", "title":"T-OD-024. Payment Page(Guest)", "title2":"결제"},
+  {"type":"order", "pid":"T-OD-029-1", "state":"DONE" , "completedate":"2021-07-19", "url" : "/04_order/T-OD-029-1.ejs.html", "pageurl" : "04_order/T-OD-029-1.ejs", "title":"T-OD-029-1. ISP App check (mobile only)", "title2":"모바일 ISP"},
   {"type":"order", "pid":"T-OD-037", "state":"DONE" , "completedate":"2021-07-15", "url" : "/04_order/T-OD-037.ejs.html", "pageurl" : "04_order/T-OD-037.ejs", "title":"T-OD-037. Order Summary", "title2":"주문완료"},
   {"type":"order", "pid":"T-OD-037-0", "state":"DONE" , "completedate":"2021-07-19", "url" : "/04_order/T-OD-037-0.ejs.html", "pageurl" : "04_order/T-OD-037-0.ejs", "title":"T-OD-037-0. Checkout Loading (popup)", "title2":"결제 진행중 팝업"},
-  {"type":"order", "pid":"T-OD-037-1", "state":"DONE" , "completedate":"2021-07-19", "url" : "/04_order/T-OD-037-1.ejs.html", "pageurl" : "04_order/T-OD-037-1.ejs", "title":"T-OD-037-1. ISP App check (mobile only)", "title2":"모바일 ISP"},
   
   {"type":"mypage", "pid":"T-MY-003", "state":"DONE" , "completedate":"2021-06-11", "url" : "/01_mypage/T-MY-003.ejs.html", "pageurl" : "01_mypage/T-MY-003.ejs", "title":"T-MY-003. Mypage", "title2":"마이페이지 - 나의 쇼핑정보"},
   {"type":"mypage", "pid":"T-MY-004", "state":"DONE" , "completedate":"2021-07-08", "url" : "/01_mypage/T-MY-004.ejs.html", "pageurl" : "01_mypage/T-MY-004.ejs", "title":"T-MY-004. Edit member information", "title2":"마이페이지 - 회원정보변경"},
