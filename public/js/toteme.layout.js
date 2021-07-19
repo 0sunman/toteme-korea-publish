@@ -990,6 +990,7 @@ function doAuthJoinButton(){
 
                         /* 토스트 예시 */
                         function alertToast(param){
+
                             if(document.querySelector(".toast-area") == null){
                                 var div = document.createElement("div");
                                 div.className = "toast-area"
@@ -1000,6 +1001,7 @@ function doAuthJoinButton(){
                             p.className = "message"
                             p.innerHTML = param.message;
                             document.querySelector(".toast-area").appendChild(p);
+                            ToastScrollEvent();
                             setTimeout((function(){
                                if(p.remove){
                                     p.remove(p);
@@ -1008,7 +1010,19 @@ function doAuthJoinButton(){
                                }
                             }).bind(this),param.timming)
                          }
+                         function ToastScrollEvent(){
+                            if($(".alert.title").offset().top + $(".alert.title").height() > $(window).scrollTop()){
+                                $(".toast-area").hide();
+                            }else{
+                                $(".toast-area").show();
+                            }
+                         }
+
+
+
+                         $(window).scroll(ToastScrollEvent);
 /*
+                      토스트
                          alertToast({message:"토스트 메시지입니다. 테스트1",timming:1000})
                          alertToast({message:"토스트 메시지입니다. 테스트2",timming:3000})
                          alertToast({message:"토스트 메시지입니다. 테스트3",timming:5000})
