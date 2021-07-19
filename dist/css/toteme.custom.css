@@ -331,6 +331,9 @@ body.overflow-hidden {overflow: hidden;}
 .button-block.pcs2 .btn:hover{width: calc(50% - 4px);}
 .button-block.pcs2 .btn:last-child{margin-left: 7px;}
 .button-block.pcs2 .white{background-color: #fff; color: #171616;}
+.button-block.pcs2 .loading-wrap{float: left; width: calc(50% - 4px);}
+.button-block.pcs2 .loading-wrap:last-child{margin-left: 7px;}
+.button-block.pcs2 .loading-wrap .btn{width: 100%;}
 .input-block select{max-width: 500px; margin-left: auto; margin-right: auto;}
 .member_address_info p{line-height: 23px;}
 .member_address_info.with_button{display: table; width: 100%; margin-bottom: 20px;}
@@ -712,8 +715,8 @@ li > a.navlist__link.text-link{padding-left:15px}
 .mypage-modal__button-wrapper .button:last-of-type{margin-bottom: 0;}
 /* .text-link+.text-link{margin-left: 15px;} */
 .button-block.pcs2_vertical .button{max-width: 500px;}
-.button-block.pcs2_vertical>div{margin-bottom: 10px;}
-.button-block.pcs2_vertical>div:last-child{margin-bottom: 0;}
+.button-block.pcs2_vertical>div, .button-block.pcs2_vertical>.button{margin-bottom: 10px;}
+.button-block.pcs2_vertical>div:last-child, .button-block.pcs2_vertical>.button:last-child{margin-bottom: 0;}
 .button-block.pcs2_vertical .button:hover{margin-left: auto; width: 100%;}
 /* //마이페이지 - 회원정보변경 */
 .wishlist-collection .selector-wrapper .single-option-selector{border-radius: 50px;}
@@ -891,6 +894,22 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 .contact_title{margin-bottom: 0;}
 .footer_terms-modal .modal__body, .footer_privacy-modal .modal__body{display: block; text-align: left;}
 .footer_terms-modal ol, .footer_terms-modal ul, .footer_privacy-modal ol, .footer_privacy-modal ul{padding-left: 0;}
+.address_modal_container .field__label{display: none;}
+.address_modal_container .address_button{margin-top: 10px;}
+
+/* 지원하지 않는 브라우저 */
+.browser_error_wrap{display: flex; justify-content: center; align-items: center; height: 100%;}
+.browser_error_con{padding: 15px; text-align: center; word-break: keep-all;}
+
+/* 결제 로딩 팝업 */
+.checkout_loading_wrap{display: flex; justify-content: center; align-items: center; position: fixed; top: 0; left: 0; bottom: 0; right: 0; background: rgba(0,0,0,0.3); width: 100%; height: 100%; z-index: 100;}
+.checkout_loading_con{max-width: 90%; padding: 30px 60px; text-align: center; background: #fff; word-break: keep-all; border: 1px solid #171616;}
+.loader.checkout_loading{display: block; position: static; margin-bottom: 20px;}
+@media screen and (max-width: 1000px){
+  .checkout_loading_con{padding: 30px 15px;}
+}
+.product__description__variant:after{content: ''; display: block; clear: both;}
+.btn_size_change{float: right; padding: 0 18px;}
 
 /* 
     2-0-0 로그인 & 회원가입 공통 
@@ -1175,6 +1194,8 @@ a[class*=drawer__close], button[class*=drawer__close], .search-bar__close{margin
 .loading-wrap.is-load input, .loading-wrap.is-load button{color:transparent !important}
 .loading-wrap.is-load .loader{display:block}
 .button.is-active + .loader .smiley-spin svg{ color:white }
+.btn + .loader .smiley-spin svg{color: white;}
+.btn.white + .loader .smiley-spin svg{color: white;}
 /* // 스마일 로딩 */
 
 
