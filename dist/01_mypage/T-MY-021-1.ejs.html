@@ -1428,7 +1428,10 @@
 										</td>
 										<th class="product__description" scope="row">
 											<span class="product__description__name order-summary__emphasis">센터드 모노그램 실크 스카프 크림</span>
-											<span class="product__description__variant">원 사이즈</span>
+											<span class="product__description__variant">
+												XXS
+												<button type="button" class="modal_trigger button button--primary btn_size_change" data-modal="size_change-modal">변경</button>
+											</span>
 										</th>
 										<td class="product__quantity">
 											<span class="visually-hidden">
@@ -1657,7 +1660,14 @@
 													</div>
 													<div class="button-block pcs2">
 														<input class="btn white" type="button" value="취소">
-														<input class="btn" type="button" value="저장" data-address="address_info">
+														<div class="loading-wrap">
+															<input class="btn" type="button" value="저장" data-address="address_info">
+															<div class="loader">
+																<div class="smiley-spin">
+																	<svg class="icon icon--medium icon__smiley" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 15.5a7.5 7.5 0 110-15 7.5 7.5 0 010 15zm0-1a6.5 6.5 0 100-13 6.5 6.5 0 000 13zM4.947 9.776l-.894.448a4.413 4.413 0 007.894 0l-.894-.448a3.413 3.413 0 01-6.106 0zM9.5 5h1v2h-1V5zm-3 0h-1v2h1V5z"></path></svg>
+																</div>
+															</div>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -2060,6 +2070,234 @@
 					</table>
 					<div class="button-block">
 						<button class="button button--block button--large">닫기</button> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="address-modal" class="modal modal--light address-modal" role="dialog" tabindex="-1">
+	<div class="modal__overlay" tabindex="-1">
+		<div class="modal__card">
+			<div class="modal__header">
+				<h5 class="modal__title  preorder-modal__title">주소검색</h5>
+				<button class="modal__close">
+					<span class="visually-hidden">
+						Close
+					</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+					</svg> </button>
+			</div>
+			<div class="modal__body">
+				<div class="address_modal_container">
+					<div class="input-block">
+						<label class="field__label field__label--visible" for="checkout_addr_find">주소 찾기</label>
+						<input placeholder="찾고자 하는 주소를 입력하세요" class="field__input" size="30" type="text" name="checkout[addr_find]" id="checkout_addr_find">
+					</div>
+					<div class="input-block">
+						<div class="address_button button-block loading-wrap">
+							<input class="button button--primary button--block button--large is-active" type="button" data-address="address_search_list" value="검색">
+							<div class="loader">
+								 <div class="smiley-spin">
+										<svg class="icon icon--medium icon__smiley" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 15.5a7.5 7.5 0 110-15 7.5 7.5 0 010 15zm0-1a6.5 6.5 0 100-13 6.5 6.5 0 000 13zM4.947 9.776l-.894.448a4.413 4.413 0 007.894 0l-.894-.448a3.413 3.413 0 01-6.106 0zM9.5 5h1v2h-1V5zm-3 0h-1v2h1V5z"></path></svg>
+								 </div>
+							</div>
+					 </div>
+						<ul class="dot_list">
+							<li>예: 동(읍/면)명 또는 도로명주소(건물번호/건물명)</li>
+							<li>일부 군사지역은 배송이 불가능할 수 있습니다.</li>
+						</ul>
+					</div>
+					<div class="address_find_content address_wrap">
+						<div class="address_search_list_box">
+							<div class="input-table">
+								<div>
+									<div class="select-wrap">
+										<select class="toteme-select-style">
+											<option value="">시/도</option>
+											<option value="">시/도</option>
+											<option value="">시/도</option>
+										</select>
+									</div>
+								</div>
+								<div>
+									<div class="select-wrap">
+										<select class="toteme-select-style">
+											<option value="">군/구</option>
+											<option value="">군/구</option>
+											<option value="">군/구</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<ul class="addr_list">
+								<li><a href="#" class="addr_btn" data-address="address_detail">
+									<span class="addr-line-wrap">
+										<span class="addr-line rrr">
+											<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
+										</span>
+										<span class="addr-line jjj">
+											<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
+										</span>
+									</span>
+									<span class="zipcode">06088</span>
+								</a></li>
+								<li><a href="#" class="addr_btn" data-address="address_detail">
+									<span class="addr-line-wrap">
+										<span class="addr-line rrr">
+											<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
+										</span>
+										<span class="addr-line jjj">
+											<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
+										</span>
+									</span>
+									<span class="zipcode">06088</span>
+								</a></li>
+								<li><a href="#" class="addr_btn" data-address="address_detail">
+									<span class="addr-line-wrap">
+										<span class="addr-line rrr">
+											<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
+										</span>
+										<span class="addr-line jjj">
+											<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
+										</span>
+									</span>
+									<span class="zipcode">06088</span>
+								</a></li>
+								<li><a href="#" class="addr_btn" data-address="address_detail">
+									<span class="addr-line-wrap">
+										<span class="addr-line rrr">
+											<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
+										</span>
+										<span class="addr-line jjj">
+											<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
+										</span>
+									</span>
+									<span class="zipcode">06088</span>
+								</a></li>
+								<li><a href="#" class="addr_btn" data-address="address_detail">
+									<span class="addr-line-wrap">
+										<span class="addr-line rrr">
+											<span class="addr-mark-name">도로명</span><span class="addr-detail">서울특별시 강남구 학동로 402</span>
+										</span>
+										<span class="addr-line jjj">
+											<span class="addr-mark-num">지번</span><span class="addr-detail">서울특별시 강남구 삼성동 1</span>
+										</span>
+									</span>
+									<span class="zipcode">06088</span>
+								</a></li>
+							</ul>
+						</div>
+						<div class="address_detail_box">
+							<ul class="addr_list">
+								<li>
+									<div class="radio_custom_box">
+										<input id="addr_type1" class="radio_input" value="1" type="radio" name="addr_type" checked>
+										<label for="addr_type1"><span class="addr-mark-name">도로명</span> 서울특별시 강남구 학동로 402</label>
+									</div>
+									<div class="radio_custom_box">
+										<input id="addr_type2" class="radio_input" value="2" type="radio" name="addr_type">
+										<label for="addr_type2"><span class="addr-mark-num">지번</span> 서울특별시 강남구 삼성동 1</label>
+									</div>
+								</li>
+							</ul>
+							<div class="input-block form-group__field">
+								<label class="field__label field__label--visible" for="addr_detail">상세주소 입력</label>
+								<input placeholder="상세주소 입력" class="field__input" size="30" type="text" name="checkout[addr_detail]" id="addr_detail">
+								<p class="comment error" style="display: none;">상세주소를 입력하세요.</p>
+							</div>
+							<div class="button-block pcs2">
+								<input class="btn btn_addr_standard" type="button" value="확인">
+								<input class="btn white" type="button" value="취소">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="address_modal_container standard_addr_box">
+					<div class="text-block addr_modal_text">
+						<p>입력하신 주소에 해당하는 표준주소가 있습니다.<br>
+							아래 표준주소로 바꾸시겠습니까?</p>
+					</div>
+					<table class="table_type1">
+						<colgroup>
+							<col style="width: 50px;">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">
+									<div class="radio_custom_box">
+										<input id="addr_type3" class="radio_input" value="1" type="radio" name="addr_type2">
+									</div>
+								</th>
+								<td>
+									<label for="addr_type3"><span class="payment_tit2">[입력한주소]</span> 12345 <br> 서울특별시 강남구 삼성동 1</label>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									<div class="radio_custom_box">
+										<input id="addr_type4" class="radio_input" value="2" type="radio" name="addr_type2" checked>
+									</div>
+								</th>
+								<td>
+									<label for="addr_type4"><span class="payment_tit2">[표준주소]</span> 12345 (111-222) <br> 서울특별시 강남구 삼성동 1</label>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="button-block pcs2">
+						<input class="btn" type="button" value="확인">
+						<input class="btn white" type="button" value="취소">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="size_change-modal" class="modal modal--light size_change-modal sm-modal" role="dialog" tabindex="-1">
+	<div class="modal__overlay" tabindex="-1">
+		<div class="modal__card">
+			<div class="modal__header">
+				<h5 class="modal__title preorder-modal__title">옵션 변경</h5>
+				<button class="modal__close">
+					<span class="visually-hidden">
+						Close
+					</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+					</svg> </button>
+			</div>
+			<div class="modal__body">
+				<div class="size_change_container">
+					<p>센터드 모노그램 실크 스카프 크림</p>
+					<div class="input-block">
+						<select name="refund[bank]" id="refundBank" class="toteme-select-style">
+							<option value="" selected="">XXS</option>
+							<option value="">XS</option>
+							<option value="">S</option>
+							<option value="">M</option>
+							<option value="">L</option>
+						</select>
+					</div>
+					<div class="button-block pcs2_vertical">
+						<div class="loading-wrap">
+							<input class="button button--primary button--block button--large" type="button" value="변경">
+							<div class="loader">
+								<div class="smiley-spin">
+									<svg class="icon icon--medium icon__smiley" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 15.5a7.5 7.5 0 110-15 7.5 7.5 0 010 15zm0-1a6.5 6.5 0 100-13 6.5 6.5 0 000 13zM4.947 9.776l-.894.448a4.413 4.413 0 007.894 0l-.894-.448a3.413 3.413 0 01-6.106 0zM9.5 5h1v2h-1V5zm-3 0h-1v2h1V5z"></path></svg>
+								</div>
+							</div>
+						</div>
+						<div class="loading-wrap">
+							<input class="button button--primary button--block button--large" type="button" value="취소">
+							<div class="loader">
+								<div class="smiley-spin">
+									<svg class="icon icon--medium icon__smiley" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 15.5a7.5 7.5 0 110-15 7.5 7.5 0 010 15zm0-1a6.5 6.5 0 100-13 6.5 6.5 0 000 13zM4.947 9.776l-.894.448a4.413 4.413 0 007.894 0l-.894-.448a3.413 3.413 0 01-6.106 0zM9.5 5h1v2h-1V5zm-3 0h-1v2h1V5z"></path></svg>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
