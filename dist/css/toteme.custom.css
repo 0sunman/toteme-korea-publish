@@ -447,7 +447,7 @@ body.overflow-hidden {overflow: hidden;}
 .addr_list .addr-line{display: block; text-align: left;}
 .addr_list .addr-line:first-child{margin-bottom: 7px;}
 .addr_list .addr-line span{display: table-cell;}
-.addr_list .addr-mark-name, .addr_list .addr-mark-num{display: inline-block; width: 70px;}
+.addr_list .addr-mark-name, .addr_list .addr-mark-num{display: inline-block; width: 50px;}
 .addr_list .zipcode{display: table-cell; width: 60px; text-align: center; vertical-align: middle;}
 .addr_list .radio_custom_box{text-align: left;}
 /* 주문-버튼2개 */
@@ -742,7 +742,7 @@ li > a.navlist__link.text-link{padding-left:15px}
     .checkout .return_btn_block{max-width: unset;}
 }
 @media screen and (max-width: 1000px){
-    .modal .addr_list{padding: 0 22px;}
+    /* .modal .addr_list{padding: 0 22px;} */
     .modal .input-block, .modal .button-block, .address_find_content .input-table{max-width: 544px; padding-left: 22px; padding-right: 22px;}
     .modal .input-block.addr_form, .modal .input-block.phone_form, .modal .input-block.email_form, .modal .comment.error{max-width: 544px;}
 }
@@ -907,6 +907,8 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 .loader.checkout_loading{display: block; position: static; margin-bottom: 20px;}
 @media screen and (max-width: 1000px){
   .checkout_loading_con{padding: 30px 15px;}
+  .address-modal .modal__body{padding: 20px 15px;}
+  .address_modal_container .address_button{padding: 0;}
 }
 .product__description__variant:after{content: ''; display: block; clear: both;}
 .btn_size_change{float: right; padding: 0 18px;}
