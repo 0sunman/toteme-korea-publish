@@ -256,7 +256,7 @@ body.overflow-hidden {overflow: hidden;}
 
 
 /* 테이블 */
-.table_type1{border-spacing: 0; min-width: 100%; table-layout: fixed; border-top: 1px solid #171616; border-left: 1px solid #171616;}
+.table_type1{border-spacing: 0; min-width: 100%; table-layout: fixed; border-collapse: collapse; border-top: 1px solid #171616; border-left: 1px solid #171616;}
 .table_type1 th, .table_type1 td{min-width: 3rem; padding: .25rem; font-size: 13px; border-bottom: 1px solid #171616; border-right: 1px solid #171616; font-weight: 400;}
 .table_type1 th{text-align: center;}
 .table_type1 td{text-align: left;}
@@ -496,10 +496,10 @@ body.overflow-hidden {overflow: hidden;}
 
 .receipt_type_box>div{display: none;}
 .receipt_type_box>.active{display: block;}
-.table_type1{border-spacing: 0; min-width: 100%; table-layout: fixed; border-top: 1px solid #171616; border-left: 1px solid #171616;}
+/* .table_type1{border-spacing: 0; min-width: 100%; table-layout: fixed; border-top: 1px solid #171616; border-left: 1px solid #171616;}
 .table_type1 th, .table_type1 td{min-width: 3rem; padding: .25rem; border-bottom: 1px solid #171616; border-right: 1px solid #171616; font-weight: 400;}
 .table_type1 th{text-align: center;}
-.table_type1 td{text-align: left;}
+.table_type1 td{text-align: left;} */
 .ly_guarantee_container:after{content: ''; display: block; clear: both;}
 /* .member_infomation{border-bottom: 1px solid #171616;} */
 .checkout [data-step=shipping_method] .section:first-of-type{border-width: 0;}
