@@ -913,6 +913,16 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 .product__description__variant:after{content: ''; display: block; clear: both;}
 .btn_size_change{float: right; padding: 0 18px;}
 
+/* ISP 화면 */
+.checkout_isp_wrap{max-width: 1000px; margin: auto;}
+.checkout_isp_wrap .checkout__header{display: flex; align-items: center;}
+.checkout_isp_wrap .checkout__return-link{display: flex; width: 30px; height: 30px; position: absolute; left: 4px; justify-content: center; align-items: center;}
+.isp_tit1{margin: 6px auto;}
+.isp_tit2{margin-top: 20px; text-align: center;}
+.isp_box{padding: 15px;}
+.isp_box p{margin-bottom: 0; margin-top: 30px;}
+.isp_box .button-block{margin-top: 10px;}
+
 /* 
     2-0-0 로그인 & 회원가입 공통 
 
