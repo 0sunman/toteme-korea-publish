@@ -2724,3 +2724,46 @@ background: url('https://image.thehyundai.com/stories_cdn/images/hdstories/commo
 .dormant_id_select .content-line.line-block.margin-bottom-30{margin-bottom: 15px;}
 .dormant_id_select .title.text-block.description1{margin-bottom:20px;}
 .dormant_id_select .button-join-auth{margin-top:20px;}
+
+
+
+html.js-search-active{overflow:hidden}
+.suggestions__menu-bar.sorry{padding: .5rem 1rem;}
+
+
+
+.login-modal  .section.login_join.login_page { width:100%; }
+.login-modal  .login_join .sns-buttons.defaultblock > div > a.link-text-type span { text-decoration: underline;}
+.login-modal  .login_join .sns-buttons.defaultblock > div > a.link-text-type {display: table-cell; width: 50%;  text-align: left;}
+.login-modal .modal__body{padding:0px; margin:0px;}
+.login-modal .modal__footer {border-top:1px solid #000}
+.login-modal .modal__footer > p{margin:25px 15px 50px;}
+.login-modal  .idoremail.input-block{margin-top:15px}
+.login-modal .modal__footer{margin-top:5px}
+.login-modal .error.comment{padding-left: 0px;}
+@media (max-width:500px) {
+   .login-modal .section > form > div{margin:15px 15px 10px 15px;}
+} 
+
+
+
+.common-modal .modal__card{ width:600px;}
+@media (max-width:787px){
+   .common-modal .modal__card{ width:100%;}
+}
+   .common-modal .modal__card .section{ width:100%;}
+   .common-modal .modal__footer p{text-align: center; padding: 22px;}
+   .common-modal.notice-modal .modal__body{display: block; margin: 0; padding: 0;}
+   .common-modal .modal__footer .button-block{margin-top:0px;margin-bottom:10px;padding:0px;}
+   .common-modal .modal__footer .button-block:last-child{margin-bottom:20px;}
+
+   
+   .newsletter-modal .modal__card .newsletter-header-description{margin-top:0px; margin-bottom:20px; text-align: center;}
+   .newsletter-modal .modal__card .newsletter-sub-checkbox-description{}
+   .newsletter-modal .modal__card .newsletter-sub-description{margin-top:20px; text-align: center;}
+   
+   .toast-area{ position:fixed; bottom: 20px; left:0px; right:0px; width:80%; margin:0 auto;  }
+   @media (max-width:787px){
+    .toast-area{ width:95%;  }
+   }
+   .toast-area .message{  padding: 22px; background-color: #fff; border:1px solid #000;padding: 22px; background-color: #fff; border:1px solid #000; text-align: center; }
