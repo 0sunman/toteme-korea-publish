@@ -1031,6 +1031,7 @@ function doAuthJoinButton(){
                          /* 토스트 예시 */
 
                          
+                         
 /* 상단 GNB 공지바 */            
 var AnnouncementBar = function(option){
 	this.option = (option === undefined) ? {} : option
