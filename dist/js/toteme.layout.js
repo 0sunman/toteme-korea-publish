@@ -1028,4 +1028,58 @@ function doAuthJoinButton(){
                          alertToast({message:"토스트 메시지입니다. 테스트3",timming:5000})
 
 */
+<<<<<<< HEAD
                          /* 토스트 예시 */
+=======
+                         /* 토스트 예시 */
+
+                         
+                         
+/* 상단 GNB 공지바 */            
+var AnnouncementBar = function(option){
+	this.option = (option === undefined) ? {} : option
+	this.announcementbar = document.querySelector("#shopify-section-site-header .site-header__announcement.announcement-bar");
+	this.announcementTexts = document.querySelectorAll("#shopify-section-site-header .site-header__announcement.announcement-bar .announcement-bar__link.subtitle-2");
+	this.announcementbarClasslist = this.announcementbar.classList;
+	this.timming = (this.option.timming === undefined) ? 3000 : this.timming
+	this.timer = -1;
+	this.effectIdx = 0;
+	this.effectTargets = this.announcementTexts.length;
+	this.doEnable();
+	document.querySelector(".announcement-bar__close").addEventListener("click",(function(){
+		this.doDisable();
+	}).bind(this))
+}
+
+AnnouncementBar.prototype.doEnable = function(){
+	if(!this.announcementbarClasslist.contains("is-active")){
+		this.announcementbarClasslist.add("is-active");
+	}
+
+	if(this.timer == -1){
+		this.timer = setInterval(this.doEffect.bind(this), this.timming)
+	}
+}
+
+
+AnnouncementBar.prototype.doDisable = function(){
+	if(this.announcementbarClasslist.contains("is-active")){
+		this.announcementbarClasslist.remove("is-active");
+	}
+
+	if(this.timer !== -1){
+		clearInterval(this.timer);
+		this.timer = -1;
+	}
+}
+
+AnnouncementBar.prototype.doEffect = function(flag){
+	this.announcementTexts.forEach((function(ele){
+		ele.classList.remove("is-active")
+	}).bind(this))
+	this.announcementTexts[this.effectIdx].classList.add("is-active")
+	this.effectIdx = (++this.effectIdx) % this.effectTargets
+
+}
+/* // 상단 GNB 공지바 */
+>>>>>>> 81ec8dcb74e02e1a60cfb0e6ead1ee72ccbc1744
