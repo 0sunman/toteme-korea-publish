@@ -1,0 +1,27 @@
+<script>
+	//header, footer hide
+	setTimeout(function(){
+		$('#shopify-section-site-footer, .site-header-wrapper, .hyundai-footer').hide();
+		$('body').css('padding-top','0');
+	},50)
+</script>
+<div class="payment_loading_wrap">
+	<div class="payment_loading_con">
+		<header class="checkout__header">
+			<a class="checkout__return-link" href="/">
+				<svg class="icon icon--small icon__arrow--left" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M5.992 6.762l-.697.738L2 4.004 5.303.5 6 1.238 3.392 4.004l2.6 2.758z"></path>
+				</svg>
+			</a>
+			<h3 class="isp_tit1">주문진행</h3>
+		</header>
+		<div class="payment_loading_box">
+			<div class="loader checkout_loading">
+				<div class="smiley-spin">
+					<svg class="icon icon--medium icon__smiley" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 15.5a7.5 7.5 0 110-15 7.5 7.5 0 010 15zm0-1a6.5 6.5 0 100-13 6.5 6.5 0 000 13zM4.947 9.776l-.894.448a4.413 4.413 0 007.894 0l-.894-.448a3.413 3.413 0 01-6.106 0zM9.5 5h1v2h-1V5zm-3 0h-1v2h1V5z"></path></svg>
+				</div>
+			</div>
+			<h4 class="isp_tit2">처리중입니다. <br> 잠시만 기다려주십시오.</h4>
+		</div>
+	</div>
+</div>

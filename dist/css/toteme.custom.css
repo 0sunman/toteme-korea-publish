@@ -688,7 +688,7 @@ li > a.navlist__link.text-link{padding-left:15px}
 .mypage_each2 .txt_btn_box{display: table; width: 100%;}
 .mypage_each2 .txt_btn_box .mypage_tit2{display: table-cell; vertical-align: middle;}
 .mypage_each2 .txt_btn_box>div{display: table-cell; vertical-align: middle; text-align: right;}
-.mypage_each2 .txt_btn_box .button{font-size: 13px; padding: 0 18px; line-height: 21px;}
+.mypage_each2 .txt_btn_box .button{display: inline-block; font-size: 13px; padding: 0 18px; line-height: 21px;}
 .mypage_each2 .txt_btn_box+p{margin-top: 15px;}
 
 .dot_list{padding-left: 0; margin-top: 15px;}
@@ -700,7 +700,7 @@ li > a.navlist__link.text-link{padding-left:15px}
 .custom_textarea textarea{border-radius: 0; resize: none;}
 
 .form-group input[type="text"][readonly], .form-group select[readonly]{background-color: #ddd; cursor: not-allowed;}
-.refund-modal .modal__body, .account-modal .modal__body, .receipt1-modal .modal__body, .receipt2-modal .modal__body{padding: 15px 15px 30px;}
+/* .refund-modal .modal__body, .account-modal .modal__body, .receipt1-modal .modal__body, .receipt2-modal .modal__body{padding: 15px 15px 30px;} */
 .refund-modal .modal__body form, .account-modal .modal__body form, .receipt1-modal .modal__body form, .receipt2-modal .modal__body form, .login-modal .modal__body form{width: 100%;}
 .withdrawal-modal .modal__body{padding: 15px 15px 30px; text-align: left;}
 .withdrawal-modal form{width: 100%;}
@@ -743,8 +743,8 @@ li > a.navlist__link.text-link{padding-left:15px}
 }
 @media screen and (max-width: 1000px){
     /* .modal .addr_list{padding: 0 22px;} */
-    .modal .input-block, .modal .button-block, .address_find_content .input-table{max-width: 544px; padding-left: 22px; padding-right: 22px;}
-    .modal .input-block.addr_form, .modal .input-block.phone_form, .modal .input-block.email_form, .modal .comment.error{max-width: 544px;}
+    /* .modal .input-block, .modal .button-block, .address_find_content .input-table{max-width: 544px; padding-left: 22px; padding-right: 22px;}
+    .modal .input-block.addr_form, .modal .input-block.phone_form, .modal .input-block.email_form, .modal .comment.error{max-width: 544px;} */
 }
 
 /* 마이페이지 - 주문내역 */
@@ -792,6 +792,8 @@ li > a.navlist__link.text-link{padding-left:15px}
 .return_attr_list .txt1 select{display: inline-block; max-width: 80px;}
 .return_attr_list .toteme-select-style{min-height: 23px; padding-left: 18px; padding-right: 30px; text-align-last: right; font-size: 12px; background-position: right 15px center;}
 .return_tr+.product{border-top: 1px solid #171616;}
+.product-table .status_tr td{text-align: left;}
+.status_tr .mypage_each2{margin: 0; padding: 15px;}
 .return_btn_block{max-width: unset; margin-top: 0; margin-bottom: 0; padding-bottom: 15px; border-bottom: 1px solid #171616;}
 .my_price_list+.my_price_list{margin-top: 30px;}
 .return_type_box .radio_custom_box, .return_addr_box .radio_custom_box{float: left; width: 50%;}
@@ -907,7 +909,7 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 .loader.checkout_loading{display: block; position: static; margin-bottom: 20px;}
 @media screen and (max-width: 1000px){
   .checkout_loading_con{padding: 30px 15px;}
-  .address-modal .modal__body{padding: 20px 15px;}
+  /* .address-modal .modal__body{padding: 20px 15px;} */
   .address_modal_container .address_button{padding: 0;}
 }
 .product__description__variant:after{content: ''; display: block; clear: both;}
@@ -922,6 +924,12 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 .isp_box{padding: 15px;}
 .isp_box p{margin-bottom: 0; margin-top: 30px;}
 .isp_box .button-block{margin-top: 10px;}
+.modal__body .table-block+.text-block, .modal__body .input-block.email_form+.text-block{max-width: 500px; margin-left: auto; margin-right: auto;}
+.payment_loading_wrap, .payment_loading_con{height: 100%;}
+.payment_loading_con .isp_tit1{text-align: center;}
+.payment_loading_box{display: flex; padding: 15px; height: 100%; justify-content: center; align-items: center; flex-direction: column;}
+.payment_loading_box .loader.checkout_loading{margin-bottom: 0; text-align: center;}
+
 
 /* 
     2-0-0 로그인 & 회원가입 공통 
@@ -2772,7 +2780,7 @@ html.js-search-active{overflow:hidden}
    .newsletter-modal .modal__card .newsletter-sub-checkbox-description{}
    .newsletter-modal .modal__card .newsletter-sub-description{margin-top:20px; text-align: center;}
    
-   .toast-area{ position:fixed; bottom: 20px; left:0px; right:0px; width:80%; margin:0 auto;  }
+   .toast-area{ position:fixed; bottom: 20px; left:0px; right:0px; width:80%; margin:0 auto; z-index: 999;}
    @media (max-width:787px){
     .toast-area{ width:95%;  }
    }
