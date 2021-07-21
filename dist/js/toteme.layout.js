@@ -1081,4 +1081,6 @@ AnnouncementBar.prototype.doEffect = function(flag){
 	this.effectIdx = (++this.effectIdx) % this.effectTargets
 
 }
+
+var announcement = new AnnouncementBar({timming:3000});
 /* // 상단 GNB 공지바 */
