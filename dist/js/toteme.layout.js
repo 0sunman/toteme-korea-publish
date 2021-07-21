@@ -1028,9 +1028,6 @@ function doAuthJoinButton(){
                          alertToast({message:"토스트 메시지입니다. 테스트3",timming:5000})
 
 */
-<<<<<<< HEAD
-                         /* 토스트 예시 */
-=======
                          /* 토스트 예시 */
 
                          
@@ -1082,4 +1079,3 @@ AnnouncementBar.prototype.doEffect = function(flag){
 
 }
 /* // 상단 GNB 공지바 */
->>>>>>> 81ec8dcb74e02e1a60cfb0e6ead1ee72ccbc1744
