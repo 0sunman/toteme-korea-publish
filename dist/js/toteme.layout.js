@@ -1011,11 +1011,14 @@ function doAuthJoinButton(){
                             }).bind(this),param.timming)
                          }
                          function ToastScrollEvent(){
-                            if($(".alert.title").offset().top + $(".alert.title").height() > $(window).scrollTop()){
-                                $(".toast-area").hide();
-                            }else{
-                                $(".toast-area").show();
-                            }
+                             if($(".alert.title").length > 0){
+                                if($(".alert.title").offset().top + $(".alert.title").height() > $(window).scrollTop()){
+                                    $(".toast-area").hide();
+                                }else{
+                                    $(".toast-area").show();
+                                }
+                             }
+
                          }
 
 
