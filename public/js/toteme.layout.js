@@ -1011,11 +1011,14 @@ function doAuthJoinButton(){
                             }).bind(this),param.timming)
                          }
                          function ToastScrollEvent(){
-                            if($(".alert.title").offset().top + $(".alert.title").height() > $(window).scrollTop()){
-                                $(".toast-area").hide();
-                            }else{
-                                $(".toast-area").show();
-                            }
+                             if($(".alert.title").length > 0){
+                                if($(".alert.title").offset().top + $(".alert.title").height() > $(window).scrollTop()){
+                                    $(".toast-area").hide();
+                                }else{
+                                    $(".toast-area").show();
+                                }
+                             }
+
                          }
 
 
@@ -1078,4 +1081,6 @@ AnnouncementBar.prototype.doEffect = function(flag){
 	this.effectIdx = (++this.effectIdx) % this.effectTargets
 
 }
+
+var announcement = new AnnouncementBar({timming:3000});
 /* // 상단 GNB 공지바 */
