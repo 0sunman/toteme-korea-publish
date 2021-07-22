@@ -402,6 +402,11 @@ body.overflow-hidden {overflow: hidden;}
 .summary_content{margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #171616;}
 .summary_text_block p{line-height: 23px;}
 .product-table:not(.stock-problem-table) .product__quantity .visually-hidden, .checkout .order-summary__section--discount .field__input-btn .visually-hidden-on-mobile{overflow: visible;}
+.checkout .order-summary__section--discount .field__input-btn{position: relative;}
+.checkout .order-summary__section--discount .field__input-btn .loader{display: none; position: absolute; top: calc(50% - 8px); left: calc(50% - 8px); width: 16px; height: 16px;}
+.checkout .order-summary__section--discount .field__input-btn .loader .smiley-spin svg{display: block;}
+.checkout .order-summary__section--discount .field__input-btn.is-load .loader{display: block;}
+.checkout .order-summary__section--discount .field__input-btn.is-load span{visibility: hidden;}
 .discount-trigger{display: block; max-width: 500px; margin: 0 auto; padding-left: 0; padding-right: 0;}
 .checkout .order-summary__section--discount{text-align: center; padding-left: 52px; padding-right: 52px;}
 .deposit_attr_box{display: table; width: 100%; max-width: 500px; font-size: 15px; text-align: left; margin: 0 auto;}
@@ -952,7 +957,6 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
     .login_join .section{ margin:34px 60px; }
 }
 .login_join .text.section{ margin:20px 15px;}
-.login_join form div{ margin-bottom: 20px;}
                            
 .login_join .sns-buttons.defaultblock > div{display:table; width:100%; max-width: 500px; margin:0 auto; margin-bottom:10px}
 .login_join .sns-buttons.defaultblock > div > label {display: table-cell; width:50%; text-align: left;}
@@ -1181,7 +1185,8 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
  .error_page .template-404__container{width: calc(100% + 1px);}
  .error_page .section{margin: 34px 15px;}
  .error_page .template-404__column.template-404__column--content{padding-right: 1.25rem;}
- .error_page .text{word-break: keep-all;}
+ .error_page .text{margin-bottom: 1.5rem; word-break: keep-all;}
+ .error_page ul{padding: 0;}
 
 /* 미니 장바구니 */
 a[class*=drawer__close], button[class*=drawer__close], .search-bar__close{margin-right: 1rem; text-align: right;}

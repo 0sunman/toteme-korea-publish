@@ -296,19 +296,18 @@
 													<label class="field__label field__label--visible" for="checkout_reduction_code">프로모션 코드</label>
 													<input placeholder="프로모션 코드 입력" class="field__input" id="checkout_reduction_code" autocomplete="off" aria-required="true" size="30" type="text" name="checkout[reduction_code]">
 												</div>
-												<button name="button" type="button" class="field__input-btn btn btn--disabled" data-deposit="true">
+												<button name="button" type="button" class="field__input-btn btn btn--disabled is-load" data-deposit="true">
 													<span class="btn__content visually-hidden-on-mobile" aria-hidden="true">
 														적용
 													</span>
 													<span class="visually-hidden">
 														프로모션 코드 입력
 													</span>
-													<svg class="icon-svg icon-svg--size-16 btn__icon shown-on-mobile" aria-hidden="true" focusable="false">
-														<use xlink:href="#arrow"></use>
-													</svg>
-													<svg class="icon-svg icon-svg--size-18 btn__spinner icon-svg--spinner-button" aria-hidden="true" focusable="false">
-														<use xlink:href="#spinner-button"></use>
-													</svg>
+													<div class="loader">
+														<div class="smiley-spin">
+															 <svg class="icon icon--medium icon__smiley" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 15.5a7.5 7.5 0 110-15 7.5 7.5 0 010 15zm0-1a6.5 6.5 0 100-13 6.5 6.5 0 000 13zM4.947 9.776l-.894.448a4.413 4.413 0 007.894 0l-.894-.448a3.413 3.413 0 01-6.106 0zM9.5 5h1v2h-1V5zm-3 0h-1v2h1V5z"></path></svg>
+														</div>
+												 </div>
 												</button>
 												<div class="deposit_attr_box deposit_result_box">
 													<div>
@@ -349,12 +348,11 @@
 													<span class="visually-hidden">
 														예치금 사용
 													</span>
-													<svg class="icon-svg icon-svg--size-16 btn__icon shown-on-mobile" aria-hidden="true" focusable="false">
-														<use xlink:href="#arrow"></use>
-													</svg>
-													<svg class="icon-svg icon-svg--size-18 btn__spinner icon-svg--spinner-button" aria-hidden="true" focusable="false">
-														<use xlink:href="#spinner-button"></use>
-													</svg>
+													<div class="loader">
+														<div class="smiley-spin">
+															 <svg class="icon icon--medium icon__smiley" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 15.5a7.5 7.5 0 110-15 7.5 7.5 0 010 15zm0-1a6.5 6.5 0 100-13 6.5 6.5 0 000 13zM4.947 9.776l-.894.448a4.413 4.413 0 007.894 0l-.894-.448a3.413 3.413 0 01-6.106 0zM9.5 5h1v2h-1V5zm-3 0h-1v2h1V5z"></path></svg>
+														</div>
+												 </div>
 												</button>
 												<div class="deposit_attr_box deposit_result_box">
 													<div>
