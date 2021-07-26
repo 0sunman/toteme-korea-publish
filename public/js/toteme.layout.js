@@ -1041,7 +1041,7 @@ var AnnouncementBar = function(option){
 	this.announcementbar = document.querySelector("#shopify-section-site-header .site-header__announcement.announcement-bar");
 	this.announcementTexts = document.querySelectorAll("#shopify-section-site-header .site-header__announcement.announcement-bar .announcement-bar__link.subtitle-2");
 	this.announcementbarClasslist = this.announcementbar.classList;
-	this.timming = (this.option.timming === undefined) ? 3000 : this.timming
+	this.timming = (this.option.timming === undefined) ? 3000 : this.option.timming
 	this.timer = -1;
 	this.effectIdx = 0;
 	this.effectTargets = this.announcementTexts.length;
@@ -1053,6 +1053,7 @@ var AnnouncementBar = function(option){
 
 AnnouncementBar.prototype.doEnable = function(){
 	if(!this.announcementbarClasslist.contains("is-active")){
+        document.querySelector("body").classList.add("has-announcement-bar");
 		this.announcementbarClasslist.add("is-active");
 	}
 
@@ -1064,6 +1065,7 @@ AnnouncementBar.prototype.doEnable = function(){
 
 AnnouncementBar.prototype.doDisable = function(){
 	if(this.announcementbarClasslist.contains("is-active")){
+        document.querySelector("body").classList.remove("has-announcement-bar");
 		this.announcementbarClasslist.remove("is-active");
 	}
 

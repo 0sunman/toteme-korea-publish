@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html class="esc-bind" lang="ko">
+   <head>
+    <title>Totême - Official online store</title>
+      <meta charset="utf-8">
+      <meta content="IE=edge" http-equiv="X-UA-Compatible">
+      <meta content="width=device-width,initial-scale=1" name="viewport">
+      <!--link href="/css/main_etc.css" rel="stylesheet"-->
+      <link rel="stylesheet" href="../css/image-zoom.css">
+      <link rel="stylesheet" href="../css/boost-pfs-init.scss.css">
+      <link rel="stylesheet" href="../css/boost-pfs-general.scss.css">
+      <link rel="stylesheet" href="../css/v2-ltr-2021-01-25-1dd58b0ad54342536b141709174f812a-5607.css" media="all">
+      <link type="text/css" href="../css/layout.checkout.css" rel="stylesheet">
+      
+      <link href="../css/main_etc.css" rel="stylesheet">
+      
+      <link type="text/css" href="../css/layout.theme.css" rel="stylesheet">
+      <link rel="prefetch"  href="../css/layout.checkout.css" as="style">
+      <link rel="prefetch"  href="../css/layout.gift_card.css" as="style">
+      <link rel="prefetch"  href="../css/layout.password.css" as="style">
+      <link rel="prefetch"  href="../css/layout.styleguide.css" as="style">
+      <link href="../css/flag-icon.min.css" rel="stylesheet" type="text/css" media="all">
+      <link href="../css/appmate-wishlist-king.scss.css" rel="stylesheet">
+
+      <!--link href="/css/toteme.custom.css" rel="stylesheet"-->
+      <link href="../css/toteme.custom.css" rel="stylesheet">
+      <link href="../css/toteme.custom.sis.pc-inner.css" rel="stylesheet">
+      <style>
+
+         header.site-header-wrapper .site-nav__link{border:0px; background-color: transparent;}
+      </style>
+   </head>
+
+   <!--  has-announcement-bar --header-height:51px; / -->
+   <body id="toteme-official-online-store" class="template-index" data-cy="body">
+      
+
+
+      <main id="MainContent" class="main-content critical-clear">
+         <!-- BEGIN content_for_index -->
+         <!--  include ("./pages/00_main/index.ejs") BEGIN content_for_index -->
+         <div id='component_controller' style='position: fixed; bottom:0; left: 0; background-color: white; width: 100%; z-index: 9999999; height:200px; overflow-y:scroll'>
+<div>
+   <b>블록스타일 - 보더 영역</b> : custom-module--border-inner-dark (안쪽 라인 컬러)
+   <input class='SWB_border1' type="checkbox">
+   &nbsp;custom-module--border-outer-dark (바깥쪽 라인 컬러)
+   <input class='SWB_border2' type="checkbox">   
+   &nbsp;only_pc (모바일에서 블록 숨기기)
+   <input class='SWB_border3' type="checkbox">
+   &nbsp;only_mo (PC에서 블록 숨기기)
+   <input class='SWB_border4' type="checkbox">   
+   &nbsp;no-crop (배경 크롭)
+   <input class='SWB_border5' type="checkbox">   
+</div>
+<br>
+<div>
+   <b>타이틀 - 위치</b> : 
+   <select class='select_group1 SWB_select1'>
+      <option>is-bottom</option>
+      <option>is-top</option>
+      <option>is-middle</option>
+   </select>
+   <select class='select_group1 SWB_select2'>
+      <option>is-left</option>
+      <option>is-center</option>
+      <option>is-right</option>
+   </select>
+   <br>&nbsp;&nbsp;&nbsp; * 설명 위치도 동일하게 작업해주시면 됩니다! 
+</div>
+<br>
+<div>
+   <b>타이틀 - 텍스트 스타일 / URL</b> : 
+   <select class='select_group2 SWB_select1'>
+      <option>text-medium</option>
+      <option>text-large</option>
+      <option>text-mini</option>
+      <option>수동모드 (요청) </option>
+   </select>
+   <br>&nbsp;&nbsp;&nbsp; * 타이틀 색상,크기는 inline-style로 수정 필요
+   <br>&nbsp;&nbsp;&nbsp; * 해당 부분 _blank, _self, _parent, _top 도 필요 
+</div>
+<br>
+<div>
+   <b>배경사이즈 </b> : 
+   <select class='select_group3 SWB_select1'>
+      <option>custom-module__background--is-full</option>
+      <option>custom-module__background--is-half</option>
+      <option>custom-module__background--is-quarter</option>
+   </select>
+</div>
+<br>
+<div>
+   <b>상세 설명 항상 보이기 </b> : 
+   <select class='select_group4 SWB_select1'>
+      <option></option>
+      <option>custom-module__content--pinned-description</option>
+   </select>
+   <br>&nbsp;&nbsp;&nbsp; * 설명을 하버할떄 노출할지 말지 결정
+</div>
+<br>
+<script>
+   /*
+   
+   is-top
+   is-middle
+   is-bottom
+   is-left
+   is-center
+   is-right
+   
+   텍스트
+   text-medium
+   text-large
+   text-mini
+   .custom-module__background.custom-module__background--is-half .custom-module__background-image-wrapper,.custom-module__background.custom-module__background--is-quarter
+   
+   
+             custom-module__content--pinned-description
+             custom-module__content-description
+   */
+   function resetSelectLayout(selector){
+   
+   $(selector).removeClass("is-top")
+   $(selector).removeClass("is-middle")
+   $(selector).removeClass("is-bottom")
+   $(selector).removeClass("is-left")
+   $(selector).removeClass("is-center")
+   $(selector).removeClass("is-right")
+   }
+   
+   
+   function resetSelectLayoutText(selector){
+   $(selector).removeClass("text-medium")
+   $(selector).removeClass("text-large")
+   $(selector).removeClass("text-mini")
+   }
+   
+   function resetSelectLayoutBackground(selector){
+   $(selector).removeClass("custom-module__background--is-full")
+   $(selector).removeClass("custom-module__background--is-half")
+   $(selector).removeClass("custom-module__background--is-quarter")
+   }
+   
+   
+   function resetSelectLayoutDescription(selector){
+   $(selector).removeClass("custom-module__content--pinned-description")
+   }
+   
+   setTimeout(function(){
+   
+   $("#component_controller input[type='checkbox']").on("click",function(){
+    console.log("done");
+    ($(".SWB_border1").is(":checked") == true ) ? $(".sectionwithbackground").addClass("custom-module--border-inner-dark") : $(".sectionwithbackground").removeClass("custom-module--border-inner-dark");
+    ($(".SWB_border2").is(":checked") == true ) ? $(".sectionwithbackground").addClass("custom-module--border-outer-dark") : $(".sectionwithbackground").removeClass("custom-module--border-outer-dark");
+    ($(".SWB_border3").is(":checked") == true ) ? $(".sectionwithbackground").addClass("only_pc") : $(".sectionwithbackground").removeClass("only_pc");
+    ($(".SWB_border4").is(":checked") == true ) ? $(".sectionwithbackground").addClass("only_mo") : $(".sectionwithbackground").removeClass("only_mo");
+    ($(".SWB_border5").is(":checked") == true ) ? $(".sectionwithbackground").addClass("custom-module--no-crop") : $(".sectionwithbackground").removeClass("custom-module--no-crop");
+    
+   
+   })
+   $("#component_controller .select_group1").on("click",function(){
+    resetSelectLayout(".sectionwithbackground .custom-module__content-title");
+    $(".sectionwithbackground .custom-module__content-title").addClass($(".select_group1.SWB_select1").val())
+    $(".sectionwithbackground .custom-module__content-title").addClass($(".select_group1.SWB_select2").val())
+   })
+   
+   
+   $("#component_controller .select_group2").on("click",function(){
+    console.log("why");
+    resetSelectLayoutText(".sectionwithbackground .custom-module__text-link");
+    $(".sectionwithbackground .custom-module__text-link").addClass($(".select_group2.SWB_select1").val())
+   })
+   
+   
+   $("#component_controller .select_group3").on("click",function(){
+    console.log("why");
+    resetSelectLayoutBackground(".sectionwithbackground .custom-module__background");
+    $(".sectionwithbackground .custom-module__background").addClass($(".select_group3.SWB_select1").val())
+   })
+   
+   $("#component_controller .select_group4").on("click",function(){
+    console.log("why");
+    resetSelectLayoutDescription(".sectionwithbackground .custom-module__content");
+    $(".sectionwithbackground .custom-module__content").addClass($(".select_group4.SWB_select1").val())
+   })
+   },1000)
+          
+       
+</script>
+<style>
+   #component_controller input[type='checkbox']{ display:inline-block; width:10px; height:10px; border:1px solid #000}
+   #component_controller input[type='checkbox']:checked{ background-color: black; }
+   #component_controller select{display:inline-block; width:auto;}
+</style>
+</div>
+<!--- 설명 : 유영선 -->
+<!--- Sesction with background 내용 시작 -->
+<!-- 1. Block Style -->
+<section class="sectionwithbackground custom-module custom-module--1-bkgd-1-section custom-module--has-background custom-module--text-color-dark">
+   <!--- class = custom-module--border-inner-light custom-module--border-inner-dark (2-안쪽 라인) custom-module--border-inner-dark custom-module--border-outer-dark (3-바깥쪽 라인) 
+      only_pc only_mo (4-모바일 / 5-PC에서 숨기기) 
+      * custom-module--no-crop (4.4-배경 크롭 선택)
+      custom-module__content--text-color-dark custom-module__content--text-color-light (1-텍스트 스타일)
+      
+      ---> 
+   <!-- // 1. Block Style -->
+   <!-- 4. 배경 ( Block Background ) -->
+   <!-- 1- 배경 이미지 선택 -->
+   <div class="custom-module__background custom-module__background--is-full">
+      <!---class = custom-module__background--is-full custom-module__background--is-half custom-module__background--is-quarter (3-배경 사이즈) --->
+      <div class="responsive-image__wrapper custom-module__background-image-wrapper"> 
+         <span style="display: block; padding-top:56.25%;" aria-hidden="true"></span>
+         <img class="responsive-image__image blur-up custom-module__background-image lazyautosizes" alt="" src="../assets/col1_pc2.jpg" tabindex="-1" > 
+      </div>
+   </div>
+   <!-- /// 1- 배경 이미지 선택 -->
+   <!-- 2- 배경 영상 선택 - 비디오 (코드 참고)-->
+   <!---div class="custom-module__background custom-module__background--is-full">
+      class = custom-module__background--is-full custom-module__background--is-half custom-module__background--is-quarter (3-배경 사이즈) 
+      <div class="custom-module__video-wrapper">
+        <video class="custom-module__video" autoplay="1" loop="1" muted="1" playsinline="1" preload="1" js-video-hero="video">
+           <source src="../assets/col1.mp4" type="video/mp4">
+        </video>
+      </div>
+      </div---->
+   <!-- // 배경 -->
+   <!-- 3. 콘텐츠를 위한 블록 (Content) -->
+   <div class="custom-module__container">
+      <div class="custom-module__content custom-module__content--section-1 custom-module__content--col-24">
+         <!-- 6. 상세 설명 항상 보이기-->
+         <!--- class = custom-module__content--pinned-description -->
+         <div class="custom-module__content-wrapper">
+            <!-- 이미지 (Media Content) -->
+            <div class="responsive-image__wrapper custom-module__content-image-wrapper is-center">
+               <!--1-URL (자바스크립트 활용)-->
+               <!--- class= is-left is-right is-center (2-이미지 위치)-->
+               <span style="display: block; padding-top:140.0%;" aria-hidden="true"></span>
+               <img class="responsive-image__image blur-up custom-module__content-image" alt="" src="../assets/col2_inside1.jpg"> <!-- (1-이미지)-->
+            </div>
+            <!-- // 이미지 -->
+            <!-- Text Content -->
+            <!-- -->
+            <div class="content_description custom-module__content-description is-bottom is-left">
+               <!-- 2.  5. 상세설명 위치  -->
+               <!--- class= is-top is-middle is-bottom is-left is-right is-center (2-이미지 위치)-->
+               <span class="custom-module__content-description-text text-large">
+                  <!-- 4. 상세설명 폰트크기 -->
+                  <!--- class= is-left is-right is-center (2-이미지 위치)-->
+                  설명은 하버시 생성이 됩니다.<!--1-URL (a태그 활용) / 색상은 span 태그의 인라인으로 진행요--><!-- 3-상세설명 -->
+                  <!-- 예시 : <span class="custom-module__content-description-text text-large" style='color:#ffffff'> -->
+               </span>
+            </div>
+            <div class="custom-module__content-title is-bottom is-left">
+               <!-- 5. 타이틀 위치 -->
+               <!--- class= is-left is-right is-center (2-이미지 위치)-->
+               <span class="custom-module__text-link text-large">
+                  <!-- 4. 타이틀 폰트 크기 -->
+                  <!--- class= text-medium text-large text-mini 텍스트 크기-->
+                  <!---<a href='http://www.naver.com' target='_blank Or _self Or ...'>타이틀입니다</a> 1-URL 설정시--->
+                  타이틀입니다<!-- 2-타이틀 / 색상은 span 태그의 인라인으로 진행요 -->
+                  <svg class="icon icon--small icon__arrow--right" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M2.008 1.238L2.705.5 6 3.996 2.697 7.5 2 6.762l2.608-2.766-2.6-2.758z"></path>
+                  </svg>
+               </span>
+            </div>
+            <!-- // Text Content -->
+         </div>
+      </div>
+   </div>
+   <!-- // 3.콘텐츠를 위한 블록 -->
+</section>
+<!--- // Sesction with background 내용 끝 -->
+<!--- // 설명 끝 -->
+         <!-- END content_for_index -->
+      </main>
+
+      <!--- 10. 모달 팝업 -->
+      <div id="redirect-modal" class="modal  redirect-modal critical-clear" aria-hidden="true" js-redirect-modal="container" style='display:none'>
+    <div js-modal="body">
+       <div class="modal__card redirect-modal__card " tabindex="-1" js-modal="card" js-redirect-modal="settingsContainer">
+          <div class="redirect-modal__header">
+             <h3 class="redirect-modal__title">
+                Choose your store
+             </h3>
+          </div>
+          <div class="redirect-modal__body">
+             <form id="RedirectSettings" class="redirect-modal__form form-group" action="#" method="GET" js-redirect-modal="form">
+                <div class="redirect-modal__row select__container">
+                   <label class="form-group__label visually-hidden" for="RedirectCountry">
+                   Country
+                   </label>
+                   <div class="custom-select__wrapper">
+                      <select id="RedirectCountry" class="redirect-modal__country select--center js-redirect-select custom-select__select" name="loc" style="background-image: url(../assets/icon-small-arrow-down.svg);" js-redirect-modal="countrySelector" tabindex="-1">
+                         <option value="AF">Afghanistan</option>
+                         <option value="AX">Aland Islands</option>
+                         <option value="AL">Albania</option>
+                         <option value="DZ">Algeria</option>
+                         <option value="AS">American Samoa</option>
+                         <option value="AD">Andorra</option>
+                         <option value="AO">Angola</option>
+                         <option value="AI">Anguilla</option>
+                         <option value="AQ">Antarctica</option>
+                         <option value="AG">Antigua and Barbuda</option>
+                         <option value="AR">Argentina</option>
+                         <option value="AM">Armenia</option>
+                         <option value="AW">Aruba</option>
+                         <option value="AU">Australia</option>
+                         <option value="AT">Austria</option>
+                         <option value="AZ">Azerbaijan</option>
+                         <option value="BS">Bahamas</option>
+                         <option value="BH">Bahrain</option>
+                         <option value="BD">Bangladesh</option>
+                         <option value="BB">Barbados</option>
+                         <option value="BY">Belarus</option>
+                         <option value="BE">Belgium</option>
+                         <option value="BZ">Belize</option>
+                         <option value="BJ">Benin</option>
+                         <option value="BM">Bermuda</option>
+                         <option value="BT">Bhutan</option>
+                         <option value="BO">Bolivia</option>
+                         <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                         <option value="BA">Bosnia and Herzegovina</option>
+                         <option value="BW">Botswana</option>
+                         <option value="BR">Brazil</option>
+                         <option value="IO">British Indian Ocean Territory</option>
+                         <option value="BN">Brunei Darussalam</option>
+                         <option value="BG">Bulgaria</option>
+                         <option value="BF">Burkina Faso</option>
+                         <option value="BI">Burundi</option>
+                         <option value="KH">Cambodia</option>
+                         <option value="CM">Cameroon</option>
+                         <option value="CA">Canada</option>
+                         <option value="CV">Cape Verde</option>
+                         <option value="KY">Cayman Islands</option>
+                         <option value="CF">Central African Republic</option>
+                         <option value="TD">Chad</option>
+                         <option value="CL">Chile</option>
+                         <option value="CN">China</option>
+                         <option value="CX">Christmas Island (Australia)</option>
+                         <option value="CC">Cocos (Keeling) Islands</option>
+                         <option value="CO">Colombia</option>
+                         <option value="KM">Comoros</option>
+                         <option value="CG">Congo</option>
+                         <option value="CK">Cook Islands</option>
+                         <option value="CR">Costa Rica</option>
+                         <option value="CI">Cote d'Ivoire</option>
+                         <option value="HR">Croatia</option>
+                         <option value="CW">Curacao</option>
+                         <option value="CY">Cyprus</option>
+                         <option value="CZ">Czech Republic</option>
+                         <option value="CD">Democratic Republic of the Congo</option>
+                         <option value="DK">Denmark</option>
+                         <option value="DJ">Djibouti</option>
+                         <option value="DM">Dominica</option>
+                         <option value="DO">Dominican Republic</option>
+                         <option value="EC">Ecuador</option>
+                         <option value="EG">Egypt</option>
+                         <option value="SV">El Salvador</option>
+                         <option value="GQ">Equatorial Guinea</option>
+                         <option value="ER">Eritrea</option>
+                         <option value="EE">Estonia</option>
+                         <option value="ET">Ethiopia</option>
+                         <option value="FK">Falkland Islands (Malvinas)</option>
+                         <option value="FO">Faroe Islands</option>
+                         <option value="FJ">Fiji</option>
+                         <option value="FI">Finland</option>
+                         <option value="FR">France</option>
+                         <option value="GF">French Guiana</option>
+                         <option value="PF">French Polynesia</option>
+                         <option value="TF">French Southern Territories</option>
+                         <option value="GA">Gabon</option>
+                         <option value="GM">Gambia</option>
+                         <option value="GE">Georgia</option>
+                         <option value="DE" selected="selected">
+                            Germany
+                         </option>
+                         <option value="GH">Ghana</option>
+                         <option value="GI">Gibraltar</option>
+                         <option value="GR">Greece</option>
+                         <option value="GL">Greenland</option>
+                         <option value="GD">Grenada</option>
+                         <option value="GP">Guadeloupe</option>
+                         <option value="GU">Guam</option>
+                         <option value="GT">Guatemala</option>
+                         <option value="GN">Guinea</option>
+                         <option value="GW">Guinea-Bissau</option>
+                         <option value="GY">Guyana</option>
+                         <option value="HT">Haiti</option>
+                         <option value="VA">Holy See (Vatican City State)</option>
+                         <option value="HN">Honduras</option>
+                         <option value="HK">Hong Kong</option>
+                         <option value="HU">Hungary</option>
+                         <option value="IS">Iceland</option>
+                         <option value="IN">India</option>
+                         <option value="ID">Indonesia</option>
+                         <option value="IQ">Iraq</option>
+                         <option value="IE">Ireland, Republic of</option>
+                         <option value="IL">Israel</option>
+                         <option value="IT">Italy</option>
+                         <option value="JM">Jamaica</option>
+                         <option value="JP">Japan</option>
+                         <option value="JO">Jordan</option>
+                         <option value="KZ">Kazakhstan</option>
+                         <option value="KE">Kenya</option>
+                         <option value="KI">Kiribati</option>
+                         <option value="KR">Korea, Republic of (South Korea)</option>
+                         <option value="XK">Kosovo</option>
+                         <option value="KW">Kuwait</option>
+                         <option value="KG">Kyrgyzstan</option>
+                         <option value="LA">Lao People's Democratic Republic</option>
+                         <option value="LV">Latvia</option>
+                         <option value="LB">Lebanon</option>
+                         <option value="LS">Lesotho</option>
+                         <option value="LR">Liberia</option>
+                         <option value="LI">Liechtenstein</option>
+                         <option value="LT">Lithuania</option>
+                         <option value="LU">Luxembourg</option>
+                         <option value="MO">Macao</option>
+                         <option value="MK">Macedonia, the former Yugoslav Republic of</option>
+                         <option value="MG">Madagascar</option>
+                         <option value="MW">Malawi</option>
+                         <option value="MY">Malaysia</option>
+                         <option value="MV">Maldives</option>
+                         <option value="ML">Mali</option>
+                         <option value="MT">Malta</option>
+                         <option value="MH">Marshall Islands</option>
+                         <option value="MQ">Martinique</option>
+                         <option value="MR">Mauritania</option>
+                         <option value="MU">Mauritius</option>
+                         <option value="YT">Mayotte</option>
+                         <option value="MX">Mexico</option>
+                         <option value="FM">Micronesia, Federated States of</option>
+                         <option value="MD">Moldova, Republic of</option>
+                         <option value="MC">Monaco</option>
+                         <option value="MN">Mongolia</option>
+                         <option value="ME">Montenegro</option>
+                         <option value="MS">Montserrat</option>
+                         <option value="MA">Morocco</option>
+                         <option value="MZ">Mozambique</option>
+                         <option value="MM">Myanmar</option>
+                         <option value="NA">Namibia</option>
+                         <option value="NR">Nauru</option>
+                         <option value="NP">Nepal</option>
+                         <option value="NL">Netherlands</option>
+                         <option value="NC">New Caledonia</option>
+                         <option value="NZ">New Zealand</option>
+                         <option value="NI">Nicaragua</option>
+                         <option value="NE">Niger</option>
+                         <option value="NG">Nigeria</option>
+                         <option value="NU">Niue</option>
+                         <option value="NF">Norfolk Island</option>
+                         <option value="MP">Northern Mariana Islands</option>
+                         <option value="NO">Norway</option>
+                         <option value="OM">Oman</option>
+                         <option value="PK">Pakistan</option>
+                         <option value="PW">Palau</option>
+                         <option value="PS">Palestine</option>
+                         <option value="PA">Panama</option>
+                         <option value="PG">Papua New Guinea</option>
+                         <option value="PY">Paraguay</option>
+                         <option value="PE">Peru</option>
+                         <option value="PH">Philippines</option>
+                         <option value="PN">Pitcairn</option>
+                         <option value="PL">Poland</option>
+                         <option value="PT">Portugal</option>
+                         <option value="PR">Puerto Rico</option>
+                         <option value="QA">Qatar</option>
+                         <option value="RE">Reunion</option>
+                         <option value="RO">Romania</option>
+                         <option value="RU">Russia</option>
+                         <option value="RW">Rwanda</option>
+                         <option value="BL">Saint Barthelemy</option>
+                         <option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
+                         <option value="KN">Saint Kitts and Nevis</option>
+                         <option value="LC">Saint Lucia</option>
+                         <option value="MF">Saint Martin (French part)</option>
+                         <option value="PM">Saint Pierre and Miquelon</option>
+                         <option value="VC">Saint Vincent and the Grenadines</option>
+                         <option value="WS">Samoa</option>
+                         <option value="SM">San Marino</option>
+                         <option value="ST">Sao Tome and Principe</option>
+                         <option value="SA">Saudi Arabia</option>
+                         <option value="SN">Senegal</option>
+                         <option value="RS">Serbia</option>
+                         <option value="SC">Seychelles</option>
+                         <option value="SL">Sierra Leone</option>
+                         <option value="SG">Singapore</option>
+                         <option value="SX">Sint Maarten (Dutch part)</option>
+                         <option value="SK">Slovakia</option>
+                         <option value="SI">Slovenia</option>
+                         <option value="SB">Solomon Islands</option>
+                         <option value="ZA">South Africa</option>
+                         <option value="GS">South Georgia and the South Sandwich Islands</option>
+                         <option value="SS">South Sudan</option>
+                         <option value="ES">Spain</option>
+                         <option value="LK">Sri Lanka</option>
+                         <option value="SD">Sudan</option>
+                         <option value="SR">Suriname</option>
+                         <option value="SJ">Svalbard and Jan Mayen</option>
+                         <option value="SZ">Swaziland</option>
+                         <option value="SE">
+                            Sweden
+                         </option>
+                         <option value="CH">Switzerland</option>
+                         <option value="TW">Taiwan</option>
+                         <option value="TJ">Tajikistan</option>
+                         <option value="TZ">Tanzania, United Republic of</option>
+                         <option value="TH">Thailand</option>
+                         <option value="TL">Timor-Leste</option>
+                         <option value="TG">Togo</option>
+                         <option value="TK">Tokelau</option>
+                         <option value="TO">Tonga</option>
+                         <option value="TT">Trinidad and Tobago</option>
+                         <option value="TN">Tunisia</option>
+                         <option value="TR">Turkey</option>
+                         <option value="TM">Turkmenistan</option>
+                         <option value="TC">Turks and Caicos Islands</option>
+                         <option value="TV">Tuvalu</option>
+                         <option value="UG">Uganda</option>
+                         <option value="UA">Ukraine</option>
+                         <option value="AE">United Arab Emirates</option>
+                         <option value="GB">United Kingdom</option>
+                         <option value="US">
+                            United States
+                         </option>
+                         <option value="UM">United States Minor Outlying Islands</option>
+                         <option value="UY">Uruguay</option>
+                         <option value="UZ">Uzbekistan</option>
+                         <option value="VU">Vanuatu</option>
+                         <option value="VN">Vietnam</option>
+                         <option value="VG">Virgin Islands, British</option>
+                         <option value="VI">Virgin Islands, U.S.</option>
+                         <option value="WF">Wallis and Futuna</option>
+                         <option value="EH">Western Sahara</option>
+                         <option value="ZM">Zambia</option>
+                         <option value="ZW">Zimbabwe</option>
+                      </select>
+                      <span class="custom-select__label text-small">Korea, Republic of (South Korea)</span>
+                   </div>
+                   <span class="select__current-title"></span>
+                </div>
+                <div class="redirect-modal__row select__container">
+                   <label class="form-group__label visually-hidden" for="RedirectCurrency">
+                   Currency
+                   </label>
+                   <div class="custom-select__wrapper">
+                      <select id="RedirectCurrency" class="redirect-modal__currency select--center js-redirect-select custom-select__select" name="currency" style="background-image: url(../assets/icon-small-arrow-down.svg);" js-redirect-modal="currencySelector" tabindex="-1">
+                         <option value="KRW">
+                            KRW
+                         </option>
+                      </select>
+                      <span class="custom-select__label text-small">
+                      KRW
+                      </span>
+                   </div>
+                   <span class="select__current-title"></span>
+                </div>
+                <button class="button button--primary button--large button--block is-active" data-store-url="https://int.toteme-studio.com/" js-redirect-modal="updateButton" tabindex="-1">
+                Confirm settings
+                </button>
+             </form>
+          </div>
+          <div class="redirect-modal__footer" js-redirect-modal="footer">
+             <p js-redirect-modal="footerText">You are on the International site shopping in EUR. Please confirm or change your store preference above.</p>
+          </div>
+       </div>
+    </div>
+ </div> 
+      <!--- // 10. 모달리스 팝업 -->
+      
+      <script src="../js/jquery-1.11.3.min.js"></script>
+      <!---script src="/js/toteme.custom.js"></script--->
+      
+      <script src="../js/swiper-bundle.min.js"></script>
+      <script src="../js/image-zoom.min.js"></script>
+      <script src='../js/toteme.layout.js'></script>
+
+   </body>
+</html>

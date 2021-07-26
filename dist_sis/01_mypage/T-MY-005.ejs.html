@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html class="esc-bind" lang="ko">
+   <head>
+    <title>Totême - Official online store</title>
+      <meta charset="utf-8">
+      <meta content="IE=edge" http-equiv="X-UA-Compatible">
+      <meta content="width=device-width,initial-scale=1" name="viewport">
+      <!--link href="/css/main_etc.css" rel="stylesheet"-->
+      <link rel="stylesheet" href="../css/image-zoom.css">
+      <link rel="stylesheet" href="../css/boost-pfs-init.scss.css">
+      <link rel="stylesheet" href="../css/boost-pfs-general.scss.css">
+      <link rel="stylesheet" href="../css/v2-ltr-2021-01-25-1dd58b0ad54342536b141709174f812a-5607.css" media="all">
+      <link type="text/css" href="../css/layout.checkout.css" rel="stylesheet">
+      
+      <link href="../css/main_etc.css" rel="stylesheet">
+      
+      <link type="text/css" href="../css/layout.theme.css" rel="stylesheet">
+      <link rel="prefetch"  href="../css/layout.checkout.css" as="style">
+      <link rel="prefetch"  href="../css/layout.gift_card.css" as="style">
+      <link rel="prefetch"  href="../css/layout.password.css" as="style">
+      <link rel="prefetch"  href="../css/layout.styleguide.css" as="style">
+      <link href="../css/flag-icon.min.css" rel="stylesheet" type="text/css" media="all">
+      <link href="../css/appmate-wishlist-king.scss.css" rel="stylesheet">
+
+      <!--link href="/css/toteme.custom.css" rel="stylesheet"-->
+      <link href="../css/toteme.custom.css" rel="stylesheet">
+      <link href="../css/toteme.custom.sis.pc-inner.css" rel="stylesheet">
+      <style>
+
+         header.site-header-wrapper .site-nav__link{border:0px; background-color: transparent;}
+      </style>
+   </head>
+
+   <!--  has-announcement-bar --header-height:51px; / -->
+   <body id="toteme-official-online-store" class="template-index" data-cy="body">
+      
+
+
+      <main id="MainContent" class="main-content critical-clear">
+         <!-- BEGIN content_for_index -->
+         <!--  include ("./pages/00_main/index.ejs") BEGIN content_for_index -->
+         <div class="container mypage">
+	<div class="template-account__header">
+		안녕하세요, 이현대님
+	</div>
+	<div class="template-account__wrapper">
+		 <div class="template-account__left"></div>
+		 <div class="template-account__navlist ">
+    <div class="template-account__navlist--content">
+       <div class="navlist__dropdown-wrapper">
+          <div class="custom-select__wrapper">
+             <select class="navlist__dropdown custom-select__select m-font-14" style="background-image: url(../assets/icon-small-arrow-down.svg);">
+                <option value=""> <!-- selected=""-->
+                  나의 쇼핑정보
+                </option>
+                <option value="">
+                  회원정보 변경
+                </option>
+                <option value="">
+                  배송주소록
+                </option>
+                <option value="">
+                  위시리스트
+                </option>
+                <option value="">
+                  주문내역
+                </option>
+                <option value="">
+                  영수증/세금계산서
+                </option>
+                <option value="">
+                  예치금
+                </option>
+                <option value="">
+                  로그아웃
+                </option>
+             </select>
+             <span class="main-title custom-select__label text-small">나의 쇼핑정보</span>
+          </div>
+       </div>
+       <ul class="navlist mypage" js-account-nav="navlist">
+          <li class="navlist__item navlist__item--margin">
+             <a class="navlist__link text-link" href="#">나의 쇼핑정보</a>
+          </li>
+          <li class="navlist__item">
+             <a class="navlist__link text-link" href="#">회원정보 변경</a>
+          </li>
+          <li class="navlist__item navlist__item--margin">
+             <a class="navlist__link text-link" href="#">배송주소록</a>
+          </li>
+          <li class="navlist__item">
+             <a class="navlist__link text-link" href="#">위시리스트</a>
+          </li>
+          <li class="navlist__item navlist__item--margin">
+            <a class="navlist__link text-link" href="#">주문내역</a>
+         </li>
+         <li class="navlist__item">
+            <a class="navlist__link text-link" href="#">영수증/세금계산서</a>
+         </li>
+         <li class="navlist__item navlist__item--margin">
+            <a class="navlist__link text-link" href="#">예치금</a>
+         </li>
+         <li class="navlist__item">
+            <a class="navlist__link text-link" href="#">로그아웃</a>
+         </li>
+       </ul>
+    </div>
+ </div>
+
+ 
+   <script>
+      setTimeout(function(){
+         $(".main-title.custom-select__label").text("회원정보 변경");
+         $(".navlist.mypage>li:nth-child(2) a").addClass("is-active");
+      },100)
+      </script>
+   
+		 <div class="template-account__content">
+			<div class="template-account__text_hdtype_1 alert title" style="display: none;">
+				<div class="rte">
+					<p class="error">이름을 입력해 주세요.</p>
+				</div>
+			</div>
+			<div class="template-mypage__form-wrapper">
+				<div class="template-mypage__form">
+					<div class="mypage_each">
+						<h3 class="mypage_tit1">회원정보 변경 <a href="#" class="modal_trigger button button--primary" data-modal="mypage_hide-modal">가려진 정보 보기</a></h3>
+					</div>
+					<form method="post" action="#">
+						<div class="input-block label-block">
+							<label class="form-group__label" for="CustomerEmail">아이디</label>
+							<input id="CustomerEmail" name="customer[email]" placeholder="이메일" value="hyu**@*********" type="text" readonly>
+						</div>
+						<div class="input-block label-block">
+							<label class="form-group__label" for="CustomerName">이름</label>
+							<input id="CustomerName" name="customer[name]" placeholder="이름" value="박*대" type="text" readonly>
+						</div>
+						<div class="input-block label-block">
+							<label class="form-group__label" for="CustomerBirthday">생년월일</label>
+							<input id="CustomerBirthday" name="customer[birthday]" placeholder="생년월일" value="1982-05-**" type="text" readonly>
+						</div>
+						<div class="input-block label-block email_form mypage_email_form">
+							<div>
+								<label class="form-group__label" for="CustomerEmail">이메일</label>
+								<input id="CustomerEmail" name="customer[email]" placeholder="이메일" value="hyu**@*********" type="text">
+							</div>
+							<div>
+								<input type="button" class="button button--block button--large modal_trigger" value="이메일 변경" data-modal="mypage_email-modal">
+							</div>
+						</div>
+						<div class="checkbox-block mypage_email">
+							<div class="checkbox_custom_box">
+								<input id="mypage_email_chekbox1" class="checkbox" value="1" type="checkbox">
+								<label for="mypage_email_chekbox1">Totême 상품/이벤트 정보 뉴스레터 수신 동의 (선택)	</label>
+							</div>
+						</div>
+						<div class="input-block label-block email_form">
+							<div>
+								<label class="form-group__label" for="CustomerPhone">휴대폰</label>
+								<input id="CustomerPhone" name="customer[Phone]" placeholder="휴대폰" value="010-****-2345" type="text">
+							</div>
+							<div>
+								<input type="button" class="button button--block button--large modal_trigger" value="휴대폰 변경" data-modal="mypage_phone-modal">
+							</div>
+						</div>
+						<div class="checkbox-block mypage_email">
+							<div class="checkbox_custom_box">
+								<input id="mypage_phone_chekbox1" class="checkbox" type="checkbox">
+								<label for="mypage_phone_chekbox1">Totême 상품/이벤트 정보 SMS 수신 동의 (선택)</label>
+							</div>
+							<div class="checkbox_custom_box">
+								<input id="mypage_phone_chekbox2" class="checkbox" type="checkbox">
+								<label for="mypage_phone_chekbox2">전화 상담을 통한 상품/이벤트 정보 수신 동의 (선택)</label>
+							</div>
+						</div>
+						<!-- <div class="button-block">
+							<input class="button button--primary button--block button--large" type="button" value="변경 사항 저장">
+						</div> -->
+					</form>
+				</div>
+				<div class="template-mypage__form mypage_plus_info">
+					<div class="mypage_each">
+						<h3 class="mypage_tit1">부가정보(선택)</h3>
+					</div>
+					<form method="post" action="#">
+						<div class="radio-block">
+							<p class="mypage_tit2">성별</p>
+							<div class="mypage_each">
+								<div class="radio_custom_box mypage_radio_box">
+									<input id="info_gender1" class="radio_input" value="10" type="radio" name="info_gender">
+									<label for="info_gender1">남</label>
+								</div>
+								<div class="radio_custom_box mypage_radio_box">
+									<input id="info_gender2" class="radio_input" value="10" type="radio" name="info_gender">
+									<label for="info_gender2">여</label>
+								</div>
+								<div class="checkbox_custom_box mypage_check_box">
+									<input id="info_agree1" class="checkbox" value="2" type="checkbox">
+									<label for="info_agree1">성별을 마케팅 정보로 활용하는 것에 동의 (선택)</label>
+								</div>
+							</div>
+						</div>
+						<div class="radio-block">
+							<h4 class="mypage_tit2">개인정보 제3자(Totême) 제공 및 국외 이전(스웨덴) 동의</h4>
+							<div class="mypage_each">
+								<div class="radio_custom_box mypage_radio_box">
+									<input id="info_agree2_1" class="radio_input" value="10" type="radio" name="info_agree2">
+									<label for="info_agree2_1">동의합니다</label>
+								</div>
+								<div class="radio_custom_box mypage_radio_box">
+									<input id="info_agree2_2" class="radio_input" value="10" type="radio" name="info_agree2">
+									<label for="info_agree2_2">동의하지 않습니다</label>
+								</div>
+							</div>
+						</div>
+						<div class="button-block">
+							<input class="button button--primary button--block button--large" type="button" value="변경 사항 저장">
+						</div>
+					</form>
+				</div>
+
+				<div class="template-mypage__form">
+					<div class="mypage_each">
+						<h3 class="mypage_tit1">비밀번호 변경</h3>
+					</div>
+					<form method="post" action="#">
+						<div class="form-group">
+							<div class="input-block label-block">
+								<label class="form-group__label" for="infoPassword1">현재 비밀번호</label>
+								<input id="infoPassword1" name="info[password]" placeholder="현재 비밀번호"  type="text">
+							</div>
+							<div class="input-block label-block">
+								<label class="form-group__label" for="infoPassword2">새 비밀번호</label>
+								<input id="infoPassword2" name="info[password]" placeholder="새 비밀번호" type="text">
+							</div>
+							<div class="input-block label-block">
+								<label class="form-group__label" for="infoPassword3">새 비밀번호 재확인</label>
+								<input id="infoPassword3" name="info[password]" placeholder="새 비밀번호 재확인" type="text">
+							</div>
+							<div class="button-block">
+								<input class="button button--primary button--block button--large" type="button" value="변경 사항 저장">
+							</div>
+							<div class="text-block sub-description">
+								<p>고객님의 소중한 개인정보를 확인/변경하기 위해 비밀번호 재확인이 필요합니다.</p>
+							</div>
+						</div>
+					</form>
+				</div>
+
+				<ul class="mypage_toggle_menu">
+				<li class="accordion__item">
+					<button type="button" class="toggle_tit accordion__control">
+						환불계좌/현금영수증
+					</button>
+					<div class="toggle_con_box">
+						<div class="mypage_each2">
+							<div class="txt_btn_box">
+								<h4 class="mypage_tit2">환불계좌 정보</h4>
+								<div>
+									<button type="button" class="modal_trigger button button--primary" data-modal="refund-modal">등록</button>
+								</div>
+							</div>
+							<p>등록된 환불계좌가 없습니다. </p>
+							<ul class="dot_list">
+								<li>환불계좌는 본인 명의의 계좌번호만 등록/변경 가능합니다.</li>
+								<li>환불계좌를 저장하시면, 추후 이용 시 별도의 계좌입력 없이 이용하실 수 있습니다.</li>
+								<li>정보 입력 또는 수정일로부터 1년간 환불기록이 없을 경우, 금융정보보호정책에 따라 환불계좌 정보는 삭제됩니다.</li>
+							</ul>
+						</div>
+						<div class="mypage_each2">
+							<div class="txt_btn_box">
+								<h4 class="mypage_tit2">기본 가상계좌 관리</h4>
+								<div>
+									<button type="button" class="modal_trigger button button--primary" data-modal="account-modal">등록</button>
+								</div>
+							</div>
+							<p>등록된 가상계좌가 없습니다.</p>
+							<ul class="mypage_tit_list">
+								<li><span class="tit1">예금주명</span><span class="txt1">박현대</span></li>
+								<li><span class="tit1">은행명</span><span class="txt1">우리은행</span></li>
+								<li><span class="tit1">계좌번호</span><span class="txt1">25489563451225</span></li>
+							</ul>
+							<div class="edit_btn_box">
+								<a href="#" class="a_link">수정</a>
+								<a href="#" class="a_link">삭제</a>
+							</div>
+							<ul class="dot_list">
+								<li>가상계좌가 없는 경우 은행을 선택하시면 가상계좌가 신규 발급됩니다.</li>
+								<li>기존에 등록된 가상계좌를 변경하고 싶으시면 변경하시고자 하는 은행을 선택해 주세요.</li>
+								<li>은행 변경 시 기존 가상계좌는 삭제됩니다.</li>
+							</ul>
+						</div>
+						<div class="mypage_each2">
+							<div class="txt_btn_box">
+								<h4 class="mypage_tit2">소득공제용 현금영수증</h4>
+								<div>
+									<button type="button" class="modal_trigger button button--primary" data-modal="receipt1-modal">등록</button>
+								</div>
+							</div>
+							<p>등록된 현금영수증 정보가 없습니다.</p>
+							<span>소득공제용(일반개인)<br>123-1234-1234</span>
+							<div class="edit_btn_box">
+								<a href="#" class="a_link">수정</a>
+								<a href="#" class="a_link">삭제</a>
+							</div>
+						</div>
+						<div class="mypage_each2">
+							<div class="txt_btn_box">
+								<h4 class="mypage_tit2">지출증빙용 현금영수증</h4>
+								<div>
+									<button type="button" class="modal_trigger button button--primary" data-modal="receipt2-modal">등록</button>
+								</div>
+							</div>
+							<p>등록된 현금영수증 정보가 없습니다.</p>
+							<span>지출증빙용(사업자)<br>123-12-12312</span>
+							<div class="edit_btn_box">
+								<a href="#" class="a_link">수정</a>
+								<a href="#" class="a_link">삭제</a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="accordion__item">
+					<button type="button" class="toggle_tit accordion__control">
+						개인계정 연결관리
+					</button>
+					<div class="toggle_con_box">
+						<div class="mypage_each2">
+							<div class="txt_btn_box">
+								<h4 class="mypage_tit2">NAVER</h4>
+								<div>
+									<button type="button" class="modal_trigger button button--primary" data-modal="login-modal">등록</button>
+								</div>
+							</div>
+						</div>
+						<div class="mypage_each2">
+							<div class="txt_btn_box">
+								<h4 class="mypage_tit2">Kakao</h4>
+								<div>
+									<button type="button" class="modal_trigger button button--primary" data-modal="login-modal">등록</button>
+								</div>
+							</div>
+						</div>
+						<div class="mypage_each2">
+							<div class="txt_btn_box">
+								<h4 class="mypage_tit2">Facebook</h4>
+								<div>
+									<button type="button" class="modal_trigger button button--primary" data-modal="login-modal">등록</button>
+								</div>
+							</div>
+						</div>
+						<div class="mypage_each2">
+							<div class="txt_btn_box">
+								<h4 class="mypage_tit2">Google + <p>hyundaipark21@gmail.com</p></h4>
+								<div>
+									<button type="button" class="button button--primary">해제</button>
+								</div>
+							</div>
+							<ul class="dot_list">
+								<li>SNS 및 네이버 계정과 연동하여 간편하게 로그인 할 수 있는 기능을 설정/해제 하실 수 있습니다.</li>
+								<li>간편계정 연결의 해제는 단순히 간편계정 연동 로그인 기능만을 해제 하는 것이며, 회원탈퇴가 되는 것은 아닙니다.</li>
+								<li>간편계정 연결을 해제 하셔도 기존의 아이디(이메일), 비밀번호로 로그인 하실 수 있습니다.</li>
+								<li>회원탈퇴는 회원정보변경에서 회원탈퇴 메뉴를 통해 가능합니다.</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li class="accordion__item">
+					<button type="button" class="toggle_tit accordion__control">
+						회원탈퇴
+					</button>
+					<div class="toggle_con_box">
+						<div class="mypage_each2">
+							<h3 class="mypage_tit1">회원탈퇴를 진행하시겠습니까?</h3>
+							<p>탈퇴를 진행하고자 하신다면 아래 사항을 확인해주시길 바랍니다.</p>
+						</div>
+						<div class="mypage_each2">
+							<ul class="dot_list">
+								<li>재가입하셔도 개인정보가 복원되지 않습니다. 더현대닷컴에 가지고 계신 더머니, 예치금, 할인쿠폰 등의 혜택이 자동 삭제되며, 재가입하실 경우에도 복원되지 않습니다.</li>
+								<li>아이디를 재사용하실 수 없습니다.<br> 기존에 사용하셨던 ID는 재가입 시 사용하실 수 없습니다.</li>
+							</ul>
+						</div>
+						<div class="mypage_each2">
+							<h3 class="mypage_tit1">설문조사 (1개 항목만 선택해 주세요.)</h3>
+							<div class="radio_two_col">
+								<div class="radio_custom_box mypage_radio_box">
+									<input id="withdrawal_survey1" class="radio_input" value="10" type="radio" name="withdrawal_survey">
+									<label for="withdrawal_survey1">상품의 다양성/가격/품질/불만</label>
+								</div>
+								<div class="radio_custom_box mypage_radio_box">
+									<input id="withdrawal_survey2" class="radio_input" value="10" type="radio" name="withdrawal_survey">
+									<label for="withdrawal_survey2">사이트의 시스템 및 에러 불만</label>
+								</div>
+								<div class="radio_custom_box mypage_radio_box">
+									<input id="withdrawal_survey3" class="radio_input" value="10" type="radio" name="withdrawal_survey">
+									<label for="withdrawal_survey3">회원특혜/쇼핑 혜택의 부족</label>
+								</div>
+								<div class="radio_custom_box mypage_radio_box">
+									<input id="withdrawal_survey4" class="radio_input" value="10" type="radio" name="withdrawal_survey">
+									<label for="withdrawal_survey4">주문취소/반품/AS불만</label>
+								</div>
+								<div class="radio_custom_box mypage_radio_box">
+									<input id="withdrawal_survey5" class="radio_input" value="10" type="radio" name="withdrawal_survey">
+									<label for="withdrawal_survey5">상품의 선택, 주문 등의 사용이 어려움</label>
+								</div>
+								<div class="radio_custom_box mypage_radio_box">
+									<input id="withdrawal_survey6" class="radio_input" value="10" type="radio" name="withdrawal_survey">
+									<label for="withdrawal_survey6">자주 이용하지 않음</label>
+								</div>
+							</div>
+						</div>
+						<div class="mypage_each2">
+							<div class="custom_textarea">
+								<label for="withdrawal_text">위의 항목 이외에 기타 불만사항이나 의견이 있으시면 기재 부탁 드립니다. (0/1000byte)</label>
+								<textarea name="" id="withdrawal_text"></textarea>
+							</div>
+						</div>
+						<div class="mypage_each2">
+							<ul class="dot_list">
+								<li>진행중인 주문, 반품이 있을 시 회원 탈퇴가 불가능 합니다.  해당 사항을 완료 후 탈퇴를 하실 수 있습니다.</li>
+							</ul>
+						</div>
+						<div class="mypage_btn_box">
+							<input class="button button--primary button--block button--large modal_trigger" data-modal="withdrawal-modal" type="button" value="회원탈퇴">
+						</div>
+					</div>
+				</li>
+				</ul>
+			</div>	 
+		 </div>
+	</div>
+
+	<div id="refund-modal" class="modal modal--light refund-modal" role="dialog" tabindex="-1">
+		<div class="modal__overlay" tabindex="-1">
+			<div class="modal__card">
+				<div class="modal__header">
+					<h5 class="modal__title preorder-modal__title">환불계좌 정보</h5>
+					<button class="modal__close">
+						<span class="visually-hidden">
+							Close
+						</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+						</svg> </button>
+				</div>
+				<div class="modal__body">
+					<form method="post" action="#">
+						<div class="input-block label-block">
+							<label class="form-group__label is-hidden" for="refundName">이름</label>
+							<input id="refundName" name="refund[name]" placeholder="이름" type="text" value="이현대" readonly>
+						</div>
+						<div class="input-block">
+							<label class="form-group__label is-hidden" for="refundBank">은행선택</label>
+							<select name="refund[bank]" id="refundBank" class="toteme-select-style">
+								<option value="" selected disabled>은행선택</option>
+								<option value="">NH농협은행</option>
+								<option value="">KB국민은행 </option>
+								<option value="">우리은행</option>
+								<option value="">신한은행</option>
+								<option value="">IBK기업은행</option>
+								<option value="">대구은행</option>
+								<option value="">부산은행</option>
+								<option value="">우체국</option>
+								<option value="">KEB하나은행</option>
+								<option value="">경남은행</option>
+							</select>
+							<p class="comment error" style="display: none;">은행을 선택해주세요.</p>
+						</div>
+						<div class="input-block addr_form">
+							<div>
+								<input placeholder="계좌번호" size="30" type="text" name="refund[account]" id="refundAccount">
+							</div>
+							<div>
+								<button type="button" class="button button--large modal_trigger" data-modal="refund-modal2">계좌인증</button>
+							</div>
+							<p class="comment error" style="display: none;">계좌번호 입력 시(-)를 제외하고 입력해주세요.</p>
+						</div>
+						<div class="button-block">
+							<input class="button button--primary button--block button--large" type="button" value="등록">
+						</div>
+				 </form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="refund-modal2" class="modal modal--light sm-modal refund-modal2" role="dialog" tabindex="-1">
+		<div class="modal__overlay" tabindex="-1">
+			<div class="modal__card">
+				<div class="modal__header">
+					<h5 class="modal__title preorder-modal__title">계좌인증</h5>
+					<button class="modal__close">
+						<span class="visually-hidden">
+							Close
+						</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+						</svg> </button>
+				</div>
+				<div class="modal__body">
+					<ul class="mypage_tit_list">
+						<li><span class="tit1">예금주명</span><span class="txt1">박현대</span></li>
+						<li><span class="tit1">은행명</span><span class="txt1">우리은행</span></li>
+						<li><span class="tit1">계좌번호</span><span class="txt1">25489563451225</span></li>
+						<li><span class="tit1">응답메세지</span><span class="txt1">계좌인증성공</span></li>
+					</ul>
+					<p>내 환불계좌로 등록하시겠습니까?</p>
+					<div class="button-block pcs2_vertical">
+						<div class="loading-wrap">
+							<input class="button button--primary button--block button--large" type="button" value="확인">
+							<div class="loader">
+								<div class="smiley-spin">
+									<svg class="icon icon--medium icon__smiley" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 15.5a7.5 7.5 0 110-15 7.5 7.5 0 010 15zm0-1a6.5 6.5 0 100-13 6.5 6.5 0 000 13zM4.947 9.776l-.894.448a4.413 4.413 0 007.894 0l-.894-.448a3.413 3.413 0 01-6.106 0zM9.5 5h1v2h-1V5zm-3 0h-1v2h1V5z"></path></svg>
+								</div>
+							</div>
+						</div>
+
+						<div class="loading-wrap">
+							<input class="button button--primary button--block button--large" type="button" value="취소">
+							<div class="loader">
+								<div class="smiley-spin">
+									<svg class="icon icon--medium icon__smiley" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 15.5a7.5 7.5 0 110-15 7.5 7.5 0 010 15zm0-1a6.5 6.5 0 100-13 6.5 6.5 0 000 13zM4.947 9.776l-.894.448a4.413 4.413 0 007.894 0l-.894-.448a3.413 3.413 0 01-6.106 0zM9.5 5h1v2h-1V5zm-3 0h-1v2h1V5z"></path></svg>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="account-modal" class="modal modal--light account-modal" role="dialog" tabindex="-1">
+		<div class="modal__overlay" tabindex="-1">
+			<div class="modal__card">
+				<div class="modal__header">
+					<h5 class="modal__title preorder-modal__title">기본 가상계좌 관리</h5>
+					<button class="modal__close">
+						<span class="visually-hidden">
+							Close
+						</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+						</svg> </button>
+				</div>
+				<div class="modal__body">
+					<form method="post" action="#">
+						<div class="input-block label-block">
+							<label class="form-group__label is-hidden" for="accountBank">은행선택</label>
+							<select name="account[bank]" id="accountBank" class="toteme-select-style">
+								<option value="" selected disabled>은행선택</option>
+								<option value="">NH농협은행</option>
+								<option value="">KB국민은행 </option>
+								<option value="">우리은행</option>
+								<option value="">신한은행</option>
+								<option value="">IBK기업은행</option>
+								<option value="">대구은행</option>
+								<option value="">부산은행</option>
+								<option value="">우체국</option>
+								<option value="">KEB하나은행</option>
+								<option value="">경남은행</option>
+							</select>
+						</div>
+						<div class="input-block label-block">
+							<label class="form-group__label is-hidden" for="accountNum">가상계좌</label>
+							<input id="accountNum" name="account[num]" placeholder="가상계좌" type="text" value="1234567890" readonly>
+						</div>
+						<div class="button-block">
+							<input class="button button--primary button--block button--large" type="button" value="등록">
+						</div>
+				 </form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="receipt1-modal" class="modal modal--light receipt1-modal" role="dialog" tabindex="-1">
+		<div class="modal__overlay" tabindex="-1">
+			<div class="modal__card">
+				<div class="modal__header">
+					<h5 class="modal__title preorder-modal__title">소득공제용 현금영수증</h5>
+					<button class="modal__close">
+						<span class="visually-hidden">
+							Close
+						</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+						</svg> </button>
+				</div>
+				<div class="modal__body">
+					<form method="post" action="#">
+						<div class="input-block label-block">
+							<label class="form-group__label is-hidden" for="receipt1">소득공제용(일반개인)</label>
+							<input id="receipt1" name="receipt1" placeholder="휴대폰번호" type="text">
+						</div>
+						<div class="button-block">
+							<input class="button button--primary button--block button--large" type="button" value="등록">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="receipt2-modal" class="modal modal--light receipt2-modal" role="dialog" tabindex="-1">
+		<div class="modal__overlay" tabindex="-1">
+			<div class="modal__card">
+				<div class="modal__header">
+					<h5 class="modal__title preorder-modal__title">지출증빙용 현금영수증</h5>
+					<button class="modal__close">
+						<span class="visually-hidden">
+							Close
+						</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+						</svg> </button>
+				</div>
+				<div class="modal__body">
+					<form method="post" action="#">
+						<div class="input-block label-block">
+							<label class="form-group__label is-hidden" for="receipt2">지출증빙용(사업자)</label>
+							<input id="receipt2" name="receipt2" placeholder="사업자등록번호" type="text">
+						</div>
+						<div class="button-block">
+							<input class="button button--primary button--block button--large" type="button" value="등록">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="login-modal" class="modal modal--light login-modal" role="dialog" tabindex="-1">
+		<div class="modal__overlay" tabindex="-1">
+			<div class="modal__card">
+				<div class="modal__header">
+					<h5 class="modal__title preorder-modal__title">개인계정 로그인</h5>
+					<button class="modal__close">
+						<span class="visually-hidden">
+							Close
+						</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+						</svg> </button>
+				</div>
+				<div class="modal__body">
+					<form method="post" action="#">
+						<!-- login field -->
+						<div class="button-block pcs2_vertical">
+							<div class="loading-wrap">
+								<button class="button button--block button--large">로그인</button> 
+								<div class="loader">
+									<div class="smiley-spin">
+										<svg class="icon icon--medium icon__smiley" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 15.5a7.5 7.5 0 110-15 7.5 7.5 0 010 15zm0-1a6.5 6.5 0 100-13 6.5 6.5 0 000 13zM4.947 9.776l-.894.448a4.413 4.413 0 007.894 0l-.894-.448a3.413 3.413 0 01-6.106 0zM9.5 5h1v2h-1V5zm-3 0h-1v2h1V5z"></path></svg>
+									</div>
+								</div>
+							</div>
+							<div class="loading-wrap">
+								<button class="button button--block button--large">회원가입</button>
+								<div class="loader">
+									<div class="smiley-spin">
+										<svg class="icon icon--medium icon__smiley" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 15.5a7.5 7.5 0 110-15 7.5 7.5 0 010 15zm0-1a6.5 6.5 0 100-13 6.5 6.5 0 000 13zM4.947 9.776l-.894.448a4.413 4.413 0 007.894 0l-.894-.448a3.413 3.413 0 01-6.106 0zM9.5 5h1v2h-1V5zm-3 0h-1v2h1V5z"></path></svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="withdrawal-modal" class="modal modal--light withdrawal-modal" role="dialog" tabindex="-1">
+		<div class="modal__overlay" tabindex="-1">
+			<div class="modal__card">
+				<div class="modal__header">
+					<h5 class="modal__title preorder-modal__title">회원탈퇴 재확인</h5>
+					<button class="modal__close">
+						<span class="visually-hidden">
+							Close
+						</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+						</svg> </button>
+				</div>
+				<div class="modal__body">
+					<form method="post" action="#">
+						<div class="mypage_each">
+							<p>‘이현대’님이 보유하고 있는 혜택입니다.<br>
+								탈퇴 시 더현대닷컴에서 보유한 혜택이 소멸됩니다.<br>
+								다시 한번 고객님의 혜택을 확인하시기 바랍니다.
+							</p>
+						</div>
+						<div class="mypage_each">
+							<ul class="withdrawal_list">
+								<li><span>쿠폰</span><span>0개</span></li>
+								<li><span>더머니</span><span>0점</span></li>
+								<li><span>예치금</span><span>50,000원</span></li>
+								<li><span>별</span><span>0별</span></li>
+							</ul>
+							<p>탈퇴하시겠습니까?</p>
+						</div>
+						<div class="button-block pcs2_vertical">
+							<button class="button button--block button--large">확인</button> 
+							<div class="loading-wrap">
+								<div class="loader">
+									<div class="smiley-spin">
+										<svg class="icon icon--medium icon__smiley" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 15.5a7.5 7.5 0 110-15 7.5 7.5 0 010 15zm0-1a6.5 6.5 0 100-13 6.5 6.5 0 000 13zM4.947 9.776l-.894.448a4.413 4.413 0 007.894 0l-.894-.448a3.413 3.413 0 01-6.106 0zM9.5 5h1v2h-1V5zm-3 0h-1v2h1V5z"></path></svg>
+									</div>
+								</div>
+							</div>
+							<div class="loading-wrap">
+								<button class="button button--block button--large">취소</button>
+								<div class="loader">
+									<div class="smiley-spin">
+										<svg class="icon icon--medium icon__smiley" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 15.5a7.5 7.5 0 110-15 7.5 7.5 0 010 15zm0-1a6.5 6.5 0 100-13 6.5 6.5 0 000 13zM4.947 9.776l-.894.448a4.413 4.413 0 007.894 0l-.894-.448a3.413 3.413 0 01-6.106 0zM9.5 5h1v2h-1V5zm-3 0h-1v2h1V5z"></path></svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="mypage_hide-modal" class="modal modal--light sm-modal mypage_hide-modal" role="dialog" tabindex="-1">
+		<div class="modal__overlay" tabindex="-1">
+			<div class="modal__card">
+				<div class="modal__header">
+					<h5 class="modal__title preorder-modal__title">가려진 정보 보기</h5>
+					<button class="modal__close">
+						<span class="visually-hidden">
+							Close
+						</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+						</svg> </button>
+				</div>
+				<div class="modal__body">
+					<p>고객님의 생년월일을 입력해 주세요.<br>
+						인증 성공 시, 회원정보 화면의 **** 표시가 해제됩니다.</p>
+					<form method="post" action="#">
+						<div class="input-block label-block">
+							<label class="form-group__label is-hidden" for="birthday1">생년월일</label>
+							<input id="birthday1" name="birthday1" placeholder="생년월일 (숫자 8자리 입력 / 예. 20150115)" type="text">
+							<p class="comment error">생년월일 8자리를 입력해주세요. (예. 20150115)</p>
+						</div>
+						<div class="button-block">
+							<input class="button button--primary button--block button--large" type="button" value="등록">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="mypage_email-modal" class="modal modal--light sm-modal mypage_email-modal" role="dialog" tabindex="-1">
+		<div class="modal__overlay" tabindex="-1">
+			<div class="modal__card">
+				<div class="modal__header">
+					<h5 class="modal__title preorder-modal__title">이메일 인증</h5>
+					<button class="modal__close">
+						<span class="visually-hidden">
+							Close
+						</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+						</svg> </button>
+				</div>
+				<div class="modal__body">
+					<form method="post" action="#">
+						<div class="input-block email_form">
+							<div>
+								<input class="field__input" placeholder="이메일" type="text">
+							</div>
+							<div>
+								<select class="toteme-select-style">
+									<option value="">naver.com</option>
+									<option value="">gmail.com</option>
+									<option value="">직접입력</option>
+								</select>
+							</div>
+						</div>
+						<p class="comment error">이메일 주소 변경을 위해 입력하신 이메일 주소로 인증메일이 발송되었습니다. <br>인증완료 후 변경완료 버튼을 선택해 주세요.</p>
+						<div class="button-block pcs2_vertical">
+							<div class="loading-wrap">
+								<input class="button button--primary button--block button--large" type="button" value="인증 메일 재발송">
+								<div class="loader">
+									<div class="smiley-spin">
+										<svg class="icon icon--medium icon__smiley" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 15.5a7.5 7.5 0 110-15 7.5 7.5 0 010 15zm0-1a6.5 6.5 0 100-13 6.5 6.5 0 000 13zM4.947 9.776l-.894.448a4.413 4.413 0 007.894 0l-.894-.448a3.413 3.413 0 01-6.106 0zM9.5 5h1v2h-1V5zm-3 0h-1v2h1V5z"></path></svg>
+									</div>
+								</div>
+							</div>
+							<div class="loading-wrap">
+								<input class="button button--primary button--block button--large" type="button" value="변경 완료">
+								<div class="loader">
+									<div class="smiley-spin">
+										<svg class="icon icon--medium icon__smiley" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 15.5a7.5 7.5 0 110-15 7.5 7.5 0 010 15zm0-1a6.5 6.5 0 100-13 6.5 6.5 0 000 13zM4.947 9.776l-.894.448a4.413 4.413 0 007.894 0l-.894-.448a3.413 3.413 0 01-6.106 0zM9.5 5h1v2h-1V5zm-3 0h-1v2h1V5z"></path></svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="mypage_phone-modal" class="modal modal--light sm-modal mypage_phone-modal" role="dialog" tabindex="-1">
+		<div class="modal__overlay" tabindex="-1">
+			<div class="modal__card">
+				<div class="modal__header">
+					<h5 class="modal__title preorder-modal__title">휴대폰 인증</h5>
+					<button class="modal__close">
+						<span class="visually-hidden">
+							Close
+						</span> <svg class="icon icon--large icon__close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M23 12c0-6.075-4.925-11-11-11S1 5.925 1 12s4.925 11 11 11 11-4.925 11-11zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6.593-2.7l.707-.707 2.7 2.7 2.7-2.7.707.707-2.7 2.7 2.7 2.7-.707.707-2.7-2.7-2.7 2.7-.707-.707 2.7-2.7-2.7-2.7z"></path>
+						</svg> </button>
+				</div>
+				<div class="modal__body">
+					<form method="post" action="#" class="login_join findpassword">
+						<div class="">
+							<div class="table-block input-table">
+								 <div>
+										<input id="CustomerPassword" name="customer[password]" placeholder="휴대폰번호 입력" required="" type="text" data-need="phone" data-need-length="10" numberonly="">
+								 </div>
+								 <div>
+										<input type="button" class="button duplicatebtn" value="인증번호 받기">
+								 </div>
+							</div>
+							<div class="text-block">
+								<p class="error comment">휴대폰으로 발송된 인증번호를 입력하세요. (3분이내)<br>
+									인증번호가 도착하지 않을 시에는 재발송을 해주세요</p>
+							</div>
+							<div class="table-block input-table">
+								 <div>
+										<input id="CustomerPassword" name="customer[password]" placeholder="인증번호 입력" required="" type="text" data-need="authnumber" data-need-length="6" numberonly="">
+								 </div>
+								 <div>
+										<input type="button" class="button duplicatebtn" value="휴대폰 인증">
+								 </div>
+							</div>
+							<div class="text-block sub-description time">
+								 <p>유효시간 <span>03:00</span></p>
+							</div>
+					 </div>
+					 <div class="">
+						<div class="text-block">
+							 <ul class="dot_list">
+									<li>휴대폰으로 발송된 인증번호를 유효시간 내에 입력해주시고, 인증번호가 도착하지 않을 시 재발송을 해주세요.</li>
+									<li>입력한 휴대폰번호는 보안 시스템을 통해 안전하게 관리됩니다.</li>
+							 </ul>
+						</div>
+				 </div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+         <!-- END content_for_index -->
+      </main>
+
+      <!--- 10. 모달 팝업 -->
+      <div id="redirect-modal" class="modal  redirect-modal critical-clear" aria-hidden="true" js-redirect-modal="container" style='display:none'>
+    <div js-modal="body">
+       <div class="modal__card redirect-modal__card " tabindex="-1" js-modal="card" js-redirect-modal="settingsContainer">
+          <div class="redirect-modal__header">
+             <h3 class="redirect-modal__title">
+                Choose your store
+             </h3>
+          </div>
+          <div class="redirect-modal__body">
+             <form id="RedirectSettings" class="redirect-modal__form form-group" action="#" method="GET" js-redirect-modal="form">
+                <div class="redirect-modal__row select__container">
+                   <label class="form-group__label visually-hidden" for="RedirectCountry">
+                   Country
+                   </label>
+                   <div class="custom-select__wrapper">
+                      <select id="RedirectCountry" class="redirect-modal__country select--center js-redirect-select custom-select__select" name="loc" style="background-image: url(../assets/icon-small-arrow-down.svg);" js-redirect-modal="countrySelector" tabindex="-1">
+                         <option value="AF">Afghanistan</option>
+                         <option value="AX">Aland Islands</option>
+                         <option value="AL">Albania</option>
+                         <option value="DZ">Algeria</option>
+                         <option value="AS">American Samoa</option>
+                         <option value="AD">Andorra</option>
+                         <option value="AO">Angola</option>
+                         <option value="AI">Anguilla</option>
+                         <option value="AQ">Antarctica</option>
+                         <option value="AG">Antigua and Barbuda</option>
+                         <option value="AR">Argentina</option>
+                         <option value="AM">Armenia</option>
+                         <option value="AW">Aruba</option>
+                         <option value="AU">Australia</option>
+                         <option value="AT">Austria</option>
+                         <option value="AZ">Azerbaijan</option>
+                         <option value="BS">Bahamas</option>
+                         <option value="BH">Bahrain</option>
+                         <option value="BD">Bangladesh</option>
+                         <option value="BB">Barbados</option>
+                         <option value="BY">Belarus</option>
+                         <option value="BE">Belgium</option>
+                         <option value="BZ">Belize</option>
+                         <option value="BJ">Benin</option>
+                         <option value="BM">Bermuda</option>
+                         <option value="BT">Bhutan</option>
+                         <option value="BO">Bolivia</option>
+                         <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                         <option value="BA">Bosnia and Herzegovina</option>
+                         <option value="BW">Botswana</option>
+                         <option value="BR">Brazil</option>
+                         <option value="IO">British Indian Ocean Territory</option>
+                         <option value="BN">Brunei Darussalam</option>
+                         <option value="BG">Bulgaria</option>
+                         <option value="BF">Burkina Faso</option>
+                         <option value="BI">Burundi</option>
+                         <option value="KH">Cambodia</option>
+                         <option value="CM">Cameroon</option>
+                         <option value="CA">Canada</option>
+                         <option value="CV">Cape Verde</option>
+                         <option value="KY">Cayman Islands</option>
+                         <option value="CF">Central African Republic</option>
+                         <option value="TD">Chad</option>
+                         <option value="CL">Chile</option>
+                         <option value="CN">China</option>
+                         <option value="CX">Christmas Island (Australia)</option>
+                         <option value="CC">Cocos (Keeling) Islands</option>
+                         <option value="CO">Colombia</option>
+                         <option value="KM">Comoros</option>
+                         <option value="CG">Congo</option>
+                         <option value="CK">Cook Islands</option>
+                         <option value="CR">Costa Rica</option>
+                         <option value="CI">Cote d'Ivoire</option>
+                         <option value="HR">Croatia</option>
+                         <option value="CW">Curacao</option>
+                         <option value="CY">Cyprus</option>
+                         <option value="CZ">Czech Republic</option>
+                         <option value="CD">Democratic Republic of the Congo</option>
+                         <option value="DK">Denmark</option>
+                         <option value="DJ">Djibouti</option>
+                         <option value="DM">Dominica</option>
+                         <option value="DO">Dominican Republic</option>
+                         <option value="EC">Ecuador</option>
+                         <option value="EG">Egypt</option>
+                         <option value="SV">El Salvador</option>
+                         <option value="GQ">Equatorial Guinea</option>
+                         <option value="ER">Eritrea</option>
+                         <option value="EE">Estonia</option>
+                         <option value="ET">Ethiopia</option>
+                         <option value="FK">Falkland Islands (Malvinas)</option>
+                         <option value="FO">Faroe Islands</option>
+                         <option value="FJ">Fiji</option>
+                         <option value="FI">Finland</option>
+                         <option value="FR">France</option>
+                         <option value="GF">French Guiana</option>
+                         <option value="PF">French Polynesia</option>
+                         <option value="TF">French Southern Territories</option>
+                         <option value="GA">Gabon</option>
+                         <option value="GM">Gambia</option>
+                         <option value="GE">Georgia</option>
+                         <option value="DE" selected="selected">
+                            Germany
+                         </option>
+                         <option value="GH">Ghana</option>
+                         <option value="GI">Gibraltar</option>
+                         <option value="GR">Greece</option>
+                         <option value="GL">Greenland</option>
+                         <option value="GD">Grenada</option>
+                         <option value="GP">Guadeloupe</option>
+                         <option value="GU">Guam</option>
+                         <option value="GT">Guatemala</option>
+                         <option value="GN">Guinea</option>
+                         <option value="GW">Guinea-Bissau</option>
+                         <option value="GY">Guyana</option>
+                         <option value="HT">Haiti</option>
+                         <option value="VA">Holy See (Vatican City State)</option>
+                         <option value="HN">Honduras</option>
+                         <option value="HK">Hong Kong</option>
+                         <option value="HU">Hungary</option>
+                         <option value="IS">Iceland</option>
+                         <option value="IN">India</option>
+                         <option value="ID">Indonesia</option>
+                         <option value="IQ">Iraq</option>
+                         <option value="IE">Ireland, Republic of</option>
+                         <option value="IL">Israel</option>
+                         <option value="IT">Italy</option>
+                         <option value="JM">Jamaica</option>
+                         <option value="JP">Japan</option>
+                         <option value="JO">Jordan</option>
+                         <option value="KZ">Kazakhstan</option>
+                         <option value="KE">Kenya</option>
+                         <option value="KI">Kiribati</option>
+                         <option value="KR">Korea, Republic of (South Korea)</option>
+                         <option value="XK">Kosovo</option>
+                         <option value="KW">Kuwait</option>
+                         <option value="KG">Kyrgyzstan</option>
+                         <option value="LA">Lao People's Democratic Republic</option>
+                         <option value="LV">Latvia</option>
+                         <option value="LB">Lebanon</option>
+                         <option value="LS">Lesotho</option>
+                         <option value="LR">Liberia</option>
+                         <option value="LI">Liechtenstein</option>
+                         <option value="LT">Lithuania</option>
+                         <option value="LU">Luxembourg</option>
+                         <option value="MO">Macao</option>
+                         <option value="MK">Macedonia, the former Yugoslav Republic of</option>
+                         <option value="MG">Madagascar</option>
+                         <option value="MW">Malawi</option>
+                         <option value="MY">Malaysia</option>
+                         <option value="MV">Maldives</option>
+                         <option value="ML">Mali</option>
+                         <option value="MT">Malta</option>
+                         <option value="MH">Marshall Islands</option>
+                         <option value="MQ">Martinique</option>
+                         <option value="MR">Mauritania</option>
+                         <option value="MU">Mauritius</option>
+                         <option value="YT">Mayotte</option>
+                         <option value="MX">Mexico</option>
+                         <option value="FM">Micronesia, Federated States of</option>
+                         <option value="MD">Moldova, Republic of</option>
+                         <option value="MC">Monaco</option>
+                         <option value="MN">Mongolia</option>
+                         <option value="ME">Montenegro</option>
+                         <option value="MS">Montserrat</option>
+                         <option value="MA">Morocco</option>
+                         <option value="MZ">Mozambique</option>
+                         <option value="MM">Myanmar</option>
+                         <option value="NA">Namibia</option>
+                         <option value="NR">Nauru</option>
+                         <option value="NP">Nepal</option>
+                         <option value="NL">Netherlands</option>
+                         <option value="NC">New Caledonia</option>
+                         <option value="NZ">New Zealand</option>
+                         <option value="NI">Nicaragua</option>
+                         <option value="NE">Niger</option>
+                         <option value="NG">Nigeria</option>
+                         <option value="NU">Niue</option>
+                         <option value="NF">Norfolk Island</option>
+                         <option value="MP">Northern Mariana Islands</option>
+                         <option value="NO">Norway</option>
+                         <option value="OM">Oman</option>
+                         <option value="PK">Pakistan</option>
+                         <option value="PW">Palau</option>
+                         <option value="PS">Palestine</option>
+                         <option value="PA">Panama</option>
+                         <option value="PG">Papua New Guinea</option>
+                         <option value="PY">Paraguay</option>
+                         <option value="PE">Peru</option>
+                         <option value="PH">Philippines</option>
+                         <option value="PN">Pitcairn</option>
+                         <option value="PL">Poland</option>
+                         <option value="PT">Portugal</option>
+                         <option value="PR">Puerto Rico</option>
+                         <option value="QA">Qatar</option>
+                         <option value="RE">Reunion</option>
+                         <option value="RO">Romania</option>
+                         <option value="RU">Russia</option>
+                         <option value="RW">Rwanda</option>
+                         <option value="BL">Saint Barthelemy</option>
+                         <option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
+                         <option value="KN">Saint Kitts and Nevis</option>
+                         <option value="LC">Saint Lucia</option>
+                         <option value="MF">Saint Martin (French part)</option>
+                         <option value="PM">Saint Pierre and Miquelon</option>
+                         <option value="VC">Saint Vincent and the Grenadines</option>
+                         <option value="WS">Samoa</option>
+                         <option value="SM">San Marino</option>
+                         <option value="ST">Sao Tome and Principe</option>
+                         <option value="SA">Saudi Arabia</option>
+                         <option value="SN">Senegal</option>
+                         <option value="RS">Serbia</option>
+                         <option value="SC">Seychelles</option>
+                         <option value="SL">Sierra Leone</option>
+                         <option value="SG">Singapore</option>
+                         <option value="SX">Sint Maarten (Dutch part)</option>
+                         <option value="SK">Slovakia</option>
+                         <option value="SI">Slovenia</option>
+                         <option value="SB">Solomon Islands</option>
+                         <option value="ZA">South Africa</option>
+                         <option value="GS">South Georgia and the South Sandwich Islands</option>
+                         <option value="SS">South Sudan</option>
+                         <option value="ES">Spain</option>
+                         <option value="LK">Sri Lanka</option>
+                         <option value="SD">Sudan</option>
+                         <option value="SR">Suriname</option>
+                         <option value="SJ">Svalbard and Jan Mayen</option>
+                         <option value="SZ">Swaziland</option>
+                         <option value="SE">
+                            Sweden
+                         </option>
+                         <option value="CH">Switzerland</option>
+                         <option value="TW">Taiwan</option>
+                         <option value="TJ">Tajikistan</option>
+                         <option value="TZ">Tanzania, United Republic of</option>
+                         <option value="TH">Thailand</option>
+                         <option value="TL">Timor-Leste</option>
+                         <option value="TG">Togo</option>
+                         <option value="TK">Tokelau</option>
+                         <option value="TO">Tonga</option>
+                         <option value="TT">Trinidad and Tobago</option>
+                         <option value="TN">Tunisia</option>
+                         <option value="TR">Turkey</option>
+                         <option value="TM">Turkmenistan</option>
+                         <option value="TC">Turks and Caicos Islands</option>
+                         <option value="TV">Tuvalu</option>
+                         <option value="UG">Uganda</option>
+                         <option value="UA">Ukraine</option>
+                         <option value="AE">United Arab Emirates</option>
+                         <option value="GB">United Kingdom</option>
+                         <option value="US">
+                            United States
+                         </option>
+                         <option value="UM">United States Minor Outlying Islands</option>
+                         <option value="UY">Uruguay</option>
+                         <option value="UZ">Uzbekistan</option>
+                         <option value="VU">Vanuatu</option>
+                         <option value="VN">Vietnam</option>
+                         <option value="VG">Virgin Islands, British</option>
+                         <option value="VI">Virgin Islands, U.S.</option>
+                         <option value="WF">Wallis and Futuna</option>
+                         <option value="EH">Western Sahara</option>
+                         <option value="ZM">Zambia</option>
+                         <option value="ZW">Zimbabwe</option>
+                      </select>
+                      <span class="custom-select__label text-small">Korea, Republic of (South Korea)</span>
+                   </div>
+                   <span class="select__current-title"></span>
+                </div>
+                <div class="redirect-modal__row select__container">
+                   <label class="form-group__label visually-hidden" for="RedirectCurrency">
+                   Currency
+                   </label>
+                   <div class="custom-select__wrapper">
+                      <select id="RedirectCurrency" class="redirect-modal__currency select--center js-redirect-select custom-select__select" name="currency" style="background-image: url(../assets/icon-small-arrow-down.svg);" js-redirect-modal="currencySelector" tabindex="-1">
+                         <option value="KRW">
+                            KRW
+                         </option>
+                      </select>
+                      <span class="custom-select__label text-small">
+                      KRW
+                      </span>
+                   </div>
+                   <span class="select__current-title"></span>
+                </div>
+                <button class="button button--primary button--large button--block is-active" data-store-url="https://int.toteme-studio.com/" js-redirect-modal="updateButton" tabindex="-1">
+                Confirm settings
+                </button>
+             </form>
+          </div>
+          <div class="redirect-modal__footer" js-redirect-modal="footer">
+             <p js-redirect-modal="footerText">You are on the International site shopping in EUR. Please confirm or change your store preference above.</p>
+          </div>
+       </div>
+    </div>
+ </div> 
+      <!--- // 10. 모달리스 팝업 -->
+      
+      <script src="../js/jquery-1.11.3.min.js"></script>
+      <!---script src="/js/toteme.custom.js"></script--->
+      
+      <script src="../js/swiper-bundle.min.js"></script>
+      <script src="../js/image-zoom.min.js"></script>
+      <script src='../js/toteme.layout.js'></script>
+
+   </body>
+</html>
