@@ -9,7 +9,7 @@ const axios = require('axios');
 // 라이브 서버 설정
 const liveServer = livereload.createServer({
     exts: ['html', 'css', 'ejs','js'],
-    debug: true
+    debug: false
 });
 
 liveServer.watch(__dirname);
@@ -176,15 +176,15 @@ Terms & Conditions
 
 Contact
 */
-pageData.forEach((data)=>{
+console.log("[ 빌드 시작! ]");
+console.log("[ 페이지를 연결을 시작합니다 ]");
+pageData.forEach((data,idx)=>{
   const {url, pageurl, isMain, isSearchPage} = data;
-  console.log(url, pageurl);
 
   
   if(isSearchPage){
     app.get(url, (req, res) => {
       res.render('./index_free',{targetPath : pageurl, pageList : pageData},(err,html) => {
-        console.log("search url : "+pageurl);
         res.send(html);
       });
       
@@ -192,7 +192,6 @@ pageData.forEach((data)=>{
   }else{
     app.get(url, (req, res) => {
       res.render('./index',{targetPath : pageurl, pageList : pageData},(err,html) => {
-        console.log(pageurl);
   
         if(isMain){
         //  console.log("isMain",__dirname + "/index.html");
@@ -207,61 +206,132 @@ pageData.forEach((data)=>{
       });
       
     })
+
+
+    app.get(url.replace(".html","-sis.html"), (req, res) => {
+      res.render('./sis_page',{targetPath : pageurl, pageList : pageData},(err,html) => {
   
+        if(isMain){
+        //  console.log("isMain",__dirname + "/index.html");
+        //  fs.writeFileSync(__dirname + "/index.html",html)
+          fs.writeFileSync(__dirname + "/dist_sis/"+ pageurl+".html",html)
+        }else{
+          fs.writeFileSync(__dirname + "/dist_sis/"+ pageurl+".html",html)
+  
+        }
+        
+        res.send(html);
+      });
+      
+    })
+
+
+    app.get(url.replace(".html","-sis-real.html"), (req, res) => {
+      res.render('./index_sis',{targetPath : pageurl.replace(".html","-sis.html"), pageList : pageData},(err,html) => {
+  
+        if(isMain){
+        //  console.log("isMain",__dirname + "/index.html");
+        //  fs.writeFileSync(__dirname + "/index.html",html)
+          fs.writeFileSync(__dirname + "/dist_sis_real/"+ pageurl+".html",html)
+        }else{
+          fs.writeFileSync(__dirname + "/dist_sis_real/"+ pageurl+".html",html)
+  
+        }
+        res.send(html);
+      });
+      
+    })
+
   }
-  console.log(path.join(__dirname, pageurl));
+    
+  console.log("Express와 페이지를 연결하고 있습니다! - "+(idx+1) + "/"+ pageData.length)
+})
 
+const dataList = [
+  {source:"/public/css",destination:"/dist/css"},
+  {source:"/public/js", destination:"/dist/js"},
+  {source:"/public/font", destination:"/dist/font"},
+  {source:"/public/assets", destination:"/dist/assets"},
+  {source:"/public/css",destination:"/dist_sis/css"},
+  {source:"/public/js", destination:"/dist_sis/js"},
+  {source:"/public/font", destination:"/dist_sis/font"},
+  {source:"/public/assets", destination:"/dist_sis/assets"},
+  {source:"/public/css",destination:"/dist_sis_real/css"},
+  {source:"/public/js", destination:"/dist_sis_real/js"},
+  {source:"/public/font", destination:"/dist_sis_real/font"},
+  {source:"/public/assets", destination:"/dist_sis_real/assets"},
+]
+function copyFile(idx){
+  if(idx === 0){
+    console.log("\n[ 파일 옮기기 프로세스 시작 ]");
+  }
+  return new Promise((resolve,reject) => {
+  
+    fse.copy(__dirname + dataList[idx].source, __dirname + dataList[idx].destination, (err) => {
+      if (err) {
+        console.error(err);
+        console.log("\n[ ERROR : 빌드를 재시도 해주세요. ]");
+        process.exit();
+        reject();
+      } else {
+        setTimeout(()=>{
+          console.log(`${dataList[idx].source.padEnd(18)} 에서 ${dataList[idx].destination.padEnd(18)}로 파일을 옮겼습니다! - ${idx + 1} / ${dataList.length}`); 
+          resolve(++idx);
+        },1000)
+      }
+    });
 
+  })
+}
+
+function copyProcess(idx){
+  return copyFile(idx); 
+}
+
+copyFile(0)
+.then((idx)=>{ return copyProcess(idx)}, ()=> {process.exit(); })
+.then((idx)=>{ return copyProcess(idx)}, ()=> {process.exit(); })
+.then((idx)=>{ return copyProcess(idx)}, ()=> {process.exit(); })
+.then((idx)=>{ return copyProcess(idx)}, ()=> {process.exit(); })
+.then((idx)=>{ return copyProcess(idx)}, ()=> {process.exit(); })
+.then((idx)=>{ return copyProcess(idx)}, ()=> {process.exit(); })
+.then((idx)=>{ return copyProcess(idx)}, ()=> {process.exit(); })
+.then((idx)=>{ return copyProcess(idx)}, ()=> {process.exit(); })
+.then((idx)=>{ return copyProcess(idx)}, ()=> {process.exit(); })
+.then((idx)=>{ return copyProcess(idx)}, ()=> {process.exit(); })
+.then((idx)=>{ return copyProcess(idx)}, ()=> {process.exit(); })
+.then(()=>{
+  console.log("\n[ 파일 초기화 프로세스 시작 ]");
+  pageData.forEach( async (data,idx)=>{ 
+    const {url, pageurl, isMain} = data;
+    try{
+      await axios.get("http://127.0.0.1:3000"+url);
+    }catch(e){
+      console.error(`${e.message} - ${url}`);
+    }
+    try{
+      await axios.get("http://127.0.0.1:3000"+url.replace(".html","-sis.html"));
+    }catch(e){
+      console.error(`${e.message} - ${url.replace(".html","-sis.html")}`);
+    }
+    
+    try{
+      await axios.get("http://127.0.0.1:3000"+url.replace(".html","-sis-real.html"));
+    }catch(e){
+      console.error(`${e.message} - ${url.replace(".html","-sis.html")}`);
+    }
+    console.log("접속을 진행합니다! - "+(idx+1) + "/"+ pageData.length)
+
+    if(pageData.length == idx+1){  
+      console.log("\n[ 빌드가 완료되었습니다! ]");
+      console.log("\n[ 라이브 서버가 가동이 되었습니다! ]\n");
+      liveServer.config.debug = true
+    }
+  })
+  
 })
 
 
-fse.copy(__dirname + "/public/css", __dirname + "/dist/css", function (err) {
-  if (err) {
-    console.error(err);
-  } else {
-    console.log("success!");
-  }
-});
-
-fse.copy(__dirname + "/public/js", __dirname + "/dist/js", function (err) {
-  if (err) {
-    console.error(err);
-  } else {
-    console.log("success!");
-  }
-});
-
-fse.copy(__dirname + "/public/font", __dirname + "/dist/font", function (err) {
-  if (err) {
-    console.error(err);
-  } else {
-    console.log("success!");
-  }
-});
-
-fse.copy(__dirname + "/public/assets", __dirname + "/dist/assets", function (err) {
-  if (err) {
-    console.error(err);
-  } else {
-    console.log("success!");
-  }
-});
-
-
 server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+//  console.log(`Server running at http://${hostname}:${port}/`);
 });
-
-setTimeout(function(){
-
-
-  pageData.forEach((data)=>{ 
-      const {url, pageurl, isMain} = data;
-      console.log("axious : "+"http://127.0.0.1:3000"+url);
-      axios.get("http://127.0.0.1:3000"+url).then((res)=>{
-        console.log("axious : "+url);
-      })
-  })
-
-
-},1000);

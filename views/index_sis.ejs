@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html class="esc-bind" lang="ko">
+   <head>
+    <title>Totême - Official online store</title>
+      <meta charset="utf-8">
+      <meta content="IE=edge" http-equiv="X-UA-Compatible">
+      <meta content="width=device-width,initial-scale=1" name="viewport">
+      <!--link href="/css/main_etc.css" rel="stylesheet"-->
+      <link rel="stylesheet" href="../css/image-zoom.css">
+      <link rel="stylesheet" href="../css/boost-pfs-init.scss.css">
+      <link rel="stylesheet" href="../css/boost-pfs-general.scss.css">
+      <link rel="stylesheet" href="../css/v2-ltr-2021-01-25-1dd58b0ad54342536b141709174f812a-5607.css" media="all">
+      <link type="text/css" href="../css/layout.checkout.css" rel="stylesheet">
+      
+      <link href="../css/main_etc.css" rel="stylesheet">
+      
+      <link type="text/css" href="../css/layout.theme.css" rel="stylesheet">
+      <link rel="prefetch"  href="../css/layout.checkout.css" as="style">
+      <link rel="prefetch"  href="../css/layout.gift_card.css" as="style">
+      <link rel="prefetch"  href="../css/layout.password.css" as="style">
+      <link rel="prefetch"  href="../css/layout.styleguide.css" as="style">
+      <link href="../css/flag-icon.min.css" rel="stylesheet" type="text/css" media="all">
+      <link href="../css/appmate-wishlist-king.scss.css" rel="stylesheet">
+
+      <!--link href="/css/toteme.custom.css" rel="stylesheet"-->
+      <link href="../css/sis_toteme_pc.css" rel="stylesheet">
+      <link href="../css/toteme.custom.css" rel="stylesheet">
+      <link href="../css/toteme.custom.sis.pc-outter.css" rel="stylesheet">
+
+      <style>
+
+         header.site-header-wrapper .site-nav__link{border:0px; background-color: transparent;}
+      </style>
+   </head>
+
+   <!--  has-announcement-bar --header-height:51px; / -->
+   <body id="toteme-official-online-store" class="template-index" data-cy="body" style='padding-top:51px;'>
+      
+
+
+      
+	<div id="sis_wrap">
+		
+
+      
+      <!-- PC 헤더 -->
+      <%- include ("./menu/pc/index_sis_pc.ejs") %>
+      <!-- // PC 헤더 -->
+
+      <!-- MO 헤더 -->                 
+      <%- include ("./menu/mo/index.ejs") %> 
+      <!-- // MO 헤더 -->
+      
+      
+      <main id="MainContent" class="main-content critical-clear">
+         <!-- BEGIN content_for_index -->
+         <!--  include ("./pages/00_main/index.ejs") BEGIN content_for_index -->
+         <iframe src='../../dist_sis/<%= targetPath; %>.html' frameborder="no" scrolling="no" marginheight="0" marginwidth="0" style="height:2000px;"></iframe>
+         <!-- END content_for_index -->
+      </main>
+	</div>
+   
+      <!-- Footer -->
+      <%- include ("./footer/index_sis_pc.ejs") %> 
+      <!-- // Footer -->
+
+      <!-- 하단 쿠키배너 -->
+      <%- include ("./etc/cookie-banner.ejs") %> 
+      <!-- // 하단 쿠키배너 -->
+
+      <!--- 10. 모달 팝업 -->
+      <%- include ("./etc/modal-popup.ejs") %> 
+      <!--- // 10. 모달리스 팝업 -->
+
+      <!--- 11. 위시 리스트 -->
+      <%- include ("./etc/modal-popup.ejs") %> 
+      <!-- // 11. 위시리스트 -->
+
+      
+      <script src="../js/jquery-1.11.3.min.js"></script>
+      <!---script src="/js/toteme.custom.js"></script--->
+      
+      <script src="../js/swiper-bundle.min.js"></script>
+      <script src="../js/image-zoom.min.js"></script>
+      <script src='../js/toteme.layout.js'></script>
+
+   </body>
+</html>
