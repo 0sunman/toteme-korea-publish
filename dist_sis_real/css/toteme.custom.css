@@ -266,6 +266,7 @@ body.overflow-hidden {overflow: hidden;}
 /* //테이블 */
 
 /* 상품 */
+.card-grid .card-grid__item--large .product-card__footer{position: absolute;}
 .boost-pfs-container-default .boost-pfs-filter-refine-by-wrapper-h .boost-pfs-filter-clear-all.boost-pfs-filter-clear-all{display: none;}
 @media screen and (min-width: 62em){
     .boost-pfs-container-default .boost-pfs-filter-refine-by-wrapper-h .boost-pfs-filter-clear-all.boost-pfs-filter-clear-all.is-active{display: inline-block;}
@@ -402,6 +403,13 @@ body.overflow-hidden {overflow: hidden;}
 .summary_content{margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #171616;}
 .summary_text_block p{line-height: 23px;}
 .product-table:not(.stock-problem-table) .product__quantity .visually-hidden, .checkout .order-summary__section--discount .field__input-btn .visually-hidden-on-mobile{overflow: visible;}
+.checkout .order-summary__section--discount .field__input-btn{position: relative;}
+.checkout .order-summary__section--discount .field__input-btn .loader{display: none; position: absolute; top: calc(50% - 8px); left: calc(50% - 8px); width: 16px; height: 16px;}
+.checkout .order-summary__section--discount .field__input-btn .loader .smiley-spin svg{display: block;}
+.checkout .order-summary__section--discount .field__input-btn.is-load .loader{display: block;}
+.checkout .order-summary__section--discount .field__input-btn.is-load span{visibility: hidden;}
+.checkout .order-summary__section--discount .field__input-btn.btn--disabled svg{color: #171616;}
+.checkout .order-summary__section--discount .field__input-btn svg{color: #fff;}
 .discount-trigger{display: block; max-width: 500px; margin: 0 auto; padding-left: 0; padding-right: 0;}
 .checkout .order-summary__section--discount{text-align: center; padding-left: 52px; padding-right: 52px;}
 .deposit_attr_box{display: table; width: 100%; max-width: 500px; font-size: 15px; text-align: left; margin: 0 auto;}
@@ -621,7 +629,7 @@ li > a.navlist__link.text-link{padding-left:15px}
 .privacy_agreement .input-block.form-group__footer{ padding-top: 0px; margin-top: 0px; text-align: left; justify-content: left; margin-bottom: 30px;}
 .privacy_agreement .payment_tit1{ font-weight: bold; }
 .privacy_agreement .verify_container{ max-width: 100%; }
-.privacy_agreement .modal__body{ margin-bottom:30px; }
+.privacy_agreement .modal__body{ margin-bottom:30px; display: block;}
 /* // 4번 개인정보보호 */
 
 
@@ -690,6 +698,9 @@ li > a.navlist__link.text-link{padding-left:15px}
 .mypage_each2 .txt_btn_box>div{display: table-cell; vertical-align: middle; text-align: right;}
 .mypage_each2 .txt_btn_box .button{display: inline-block; font-size: 13px; padding: 0 18px; line-height: 21px;}
 .mypage_each2 .txt_btn_box+p{margin-top: 15px;}
+.mypage_each2 .txt_btn_box{margin-bottom: 15px;}
+.mypage_toggle_menu.mypage_order_menu .mypage_each2 .txt_btn_box{margin-bottom: 0;}
+
 
 .dot_list{padding-left: 0; margin-top: 15px;}
 .dot_list>li{margin-bottom: 5px; padding-left: 12px; word-break: keep-all; position: relative;}
@@ -914,6 +925,9 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 }
 .product__description__variant:after{content: ''; display: block; clear: both;}
 .btn_size_change{float: right; padding: 0 18px;}
+.btn_size_change .loader{display: none;}
+.btn_size_change.is-load{color: transparent; position: relative;}
+.btn_size_change.is-load .loader{display: block; position: absolute; top: calc(50% - 8px); left: calc(50% - 8px);}
 
 /* ISP 화면 */
 .checkout_isp_wrap{max-width: 1000px; margin: auto;}
@@ -952,7 +966,6 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
     .login_join .section{ margin:34px 60px; }
 }
 .login_join .text.section{ margin:20px 15px;}
-.login_join form div{ margin-bottom: 20px;}
                            
 .login_join .sns-buttons.defaultblock > div{display:table; width:100%; max-width: 500px; margin:0 auto; margin-bottom:10px}
 .login_join .sns-buttons.defaultblock > div > label {display: table-cell; width:50%; text-align: left;}
@@ -1181,7 +1194,8 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
  .error_page .template-404__container{width: calc(100% + 1px);}
  .error_page .section{margin: 34px 15px;}
  .error_page .template-404__column.template-404__column--content{padding-right: 1.25rem;}
- .error_page .text{word-break: keep-all;}
+ .error_page .text{margin-bottom: 1.5rem; word-break: keep-all;}
+ .error_page ul{padding: 0;}
 
 /* 미니 장바구니 */
 a[class*=drawer__close], button[class*=drawer__close], .search-bar__close{margin-right: 1rem; text-align: right;}
