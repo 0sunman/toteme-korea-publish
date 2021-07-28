@@ -1046,6 +1046,7 @@ var AnnouncementBar = function(option){
 	this.effectIdx = 0;
 	this.effectTargets = this.announcementTexts.length;
 	this.doEnable();
+    
 	document.querySelector(".announcement-bar__close").addEventListener("click",(function(){
 		this.doDisable();
 	}).bind(this))
@@ -1058,6 +1059,7 @@ AnnouncementBar.prototype.doEnable = function(){
 	}
 
 	if(this.timer == -1){
+        this.doEffect.bind(this)()
 		this.timer = setInterval(this.doEffect.bind(this), this.timming)
 	}
 }
@@ -1084,5 +1086,5 @@ AnnouncementBar.prototype.doEffect = function(flag){
 
 }
 
-var announcement = new AnnouncementBar({timming:3000});
+var announcement = new AnnouncementBar();
 /* // 상단 GNB 공지바 */
