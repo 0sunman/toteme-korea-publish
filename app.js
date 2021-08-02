@@ -5,6 +5,39 @@ const fs = require('fs');
 var fse = require('fs-extra');
 const axios = require('axios');
 
+const ora = require('ora');
+
+var ora_message_pageConnect = ora({
+  text:'"페이지를 연결 중 입니다.',
+  spinner:{
+    interval:50,
+    frames:['⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏']
+  }
+});
+var ora_message_file = ora({
+  text:'파일 복사 작업 진행중',
+  spinner:{
+    interval:50,
+    frames:['⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏']
+  }
+});
+
+var ora_message_init = ora({
+  text:'파일 초기화 진행중',
+  spinner:{
+    interval:50,
+    frames:['⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏']
+  }
+});
+
+var ora_message_live = ora({
+  text:'라이브 서버 동작중',
+  spinner:{
+    interval:50,
+    frames:['⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏']
+  }
+});
+
 
 // 라이브 서버 설정
 const liveServer = livereload.createServer({
@@ -177,7 +210,8 @@ Terms & Conditions
 Contact
 */
 console.log("[ 빌드 시작! ]");
-console.log("[ 페이지를 연결을 시작합니다 ]");
+
+ora_message_pageConnect.start();
 pageData.forEach((data,idx)=>{
   const {url, pageurl, isMain, isSearchPage} = data;
 
@@ -243,9 +277,12 @@ pageData.forEach((data,idx)=>{
     })
 
   }
-    
-  console.log("Express와 페이지를 연결하고 있습니다! - "+(idx+1) + "/"+ pageData.length)
 })
+ora_message_pageConnect.stopAndPersist({symbol:"*",text:"페이지 연결 완료!"});
+
+
+
+ora_message_file.start();
 
 const dataList = [
   {source:"/public/css",destination:"/dist/css"},
@@ -263,19 +300,19 @@ const dataList = [
 ]
 function copyFile(idx){
   if(idx === 0){
-    console.log("\n[ 파일 옮기기 프로세스 시작 ]");
+    //console.log("\n[ 파일 옮기기 프로세스 시작 ]");
   }
   return new Promise((resolve,reject) => {
   
     fse.copy(__dirname + dataList[idx].source, __dirname + dataList[idx].destination, (err) => {
       if (err) {
-        console.error(err);
+        console.error("\n"+err);
         console.log("\n[ ERROR : 빌드를 재시도 해주세요. ]");
         process.exit();
         reject();
       } else {
         setTimeout(()=>{
-          console.log(`${dataList[idx].source.padEnd(18)} 에서 ${dataList[idx].destination.padEnd(18)}로 파일을 옮겼습니다! - ${idx + 1} / ${dataList.length}`); 
+          //console.log(`${dataList[idx].source.padEnd(18)} 에서 ${dataList[idx].destination.padEnd(18)}로 파일을 옮겼습니다! - ${idx + 1} / ${dataList.length}`); 
           resolve(++idx);
         },1000)
       }
@@ -284,9 +321,12 @@ function copyFile(idx){
   })
 }
 
+
 function copyProcess(idx){
   return copyFile(idx); 
 }
+
+var file_init_error=false
 
 copyFile(0)
 .then((idx)=>{ return copyProcess(idx)}, ()=> {process.exit(); })
@@ -301,31 +341,47 @@ copyFile(0)
 .then((idx)=>{ return copyProcess(idx)}, ()=> {process.exit(); })
 .then((idx)=>{ return copyProcess(idx)}, ()=> {process.exit(); })
 .then(()=>{
-  console.log("\n[ 파일 초기화 프로세스 시작 ]");
+  ora_message_file.stopAndPersist({symbol:"*",text:"파일 복사 완료!"});
+  ora_message_init.start();
   pageData.forEach( async (data,idx)=>{ 
     const {url, pageurl, isMain} = data;
     try{
       await axios.get("http://127.0.0.1:3000"+url);
     }catch(e){
-      console.error(`${e.message} - ${url}`);
+    //  console.error(`${e.message} - ${url}`);
+      if(!file_init_error) {
+        console.log("\n");
+        file_init_error = true;
+      }
+      console.error("====>"+`${e.message} - ${url.replace(".html","-sis.html")}`);
     }
     try{
       await axios.get("http://127.0.0.1:3000"+url.replace(".html","-sis.html"));
     }catch(e){
-      console.error(`${e.message} - ${url.replace(".html","-sis.html")}`);
+    //  console.error(`${e.message} - ${url.replace(".html","-sis.html")}`);
+      if(!file_init_error){ 
+        console.log("\n");
+        file_init_error = true;
+      }
+      console.error("====>"+`${e.message} - ${url.replace(".html","-sis.html")}`);
     }
     
     try{
       await axios.get("http://127.0.0.1:3000"+url.replace(".html","-sis-real.html"));
     }catch(e){
-      console.error(`${e.message} - ${url.replace(".html","-sis.html")}`);
+      if(!file_init_error){ 
+        console.log("\n");
+        file_init_error = true;
+      }
+      console.error("====>"+`${e.message} - ${url.replace(".html","-sis.html")}`);
     }
-    console.log("접속을 진행합니다! - "+(idx+1) + "/"+ pageData.length)
+    //console.log("접속을 진행합니다! - "+(idx+1) + "/"+ pageData.length)
 
     if(pageData.length == idx+1){  
-      console.log("\n[ 빌드가 완료되었습니다! ]");
-      console.log("\n[ 라이브 서버가 가동이 되었습니다! ]\n");
-      liveServer.config.debug = true
+      
+      ora_message_init.stopAndPersist({symbol:"*",text:"파일 초기화 완료!"});
+      ora_message_live.start();
+    //  liveServer.config.debug = true
     }
   })
   
@@ -335,3 +391,4 @@ copyFile(0)
 server.listen(port, hostname, () => {
 //  console.log(`Server running at http://${hostname}:${port}/`);
 });
+
