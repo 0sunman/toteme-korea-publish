@@ -16,6 +16,7 @@
     "fs-extra": "^10.0.0",
     "livereload": "^0.9.3",
     "logger": "^0.0.1",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "ora": "^5.4.1"
   }
 }
