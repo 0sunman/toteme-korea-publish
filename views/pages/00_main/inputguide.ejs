@@ -396,7 +396,7 @@
             .country-modal .modal__card .section{ width:100%;}
             .country-modal .modal__footer p{text-align: center; padding: 22px;}
        </style>
-       <div id="country-modal" class="modal modal--light country-modal common-modal" role="dialog" tabindex="-1">
+       <div id="country-modal" class="modal modal--light country-modal country-popup common-modal" role="dialog" tabindex="-1">
          <div class="modal__overlay" tabindex="-1">
             <div class="verify-modal">
                <div class="modal__card">
@@ -660,6 +660,12 @@
                            </select>
                         </div>
                         
+                        <div class="input-block">
+                           <select class="toteme-select-style toteme-button-style">
+                                 <option value="krw">KR/KRW</option>
+                           </select>
+                        </div>
+
                         <div class="button-block loading-wrap">
                            <input class="button button--primary button--block button--large" type="submit" value="확인">
                            <div class="loader">
