@@ -4,7 +4,7 @@ const path = require('path');
 const fs = require('fs');
 var fse = require('fs-extra');
 const axios = require('axios');
-
+const chalk = require('chalk');
 const ora = require('ora');
 
 var ora_message_pageConnect = ora({
@@ -209,7 +209,30 @@ Terms & Conditions
 
 Contact
 */
-console.log("[ 빌드 시작! ]");
+console.log(`\n${chalk.rgb(0,156,125)('■■■■■■■■■')}${chalk.rgb(0,0,0)('■■■')}${chalk.rgb(229,157,0)('■■■■■')}`);
+console.log(`${chalk.rgb(0,156,125)('■■■■■■■■■')}${chalk.rgb(0,0,0)('■■■')}${chalk.rgb(229,157,0)('■■■■■')}`);
+console.log(`${chalk.rgb(0,156,125)('■')}` 
++ `${chalk.rgb(255,255,255)('H ')}`
++ `${chalk.rgb(0,156,125)('■')}`
++ `${chalk.rgb(255,255,255)('Y ')}`
++ `${chalk.rgb(0,156,125)('■')}`
++ `${chalk.rgb(255,255,255)('U ')}`
++ `${chalk.rgb(0,156,125)('■')}`
++ `${chalk.rgb(255,255,255)('N ')}`
++ `${chalk.rgb(0,156,125)('■')}`
++ `${chalk.rgb(0,0,0)('■')}`
++ `${chalk.rgb(255,255,255)('D ')}`
++ `${chalk.rgb(0,0,0)('■')}`
++ `${chalk.rgb(229,157,0)('■')}`
++ `${chalk.rgb(255,255,255)('A ')}`
++ `${chalk.rgb(229,157,0)('■')}`
++ `${chalk.rgb(255,255,255)('I ')}`
++ `${chalk.rgb(229,157,0)('■')}`);
+console.log(`${chalk.rgb(0,156,125)('■■■■■■■■■')}${chalk.rgb(0,0,0)('■■■')}${chalk.rgb(229,157,0)('■■■■■')}`);
+console.log(`${chalk.rgb(0,156,125)('■■■■■■■■■')}${chalk.rgb(0,0,0)('■■■')}${chalk.rgb(229,157,0)('■■■■■')}`);
+console.log('Publishing Building System For Toteme Arket Ver 1.0');
+console.log('Create By O2O기획팀 UX파트\n');
+console.log('[ 빌드 시작! ]');
 
 ora_message_pageConnect.start();
 pageData.forEach((data,idx)=>{
