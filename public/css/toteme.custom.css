@@ -2808,3 +2808,6 @@ html.js-search-active{overflow:hidden}
    @media (max-width:787px){
     #country-modal .modal__card{transform: translateY(0px); bottom: 0; }
    }
+
+   
+   .tax-receipt-iframe{ display: block; max-width: 572px; width: 100%; height: 750px; margin: 0 auto; }
