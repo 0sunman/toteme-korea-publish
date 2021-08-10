@@ -944,6 +944,9 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 .payment_loading_box{display: flex; padding: 15px; height: 100%; justify-content: center; align-items: center; flex-direction: column;}
 .payment_loading_box .loader.checkout_loading{margin-bottom: 0; text-align: center;}
 
+/* 모바일 메뉴 클릭 시 content 영역 click 막기 */
+body.drawer--open--blur .main-content{pointer-events: none; touch-action: none;}
+
 
 /* 
     2-0-0 로그인 & 회원가입 공통 
