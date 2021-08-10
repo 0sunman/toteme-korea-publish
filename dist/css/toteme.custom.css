@@ -945,8 +945,7 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 .payment_loading_box .loader.checkout_loading{margin-bottom: 0; text-align: center;}
 
 /* 모바일 메뉴 클릭 시 content 영역 click 막기 */
-body.drawer--open--blur .main-content{pointer-events: none;}
-
+.drawer--open--blur #shopify-section-menu-drawer{width: 100%; height: 100%; position: fixed; z-index: 2;}
 
 /* 
     2-0-0 로그인 & 회원가입 공통 
