@@ -301,13 +301,13 @@ body.overflow-hidden {overflow: hidden;}
 /* 주문 */
 .product__description__name{display: block; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
 .checkout__content.content{height: 100%;}
-.checkout__header{padding: 9px 15px;}
+.checkout__header{padding: 11px 15px;}
 .checkout .input-block:last-of-type{margin-bottom: 0;}
 .comment.error{max-width: 500px; margin: 3px auto 0; text-align: left; color: #ff0000;}
 .checkout .field__input{padding: 0 11px;}
 .email_form .comment, .phone_form .comment, .addr_form .comment{display: table-caption; caption-side: bottom;}
 .checkout_header{padding: 15px; border-bottom: 1px solid #171616;}
-.checkout_breadcrumb{padding: 0;}
+.checkout_breadcrumb{padding: 2px;}
 .checkout_breadcrumb:after{content: ''; display: block; clear: both;}
 .checkout_breadcrumb>li{float: left; padding-right: 17px; margin-right: 9px; font-size: 13px; line-height: 17px; color: #171616; opacity: 0.5; position: relative;}
 .checkout_breadcrumb>li:after{content: ''; display: block; width: 8px; height: 8px; background-image: url(../assets/icon-small-arrow-down.svg); transform: rotate(-90deg); position: absolute; top: 4px; right: 0;}
@@ -411,7 +411,9 @@ body.overflow-hidden {overflow: hidden;}
 .checkout .order-summary__section--discount .field__input-btn.btn--disabled svg{color: #171616;}
 .checkout .order-summary__section--discount .field__input-btn svg{color: #fff;}
 .discount-trigger{display: block; max-width: 500px; margin: 0 auto; padding-left: 0; padding-right: 0;}
-.checkout .order-summary__section--discount{text-align: center; padding-left: 52px; padding-right: 52px;}
+.checkout .order-summary__section.order-summary__section--discount{text-align: center; padding-bottom: 0; padding-left: 52px; padding-right: 52px; border-bottom-width: 0;}
+.checkout .order-summary__section--discount+.order-summary__section--discount{padding-top: 0; padding-bottom: 1.5rem; border-bottom-width: 1px;}
+.checkout .order-summary__section--discount+.order-summary__section--discount .discount-trigger{padding-top: 13px;}
 .deposit_attr_box{display: table; width: 100%; max-width: 500px; font-size: 15px; text-align: left; margin: 0 auto;}
 .deposit_attr_box>div{display: table-cell;}
 .deposit_attr_box>div:last-child{text-align: right;}
