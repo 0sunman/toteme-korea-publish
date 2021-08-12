@@ -119,6 +119,7 @@ const pageData = [
   {"type":"join", "pid":"T-LJ-020",   "state":"DONE" , "completedate":"2021-06-30", "url" : "/02_login_join/T-LJ-020.ejs.html",   "pageurl" : "02_login_join/T-LJ-020.ejs",   "title": "T-LJ-020. Create my account_Account created", "title2":"회원가입 - 가입완료"},
 
   {"type":"product", "pid":"T-PD-001", "state":"DONE" , "completedate":"2021-07-02", "url" : "/03_product/T-PD-001.ejs.html", "pageurl" : "03_product/T-PD-001.ejs", "title":"T-PD-001. Product Display", "title2":"상품 리스트"},
+  {"type":"product", "pid":"T-PD-002", "state":"DONE" , "completedate":"2021-08-12", "url" : "/03_product/T-PD-002.ejs.html", "pageurl" : "03_product/T-PD-002.ejs", "title":"T-PD-002. Product Display - no subTitle", "title2":"상품 리스트 - 서브 타이틀 없는 경우"},
   {"type":"product", "pid":"T-PD-006", "state":"DONE" , "completedate":"2021-07-02", "url" : "/03_product/T-PD-006.ejs.html", "pageurl" : "03_product/T-PD-006.ejs", "title":"T-PD-006. PDP", "title2":"상품 상세"},
   {"type":"product", "pid":"T-PD-006-1", "state":"DONE" , "completedate":"2021-07-02", "url" : "/03_product/T-PD-006-1.ejs.html", "pageurl" : "03_product/T-PD-006-1.ejs", "title":"T-PD-006-1. Size guide (Clothes)", "title2":"사이즈 가이드 - 의류"},
   {"type":"product", "pid":"T-PD-006-2", "state":"DONE" , "completedate":"2021-07-02", "url" : "/03_product/T-PD-006-2.ejs.html", "pageurl" : "03_product/T-PD-006-2.ejs", "title":"T-PD-006-2. Size guide (Denim - Twisted seam)", "title2":"사이즈 가이드 - Twisted seam 데님"},
