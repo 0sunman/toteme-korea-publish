@@ -2838,3 +2838,6 @@ html.js-search-active{overflow:hidden}
   .join_page #join_pagejoin_page .section { margin:34px 15px;}
 }
 
+
+.progressbar ul li p span.text{word-break:keep-all;}
+.progressbar ul li:last-child p span.text{text-align: left;transform:translateX(36%);text-align:center}
