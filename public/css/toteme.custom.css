@@ -2822,3 +2822,6 @@ html.js-search-active{overflow:hidden}
 #menuDrawer > div > div.menu-drawer__body ul.is-active > li button ~ ul{margin-left:15px}
 .browser_error_wrap{border: 0;}
 .browser_error_wrap.browser_error_con svg{width: 70px; height: auto; margin-bottom: 30px}
+
+/* 모바일 검색 padding 수정 */
+#Search-site-search{padding: 10px 0;}
