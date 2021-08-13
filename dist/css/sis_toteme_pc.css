@@ -1,5 +1,4 @@
 @charset "utf-8";
-body{position:relative;margin:0;color:#666;font-size:13px;font-weight:400;line-height:1.425;-webkit-font-smoothing:antialiased}
 .en *{font-family:'Helvetica','Arial',sans-serif}
 *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;word-break:break-all}
 :before,:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}

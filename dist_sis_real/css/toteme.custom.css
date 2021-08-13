@@ -2773,6 +2773,8 @@ html.js-search-active{overflow:hidden}
 .login-modal  .section.login_join.login_page { width:100%; }
 .login-modal  .login_join .sns-buttons.defaultblock > div > a.link-text-type span { text-decoration: underline;}
 .login-modal  .login_join .sns-buttons.defaultblock > div > a.link-text-type {display: table-cell; width: 50%;  text-align: left;}
+
+
 .login-modal .modal__body{padding:0px; margin:0px;}
 .login-modal .modal__footer {border-top:1px solid #000}
 .login-modal .modal__footer > p{margin:25px 15px 25px;}
@@ -2825,3 +2827,10 @@ html.js-search-active{overflow:hidden}
 
 /* 모바일 검색 padding 수정 */
 #Search-site-search{padding: 10px 0;}
+
+
+
+.login_join .sns-buttons.defaultblock {max-width: 515px;padding:0px 15px; margin: 0 auto;}
+@media(min-width:768px){
+  .login_join.simple_auth .tab.auth-phone .section{ margin:34px 15px; }
+}
