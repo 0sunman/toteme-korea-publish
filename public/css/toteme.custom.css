@@ -2808,7 +2808,7 @@ html.js-search-active{overflow:hidden}
 
    .receipts.popup-tax-receipts .modal__card{max-width:840px;}
 
-   #loginPup-div{max-width:100%}
+   #loginPup-div{max-width:100%; z-index: 30;}
    #loginPup-div iframe{position: absolute; width: 100%; height: 620px; max-width: 620px}
 
    @media (max-width:787px){
