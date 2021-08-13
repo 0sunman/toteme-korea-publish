@@ -31,6 +31,7 @@ Util.prototype.registerEvent = function(option){
                 }else if( $target.hasClass('site-header__search') ){
                     this.resetSubFunction();
                     $target.addClass("is-active");
+                    $("body").addClass("overflow-hidden");
                     $('.search-bar__input').focus();
                     console.log($("html").attr("class").indexOf("js-search-active"));
                     var htmlAction = ($("html").attr("class").indexOf("js-search-active") > -1) ? "removeClass" : "addClass";
