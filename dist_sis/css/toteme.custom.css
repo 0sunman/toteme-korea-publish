@@ -2825,3 +2825,6 @@ html.js-search-active{overflow:hidden}
 
 /* 모바일 검색 padding 수정 */
 #Search-site-search{padding: 10px 0;}
+
+/* input-valid, input-error 시 패딩 수정 */
+#MainContent .input-valid, #MainContent .input-error{padding-right: 30px;}
