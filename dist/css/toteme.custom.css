@@ -2828,6 +2828,8 @@ html.js-search-active{overflow:hidden}
 /* 모바일 검색 padding 수정 */
 #Search-site-search{padding: 10px 0;}
 
+/* input-valid, input-error 시 패딩 수정 */
+#MainContent .input-valid, #MainContent .input-error{padding-right: 30px;}
 
 
 .login_join .sns-buttons.defaultblock {max-width: 515px;padding:0px 15px; margin: 0 auto;}
