@@ -2835,4 +2835,9 @@ html.js-search-active{overflow:hidden}
 .login_join .sns-buttons.defaultblock {max-width: 515px;padding:0px 15px; margin: 0 auto;}
 @media(min-width:768px){
   .login_join.simple_auth .tab.auth-phone .section{ margin:34px 15px; }
+  .join_page #join_pagejoin_page .section { margin:34px 15px;}
 }
+
+
+.progressbar ul li p span.text{word-break:keep-all}
+.progressbar ul li:last-child p span.text{text-align: left;transform:translateX(36%);text-align:center}
