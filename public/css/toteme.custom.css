@@ -2775,7 +2775,7 @@ html.js-search-active{overflow:hidden}
 .login-modal  .login_join .sns-buttons.defaultblock > div > a.link-text-type {display: table-cell; width: 50%;  text-align: left;}
 .login-modal .modal__body{padding:0px; margin:0px;}
 .login-modal .modal__footer {border-top:1px solid #000}
-.login-modal .modal__footer > p{margin:25px 15px 50px;}
+.login-modal .modal__footer > p{margin:25px 15px 25px;}
 .login-modal  .idoremail.input-block{margin-top:15px}
 .login-modal .modal__footer{margin-top:5px}
 .login-modal .error.comment{padding-left: 0px;}
