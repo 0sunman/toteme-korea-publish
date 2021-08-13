@@ -9,7 +9,6 @@ blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
 table{border-collapse:collapse;border-spacing:0}
 h1,h2,h3,h4,h5,h6{font-weight:400}
 .scrollFixedCss{-webkit-transform:translateZ(0);transform:translateZ(0)}
-body{font-size:13px;color:#666}
 a{color:#333;text-decoration:none;outline:none}
 area{outline:none}
 img{max-width:100%}
