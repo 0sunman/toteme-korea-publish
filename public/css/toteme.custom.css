@@ -864,8 +864,10 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 .receipts.receipt-print-modal .button-block.receipts-templete{margin: 0px auto 10px;}
 .receipt_print_txt{display: table; width: 100%;}
 .receipt_print_txt .left{display: table-cell;}
-.receipt_print_txt .right{display: table-cell; text-align: right;}
+.receipt_print_txt .right{display: table-cell; text-align: right; position: relative;}
 .receipt_print_txt span{display: block;}
+.receipt_print_txt .receipt_stamp1{position: absolute; top: -15px; right: -15px;}
+.receipt_print_txt .receipt_stamp1 img{width: 60px; height: 60px;}
 .receipt_each{margin-bottom: 30px; font-size: 15px;}
 .receipt_tit1{display: block; margin-bottom: 15px; text-align: left;}
 .receipt_each .table_type1 th, .receipt_each .table_type1 td{padding: 14px 10px; font-size: 15px; text-align: center;}
