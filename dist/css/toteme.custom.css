@@ -306,7 +306,7 @@ body.overflow-hidden {overflow: hidden;}
 .comment.error{max-width: 500px; margin: 3px auto 0; text-align: left; color: #ff0000;}
 .checkout .field__input{padding: 0 11px;}
 .email_form .comment, .phone_form .comment, .addr_form .comment{display: table-caption; caption-side: bottom;}
-.checkout_header{padding: 15px; border-bottom: 1px solid #171616;}
+.checkout_header{padding: 16.5px; border-bottom: 1px solid #171616;}
 .checkout_breadcrumb{padding: 2px;}
 .checkout_breadcrumb:after{content: ''; display: block; clear: both;}
 .checkout_breadcrumb>li{float: left; padding-right: 17px; margin-right: 9px; font-size: 13px; line-height: 17px; color: #171616; opacity: 0.5; position: relative;}
@@ -2825,7 +2825,7 @@ html.js-search-active{overflow:hidden}
 /* 2021-08-05 15px 메뉴 레벨링 등차수열의 원리 */
 #menuDrawer > div > div.menu-drawer__body ul.is-active > li button ~ ul{margin-left:15px}
 .browser_error_wrap{border: 0;}
-.browser_error_wrap.browser_error_con svg{width: 70px; height: auto; margin-bottom: 30px}
+.browser_error_wrap .browser_error_con svg{width: 70px; height: auto; margin-bottom: 30px}
 
 /* 모바일 검색 padding 수정 */
 #Search-site-search{padding: 10px 0;}
@@ -2843,3 +2843,11 @@ html.js-search-active{overflow:hidden}
 
 .progressbar ul li p span.text{word-break:keep-all;}
 .progressbar ul li:last-child p span.text{text-align: left;transform:translateX(36%);text-align:center}
+
+
+#withdrawal-modal .mypage_each > p{ text-align: center; max-width: 300px; margin: 0 auto;}
+
+#withdrawal-modal .mypage_each > p:nth-child(n+1){ margin-top: 30px; text-align: center;}
+#withdrawal-modal .withdrawal_list{max-width: 300px; margin: 0 auto;}
+#withdrawal-modal .withdrawal_list>li span:first-child{ text-align: left; width: 150px; padding-left: 30px;}
+#withdrawal-modal .withdrawal_list>li span { width: 150px; text-align: right; padding-right: 30px;}
