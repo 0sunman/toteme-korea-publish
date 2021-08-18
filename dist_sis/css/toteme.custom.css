@@ -1222,6 +1222,7 @@ a[class*=drawer__close], button[class*=drawer__close], .search-bar__close{margin
 .drawer{--header-height: 51px;}
 .template-wishlist button.wk-button-wishlist-page, .wishlist-drawer__list button.wk-button-wishlist-page{opacity: 1;}
 .template-wishlist button.wk-button-wishlist-page .wk-icon svg path, .wishlist-drawer__list button.wk-button-wishlist-page .wk-icon svg path{fill: currentColor; stroke: none;}
+.template-wishlist .wk-remove-item{width: 24px; align-self: flex-end;}
 @media (min-width: 62em){
     .wishlist-drawer__list button.wk-remove-item{right: 1rem; opacity: .5;}
     .cart-drawer .ajax-cart__remove{right: 6%;}
