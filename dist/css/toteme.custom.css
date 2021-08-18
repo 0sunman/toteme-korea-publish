@@ -19,7 +19,8 @@ body{color: #171616;}
 /* 2-1 회원가입 로그인 초기*/
 .sns-buttons{ margin:0 auto; text-align: center;}
 .sns-buttons input[type='button']{ font-size:15px; line-height: 20px;}
-.template-account__text_hdtype_1 { padding: 15px 20px;}
+/*.template-account__text_hdtype_1 { padding: 15px 20px;}*/
+.template-account__text_hdtype_1 {display: flex; align-items: center; justify-content: flex-start; height: 55px; padding-left: 15px; }
 .template-account__text_hdtype_1.alert { border-bottom:1px solid #000;}
 
 .no-margin-top{margin-top:0px}
@@ -306,7 +307,7 @@ body.overflow-hidden {overflow: hidden;}
 .comment.error{max-width: 500px; margin: 3px auto 0; text-align: left; color: #ff0000;}
 .checkout .field__input{padding: 0 11px;}
 .email_form .comment, .phone_form .comment, .addr_form .comment{display: table-caption; caption-side: bottom;}
-.checkout_header{padding: 16.5px; border-bottom: 1px solid #171616;}
+.checkout_header{display: flex; align-items: center; justify-content: flex-start; height: 55px; padding-left: 12px; border-bottom: 1px solid #171616;}
 .checkout_breadcrumb{padding: 2px;}
 .checkout_breadcrumb:after{content: ''; display: block; clear: both;}
 .checkout_breadcrumb>li{float: left; padding-right: 17px; margin-right: 9px; font-size: 13px; line-height: 17px; color: #171616; opacity: 0.5; position: relative;}
