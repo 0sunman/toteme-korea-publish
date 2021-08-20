@@ -2852,3 +2852,16 @@ html.js-search-active{overflow:hidden}
 #withdrawal-modal .withdrawal_list{max-width: 300px; margin: 0 auto;}
 #withdrawal-modal .withdrawal_list>li span:first-child{ text-align: left; width: 150px; padding-left: 30px;}
 #withdrawal-modal .withdrawal_list>li span { width: 150px; text-align: right; padding-right: 30px;}
+
+
+
+/* VIP 수정사항 */
+
+.site-footer__title, .site-footer__info, .site-footer__menu-title{padding-left: 0px;}
+#shopify-section-site-footer li > a.navlist__link.text-link{padding-left:0px;}
+#shopify-section-site-footer li > a.navlist__link.text-link:hover{padding-left:15px;}
+#accountNav li > a.navlist__link.text-link{padding-left:0px;}
+#accountNav li > a.navlist__link.text-link:hover{padding-left:15px;}
+#StoreSelector-site-footer{background-position-y: calc(50% + 1px);}
+
+/* // VIP 수정사항*/
