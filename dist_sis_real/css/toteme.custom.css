@@ -1289,7 +1289,7 @@ font-weight: normal !important; line-height: 14px !important; }
 .hyundai-footer .section_middle .txt_copy { display: block; font-family: 'Courier New'; }
 .hyundai-footer .section_middle .txt_copy span + span { margin-left: 0; }
 .hyundai-footer .footer_hyundai { display: inline-block; width: 90px; height: 43px;
-background: url('https://image.thehyundai.com/stories_cdn/images/hdstories/common/footer_hyundai.jpg') 0 0 no-repeat; }
+background: url('https://image.thehyundai.com/cos/images/toteme/footer_hyundai.png') 0 0 no-repeat; }
 .hyundai-footer .link_lst p { margin-top: 20px; }
 .hyundai-footer .link_lst p, .hyundai-footer .link_lst p * { letter-spacing: 0.5px; }
 .hyundai-footer .link_lst p span { font-size: 14px; }
