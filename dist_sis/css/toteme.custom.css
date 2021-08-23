@@ -1242,7 +1242,10 @@ a[class*=drawer__close], button[class*=drawer__close], .search-bar__close{margin
 .btn.white + .loader .smiley-spin svg{color: white;}
 .loading-wrap.is-load select{background: transparent;}
 /* // 스마일 로딩 */
-
+@media screen and (max-width: 1000px){
+  .cart-drawer .ajax-cart__description .ajax-cart__remove {opacity: 1; visibility: visible;}
+  .wishlist-drawer__list button.wk-remove-item{opacity: 1; display: block;}
+}
 
 
 /* 현대 푸터 */
