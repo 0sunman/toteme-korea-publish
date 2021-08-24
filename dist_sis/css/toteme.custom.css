@@ -20,7 +20,7 @@ body{color: #171616;}
 .sns-buttons{ margin:0 auto; text-align: center;}
 .sns-buttons input[type='button']{ font-size:15px; line-height: 20px;}
 /*.template-account__text_hdtype_1 { padding: 15px 20px;}*/
-.template-account__text_hdtype_1 {display: flex; align-items: center; justify-content: flex-start; height: 55px; padding-left: 15px; }
+.template-account__text_hdtype_1 {display: flex; align-items: center; justify-content: flex-start; min-height: 55px; padding: 15px; }
 .template-account__text_hdtype_1.alert { border-bottom:1px solid #000;}
 
 .no-margin-top{margin-top:0px}
@@ -1222,6 +1222,7 @@ a[class*=drawer__close], button[class*=drawer__close], .search-bar__close{margin
 .drawer{--header-height: 51px;}
 .template-wishlist button.wk-button-wishlist-page, .wishlist-drawer__list button.wk-button-wishlist-page{opacity: 1;}
 .template-wishlist button.wk-button-wishlist-page .wk-icon svg path, .wishlist-drawer__list button.wk-button-wishlist-page .wk-icon svg path{fill: currentColor; stroke: none;}
+.template-wishlist .wk-remove-item{width: 24px; align-self: flex-end;}
 @media (min-width: 62em){
     .wishlist-drawer__list button.wk-remove-item{right: 1rem; opacity: .5;}
     .cart-drawer .ajax-cart__remove{right: 6%;}
@@ -1234,13 +1235,17 @@ a[class*=drawer__close], button[class*=drawer__close], .search-bar__close{margin
 .loading-wrap .loader .smiley-spin{ width:16px; height:16px; }
 .loading-wrap .loader .smiley-spin svg{ padding: 0; margin: 0; position: absolute; left: 0;}
 
-.loading-wrap.is-load input, .loading-wrap.is-load button{color:transparent !important}
+.loading-wrap.is-load input, .loading-wrap.is-load button, .loading-wrap.is-load select{color:transparent !important}
 .loading-wrap.is-load .loader{display:block}
 .button.is-active + .loader .smiley-spin svg{ color:white }
 .btn + .loader .smiley-spin svg{color: white;}
 .btn.white + .loader .smiley-spin svg{color: white;}
+.loading-wrap.is-load select{background: transparent;}
 /* // 스마일 로딩 */
-
+@media screen and (max-width: 1000px){
+  .cart-drawer .ajax-cart__description .ajax-cart__remove {opacity: 1; visibility: visible;}
+  .wishlist-drawer__list button.wk-remove-item{opacity: 1; display: block;}
+}
 
 
 /* 현대 푸터 */
@@ -1287,8 +1292,7 @@ font-weight: normal !important; line-height: 14px !important; }
 .hyundai-footer .section_middle span + span { margin-left: 10px; }
 .hyundai-footer .section_middle .txt_copy { display: block; font-family: 'Courier New'; }
 .hyundai-footer .section_middle .txt_copy span + span { margin-left: 0; }
-.hyundai-footer .footer_hyundai { display: inline-block; width: 90px; height: 43px;
-background: url('https://image.thehyundai.com/stories_cdn/images/hdstories/common/footer_hyundai.jpg') 0 0 no-repeat; }
+.hyundai-footer .footer_hyundai { display: inline-block; width: 90px; height: 45px;  background: url(https://image.thehyundai.com/cos/images/toteme/footer_hyundai.png) no-repeat;  background-size: 100% auto;}
 .hyundai-footer .link_lst p { margin-top: 20px; }
 .hyundai-footer .link_lst p, .hyundai-footer .link_lst p * { letter-spacing: 0.5px; }
 .hyundai-footer .link_lst p span { font-size: 14px; }
@@ -2874,3 +2878,14 @@ html.js-search-active{overflow:hidden}
     #tax-receipts-modal-frame, #cash-receipts-modal-frame{margin:0 !important}
 
 }
+
+/* VIP 수정사항 */
+
+.site-footer__title, .site-footer__info, .site-footer__menu-title{padding-left: 0px;}
+#shopify-section-site-footer li > a.navlist__link.text-link{padding-left:0px;}
+#shopify-section-site-footer li > a.navlist__link.text-link:hover{padding-left:15px;}
+#accountNav li > a.navlist__link.text-link{padding-left:0px;}
+#accountNav li > a.navlist__link.text-link:hover{padding-left:15px;}
+#StoreSelector-site-footer{background-position-y: calc(50% + 1px);}
+
+/* // VIP 수정사항*/
