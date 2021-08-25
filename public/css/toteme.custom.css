@@ -875,6 +875,7 @@ figure.containerZoom{position: absolute; top: 0; left: 0; z-index: 5;}
 .receipt_each .return_attr_list{margin-top: 10px;}
 .receipt_each .return_attr_list>li{margin-bottom: 3px;}
 .popup_cont .dot_list>li{margin-bottom: 3px; padding-left: 12px;}
+.ly_guarantee-modal .modal__body{display: block;}
 
 /* header, footer hide */
 /*.site-header-wrapper, #shopify-section-site-footer{display: none;}*/
