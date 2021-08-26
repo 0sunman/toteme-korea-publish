@@ -674,8 +674,8 @@ li > a.navlist__link.text-link{padding-left:15px}
 .mypage_tit_list>li{margin-bottom: 7px;}
 .mypage_tit_list>li:after{content: ''; display: block; clear: both;}
 .mypage_tit_list>li:last-child{margin-bottom: 0;}
-.mypage_tit_list .tit1{float: left; width: 50%; padding-right: 10px;}
-.mypage_tit_list .txt1{float: left; width: 50%;}
+.mypage_tit_list .tit1{float: left; width: 150px; padding-right: 10px;}
+.mypage_tit_list .txt1{float: left; width: calc(100% - 150px);}
 .mypage_tit_list+p{margin-top: 15px;}
 .edit_btn_box{margin-top: 7px;}
 .input-block.mypage_email_form{margin-top: 30px;}
