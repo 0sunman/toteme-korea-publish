@@ -2861,25 +2861,28 @@ html.js-search-active{overflow:hidden}
 
 .receipt_each .return_attr_list>li {display: table; width: 100%; }
 @media print{
-    body{padding-top:0px;margin-top:0px;margin:0 !important;padding:0 !important}
-    .site-header-wrapper{display:none}
-    #shopify-section-site-footer, .hyundai-footer, #MainContent{display:none; }
-    #tax-receipts-modal-frame,
-    #cash-receipts-modal-frame, 
-    #receipts-modal-frame{display:block; position:static; }
+  body{padding-top:0px !important;margin-top:0px !important;margin:0 !important;padding:0 !important}
+  .site-header-wrapper{display:none}
+  #shopify-section-site-footer, .hyundai-footer, #MainContent{display:none; }
+  #tax-receipts-modal-frame,
+  #cash-receipts-modal-frame, 
+  #credit-receipts-modal-frame,
+  #receipts-modal-frame{display:block;position:static !important;margin: 0 !important;}
 
-    #tax-receipts-modal-frame > .modal__overlay,
-    #cash-receipts-modal-frame > .modal__overlay, 
-    #receipts-modal-frame > .modal__overlay{position:static;}
+  #tax-receipts-modal-frame > .modal__overlay,
+  #cash-receipts-modal-frame > .modal__overlay, 
+  #credit-receipts-modal-frame > .modal__overlay,
+  #receipts-modal-frame > .modal__overlay{position:static;}
 
-    #tax-receipts-modal-frame .modal__card,
-    #cash-receipts-modal-frame .modal__card, 
-    #receipts-modal-frame .modal__card{height:100%;position: static;transform: unset;width:100%}
+  #tax-receipts-modal-frame .modal__card,
+  #cash-receipts-modal-frame .modal__card,
+  #credit-receipts-modal-frame .modal__card,
+  #receipts-modal-frame .modal__card{height:100%;position: static !important;transform: unset;width:100%}
 
-    #tax-receipts-modal-frame, #cash-receipts-modal-frame{margin:0 !important}
-
+  #tax-receipts-modal-frame, #cash-receipts-modal-frame{margin:0 !important}
+  .button-block.receipts-templete {display:none}
+  .cookie-banner.critical-hide.is-active{display:none}
 }
-
 /* VIP 수정사항 */
 
 .site-footer__title, .site-footer__info, .site-footer__menu-title{padding-left: 0px;}
