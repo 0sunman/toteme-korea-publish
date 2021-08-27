@@ -1089,3 +1089,16 @@ AnnouncementBar.prototype.doEffect = function(flag){
 
 var announcement = new AnnouncementBar();
 /* // 상단 GNB 공지바 */
+
+
+if ('loading' in HTMLImageElement.prototype) {
+    var images = document.querySelectorAll("img.lazyload");  
+    images.forEach(img => {
+      img.src = img.dataset.src;
+    });
+  } else {
+    var script = document.createElement("script");
+    script.async = true;
+    script.src = "https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.1.8/lazysizes.min.js";
+    document.body.appendChild(script);
+  }
