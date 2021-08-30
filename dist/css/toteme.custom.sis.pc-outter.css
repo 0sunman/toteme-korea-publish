@@ -1,5 +1,6 @@
 body.has-announcement-bar #accountNav.drawer,
 body.has-announcement-bar #wishlistListDrawer,
 body.has-announcement-bar #cartDrawer{margin-top: 97px; }
+#accountNav.drawer, #wishlistListDrawer, #cartDrawer{margin-top: 47px;}
 html #MainContent{padding-top:48px}
 html #MainContent > iframe{ width:100%; border : 0}
