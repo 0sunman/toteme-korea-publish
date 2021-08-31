@@ -2893,3 +2893,14 @@ font-weight: normal !important; line-height: 14px !important; }
 #StoreSelector-site-footer{background-position-y: calc(50% + 1px);}
 
 /* // VIP 수정사항*/
+
+.login_join.login_page .defaultblock.sns-buttons{padding-left:0px !important; padding-right:0px !important;}
+
+/* IE11 HACK */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+.browser_error_con .button.button--block.button--large.button--primary{padding-top:3px !important}
+}
+/* // IE11 HACK */
+
+#header-wrap{height:47px;border-bottom: 1px solid #171616;background-color:#fff;z-index:9998;}
+html #MainContent{padding-top: 46px;}
