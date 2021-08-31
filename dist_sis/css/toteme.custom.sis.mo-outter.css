@@ -1,6 +1,6 @@
 
 html #MainContent > iframe{ width:100%; border : 0}
-
+.modal.is-active{display: block; z-index: 100;}
 
 
 .btn-round-cover{ display:inline-block; position:fixed; bottom: 60px; left: 10px; width: 40px; height: 40px; background-color: #fff; border:1px solid #c8c8c8;border-radius: 50%; font-size: 0px; box-shadow: 0px 3px 10px rgba(0,0,0,0.3); }
