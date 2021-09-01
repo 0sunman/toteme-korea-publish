@@ -2893,3 +2893,6 @@ font-weight: normal !important; line-height: 14px !important; }
 #StoreSelector-site-footer{background-position-y: calc(50% + 1px);}
 
 /* // VIP 수정사항*/
+@media (max-width: 47.99em){
+  #MainContent input{font-size: 16px;}
+}
