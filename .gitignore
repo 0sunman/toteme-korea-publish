@@ -1,3 +1,4 @@
 node_modules
 hidden_file
 *.icloud
+.DS_Store

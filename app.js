@@ -51,6 +51,7 @@ const http = require('http');
 const express = require('express');
 const ejs = require('ejs');
 const { Console } = require('console');
+const e = require('express');
 
 const app = express();
 const server = http.createServer(app);
@@ -333,27 +334,36 @@ function copyFile(idx){
         console.log("\n[ ERROR : 빌드를 재시도 해주세요. ]");
         process.exit();
         reject();
+      }else{
+        sleep(1000);
+        fse.copy(__dirname + dataList[idx].source, __dirname + dataList[idx].destination,{ overwrite: true } ,(err) => {
+          if (err) {
+            console.error("\n"+err);
+            console.log("\n[ ERROR : 빌드를 재시도 해주세요. ]");
+            process.exit();
+            reject();
+          } else {
+            console.log(__dirname + dataList[idx].destination);
+            setTimeout(()=>{
+              //console.log(`${dataList[idx].source.padEnd(18)} 에서 ${dataList[idx].destination.padEnd(18)}로 파일을 옮겼습니다! - ${idx + 1} / ${dataList.length}`); 
+              resolve(++idx);
+            },1000)
+          }
+        });
       }
-      fse.copy(__dirname + dataList[idx].source, __dirname + dataList[idx].destination,{ overwrite: true } ,(err) => {
-        if (err) {
-          console.error("\n"+err);
-          console.log("\n[ ERROR : 빌드를 재시도 해주세요. ]");
-          process.exit();
-          reject();
-        } else {
-          console.log(__dirname + dataList[idx].destination);
-          setTimeout(()=>{
-            //console.log(`${dataList[idx].source.padEnd(18)} 에서 ${dataList[idx].destination.padEnd(18)}로 파일을 옮겼습니다! - ${idx + 1} / ${dataList.length}`); 
-            resolve(++idx);
-          },1000)
-        }
-      });
+      
     })
     
 
   })
 }
 
+
+function sleep(ms) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
+}   
 
 function copyProcess(idx){
   return copyFile(idx); 
