@@ -334,7 +334,7 @@ function copyFile(idx){
         process.exit();
         reject();
       }
-      fse.copy(__dirname + dataList[idx].source, __dirname + dataList[idx].destination, (err) => {
+      fse.copy(__dirname + dataList[idx].source, __dirname + dataList[idx].destination,{ overwrite: true } ,(err) => {
         if (err) {
           console.error("\n"+err);
           console.log("\n[ ERROR : 빌드를 재시도 해주세요. ]");
