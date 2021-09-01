@@ -2905,4 +2905,5 @@ font-weight: normal !important; line-height: 14px !important; }
 
 @media (max-width: 47.99em){
   #MainContent input{font-size: 16px;}
+  .input-block input{overflow: inherit;}
 }
