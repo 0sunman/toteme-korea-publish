@@ -972,27 +972,36 @@ function doAuthJoinButton(){
                         }
                         
                         function detectDraggableDiv(){
-                            draggableDivList.forEach(function(target){
-                                if(isDraggable(target.selector)){
-                                    document.querySelector(target.selector).style.cursor = 'grab';
-                                    target.setEnable(true)
-                                }else{
-                                    document.querySelector(target.selector).style.cursor = 'auto';
-                                    target.setEnable(false)
-                                }
-                            })
+                            try{
+                                draggableDivList.forEach(function(target){
+                                    if(isDraggable(target.selector)){
+                                        document.querySelector(target.selector).style.cursor = 'grab';
+                                        target.setEnable(true)
+                                    }else{
+                                        document.querySelector(target.selector).style.cursor = 'auto';
+                                        target.setEnable(false)
+                                    }
+                                })
+                                
+                            }catch(e){
+
+                            }
                         }
     
                         setTimeout(function(){
-                            draggableDivList = [
-                                new convertDraggableDiv('.suggestions__menu-bar.only_one .suggestions__filter-bar'),
-                                new convertDraggableDiv('.suggestions__menu-bar.suggestions__menu-bar--two-items .suggestions__filter-bar'),
-                                new convertDraggableDiv('.suggestions__text-suggestions')
-                            ];
-                            $(window).resize(function(){
+                            try{
+                                draggableDivList = [
+                                    new convertDraggableDiv('.suggestions__menu-bar.only_one .suggestions__filter-bar'),
+                                    new convertDraggableDiv('.suggestions__menu-bar.suggestions__menu-bar--two-items .suggestions__filter-bar'),
+                                    new convertDraggableDiv('.suggestions__text-suggestions')
+                                ];
+                                $(window).resize(function(){
+                                    detectDraggableDiv();
+                                });
                                 detectDraggableDiv();
-                            });
-                            detectDraggableDiv();
+                            }catch(e){
+
+                            }
                         },1000)
                         /* // 드래그 DIV 참고 */
 
