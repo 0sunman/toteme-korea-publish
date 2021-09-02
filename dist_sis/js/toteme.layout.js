@@ -899,8 +899,12 @@ function doAuthJoinButton(){
                         var draggableDivList = [];
 
                         function isDraggable(target){
-                            return window.innerWidth < document.querySelector(target + " .suggestions__text-title").scrollWidth + 
+                            try{
+                                return window.innerWidth < document.querySelector(target + " .suggestions__text-title").scrollWidth + 
                                                         document.querySelector(target + " .suggestions__text-title ~ ul").scrollWidth;
+                            }catch(e){
+                                return false;
+                            }
     
                         }
     
