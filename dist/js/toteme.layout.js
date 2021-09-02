@@ -910,55 +910,60 @@ function doAuthJoinButton(){
     
     
                         function convertDraggableDiv(selector){
-                            var ele = document.querySelector(selector);
-                            var pos = { top: 0, left: 0, x: 0, y: 0 };
-                            var isClick = false;
-                            this.selector = selector;
-                            this.isEnable = isDraggable(this.selector);
-    
-                            var mouseDownHandler = function(e) {
-                                if(this.isEnable){
-                                    ele.style.cursor = 'grabbing';
-                                    ele.style.userSelect = 'none';
-    
-                                    pos = {
-                                        left: ele.scrollLeft,
-                                        top: ele.scrollTop,
-                                        x: e.clientX,
-                                        y: e.clientY,
-                                    };
-                                    isClick = true;
-                                }
-    
-                            };
-    
-                            var mouseMoveHandler = function(e) {
-                                // Scroll the element
-                                if(isClick && this.isEnable){
-                                    // How far the mouse has been moved
-                                    const dx = e.clientX - pos.x;
-                                    const dy = e.clientY - pos.y;
-    
-                                    ele.scrollTop = pos.top - dy;
-                                    ele.scrollLeft = pos.left - dx;
-                                }
-                            };
-    
-                            var mouseUpHandler = function() {
-                                if(isClick && this.isEnable){
-                                    ele.style.cursor = 'grab';
-                                    ele.style.removeProperty('user-select');
-                                    isClick = false;
-                                }
-    
-                            };
-    
-    
-                            ele.style.cursor = 'grab';
-                            // Attach the handler    
-                            ele.addEventListener('mousedown', mouseDownHandler.bind(this));
-                            ele.addEventListener('mousemove', mouseMoveHandler.bind(this));
-                            ele.addEventListener('mouseup', mouseUpHandler.bind(this));
+                            try{
+
+                                var ele = document.querySelector(selector);
+                                var pos = { top: 0, left: 0, x: 0, y: 0 };
+                                var isClick = false;
+                                this.selector = selector;
+                                this.isEnable = isDraggable(this.selector);
+        
+                                var mouseDownHandler = function(e) {
+                                    if(this.isEnable){
+                                        ele.style.cursor = 'grabbing';
+                                        ele.style.userSelect = 'none';
+        
+                                        pos = {
+                                            left: ele.scrollLeft,
+                                            top: ele.scrollTop,
+                                            x: e.clientX,
+                                            y: e.clientY,
+                                        };
+                                        isClick = true;
+                                    }
+        
+                                };
+        
+                                var mouseMoveHandler = function(e) {
+                                    // Scroll the element
+                                    if(isClick && this.isEnable){
+                                        // How far the mouse has been moved
+                                        const dx = e.clientX - pos.x;
+                                        const dy = e.clientY - pos.y;
+        
+                                        ele.scrollTop = pos.top - dy;
+                                        ele.scrollLeft = pos.left - dx;
+                                    }
+                                };
+        
+                                var mouseUpHandler = function() {
+                                    if(isClick && this.isEnable){
+                                        ele.style.cursor = 'grab';
+                                        ele.style.removeProperty('user-select');
+                                        isClick = false;
+                                    }
+        
+                                };
+        
+        
+                                ele.style.cursor = 'grab';
+                                // Attach the handler    
+                                ele.addEventListener('mousedown', mouseDownHandler.bind(this));
+                                ele.addEventListener('mousemove', mouseMoveHandler.bind(this));
+                                ele.addEventListener('mouseup', mouseUpHandler.bind(this));
+                            }catch(e){
+
+                            }
                             
                         }
     
