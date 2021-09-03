@@ -2855,8 +2855,9 @@ font-weight: normal !important; line-height: 14px !important; }
 
 #withdrawal-modal .mypage_each > p:nth-child(n+1){ margin-top: 30px; text-align: center;}
 #withdrawal-modal .withdrawal_list{max-width: 300px; margin: 0 auto;}
-#withdrawal-modal .withdrawal_list>li span:first-child{ text-align: left; width: 150px; padding-left: 30px;}
-#withdrawal-modal .withdrawal_list>li span { width: 150px; text-align: right; padding-right: 30px;}
+#withdrawal-modal .withdrawal_list>li{padding: 0 30px;}
+#withdrawal-modal .withdrawal_list>li span:first-child{ text-align: left; width: 80px;}
+#withdrawal-modal .withdrawal_list>li span { width: calc(100% - 80px); text-align: right;}
 
 
 .receipt_each .return_attr_list>li {display: table; width: 100%; }
