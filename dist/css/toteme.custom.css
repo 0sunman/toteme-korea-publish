@@ -242,7 +242,7 @@ input.button--block:hover,input.template-login input.AAI_submit:hover, select:fo
 .animation{transition: all 0.25s;}
 .animation:hover{max-width: 510px;}
 
-body.drawer--open--blur .site-header-wrapper{z-index:25;}
+body.drawer--open--blur .site-header-wrapper{z-index:23;}
 body.overflow-hidden {overflow: hidden;}
 .site-header__account-navlist .navlist__link{position: relative;}
 .site-header__account-navlist .navlist__link .badge{color: red; font-size: 9px; font-weight: 500; left: 100%; opacity: 1; position: absolute; right: -5px; top: 0;}
@@ -2789,8 +2789,11 @@ font-weight: normal !important; line-height: 14px !important; }
 .login-modal  .idoremail.input-block{margin-top:15px}
 .login-modal .modal__footer{margin-top:5px}
 .login-modal .error.comment{padding-left: 0px;}
+@media (max-width: 1100px){
+  .login-modal .section.login_join.login_page{padding: 0 30px 15px;}
+}
 @media (max-width:500px) {
-   .login-modal .section > form > div{margin:15px 15px 10px 15px;}
+   .login-modal .section > form > div{margin:15px 0 10px;}
 } 
 
 

@@ -1,3 +1,4 @@
 .drawer{--header-height: 98px;}
 html #MainContent{padding-top:48px}
 html #MainContent > iframe{ width:100%; border : 0}
+#sis_footer .bottom .info p{font-size: 13px;}
