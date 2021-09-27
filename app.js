@@ -314,6 +314,7 @@ const dataList = [
   {source:"/public/js", destination:"/dist/js"},
   {source:"/public/font", destination:"/dist/font"},
   {source:"/public/assets", destination:"/dist/assets"},
+/*
   {source:"/public/css",destination:"/dist_sis/css"},
   {source:"/public/js", destination:"/dist_sis/js"},
   {source:"/public/font", destination:"/dist_sis/font"},
@@ -321,7 +322,7 @@ const dataList = [
   {source:"/public/css",destination:"/dist_sis_real/css"},
   {source:"/public/js", destination:"/dist_sis_real/js"},
   {source:"/public/font", destination:"/dist_sis_real/font"},
-  {source:"/public/assets", destination:"/dist_sis_real/assets"},
+  {source:"/public/assets", destination:"/dist_sis_real/assets"},*/
 ]
 function copyFile(idx){
   if(idx === 0){
@@ -338,16 +339,18 @@ function copyFile(idx){
         sleep(1000);
         fse.copy(__dirname + dataList[idx].source, __dirname + dataList[idx].destination,{ overwrite: true } ,(err) => {
           if (err) {
+
             console.error("\n"+err);
             console.log("\n[ ERROR : 빌드를 재시도 해주세요. ]");
             process.exit();
             reject();
+
           } else {
             console.log(__dirname + dataList[idx].destination);
             setTimeout(()=>{
               //console.log(`${dataList[idx].source.padEnd(18)} 에서 ${dataList[idx].destination.padEnd(18)}로 파일을 옮겼습니다! - ${idx + 1} / ${dataList.length}`); 
               resolve(++idx);
-            },1000)
+            },2000)
           }
         });
       }
@@ -372,14 +375,6 @@ function copyProcess(idx){
 var file_init_error=false
 
 copyFile(0)
-.then((idx)=>{ return copyProcess(idx)}, ()=> {process.exit(); })
-.then((idx)=>{ return copyProcess(idx)}, ()=> {process.exit(); })
-.then((idx)=>{ return copyProcess(idx)}, ()=> {process.exit(); })
-.then((idx)=>{ return copyProcess(idx)}, ()=> {process.exit(); })
-.then((idx)=>{ return copyProcess(idx)}, ()=> {process.exit(); })
-.then((idx)=>{ return copyProcess(idx)}, ()=> {process.exit(); })
-.then((idx)=>{ return copyProcess(idx)}, ()=> {process.exit(); })
-.then((idx)=>{ return copyProcess(idx)}, ()=> {process.exit(); })
 .then((idx)=>{ return copyProcess(idx)}, ()=> {process.exit(); })
 .then((idx)=>{ return copyProcess(idx)}, ()=> {process.exit(); })
 .then((idx)=>{ return copyProcess(idx)}, ()=> {process.exit(); })
