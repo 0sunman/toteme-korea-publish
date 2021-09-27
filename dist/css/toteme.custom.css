@@ -2934,3 +2934,5 @@ header li > a.navlist__link.text-link:hover{padding-left:15px}
 .custom-module__nav-dropdown select.custom-module__nav-select.select--center.custom-select__select{background-position-y: 13px;}
 /* 7. 하단 라인 누락 */
 .custom-module__text-column.custom-module__text-column--content {border-top: 1px solid #171616;}
+
+.hyundai-footer{padding-top:60px;padding-bottom: 60px;}
