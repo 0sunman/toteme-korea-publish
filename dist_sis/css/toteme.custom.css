@@ -2911,3 +2911,26 @@ font-weight: normal !important; line-height: 14px !important; }
   #MainContent input{font-size: 16px;}
   .input-block input{overflow: inherit;}
 }
+
+
+/* 1. header 로직 변경 */
+header li.navlist__item > span.text{padding-left:0px}
+header li > a.navlist__link.text-link{padding-left:0px}
+header li > a.navlist__link.text-link:hover{padding-left:15px}
+
+/* 2. 푸터 하단 60px 패딩 추가 */
+@media (min-width: 62em){
+  .site-footer__col {
+    padding-bottom: 60px !important;
+  }
+}
+
+/* 3. 개발 확인 요청 - 푸터 우측 콤보박스*/
+
+/* 4. 이메일 - 이미지 크게 추가 할 예정 */
+/* 6. 더블라인제거 */
+.custom-module__text-column:last-child { min-height: 73vh; }
+
+.custom-module__nav-dropdown select.custom-module__nav-select.select--center.custom-select__select{background-position-y: 13px;}
+/* 7. 하단 라인 누락 */
+.custom-module__text-column.custom-module__text-column--content {border-top: 1px solid #171616;}
