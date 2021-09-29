@@ -2935,4 +2935,9 @@ header li > a.navlist__link.text-link:hover{padding-left:15px}
 /* 7. 하단 라인 누락 */
 .custom-module__text-column.custom-module__text-column--content {border-top: 1px solid #171616;}
 
-.hyundai-footer{padding-top:60px;padding-bottom: 60px;}
+.hyundai-footer{padding-top:60px;padding-bottom: 60px; background-color: #fff;}
+#MainContent.pdp_template{overflow: unset;}
+@media (max-width: 1620px){
+  #MainContent.pdp_template{min-height: inherit;}
+  #MainContent.pdp_template>.container{height: auto;}
+}
