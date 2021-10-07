@@ -2941,3 +2941,36 @@ header li > a.navlist__link.text-link:hover{padding-left:15px}
   #MainContent.pdp_template{min-height: inherit;}
   #MainContent.pdp_template>.container{height: auto;}
 }
+
+.product__description { position:relative }
+.product__description .btn_size_change{ position: absolute; top:13px; right: 15px;}
+
+
+.return_attr_list div.txt1{ display: inline-block;  max-width: 110px !important; padding-left: 19px;  font-size: 14px;}
+.return_attr_list .txt1 select{ max-width: 110px; text-align-last: left; }
+.return_attr_list .toteme-select-style{background-position:right 8px center;}
+
+.summary_content.mypage_each2 .checkbox_custom_box{ display: block; margin: 0 auto; margin-bottom: 20px; padding-left: 0;  text-align: center; word-break: break-all; }
+label[for="return_agree"] br{display:none}
+label[for="return_agree"] br::after{content:" "}
+
+.checkout__main .text-block.order_summary_text{padding-top:20px;}
+.checkout__main .text-block.order_summary_text p{text-align:center;}
+
+
+.template-account__navlist {padding:16px 52px;}
+.template-mypage__form-wrapper .template-mypage__form{padding: 16px 15px;}
+.template-mypage__form-wrapper .template-mypage__form .input-block{margin-top:0px; margin-bottom:0px;}
+
+
+.order-summary-toggle.shown-if-js .order-summary-toggle__text order-summary-toggle__text--show svg.order-summary-toggle__dropdown{margin-top:-2px;}
+.order-summary-toggle.shown-if-js .order-summary-toggle__text order-summary-toggle__text--hide svg.order-summary-toggle__dropdown{margin-top:-4px;}
+
+
+select.toteme-select-style {  background-position-y: calc(50% - 1px); }
+
+.checkout__main .member_address_info.with_button { position: relative;}
+.checkout__main .member_address_info.with_button .round_button{ position: absolute; top: 8px; right: 0;}
+
+.checkout_section.order_summary_each2 .summary_content:last-child{ border-bottom:0 }
+
