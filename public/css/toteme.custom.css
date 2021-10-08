@@ -2942,11 +2942,10 @@ header li > a.navlist__link.text-link:hover{padding-left:15px}
   #MainContent.pdp_template>.container{height: auto;}
 }
 
-.return_attr_list div.txt1{ display: inline-block;  max-width: 110px !important; padding-left: 19px;  font-size: 14px;}
-.return_attr_list .txt1 select{ max-width: 110px; text-align-last: left; }
+.return_attr_list .txt1 select{max-width: 110px;text-align-last: left;width: 60px;padding-left: 11px;padding-right: 20px;}
 .return_attr_list .toteme-select-style{background-position:right 8px center;}
 
-.summary_content.mypage_each2 .checkbox_custom_box{ display: block; margin: 0 auto; margin-bottom: 20px; padding-left: 0;  text-align: center; word-break: break-all; }
+.summary_content.mypage_each2 .checkbox_custom_box{ display: block; margin: 0 auto; margin-bottom: 20px; word-break: break-all; }
 label[for="return_agree"] br{display:none}
 label[for="return_agree"] br::after{content:" "}
 
@@ -2972,3 +2971,5 @@ select.toteme-select-style {  background-position-y: calc(50% - 1px); }
 .product__description_flex .product__description__name{white-space: nowrap; overflow: hidden; padding-right: 20px; text-overflow: ellipsis;}
 .product__description_flex button{display: inline-flex; margin-left: auto; height: 22px;}
 .product__description_flex > span{min-width: auto; width: 100%}
+
+.summary_content.mypage_each2.cancel_custom{border-bottom-width: 0; padding-bottom: 0; margin-bottom: 30px;}
