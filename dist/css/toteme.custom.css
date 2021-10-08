@@ -339,7 +339,7 @@ body.overflow-hidden {overflow: hidden;}
 .input-block select{max-width: 500px; margin-left: auto; margin-right: auto;}
 .member_address_info p{line-height: 23px;}
 .member_address_info.with_button{display: table; width: 100%; margin-bottom: 20px;}
-.member_address_info.with_button .member_address_inner{display: table-cell; vertical-align: middle;}
+.member_address_info.with_button .member_address_inner{display: table-cell; vertical-align: top;}
 .member_address_inner p{margin-bottom: 0;}
 .member_address_info.with_button .member_address_inner:last-child{text-align: right;}
 .checkbox-block+.text-block.sub-description p{font-size: 14px;}
@@ -2942,10 +2942,6 @@ header li > a.navlist__link.text-link:hover{padding-left:15px}
   #MainContent.pdp_template>.container{height: auto;}
 }
 
-.product__description { position:relative }
-.product__description .btn_size_change{ position: absolute; top:13px; right: 15px;}
-
-
 .return_attr_list div.txt1{ display: inline-block;  max-width: 110px !important; padding-left: 19px;  font-size: 14px;}
 .return_attr_list .txt1 select{ max-width: 110px; text-align-last: left; }
 .return_attr_list .toteme-select-style{background-position:right 8px center;}
@@ -2974,3 +2970,8 @@ select.toteme-select-style {  background-position-y: calc(50% - 1px); }
 
 .checkout_section.order_summary_each2 .summary_content:last-child{ border-bottom:0 }
 
+
+.product__description_flex{ display: flex !important;}
+.product__description_flex .product__description__name{white-space: nowrap; overflow: hidden; padding-right: 20px; text-overflow: ellipsis;}
+.product__description_flex button{display: inline-flex; margin-left: auto; height: 22px;}
+.product__description_flex > span{min-width: auto; width: 100%}

@@ -39,7 +39,8 @@
       <main id="MainContent" class="main-content critical-clear">
          <!-- BEGIN content_for_index -->
          <!--  include ("./pages/00_main/index.ejs") BEGIN content_for_index -->
-         <div class="container mypage">
+         
+<div class="container mypage">
 	<div class="template-account__header">
 		안녕하세요, 이현대님
 	</div>
@@ -153,9 +154,8 @@
 											</div>
 										</td>
 										<th class="product__description" scope="row">
-											<span class="product__description__name order-summary__emphasis">센터드 모노그램 실크 스카프 크림</span>
-											<span class="product__description__variant">
-												XXS
+											<div class='product__description_flex'>
+												<span class='product__description__name order-summary__emphasis'>센터드 모노그램 실크 스카프 크림</span>
 												<button type="button" class="modal_trigger button button--primary btn_size_change is-load" data-modal="size_change-modal">변경
 													<div class="loader">
 														<div class="smiley-spin">
@@ -163,6 +163,9 @@
 														</div>
 													</div>
 												</button>
+											</div>
+											<span class="product__description__variant">
+												XXS
 											</span>
 										</th>
 										<td class="product__quantity">
