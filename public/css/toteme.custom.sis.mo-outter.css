@@ -21,3 +21,8 @@ background-size: 120%;
 opacity: 1;
 /* 2017.10.16 pad 뒤로가기 버튼 위치 수정 */
 }
+body{line-height: 1.3em;}
+.menu-drawer__body a{color: #171616;}
+.custom-module__nav-dropdown .custom-select__select{font-size: 15px;}
+.three-column-type .product-card__footer{position: relative; background-color: #fff;}
+.template-product__gallery{top: 51px;}

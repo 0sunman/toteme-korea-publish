@@ -2,3 +2,4 @@
 html #MainContent{padding-top:48px}
 html #MainContent > iframe{ width:100%; border : 0}
 #sis_footer .bottom .info p{font-size: 13px;}
+#header-wrap{border-bottom-color: #171616;}

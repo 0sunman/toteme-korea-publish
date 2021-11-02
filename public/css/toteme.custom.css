@@ -207,7 +207,7 @@ select.toteme-select-style{
  }
 
  #MainContent .navlist__link {
-    font-size:initial
+    font-size: 15px;
  }
 
  /* 인풋 가이드 */
